@@ -1,0 +1,2 @@
+{"x": "res://MapGeneration/Modules/Components/obstacle_rock.tscn",
+ "o": "res://MapGeneration/Modules/Components/obstacle_octopus.tscn"}

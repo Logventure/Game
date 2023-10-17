@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dutk7wpovc6fu"]
+
+[ext_resource type="Texture2D" uid="uid://d24y3605ru6pv" path="res://Assets/modulo1.png" id="1_0dk5x"]
+[ext_resource type="Texture2D" uid="uid://b371eyljuxqpf" path="res://Assets/rock2.png" id="2_bvt88"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="module" type="Node2D" parent="."]
+position = Vector2(95, -47.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="module"]
+visible = false
+texture = ExtResource("1_0dk5x")
+
+[node name="rock" type="Sprite2D" parent="module"]
+z_index = 1
+position = Vector2(-451, -155)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_bvt88")
+
+[node name="rock2" type="Sprite2D" parent="module"]
+z_index = 1
+position = Vector2(307, 37)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_bvt88")

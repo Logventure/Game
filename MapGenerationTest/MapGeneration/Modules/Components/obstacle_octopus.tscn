@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b44er5nd6mgye"]
+
+[ext_resource type="Texture2D" uid="uid://bbch0qjrmtiny" path="res://Assets/octopus.png" id="1_5ql2r"]
+
+[node name="Rock" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="OctopusSprite" type="Sprite2D" parent="Area2D"]
+position = Vector2(14, -73)
+texture = ExtResource("1_5ql2r")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-1, 42, 72, 12, -1, -15, -75, 11)

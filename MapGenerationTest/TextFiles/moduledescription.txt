@@ -1,0 +1,102 @@
+#File used to describe modules to be built
+#Difficulty is used to define how easy we want the level to be (a level with difficulty 3 will only use modules with difficulty 0-3)
+#Group is used to control more precisely which modules to use or not without using individual ids, by default modules belong to group 0
+#Negative groups will not be used on the level generation
+#Groups will probably be used to define which abilities are required for that module
+#
+#Should use following structure: 
+#
+#Difficulty: 3
+#Group: 2
+#{
+#-----
+#-x---
+#----x
+#x----
+#}
+#
+#Character crosses the module from the bottom up (so that this representation is closer to the actual in-game module)
+#
+
+
+Difficulty: 0
+Group: 
+{
+----o
+-x---
+----x
+x----
+}
+
+Difficulty: 1
+Group: 2,3
+{
+-x---
+----x
+xx---
+}
+
+Difficulty: 5
+Group: 2,3
+{
+x--xx
+xx--x
+x--xx
+}
+
+Difficulty: 1
+Group: 15
+{
+xx---
+xx-o-
+xx---
+}
+
+Difficulty: 1
+Group: 15
+{
+---xx
+-o-xx
+---xx
+}
+
+Difficulty: 1
+Group: 15
+{
+xxx--
+x----
+----x
+--xxx
+}
+
+Difficulty: 1
+Group: 15
+{
+--xxx
+----x
+x----
+xxx--
+}
+
+Difficulty: 1
+Group: 2
+{
+--x--
+-o-o-
+}
+
+Difficulty: 1
+Group: 2
+{
+xxxxx
+ooooo
+}
+
+Difficulty: 1
+Group: 2
+{
+xxx--
+ooo--
+}
+
+

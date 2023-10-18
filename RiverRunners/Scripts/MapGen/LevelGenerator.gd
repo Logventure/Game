@@ -31,19 +31,23 @@ func _ready():
 	mapModuleTemplates.append_array(ModuleBuilder.buildMapModulesFromFile("res://TextFiles/moduledescription.txt", loadJsonFromFile("res://TextFiles/componentmap.txt"), tilesize))
 	
 	#adds inicial map (temporary)
-	for i in range(-6,minGeneratedTiles):
+	for i in range(-1*minGeneratedTiles,minGeneratedTiles):
 		addEnvironment(0,i)
+
+	#connects to player position signal (from LevelManager)
+	var level = get_node("../")
+	level.player_status.connect(onUpdateCurrentPosition)
 
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	
 	#var logPosition = moveLog(delta)
 	#updateCurrentPosition(logPosition,3)
 
 	#add new modules and clear unnecessary ones
-	if lastGeneratedPosition - currentPosition < minGeneratedTiles and generateObstacles:
+	while lastGeneratedPosition - currentPosition < minGeneratedTiles and generateObstacles:
 		addMapModule(lastGeneratedPosition,1,level_difficulty,level_groups)
 
 	while lastEnvironmentPosition < lastGeneratedPosition:
@@ -78,8 +82,9 @@ func enableObstacles():
 func addToQueue(array):
 	obstacleQueue.append_array(array)
 
-func updateCurrentPosition(pos,lane):
-	currentPosition = position.distance_to(Utils.gridRelativePosition(pos,3-lane,0,tilesize))/Vector2(tilesize/2,tilesize/-4).length()
+func onUpdateCurrentPosition(pos,_speed):
+	currentPosition = position.distance_to(pos)/Vector2(tilesize/2,tilesize/-4).length()
+
 
 
 

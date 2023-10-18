@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://h1l00yxgtbf0"]
-
-[ext_resource type="PackedScene" uid="uid://41phvey77pr8" path="res://MapGeneration/mapgeneration.tscn" id="1_ihceg"]
-
-[node name="LevelManager" type="Node2D"]
-
-[node name="Map" parent="." instance=ExtResource("1_ihceg")]

@@ -11,11 +11,13 @@ var playerSpeed = 0.0
 @export var zoomMultiplier = 0.01
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#connects to player position signal (from LevelManager)
-	var level = get_node("../")
-	level.player_status.connect(onUpdatePlayerStatus)
+	#connects to player position signal	
+	Events.connect("player_position", onUpdatePlayerPosition)
+	Events.connect("player_speed", onUpdatePlayerSpeed)
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,12 +26,15 @@ func _process(delta):
 	updateCameraZoom()
 
 
-func onUpdatePlayerStatus(position: Vector2,speed):
+func onUpdatePlayerPosition(position):
 	playerPosition = position
+
+func onUpdatePlayerSpeed(speed):
 	playerSpeed = speed
 
 func updateCameraPosition():
 	position = Vector2(playerPosition.x + (minDistance + playerSpeed*multiplier) * 2, playerPosition.y - (minDistance + playerSpeed*multiplier))
+
 
 func updateCameraZoom():
 	var zoom_value = baseZoom - playerSpeed * zoomMultiplier

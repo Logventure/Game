@@ -34,9 +34,8 @@ func _ready():
 	for i in range(-1*minGeneratedTiles,minGeneratedTiles):
 		addEnvironment(0,i)
 
-	#connects to player position signal (from LevelManager)
-	var level = get_node("../")
-	level.player_status.connect(onUpdateCurrentPosition)
+	#connects to player position signal
+	Events.connect("player_position", onUpdateCurrentPosition)
 
 
 
@@ -82,7 +81,7 @@ func enableObstacles():
 func addToQueue(array):
 	obstacleQueue.append_array(array)
 
-func onUpdateCurrentPosition(pos,_speed):
+func onUpdateCurrentPosition(pos):
 	currentPosition = position.distance_to(pos)/Vector2(tilesize/2,tilesize/-4).length()
 
 

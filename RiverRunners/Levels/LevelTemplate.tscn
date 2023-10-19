@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Level/LevelManager.gd" id="1_7jm07"]
 [ext_resource type="PackedScene" uid="uid://dot5piicoqna3" path="res://GameComponents/Camera/camera.tscn" id="1_16p0x"]
 [ext_resource type="PackedScene" uid="uid://41phvey77pr8" path="res://MapGeneration/mapgeneration.tscn" id="1_ihceg"]
-[ext_resource type="Texture2D" uid="uid://lfovl3wrukyq" path="res://Assets/log.png" id="2_ed444"]
+[ext_resource type="PackedScene" uid="uid://dej1mjtjgtaao" path="res://GameComponents/Player/player.tscn" id="4_hhuk2"]
 
 [node name="LevelManager" type="Node2D"]
 script = ExtResource("1_7jm07")
@@ -13,10 +13,7 @@ playerMaxSpeed = 15
 minDistance = 80
 multiplier = 20
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-17, -9)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("2_ed444")
-
 [node name="Map" parent="." instance=ExtResource("1_ihceg")]
 minGeneratedTiles = 20
+
+[node name="Player" parent="." instance=ExtResource("4_hhuk2")]

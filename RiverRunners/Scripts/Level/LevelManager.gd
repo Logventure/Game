@@ -1,6 +1,6 @@
 extends Node2D
 
-signal player_status #includes position and speed
+signal player_status(position, playerSpeed)
 
 @export var tilesize = 380
 
@@ -9,32 +9,31 @@ var playerSpeed = 1
 var playerTargetSpeed = 1
 
 @export var playerMaxSpeed = 10
+@export var playerAcceleration = 0.1
 
-@export var playerAcceleration = 0.01
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	#connects to player position signal
+	Events.connect("player_position", onUpdatePlayerPosition)
+	
+	Events.emit_signal("player_speed",playerSpeed)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	playerPosition = moveLog(delta)
-	
-	player_status.emit(playerPosition,playerSpeed)
-
 	if Input.is_action_just_pressed("spacebar") and playerTargetSpeed + 1 <= playerMaxSpeed:
 		playerTargetSpeed+=1
+	managePlayerSpeed()
 
+func managePlayerSpeed():
 	if playerSpeed < playerTargetSpeed:
 		playerSpeed += playerAcceleration * (playerTargetSpeed - playerSpeed)
-	if abs(playerTargetSpeed - playerSpeed) < 0.01:
+		Events.emit_signal("player_speed",playerSpeed)
+	if abs(playerTargetSpeed - playerSpeed) < 0.01 and not playerTargetSpeed == playerSpeed:
 		playerSpeed = playerTargetSpeed
+		Events.emit_signal("player_speed",playerSpeed)
 
+func onUpdatePlayerPosition(newposition):
+	playerPosition = newposition
 
-
-#temporary
-func moveLog(delta):
-	var log = get_node("Sprite2D")
-	log.position = Vector2(log.position.x + playerSpeed * delta * tilesize / 2, log.position.y + playerSpeed * delta * tilesize / -4)
-	return log.position

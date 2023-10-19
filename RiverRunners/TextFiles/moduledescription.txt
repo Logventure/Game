@@ -17,23 +17,25 @@
 #
 #Character crosses the module from the bottom up (so that this representation is closer to the actual in-game module)
 #
+#Use * to mark positions that should not be considered free (deadend entrys/exits)
+#
 
 
 Difficulty: 0
 Group: 
 {
-----o
+-*--o
 -x---
 ----x
-x----
+x---*
 }
 
 Difficulty: 1
 Group: 2,3
 {
--x---
+-x--*
 ----x
-xx---
+xx--*
 }
 
 Difficulty: 5
@@ -48,7 +50,7 @@ Difficulty: 1
 Group: 15
 {
 xx---
-xx-o-
+xx--o
 xx---
 }
 
@@ -56,7 +58,7 @@ Difficulty: 1
 Group: 15
 {
 ---xx
--o-xx
+o--xx
 ---xx
 }
 
@@ -81,22 +83,9 @@ xxx--
 Difficulty: 1
 Group: 2
 {
---x--
--o-o-
+-*x*-
+-o*o-
 }
 
-Difficulty: 1
-Group: 2
-{
-xxxxx
-ooooo
-}
-
-Difficulty: 1
-Group: 2
-{
-xxx--
-ooo--
-}
 
 

@@ -1,19 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgwiup35mstpv"]
+[gd_scene load_steps=4 format=3 uid="uid://cgwiup35mstpv"]
 
-[ext_resource type="Texture2D" uid="uid://d24y3605ru6pv" path="res://Assets/modulo1.png" id="1_ey7b1"]
-[ext_resource type="Texture2D" uid="uid://b371eyljuxqpf" path="res://Assets/rock2.png" id="2_5srm2"]
+[ext_resource type="PackedScene" uid="uid://ba2tigd5g64fv" path="res://MapGeneration/Modules/Components/obstacle_rock.tscn" id="2_71bs7"]
+[ext_resource type="Texture2D" uid="uid://ds256m6l1n6ty" path="res://Assets/grid.png" id="2_h7uj2"]
+[ext_resource type="Script" path="res://Scripts/EditorOnlyNode.gd" id="3_hwgw5"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="module" type="Node2D" parent="."]
 position = Vector2(95, -47.5)
 
-[node name="Sprite2D" type="Sprite2D" parent="module"]
-visible = false
-texture = ExtResource("1_ey7b1")
+[node name="Rock" parent="module" instance=ExtResource("2_71bs7")]
+position = Vector2(286, 218.5)
 
-[node name="rock" type="Sprite2D" parent="module"]
-z_index = 1
-position = Vector2(286, 211)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_5srm2")
+[node name="GridHelper(hide)" type="Sprite2D" parent="module"]
+z_index = -10
+position = Vector2(672, -432.5)
+texture = ExtResource("2_h7uj2")
+script = ExtResource("3_hwgw5")

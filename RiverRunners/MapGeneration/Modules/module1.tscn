@@ -1,12 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bllkkxpsei3k0"]
+[gd_scene load_steps=3 format=3 uid="uid://bllkkxpsei3k0"]
 
-[ext_resource type="Texture2D" uid="uid://d24y3605ru6pv" path="res://Assets/modulo1.png" id="1_btc4s"]
+[ext_resource type="Script" path="res://Scripts/EditorOnlyNode.gd" id="2_m6n1o"]
+[ext_resource type="Texture2D" uid="uid://ds256m6l1n6ty" path="res://Assets/grid.png" id="2_vdhe5"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="module" type="Node2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="module"]
-visible = false
-position = Vector2(95, -47.5)
-texture = ExtResource("1_btc4s")
+[node name="GridHelper(hide)" type="Sprite2D" parent="module"]
+z_index = -10
+position = Vector2(768, -480)
+texture = ExtResource("2_vdhe5")
+script = ExtResource("2_m6n1o")

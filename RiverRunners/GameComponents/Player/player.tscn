@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dej1mjtjgtaao"]
+[gd_scene load_steps=6 format=3 uid="uid://dej1mjtjgtaao"]
 
 [ext_resource type="Script" path="res://Scripts/Player/LogMovements.gd" id="1_8lkio"]
 [ext_resource type="Texture2D" uid="uid://lfovl3wrukyq" path="res://Assets/log.png" id="1_bab1f"]
+[ext_resource type="Script" path="res://GameComponents/Player/CollisionHandler.gd" id="2_b5qoq"]
 [ext_resource type="Texture2D" uid="uid://b2pvgt1jy3605" path="res://Assets/BeaverBack.png" id="2_nj6gp"]
 [ext_resource type="Texture2D" uid="uid://b6jlwyodbq8e8" path="res://Assets/FrogBack.png" id="3_7j7sv"]
 
@@ -9,6 +10,7 @@
 script = ExtResource("1_8lkio")
 
 [node name="Log" type="Area2D" parent="."]
+script = ExtResource("2_b5qoq")
 
 [node name="LogSprite" type="Sprite2D" parent="Log"]
 position = Vector2(1.90735e-06, 1)
@@ -16,8 +18,7 @@ scale = Vector2(0.837778, 0.837778)
 texture = ExtResource("1_bab1f")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log"]
-visible = false
-polygon = PackedVector2Array(-94, 83, -166, 64, 102, -67, 160, -51)
+polygon = PackedVector2Array(-73, 66, -122, 51, 95, -57, 134, -39)
 
 [node name="Beaver" type="Sprite2D" parent="Log"]
 position = Vector2(-81, -37)

@@ -63,12 +63,6 @@ func _process(_delta):
 		while environmentModules[0].position.distance_to(Utils.gridRelativePosition(Vector2(),0,currentPosition,tilesize)) > minGeneratedTiles * tilesize and len(environmentModules) > 1:
 			clearOldestModule(environmentModules)
 
-	if Input.is_action_just_pressed("print"):
-		if generateObstacles:
-			disableObstacles()
-		else:
-			enableObstacles()
-
 
 #to be called with signals
 

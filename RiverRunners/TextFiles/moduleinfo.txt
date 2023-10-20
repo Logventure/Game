@@ -28,23 +28,6 @@ Entry Lanes: 1,2,3
 Exit Lanes: 1,2,3
 }
 
-{
-Path: res://MapGeneration/Modules/module4.tscn
-Difficulty: 1
-Group: 6
-Length: 2
-Entry Lanes: 1,2,4,5
-Exit Lanes: 1,2,4,5
-}
-
-{
-Path: res://MapGeneration/Modules/module5.tscn
-Difficulty: 1
-Group: 6
-Length: 2
-Entry Lanes: 2,3,4
-Exit Lanes: 2,3,4
-}
 
 
 

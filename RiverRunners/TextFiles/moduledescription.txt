@@ -83,8 +83,16 @@ xxx--
 Difficulty: 1
 Group: 2
 {
--*x*-
+-----
+--x--
 -o*o-
+}
+
+Difficulty: 1
+Group: 2
+{
+--*--
+-x-x-
 }
 
 

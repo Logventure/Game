@@ -18,53 +18,74 @@ func _ready():
 	log = get_node("Log")
 	Events.connect("player_speed", onUpdatePlayerSpeed)
 
+	Events.connect("input_move_left", moveLeft)
+	Events.connect("input_move_right", moveRight)
+	Events.connect("input_dash_left", dashLeft)
+	Events.connect("input_dash_right", dashRight)
+
+
 	
 func move(delta):
 	pos.x += tilewidth/2 * delta * speed
 	pos.y -= tileheight/2 * delta * speed
 	
-func get_input():
-	if Input.is_action_just_pressed("dashLeft") and currentLane == 2:
-		currentLane -= 1
-		moveLeft(normalMove)
-	elif Input.is_action_just_pressed("dashRight") and currentLane == 4:
-		currentLane += 1
-		moveRight(normalMove)
-	elif Input.is_action_just_pressed("dashLeft") and currentLane > 1:
-		currentLane -= 2
-		moveLeft(dashMove)
-	elif Input.is_action_just_pressed("dashRight") and currentLane < 5:
-		currentLane += 2
-		moveRight(dashMove)
-	elif Input.is_action_just_pressed("left") and currentLane > 1:
-		moveLeft(normalMove)
-		currentLane -= 1
-	elif Input.is_action_just_pressed("right") and currentLane < 5:
-		moveRight(normalMove)
-		currentLane += 1
+#func get_input():
+#	if Input.is_action_just_pressed("dashLeft") and currentLane == 2:
+#		currentLane -= 1
+#		moveLeft(normalMove)
+#	elif Input.is_action_just_pressed("dashRight") and currentLane == 4:
+#		currentLane += 1
+#		moveRight(normalMove)
+#	elif Input.is_action_just_pressed("dashLeft") and currentLane > 1:
+#		currentLane -= 2
+#		moveLeft(dashMove)
+#	elif Input.is_action_just_pressed("dashRight") and currentLane < 5:
+#		currentLane += 2
+#		moveRight(dashMove)
+#	elif Input.is_action_just_pressed("left") and currentLane > 1:
+#		moveLeft(normalMove)
+#		currentLane -= 1
+#	elif Input.is_action_just_pressed("right") and currentLane < 5:
+#		moveRight(normalMove)
+#		currentLane += 1
 	#elif Input.is_action_pressed("jump"):
 	#	jump(delta) 
 	
-func moveLeft(aux):
-	if aux == "normal":
+func moveLeft():
+	if currentLane > 1:
 		log.position.x -= tilewidth/2
 		log.position.y -= tileheight/2
-	elif aux == "dash":
-		log.position.x -= tilewidth
-		log.position.y -= tileheight
+		currentLane -= 1
 		
-func moveRight(aux):
-	if aux == "normal":
+func moveRight():
+	if currentLane < 5:
 		log.position.x += tilewidth/2
 		log.position.y += tileheight/2
-	elif aux == "dash":
+		currentLane += 1
+		
+func dashLeft():
+	if currentLane > 2:
+		log.position.x -= tilewidth
+		log.position.y -= tileheight
+		currentLane -= 2
+	elif currentLane > 1:
+		log.position.x -= tilewidth/2
+		log.position.y -= tileheight/2
+		currentLane -= 1
+
+func dashRight():
+	if currentLane < 4:
 		log.position.x += tilewidth
 		log.position.y += tileheight
-
+		currentLane += 2
+	elif currentLane < 5:
+		log.position.x += tilewidth/2
+		log.position.y += tileheight/2
+		currentLane += 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	get_input()
+	#get_input()
 	move(delta)
 	position = Vector2(pos.x, pos.y) 
 	Events.emit_signal("player_position",position)

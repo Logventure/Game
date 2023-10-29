@@ -9,7 +9,12 @@ const tileheight: int = 190
 var currentLane = 3
 var normalMove: String = "normal"
 var dashMove: String = "dash"
-
+var destination = Vector2.ZERO
+var distance = Vector2.ZERO
+var deltaTime = 0
+var multiplier = 0.05
+var aux = 0
+var is_done = true
 var log
 
 # Called when the node enters the scene tree for the first time.
@@ -24,7 +29,7 @@ func _ready():
 	Events.connect("input_dash_right", dashRight)
 
 
-	
+
 func move(delta):
 	pos.x += tilewidth/2 * delta * speed
 	pos.y -= tileheight/2 * delta * speed
@@ -52,41 +57,76 @@ func move(delta):
 	#	jump(delta) 
 	
 func moveLeft():
-	if currentLane > 1:
-		log.position.x -= tilewidth/2
-		log.position.y -= tileheight/2
-		currentLane -= 1
-		
+	if is_done:
+		if currentLane > 1:
+			#log.position.x -= tilewidth/2
+			#log.position.y -= tileheight/2
+			currentLane -= 1
+			destination = Vector2(log.position.x - tilewidth/2, log.position.y - tileheight/2)
+			aux = destination - log.position
+			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
+			deltaTime = speed + distance * multiplier
+			is_done = false
+
 func moveRight():
-	if currentLane < 5:
-		log.position.x += tilewidth/2
-		log.position.y += tileheight/2
-		currentLane += 1
+	if is_done:
+		if currentLane < 5:
+			#log.position.x += tilewidth/2
+			#log.position.y += tileheight/2
+			currentLane += 1
+			destination = Vector2(log.position.x + tilewidth/2, log.position.y + tileheight/2)
+			aux = destination - log.position
+			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
+			deltaTime = speed + distance * multiplier
+			is_done = false
 		
 func dashLeft():
-	if currentLane > 2:
-		log.position.x -= tilewidth
-		log.position.y -= tileheight
-		currentLane -= 2
-	elif currentLane > 1:
-		log.position.x -= tilewidth/2
-		log.position.y -= tileheight/2
-		currentLane -= 1
+	if is_done:
+		if currentLane > 2:
+			#log.position.x -= tilewidth
+			#log.position.y -= tileheight
+			currentLane -= 2
+			destination = Vector2(log.position.x - tilewidth, log.position.y - tileheight)
+			aux = destination - log.position
+			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
+			deltaTime = speed + distance * multiplier
+		elif currentLane > 1:
+			#log.position.x -= tilewidth/2
+			#log.position.y -= tileheight/2
+			currentLane -= 1
+			destination = Vector2(log.position.x - tilewidth/2, log.position.y - tileheight/2)
+			aux = destination - log.position
+			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
+			deltaTime = speed + distance * multiplier
+		is_done = false
 
 func dashRight():
-	if currentLane < 4:
-		log.position.x += tilewidth
-		log.position.y += tileheight
-		currentLane += 2
-	elif currentLane < 5:
-		log.position.x += tilewidth/2
-		log.position.y += tileheight/2
-		currentLane += 1
+	if is_done:
+		if currentLane < 4:
+			#log.position.x += tilewidth
+			#log.position.y += tileheight
+			currentLane += 2
+			destination = Vector2(log.position.x + tilewidth, log.position.y + tileheight)
+			aux = destination - log.position
+			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
+			deltaTime = speed + distance * multiplier
+		elif currentLane < 5:
+			#log.position.x += tilewidth/2
+			#log.position.y += tileheight/2
+			currentLane += 1
+			destination = Vector2(log.position.x + tilewidth/2, log.position.y + tileheight/2)
+			aux = destination - log.position
+			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
+			deltaTime = speed + distance * multiplier
+		is_done = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	#get_input()
 	move(delta)
+	log.position = log.position.move_toward(destination, deltaTime)
+	if (log.position == destination):
+		is_done = true
 	position = Vector2(pos.x, pos.y) 
 	Events.emit_signal("player_position",position)
 

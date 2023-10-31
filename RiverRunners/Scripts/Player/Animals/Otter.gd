@@ -22,13 +22,12 @@ var aux1_y = 0
 var delay = 0.12
 var is_jumping = false
 var is_throwing = false
+var logNode
+var basePosition = position
 
 func _ready():
 	animal = Animal.new() 
-	throwableStone = stone.instantiate()
-	#add_child(throwableStone)
-	pos_original = position
-	pos_original.y += throwoffset
+	logNode = get_node("../Log")
 	pos = position.y
 	Events.connect("input_jump", jump)
 	Events.connect("input_throw", throw)
@@ -37,6 +36,8 @@ func jump():
 	if not is_jumping:
 		is_jumping = true
 		jumpTime = -1*delay
+		pos = logNode.position.y + basePosition.y
+
 
 func handle_jump(delta): 
 	jumpTime += delta
@@ -44,24 +45,19 @@ func handle_jump(delta):
 		position.y = pos - (jumpSpeed + jumpGravity * jumpTime * -1) * jumpTime 
 	elif jumpTime >= 0:
 		if(is_jumping):	#acabou o salto
-			pass
-		is_jumping = false
-		position.y = pos
+			position.y = pos
+			is_jumping = false
+			if not logNode.position.x + basePosition.x == position.x:
+				print("Rip otter")
+	
+func handle_position():
+	if not is_jumping:
+		position = logNode.position + basePosition
+
 	
 func throw():
 	Events.emit_signal("otter_position",position)
 
-func handle_throw(delta):
-	throwTime += delta
-	if is_throwing && throwableStone.position.x <= throwDestination.x && throwableStone.position.y >= throwDestination.y && throwTime >= 0: #criar variaveis auxiliares para x e para y onde depois guardo no final na position da stone
-		aux_x = pos_original.x + tilewidth/2 * throwTime * throwSpeedX
-		aux_y = pos_original.y - tileheight/2 * throwTime * throwSpeedX
-		aux1_y = aux_y - (throwSpeedY + throwGravity * throwTime * -1) * throwTime
-		throwableStone.position = Vector2(aux_x, aux1_y)
-	elif throwTime >= 0:
-		is_throwing = false
-		#throwableStone.queue_free() mudar de sitio
-
 func _process(delta):
+	handle_position()
 	handle_jump(delta)
-	handle_throw(delta)

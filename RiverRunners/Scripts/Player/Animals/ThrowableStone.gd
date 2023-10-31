@@ -11,28 +11,29 @@ var throwSpeedX = 2.5
 var throwSpeedY = 500
 var throwTime = 0
 var throwoffset = 0
-var throwDestination = 0
 var aux_x = 0
 var aux_y = 0
 var aux1_y = 0
+var logNode
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	logNode = get_node("../Log")
 	Events.connect("otter_position", throw)
 
 func throw(otter_position):
 	if not is_throwing and throwableStone == null:
 		throwableStone = stone.instantiate()
 		add_child(throwableStone)
+		throwableStone.position = logNode.position
 		pos_original = otter_position
 		pos_original.y += throwoffset
 		is_throwing = true
 		throwTime = 0
-		throwDestination = Vector2(position.x + (tilewidth * 5), position.y - (tileheight * 5))
 
 func handle_throw(delta):
 	throwTime += delta
-	if is_throwing && throwableStone.position.x <= throwDestination.x && throwableStone.position.y >= throwDestination.y && throwTime >= 0: #criar variaveis auxiliares para x e para y onde depois guardo no final na position da stone
+	if is_throwing && throwableStone.position.y <= position.y + logNode.position.y - (tileheight * (throwableStone.position.x - position.x - logNode.position.x)/tilewidth) && throwTime >= 0: #criar variaveis auxiliares para x e para y onde depois guardo no final na position da stone
 		aux_x = pos_original.x + tilewidth/2 * throwTime * throwSpeedX
 		aux_y = pos_original.y - tileheight/2 * throwTime * throwSpeedX
 		aux1_y = aux_y - (throwSpeedY + throwGravity * throwTime * -1) * throwTime

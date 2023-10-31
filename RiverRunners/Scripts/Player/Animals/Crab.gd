@@ -32,4 +32,3 @@ func handle_jump(delta):
 
 func _process(delta):
 	handle_jump(delta)
-	handle_jump(delta)

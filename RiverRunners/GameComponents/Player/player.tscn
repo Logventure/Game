@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dej1mjtjgtaao"]
+[gd_scene load_steps=14 format=3 uid="uid://dej1mjtjgtaao"]
 
 [ext_resource type="Script" path="res://Scripts/Player/LogMovements.gd" id="1_8lkio"]
 [ext_resource type="Script" path="res://Scripts/Player/CollisionHandler.gd" id="2_cobcv"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Scripts/Player/Animals/Crab.gd" id="8_gjrmx"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/Otter.gd" id="9_vpltj"]
 [ext_resource type="Texture2D" uid="uid://b8os8snlaoaun" path="res://Assets/Characters/Justin-Beaver-16-Water.png" id="11_7nywv"]
+[ext_resource type="Script" path="res://GameComponents/Player/ThrowableStone.gd" id="13_ecvwx"]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_8lkio")
@@ -28,7 +29,6 @@ position = Vector2(-52, 42)
 texture = ExtResource("3_2f5mo")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log"]
-visible = false
 polygon = PackedVector2Array(-93, 60, -136, 47, 56, -35, 95, -24)
 
 [node name="Crab" type="Sprite2D" parent="Log"]
@@ -51,3 +51,6 @@ script = ExtResource("7_pt0qm")
 position = Vector2(-177, 72)
 texture = ExtResource("11_7nywv")
 script = ExtResource("5_supvc")
+
+[node name="ThrowableStone" type="Node2D" parent="."]
+script = ExtResource("13_ecvwx")

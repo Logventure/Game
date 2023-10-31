@@ -7,4 +7,5 @@
 [node name="StoneArea" type="Area2D" parent="."]
 
 [node name="StoneSprite" type="Sprite2D" parent="StoneArea"]
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_l18xh")

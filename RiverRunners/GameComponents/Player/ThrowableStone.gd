@@ -1,55 +1,34 @@
-extends Sprite2D
+extends Node2D
 
-var animal
 var stone = load("res://GameComponents/Player/stone.tscn")
-var throwableStone
+var throwableStone = null
 const tilewidth: int = 380
 const tileheight: int = 190
-var pos = Vector2.ZERO
 var pos_original = Vector2.ZERO
-var jumpGravity = 400
-var jumpTime = 0
-var jumpSpeed = 500
+var is_throwing = false
 var throwGravity = 400
 var throwSpeedX = 2.5
 var throwSpeedY = 500
 var throwTime = 0
-var throwoffset = 90
+var throwoffset = 0
 var throwDestination = 0
 var aux_x = 0
 var aux_y = 0
 var aux1_y = 0
-var delay = 0.12
-var is_jumping = false
-var is_throwing = false
 
+# Called when the node enters the scene tree for the first time.
 func _ready():
-	animal = Animal.new() 
-	throwableStone = stone.instantiate()
-	#add_child(throwableStone)
-	pos_original = position
-	pos_original.y += throwoffset
-	pos = position.y
-	Events.connect("input_jump", jump)
-	Events.connect("input_throw", throw)
+	Events.connect("otter_position", throw)
 
-func jump():
-	if not is_jumping:
-		is_jumping = true
-		jumpTime = -1*delay
-
-func handle_jump(delta): 
-	jumpTime += delta
-	if is_jumping && position.y <= pos && jumpTime >= 0:
-		position.y = pos - (jumpSpeed + jumpGravity * jumpTime * -1) * jumpTime 
-	elif jumpTime >= 0:
-		if(is_jumping):	#acabou o salto
-			pass
-		is_jumping = false
-		position.y = pos
-	
-func throw():
-	Events.emit_signal("otter_position",position)
+func throw(otter_position):
+	if not is_throwing and throwableStone == null:
+		throwableStone = stone.instantiate()
+		add_child(throwableStone)
+		pos_original = otter_position
+		pos_original.y += throwoffset
+		is_throwing = true
+		throwTime = 0
+		throwDestination = Vector2(position.x + (tilewidth * 5), position.y - (tileheight * 5))
 
 func handle_throw(delta):
 	throwTime += delta
@@ -60,8 +39,9 @@ func handle_throw(delta):
 		throwableStone.position = Vector2(aux_x, aux1_y)
 	elif throwTime >= 0:
 		is_throwing = false
-		#throwableStone.queue_free() mudar de sitio
+		if not throwableStone == null: 
+			throwableStone.queue_free()
+			throwableStone = null
 
 func _process(delta):
-	handle_jump(delta)
 	handle_throw(delta)

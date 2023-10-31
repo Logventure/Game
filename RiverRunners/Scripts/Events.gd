@@ -12,4 +12,6 @@ signal input_shield
 signal player_position(position)
 signal player_speed(speed)
 
+signal otter_position(position)
+
 signal damage_taken(damage)

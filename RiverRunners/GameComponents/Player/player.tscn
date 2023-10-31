@@ -32,17 +32,17 @@ visible = false
 polygon = PackedVector2Array(-93, 60, -136, 47, 56, -35, 95, -24)
 
 [node name="Crab" type="Sprite2D" parent="Log"]
-position = Vector2(63, -81)
+position = Vector2(70, -90)
 texture = ExtResource("4_j54x3")
 script = ExtResource("8_gjrmx")
 
 [node name="Otter" type="Sprite2D" parent="Log"]
-position = Vector2(-5, -62)
+position = Vector2(-14, -65)
 texture = ExtResource("6_kwrg5")
 script = ExtResource("9_vpltj")
 
 [node name="Frog" type="Sprite2D" parent="Log"]
-position = Vector2(-70, -22)
+position = Vector2(-82, -26)
 scale = Vector2(0.703125, 0.703125)
 texture = ExtResource("3_7j7sv")
 script = ExtResource("7_pt0qm")

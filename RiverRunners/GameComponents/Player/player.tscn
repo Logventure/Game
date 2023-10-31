@@ -1,14 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://dej1mjtjgtaao"]
+[gd_scene load_steps=13 format=3 uid="uid://dej1mjtjgtaao"]
 
 [ext_resource type="Script" path="res://Scripts/Player/LogMovements.gd" id="1_8lkio"]
-[ext_resource type="Texture2D" uid="uid://lfovl3wrukyq" path="res://Assets/log.png" id="1_bab1f"]
 [ext_resource type="Script" path="res://Scripts/Player/CollisionHandler.gd" id="2_cobcv"]
-[ext_resource type="Texture2D" uid="uid://b2pvgt1jy3605" path="res://Assets/BeaverBack.png" id="2_nj6gp"]
+[ext_resource type="Texture2D" uid="uid://dbcyyqgfm2med" path="res://Assets/Characters/Log-Hole.png" id="3_2f5mo"]
 [ext_resource type="Texture2D" uid="uid://b6jlwyodbq8e8" path="res://Assets/FrogBack.png" id="3_7j7sv"]
+[ext_resource type="Texture2D" uid="uid://cdhappsg7ns70" path="res://Assets/Characters/Salmon-16.png" id="3_di6bs"]
+[ext_resource type="Texture2D" uid="uid://beeoqag4v0p23" path="res://Assets/Characters/Crab-16.png" id="4_j54x3"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/Beaver.gd" id="5_supvc"]
+[ext_resource type="Texture2D" uid="uid://bjgenh0ak0r2" path="res://Assets/Characters/Otter-16.png" id="6_kwrg5"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/Frog.gd" id="7_pt0qm"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/Crab.gd" id="8_gjrmx"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/Otter.gd" id="9_vpltj"]
+[ext_resource type="Texture2D" uid="uid://b8os8snlaoaun" path="res://Assets/Characters/Justin-Beaver-16-Water.png" id="11_7nywv"]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_8lkio")
@@ -16,29 +19,35 @@ script = ExtResource("1_8lkio")
 [node name="Log" type="Area2D" parent="."]
 script = ExtResource("2_cobcv")
 
+[node name="Salmon" type="Sprite2D" parent="Log"]
+position = Vector2(-4, 11)
+texture = ExtResource("3_di6bs")
+
 [node name="LogSprite" type="Sprite2D" parent="Log"]
-position = Vector2(1.90735e-06, 1)
-scale = Vector2(0.837778, 0.837778)
-texture = ExtResource("1_bab1f")
+position = Vector2(-52, 42)
+texture = ExtResource("3_2f5mo")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log"]
-polygon = PackedVector2Array(-73, 66, -122, 51, 95, -57, 134, -39)
+visible = false
+polygon = PackedVector2Array(-93, 60, -136, 47, 56, -35, 95, -24)
 
-[node name="Beaver" type="Sprite2D" parent="Log"]
-position = Vector2(-81, -37)
-texture = ExtResource("2_nj6gp")
-script = ExtResource("5_supvc")
+[node name="Crab" type="Sprite2D" parent="Log"]
+position = Vector2(63, -81)
+texture = ExtResource("4_j54x3")
+script = ExtResource("8_gjrmx")
+
+[node name="Otter" type="Sprite2D" parent="Log"]
+position = Vector2(-5, -62)
+texture = ExtResource("6_kwrg5")
+script = ExtResource("9_vpltj")
 
 [node name="Frog" type="Sprite2D" parent="Log"]
-position = Vector2(-5, -49)
+position = Vector2(-70, -22)
 scale = Vector2(0.703125, 0.703125)
 texture = ExtResource("3_7j7sv")
 script = ExtResource("7_pt0qm")
 
-[node name="Crab" type="Sprite2D" parent="Log"]
-script = ExtResource("8_gjrmx")
-
-[node name="Salmon" type="Sprite2D" parent="Log"]
-
-[node name="Otter" type="Sprite2D" parent="Log"]
-script = ExtResource("9_vpltj")
+[node name="Beaver" type="Sprite2D" parent="Log"]
+position = Vector2(-177, 72)
+texture = ExtResource("11_7nywv")
+script = ExtResource("5_supvc")

@@ -5,11 +5,7 @@ var pos = Vector2.ZERO
 var gravity = 400
 var time = 0
 var speed = 500
-<<<<<<< Updated upstream
-var delay = 0.12
-=======
 var delay = 0
->>>>>>> Stashed changes
 var is_jumping = false
 
 func _ready():
@@ -28,18 +24,12 @@ func handle_jump(delta):
 	if is_jumping && position.y <= pos && time >= 0:
 		position.y = pos - (speed + gravity * time * -1) * time 
 	elif time >= 0:
-<<<<<<< Updated upstream
 		if(is_jumping):	#acabou o salto
 			pass
-=======
->>>>>>> Stashed changes
 		is_jumping = false
 		position.y = pos
 	
 
 func _process(delta):
-<<<<<<< Updated upstream
 	handle_jump(delta)
-=======
 	handle_jump(delta)
->>>>>>> Stashed changes

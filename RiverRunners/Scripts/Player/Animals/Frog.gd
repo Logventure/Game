@@ -24,6 +24,8 @@ func handle_jump(delta):
 	if is_jumping && position.y <= pos && time >= 0:
 		position.y = pos - (speed + gravity * time * -1) * time 
 	elif time >= 0:
+		if(is_jumping):	#acabou o salto
+			pass
 		is_jumping = false
 		position.y = pos
 	

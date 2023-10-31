@@ -5,7 +5,7 @@ var pos = Vector2.ZERO
 var gravity = 400
 var time = 0
 var speed = 500
-var delay = 0.12
+var delay = 0.36
 var is_jumping = false
 
 func _ready():

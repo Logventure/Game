@@ -1,11 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ca2p58nhcntvb"]
+[gd_scene load_steps=6 format=3 uid="uid://bnbmrcks226t0"]
 
-[ext_resource type="Texture2D" uid="uid://ds256m6l1n6ty" path="res://Assets/grid.png" id="1_djakf"]
-[ext_resource type="Script" path="res://Scripts/EditorOnlyNode.gd" id="2_h848v"]
-[ext_resource type="Texture2D" uid="uid://cmhfycdiuwgqs" path="res://Assets/Tilesets/Tile-Atlas.png" id="3_63s6w"]
+[ext_resource type="Texture2D" uid="uid://ds256m6l1n6ty" path="res://Assets/grid.png" id="1_k0384"]
+[ext_resource type="Script" path="res://Scripts/EditorOnlyNode.gd" id="2_5hys3"]
+[ext_resource type="Texture2D" uid="uid://cmhfycdiuwgqs" path="res://Assets/Tilesets/Tile-Atlas.png" id="3_tbbyn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wt4to"]
-texture = ExtResource("3_63s6w")
+texture = ExtResource("3_tbbyn")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -65,8 +65,8 @@ sources/1 = SubResource("TileSetAtlasSource_wt4to")
 [node name="GridHelper(hide)" type="Sprite2D" parent="."]
 z_index = -10
 position = Vector2(1269, -614)
-texture = ExtResource("1_djakf")
-script = ExtResource("2_h848v")
+texture = ExtResource("1_k0384")
+script = ExtResource("2_5hys3")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true

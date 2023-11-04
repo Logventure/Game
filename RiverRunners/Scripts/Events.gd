@@ -15,3 +15,4 @@ signal player_speed(speed)
 signal otter_position(position)
 
 signal damage_taken(damage)
+signal health_changed(currentHealth)

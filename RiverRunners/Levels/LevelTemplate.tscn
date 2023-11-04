@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://h1l00yxgtbf0"]
+[gd_scene load_steps=7 format=3 uid="uid://h1l00yxgtbf0"]
 
 [ext_resource type="Script" path="res://Scripts/Level/LevelManager.gd" id="1_7jm07"]
 [ext_resource type="PackedScene" uid="uid://dot5piicoqna3" path="res://GameComponents/Camera/camera.tscn" id="1_16p0x"]
 [ext_resource type="PackedScene" uid="uid://41phvey77pr8" path="res://MapGeneration/mapgeneration.tscn" id="1_ihceg"]
+[ext_resource type="PackedScene" uid="uid://cj7qhknyli3uo" path="res://GameComponents/GUI/hearts_container.tscn" id="3_54gne"]
 [ext_resource type="PackedScene" uid="uid://dej1mjtjgtaao" path="res://GameComponents/Player/player.tscn" id="4_hhuk2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n2qs2"]
@@ -25,6 +26,12 @@ offset_top = -614.0
 offset_right = -784.0
 offset_bottom = -454.0
 label_settings = SubResource("LabelSettings_n2qs2")
+
+[node name="HeartsContainer" parent="Camera2D" instance=ExtResource("3_54gne")]
+offset_left = -1055.0
+offset_top = -611.0
+offset_right = -1055.0
+offset_bottom = -611.0
 
 [node name="Map" parent="." instance=ExtResource("1_ihceg")]
 minGeneratedTiles = 20

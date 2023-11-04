@@ -31,8 +31,9 @@ func handle_jump(delta):
 			position.y = pos
 			is_jumping = false
 			if not logNode.position.x + basePosition.x == position.x:
-				print("Rip crab")
-	
+				print("Rip crabby")
+				#Events.emit_signal("damage_taken", currentHealth)
+
 func handle_position():
 	if not is_jumping:
 		position = logNode.position + basePosition

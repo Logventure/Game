@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var heartsContainer = $Camera2D/HeartsContainer
+@onready var player = $Player
 signal player_status(position, playerSpeed)
 
 @export var tilesize = 380
@@ -19,12 +21,14 @@ var player_hp = 10
 func _ready():
 	#connects to player position signal
 	Events.connect("player_position", onUpdatePlayerPosition)
-	Events.connect("damage_taken", onDamageTaken)
+	#Events.connect("damage_taken", onDamageTaken)
 
 	Events.emit_signal("player_speed",playerSpeed)
 
 	get_node("Camera2D/Label").text = str(player_hp)
-	
+	heartsContainer.setMaxHearts(player.maxHealth)
+	heartsContainer.updateHearts(player.currentHealth)
+	Events.connect("health_changed", heartsContainer.updateHearts)	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

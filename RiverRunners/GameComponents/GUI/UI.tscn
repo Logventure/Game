@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbiug4njj0xm7"]
+
+[ext_resource type="Script" path="res://Scripts/GUI/UIManager.gd" id="1_8vvr1"]
+[ext_resource type="PackedScene" uid="uid://cj7qhknyli3uo" path="res://GameComponents/GUI/hearts_container.tscn" id="2_4leus"]
+
+[node name="UI" type="Node2D"]
+script = ExtResource("1_8vvr1")
+
+[node name="HeartsContainer" parent="." instance=ExtResource("2_4leus")]

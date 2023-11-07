@@ -1,6 +1,5 @@
 extends Node2D
 
-@onready var heartsContainer = $Camera2D/HeartsContainer
 @onready var player = $Player
 signal player_status(position, playerSpeed)
 
@@ -14,22 +13,13 @@ var playerTargetSpeed = 1
 @export var playerAcceleration = 0.1
 
 
-var player_hp = 10
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#connects to player position signal
 	Events.connect("player_position", onUpdatePlayerPosition)
-	#Events.connect("damage_taken", onDamageTaken)
 
 	Events.emit_signal("player_speed",playerSpeed)
-
-	
-	heartsContainer.setMaxHearts(player.maxHealth)
-	heartsContainer.updateHearts(player.currentHealth)
-	Events.connect("health_changed", heartsContainer.updateHearts)	
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -52,6 +42,3 @@ func managePlayerSpeed():
 
 func onUpdatePlayerPosition(newposition):
 	playerPosition = newposition
-
-func onDamageTaken(damage):
-	player_hp += -1 * damage

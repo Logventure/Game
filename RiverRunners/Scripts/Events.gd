@@ -15,4 +15,8 @@ signal player_speed(speed)
 signal otter_position(position)
 
 signal damage_taken(damage)
+signal lose_damage(damage)
 signal health_changed(currentHealth)
+
+signal is_on_air(on_air)
+signal can_jump(jump)

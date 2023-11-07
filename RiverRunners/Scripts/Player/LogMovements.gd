@@ -1,7 +1,6 @@
 extends Node2D
 
 signal player_position
-signal health_changed
 var pos: Vector2 = Vector2.ZERO
 const tilewidth: int = 380
 const tileheight: int = 190
@@ -16,8 +15,9 @@ var multiplier = 0.05
 var aux = 0
 var is_done = true
 var log
-var maxHealth = 3
-var currentHealth = maxHealth
+var is_on_air = 0
+
+#adicionar variavel que indique quantos animais estao no tronco a partir do level manager
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -30,7 +30,7 @@ func _ready():
 	Events.connect("input_dash_left", dashLeft)
 	Events.connect("input_dash_right", dashRight)
 
-	Events.connect("damage_taken", onDamageTaken)
+	Events.connect("is_on_air", isOnAir)
 
 func move(delta):
 	pos.x += tilewidth/2 * delta * speed
@@ -130,15 +130,18 @@ func _process(delta):
 	if (log.position == destination):
 		is_done = true
 	position = Vector2(pos.x, pos.y) 
-	Events.emit_signal("player_position",position)
-
-
-func onDamageTaken(damage):
-	if currentHealth <= 0:
-		currentHealth = maxHealth #dies
-	else: 
-		currentHealth -= 1
-		Events.emit_signal("health_changed", currentHealth)
+	Events.emit_signal("player_position", position)
+	print(is_on_air)
 
 func onUpdatePlayerSpeed(newspeed):
 	speed = newspeed
+
+func isOnAir(on_air : bool):
+	if on_air:
+		is_on_air += 1
+	else:
+		is_on_air -= 1
+	if is_on_air == 0:
+		Events.emit_signal("can_jump", true)
+	elif is_on_air == 3:
+		Events.emit_signal("can_jump", false)

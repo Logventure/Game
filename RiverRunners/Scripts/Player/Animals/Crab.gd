@@ -9,18 +9,24 @@ var delay = 0
 var is_jumping = false
 var logNode
 var basePosition = position
+var canJump = true
+var loseDamage = true
 
 func _ready():
 	animal = Animal.new() 
 	logNode = get_node("../Log")
 	Events.connect("input_jump", jump)
+	Events.connect("can_jump", can_jump)
+	Events.connect("lose_damage", lose_damage)
+
 
 func jump():
-	if not is_jumping:
+	if not is_jumping && canJump:
 		is_jumping = true
 		time = -1*delay
 		pos = logNode.position.y + basePosition.y
-
+		Events.emit_signal("is_on_air", true)
+		loseDamage = true
 
 func handle_jump(delta): 
 	time += delta
@@ -30,9 +36,18 @@ func handle_jump(delta):
 		if(is_jumping):	#acabou o salto
 			position.y = pos
 			is_jumping = false
-			if not logNode.position.x + basePosition.x == position.x:
+			Events.emit_signal("is_on_air", false)
+			if not logNode.position.x + basePosition.x == position.x && loseDamage:
 				print("Rip crabby")
-				#Events.emit_signal("damage_taken", currentHealth)
+				Events.emit_signal("lose_damage", false)
+
+				Events.emit_signal("damage_taken", 1)
+
+func can_jump(value: bool):
+	canJump = value
+	
+func lose_damage(value: bool):
+	loseDamage = value
 
 func handle_position():
 	if not is_jumping:

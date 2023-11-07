@@ -33,20 +33,29 @@ Exit Lanes: 1,2,3
 
 #Environment modules
 
-{
-Path: res://MapGeneration/Environment/baseriver.tscn
-Difficulty: 1
-Group: 10
-Length: 2
-Entry Lanes: 1,2,3,4,5
-Exit Lanes: 1,2,3,4,5
-}
+#{
+#Path: res://MapGeneration/Environment/baseriver.tscn
+#Difficulty: 1
+#Group: 10
+#Length: 2
+#Entry Lanes: 1,2,3,4,5
+#Exit Lanes: 1,2,3,4,5
+#}
+
+#{
+#Path: res://MapGeneration/Environment/baseriver2.tscn
+#Difficulty: 1
+#Group: 10
+#Length: 2
+#Entry Lanes:
+#Exit Lanes:
+#}
 
 {
-Path: res://MapGeneration/Environment/baseriver2.tscn
+Path: res://MapGeneration/Environment/EnvironmentTemplate-Test.tscn
 Difficulty: 1
 Group: 10
-Length: 2
+Length: 22
 Entry Lanes:
 Exit Lanes:
 }

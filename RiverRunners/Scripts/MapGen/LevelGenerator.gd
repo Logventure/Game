@@ -4,7 +4,7 @@ extends Node2D
 #these position values represent a section of the river (how many tiles away they are from the starting point)
 var currentPosition = 0 #current section the front of the log is in
 var lastGeneratedPosition = 8 #last section that was generated, initial value indicates where to start adding obstacles
-var lastEnvironmentPosition = 0
+var lastEnvironmentPosition = -10
 var possibleLanes = [1,2,3,4,5]
 
 var mapModuleTemplates = [] #pre-made obstacle templates are stored here
@@ -31,8 +31,11 @@ func _ready():
 	mapModuleTemplates.append_array(ModuleBuilder.buildMapModulesFromFile("res://TextFiles/moduledescription.txt", loadJsonFromFile("res://TextFiles/componentmap.txt"), tilesize))
 	
 	#adds inicial map (temporary)
-	for i in range(-1*minGeneratedTiles,minGeneratedTiles):
-		addEnvironment(0,i)
+	#for i in range(-1*minGeneratedTiles,minGeneratedTiles):
+	#	addEnvironment(0,i)
+
+	while environmentModules.size() < minGeneratedTiles:
+		addEnvironment(lastEnvironmentPosition,2)
 
 	#connects to player position signal
 	Events.connect("player_position", onUpdateCurrentPosition)
@@ -219,14 +222,17 @@ func addEnvironment(prevPosition: int, steps: int = 1):
 		newMapEnvironment = randomModule["module"].duplicate()
 
 	newMapEnvironment.position = newPosition
+	newMapEnvironment.z_index -= 20		#provavelmente deve mudar
+	increaseObjectsZindex(environmentModules)
 	environmentModules.append(newMapEnvironment)
 	add_child(newMapEnvironment)
-	lastEnvironmentPosition = prevPosition + environmentTemplates[0]["length"]
+	lastEnvironmentPosition = prevPosition + randomModule["length"]
+	print("Last Environment Position: ",lastEnvironmentPosition)
 
 	
-func increaseObjectsZindex(array):
+func increaseObjectsZindex(array,value=1):
 	for object in array:
-		object.z_index+=1
+		object.z_index+=value
 	
 #just for testing purposes
 func moveLog(delta):

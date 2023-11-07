@@ -25,7 +25,7 @@ func _ready():
 
 	Events.emit_signal("player_speed",playerSpeed)
 
-	get_node("Camera2D/Label").text = str(player_hp)
+	
 	heartsContainer.setMaxHearts(player.maxHealth)
 	heartsContainer.updateHearts(player.currentHealth)
 	Events.connect("health_changed", heartsContainer.updateHearts)	
@@ -55,4 +55,3 @@ func onUpdatePlayerPosition(newposition):
 
 func onDamageTaken(damage):
 	player_hp += -1 * damage
-	get_node("Camera2D/Label").text = str(player_hp)

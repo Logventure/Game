@@ -50,7 +50,7 @@ static func buildModule(lines,difficulty,group,componentMap, tilesize):
 			if componentMap.has(lines[i].substr(j,1)):
 				var component = componentMap[lines[i].substr(j,1)].instantiate()
 				component.position = Utils.gridRelativePosition(Vector2(0,0),j-2,len(lines) - 1 - i,tilesize)
-				component.z_index+=j
+				component.z_index+=j*5
 				module.add_child(component)
 
 	module.z_index += 1

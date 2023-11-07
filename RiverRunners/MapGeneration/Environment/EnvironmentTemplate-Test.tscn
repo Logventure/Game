@@ -71,7 +71,7 @@ script = ExtResource("2_5hys3")
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
 texture_filter = 1
-position = Vector2(156, 367)
+position = Vector2(184, 393)
 scale = Vector2(24, 24)
 tile_set = SubResource("TileSet_jpmhy")
 format = 2

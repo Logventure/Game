@@ -227,7 +227,6 @@ func addEnvironment(prevPosition: int, steps: int = 1):
 	environmentModules.append(newMapEnvironment)
 	add_child(newMapEnvironment)
 	lastEnvironmentPosition = prevPosition + randomModule["length"]
-	print("Last Environment Position: ",lastEnvironmentPosition)
 
 	
 func increaseObjectsZindex(array,value=1):

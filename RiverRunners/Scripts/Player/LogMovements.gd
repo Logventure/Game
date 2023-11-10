@@ -128,6 +128,7 @@ func _process(delta):
 	move(delta)
 	log.position = log.position.move_toward(destination, deltaTime)
 	if (log.position == destination):
+		updateZindex()
 		is_done = true
 	position = Vector2(pos.x, pos.y) 
 	Events.emit_signal("player_position", position)
@@ -135,6 +136,9 @@ func _process(delta):
 
 func onUpdatePlayerSpeed(newspeed):
 	speed = newspeed
+
+func updateZindex():
+	z_index = (currentLane - 3) * 5 - 2
 
 func isOnAir(on_air : bool):
 	if on_air:

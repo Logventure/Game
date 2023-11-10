@@ -3,6 +3,7 @@ extends Node2D
 
 #these position values represent a section of the river (how many tiles away they are from the starting point)
 var currentPosition = 0 #current section the front of the log is in
+var currentModule = 0
 var lastGeneratedPosition = 8 #last section that was generated, initial value indicates where to start adding obstacles
 var lastEnvironmentPosition = -10
 var possibleLanes = [1,2,3,4,5]
@@ -80,8 +81,17 @@ func addToQueue(array):
 
 func onUpdateCurrentPosition(pos):
 	currentPosition = position.distance_to(pos)/Vector2(tilesize/2,tilesize/-4).length()
+	updateCurrentModule(pos)
 
 
+func updateCurrentModule(pos):
+	currentModule = getCurrentModule(pos)
+	if currentModule >= 0:
+		print("Z-index map: ", z_index)
+		print("Z-index module: ", mapModules[currentModule].z_index)
+		z_index = -1 * mapModules[currentModule].z_index
+
+		
 
 
 #loads all scenes available on the Modules folders and returns them in a list
@@ -222,7 +232,7 @@ func addEnvironment(prevPosition: int, steps: int = 1):
 		newMapEnvironment = randomModule["module"].duplicate()
 
 	newMapEnvironment.position = newPosition
-	newMapEnvironment.z_index -= 20		#provavelmente deve mudar
+	newMapEnvironment.z_index -= 200		#provavelmente deve mudar
 	increaseObjectsZindex(environmentModules)
 	environmentModules.append(newMapEnvironment)
 	add_child(newMapEnvironment)
@@ -239,4 +249,13 @@ func moveLog(delta):
 	log.position = Vector2(log.position.x + delta * tilesize / 2, log.position.y + delta * tilesize / -4)
 	return log.position
 
-
+func getCurrentModule(pos):
+	var module_index = 0
+	if mapModules.size() < 1:
+		return -1
+	for module in mapModules:
+		var module_distance = position.distance_to(module.position)/Vector2(tilesize/2,tilesize/-4).length()
+		if module_distance - currentPosition > 0:
+			return module_index
+		module_index += 1
+	return -1

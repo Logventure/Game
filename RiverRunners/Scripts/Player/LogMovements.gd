@@ -6,6 +6,7 @@ const tilewidth: int = 380
 const tileheight: int = 190
 @export var speed = 1
 var currentLane = 3
+var laneStatus = {1 : true, 2 : true, 3 : true, 4 : true, 5 : true}
 var normalMove: String = "normal"
 var dashMove: String = "dash"
 var destination = Vector2.ZERO
@@ -29,6 +30,9 @@ func _ready():
 	Events.connect("input_move_right", moveRight)
 	Events.connect("input_dash_left", dashLeft)
 	Events.connect("input_dash_right", dashRight)
+
+	Events.connect("is_lane_free", onUpdateLaneStatus)
+	Events.connect("log_collided", moveToFreeLane)
 
 	Events.connect("is_on_air", isOnAir)
 
@@ -122,6 +126,39 @@ func dashRight():
 			deltaTime = speed + distance * multiplier
 		is_done = false
 
+func moveTo(lane: int):
+	print("Move to: ", lane)
+	print(laneStatus[lane])
+	if is_done and lane > 0 and lane < 6:
+		var lanesToMove = lane - currentLane
+		currentLane = lane
+		destination = Vector2(log.position.x + tilewidth/2 * lanesToMove, log.position.y + tileheight/2 * lanesToMove)
+		aux = destination - log.position
+		distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
+		deltaTime = speed + distance * multiplier
+		is_done = false
+
+func moveToFreeLane():
+	if is_done:
+		var direction = 1
+		if currentLane < 3:
+			direction = 1
+		elif currentLane > 3:
+			direction = -1
+		else:
+			direction = randf() - 0.5
+			direction = direction / abs(direction)
+		for i in range(1,4):
+			if laneStatus.get(int(currentLane + i * direction),false):
+				moveTo(currentLane + i * direction)
+				return
+			if laneStatus.get(int(currentLane - i * direction),false):
+				moveTo(currentLane - i * direction)
+				return
+		
+
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	#get_input()
@@ -132,13 +169,17 @@ func _process(delta):
 		is_done = true
 	position = Vector2(pos.x, pos.y) 
 	Events.emit_signal("player_position", position)
-	print(is_on_air)
 
 func onUpdatePlayerSpeed(newspeed):
 	speed = newspeed
 
 func updateZindex():
 	z_index = (currentLane - 3) * 5 - 2
+
+func onUpdateLaneStatus(lane_offset,status):
+	var lane_id = currentLane + lane_offset
+	if lane_id in laneStatus.keys():
+		laneStatus[lane_id] = status
 
 func isOnAir(on_air : bool):
 	if on_air:

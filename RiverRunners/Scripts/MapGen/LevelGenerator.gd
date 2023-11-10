@@ -87,8 +87,6 @@ func onUpdateCurrentPosition(pos):
 func updateCurrentModule(pos):
 	currentModule = getCurrentModule(pos)
 	if currentModule >= 0:
-		print("Z-index map: ", z_index)
-		print("Z-index module: ", mapModules[currentModule].z_index)
 		z_index = -1 * mapModules[currentModule].z_index
 
 		

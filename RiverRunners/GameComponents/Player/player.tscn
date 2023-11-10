@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dej1mjtjgtaao"]
+[gd_scene load_steps=18 format=3 uid="uid://dej1mjtjgtaao"]
 
 [ext_resource type="Script" path="res://Scripts/Player/LogMovements.gd" id="1_8lkio"]
 [ext_resource type="Script" path="res://Scripts/Player/CollisionHandler.gd" id="2_cobcv"]
@@ -14,6 +14,9 @@
 [ext_resource type="Script" path="res://Scripts/Player/Animals/Crab.gd" id="8_gjrmx"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/Otter.gd" id="9_vpltj"]
 [ext_resource type="Texture2D" uid="uid://b8os8snlaoaun" path="res://Assets/Characters/Justin-Beaver-16-Water.png" id="11_7nywv"]
+[ext_resource type="Texture2D" uid="uid://ds256m6l1n6ty" path="res://Assets/grid.png" id="15_m36cb"]
+[ext_resource type="Script" path="res://Scripts/Player/FreeLaneDetector.gd" id="15_u2cpq"]
+[ext_resource type="Script" path="res://Scripts/EditorOnlyNode.gd" id="16_qhedj"]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_8lkio")
@@ -25,6 +28,40 @@ script = ExtResource("3_cks82")
 
 [node name="Log" type="Area2D" parent="."]
 script = ExtResource("2_cobcv")
+
+[node name="FreeLaneDetector" type="Node2D" parent="Log"]
+
+[node name="Left1" type="Area2D" parent="Log/FreeLaneDetector"]
+position = Vector2(-190, -95)
+script = ExtResource("15_u2cpq")
+lane_offset = -1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log/FreeLaneDetector/Left1"]
+polygon = PackedVector2Array(-201, 63, -125, 98, 419, -174, 338, -210)
+
+[node name="Left2" type="Area2D" parent="Log/FreeLaneDetector"]
+position = Vector2(-380, -190)
+script = ExtResource("15_u2cpq")
+lane_offset = -2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log/FreeLaneDetector/Left2"]
+polygon = PackedVector2Array(-201, 63, -125, 98, 419, -174, 338, -210)
+
+[node name="Right1" type="Area2D" parent="Log/FreeLaneDetector"]
+position = Vector2(190, 95)
+script = ExtResource("15_u2cpq")
+lane_offset = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log/FreeLaneDetector/Right1"]
+polygon = PackedVector2Array(-201, 63, -125, 98, 419, -174, 338, -210)
+
+[node name="Right2" type="Area2D" parent="Log/FreeLaneDetector"]
+position = Vector2(380, 190)
+script = ExtResource("15_u2cpq")
+lane_offset = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log/FreeLaneDetector/Right2"]
+polygon = PackedVector2Array(-201, 63, -125, 98, 419, -174, 338, -210)
 
 [node name="LogSprite" type="Sprite2D" parent="Log"]
 position = Vector2(-52, 42)
@@ -56,3 +93,9 @@ script = ExtResource("7_pt0qm")
 position = Vector2(-177, 72)
 texture = ExtResource("11_7nywv")
 script = ExtResource("5_supvc")
+
+[node name="GridHelper(hide)" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(672, -432.5)
+texture = ExtResource("15_m36cb")
+script = ExtResource("16_qhedj")

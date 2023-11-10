@@ -19,6 +19,7 @@ func _process(delta):
 
 
 func onAreaEntered(area):
+	Events.emit_signal("log_collided")
 	if colliding <= 0:
 		Events.emit_signal("damage_taken", 1)
 		if not istimercounting:

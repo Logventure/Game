@@ -20,3 +20,6 @@ signal health_changed(currentHealth)
 
 signal is_on_air(on_air)
 signal can_jump(jump)
+
+signal log_collided
+signal is_lane_free(lane_offset: int, status: bool)

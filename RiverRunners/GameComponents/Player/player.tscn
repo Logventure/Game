@@ -20,6 +20,8 @@
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_8lkio")
+move_speed = 2
+multiplier = 7.0
 
 [node name="Salmon" type="Sprite2D" parent="."]
 position = Vector2(-4, 11)

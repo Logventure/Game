@@ -5,6 +5,7 @@ var pos: Vector2 = Vector2.ZERO
 const tilewidth: int = 380
 const tileheight: int = 190
 @export var speed = 1
+@export var move_speed = 1
 var currentLane = 3
 var laneStatus = {1 : true, 2 : true, 3 : true, 4 : true, 5 : true}
 var normalMove: String = "normal"
@@ -12,7 +13,7 @@ var dashMove: String = "dash"
 var destination = Vector2.ZERO
 var distance = Vector2.ZERO
 var deltaTime = 0
-var multiplier = 0.05
+@export var multiplier = 0.05
 var aux = 0
 var is_done = true
 var log
@@ -71,7 +72,7 @@ func moveLeft():
 			destination = Vector2(log.position.x - tilewidth/2, log.position.y - tileheight/2)
 			aux = destination - log.position
 			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
-			deltaTime = speed + distance * multiplier
+			deltaTime = move_speed + distance * multiplier
 			is_done = false
 
 func moveRight():
@@ -83,7 +84,7 @@ func moveRight():
 			destination = Vector2(log.position.x + tilewidth/2, log.position.y + tileheight/2)
 			aux = destination - log.position
 			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
-			deltaTime = speed + distance * multiplier
+			deltaTime = move_speed + distance * multiplier
 			is_done = false
 		
 func dashLeft():
@@ -95,7 +96,7 @@ func dashLeft():
 			destination = Vector2(log.position.x - tilewidth, log.position.y - tileheight)
 			aux = destination - log.position
 			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
-			deltaTime = speed + distance * multiplier
+			deltaTime = move_speed + distance * multiplier
 		elif currentLane > 1:
 			#log.position.x -= tilewidth/2
 			#log.position.y -= tileheight/2
@@ -103,7 +104,7 @@ func dashLeft():
 			destination = Vector2(log.position.x - tilewidth/2, log.position.y - tileheight/2)
 			aux = destination - log.position
 			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
-			deltaTime = speed + distance * multiplier
+			deltaTime = move_speed + distance * multiplier
 		is_done = false
 
 func dashRight():
@@ -115,7 +116,7 @@ func dashRight():
 			destination = Vector2(log.position.x + tilewidth, log.position.y + tileheight)
 			aux = destination - log.position
 			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
-			deltaTime = speed + distance * multiplier
+			deltaTime = move_speed + distance * multiplier
 		elif currentLane < 5:
 			#log.position.x += tilewidth/2
 			#log.position.y += tileheight/2
@@ -123,7 +124,7 @@ func dashRight():
 			destination = Vector2(log.position.x + tilewidth/2, log.position.y + tileheight/2)
 			aux = destination - log.position
 			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
-			deltaTime = speed + distance * multiplier
+			deltaTime = move_speed + distance * multiplier
 		is_done = false
 
 func moveTo(lane: int):
@@ -135,7 +136,7 @@ func moveTo(lane: int):
 		destination = Vector2(log.position.x + tilewidth/2 * lanesToMove, log.position.y + tileheight/2 * lanesToMove)
 		aux = destination - log.position
 		distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
-		deltaTime = speed + distance * multiplier
+		deltaTime = move_speed + distance * multiplier
 		is_done = false
 
 func moveToFreeLane():
@@ -163,7 +164,7 @@ func moveToFreeLane():
 func _process(delta):
 	#get_input()
 	move(delta)
-	log.position = log.position.move_toward(destination, deltaTime)
+	log.position = log.position.move_toward(destination, deltaTime * delta)
 	if (log.position == destination):
 		updateZindex()
 		is_done = true

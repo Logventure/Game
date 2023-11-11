@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5fk01aspyxw2"
-path="res://.godot/imported/Log-full.png-875e0b03d0ac45c08e51a9070f483f4c.ctex"
+uid="uid://bn5mbvqmov0wc"
+path="res://.godot/imported/shoreTileset.png-bd57acb0585899afadbfaffbb09f78c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Log-full.png"
-dest_files=["res://.godot/imported/Log-full.png-875e0b03d0ac45c08e51a9070f483f4c.ctex"]
+source_file="res://Assets/Tilesets/shoreTileset.png"
+dest_files=["res://.godot/imported/shoreTileset.png-bd57acb0585899afadbfaffbb09f78c4.ctex"]
 
 [params]
 

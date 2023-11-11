@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br6ctsvpkymbg"
-path="res://.godot/imported/Tentacle-Tiles.png-32f1ac17c252f7d1c23ad072d28c868e.ctex"
+uid="uid://t63orlxs3c3v"
+path="res://.godot/imported/terrainTileset.png-d9a5cdabb3c76e254ffe4da71d218cea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tentacle-Tiles.png"
-dest_files=["res://.godot/imported/Tentacle-Tiles.png-32f1ac17c252f7d1c23ad072d28c868e.ctex"]
+source_file="res://Assets/Tilesets/terrainTileset.png"
+dest_files=["res://.godot/imported/terrainTileset.png-d9a5cdabb3c76e254ffe4da71d218cea.ctex"]
 
 [params]
 

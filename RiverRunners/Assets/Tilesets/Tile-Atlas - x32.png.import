@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cc7q4aijku17t"
-path="res://.godot/imported/Tile-Atlas - x4.png-c66b56c499defcd6c0d2214314dde171.ctex"
+path="res://.godot/imported/Tile-Atlas - x32.png-cde165ee6c7b392a89314738da7696de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilesets/Tile-Atlas - x4.png"
-dest_files=["res://.godot/imported/Tile-Atlas - x4.png-c66b56c499defcd6c0d2214314dde171.ctex"]
+source_file="res://Assets/Tilesets/Tile-Atlas - x32.png"
+dest_files=["res://.godot/imported/Tile-Atlas - x32.png-cde165ee6c7b392a89314738da7696de.ctex"]
 
 [params]
 

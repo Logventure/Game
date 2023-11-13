@@ -20,7 +20,7 @@ texture = ExtResource("1_d34fv")
 
 [node name="Character_sprite" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-768, -378)
+position = Vector2(-768, -367)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("2_iyggp")
 

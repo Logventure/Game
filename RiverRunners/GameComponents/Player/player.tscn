@@ -49,6 +49,14 @@ lane_offset = -2
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log/FreeLaneDetector/Left2"]
 polygon = PackedVector2Array(-201, 63, -125, 98, 419, -174, 338, -210)
 
+[node name="Left3" type="Area2D" parent="Log/FreeLaneDetector"]
+position = Vector2(-570, -285)
+script = ExtResource("15_u2cpq")
+lane_offset = -3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log/FreeLaneDetector/Left3"]
+polygon = PackedVector2Array(-201, 63, -125, 98, 419, -174, 338, -210)
+
 [node name="Right1" type="Area2D" parent="Log/FreeLaneDetector"]
 position = Vector2(190, 95)
 script = ExtResource("15_u2cpq")
@@ -65,12 +73,20 @@ lane_offset = 2
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log/FreeLaneDetector/Right2"]
 polygon = PackedVector2Array(-201, 63, -125, 98, 419, -174, 338, -210)
 
+[node name="Right3" type="Area2D" parent="Log/FreeLaneDetector"]
+position = Vector2(570, 285)
+script = ExtResource("15_u2cpq")
+lane_offset = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log/FreeLaneDetector/Right3"]
+polygon = PackedVector2Array(-201, 63, -125, 98, 419, -174, 338, -210)
+
 [node name="LogSprite" type="Sprite2D" parent="Log"]
 position = Vector2(-52, 42)
 texture = ExtResource("3_2f5mo")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log"]
-polygon = PackedVector2Array(-93, 60, -136, 47, 56, -35, 95, -24)
+polygon = PackedVector2Array(-127, 83, -177, 61, 63, -58, 110, -37)
 
 [node name="ThrowableStone" type="Node2D" parent="."]
 script = ExtResource("6_8juii")

@@ -20,7 +20,7 @@ texture = ExtResource("1_d34fv")
 
 [node name="Character_sprite" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-652, -378)
+position = Vector2(-768, -378)
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("2_iyggp")
 
@@ -33,3 +33,11 @@ offset_bottom = 154.0
 text = "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah"
 label_settings = SubResource("LabelSettings_mrv80")
 autowrap_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -2057.0
+offset_top = -2128.0
+offset_right = 1943.0
+offset_bottom = 872.0
+color = Color(0.196078, 0.196078, 0.196078, 0.388235)

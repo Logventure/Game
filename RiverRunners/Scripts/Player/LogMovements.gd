@@ -175,7 +175,7 @@ func onUpdatePlayerSpeed(newspeed):
 	speed = newspeed
 
 func updateZindex():
-	z_index = (currentLane - 3) * 5 - 2
+	z_index = (currentLane - 3) * 5 + 2
 
 func onUpdateLaneStatus(lane_offset,status):
 	var lane_id = currentLane + lane_offset

@@ -30,12 +30,8 @@ func _ready():
 	environmentTemplates.append_array(loadMapModuleTemplates("res://MapGeneration/Environment/",mapinfo))
 	mapModuleTemplates.append_array(loadMapModuleTemplates("res://MapGeneration/Modules/",mapinfo))
 	mapModuleTemplates.append_array(ModuleBuilder.buildMapModulesFromFile("res://TextFiles/moduledescription.txt", loadJsonFromFile("res://TextFiles/componentmap.txt"), tilesize))
-	
-	#adds inicial map (temporary)
-	#for i in range(-1*minGeneratedTiles,minGeneratedTiles):
-	#	addEnvironment(0,i)
 
-	while environmentModules.size() < minGeneratedTiles:
+	while lastEnvironmentPosition < minGeneratedTiles:
 		addEnvironment(lastEnvironmentPosition,2)
 
 	#connects to player position signal
@@ -45,28 +41,18 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	
-	#var logPosition = moveLog(delta)
-	#updateCurrentPosition(logPosition,3)
 
 	#add new modules and clear unnecessary ones
 	while lastGeneratedPosition - currentPosition < minGeneratedTiles and generateObstacles:
 		addMapModule(lastGeneratedPosition,1,level_difficulty,level_groups)
 
-	while lastEnvironmentPosition < lastGeneratedPosition:
-		addEnvironment(lastEnvironmentPosition,1)
 
 	while lastEnvironmentPosition - currentPosition < minGeneratedTiles:
 		addEnvironment(lastEnvironmentPosition,1)
-		lastGeneratedPosition = lastEnvironmentPosition
+	
 
-	if len(mapModules) > 0:
-		while mapModules[0].position.distance_to(Utils.gridRelativePosition(Vector2(),0,currentPosition,tilesize)) > minGeneratedTiles * tilesize and len(mapModules) > 1:
-			clearOldestModule(mapModules)
-	if len(environmentModules) > 0:
-		while environmentModules[0].position.distance_to(Utils.gridRelativePosition(Vector2(),0,currentPosition,tilesize)) > minGeneratedTiles * tilesize and len(environmentModules) > 1:
-			clearOldestModule(environmentModules)
-
+	clearOldModules()
+	
 
 #to be called with signals
 
@@ -74,10 +60,21 @@ func disableObstacles():
 	generateObstacles = false
 
 func enableObstacles():
+	if not generateObstacles and lastGeneratedPosition < currentPosition + minGeneratedTiles:
+		lastGeneratedPosition = currentPosition + minGeneratedTiles
 	generateObstacles = true
 
 func addToQueue(array):
 	obstacleQueue.append_array(array)
+
+func clearOldModules():
+	if len(mapModules) > 0:
+		while mapModules[0].position.distance_to(Utils.gridRelativePosition(Vector2(),0,currentPosition,tilesize)) > minGeneratedTiles * tilesize and len(mapModules) > 1:
+			clearOldestModule(mapModules)
+	if len(environmentModules) > 0:
+		while environmentModules[0].position.distance_to(Utils.gridRelativePosition(Vector2(),0,currentPosition,tilesize)) > minGeneratedTiles * tilesize and len(environmentModules) > 1:
+			clearOldestModule(environmentModules)
+
 
 func onUpdateCurrentPosition(pos):
 	currentPosition = position.distance_to(pos)/Vector2(tilesize/2,tilesize/-4).length()

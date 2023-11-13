@@ -3,7 +3,7 @@ extends Area2D
 var colliding = 0 #stores how many areas the log is currently colliding with
 var istimercounting = false
 
-@export var damageCooldown = 2.0
+@export var damageCooldown = 1.0
 @export var continuousDamageCooldown = 0.5
 
 
@@ -21,8 +21,8 @@ func _process(delta):
 func onAreaEntered(area):
 	Events.emit_signal("log_collided")
 	if colliding <= 0:
-		Events.emit_signal("damage_taken", 1)
 		if not istimercounting:
+			Events.emit_signal("damage_taken", 1)
 			get_tree().create_timer(damageCooldown).timeout.connect(onCooldownEnd)
 			istimercounting = true
 	colliding += 1

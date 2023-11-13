@@ -1,0 +1,46 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: frog
+
+*Text*: Hi, I'm a frog.
+>>>>>
+*Text*: I talk a lot!
+>>>>>
+*Text*: Now I need to test a long sentence so... AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH! I wonder if this is enough...
+>>>>>
+
+*Character*: beaver
+
+*Text*: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+>>>>>
+
+*Character*: crab
+
+*Text*: ...
+>>>>>
+
+*Character*: otter
+
+*Text*: Are you ok?
+>>>>>
+
+*Character*: salmon
+
+*Text*: *Drowns*
+>>>>>
+
+#
+#Use one text file for each conversation
+#

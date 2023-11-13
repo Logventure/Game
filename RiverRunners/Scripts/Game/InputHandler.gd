@@ -10,10 +10,10 @@ func handleKeyboardInput():
     elif Input.is_action_just_pressed("dashLeft"):
         Events.emit_signal("input_dash_left")
         print("dash l")
-    elif Input.is_action_just_pressed("left"):
+    elif Input.is_action_pressed("left"):
         Events.emit_signal("input_move_left")
         print("left")
-    elif Input.is_action_just_pressed("right"):
+    elif Input.is_action_pressed("right"):
         Events.emit_signal("input_move_right")
         print("right")
     elif Input.is_action_just_pressed("jump"):

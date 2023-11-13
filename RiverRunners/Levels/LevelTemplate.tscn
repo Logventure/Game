@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://h1l00yxgtbf0"]
+[gd_scene load_steps=7 format=3 uid="uid://h1l00yxgtbf0"]
 
 [ext_resource type="Script" path="res://Scripts/Level/LevelManager.gd" id="1_7jm07"]
 [ext_resource type="PackedScene" uid="uid://dot5piicoqna3" path="res://GameComponents/Camera/camera.tscn" id="1_16p0x"]
 [ext_resource type="PackedScene" uid="uid://41phvey77pr8" path="res://MapGeneration/mapgeneration.tscn" id="1_ihceg"]
 [ext_resource type="PackedScene" uid="uid://dbiug4njj0xm7" path="res://GameComponents/GUI/UI.tscn" id="3_0um28"]
 [ext_resource type="PackedScene" uid="uid://dej1mjtjgtaao" path="res://GameComponents/Player/player.tscn" id="4_hhuk2"]
+[ext_resource type="PackedScene" uid="uid://dj6cpg6bgxphr" path="res://GameComponents/GUI/Dialogue/DialogueBox.tscn" id="6_17mpq"]
 
 [node name="LevelManager" type="Node2D"]
 script = ExtResource("1_7jm07")
@@ -18,6 +19,10 @@ minZoom = 0.5
 
 [node name="UI" parent="Camera2D" instance=ExtResource("3_0um28")]
 position = Vector2(-1187, -627)
+
+[node name="DialogueBox" parent="Camera2D" instance=ExtResource("6_17mpq")]
+z_index = 700
+position = Vector2(0, 395)
 
 [node name="Map" parent="." instance=ExtResource("1_ihceg")]
 minGeneratedTiles = 20

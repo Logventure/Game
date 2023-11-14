@@ -21,6 +21,13 @@ Events="*res://Scripts/Events.gd"
 Utils="*res://Scripts/Utils.gd"
 InputHandler="*res://Scripts/Game/InputHandler.gd"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/resizable=false
+window/stretch/mode="canvas_items"
+
 [dotnet]
 
 project/assembly_name="RiverRunners"

@@ -16,7 +16,7 @@ func _ready():
 
 func onDamageTaken(damage):
 	if currentHealth <= 0:
-		currentHealth = maxHealth #dies
+		currentHealth = maxHealth #when dies send signal to levelManager, who receives the signal and sends it to a onDie function to change the state to PAUSED. After that, level manager send signal to UImanager back to pop up gameover scene
 	else: 
 		currentHealth -= damage
 		Events.emit_signal("health_changed", currentHealth)

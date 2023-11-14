@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq86htxc5qp7n"]
+
+[ext_resource type="Script" path="res://Scripts/GUI/modes_ui.gd" id="1_uugdi"]
+[ext_resource type="Texture2D" uid="uid://bol2cnilxxtjw" path="res://Assets/background_image.png" id="2_svmpb"]
+
+[node name="modes_ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uugdi")
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+offset_right = 2029.68
+offset_bottom = 1100.0
+texture = ExtResource("2_svmpb")
+expand_mode = 3
+
+[node name="history_mode" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -314.0
+offset_top = -20.0
+offset_right = -210.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="history_mode"]
+layout_mode = 2
+
+[node name="HistoryButton" type="Button" parent="history_mode"]
+layout_mode = 2
+text = "History Mode"
+
+[node name="infinite_mode" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 210.0
+offset_top = -20.0
+offset_right = 314.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="infinite_mode"]
+layout_mode = 2
+
+[node name="InfiniteButton" type="Button" parent="infinite_mode"]
+layout_mode = 2
+text = "Infinite Mode"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -23.5
+offset_top = -131.0
+offset_right = 21.5
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Back"
+
+[connection signal="pressed" from="history_mode/HistoryButton" to="." method="_on_history_button_pressed"]
+[connection signal="pressed" from="infinite_mode/InfiniteButton" to="." method="_on_infinite_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

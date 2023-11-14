@@ -80,7 +80,3 @@ func managePlayerSpeed():
 
 func onUpdatePlayerPosition(newposition):
 	playerPosition = newposition
-
-func pause():
-	var current_value : bool = get_tree().paused
-	get_tree().pause = !current_value

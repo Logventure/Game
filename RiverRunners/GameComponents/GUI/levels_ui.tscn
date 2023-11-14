@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbyp8pd13lnrx"]
+
+[ext_resource type="Script" path="res://Scripts/GUI/levels_ui.gd" id="1_8gnk2"]
+[ext_resource type="Texture2D" uid="uid://bol2cnilxxtjw" path="res://Assets/background_image.png" id="2_347wk"]
+
+[node name="LevelsUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8gnk2")
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+offset_right = 1970.64
+offset_bottom = 1068.0
+texture = ExtResource("2_347wk")
+expand_mode = 3
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -22.5
+offset_top = -131.0
+offset_right = 22.5
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Back"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

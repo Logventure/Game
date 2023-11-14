@@ -25,6 +25,8 @@ func handleKeyboardInput():
     elif Input.is_action_just_pressed("shield"):
         Events.emit_signal("input_shield")
         print("shield")
+    elif Input.is_action_just_pressed("ui_cancel"):
+        Events.emit_signal("pause_game")
     
 func handleControllerInput():
     pass

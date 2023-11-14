@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dj6cpg6bgxphr" path="res://GameComponents/GUI/Dialogue/DialogueBox.tscn" id="6_17mpq"]
 
 [node name="LevelManager" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_7jm07")
 playerMaxSpeed = 15
 
@@ -17,8 +18,11 @@ multiplier = 20
 baseZoom = 0.8
 minZoom = 0.5
 
-[node name="UI" parent="Camera2D" instance=ExtResource("3_0um28")]
-position = Vector2(-1187, -627)
+[node name="LevelUI" parent="Camera2D" instance=ExtResource("3_0um28")]
+offset_left = -1188.0
+offset_top = -624.0
+offset_right = -1148.0
+offset_bottom = -584.0
 
 [node name="DialogueBox" parent="Camera2D" instance=ExtResource("6_17mpq")]
 z_index = 700

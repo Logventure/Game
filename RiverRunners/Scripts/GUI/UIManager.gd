@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 #receber sinal do speed do player e com base nele dar scale ao UI para encaixar na janela do jogo
 signal health_changed
 @onready var heartsContainer = $HeartsContainer
@@ -20,8 +20,3 @@ func onDamageTaken(damage):
 	else: 
 		currentHealth -= damage
 		Events.emit_signal("health_changed", currentHealth)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

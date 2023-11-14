@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://chkd7lgphi0cv"]
+
+[ext_resource type="Script" path="res://Scripts/GUI/options_ui.gd" id="1_vdxw5"]
+[ext_resource type="Texture2D" uid="uid://bol2cnilxxtjw" path="res://Assets/background_image.png" id="2_6jjlg"]
+
+[node name="OptionsUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vdxw5")
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+offset_right = 2029.68
+offset_bottom = 1100.0
+texture = ExtResource("2_6jjlg")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.5
+offset_top = -33.0
+offset_right = 26.5
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Video"
+
+[node name="AudioButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Audio"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -23.5
+offset_top = -131.0
+offset_right = 21.5
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/VideoButton" to="." method="_on_video_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/AudioButton" to="." method="_on_audio_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

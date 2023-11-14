@@ -1,9 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbiug4njj0xm7"]
+[gd_scene load_steps=4 format=3 uid="uid://dbiug4njj0xm7"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/UIManager.gd" id="1_8vvr1"]
 [ext_resource type="PackedScene" uid="uid://cj7qhknyli3uo" path="res://GameComponents/GUI/hearts_container.tscn" id="2_4leus"]
+[ext_resource type="PackedScene" uid="uid://c0evnav84nr83" path="res://GameComponents/GUI/pause_ui.tscn" id="3_gxgmh"]
 
-[node name="UI" type="Node2D"]
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("1_8vvr1")
 
 [node name="HeartsContainer" parent="." instance=ExtResource("2_4leus")]
+process_mode = 1
+layout_mode = 0
+
+[node name="pause_ui" parent="." instance=ExtResource("3_gxgmh")]
+layout_mode = 1

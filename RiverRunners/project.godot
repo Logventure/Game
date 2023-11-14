@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="RiverRunners"
-run/main_scene="res://Game/GameManager.tscn"
+run/main_scene="res://GameComponents/GUI/main_menu_ui.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 

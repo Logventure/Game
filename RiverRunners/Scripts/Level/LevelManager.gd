@@ -24,6 +24,9 @@ var current_state = States.NO_OBSTACLES
 func _ready():
 	#connects to player position signal
 	Events.connect("player_position", onUpdatePlayerPosition)
+
+	#Events.connect("pause_game", pause)
+
 	Events.emit_signal("player_speed",playerSpeed)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -77,3 +80,7 @@ func managePlayerSpeed():
 
 func onUpdatePlayerPosition(newposition):
 	playerPosition = newposition
+
+func pause():
+	var current_value : bool = get_tree().paused
+	get_tree().pause = !current_value

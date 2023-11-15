@@ -25,6 +25,8 @@ func _ready():
 	#connects to player position signal
 	Events.connect("player_position", onUpdatePlayerPosition)
 
+	Events.connect("on_dialog_end", onDialogEnd)
+
 	#Events.connect("pause_game", pause)
 
 	Events.emit_signal("player_speed",playerSpeed)
@@ -84,3 +86,8 @@ func managePlayerSpeed():
 
 func onUpdatePlayerPosition(newposition):
 	playerPosition = newposition
+
+func onDialogEnd():
+	current_state = States.RUNNING
+	map.enableObstacles()
+	dialogue_box.disable()

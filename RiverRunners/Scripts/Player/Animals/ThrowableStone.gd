@@ -16,6 +16,7 @@ var aux_x = 0
 var aux_y = 0
 var aux1_y = 0
 var logNode
+var referenceposition = Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,6 +30,7 @@ func throw(otter_position):
 		throwableStone.visible = false
 		throwableStone.z_index += 1
 		throwableStone.position = logNode.position
+		referenceposition = logNode.position
 		pos_original = otter_position
 		pos_original.y += throwoffset
 		is_throwing = true
@@ -36,7 +38,8 @@ func throw(otter_position):
 
 func handle_throw(delta):
 	throwTime += delta
-	if is_throwing && throwableStone.position.y - waterheight <= position.y + logNode.position.y - (tileheight * (throwableStone.position.x - position.x - logNode.position.x)/tilewidth) && throwTime >= 0: #criar variaveis auxiliares para x e para y onde depois guardo no final na position da stone
+	if is_throwing && throwableStone.position.y - waterheight <= position.y + referenceposition.y - (tileheight * (throwableStone.position.x - position.x - referenceposition.x)/tilewidth) && throwTime >= 0: 
+		#criar variaveis auxiliares para x e para y onde depois guardo no final na position da stone
 		aux_x = pos_original.x + tilewidth/2 * throwTime * throwSpeedX
 		aux_y = pos_original.y - tileheight/2 * throwTime * throwSpeedX
 		aux1_y = aux_y - (throwSpeedY + throwGravity * throwTime * -1) * throwTime

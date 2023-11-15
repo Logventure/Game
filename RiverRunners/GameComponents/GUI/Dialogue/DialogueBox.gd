@@ -36,6 +36,7 @@ func onContinue():
 			dialogue_index += 1
 		else:
 			disable()
+			Events.emit_signal("on_dialog_end")
 	else:
 		char_count = len(current_text) - 1
 

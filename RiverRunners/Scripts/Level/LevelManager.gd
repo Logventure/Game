@@ -36,15 +36,19 @@ func _process(delta):
 
 	match current_state:
 		States.DIALOG_SETUP:
+			Events.emit_signal("on_dialog_start")
 			dialogue_box.enable()
 			map.disableObstacles()
 			current_state = States.DIALOG
+			
 
 		States.DIALOG:
 			if Input.is_action_just_pressed("text"):
+				Events.emit_signal("on_dialog_end")
 				current_state = States.RUNNING
 				map.enableObstacles()
 				dialogue_box.disable()
+				
 
 		States.RUNNING:
 			managePlayerSpeed()

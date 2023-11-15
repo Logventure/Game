@@ -20,8 +20,9 @@
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_8lkio")
-move_speed = 2
-multiplier = 7.0
+speed = 5
+base_speed = 1300
+multiplier = 1.0
 
 [node name="Salmon" type="Sprite2D" parent="."]
 position = Vector2(-4, 11)
@@ -39,7 +40,7 @@ script = ExtResource("15_u2cpq")
 lane_offset = -1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log/FreeLaneDetector/Left1"]
-polygon = PackedVector2Array(-201, 63, -125, 98, 419, -174, 338, -210)
+polygon = PackedVector2Array(-166, 45, -90, 80, 419, -174, 338, -210)
 
 [node name="Left2" type="Area2D" parent="Log/FreeLaneDetector"]
 position = Vector2(-380, -190)
@@ -47,7 +48,7 @@ script = ExtResource("15_u2cpq")
 lane_offset = -2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log/FreeLaneDetector/Left2"]
-polygon = PackedVector2Array(-201, 63, -125, 98, 419, -174, 338, -210)
+polygon = PackedVector2Array(-123, 20, -35, 55, 419, -174, 338, -210)
 
 [node name="Left3" type="Area2D" parent="Log/FreeLaneDetector"]
 position = Vector2(-570, -285)
@@ -55,7 +56,7 @@ script = ExtResource("15_u2cpq")
 lane_offset = -3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log/FreeLaneDetector/Left3"]
-polygon = PackedVector2Array(-201, 63, -125, 98, 419, -174, 338, -210)
+polygon = PackedVector2Array(-93, 8, -13, 43, 419, -174, 338, -210)
 
 [node name="Right1" type="Area2D" parent="Log/FreeLaneDetector"]
 position = Vector2(190, 95)
@@ -63,7 +64,7 @@ script = ExtResource("15_u2cpq")
 lane_offset = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log/FreeLaneDetector/Right1"]
-polygon = PackedVector2Array(-201, 63, -125, 98, 419, -174, 338, -210)
+polygon = PackedVector2Array(-146, 36, -70, 71, 419, -174, 338, -210)
 
 [node name="Right2" type="Area2D" parent="Log/FreeLaneDetector"]
 position = Vector2(380, 190)
@@ -71,7 +72,7 @@ script = ExtResource("15_u2cpq")
 lane_offset = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log/FreeLaneDetector/Right2"]
-polygon = PackedVector2Array(-201, 63, -125, 98, 419, -174, 338, -210)
+polygon = PackedVector2Array(-117, 17, -25, 52, 419, -174, 338, -210)
 
 [node name="Right3" type="Area2D" parent="Log/FreeLaneDetector"]
 position = Vector2(570, 285)
@@ -79,7 +80,7 @@ script = ExtResource("15_u2cpq")
 lane_offset = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log/FreeLaneDetector/Right3"]
-polygon = PackedVector2Array(-201, 63, -125, 98, 419, -174, 338, -210)
+polygon = PackedVector2Array(-66, -5, 10, 33, 419, -174, 338, -210)
 
 [node name="LogSprite" type="Sprite2D" parent="Log"]
 position = Vector2(-52, 42)

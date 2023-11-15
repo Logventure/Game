@@ -19,3 +19,4 @@ func _on_exit_button_pressed():
 
 func _on_credit_button_pressed(): #criar scene para os creditos
 	pass # Replace with function body.
+

@@ -26,6 +26,8 @@ func throw(otter_position):
 	if not is_throwing and throwableStone == null:
 		throwableStone = stone.instantiate()
 		add_child(throwableStone)
+		throwableStone.visible = false
+		throwableStone.z_index += 1
 		throwableStone.position = logNode.position
 		pos_original = otter_position
 		pos_original.y += throwoffset
@@ -39,6 +41,7 @@ func handle_throw(delta):
 		aux_y = pos_original.y - tileheight/2 * throwTime * throwSpeedX
 		aux1_y = aux_y - (throwSpeedY + throwGravity * throwTime * -1) * throwTime
 		throwableStone.position = Vector2(aux_x, aux1_y)
+		throwableStone.visible = true
 	elif throwTime >= 0:
 		is_throwing = false
 		if not throwableStone == null: 
@@ -47,4 +50,5 @@ func handle_throw(delta):
 			throwableStone = null
 
 func _process(delta):
-	handle_throw(delta)
+	if(is_throwing):
+		handle_throw(delta)

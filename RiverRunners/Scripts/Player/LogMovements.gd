@@ -5,7 +5,10 @@ var pos: Vector2 = Vector2.ZERO
 const tilewidth: int = 380
 const tileheight: int = 190
 @export var speed = 1
-@export var move_speed = 1
+@export var base_speed = 1000 #speed used on a normal move
+@export var dash_speed = 2000 #speed used on a dash
+@export var correct_speed = 3000 #speed used when correcting the log's position after hitting a obstacle
+var move_speed = base_speed
 var currentLane = 3
 var laneStatus = {1 : true, 2 : true, 3 : true, 4 : true, 5 : true}
 var normalMove: String = "normal"
@@ -19,6 +22,13 @@ var is_done = true
 var log
 var is_on_air = 0
 
+var lanePositions = {}
+
+enum States {IDLE, MOVING, DIALOG}
+
+var current_state = States.IDLE
+
+
 #adicionar variavel que indique quantos animais estao no tronco a partir do level manager
 
 # Called when the node enters the scene tree for the first time.
@@ -27,10 +37,8 @@ func _ready():
 	log = get_node("Log")
 	Events.connect("player_speed", onUpdatePlayerSpeed)
 
-	Events.connect("input_move_left", moveLeft)
-	Events.connect("input_move_right", moveRight)
-	Events.connect("input_dash_left", dashLeft)
-	Events.connect("input_dash_right", dashRight)
+	Events.connect("on_dialog_start", onDialogStart)
+	Events.connect("on_dialog_end", onDialogEnd)
 
 	Events.connect("is_lane_free", onUpdateLaneStatus)
 	Events.connect("log_collided", moveToFreeLane)
@@ -41,133 +49,142 @@ func move(delta):
 	pos.x += tilewidth/2 * delta * speed
 	pos.y -= tileheight/2 * delta * speed
 	
-#func get_input():
-#	if Input.is_action_just_pressed("dashLeft") and currentLane == 2:
-#		currentLane -= 1
-#		moveLeft(normalMove)
-#	elif Input.is_action_just_pressed("dashRight") and currentLane == 4:
-#		currentLane += 1
-#		moveRight(normalMove)
-#	elif Input.is_action_just_pressed("dashLeft") and currentLane > 1:
-#		currentLane -= 2
-#		moveLeft(dashMove)
-#	elif Input.is_action_just_pressed("dashRight") and currentLane < 5:
-#		currentLane += 2
-#		moveRight(dashMove)
-#	elif Input.is_action_just_pressed("left") and currentLane > 1:
-#		moveLeft(normalMove)
-#		currentLane -= 1
-#	elif Input.is_action_just_pressed("right") and currentLane < 5:
-#		moveRight(normalMove)
-#		currentLane += 1
-	#elif Input.is_action_pressed("jump"):
-	#	jump(delta) 
 	
 func moveLeft():
-	if is_done:
+	if current_state == States.IDLE:
 		if currentLane > 1:
-			#log.position.x -= tilewidth/2
-			#log.position.y -= tileheight/2
 			currentLane -= 1
-			destination = Vector2(log.position.x - tilewidth/2, log.position.y - tileheight/2)
+			destination = lanePosition(currentLane)
 			aux = destination - log.position
 			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
+			move_speed = base_speed
 			deltaTime = move_speed + distance * multiplier
-			is_done = false
+			current_state = States.MOVING
 
 func moveRight():
-	if is_done:
+	if current_state == States.IDLE:
 		if currentLane < 5:
-			#log.position.x += tilewidth/2
-			#log.position.y += tileheight/2
 			currentLane += 1
-			destination = Vector2(log.position.x + tilewidth/2, log.position.y + tileheight/2)
+			destination = lanePosition(currentLane)
 			aux = destination - log.position
 			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
+			move_speed = base_speed
 			deltaTime = move_speed + distance * multiplier
-			is_done = false
+			current_state = States.MOVING
 		
 func dashLeft():
-	if is_done:
+	if current_state == States.IDLE:
 		if currentLane > 2:
-			#log.position.x -= tilewidth
-			#log.position.y -= tileheight
 			currentLane -= 2
-			destination = Vector2(log.position.x - tilewidth, log.position.y - tileheight)
+			destination = lanePosition(currentLane)
 			aux = destination - log.position
 			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
+			move_speed = dash_speed
 			deltaTime = move_speed + distance * multiplier
 		elif currentLane > 1:
-			#log.position.x -= tilewidth/2
-			#log.position.y -= tileheight/2
 			currentLane -= 1
-			destination = Vector2(log.position.x - tilewidth/2, log.position.y - tileheight/2)
+			destination = lanePosition(currentLane)
 			aux = destination - log.position
 			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
+			move_speed = dash_speed
 			deltaTime = move_speed + distance * multiplier
-		is_done = false
+		current_state = States.MOVING
 
 func dashRight():
-	if is_done:
+	if current_state == States.IDLE:
 		if currentLane < 4:
-			#log.position.x += tilewidth
-			#log.position.y += tileheight
 			currentLane += 2
-			destination = Vector2(log.position.x + tilewidth, log.position.y + tileheight)
+			destination = lanePosition(currentLane)
 			aux = destination - log.position
 			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
+			move_speed = dash_speed
 			deltaTime = move_speed + distance * multiplier
 		elif currentLane < 5:
-			#log.position.x += tilewidth/2
-			#log.position.y += tileheight/2
 			currentLane += 1
-			destination = Vector2(log.position.x + tilewidth/2, log.position.y + tileheight/2)
+			destination = lanePosition(currentLane)
 			aux = destination - log.position
 			distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
+			move_speed = dash_speed
 			deltaTime = move_speed + distance * multiplier
-		is_done = false
+		current_state = States.MOVING
 
 func moveTo(lane: int):
-	print("Move to: ", lane)
-	print(laneStatus[lane])
-	if is_done and lane > 0 and lane < 6:
-		var lanesToMove = lane - currentLane
+	if lane > 0 and lane < 6:
 		currentLane = lane
-		destination = Vector2(log.position.x + tilewidth/2 * lanesToMove, log.position.y + tileheight/2 * lanesToMove)
+		destination = lanePosition(currentLane)
 		aux = destination - log.position
 		distance = sqrt(pow(aux.x, 2) + pow(aux.y, 2))
 		deltaTime = move_speed + distance * multiplier
-		is_done = false
+		current_state = States.MOVING
 
 func moveToFreeLane():
-	if is_done:
-		var direction = 1
-		if currentLane < 3:
-			direction = 1
-		elif currentLane > 3:
-			direction = -1
-		else:
-			direction = randf() - 0.5
-			direction = direction / abs(direction)
-		for i in range(1,4):
-			if laneStatus.get(int(currentLane + i * direction),false):
-				moveTo(currentLane + i * direction)
-				return
-			if laneStatus.get(int(currentLane - i * direction),false):
-				moveTo(currentLane - i * direction)
-				return
+	var direction = 1
+	move_speed = correct_speed
+	if currentLane < 3:
+		direction = 1
+	elif currentLane > 3:
+		direction = -1
+	else:
+		direction = randf() - 0.5
+		direction = direction / abs(direction)
+	for i in range(1,4):
+		if laneStatus.get(int(currentLane + i * direction),false):
+			moveTo(currentLane + i * direction)
+			return
+		if laneStatus.get(int(currentLane - i * direction),false):
+			moveTo(currentLane - i * direction)
+			return
 		
+func lanePosition(lane: int):
+	var offset = lane - 3
+	return Vector2(tilewidth/2 * offset, tileheight/2 * offset)
 
-
+func updateDeltaTime():
+	deltaTime = move_speed + log.position.distance_to(destination) * multiplier
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#get_input()
+	var commands = InputHandler.getCommands()
+	match current_state:
+		States.IDLE:
+			if len(commands) > 0:
+				if commands.find("move_left") != -1:
+					moveLeft()
+				elif commands.find("move_right") != -1:
+					moveRight()
+				elif commands.find("dash_left") != -1:
+					dashLeft()
+				elif commands.find("dash_right") != -1:
+					dashRight()
+			else:
+				var last_input = InputHandler.getLastInput()
+				if last_input == "move_left":
+					moveLeft()
+					InputHandler.clearLastInput()
+				if last_input == "move_right":
+					moveRight()
+					InputHandler.clearLastInput()
+				if last_input == "dash_left":
+					dashLeft()
+					InputHandler.clearLastInput()
+				if last_input == "dash_right":
+					dashRight()
+					InputHandler.clearLastInput()
+			
+		States.MOVING:
+			if (log.position == destination):
+				current_state = States.IDLE
+
+		States.DIALOG:
+
+
+			pass
+
 	move(delta)
+	updateDeltaTime()
 	log.position = log.position.move_toward(destination, deltaTime * delta)
 	if (log.position == destination):
 		updateZindex()
-		is_done = true
 	position = Vector2(pos.x, pos.y) 
 	Events.emit_signal("player_position", position)
 
@@ -181,6 +198,14 @@ func onUpdateLaneStatus(lane_offset,status):
 	var lane_id = currentLane + lane_offset
 	if lane_id in laneStatus.keys():
 		laneStatus[lane_id] = status
+
+func onDialogStart():
+	current_state = States.DIALOG
+	print("on dialog start")
+
+func onDialogEnd():
+	current_state = States.MOVING
+	print("on dialog end")
 
 func isOnAir(on_air : bool):
 	if on_air:

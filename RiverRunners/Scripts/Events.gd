@@ -25,6 +25,9 @@ signal can_jump(jump)
 signal log_collided
 signal is_lane_free(lane_offset: int, status: bool)
 
+signal on_dialog_start
+signal on_dialog_end
+
 #switching scenes
 signal go_to_main_menu
 signal go_to_mode_select

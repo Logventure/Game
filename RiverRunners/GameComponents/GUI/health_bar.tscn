@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnibcl1yijcgy"]
+
+[ext_resource type="Texture2D" uid="uid://cbm2kqxk532jl" path="res://Assets/UI/HealthContainer-Health.png" id="1_4epq1"]
+[ext_resource type="Script" path="res://Scripts/GUI/health_bar.gd" id="1_8nt6j"]
+
+[node name="health_bar" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+offset_right = 91.0
+offset_bottom = 23.0
+script = ExtResource("1_8nt6j")
+
+[node name="health_bar" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(149, -2.38419e-07)
+scale = Vector2(6.45833, 7.665)
+texture = ExtResource("1_4epq1")

@@ -19,10 +19,10 @@ baseZoom = 0.8
 minZoom = 0.5
 
 [node name="LevelUI" parent="Camera2D" instance=ExtResource("3_0um28")]
-offset_left = -1188.0
-offset_top = -624.0
-offset_right = -1148.0
-offset_bottom = -584.0
+offset_left = -1168.0
+offset_top = -596.0
+offset_right = -870.0
+offset_bottom = -478.0
 
 [node name="DialogueBox" parent="Camera2D" instance=ExtResource("6_17mpq")]
 z_index = 700

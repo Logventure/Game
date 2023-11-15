@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://xech0a6r2ni6"]
+
+[ext_resource type="Script" path="res://Scripts/GUI/health_container.gd" id="1_tos3v"]
+[ext_resource type="Texture2D" uid="uid://ot3dxofpps6" path="res://Assets/UI/HealthContainer.png" id="2_eihjt"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+offset_left = 5.0
+offset_top = 58.0
+offset_right = 255.0
+offset_bottom = 133.0
+theme_override_constants/separation = 98
+script = ExtResource("1_tos3v")
+
+[node name="empty_health_container" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(150, 1)
+scale = Vector2(6.5, 7.385)
+texture = ExtResource("2_eihjt")

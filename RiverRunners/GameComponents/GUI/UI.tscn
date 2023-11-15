@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbiug4njj0xm7"]
+[gd_scene load_steps=5 format=3 uid="uid://dbiug4njj0xm7"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/UIManager.gd" id="1_8vvr1"]
 [ext_resource type="PackedScene" uid="uid://cj7qhknyli3uo" path="res://GameComponents/GUI/hearts_container.tscn" id="2_4leus"]
+[ext_resource type="PackedScene" uid="uid://xech0a6r2ni6" path="res://GameComponents/GUI/health_container.tscn" id="3_g5a5p"]
 [ext_resource type="PackedScene" uid="uid://c0evnav84nr83" path="res://GameComponents/GUI/pause_ui.tscn" id="3_gxgmh"]
 
 [node name="UI" type="Control"]
@@ -13,7 +14,12 @@ script = ExtResource("1_8vvr1")
 
 [node name="HeartsContainer" parent="." instance=ExtResource("2_4leus")]
 process_mode = 1
+visible = false
 layout_mode = 0
 
+[node name="HealthContainer" parent="." instance=ExtResource("3_g5a5p")]
+layout_mode = 1
+
 [node name="pause_ui" parent="." instance=ExtResource("3_gxgmh")]
+visible = false
 layout_mode = 1

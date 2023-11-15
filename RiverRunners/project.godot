@@ -21,6 +21,7 @@ Events="*res://Scripts/Events.gd"
 Utils="*res://Scripts/Utils.gd"
 InputHandler="*res://Scripts/Game/InputHandler.gd"
 
+
 [display]
 
 window/size/viewport_width=1920

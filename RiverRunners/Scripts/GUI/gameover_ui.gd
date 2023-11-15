@@ -1,15 +1,22 @@
-extends Panel
+extends Control
 
-@onready var sprite = $Sprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
-func update(whole):
-	if whole: sprite.frame = 0
-	else: sprite.frame = 2
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	pass
+
+
+func _on_exit_button_pressed():
+	get_tree().quit()
+
+func _on_play_again_button_pressed():
+	visible = false
+	Events.emit_signal("go_to_level", "infinite_level_id")
+
+func _on_options_button_pressed():
 	pass

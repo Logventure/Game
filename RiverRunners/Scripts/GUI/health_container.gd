@@ -17,8 +17,9 @@ func updateHealth(currentHealth):
 	for i in range(currentHealth):
 		healths[i+1].update(true)
 
-	for i in range(currentHealth, healths.size()-1):
-		healths[i+1].update(false)
+	if healths.size() != 1:
+		for i in range(currentHealth, healths.size()-1):
+			healths[i+1].update(false)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -8,8 +8,6 @@ signal input_jump
 signal input_throw
 signal input_shield
 
-signal pause_game
-
 signal player_position(position)
 signal player_speed(speed)
 
@@ -27,6 +25,10 @@ signal is_lane_free(lane_offset: int, status: bool)
 
 signal on_dialog_start
 signal on_dialog_end
+
+signal pause_game
+signal player_died
+signal resume_game
 
 #switching scenes
 signal go_to_main_menu

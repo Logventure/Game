@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0evnav84nr83"]
+[gd_scene load_steps=2 format=3 uid="uid://xxdcxkrjegxv"]
 
-[ext_resource type="Script" path="res://Scripts/GUI/pause_ui.gd" id="1_igw7q"]
+[ext_resource type="Script" path="res://Scripts/GUI/gameover_ui.gd" id="1_p3cil"]
 
-[node name="pause_ui" type="Control"]
+[node name="gameover_ui" type="Control"]
 process_mode = 2
 layout_mode = 3
 anchors_preset = 15
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_igw7q")
+script = ExtResource("1_p3cil")
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color(1, 1, 1, 0)
@@ -37,12 +37,12 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "PAUSE"
+text = "YOU DIED"
 horizontal_alignment = 1
 
-[node name="ResumeButton" type="Button" parent="Panel/VBoxContainer"]
+[node name="PlayAgainButton" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Resume"
+text = "Play Again"
 
 [node name="OptionsButton" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -52,6 +52,6 @@ text = "Options"
 layout_mode = 2
 text = "Exit"
 
-[connection signal="pressed" from="Panel/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

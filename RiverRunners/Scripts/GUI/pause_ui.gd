@@ -8,3 +8,14 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_exit_button_pressed():
+	get_tree().quit()
+
+func _on_options_button_pressed():
+	pass
+
+func _on_resume_button_pressed():
+	visible = false
+	Events.emit_signal("resume_game")

@@ -27,7 +27,11 @@ func _ready():
 
 	Events.connect("on_dialog_end", onDialogEnd)
 
-	#Events.connect("pause_game", pause)
+	Events.connect("resume_game", resume)
+
+	Events.connect("pause_game", onPause)
+
+	Events.connect("player_died", onDie)
 
 	Events.emit_signal("player_speed",playerSpeed)
 
@@ -91,3 +95,13 @@ func onDialogEnd():
 	current_state = States.RUNNING
 	map.enableObstacles()
 	dialogue_box.disable()
+
+func resume():
+	current_state = States.RUNNING
+	player.set_process(true)
+
+func onPause():
+	current_state = States.PAUSED
+
+func onDie():
+	current_state = States.PAUSED

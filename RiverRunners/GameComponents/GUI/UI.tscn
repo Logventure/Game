@@ -1,25 +1,38 @@
 [gd_scene load_steps=5 format=3 uid="uid://dbiug4njj0xm7"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/UIManager.gd" id="1_8vvr1"]
-[ext_resource type="PackedScene" uid="uid://cj7qhknyli3uo" path="res://GameComponents/GUI/hearts_container.tscn" id="2_4leus"]
 [ext_resource type="PackedScene" uid="uid://xech0a6r2ni6" path="res://GameComponents/GUI/health_container.tscn" id="3_g5a5p"]
 [ext_resource type="PackedScene" uid="uid://c0evnav84nr83" path="res://GameComponents/GUI/pause_ui.tscn" id="3_gxgmh"]
+[ext_resource type="PackedScene" uid="uid://xxdcxkrjegxv" path="res://GameComponents/GUI/gameover_ui.tscn" id="4_0kkfx"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1918.0
+offset_bottom = 1078.0
 script = ExtResource("1_8vvr1")
-
-[node name="HeartsContainer" parent="." instance=ExtResource("2_4leus")]
-process_mode = 1
-visible = false
-layout_mode = 0
 
 [node name="HealthContainer" parent="." instance=ExtResource("3_g5a5p")]
 layout_mode = 1
 
-[node name="pause_ui" parent="." instance=ExtResource("3_gxgmh")]
+[node name="PauseMenu" parent="." instance=ExtResource("3_gxgmh")]
+process_mode = 0
 visible = false
+z_index = 100
 layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="GameoverMenu" parent="." instance=ExtResource("4_0kkfx")]
+process_mode = 0
+visible = false
+z_index = 100
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5

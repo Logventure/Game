@@ -7,4 +7,8 @@
 process_mode = 3
 script = ExtResource("1_4pynx")
 
-[node name="LevelManager" parent="." instance=ExtResource("1_l67gq")]
+[node name="Viewer" type="Node2D" parent="."]
+
+[node name="LevelManager" parent="Viewer" instance=ExtResource("1_l67gq")]
+
+[node name="Audio" type="Node2D" parent="."]

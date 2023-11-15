@@ -5,76 +5,48 @@
 
 [node name="modes_ui" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 script = ExtResource("1_uugdi")
 
 [node name="BackgroundImage" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 2029.68
 offset_bottom = 1100.0
 texture = ExtResource("2_svmpb")
 expand_mode = 3
 
-[node name="history_mode" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -314.0
-offset_top = -20.0
-offset_right = -210.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
 
-[node name="TextureRect" type="TextureRect" parent="history_mode"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
 layout_mode = 2
 
-[node name="HistoryButton" type="Button" parent="history_mode"]
+[node name="history_mode" type="VBoxContainer" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/HBoxContainer/history_mode"]
+layout_mode = 2
+
+[node name="HistoryButton" type="Button" parent="CenterContainer/HBoxContainer/history_mode"]
 layout_mode = 2
 text = "History Mode"
 
-[node name="infinite_mode" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 210.0
-offset_top = -20.0
-offset_right = 314.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="infinite_mode"]
+[node name="infinite_mode" type="VBoxContainer" parent="CenterContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="InfiniteButton" type="Button" parent="infinite_mode"]
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/HBoxContainer/infinite_mode"]
+layout_mode = 2
+
+[node name="InfiniteButton" type="Button" parent="CenterContainer/HBoxContainer/infinite_mode"]
 layout_mode = 2
 text = "Infinite Mode"
 
-[node name="BackButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -23.5
-offset_top = -131.0
-offset_right = 21.5
-offset_bottom = -100.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="BackButton" type="Button" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
 text = "Back"
 
-[connection signal="pressed" from="history_mode/HistoryButton" to="." method="_on_history_button_pressed"]
-[connection signal="pressed" from="infinite_mode/InfiniteButton" to="." method="_on_infinite_button_pressed"]
-[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/history_mode/HistoryButton" to="." method="_on_history_button_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/infinite_mode/InfiniteButton" to="." method="_on_infinite_button_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

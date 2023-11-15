@@ -8,13 +8,10 @@ func _ready():
 	image = $BackgroundImage
 
 func _on_play_button_pressed():
-	var modes = load("res://GameComponents/GUI/modes_ui.tscn")
-	get_tree().change_scene_to_packed(modes)
-	#get_tree().change_scene_to_file("res://Game/GameManager.tscn")
+	Events.emit_signal("go_to_mode_select")
 
 func _on_options_button_pressed():
-	var options = load("res://GameComponents/GUI/options_ui.tscn")
-	get_tree().change_scene_to_packed(options)
+	Events.emit_signal("go_to_options")
 
 func _on_exit_button_pressed():
 	get_tree().quit()

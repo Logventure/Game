@@ -6,13 +6,10 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_infinite_button_pressed():
-	pass # Replace with function body.
+	Events.emit_signal("go_to_level", "infinite_level_id")
 
 func _on_history_button_pressed():
-	get_tree().change_scene_to_file("res://Game/GameManager.tscn")
-	#var levels = load("res://GameComponents/GUI/levels_ui.tscn")
-	#get_tree().change_scene_to_packed(levels)
+	Events.emit_signal("go_to_level_select")
 
 func _on_back_button_pressed():
-	var back_main_menu = load("res://GameComponents/GUI/main_menu_ui.tscn")
-	get_tree().change_scene_to_packed(back_main_menu)
+	Events.emit_signal("go_to_main_menu")

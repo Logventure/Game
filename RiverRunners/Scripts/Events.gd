@@ -24,3 +24,10 @@ signal can_jump(jump)
 
 signal log_collided
 signal is_lane_free(lane_offset: int, status: bool)
+
+#switching scenes
+signal go_to_main_menu
+signal go_to_mode_select
+signal go_to_level_select
+signal go_to_level(level_id: String)
+signal go_to_options

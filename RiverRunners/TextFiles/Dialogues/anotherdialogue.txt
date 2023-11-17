@@ -1,0 +1,33 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: beaver
+
+*Text*: Heyyy! We finally have level scripts!
+>>>>>
+
+
+*Character*: otter
+
+*Text*: Bet it's gonna crash.
+>>>>>
+
+*Text*: Well, only one way to find out.
+>>>>>
+
+
+
+#
+#Use one text file for each conversation
+#

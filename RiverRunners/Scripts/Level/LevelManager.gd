@@ -16,9 +16,11 @@ var playerTargetSpeed = 1
 @export var playerMaxSpeed = 10
 @export var playerAcceleration = 0.1
 
-enum States {DIALOG,DIALOG_SETUP,RUNNING,PAUSED,NO_OBSTACLES}
+enum States {DIALOG,DIALOG_SETUP,RUNNING,PAUSED,NO_OBSTACLES,LEVEL_END}
 
 var current_state = States.NO_OBSTACLES
+
+var level_script
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,6 +37,11 @@ func _ready():
 
 	Events.emit_signal("player_speed",playerSpeed)
 
+	level_script = load("res://Levels/LevelTestScript.gd").new()
+	add_child(level_script)
+	level_script.setManager(self)
+	
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 
@@ -42,45 +49,29 @@ func _process(delta):
 
 	match current_state:
 		States.DIALOG_SETUP:
-			Events.emit_signal("on_dialog_start")
-			dialogue_box.enable()
-			map.disableObstacles()
-			current_state = States.DIALOG
-			
+			pass
+		
 
 		States.DIALOG:
-			if Input.is_action_just_pressed("text"):
-				Events.emit_signal("on_dialog_end")
-				current_state = States.RUNNING
-				map.enableObstacles()
-				dialogue_box.disable()
-				
+			pass
 
 		States.RUNNING:
 			managePlayerSpeed()
-			if Input.is_action_just_pressed("text"):
-				current_state = States.PAUSED
+
 
 		States.PAUSED:
 			player.set_process(false)
-			if Input.is_action_just_pressed("text"):
-				current_state = States.NO_OBSTACLES
-				player.set_process(true)
 
 		States.NO_OBSTACLES:
 			managePlayerSpeed()
 			map.disableObstacles()
-			if Input.is_action_just_pressed("text"):
-				current_state = States.DIALOG_SETUP
 				
+		States.LEVEL_END:
+			player.set_process(false)
 
 	
 
 func managePlayerSpeed():
-	if Input.is_action_just_pressed("spacebar") and playerTargetSpeed + 1 <= playerMaxSpeed:
-		playerTargetSpeed+=1
-	if Input.is_action_just_pressed("print") and playerTargetSpeed > 1:
-		playerTargetSpeed+=-1
 	if not playerSpeed == playerTargetSpeed:
 		playerSpeed += playerAcceleration * (playerTargetSpeed - playerSpeed)
 		Events.emit_signal("player_speed",playerSpeed)
@@ -93,7 +84,6 @@ func onUpdatePlayerPosition(newposition):
 
 func onDialogEnd():
 	current_state = States.RUNNING
-	map.enableObstacles()
 	dialogue_box.disable()
 
 func resume():
@@ -105,3 +95,29 @@ func onPause():
 
 func onDie():
 	current_state = States.PAUSED
+
+func isPaused():
+	return current_state == States.PAUSED
+
+func startDialogue(file: String):
+	dialogue_box.setFile(file)
+	Events.emit_signal("on_dialog_start")
+	dialogue_box.enable()
+	map.disableObstacles()
+	current_state = States.DIALOG
+
+func updateSpeed(speed):
+	playerTargetSpeed = speed
+
+func updateObstacleGroups(groups):
+	map.updateModuleGroups(groups)
+
+func updateObstacleState(value: bool):
+	if value:
+		map.enableObstacles()
+	else:
+		map.disableObstacles()
+
+func onLevelEnd():
+	onPause() #temporary
+	current_state = States.LEVEL_END

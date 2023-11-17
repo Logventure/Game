@@ -10,7 +10,7 @@ var deltatime = 0.0
 var current_text = ""
 var char_count = 0
 
-var dialogue_file = "res://TextFiles/Dialogues/testdialogue.txt"
+var dialogue_file = ""
 var dialogues = []
 var dialogue_index = 0
 
@@ -25,9 +25,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	updateDialogue(delta)
-	if Input.is_action_just_pressed("print"):
-		onContinue()
+	if visible:
+		updateDialogue(delta)
+		if Input.is_action_just_pressed("print"):
+			onContinue()
 
 func onContinue():
 	if char_count == len(current_text):
@@ -41,12 +42,15 @@ func onContinue():
 		char_count = len(current_text) - 1
 
 func enable():
-	visible = true
 	textbox.text = ""
+	current_text = ""
+	char_count = 0
+	deltatime = 0.0
 	if(dialogue_file != ""):
 		dialogues = loadChat(dialogue_file)
 	dialogue_index = 0
 	onContinue()
+	visible = true
 
 func disable():
 	visible = false

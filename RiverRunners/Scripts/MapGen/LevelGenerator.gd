@@ -60,12 +60,15 @@ func disableObstacles():
 	generateObstacles = false
 
 func enableObstacles():
-	if not generateObstacles and lastGeneratedPosition < currentPosition + minGeneratedTiles:
-		lastGeneratedPosition = currentPosition + minGeneratedTiles
+	if not generateObstacles and lastGeneratedPosition < currentPosition + minGeneratedTiles/2:
+		lastGeneratedPosition = currentPosition + minGeneratedTiles/2
 	generateObstacles = true
 
 func addToQueue(array):
 	obstacleQueue.append_array(array)
+
+func updateModuleGroups(array):
+	level_groups = array
 
 func clearOldModules():
 	if len(mapModules) > 0:

@@ -24,7 +24,7 @@ func _ready():
 func _process(delta):
 	updateCameraPosition()
 	updateCameraZoom()
-
+	Events.emit_signal("camera_status",position,zoom)
 
 func onUpdatePlayerPosition(position):
 	playerPosition = position

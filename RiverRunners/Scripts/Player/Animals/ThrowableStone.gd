@@ -18,13 +18,25 @@ var aux1_y = 0
 var logNode
 var referenceposition = Vector2.ZERO
 
+enum States {IDLE, THROWING, PAUSED}
+
+var current_state = States.IDLE
+var previous_state = States.IDLE
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	logNode = get_node("../Log")
 	Events.connect("otter_position", throw)
 
+	Events.connect("on_dialog_start", onPause)
+	Events.connect("on_dialog_end", onResume)
+
+	Events.connect("pause_game", onPause)
+	Events.connect("resume_game", onResume)
+
 func throw(otter_position):
-	if not is_throwing and throwableStone == null:
+	if current_state == States.IDLE and throwableStone == null:
 		throwableStone = stone.instantiate()
 		add_child(throwableStone)
 		throwableStone.visible = false
@@ -33,12 +45,12 @@ func throw(otter_position):
 		referenceposition = logNode.position
 		pos_original = otter_position
 		pos_original.y += throwoffset
-		is_throwing = true
+		current_state = States.THROWING
 		throwTime = 0
 
 func handle_throw(delta):
 	throwTime += delta
-	if is_throwing && throwableStone.position.y - waterheight <= position.y + referenceposition.y - (tileheight * (throwableStone.position.x - position.x - referenceposition.x)/tilewidth) && throwTime >= 0: 
+	if throwableStone.position.y - waterheight <= position.y + referenceposition.y - (tileheight * (throwableStone.position.x - position.x - referenceposition.x)/tilewidth) && throwTime >= 0: 
 		#criar variaveis auxiliares para x e para y onde depois guardo no final na position da stone
 		aux_x = pos_original.x + tilewidth/2 * throwTime * throwSpeedX
 		aux_y = pos_original.y - tileheight/2 * throwTime * throwSpeedX
@@ -46,12 +58,27 @@ func handle_throw(delta):
 		throwableStone.position = Vector2(aux_x, aux1_y)
 		throwableStone.visible = true
 	elif throwTime >= 0:
-		is_throwing = false
+		current_state = States.IDLE
 		if not throwableStone == null: 
 			#splash animation
 			throwableStone.queue_free()
 			throwableStone = null
 
 func _process(delta):
-	if(is_throwing):
-		handle_throw(delta)
+
+	match current_state:
+		States.IDLE:
+			pass
+
+		States.THROWING:
+			handle_throw(delta)
+
+		States.PAUSED:
+			pass
+
+func onPause():
+	previous_state = current_state
+	current_state = States.PAUSED
+
+func onResume():
+	current_state = previous_state

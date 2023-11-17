@@ -14,6 +14,8 @@ var loseDamage = true
 
 enum States {IDLE, JUMPING, DROWNING, TAKE_DAMAGE, PAUSED}
 var current_state = States.IDLE
+var previous_state = States.IDLE
+
 
 
 func _ready():
@@ -83,14 +85,15 @@ func _process(delta):
 			current_state = States.IDLE
 
 		States.TAKE_DAMAGE:
-			handle_position()
+			pass
 
 		
 		States.PAUSED:
-			handle_position()
+			pass
 
 func onPause():
+	previous_state = current_state
 	current_state = States.PAUSED
 
 func onResume():
-	current_state = States.IDLE
+	current_state = previous_state

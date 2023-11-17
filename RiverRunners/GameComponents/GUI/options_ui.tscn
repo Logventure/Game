@@ -13,49 +13,32 @@ grow_vertical = 2
 script = ExtResource("1_vdxw5")
 
 [node name="BackgroundImage" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 2029.68
-offset_bottom = 1100.0
+layout_mode = 2
+offset_right = 1992.78
+offset_bottom = 1080.0
 texture = ExtResource("2_6jjlg")
 expand_mode = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -26.5
-offset_top = -33.0
-offset_right = 26.5
-offset_bottom = 33.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
 
-[node name="VideoButton" type="Button" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="VideoButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Video"
 
-[node name="AudioButton" type="Button" parent="VBoxContainer"]
+[node name="AudioButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Audio"
 
-[node name="BackButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -23.5
-offset_top = -131.0
-offset_right = 21.5
-offset_bottom = -100.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
 text = "Back"
 
-[connection signal="pressed" from="VBoxContainer/VideoButton" to="." method="_on_video_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/AudioButton" to="." method="_on_audio_button_pressed"]
-[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/VideoButton" to="." method="_on_video_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/AudioButton" to="." method="_on_audio_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

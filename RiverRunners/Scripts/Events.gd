@@ -11,6 +11,8 @@ signal input_shield
 signal player_position(position)
 signal player_speed(speed)
 
+signal camera_status(position,zoom)
+
 signal otter_position(position)
 
 signal damage_taken(damage)
@@ -36,3 +38,4 @@ signal go_to_mode_select
 signal go_to_level_select
 signal go_to_level(level_id: String)
 signal go_to_options
+signal go_to_previous_screen

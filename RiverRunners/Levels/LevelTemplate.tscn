@@ -24,7 +24,7 @@ offset_right = 1184.0
 offset_bottom = 677.0
 
 [node name="DialogueBox" parent="Camera2D" instance=ExtResource("6_17mpq")]
-z_index = 700
+z_index = 50
 position = Vector2(0, 395)
 
 [node name="Map" parent="." instance=ExtResource("1_ihceg")]

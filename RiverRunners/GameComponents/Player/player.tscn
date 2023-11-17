@@ -33,9 +33,18 @@ script = ExtResource("3_cks82")
 script = ExtResource("2_cobcv")
 
 [node name="FreeLaneDetector" type="Node2D" parent="Log"]
+visible = false
+
+[node name="Center" type="Area2D" parent="Log/FreeLaneDetector"]
+monitorable = false
+script = ExtResource("15_u2cpq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log/FreeLaneDetector/Center"]
+polygon = PackedVector2Array(-166, 45, -90, 80, 419, -174, 338, -210)
 
 [node name="Left1" type="Area2D" parent="Log/FreeLaneDetector"]
 position = Vector2(-190, -95)
+monitorable = false
 script = ExtResource("15_u2cpq")
 lane_offset = -1
 
@@ -44,6 +53,7 @@ polygon = PackedVector2Array(-166, 45, -90, 80, 419, -174, 338, -210)
 
 [node name="Left2" type="Area2D" parent="Log/FreeLaneDetector"]
 position = Vector2(-380, -190)
+monitorable = false
 script = ExtResource("15_u2cpq")
 lane_offset = -2
 
@@ -52,6 +62,7 @@ polygon = PackedVector2Array(-123, 20, -35, 55, 419, -174, 338, -210)
 
 [node name="Left3" type="Area2D" parent="Log/FreeLaneDetector"]
 position = Vector2(-570, -285)
+monitorable = false
 script = ExtResource("15_u2cpq")
 lane_offset = -3
 
@@ -60,6 +71,7 @@ polygon = PackedVector2Array(-93, 8, -13, 43, 419, -174, 338, -210)
 
 [node name="Right1" type="Area2D" parent="Log/FreeLaneDetector"]
 position = Vector2(190, 95)
+monitorable = false
 script = ExtResource("15_u2cpq")
 lane_offset = 1
 
@@ -68,6 +80,7 @@ polygon = PackedVector2Array(-146, 36, -70, 71, 419, -174, 338, -210)
 
 [node name="Right2" type="Area2D" parent="Log/FreeLaneDetector"]
 position = Vector2(380, 190)
+monitorable = false
 script = ExtResource("15_u2cpq")
 lane_offset = 2
 
@@ -76,6 +89,7 @@ polygon = PackedVector2Array(-117, 17, -25, 52, 419, -174, 338, -210)
 
 [node name="Right3" type="Area2D" parent="Log/FreeLaneDetector"]
 position = Vector2(570, 285)
+monitorable = false
 script = ExtResource("15_u2cpq")
 lane_offset = 3
 
@@ -87,7 +101,7 @@ position = Vector2(-52, 42)
 texture = ExtResource("3_2f5mo")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log"]
-polygon = PackedVector2Array(-127, 83, -177, 61, 63, -58, 110, -37)
+polygon = PackedVector2Array(-169, 110, -212, 90, 56, -56, 116, -42)
 
 [node name="ThrowableStone" type="Node2D" parent="."]
 script = ExtResource("6_8juii")

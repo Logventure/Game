@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://phmgvr1sl5sv"]
+
+[ext_resource type="Texture2D" uid="uid://i7brmp04uwvv" path="res://Assets/Obstacles/rocks_atlas.tres" id="1_s14yn"]
+
+[node name="Rock" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="RockSprite" type="Sprite2D" parent="Area2D"]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("1_s14yn")
+region_enabled = true
+region_rect = Rect2(0, 35, 32, 25)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+scale = Vector2(0.753755, 0.778515)
+polygon = PackedVector2Array(30.5139, 86.0613, 127.362, 19.2675, 1.32669, -5.13799, -103.482, 56.5179)

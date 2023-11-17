@@ -17,7 +17,7 @@ var basePosition = position
 var canJump = true
 var loseDamage = true
 
-enum States {IDLE, JUMPING, DROWNING, TAKE_DAMAGE, DIALOG}
+enum States {IDLE, JUMPING, DROWNING, TAKE_DAMAGE, PAUSED}
 var current_state = States.IDLE
 
 func _ready():
@@ -27,8 +27,11 @@ func _ready():
 	Events.connect("can_jump", can_jump)
 	Events.connect("lose_damage", lose_damage)
 
-	Events.connect("on_dialog_start", onDialogStart)
-	Events.connect("on_dialog_end", onDialogEnd)
+	Events.connect("on_dialog_start", onPause)
+	Events.connect("on_dialog_end", onResume)
+
+	Events.connect("pause_game", onPause)
+	Events.connect("resume_game", onResume)
 
 func jump():
 	if canJump:
@@ -100,15 +103,15 @@ func _process(delta):
 			current_state = States.IDLE
 
 		States.TAKE_DAMAGE:
-			pass
+			handle_position()
+			
 
-		States.DIALOG:
-			pass
+		States.PAUSED:
+			handle_position()
+			
 
-func onDialogStart():
-	current_state = States.DIALOG
-	print("on dialog start")
+func onPause():
+	current_state = States.PAUSED
 
-func onDialogEnd():
+func onResume():
 	current_state = States.IDLE
-	print("on dialog end")

@@ -14,6 +14,8 @@ var dialogue_file = ""
 var dialogues = []
 var dialogue_index = 0
 
+var paused = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	character_sprite = get_node("Character_sprite")
@@ -21,13 +23,15 @@ func _ready():
 
 	visible = false
 
+	Events.connect("pause_game", onPause)
+	Events.connect("resume_game", onResume)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if visible:
+	if visible and not paused:
 		updateDialogue(delta)
-		if Input.is_action_just_pressed("print"):
+		if Input.is_action_just_pressed("confirm"):
 			onContinue()
 
 func onContinue():
@@ -102,3 +106,8 @@ func updateDialogue(delta):
 			textbox.text = current_text.substr(0,char_count)
 		deltatime = 0.0
 
+func onPause():
+	paused = true
+
+func onResume():
+	paused = false

@@ -21,7 +21,7 @@ extends Node
 
 enum eventTypes {DIALOGUE, SETVALUES, CUTSCENE, ENDLEVEL}
 
-var level_events = {"setup"         :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 2, "ObstacleGroups" : []},
+var level_events = {"setup"         :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 2, "ObstacleGroups" : [100]},
 					"chat1"         :    {"Time offset" : 1,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/anotherdialogue.txt"},
 					"levelStart"    :    {"Time offset" : 0,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : true},
 					"speedUp1"      :    {"Time offset" : 10,    "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "Speed" : 3},
@@ -32,7 +32,6 @@ var level_events = {"setup"         :    {"Time offset" : 0,    "Prerequesites" 
 					"levelend"      :    {"Time offset" : 1,    "Prerequesites" : ["chat2"],   		 "Type" : eventTypes.ENDLEVEL},
 }
 
-
 #don't change anything below this line
 
 var level_manager = null
@@ -41,6 +40,10 @@ enum eventStatus {NOT_DONE, IN_PROGRESS, FINISHED}
 
 var level_events_status = {}
 var ready_to_process = {}
+
+var paused = false
+
+var activeTimers = []
 
 func setManager(manager: Node):
 	level_manager = manager
@@ -56,15 +59,14 @@ func _ready():
 
 	Events.connect("on_dialog_end", onDialogueEnd)
 
-	print("Dicts: ", ready_to_process, ", ", level_events_status)
+	Events.connect("pause_game", onPause)
+	Events.connect("resume_game", onResume)
+
 
 func _process(delta):
-	if Input.is_action_just_pressed("controller_throw"):
-		onDialogueEnd()
-	
-	processEvents()
+	if not paused:
+		processEvents()
 
-	print("Level Script: Manager -> ", level_manager)
 
 
 func processEvents():
@@ -102,7 +104,18 @@ func executeEvent(id : String, details: Dictionary):
 	updateReadyToProcess()
 
 func scheduleEvent(id : String, details: Dictionary):
-	get_tree().create_timer(details["Time offset"]).timeout.connect(executeEvent.bind(id,details))
+	var new_timer = Timer.new()
+	new_timer.one_shot = true
+	new_timer.autostart = true
+	new_timer.wait_time = details["Time offset"]
+	new_timer.timeout.connect(onTimerEnd.bind(new_timer,id,details))
+	activeTimers.append(new_timer)
+	add_child(new_timer)
+
+func onTimerEnd(timer: Timer,id : String, details: Dictionary):
+	activeTimers.remove_at(activeTimers.find(timer))
+	timer.queue_free()
+	executeEvent(id,details)
 
 func updateReadyToProcess():
 	for id in level_events.keys():
@@ -113,6 +126,18 @@ func updateReadyToProcess():
 					ready_to_execute = false
 			ready_to_process[id] = ready_to_execute
 		
+func onPause():
+	paused = true
+	updateTimersState()
+
+func onResume():
+	paused = false
+	updateTimersState()
+
+func updateTimersState():
+	for timer in activeTimers:
+		if timer is Timer:
+			timer.paused = paused
 
 func onDialogueEnd():
 	for id in level_events.keys():

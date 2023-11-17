@@ -95,5 +95,57 @@ Group: 2
 -x-x-
 }
 
+Difficulty: 1
+Group: 100
+{
+-----
+-----
+x---c
+v---b
+n---m
+-----
+}
 
+Difficulty: 1
+Group: 100
+{
+-----
+-m---
+---c-
+-----
+x---b
+-----
+}
+
+Difficulty: 1
+Group: 100
+{
+-----
+----m
+---c-
+--v--
+---b-
+--c--
+-----
+}
+
+Difficulty: 1
+Group: 100
+{
+*---*
+xb-cv
+-----
+-----
+-ono-
+-***-
+}
+
+Difficulty: 1
+Group: 100
+{
+*---*
+f---f
+-----
+-*f*-
+}
 

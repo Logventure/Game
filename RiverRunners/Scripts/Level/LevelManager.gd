@@ -60,7 +60,7 @@ func _process(delta):
 
 
 		States.PAUSED:
-			player.set_process(false)
+			pass
 
 		States.NO_OBSTACLES:
 			managePlayerSpeed()
@@ -91,9 +91,11 @@ func resume():
 	player.set_process(true)
 
 func onPause():
+	player.set_process(false)
 	current_state = States.PAUSED
 
 func onDie():
+	player.set_process(false)
 	current_state = States.PAUSED
 
 func isPaused():
@@ -119,5 +121,5 @@ func updateObstacleState(value: bool):
 		map.disableObstacles()
 
 func onLevelEnd():
-	onPause() #temporary
+	Events.emit_signal("pause_game")
 	current_state = States.LEVEL_END

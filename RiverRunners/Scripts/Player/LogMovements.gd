@@ -24,7 +24,7 @@ var is_on_air = 0
 
 var lanePositions = {}
 
-enum States {IDLE, MOVING, DIALOG}
+enum States {IDLE, MOVING, PAUSED}
 
 var current_state = States.IDLE
 
@@ -37,8 +37,11 @@ func _ready():
 	log = get_node("Log")
 	Events.connect("player_speed", onUpdatePlayerSpeed)
 
-	Events.connect("on_dialog_start", onDialogStart)
-	Events.connect("on_dialog_end", onDialogEnd)
+	Events.connect("on_dialog_start", onPause)
+	Events.connect("on_dialog_end", onResume)
+
+	Events.connect("pause_game", onPause)
+	Events.connect("resume_game", onResume)
 
 	Events.connect("is_lane_free", onUpdateLaneStatus)
 	Events.connect("log_collided", moveToFreeLane)
@@ -139,6 +142,16 @@ func lanePosition(lane: int):
 	var offset = lane - 3
 	return Vector2(tilewidth/2 * offset, tileheight/2 * offset)
 
+func closestLane(position: Vector2):
+	var mindistance = -1
+	var closestlane = currentLane
+	for i in range(1,6):
+		var temp_distance = log.position.distance_to(lanePosition(i))
+		if temp_distance < mindistance or mindistance < 0:
+			closestlane = i
+			mindistance = temp_distance
+	return closestlane
+
 func updateDeltaTime():
 	deltaTime = move_speed + log.position.distance_to(destination) * multiplier
 
@@ -175,37 +188,36 @@ func _process(delta):
 			if (log.position == destination):
 				current_state = States.IDLE
 
-		States.DIALOG:
-
-
+		States.PAUSED:
 			pass
+	
 
 	move(delta)
 	updateDeltaTime()
 	log.position = log.position.move_toward(destination, deltaTime * delta)
 	if (log.position == destination):
-		updateZindex()
+		updateZindex(currentLane)
+	else:
+		updateZindex(closestLane(log.position))
 	position = Vector2(pos.x, pos.y) 
 	Events.emit_signal("player_position", position)
+
+func onPause():
+	current_state = States.PAUSED
+
+func onResume():
+	current_state = States.IDLE
 
 func onUpdatePlayerSpeed(newspeed):
 	speed = newspeed
 
-func updateZindex():
-	z_index = (currentLane - 3) * 5 + 2
+func updateZindex(lane):
+	z_index = (lane - 3) * 5 + 2
 
 func onUpdateLaneStatus(lane_offset,status):
 	var lane_id = currentLane + lane_offset
 	if lane_id in laneStatus.keys():
 		laneStatus[lane_id] = status
-
-func onDialogStart():
-	current_state = States.DIALOG
-	print("on dialog start")
-
-func onDialogEnd():
-	current_state = States.MOVING
-	print("on dialog end")
 
 func isOnAir(on_air : bool):
 	if on_air:

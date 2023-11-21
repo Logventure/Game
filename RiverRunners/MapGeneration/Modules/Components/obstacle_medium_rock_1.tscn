@@ -16,4 +16,4 @@ region_rect = Rect2(33, 3, 64, 26)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 scale = Vector2(0.753755, 0.778515)
-polygon = PackedVector2Array(210.944, 80.9233, 249.418, 35.9659, -126.036, 8.99148, -232.171, 80.9233)
+polygon = PackedVector2Array(218.904, 92.4838, 270.645, 39.8194, -189.717, 19.2675, -233.498, 92.4838)

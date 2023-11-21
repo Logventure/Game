@@ -24,10 +24,10 @@ var is_on_air = 0
 
 var lanePositions = {}
 
-enum States {IDLE, MOVING, PAUSED}
+enum States {IDLE, MOVING, PAUSED, DIALOG}
 
 var current_state = States.IDLE
-
+var previous_state = States.IDLE
 
 #adicionar variavel que indique quantos animais estao no tronco a partir do level manager
 
@@ -37,7 +37,7 @@ func _ready():
 	log = get_node("Log")
 	Events.connect("player_speed", onUpdatePlayerSpeed)
 
-	Events.connect("on_dialog_start", onPause)
+	Events.connect("on_dialog_start", onDialogStart)
 	Events.connect("on_dialog_end", onResume)
 
 	Events.connect("pause_game", onPause)
@@ -183,30 +183,57 @@ func _process(delta):
 				if last_input == "dash_right":
 					dashRight()
 					InputHandler.clearLastInput()
+
+
+			move(delta)
+			updateDeltaTime()
+			log.position = log.position.move_toward(destination, deltaTime * delta)
+			if (log.position == destination):
+				updateZindex(currentLane)
+			else:
+				updateZindex(closestLane(log.position))
+			position = Vector2(pos.x, pos.y) 
+			Events.emit_signal("player_position", position)
 			
 		States.MOVING:
 			if (log.position == destination):
 				current_state = States.IDLE
 
+			move(delta)
+			updateDeltaTime()
+			log.position = log.position.move_toward(destination, deltaTime * delta)
+			if (log.position == destination):
+				updateZindex(currentLane)
+			else:
+				updateZindex(closestLane(log.position))
+			position = Vector2(pos.x, pos.y) 
+			Events.emit_signal("player_position", position)
+
 		States.PAUSED:
 			pass
 	
+		States.DIALOG:
+			move(delta)
+			if (log.position == destination):
+				updateZindex(currentLane)
+			else:
+				updateZindex(closestLane(log.position))
+			position = Vector2(pos.x, pos.y) 
+			Events.emit_signal("player_position", position)
 
-	move(delta)
-	updateDeltaTime()
-	log.position = log.position.move_toward(destination, deltaTime * delta)
-	if (log.position == destination):
-		updateZindex(currentLane)
-	else:
-		updateZindex(closestLane(log.position))
-	position = Vector2(pos.x, pos.y) 
-	Events.emit_signal("player_position", position)
+	
 
 func onPause():
+	previous_state = current_state
 	current_state = States.PAUSED
 
 func onResume():
-	current_state = States.IDLE
+	current_state = previous_state
+
+func onDialogStart():
+	previous_state = current_state
+	current_state = States.DIALOG
+
 
 func onUpdatePlayerSpeed(newspeed):
 	speed = newspeed

@@ -16,7 +16,7 @@ var playerTargetSpeed = 1
 @export var playerMaxSpeed = 10
 @export var playerAcceleration = 0.1
 
-enum States {DIALOG,DIALOG_SETUP,RUNNING,PAUSED,NO_OBSTACLES,LEVEL_END}
+enum States {DIALOG,RUNNING,PAUSED,NO_OBSTACLES,LEVEL_END}
 
 var current_state = States.NO_OBSTACLES
 
@@ -48,10 +48,6 @@ func _process(delta):
 	print(current_state)
 
 	match current_state:
-		States.DIALOG_SETUP:
-			pass
-		
-
 		States.DIALOG:
 			pass
 

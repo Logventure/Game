@@ -77,14 +77,13 @@ func getKeyboardCommands():
 	if Input.is_action_just_pressed("dashRight"):
 		commands.append("dash_right")
 
-	elif Input.is_action_just_pressed("dashLeft"):
+	if Input.is_action_just_pressed("dashLeft"):
 		commands.append("dash_left")
 
-	else:
-		if Input.is_action_pressed("left"):
+	if Input.is_action_pressed("left"):
 			commands.append("move_left")
 
-		elif Input.is_action_pressed("right"):
+	if Input.is_action_pressed("right"):
 			commands.append("move_right")
 
 	if Input.is_action_just_pressed("jump"):
@@ -95,6 +94,15 @@ func getKeyboardCommands():
 
 	if Input.is_action_just_pressed("shield"):
 		commands.append("shield")
+
+	if commands.has("move_left") and commands.has("move_right") or commands.has("dash_left") or commands.has("dash_right"):
+		commands.remove_at(commands.find("move_left"))
+		commands.remove_at(commands.find("move_right"))
+
+	if commands.has("dash_left") and commands.has("dash_right"):
+		commands.remove_at(commands.find("dash_left"))
+		commands.remove_at(commands.find("dash_right"))
+
 
 	if commands != []:
 		last_input = commands[len(commands)-1]

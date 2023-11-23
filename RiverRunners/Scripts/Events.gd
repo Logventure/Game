@@ -32,6 +32,10 @@ signal pause_game
 signal player_died
 signal resume_game
 
+signal input_confirm
+signal input_return
+
+
 #switching scenes
 signal go_to_main_menu
 signal go_to_mode_select

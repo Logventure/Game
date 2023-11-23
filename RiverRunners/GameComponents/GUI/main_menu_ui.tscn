@@ -1,11 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://fdgjnt3f4u6u"]
+[gd_scene load_steps=15 format=3 uid="uid://fdgjnt3f4u6u"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/main_menu_ui.gd" id="1_go47f"]
 [ext_resource type="Texture2D" uid="uid://dtb46jiyiaq7x" path="res://Assets/UI/Main Menu/MainMenu-Background.png" id="2_vor62"]
 [ext_resource type="Texture2D" uid="uid://bfo3xx8wk4uwa" path="res://Assets/UI/Main Menu/Story-MM Button.png" id="3_x00ra"]
+[ext_resource type="Texture2D" uid="uid://bm6o5enxlcvb3" path="res://Assets/UI/Main Menu/Story-MM Button-Pressed.png" id="4_02eo3"]
 [ext_resource type="Texture2D" uid="uid://k13vku8ldwu8" path="res://Assets/UI/Main Menu/Infinite-MM Button.png" id="4_v5xf7"]
 [ext_resource type="Texture2D" uid="uid://c5bxrhuhkh2rg" path="res://Assets/UI/Main Menu/Options-MM Button.png" id="5_qnn5m"]
+[ext_resource type="Texture2D" uid="uid://p6ai6sok1me8" path="res://Assets/UI/Main Menu/Story-MM Button-Hover.png" id="5_vk0q6"]
 [ext_resource type="Texture2D" uid="uid://xythhli447tu" path="res://Assets/UI/Main Menu/Exit-MM Button.png" id="6_7epq6"]
+[ext_resource type="Texture2D" uid="uid://b0cjnxurt13yx" path="res://Assets/UI/Main Menu/Infinite-MM Button-Pressed.png" id="7_8xgfm"]
+[ext_resource type="Texture2D" uid="uid://dh7v3l3n50id8" path="res://Assets/UI/Main Menu/Infinite-MM Button-Hover.png" id="8_oj8wg"]
+[ext_resource type="Texture2D" uid="uid://csngdfwja06g2" path="res://Assets/UI/Main Menu/Options-MM Button-Pressed.png" id="10_8i84i"]
+[ext_resource type="Texture2D" uid="uid://b2ryi8qo6547p" path="res://Assets/UI/Main Menu/Options-MM Button-Hover.png" id="11_xr0bk"]
+[ext_resource type="Texture2D" uid="uid://0pr450nip7dg" path="res://Assets/UI/Main Menu/Exit-MM Button-Pressed.png" id="13_8k2by"]
+[ext_resource type="Texture2D" uid="uid://emhiycbqhs5f" path="res://Assets/UI/Main Menu/Exit-MM Button-Hover.png" id="14_hvnwo"]
 
 [node name="MainMenuUI" type="Control"]
 layout_mode = 3
@@ -41,23 +49,43 @@ scale = Vector2(12, 12)
 
 [node name="StoryButton" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
+focus_neighbor_bottom = NodePath("../InfiniteButton")
+focus_next = NodePath("../InfiniteButton")
 texture_normal = ExtResource("3_x00ra")
-texture_pressed = ExtResource("3_x00ra")
+texture_pressed = ExtResource("4_02eo3")
+texture_hover = ExtResource("5_vk0q6")
+texture_focused = ExtResource("5_vk0q6")
 
 [node name="InfiniteButton" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../StoryButton")
+focus_neighbor_bottom = NodePath("../OptionsButton")
+focus_next = NodePath("../OptionsButton")
+focus_previous = NodePath("../StoryButton")
 texture_normal = ExtResource("4_v5xf7")
-texture_pressed = ExtResource("4_v5xf7")
+texture_pressed = ExtResource("7_8xgfm")
+texture_hover = ExtResource("8_oj8wg")
+texture_focused = ExtResource("8_oj8wg")
 
 [node name="OptionsButton" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../InfiniteButton")
+focus_neighbor_bottom = NodePath("../ExitButton")
+focus_next = NodePath("../ExitButton")
+focus_previous = NodePath(".")
 texture_normal = ExtResource("5_qnn5m")
-texture_pressed = ExtResource("5_qnn5m")
+texture_pressed = ExtResource("10_8i84i")
+texture_hover = ExtResource("11_xr0bk")
+texture_focused = ExtResource("11_xr0bk")
 
 [node name="ExitButton" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../OptionsButton")
+focus_previous = NodePath("../OptionsButton")
 texture_normal = ExtResource("6_7epq6")
-texture_pressed = ExtResource("6_7epq6")
+texture_pressed = ExtResource("13_8k2by")
+texture_hover = ExtResource("14_hvnwo")
+texture_focused = ExtResource("14_hvnwo")
 
 [connection signal="pressed" from="VBoxContainer/StoryButton" to="." method="_on_story_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/InfiniteButton" to="." method="_on_infinite_button_pressed"]

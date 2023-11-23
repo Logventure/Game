@@ -48,6 +48,8 @@ func onGameResume():
 func handleKeyboardInput():
 	if Input.is_action_just_pressed("pause"):
 		Events.emit_signal("pause_game")
+
+	
 	
 func handleControllerInput():
 	pass
@@ -150,3 +152,6 @@ func getControllerCommands():
 		return commands
 	else:
 		return []
+
+func hasController():
+	return len(Input.get_connected_joypads()) > 0

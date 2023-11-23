@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1s11x0rylpsd"
-path="res://.godot/imported/oceanTileset.png-47598606dd92c2136b309a61b52fbc42.ctex"
+uid="uid://glyheu5qh3sy"
+path="res://.godot/imported/trees.png-a4e1309ddcbb7f18f51ca8ee67c1d685.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilesets/oceanTileset.png"
-dest_files=["res://.godot/imported/oceanTileset.png-47598606dd92c2136b309a61b52fbc42.ctex"]
+source_file="res://TextFiles/trees.png"
+dest_files=["res://.godot/imported/trees.png-a4e1309ddcbb7f18f51ca8ee67c1d685.ctex"]
 
 [params]
 

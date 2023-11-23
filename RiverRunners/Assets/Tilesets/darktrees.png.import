@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn5mbvqmov0wc"
-path="res://.godot/imported/shoreTileset.png-bd57acb0585899afadbfaffbb09f78c4.ctex"
+uid="uid://bxl8vdtxlhfjh"
+path="res://.godot/imported/darktrees.png-536b730fd8824756a665f495f8ad3d9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilesets/shoreTileset.png"
-dest_files=["res://.godot/imported/shoreTileset.png-bd57acb0585899afadbfaffbb09f78c4.ctex"]
+source_file="res://Assets/Tilesets/darktrees.png"
+dest_files=["res://.godot/imported/darktrees.png-536b730fd8824756a665f495f8ad3d9b.ctex"]
 
 [params]
 

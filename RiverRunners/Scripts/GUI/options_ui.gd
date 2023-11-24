@@ -20,3 +20,10 @@ func _on_video_button_pressed():
 func onUpdateCameraStatus(pos,zoom): #so that the menu shows up when entered mid level
 	var temp_solution = Vector2(pos.x - 1920/2, pos.y - 1080/2) #temporary solution
 	position = temp_solution
+
+
+func _on_borderless_button_pressed():
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+func _on_fullscreen_button_pressed():
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)

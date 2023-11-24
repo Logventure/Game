@@ -10,13 +10,9 @@ func _ready():
 func _process(delta):
 	pass
 
+func _on_give_up_button_pressed():
+	Events.emit_signal("go_to_main_menu")
 
-func _on_exit_button_pressed():
-	get_tree().quit()
-
-func _on_play_again_button_pressed():
+func _on_retry_button_pressed():
 	visible = false
 	Events.emit_signal("go_to_level", "infinite_level_id")
-
-func _on_options_button_pressed():
-	pass

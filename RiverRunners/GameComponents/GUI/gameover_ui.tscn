@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://xxdcxkrjegxv"]
+[gd_scene load_steps=9 format=3 uid="uid://xxdcxkrjegxv"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/gameover_ui.gd" id="1_p3cil"]
+[ext_resource type="Texture2D" uid="uid://bv5ntikltbagw" path="res://Assets/UI/GameOver Menu/GameOverMenu-Frame.png" id="2_66bdl"]
+[ext_resource type="Texture2D" uid="uid://b2tcp8e6quo31" path="res://Assets/UI/GameOver Menu/GameOverMenu-Retry-Button.png" id="3_mjtmr"]
+[ext_resource type="Texture2D" uid="uid://cwkbp364o5gwv" path="res://Assets/UI/GameOver Menu/GameOverMenu-Retry-Button-Pressed.png" id="4_d34e0"]
+[ext_resource type="Texture2D" uid="uid://bttdlgjt7uha1" path="res://Assets/UI/GameOver Menu/GameOverMenu-Retry-Button-Hover.png" id="5_7usre"]
+[ext_resource type="Texture2D" uid="uid://lyrxxnqeuunm" path="res://Assets/UI/GameOver Menu/GameOverMenu-GiveUp-Button.png" id="6_o1fix"]
+[ext_resource type="Texture2D" uid="uid://bxtslgxruvr7r" path="res://Assets/UI/GameOver Menu/GameOverMenu-GiveUp-Button-Pressed.png" id="7_5lq6x"]
+[ext_resource type="Texture2D" uid="uid://bjh26wc6jtbeu" path="res://Assets/UI/GameOver Menu/GameOverMenu-GiveUp-Button-Hover.png" id="8_oqr6y"]
 
 [node name="gameover_ui" type="Control"]
 process_mode = 2
@@ -20,38 +27,60 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -99.0
-offset_top = -99.0
-offset_right = 89.0
-offset_bottom = 88.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(14, 14)
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -45.0
+offset_right = 80.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_66bdl")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -6.0
+offset_right = 20.0
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+[node name="RetryButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "YOU DIED"
-horizontal_alignment = 1
+focus_neighbor_top = NodePath("../GiveUpButton")
+focus_neighbor_bottom = NodePath("../GiveUpButton")
+focus_next = NodePath("../GiveUpButton")
+focus_previous = NodePath("../GiveUpButton")
+texture_normal = ExtResource("3_mjtmr")
+texture_pressed = ExtResource("4_d34e0")
+texture_hover = ExtResource("5_7usre")
+texture_focused = ExtResource("5_7usre")
 
-[node name="PlayAgainButton" type="Button" parent="Panel/VBoxContainer"]
+[node name="GiveUpButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Play Again"
+focus_neighbor_top = NodePath("../RetryButton")
+focus_neighbor_bottom = NodePath("../RetryButton")
+focus_next = NodePath("../RetryButton")
+focus_previous = NodePath("../RetryButton")
+texture_normal = ExtResource("6_o1fix")
+texture_pressed = ExtResource("7_5lq6x")
+texture_hover = ExtResource("8_oqr6y")
+texture_focused = ExtResource("8_oqr6y")
 
-[node name="OptionsButton" type="Button" parent="Panel/VBoxContainer"]
-layout_mode = 2
-text = "Options"
-
-[node name="ExitButton" type="Button" parent="Panel/VBoxContainer"]
-layout_mode = 2
-text = "Exit"
-
-[connection signal="pressed" from="Panel/VBoxContainer/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/GiveUpButton" to="." method="_on_give_up_button_pressed"]

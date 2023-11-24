@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ot3dxofpps6"
-path="res://.godot/imported/HealthContainer.png-4c3b37de75ea9aaa969c05befc8e63b9.ctex"
+uid="uid://bttdlgjt7uha1"
+path="res://.godot/imported/GameOverMenu-Retry-Button-Hover.png-4644e55e68134c5aed4c38d6e2fcdc18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/HealthContainer.png"
-dest_files=["res://.godot/imported/HealthContainer.png-4c3b37de75ea9aaa969c05befc8e63b9.ctex"]
+source_file="res://Assets/UI/GameOver Menu/GameOverMenu-Retry-Button-Hover.png"
+dest_files=["res://.godot/imported/GameOverMenu-Retry-Button-Hover.png-4644e55e68134c5aed4c38d6e2fcdc18.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://xech0a6r2ni6"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/health_container.gd" id="1_tos3v"]
-[ext_resource type="Texture2D" uid="uid://ot3dxofpps6" path="res://Assets/UI/HealthContainer.png" id="2_eihjt"]
+[ext_resource type="Texture2D" uid="uid://ot3dxofpps6" path="res://Assets/UI/Health Bar/HealthContainer.png" id="2_eihjt"]
 
 [node name="HBoxContainer" type="HBoxContainer"]
 offset_left = 5.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbm2kqxk532jl"
-path="res://.godot/imported/HealthContainer-Health.png-d1272eed3c54dfbf884e31aa7194eb34.ctex"
+uid="uid://cgevkdg44ju4u"
+path="res://.godot/imported/PauseMenu-Resume-Button.png-ce48ec3e008d6cee8d04575699a4b57f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/HealthContainer-Health.png"
-dest_files=["res://.godot/imported/HealthContainer-Health.png-d1272eed3c54dfbf884e31aa7194eb34.ctex"]
+source_file="res://Assets/UI/Pause Menu/PauseMenu-Resume-Button.png"
+dest_files=["res://.godot/imported/PauseMenu-Resume-Button.png-ce48ec3e008d6cee8d04575699a4b57f.ctex"]
 
 [params]
 

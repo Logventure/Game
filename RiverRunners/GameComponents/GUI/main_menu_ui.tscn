@@ -49,8 +49,10 @@ scale = Vector2(12, 12)
 
 [node name="StoryButton" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../ExitButton")
 focus_neighbor_bottom = NodePath("../InfiniteButton")
 focus_next = NodePath("../InfiniteButton")
+focus_previous = NodePath("../ExitButton")
 texture_normal = ExtResource("3_x00ra")
 texture_pressed = ExtResource("4_02eo3")
 texture_hover = ExtResource("5_vk0q6")
@@ -81,6 +83,8 @@ texture_focused = ExtResource("11_xr0bk")
 [node name="ExitButton" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../OptionsButton")
+focus_neighbor_bottom = NodePath("../StoryButton")
+focus_next = NodePath("../StoryButton")
 focus_previous = NodePath("../OptionsButton")
 texture_normal = ExtResource("6_7epq6")
 texture_pressed = ExtResource("13_8k2by")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://chkd7lgphi0cv"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/options_ui.gd" id="1_vdxw5"]
-[ext_resource type="Texture2D" uid="uid://bol2cnilxxtjw" path="res://Assets/background_image.png" id="2_6jjlg"]
+[ext_resource type="Texture2D" uid="uid://dtb46jiyiaq7x" path="res://Assets/UI/Main Menu/MainMenu-Background.png" id="2_cgt6h"]
 
 [node name="OptionsUI" type="Control"]
 layout_mode = 3
@@ -13,32 +13,124 @@ grow_vertical = 2
 script = ExtResource("1_vdxw5")
 
 [node name="BackgroundImage" type="TextureRect" parent="."]
+texture_filter = 1
 layout_mode = 2
-offset_right = 1992.78
-offset_bottom = 1080.0
-texture = ExtResource("2_6jjlg")
-expand_mode = 3
-
-[node name="CenterContainer" type="CenterContainer" parent="."]
-layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
+texture = ExtResource("2_cgt6h")
+expand_mode = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 1111.0
+offset_top = 328.0
+offset_right = 1700.0
+offset_bottom = 455.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="VideoButton" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Video"
+text = "Settings"
+visible_ratio = -0.125
 
-[node name="AudioButton" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
-text = "Audio"
+clip_tabs = false
 
-[node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Video" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
+visible = false
 layout_mode = 2
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Video"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Video/HBoxContainer1"]
+layout_mode = 2
+text = "Fullscreen:"
+
+[node name="FullscreenButton" type="Button" parent="MarginContainer/VBoxContainer/TabContainer/Video/HBoxContainer1"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+text = "Fullscreen
+"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Video"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Video/HBoxContainer2"]
+layout_mode = 2
+text = "Windowed:"
+
+[node name="BorderlessButton" type="Button" parent="MarginContainer/VBoxContainer/TabContainer/Video/HBoxContainer2"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+text = "Windowed"
+
+[node name="Audio" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Audio"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Audio/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Sound:"
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/TabContainer/Audio/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Audio"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Audio/HBoxContainer1"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Master Volume:"
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/TabContainer/Audio/HBoxContainer1"]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/TabContainer/Audio/HBoxContainer1/CenterContainer"]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Audio"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Audio/HBoxContainer2"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Music Volume:"
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/TabContainer/Audio/HBoxContainer2"]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/TabContainer/Audio/HBoxContainer2/CenterContainer"]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+
+[node name="Controls" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 1655.0
+offset_top = 359.0
+offset_right = 1700.0
+offset_bottom = 390.0
 text = "Back"
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/VideoButton" to="." method="_on_video_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/AudioButton" to="." method="_on_audio_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TabContainer/Video/HBoxContainer1/FullscreenButton" to="." method="_on_fullscreen_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TabContainer/Video/HBoxContainer2/BorderlessButton" to="." method="_on_borderless_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

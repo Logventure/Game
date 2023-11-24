@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw2wks6iwypc7"
-path="res://.godot/imported/HealthContainer-Extension.png-05022dd3f53b209bf04e909d9bbfcdcc.ctex"
+uid="uid://div7ccodqwkb6"
+path="res://.godot/imported/PauseMenu-GiveUp-Button.png-5380d89a075633ef6d84f01fb7b8c8d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/HealthContainer-Extension.png"
-dest_files=["res://.godot/imported/HealthContainer-Extension.png-05022dd3f53b209bf04e909d9bbfcdcc.ctex"]
+source_file="res://Assets/UI/Pause Menu/PauseMenu-GiveUp-Button.png"
+dest_files=["res://.godot/imported/PauseMenu-GiveUp-Button.png-5380d89a075633ef6d84f01fb7b8c8d4.ctex"]
 
 [params]
 

@@ -9,7 +9,7 @@ func _ready():
 	image = $BackgroundImage
 
 func _process(delta):
-	if Input.is_action_just_pressed("confirm"):
+	if Input.is_action_just_pressed("confirm") and not get_viewport().gui_get_focus_owner() == null:
 		get_viewport().gui_get_focus_owner().emit_signal("pressed")
 
 func _on_story_button_pressed():

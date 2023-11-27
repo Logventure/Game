@@ -155,3 +155,12 @@ func getControllerCommands():
 
 func hasController():
 	return len(Input.get_connected_joypads()) > 0
+
+func lastInputType():
+	match input_type:
+		InputType.KBM:
+			return "kbm"
+		InputType.CONTROLLER:
+			return "controller"
+		InputType.TOUCHSCREEN:
+			return "touchscreen"

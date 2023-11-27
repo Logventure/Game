@@ -92,7 +92,8 @@ func onPause():
 
 func onDie():
 	player.set_process(false)
-	current_state = States.PAUSED
+	Events.emit_signal("pause_game")
+
 
 func isPaused():
 	return current_state == States.PAUSED

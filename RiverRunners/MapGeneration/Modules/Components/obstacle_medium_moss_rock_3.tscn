@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://h81uxdv7itq8"]
+
+[ext_resource type="Script" path="res://Scripts/Obstacles/rock_obstacles.gd" id="1_rw6tm"]
+[ext_resource type="Texture2D" uid="uid://c24f46favssfi" path="res://Assets/Obstacles/rock_frames/rock10-1.png" id="2_o517n"]
+[ext_resource type="Texture2D" uid="uid://dlrfg1nwh71fx" path="res://Assets/Obstacles/rock_frames/rock10-2.png" id="3_xvnfc"]
+[ext_resource type="Texture2D" uid="uid://cdxxqj24lg2dr" path="res://Assets/Obstacles/rock_frames/rock10-3.png" id="4_bveak"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_osfxk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o517n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xvnfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bveak")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[node name="Rock" type="Node2D"]
+script = ExtResource("1_rw6tm")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(84, -25)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+texture_filter = 1
+position = Vector2(12, -3)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_osfxk")
+animation = &"idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+scale = Vector2(0.753755, 0.778515)
+polygon = PackedVector2Array(188.39, 98.9063, 201.657, 34.6814, -192.37, -8.99148, -209.617, 59.0869)

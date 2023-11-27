@@ -5,4 +5,9 @@
  "n": "res://MapGeneration/Modules/Components/obstacle_small_rock_3.tscn",
  "m": "res://MapGeneration/Modules/Components/obstacle_small_moss_rock_3.tscn",
  "f": "res://MapGeneration/Modules/Components/obstacle_medium_rock_1.tscn",
+ "g": "res://MapGeneration/Modules/Components/obstacle_medium_rock_2.tscn",
+ "h": "res://MapGeneration/Modules/Components/obstacle_medium_rock_3.tscn",
+ "j": "res://MapGeneration/Modules/Components/obstacle_medium_moss_rock_1.tscn",
+ "k": "res://MapGeneration/Modules/Components/obstacle_medium_moss_rock_2.tscn",
+ "l": "res://MapGeneration/Modules/Components/obstacle_medium_moss_rock_3.tscn",
  "o": "res://MapGeneration/Modules/Components/obstacle_octopus.tscn"}

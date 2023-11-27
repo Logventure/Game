@@ -1,21 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://xulpmjw7if6g"]
+[gd_scene load_steps=6 format=3 uid="uid://bao7a5ed7h3c1"]
 
-[ext_resource type="Script" path="res://Scripts/Obstacles/rock_obstacles.gd" id="1_1ygcn"]
-[ext_resource type="Texture2D" uid="uid://bd0rriyxhxfx7" path="res://Assets/Obstacles/rock_frames/rock7-1.png" id="1_uhpbp"]
-[ext_resource type="Texture2D" uid="uid://c6pe78806rg61" path="res://Assets/Obstacles/rock_frames/rock7-2.png" id="2_uha5j"]
-[ext_resource type="Texture2D" uid="uid://vrflid2msj5j" path="res://Assets/Obstacles/rock_frames/rock7-3.png" id="3_3akfw"]
+[ext_resource type="Script" path="res://Scripts/Obstacles/rock_obstacles.gd" id="1_kl7qr"]
+[ext_resource type="Texture2D" uid="uid://bk3x15ll84fv0" path="res://Assets/Obstacles/rock_frames/rock12-1.png" id="2_q4ygh"]
+[ext_resource type="Texture2D" uid="uid://dt2pyx6jkmsr8" path="res://Assets/Obstacles/rock_frames/rock12-2.png" id="3_tjcsa"]
+[ext_resource type="Texture2D" uid="uid://dns0lsjo3rkxm" path="res://Assets/Obstacles/rock_frames/rock12-3.png" id="4_d5xtc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_osfxk"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_uhpbp")
+"texture": ExtResource("2_q4ygh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_uha5j")
+"texture": ExtResource("3_tjcsa")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_3akfw")
+"texture": ExtResource("4_d5xtc")
 }],
 "loop": true,
 "name": &"idle",
@@ -23,7 +23,7 @@ animations = [{
 }]
 
 [node name="Rock" type="Node2D"]
-script = ExtResource("1_1ygcn")
+script = ExtResource("1_kl7qr")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(87, -15)

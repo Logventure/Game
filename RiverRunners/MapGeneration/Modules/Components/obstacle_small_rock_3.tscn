@@ -1,17 +1,38 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnx3u2iuo10eo"]
+[gd_scene load_steps=6 format=3 uid="uid://cnx3u2iuo10eo"]
 
-[ext_resource type="Texture2D" uid="uid://i7brmp04uwvv" path="res://Assets/Obstacles/rocks_atlas.tres" id="1_ig8ys"]
+[ext_resource type="Texture2D" uid="uid://lhrqkfwuq15" path="res://Assets/Obstacles/rock_frames/rock3-1.png" id="1_2qq36"]
+[ext_resource type="Script" path="res://Scripts/Obstacles/rock_obstacles.gd" id="1_vav15"]
+[ext_resource type="Texture2D" uid="uid://cqfag1sj1gw0j" path="res://Assets/Obstacles/rock_frames/rock3-2.png" id="2_gu2au"]
+[ext_resource type="Texture2D" uid="uid://doxchbw1c64mn" path="res://Assets/Obstacles/rock_frames/rock3-3.png" id="3_v4pb1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iyx8n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2qq36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gu2au")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v4pb1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
 
 [node name="Rock" type="Node2D"]
+script = ExtResource("1_vav15")
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="RockSprite" type="Sprite2D" parent="Area2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
 texture_filter = 1
+position = Vector2(12, 3)
 scale = Vector2(6, 6)
-texture = ExtResource("1_ig8ys")
-region_enabled = true
-region_rect = Rect2(1, 69, 32, 24)
+sprite_frames = SubResource("SpriteFrames_iyx8n")
+animation = &"idle"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 scale = Vector2(0.753755, 0.778515)

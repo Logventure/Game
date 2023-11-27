@@ -3,12 +3,13 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	if InputHandler.hasController():
+		$VBoxContainer/StoryButton.grab_focus()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Input.is_action_just_pressed("confirm") and not get_viewport().gui_get_focus_owner() == null:
+		get_viewport().gui_get_focus_owner().emit_signal("pressed")
+
 
 func _on_give_up_button_pressed():
 	Events.emit_signal("go_to_main_menu")

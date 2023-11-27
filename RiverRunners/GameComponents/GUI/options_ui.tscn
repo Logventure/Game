@@ -33,7 +33,8 @@ layout_mode = 2
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Settings"
-visible_ratio = -0.125
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 0)
@@ -41,7 +42,6 @@ layout_mode = 2
 clip_tabs = false
 
 [node name="Video" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="HBoxContainer1" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Video"]
@@ -72,6 +72,7 @@ layout_mode = 2
 text = "Windowed"
 
 [node name="Audio" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Audio"]

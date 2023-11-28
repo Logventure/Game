@@ -16,13 +16,15 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
+	
 
 func onAreaEntered(area):
 	Events.emit_signal("log_collided")
 	if colliding <= 0:
 		if not istimercounting:
 			Events.emit_signal("damage_taken", 1)
+			if area.has_method("log_collided"):
+				area.log_collided()
 			get_tree().create_timer(damageCooldown).timeout.connect(onCooldownEnd)
 			istimercounting = true
 	colliding += 1

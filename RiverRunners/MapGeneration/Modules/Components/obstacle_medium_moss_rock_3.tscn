@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://h81uxdv7itq8"]
+[gd_scene load_steps=7 format=3 uid="uid://h81uxdv7itq8"]
 
 [ext_resource type="Script" path="res://Scripts/Obstacles/rock_obstacles.gd" id="1_rw6tm"]
+[ext_resource type="Script" path="res://Scripts/Obstacles/area_entered.gd" id="2_m3lx6"]
 [ext_resource type="Texture2D" uid="uid://c24f46favssfi" path="res://Assets/Obstacles/rock_frames/rock10-1.png" id="2_o517n"]
 [ext_resource type="Texture2D" uid="uid://dlrfg1nwh71fx" path="res://Assets/Obstacles/rock_frames/rock10-2.png" id="3_xvnfc"]
 [ext_resource type="Texture2D" uid="uid://cdxxqj24lg2dr" path="res://Assets/Obstacles/rock_frames/rock10-3.png" id="4_bveak"]
@@ -27,6 +28,7 @@ script = ExtResource("1_rw6tm")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(84, -25)
+script = ExtResource("2_m3lx6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
 texture_filter = 1

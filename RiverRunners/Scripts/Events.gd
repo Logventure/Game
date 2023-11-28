@@ -35,6 +35,7 @@ signal resume_game
 signal input_confirm
 signal input_return
 
+signal on_rock_area_entered
 
 #switching scenes
 signal go_to_main_menu

@@ -44,7 +44,7 @@ func _ready():
 	Events.connect("resume_game", onResume)
 
 	Events.connect("is_lane_free", onUpdateLaneStatus)
-	Events.connect("log_collided", moveToFreeLane)
+	Events.connect("damage_taken", moveToFreeLane)
 
 	Events.connect("is_on_air", isOnAir)
 

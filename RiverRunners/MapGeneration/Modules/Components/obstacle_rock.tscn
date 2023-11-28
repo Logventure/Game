@@ -1,10 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://ba2tigd5g64fv"]
+[gd_scene load_steps=3 format=3 uid="uid://ba2tigd5g64fv"]
 
 [ext_resource type="Texture2D" uid="uid://dbbcswqmhroqy" path="res://Assets/rock.png" id="1_43b38"]
+[ext_resource type="Script" path="res://Scripts/Obstacles/area_entered.gd" id="1_dxbh6"]
 
 [node name="Rock" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_dxbh6")
 
 [node name="RockSprite" type="Sprite2D" parent="Area2D"]
 scale = Vector2(0.5, 0.5)

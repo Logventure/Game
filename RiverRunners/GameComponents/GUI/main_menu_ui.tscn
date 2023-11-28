@@ -91,6 +91,7 @@ texture_pressed = ExtResource("13_8k2by")
 texture_hover = ExtResource("14_hvnwo")
 texture_focused = ExtResource("14_hvnwo")
 
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="VBoxContainer/StoryButton" to="." method="_on_story_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/InfiniteButton" to="." method="_on_infinite_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]

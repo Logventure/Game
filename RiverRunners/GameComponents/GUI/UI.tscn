@@ -17,7 +17,6 @@ layout_mode = 1
 
 [node name="PauseMenu" parent="." instance=ExtResource("3_gxgmh")]
 process_mode = 0
-visible = false
 z_index = 100
 layout_mode = 1
 anchors_preset = 8
@@ -28,7 +27,6 @@ anchor_bottom = 0.5
 
 [node name="GameoverMenu" parent="." instance=ExtResource("4_0kkfx")]
 process_mode = 0
-visible = false
 z_index = 100
 layout_mode = 1
 anchors_preset = 8

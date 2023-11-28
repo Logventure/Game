@@ -82,5 +82,6 @@ texture_pressed = ExtResource("7_5lq6x")
 texture_hover = ExtResource("8_oqr6y")
 texture_focused = ExtResource("8_oqr6y")
 
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="Panel/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/GiveUpButton" to="." method="_on_give_up_button_pressed"]

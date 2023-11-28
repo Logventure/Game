@@ -5,12 +5,12 @@ extends Control
 func _ready():
 	Events.connect("camera_status", onUpdateCameraStatus)
 	if InputHandler.hasController():
-		$VBoxContainer/StoryButton.grab_focus()
-	image = $BackgroundImage
+		$BackButton.grab_focus()
 	
 func _process(delta):
 	if Input.is_action_just_pressed("confirm") and not get_viewport().gui_get_focus_owner() == null:
 		get_viewport().gui_get_focus_owner().emit_signal("pressed")	
+
 
 func _on_back_button_pressed():
 	Events.emit_signal("go_to_previous_screen")

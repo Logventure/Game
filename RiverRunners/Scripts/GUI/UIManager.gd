@@ -19,6 +19,9 @@ func _ready():
 
 	Events.connect("player_died", gameover)
 
+	pauseScene.visible = false
+	gameoverScene.visible = false
+
 
 
 func onDamageTaken(damage):
@@ -31,6 +34,8 @@ func onDamageTaken(damage):
 
 func pause():
 	pauseScene.visible = true
+	pauseScene.resetFocusedButton()
 
 func gameover():
 	gameoverScene.visible = true
+	gameoverScene.resetFocusedButton()

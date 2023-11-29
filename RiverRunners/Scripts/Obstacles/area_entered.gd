@@ -9,16 +9,12 @@ func _ready():
 func _process(delta):
 	pass
 
-#func tentacle_collided(sprite):
-#	sprite.play("hit")
-
 func rock_collided():
-	#$AnimatedSprite2D.visible = false
 	get_node("../").queue_free()
 
 func crab_collided():
-	#$AnimatedSprite2D.visible = false
 	get_node("../").queue_free()
 
 func stone_collided():
 	pass
+	#get_node("../").onAreaEntered()

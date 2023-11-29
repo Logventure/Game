@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs66jks4ajb4p"
-path="res://.godot/imported/Justin-Beaver-16-Water2.png-3fd54a9a951005dd7bcda5d84906d188.ctex"
+uid="uid://bv1gmripx4avj"
+path="res://.godot/imported/TheRock-Bigl.png-fba286d7f5af13f1b89d9111a95a9774.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/log/Justin-Beaver-16-Water2.png"
-dest_files=["res://.godot/imported/Justin-Beaver-16-Water2.png-3fd54a9a951005dd7bcda5d84906d188.ctex"]
+source_file="res://Assets/Characters/otter/TheRock-Bigl.png"
+dest_files=["res://.godot/imported/TheRock-Bigl.png-fba286d7f5af13f1b89d9111a95a9774.ctex"]
 
 [params]
 

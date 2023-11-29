@@ -30,4 +30,5 @@ func onAreaEntered(area):
 
 func onTimerTimeout():
 	collider.disabled = true
-	timer.queue_free()
+	if is_instance_valid(timer):
+		timer.queue_free()

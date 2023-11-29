@@ -1,11 +1,16 @@
 [gd_scene load_steps=2 format=3 uid="uid://dryh16pfyaqr7"]
 
-[ext_resource type="Texture2D" uid="uid://c1fmsxsfb1sd4" path="res://Assets/stone.png" id="1_l18xh"]
+[ext_resource type="Texture2D" uid="uid://bv1gmripx4avj" path="res://Assets/Characters/otter/TheRock-Bigl.png" id="1_xsxli"]
 
 [node name="Stone" type="Node2D"]
 
 [node name="StoneArea" type="Area2D" parent="."]
+monitorable = false
 
 [node name="StoneSprite" type="Sprite2D" parent="StoneArea"]
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_l18xh")
+texture_filter = 1
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_xsxli")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StoneArea"]
+polygon = PackedVector2Array(-13, -16, 12, -10, 15, 11, -10, 8)

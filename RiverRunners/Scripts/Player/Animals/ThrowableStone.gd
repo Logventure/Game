@@ -35,6 +35,8 @@ func _ready():
 	Events.connect("pause_game", onPause)
 	Events.connect("resume_game", onResume)
 
+	#self.connect("area_entered", onAreaEntered)
+
 func throw(otter_position):
 	if current_state == States.IDLE and throwableStone == null:
 		throwableStone = stone.instantiate()
@@ -82,3 +84,7 @@ func onPause():
 
 func onResume():
 	current_state = previous_state
+
+#func onAreaEntered(area):
+#	if area.has_method("stone_collided"):
+#		area.stone_collided()

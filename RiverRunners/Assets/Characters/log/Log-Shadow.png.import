@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjgenh0ak0r2"
-path="res://.godot/imported/Otter-16.png-d44199269f2aa150a5df0b8d2dc680fb.ctex"
+uid="uid://cmcia77mpe3ij"
+path="res://.godot/imported/Log-Shadow.png-f32096a1479c60045f61d7f0b206837b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Otter-16.png"
-dest_files=["res://.godot/imported/Otter-16.png-d44199269f2aa150a5df0b8d2dc680fb.ctex"]
+source_file="res://Assets/Characters/log/Log-Shadow.png"
+dest_files=["res://.godot/imported/Log-Shadow.png-f32096a1479c60045f61d7f0b206837b.ctex"]
 
 [params]
 

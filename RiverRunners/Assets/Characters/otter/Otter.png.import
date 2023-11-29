@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b18vw3on23s2n"
-path="res://.godot/imported/Frog-16.png-ceaa375626e7ad002a2f6124771766d7.ctex"
+uid="uid://cgtus3ikdxtod"
+path="res://.godot/imported/Otter.png-d016609fed71510a8dc58feee61310fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Frog-16.png"
-dest_files=["res://.godot/imported/Frog-16.png-ceaa375626e7ad002a2f6124771766d7.ctex"]
+source_file="res://Assets/Characters/otter/Otter.png"
+dest_files=["res://.godot/imported/Otter.png-d016609fed71510a8dc58feee61310fe.ctex"]
 
 [params]
 

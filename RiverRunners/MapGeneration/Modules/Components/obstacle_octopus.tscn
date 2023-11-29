@@ -1,15 +1,39 @@
-[gd_scene load_steps=9 format=3 uid="uid://b44er5nd6mgye"]
+[gd_scene load_steps=13 format=3 uid="uid://b44er5nd6mgye"]
 
-[ext_resource type="Script" path="res://Scripts/Obstacles/area_entered.gd" id="1_2y37f"]
 [ext_resource type="Script" path="res://Scripts/Obstacles/tentacle_obstacles.gd" id="1_ntls1"]
 [ext_resource type="Texture2D" uid="uid://dj2rnd3hf6msl" path="res://Assets/Obstacles/Tentacles/Idle/Tentacle-Idle1.png" id="3_oikq5"]
+[ext_resource type="Texture2D" uid="uid://dxtcorhplrxgg" path="res://Assets/Obstacles/Tentacles/Hit/Tentacle-Hit1.png" id="3_ta26n"]
+[ext_resource type="Texture2D" uid="uid://wpuh4dpd74md" path="res://Assets/Obstacles/Tentacles/Hit/Tentacle-Hit2.png" id="4_6ci6i"]
 [ext_resource type="Texture2D" uid="uid://d0yxp2ckcn4vb" path="res://Assets/Obstacles/Tentacles/Idle/Tentacle-Idle2.png" id="4_o3c12"]
+[ext_resource type="Texture2D" uid="uid://dc5fys0gefmg3" path="res://Assets/Obstacles/Tentacles/Hit/Tentacle-Hit3.png" id="5_qdgsp"]
 [ext_resource type="Texture2D" uid="uid://dkiwpu2l3gam5" path="res://Assets/Obstacles/Tentacles/Idle/Tentacle-Idle3.png" id="5_rugn1"]
+[ext_resource type="Texture2D" uid="uid://dxpck42xwjkdf" path="res://Assets/Obstacles/Tentacles/Hit/Tentacle-Hit4.png" id="6_kurum"]
 [ext_resource type="Texture2D" uid="uid://bnk7cuo0e4k67" path="res://Assets/Obstacles/Tentacles/Idle/Tentacle-Idle4.png" id="6_ux2of"]
 [ext_resource type="Texture2D" uid="uid://x6506iugpw84" path="res://Assets/Obstacles/Tentacles/Idle/Tentacle-Idle5.png" id="7_7p6dn"]
+[ext_resource type="Texture2D" uid="uid://bvcxg3gcrarp3" path="res://Assets/Obstacles/Tentacles/Hit/Tentacle-Hit5.png" id="7_nw4bq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ixqgw"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ta26n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6ci6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qdgsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kurum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nw4bq")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 7.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_oikq5")
@@ -32,19 +56,16 @@ animations = [{
 }]
 
 [node name="Tentacle" type="Node2D"]
-script = ExtResource("1_ntls1")
 
 [node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("1_2y37f")
+script = ExtResource("1_ntls1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
 texture_filter = 1
 position = Vector2(21, -3)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_ixqgw")
-animation = &"idle"
-frame = 4
-frame_progress = 0.957665
+animation = &"hit"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(-1, 42, 72, 12, -1, -15, -75, 11)

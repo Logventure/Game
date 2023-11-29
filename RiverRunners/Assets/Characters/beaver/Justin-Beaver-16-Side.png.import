@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://temdyd744uyw"
-path="res://.godot/imported/Justin-Beaver.png-46b977446e740a7d9ec996a744a6b051.ctex"
+uid="uid://d1envgt0oo2fg"
+path="res://.godot/imported/Justin-Beaver-16-Side.png-ba1ea199c071fe9f45254c22757c01f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Justin-Beaver.png"
-dest_files=["res://.godot/imported/Justin-Beaver.png-46b977446e740a7d9ec996a744a6b051.ctex"]
+source_file="res://Assets/Characters/beaver/Justin-Beaver-16-Side.png"
+dest_files=["res://.godot/imported/Justin-Beaver-16-Side.png-ba1ea199c071fe9f45254c22757c01f9.ctex"]
 
 [params]
 

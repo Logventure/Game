@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbcyyqgfm2med"
-path="res://.godot/imported/Log-Hole.png-36513f68334a50683895c2fb1935cfe3.ctex"
+uid="uid://b8os8snlaoaun"
+path="res://.godot/imported/Justin-Beaver-16-Water.png-4ecb15818fb3a57f90f6ad12021f8472.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Log-Hole.png"
-dest_files=["res://.godot/imported/Log-Hole.png-36513f68334a50683895c2fb1935cfe3.ctex"]
+source_file="res://Assets/Characters/beaver/Justin-Beaver-16-Water.png"
+dest_files=["res://.godot/imported/Justin-Beaver-16-Water.png-4ecb15818fb3a57f90f6ad12021f8472.ctex"]
 
 [params]
 

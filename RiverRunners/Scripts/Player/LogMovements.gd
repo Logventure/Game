@@ -120,7 +120,7 @@ func moveTo(lane: int):
 		deltaTime = move_speed + distance * multiplier
 		current_state = States.MOVING
 
-func moveToFreeLane():
+func moveToFreeLane(aux):
 	var direction = 1
 	move_speed = correct_speed
 	if currentLane < 3:

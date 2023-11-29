@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1cmxfs8b4yes"
-path="res://.godot/imported/Justin-Beaver-16.png-d349c56709aae3ac758af086ef46f195.ctex"
+uid="uid://kg5yjat0xbh7"
+path="res://.godot/imported/Log3.png-b35d93f53fba0d479dcb15e9b999327a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Justin-Beaver-16.png"
-dest_files=["res://.godot/imported/Justin-Beaver-16.png-d349c56709aae3ac758af086ef46f195.ctex"]
+source_file="res://Assets/Characters/log/Log3.png"
+dest_files=["res://.godot/imported/Log3.png-b35d93f53fba0d479dcb15e9b999327a.ctex"]
 
 [params]
 

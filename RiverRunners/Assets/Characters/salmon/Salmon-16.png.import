@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2q3jr0oiv40u"
-path="res://.godot/imported/Frog.png-af3682401b2a7eb734f8668f19a50bfa.ctex"
+uid="uid://cdhappsg7ns70"
+path="res://.godot/imported/Salmon-16.png-fe9f3c4bbdf5fc30b088b867517d4ee5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Frog.png"
-dest_files=["res://.godot/imported/Frog.png-af3682401b2a7eb734f8668f19a50bfa.ctex"]
+source_file="res://Assets/Characters/salmon/Salmon-16.png"
+dest_files=["res://.godot/imported/Salmon-16.png-fe9f3c4bbdf5fc30b088b867517d4ee5.ctex"]
 
 [params]
 

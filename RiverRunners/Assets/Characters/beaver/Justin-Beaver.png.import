@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgxc8bfbdxpna"
-path="res://.godot/imported/Crab.png-b757dbf44e6044cd0833cd4eb25d105b.ctex"
+uid="uid://temdyd744uyw"
+path="res://.godot/imported/Justin-Beaver.png-9ad836e85ffbfe5f5cb731e77f969600.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Crab.png"
-dest_files=["res://.godot/imported/Crab.png-b757dbf44e6044cd0833cd4eb25d105b.ctex"]
+source_file="res://Assets/Characters/beaver/Justin-Beaver.png"
+dest_files=["res://.godot/imported/Justin-Beaver.png-9ad836e85ffbfe5f5cb731e77f969600.ctex"]
 
 [params]
 

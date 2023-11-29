@@ -1,4 +1,4 @@
-extends Sprite2D
+extends AnimatedSprite2D
 
 var animal
 var pos = Vector2.ZERO
@@ -12,7 +12,7 @@ var basePosition = position
 var canJump = true
 var loseDamage = true
 
-enum States {IDLE, JUMPING, DROWNING, TAKE_DAMAGE, PAUSED}
+enum States {IDLE, JUMPING, BLOCKING, DROWNING, TAKE_DAMAGE, PAUSED}
 var current_state = States.IDLE
 var previous_state = States.IDLE
 
@@ -61,6 +61,9 @@ func lose_damage(value: bool):
 func handle_position():
 	position = logNode.position + basePosition
 
+func shield():
+	Events.emit_signal("crab_shield")
+
 func _process(delta):
 	var commands = InputHandler.getCommands()
 	match current_state:
@@ -69,14 +72,22 @@ func _process(delta):
 			if len(commands) > 0:
 				if commands.find("jump") != -1:
 					jump()
+				if commands.find("shield") != -1:
+					shield()
 			else:
 				var last_input = InputHandler.getLastInput()
 				if last_input == "jump":
 					jump()
 					InputHandler.clearLastInput()
+				if last_input == "shield":
+					shield()
+					InputHandler.clearLastInput()
 
 		States.JUMPING:
 			handle_jump(delta)
+
+		States.BLOCKING:
+			pass
 
 		States.DROWNING:
 			current_state = States.IDLE
@@ -86,7 +97,7 @@ func _process(delta):
 
 		States.PAUSED:
 			pass
-
+			
 
 func onPause():
 	previous_state = current_state

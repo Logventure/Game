@@ -6,16 +6,19 @@ var istimercounting = false
 @export var damageCooldown = 1.0
 @export var continuousDamageCooldown = 0.5
 
+var sprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.connect("area_entered",onAreaEntered)
 	self.connect("area_exited",onAreaExited)
+	
+	sprite = $LogSprite
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	sprite.play("idle")
 	
 
 func onAreaEntered(area):
@@ -23,8 +26,8 @@ func onAreaEntered(area):
 	if colliding <= 0:
 		if not istimercounting:
 			Events.emit_signal("damage_taken", 1)
-			if area.has_method("log_collided"):
-				area.log_collided()
+			if area.has_method("rock_collided"):
+				area.rock_collided()
 			get_tree().create_timer(damageCooldown).timeout.connect(onCooldownEnd)
 			istimercounting = true
 	colliding += 1

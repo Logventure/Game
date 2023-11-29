@@ -14,6 +14,7 @@ signal player_speed(speed)
 signal camera_status(position,zoom)
 
 signal otter_position(position)
+signal crab_shield()
 
 signal damage_taken(damage)
 signal lose_damage(damage)

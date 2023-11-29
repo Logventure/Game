@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmcia77mpe3ij"
-path="res://.godot/imported/Log-Shadow.png-11247967be3344b884cec7f340387473.ctex"
+uid="uid://481njn2w6q86"
+path="res://.godot/imported/Crab-16-Block.png-23b63aa1451cc478f89f2bcd00f0b69b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Log-Shadow.png"
-dest_files=["res://.godot/imported/Log-Shadow.png-11247967be3344b884cec7f340387473.ctex"]
+source_file="res://Assets/Characters/crab/Crab-16-Block.png"
+dest_files=["res://.godot/imported/Crab-16-Block.png-23b63aa1451cc478f89f2bcd00f0b69b.ctex"]
 
 [params]
 

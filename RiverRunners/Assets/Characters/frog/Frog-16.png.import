@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8os8snlaoaun"
-path="res://.godot/imported/Justin-Beaver-16-Water.png-eef49c8037af58f5b27dd15c1aa8c586.ctex"
+uid="uid://b18vw3on23s2n"
+path="res://.godot/imported/Frog-16.png-0398dd3380cebb3285f29a88c44c13f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Justin-Beaver-16-Water.png"
-dest_files=["res://.godot/imported/Justin-Beaver-16-Water.png-eef49c8037af58f5b27dd15c1aa8c586.ctex"]
+source_file="res://Assets/Characters/frog/Frog-16.png"
+dest_files=["res://.godot/imported/Frog-16.png-0398dd3380cebb3285f29a88c44c13f7.ctex"]
 
 [params]
 

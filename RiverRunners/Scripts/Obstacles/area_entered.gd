@@ -9,7 +9,7 @@ func _ready():
 func _process(delta):
 	pass
 
-func rock_collided():
+func log_collided():
 	get_node("../").queue_free()
 
 func crab_collided():

@@ -24,8 +24,8 @@ func shield():
 
 
 func onAreaEntered(area):
-	get_node("../").play("block")
 	if area.has_method("crab_collided"):
+		get_node("../").destroyObstacle()
 		area.crab_collided()
 
 func onTimerTimeout():

@@ -12,7 +12,7 @@ var basePosition = position
 var canJump = true
 var loseDamage = true
 
-enum States {IDLE, JUMPING, BLOCKING, DROWNING, TAKE_DAMAGE, PAUSED}
+enum States {IDLE, JUMPING, BLOCKING, DESTROYING, DROWNING, TAKE_DAMAGE, PAUSED}
 var current_state = States.IDLE
 var previous_state = States.IDLE
 
@@ -62,7 +62,9 @@ func handle_position():
 	position = logNode.position + basePosition
 
 func shield():
+	current_state = States.BLOCKING
 	Events.emit_signal("crab_shield")
+	play("block")
 
 func _process(delta):
 	var commands = InputHandler.getCommands()
@@ -87,7 +89,10 @@ func _process(delta):
 			handle_jump(delta)
 
 		States.BLOCKING:
-			pass
+			handle_position()
+
+		States.DESTROYING:
+			handle_position()
 
 		States.DROWNING:
 			current_state = States.IDLE
@@ -105,3 +110,21 @@ func onPause():
 
 func onResume():
 	current_state = previous_state
+
+
+func _on_animation_finished():
+	pass
+
+func destroyObstacle():
+	current_state = States.DESTROYING
+
+func _on_animation_looped():
+	if animation == "block":
+		if current_state == States.DESTROYING:
+			play("destroy")
+		else:
+			play("idle")
+			current_state = States.IDLE
+	elif animation == "destroy":
+		play("idle")
+		current_state = States.IDLE

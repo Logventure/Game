@@ -51,7 +51,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("10_j1dfe")
+}],
+"loop": true,
+"name": &"block",
+"speed": 7.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("11_6rd0s")
 }, {
@@ -59,7 +64,15 @@ animations = [{
 "texture": ExtResource("12_5pyfs")
 }],
 "loop": true,
-"name": &"block",
+"name": &"destroy",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_n0xnj")
+}],
+"loop": true,
+"name": &"idle",
 "speed": 7.0
 }]
 
@@ -170,6 +183,12 @@ polygon = PackedVector2Array(-178, 118, -223, 97, 56, -56, 116, -42)
 [node name="ThrowableStone" type="Node2D" parent="."]
 script = ExtResource("6_8juii")
 
+[node name="StoneCollider" type="Area2D" parent="ThrowableStone"]
+monitorable = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ThrowableStone/StoneCollider"]
+polygon = PackedVector2Array(-11, -18, 35, 3, 1, 21, -44, -1)
+
 [node name="Crab" type="AnimatedSprite2D" parent="."]
 position = Vector2(70, -90)
 sprite_frames = SubResource("SpriteFrames_bggev")
@@ -208,3 +227,5 @@ sprite_frames = SubResource("SpriteFrames_j8obe")
 animation = &"idle"
 frame_progress = 0.806331
 script = ExtResource("5_supvc")
+
+[connection signal="animation_looped" from="Crab" to="Crab" method="_on_animation_looped"]

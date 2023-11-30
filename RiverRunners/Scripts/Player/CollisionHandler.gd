@@ -26,8 +26,8 @@ func onAreaEntered(area):
 	if colliding <= 0:
 		if not istimercounting:
 			Events.emit_signal("damage_taken", 1)
-			if area.has_method("rock_collided"):
-				area.rock_collided()
+			if area.has_method("log_collided"):
+				area.log_collided()
 			get_tree().create_timer(damageCooldown).timeout.connect(onCooldownEnd)
 			istimercounting = true
 	colliding += 1

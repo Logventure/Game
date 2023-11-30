@@ -10,7 +10,7 @@ var previous_state = States.IDLE
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	sprite = $AnimatedSprite2D
-	self.connect("area_entered",onAreaEntered)
+	#self.connect("area_entered",onAreaEntered)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -54,3 +54,16 @@ func onTimerTimeout():
 	if is_instance_valid(timer):
 		timer.queue_free()
 	get_node("../").queue_free()
+
+func stone_collided():
+	current_state = States.GOING_DOWN
+
+func log_collided():
+	current_state = States.GOING_DOWN
+
+
+func _on_animated_sprite_2d_animation_looped():
+	if sprite.animation == "hit":
+		sprite.play("underwater_idle")
+	elif sprite.animation == "spawn":
+		sprite.play("idle")

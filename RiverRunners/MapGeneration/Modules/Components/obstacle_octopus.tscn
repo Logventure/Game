@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b44er5nd6mgye"]
+[gd_scene load_steps=19 format=3 uid="uid://b44er5nd6mgye"]
 
 [ext_resource type="Script" path="res://Scripts/Obstacles/tentacle_obstacles.gd" id="1_ntls1"]
 [ext_resource type="Texture2D" uid="uid://dj2rnd3hf6msl" path="res://Assets/Obstacles/Tentacles/Idle/Tentacle-Idle1.png" id="3_oikq5"]
@@ -11,6 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://bnk7cuo0e4k67" path="res://Assets/Obstacles/Tentacles/Idle/Tentacle-Idle4.png" id="6_ux2of"]
 [ext_resource type="Texture2D" uid="uid://x6506iugpw84" path="res://Assets/Obstacles/Tentacles/Idle/Tentacle-Idle5.png" id="7_7p6dn"]
 [ext_resource type="Texture2D" uid="uid://bvcxg3gcrarp3" path="res://Assets/Obstacles/Tentacles/Hit/Tentacle-Hit5.png" id="7_nw4bq"]
+[ext_resource type="Texture2D" uid="uid://cu4r2kxvsjgof" path="res://Assets/Obstacles/Tentacles/Spawn/Tentacle-Spawn1.png" id="12_kay2p"]
+[ext_resource type="Texture2D" uid="uid://ccgm4icckvfgp" path="res://Assets/Obstacles/Tentacles/Spawn/Tentacle-Spawn2.png" id="13_7fl56"]
+[ext_resource type="Texture2D" uid="uid://sdjfcb5vwy5m" path="res://Assets/Obstacles/Tentacles/Spawn/Tentacle-Spawn3.png" id="14_gjj2q"]
+[ext_resource type="Texture2D" uid="uid://dww7xt1guaku2" path="res://Assets/Obstacles/Tentacles/Spawn/Tentacle-Spawn4.png" id="15_1dvm1"]
+[ext_resource type="Texture2D" uid="uid://djhbhxnb4qy4g" path="res://Assets/Obstacles/Tentacles/Spawn/Tentacle-Spawn5.png" id="16_8fpld"]
+[ext_resource type="Texture2D" uid="uid://be1bfmu8uv5cb" path="res://Assets/Obstacles/Tentacles/Spawn/Tentacle-Spawn6.png" id="17_e4k52"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ixqgw"]
 animations = [{
@@ -53,6 +59,37 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_kay2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7fl56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_gjj2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1dvm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8fpld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_e4k52")
+}],
+"loop": true,
+"name": &"spawn",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_kay2p")
+}],
+"loop": true,
+"name": &"underwater_idle",
+"speed": 7.0
 }]
 
 [node name="Tentacle" type="Node2D"]
@@ -62,10 +99,12 @@ script = ExtResource("1_ntls1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
 texture_filter = 1
-position = Vector2(21, -3)
+position = Vector2(0, -7)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_ixqgw")
-animation = &"hit"
+animation = &"underwater_idle"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(-1, 42, 72, 12, -1, -15, -75, 11)
+
+[connection signal="animation_looped" from="Area2D/AnimatedSprite2D" to="Area2D" method="_on_animated_sprite_2d_animation_looped"]

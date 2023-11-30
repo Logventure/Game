@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://caknn66xsxyt2" path="res://Assets/UI/DialogueFrame.png" id="1_d34fv"]
 [ext_resource type="Script" path="res://GameComponents/GUI/Dialogue/DialogueBox.gd" id="1_fpy87"]
-[ext_resource type="Texture2D" uid="uid://d2q3jr0oiv40u" path="res://Assets/Characters/Frog.png" id="2_iyggp"]
+[ext_resource type="Texture2D" uid="uid://d2q3jr0oiv40u" path="res://Assets/Characters/frog/Frog.png" id="2_iyggp"]
 [ext_resource type="FontFile" uid="uid://bg1oq07gebwu4" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="4_fdulk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mrv80"]

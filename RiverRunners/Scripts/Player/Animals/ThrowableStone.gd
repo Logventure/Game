@@ -8,7 +8,7 @@ var pos_original = Vector2.ZERO
 var is_throwing = false
 var throwGravity = 400
 var throwSpeedX = 2.5
-var throwSpeedY = 500
+var throwSpeedY = 300
 var throwTime = 0
 var throwoffset = 0
 var waterheight = 30 #to adjust where the stone hits the water
@@ -17,6 +17,9 @@ var aux_y = 0
 var aux1_y = 0
 var logNode
 var referenceposition = Vector2.ZERO
+
+var collider
+var hit_height = 150 #max obstacle height, if the stone collides while below this height it will trigger the obstacles destruction
 
 enum States {IDLE, THROWING, PAUSED}
 
@@ -27,6 +30,9 @@ var previous_state = States.IDLE
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	logNode = get_node("../Log")
+	collider = get_node("StoneCollider")
+	collider.monitoring = false
+	collider.monitorable = false
 	Events.connect("otter_position", throw)
 
 	Events.connect("on_dialog_start", onPause)
@@ -34,6 +40,8 @@ func _ready():
 
 	Events.connect("pause_game", onPause)
 	Events.connect("resume_game", onResume)
+
+	collider.connect("area_entered",onAreaEntered)
 
 	#self.connect("area_entered", onAreaEntered)
 
@@ -59,12 +67,21 @@ func handle_throw(delta):
 		aux1_y = aux_y - (throwSpeedY + throwGravity * throwTime * -1) * throwTime
 		throwableStone.position = Vector2(aux_x, aux1_y)
 		throwableStone.visible = true
+		aux_x = referenceposition.x + tilewidth/2 * throwTime * throwSpeedX
+		aux_y = referenceposition.y - tileheight/2 * throwTime * throwSpeedX
+		collider.position = Vector2(aux_x, aux_y)
+		if collider.position.distance_to(throwableStone.position) < hit_height:
+			collider.monitoring = true
+		else:
+			collider.monitoring = false
 	elif throwTime >= 0:
 		current_state = States.IDLE
 		if not throwableStone == null: 
 			#splash animation
 			throwableStone.queue_free()
 			throwableStone = null
+			collider.monitoring = false
+			collider.position = logNode.position
 
 func _process(delta):
 
@@ -85,6 +102,15 @@ func onPause():
 func onResume():
 	current_state = previous_state
 
-#func onAreaEntered(area):
-#	if area.has_method("stone_collided"):
-#		area.stone_collided()
+func resetStone():
+	current_state = States.IDLE
+	if not throwableStone == null: 
+		throwableStone.queue_free()
+		throwableStone = null
+		collider.monitoring = false
+		collider.position = logNode.position
+
+func onAreaEntered(area):
+	if area.has_method("stone_collided"):
+		area.stone_collided()
+		resetStone()

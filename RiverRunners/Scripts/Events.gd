@@ -42,4 +42,5 @@ signal go_to_mode_select
 signal go_to_level_select
 signal go_to_level(level_id: String)
 signal go_to_options
+signal go_to_credits
 signal go_to_previous_screen

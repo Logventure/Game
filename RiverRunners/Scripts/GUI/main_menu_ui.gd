@@ -17,7 +17,9 @@ func _process(delta):
 
 func _on_story_button_pressed():
 	lastFocusedButton = get_viewport().gui_get_focus_owner()
-	Events.emit_signal("go_to_level_select")
+	$VBoxContainer.visible = false
+	$VBoxContainer2.visible = true
+	#Events.emit_signal("go_to_level_select")
 
 func _on_infinite_button_pressed():
 	lastFocusedButton = get_viewport().gui_get_focus_owner()
@@ -27,9 +29,19 @@ func _on_options_button_pressed():
 	lastFocusedButton = get_viewport().gui_get_focus_owner()
 	Events.emit_signal("go_to_options")
 
+func _on_credits_button_pressed():
+	pass
+	#lastFocusedButton = get_viewport().gui_get_focus_owner()
+	#Events.emit_signal("go_to_credits")
+
+
 func _on_exit_button_pressed():
 	get_tree().quit()
 
+func _on_back_button_pressed():
+	lastFocusedButton = get_viewport().gui_get_focus_owner()
+	$VBoxContainer.visible = true
+	$VBoxContainer2.visible = false
 
 func _on_visibility_changed():
 	if not get_viewport() == null:

@@ -19,13 +19,13 @@ func _process(delta):
 			sprite.play("idle")
 
 		States.UNDERWATER_IDLE:
-			pass
+			monitorable = false
 
 		States.GOING_UP:
 			pass
 
 		States.GOING_DOWN:
-			handle_going_down()
+			pass
 
 		States.PAUSED:
 			pass
@@ -45,7 +45,7 @@ func handle_going_down():
 
 	timer = Timer.new()
 	timer.set_one_shot(true)
-	timer.set_wait_time(0.5)
+	timer.set_wait_time(0.1)
 	timer.connect("timeout", onTimerTimeout)
 	add_child(timer)
 	timer.start()
@@ -53,13 +53,15 @@ func handle_going_down():
 func onTimerTimeout():
 	if is_instance_valid(timer):
 		timer.queue_free()
-	get_node("../").queue_free()
+	monitorable = false
 
 func stone_collided():
 	current_state = States.GOING_DOWN
+	handle_going_down()
 
 func log_collided():
 	current_state = States.GOING_DOWN
+	handle_going_down()
 
 
 func _on_animated_sprite_2d_animation_looped():

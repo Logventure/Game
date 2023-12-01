@@ -2,11 +2,14 @@ extends Area2D
 
 var colliding = 0 #stores how many areas the log is currently colliding with
 var istimercounting = false
+var time_elapsed = 0.0
 
 @export var damageCooldown = 1.0
 @export var continuousDamageCooldown = 0.5
 
+
 var sprite
+var player
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,11 +17,18 @@ func _ready():
 	self.connect("area_exited",onAreaExited)
 	
 	sprite = $LogSprite
-
+	player = get_node("../")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	sprite.play("idle")
+	if istimercounting:
+		time_elapsed += delta
+		var alpha = 0.7 - (sin(time_elapsed*12) + 1)/6
+		player.modulate = Color(1,0.9,0.9,alpha)
+	else:
+		time_elapsed = 0.0
+		player.modulate = Color(1,1,1,1.0)
 	
 
 func onAreaEntered(area):

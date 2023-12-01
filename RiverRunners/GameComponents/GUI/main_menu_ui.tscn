@@ -1,19 +1,37 @@
-[gd_scene load_steps=15 format=3 uid="uid://fdgjnt3f4u6u"]
+[gd_scene load_steps=33 format=3 uid="uid://fdgjnt3f4u6u"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/main_menu_ui.gd" id="1_go47f"]
 [ext_resource type="Texture2D" uid="uid://dtb46jiyiaq7x" path="res://Assets/UI/Main Menu/MainMenu-Background.png" id="2_vor62"]
-[ext_resource type="Texture2D" uid="uid://bfo3xx8wk4uwa" path="res://Assets/UI/Main Menu/Story-MM Button.png" id="3_x00ra"]
-[ext_resource type="Texture2D" uid="uid://bm6o5enxlcvb3" path="res://Assets/UI/Main Menu/Story-MM Button-Pressed.png" id="4_02eo3"]
-[ext_resource type="Texture2D" uid="uid://k13vku8ldwu8" path="res://Assets/UI/Main Menu/Infinite-MM Button.png" id="4_v5xf7"]
+[ext_resource type="Texture2D" uid="uid://fh64xj0kc8jv" path="res://Assets/UI/Main Menu/Play-MM Button.png" id="3_gctep"]
+[ext_resource type="Texture2D" uid="uid://c1yafsd7a0jd0" path="res://Assets/UI/Main Menu/Play-MM Button-Pressed.png" id="4_l2jyc"]
+[ext_resource type="Texture2D" uid="uid://r5nowyhpprmr" path="res://Assets/UI/Main Menu/Play-MM Button-Hover.png" id="5_5fman"]
 [ext_resource type="Texture2D" uid="uid://c5bxrhuhkh2rg" path="res://Assets/UI/Main Menu/Options-MM Button.png" id="5_qnn5m"]
-[ext_resource type="Texture2D" uid="uid://p6ai6sok1me8" path="res://Assets/UI/Main Menu/Story-MM Button-Hover.png" id="5_vk0q6"]
 [ext_resource type="Texture2D" uid="uid://xythhli447tu" path="res://Assets/UI/Main Menu/Exit-MM Button.png" id="6_7epq6"]
-[ext_resource type="Texture2D" uid="uid://b0cjnxurt13yx" path="res://Assets/UI/Main Menu/Infinite-MM Button-Pressed.png" id="7_8xgfm"]
-[ext_resource type="Texture2D" uid="uid://dh7v3l3n50id8" path="res://Assets/UI/Main Menu/Infinite-MM Button-Hover.png" id="8_oj8wg"]
 [ext_resource type="Texture2D" uid="uid://csngdfwja06g2" path="res://Assets/UI/Main Menu/Options-MM Button-Pressed.png" id="10_8i84i"]
 [ext_resource type="Texture2D" uid="uid://b2ryi8qo6547p" path="res://Assets/UI/Main Menu/Options-MM Button-Hover.png" id="11_xr0bk"]
 [ext_resource type="Texture2D" uid="uid://0pr450nip7dg" path="res://Assets/UI/Main Menu/Exit-MM Button-Pressed.png" id="13_8k2by"]
 [ext_resource type="Texture2D" uid="uid://emhiycbqhs5f" path="res://Assets/UI/Main Menu/Exit-MM Button-Hover.png" id="14_hvnwo"]
+[ext_resource type="Texture2D" uid="uid://pi6xrhbtg1qa" path="res://Assets/UI/Main Menu/LevelButtons/Level-1 Button.png" id="15_2sc0d"]
+[ext_resource type="Texture2D" uid="uid://cw1lc4ao7i3lc" path="res://Assets/UI/Main Menu/LevelButtons/Level-1 Button-Pressed.png" id="16_py7q4"]
+[ext_resource type="Texture2D" uid="uid://b7m5em0l340x7" path="res://Assets/UI/Main Menu/LevelButtons/Level-1 Button-Hover.png" id="17_jnfo6"]
+[ext_resource type="Texture2D" uid="uid://b0gw0ih81auik" path="res://Assets/UI/Main Menu/LevelButtons/Level-2 Button.png" id="18_h01qa"]
+[ext_resource type="Texture2D" uid="uid://dht6pwwhol5hl" path="res://Assets/UI/Main Menu/LevelButtons/Level-2 Button-Pressed.png" id="19_d1cxk"]
+[ext_resource type="Texture2D" uid="uid://bdxpujt67iiaq" path="res://Assets/UI/Main Menu/LevelButtons/Level-2 Button-Hover.png" id="20_deqwn"]
+[ext_resource type="Texture2D" uid="uid://0ink542mnf8x" path="res://Assets/UI/Main Menu/LevelButtons/Level-3 Button.png" id="21_phx7o"]
+[ext_resource type="Texture2D" uid="uid://kwhk8ewoj35" path="res://Assets/UI/Main Menu/LevelButtons/Level-3 Button-Pressed.png" id="22_iiol7"]
+[ext_resource type="Texture2D" uid="uid://cvre0sg831t00" path="res://Assets/UI/Main Menu/LevelButtons/Level-3 Button-Hover.png" id="23_d3v68"]
+[ext_resource type="Texture2D" uid="uid://ct8cqppfpcexi" path="res://Assets/UI/Main Menu/LevelButtons/Level-4 Button.png" id="24_kg0c4"]
+[ext_resource type="Texture2D" uid="uid://0iiamjdu3ybm" path="res://Assets/UI/Main Menu/LevelButtons/Level-4 Button-Pressed.png" id="25_48xto"]
+[ext_resource type="Texture2D" uid="uid://dk4lugky23682" path="res://Assets/UI/Main Menu/LevelButtons/Level-4 Button-Hover.png" id="26_0ksl0"]
+[ext_resource type="Texture2D" uid="uid://bhwegl5wgkyqw" path="res://Assets/UI/Main Menu/LevelButtons/Level-5 Button.png" id="27_ddx1f"]
+[ext_resource type="Texture2D" uid="uid://dwidsocaoroyd" path="res://Assets/UI/Main Menu/LevelButtons/Level-5 Button-Pressed.png" id="28_wciq2"]
+[ext_resource type="Texture2D" uid="uid://ds33i62eb3fb3" path="res://Assets/UI/Main Menu/LevelButtons/Level-5 Button-Hover.png" id="29_3vs32"]
+[ext_resource type="Texture2D" uid="uid://b0hvd4kjpm86" path="res://Assets/UI/Main Menu/LevelButtons/Level-6 Button.png" id="30_rrqx1"]
+[ext_resource type="Texture2D" uid="uid://dwwa47fyw3nw1" path="res://Assets/UI/Main Menu/LevelButtons/Level-6 Button-Pressed.png" id="31_nc1pp"]
+[ext_resource type="Texture2D" uid="uid://bxj62fci3xv72" path="res://Assets/UI/Main Menu/LevelButtons/Level-6 Button-Hover.png" id="32_wpddu"]
+[ext_resource type="Texture2D" uid="uid://cu7kfqkrw5err" path="res://Assets/UI/Main Menu/Back Button.png" id="33_30uxy"]
+[ext_resource type="Texture2D" uid="uid://ctm0hhmaekxfb" path="res://Assets/UI/Main Menu/Back Button-Pressed.png" id="34_t5vl2"]
+[ext_resource type="Texture2D" uid="uid://cw0e1qc68r12c" path="res://Assets/UI/Main Menu/Back Button-Hover.png" id="35_dts6u"]
 
 [node name="MainMenuUI" type="Control"]
 layout_mode = 3
@@ -32,6 +50,7 @@ texture = ExtResource("2_vor62")
 expand_mode = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -39,39 +58,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 161.0
-offset_top = -240.0
-offset_right = 202.0
-offset_bottom = -180.0
+offset_left = 163.0
+offset_top = -212.0
+offset_right = 204.0
+offset_bottom = -171.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(12, 12)
 
-[node name="StoryButton" type="TextureButton" parent="VBoxContainer"]
+[node name="PlayButton" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../ExitButton")
-focus_neighbor_bottom = NodePath("../InfiniteButton")
-focus_next = NodePath("../InfiniteButton")
 focus_previous = NodePath("../ExitButton")
-texture_normal = ExtResource("3_x00ra")
-texture_pressed = ExtResource("4_02eo3")
-texture_hover = ExtResource("5_vk0q6")
-texture_focused = ExtResource("5_vk0q6")
-
-[node name="InfiniteButton" type="TextureButton" parent="VBoxContainer"]
-layout_mode = 2
-focus_neighbor_top = NodePath("../StoryButton")
-focus_neighbor_bottom = NodePath("../OptionsButton")
-focus_next = NodePath("../OptionsButton")
-focus_previous = NodePath("../StoryButton")
-texture_normal = ExtResource("4_v5xf7")
-texture_pressed = ExtResource("7_8xgfm")
-texture_hover = ExtResource("8_oj8wg")
-texture_focused = ExtResource("8_oj8wg")
+texture_normal = ExtResource("3_gctep")
+texture_pressed = ExtResource("4_l2jyc")
+texture_hover = ExtResource("5_5fman")
+texture_focused = ExtResource("5_5fman")
 
 [node name="OptionsButton" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../InfiniteButton")
 focus_neighbor_bottom = NodePath("../ExitButton")
 focus_next = NodePath("../ExitButton")
 focus_previous = NodePath(".")
@@ -83,8 +88,8 @@ texture_focused = ExtResource("11_xr0bk")
 [node name="ExitButton" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../OptionsButton")
-focus_neighbor_bottom = NodePath("../StoryButton")
-focus_next = NodePath("../StoryButton")
+focus_neighbor_bottom = NodePath("../PlayButton")
+focus_next = NodePath("../PlayButton")
 focus_previous = NodePath("../OptionsButton")
 texture_normal = ExtResource("6_7epq6")
 texture_pressed = ExtResource("13_8k2by")
@@ -92,7 +97,6 @@ texture_hover = ExtResource("14_hvnwo")
 texture_focused = ExtResource("14_hvnwo")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
-visible = false
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -100,10 +104,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -10.0
-offset_top = -190.0
-offset_right = 76.0
-offset_bottom = -149.0
+offset_left = -11.0
+offset_top = -210.0
+offset_right = 75.0
+offset_bottom = -169.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(10, 10)
@@ -113,36 +117,64 @@ layout_mode = 2
 
 [node name="Level1Button" type="TextureButton" parent="VBoxContainer2/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("3_x00ra")
+texture_normal = ExtResource("15_2sc0d")
+texture_pressed = ExtResource("16_py7q4")
+texture_hover = ExtResource("17_jnfo6")
+texture_focused = ExtResource("17_jnfo6")
 
 [node name="Level2Button" type="TextureButton" parent="VBoxContainer2/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("4_v5xf7")
+texture_normal = ExtResource("18_h01qa")
+texture_pressed = ExtResource("19_d1cxk")
+texture_hover = ExtResource("20_deqwn")
+texture_focused = ExtResource("20_deqwn")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2"]
 layout_mode = 2
 
 [node name="Level3Button" type="TextureButton" parent="VBoxContainer2/HBoxContainer2"]
 layout_mode = 2
-texture_normal = ExtResource("5_qnn5m")
+texture_normal = ExtResource("21_phx7o")
+texture_pressed = ExtResource("22_iiol7")
+texture_hover = ExtResource("23_d3v68")
+texture_focused = ExtResource("23_d3v68")
 
 [node name="Level4Button" type="TextureButton" parent="VBoxContainer2/HBoxContainer2"]
 layout_mode = 2
-texture_normal = ExtResource("3_x00ra")
+texture_normal = ExtResource("24_kg0c4")
+texture_pressed = ExtResource("25_48xto")
+texture_hover = ExtResource("26_0ksl0")
+texture_focused = ExtResource("26_0ksl0")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer2"]
 layout_mode = 2
 
 [node name="Level5Button" type="TextureButton" parent="VBoxContainer2/HBoxContainer3"]
 layout_mode = 2
-texture_normal = ExtResource("4_v5xf7")
+texture_normal = ExtResource("27_ddx1f")
+texture_pressed = ExtResource("28_wciq2")
+texture_hover = ExtResource("29_3vs32")
+texture_focused = ExtResource("29_3vs32")
 
-[node name="BackButton" type="TextureButton" parent="VBoxContainer2/HBoxContainer3"]
+[node name="Level6Button" type="TextureButton" parent="VBoxContainer2/HBoxContainer3"]
 layout_mode = 2
-texture_normal = ExtResource("6_7epq6")
-texture_pressed = ExtResource("13_8k2by")
-texture_hover = ExtResource("14_hvnwo")
-texture_focused = ExtResource("14_hvnwo")
+texture_normal = ExtResource("30_rrqx1")
+texture_pressed = ExtResource("31_nc1pp")
+texture_hover = ExtResource("32_wpddu")
+texture_focused = ExtResource("32_wpddu")
+
+[node name="BackButton" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 2
+offset_left = 1176.0
+offset_top = 785.0
+offset_right = 1217.0
+offset_bottom = 796.0
+scale = Vector2(10, 10)
+texture_normal = ExtResource("33_30uxy")
+texture_pressed = ExtResource("34_t5vl2")
+texture_hover = ExtResource("35_dts6u")
+texture_focused = ExtResource("35_dts6u")
 
 [node name="CreditsButton" type="TextureButton" parent="."]
 texture_filter = 1
@@ -153,9 +185,9 @@ offset_right = 1803.0
 offset_bottom = 992.0
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
-[connection signal="pressed" from="VBoxContainer/StoryButton" to="." method="_on_story_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/InfiniteButton" to="." method="_on_infinite_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="pressed" from="VBoxContainer2/HBoxContainer3/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer3/Level6Button" to="." method="_on_level_6_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]

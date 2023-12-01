@@ -50,10 +50,6 @@ func _process(delta):
 		States.LOADING_SCREEN:
 			pass
 
-	print(current_state)
-	print(current_screen)
-	print("children: ", get_children())
-	print("viewer children: ", viewer.get_children())
 
 	
 func switchToMainMenu():
@@ -83,6 +79,7 @@ func switchToLevelSelect():
 func switchToLevel(level_id: String):
 	target_state = States.LEVEL
 	target_screen = loadScene("res://Levels/LevelTemplate.tscn")
+	target_screen.setLevelScript(level_id)
 	replaceScreen(viewer, target_screen)
 
 func switchToPreviousScreen():

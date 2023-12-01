@@ -132,7 +132,6 @@ offset_right = 1700.0
 offset_bottom = 390.0
 text = "Back"
 
-[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/TabContainer/Video/HBoxContainer1/FullscreenButton" to="." method="_on_fullscreen_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/TabContainer/Video/HBoxContainer2/BorderlessButton" to="." method="_on_borderless_button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

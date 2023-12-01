@@ -37,15 +37,14 @@ func _ready():
 
 	Events.emit_signal("player_speed",playerSpeed)
 
-	level_script = load("res://Levels/LevelTestScript.gd").new()
-	add_child(level_script)
-	level_script.setManager(self)
+	#level_script = load("res://Levels/LevelTestScript.gd").new()
+	#add_child(level_script)
+	#level_script.setManager(self)
+	#setLevelScript("level_1","res://TextFiles/Levels/level_scripts.txt")
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-
-	print(current_state)
 
 	match current_state:
 		States.DIALOG:
@@ -65,7 +64,10 @@ func _process(delta):
 		States.LEVEL_END:
 			player.set_process(false)
 
-	
+
+func setLevelScript(level_id):
+	level_script = load("res://Levels/LevelScripts.gd").new(self,level_id)
+	add_child(level_script)
 
 func managePlayerSpeed():
 	if not playerSpeed == playerTargetSpeed:

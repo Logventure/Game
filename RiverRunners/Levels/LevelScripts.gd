@@ -21,15 +21,35 @@ extends Node
 
 enum eventTypes {DIALOGUE, SETVALUES, CUTSCENE, ENDLEVEL}
 
-var level_events = {"setup"         :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 2, "ObstacleGroups" : [100]},
-					"chat1"         :    {"Time offset" : 1,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/anotherdialogue.txt"},
-					"levelStart"    :    {"Time offset" : 0,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : true},
-					"speedUp1"      :    {"Time offset" : 5,    "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "Speed" : 3},
-					"speedUp2"      :    {"Time offset" : 20,    "Prerequesites" : ["speedUp1"],      "Type" : eventTypes.SETVALUES,   "Speed" : 4},
-					"disableObs"    :    {"Time offset" : 10,    "Prerequesites" : ["speedUp2"],      "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false},
-					"endCutscene"   :    {"Time offset" : 7,    "Prerequesites" : ["disableObs"],    "Type" : eventTypes.CUTSCENE,    "File": "whatever"},
-					"chat2"         :    {"Time offset" : 1,    "Prerequesites" : ["endCutscene"],   "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/enddialogue.txt"},
-					"levelend"      :    {"Time offset" : 1,    "Prerequesites" : ["chat2"],   		 "Type" : eventTypes.ENDLEVEL},
+var level_events = {}
+
+var levels = {
+	"level_1" :	{"setup"        :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 2, "ObstacleGroups" : [100]},
+				"chat1"         :    {"Time offset" : 1,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/anotherdialogue.txt"},
+				"levelStart"    :    {"Time offset" : 0,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : true},
+				"speedUp1"      :    {"Time offset" : 5,    "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "Speed" : 3},
+				"speedUp2"      :    {"Time offset" : 20,   "Prerequesites" : ["speedUp1"],      "Type" : eventTypes.SETVALUES,   "Speed" : 4},
+				"disableObs"    :    {"Time offset" : 10,   "Prerequesites" : ["speedUp2"],      "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false},
+				"endCutscene"   :    {"Time offset" : 7,    "Prerequesites" : ["disableObs"],    "Type" : eventTypes.CUTSCENE,    "File": "whatever"},
+				"chat2"         :    {"Time offset" : 1,    "Prerequesites" : ["endCutscene"],   "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/enddialogue.txt"},
+				"levelend"      :    {"Time offset" : 1,    "Prerequesites" : ["chat2"],   		 "Type" : eventTypes.ENDLEVEL},
+	},
+
+	"level_2" :	{"setup"        :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 2, "ObstacleGroups" : []},
+				"chat1"         :    {"Time offset" : 1,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/anotherdialogue.txt"},
+				"levelStart"    :    {"Time offset" : 0,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : true},
+				"disableObs"    :    {"Time offset" : 20,   "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false},
+				"endCutscene"   :    {"Time offset" : 15,   "Prerequesites" : ["disableObs"],    "Type" : eventTypes.CUTSCENE,    "File": "whatever"},
+				"levelend"      :    {"Time offset" : 1,    "Prerequesites" : ["endCutscene"],   "Type" : eventTypes.ENDLEVEL},
+	},
+
+	"level_3" :	{"setup"        :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 5, "ObstacleGroups" : [100]},
+				"chat1"         :    {"Time offset" : 1,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/introtocustomlevels.txt"},
+				"levelStart"    :    {"Time offset" : 0,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : true},
+				"disableObs"    :    {"Time offset" : 10,   "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false},
+				"endCutscene"   :    {"Time offset" : 7,    "Prerequesites" : ["disableObs"],    "Type" : eventTypes.CUTSCENE,    "File": "whatever"},
+				"levelend"      :    {"Time offset" : 1,    "Prerequesites" : ["endCutscene"],   "Type" : eventTypes.ENDLEVEL},
+	}
 }
 
 #don't change anything below this line
@@ -44,6 +64,10 @@ var ready_to_process = {}
 var paused = false
 
 var activeTimers = []
+
+func _init(manager, level_id):
+	level_manager = manager
+	level_events = levels[level_id]
 
 func setManager(manager: Node):
 	level_manager = manager

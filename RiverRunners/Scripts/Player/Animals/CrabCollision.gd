@@ -27,6 +27,7 @@ func onAreaEntered(area):
 	if area.has_method("crab_collided"):
 		get_node("../").destroyObstacle()
 		area.crab_collided()
+		collider.set_deferred("disabled", true)
 
 func onTimerTimeout():
 	collider.disabled = true

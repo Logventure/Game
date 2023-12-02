@@ -12,9 +12,7 @@ func _process(delta):
 		States.DISABLED:
 			visible = false
 		States.GAMEOVER:
-			visible = true
-			print("Focus holder: ", get_viewport().gui_get_focus_owner())
-			
+			visible = true		
 			if InputHandler.hasController() and get_viewport().gui_get_focus_owner() != $Panel/VBoxContainer/RetryButton and get_viewport().gui_get_focus_owner() != $Panel/VBoxContainer/GiveUpButton:
 				if $Panel/VBoxContainer/RetryButton.visible == true:
 					$Panel/VBoxContainer/RetryButton.grab_focus()

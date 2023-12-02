@@ -24,11 +24,8 @@ func _process(delta):
 			
 			visible = false
 
-#get_tree().quit()
-
 func _on_options_button_pressed():
 	current_state = States.OPTIONS
-	$Panel/VBoxContainer/OptionsButton.release_focus()
 	Events.emit_signal("go_to_options")
 
 func onBackFromOptions():

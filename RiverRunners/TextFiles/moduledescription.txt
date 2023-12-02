@@ -22,7 +22,7 @@
 
 
 Difficulty: 0
-Group: 
+Group: 1
 {
 -*--o
 -x---

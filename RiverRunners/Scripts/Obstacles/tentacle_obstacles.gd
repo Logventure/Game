@@ -10,6 +10,7 @@ var previous_state = States.IDLE
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	sprite = $AnimatedSprite2D
+	sprite.connect("animation_looped", _on_animated_sprite_2d_animation_looped)
 	#self.connect("area_entered",onAreaEntered)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -69,3 +70,4 @@ func _on_animated_sprite_2d_animation_looped():
 		sprite.play("underwater_idle")
 	elif sprite.animation == "spawn":
 		sprite.play("idle")
+

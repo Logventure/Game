@@ -204,7 +204,7 @@ func addMapModule(prevPosition: int, steps: int = 1, difficulty = 0, possibleGro
 	if randomModule["module"] is PackedScene:
 		newMapModule = randomModule["module"].instantiate()
 	else:
-		newMapModule = randomModule["module"].duplicate()
+		newMapModule = randomModule["module"].duplicate(DUPLICATE_SCRIPTS)
 
 	increaseObjectsZindex(mapModules)
 

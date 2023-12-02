@@ -71,16 +71,16 @@ func handle_throw(delta):
 		aux_y = referenceposition.y - tileheight/2 * throwTime * throwSpeedX
 		collider.position = Vector2(aux_x, aux_y)
 		if collider.position.distance_to(throwableStone.position) < hit_height:
-			collider.monitoring = true
+			collider.set_deferred("monitoring", true)
 		else:
-			collider.monitoring = false
+			collider.set_deferred("monitoring", false)
 	elif throwTime >= 0:
 		current_state = States.IDLE
 		if not throwableStone == null: 
 			#splash animation
 			throwableStone.queue_free()
 			throwableStone = null
-			collider.monitoring = false
+			collider.set_deferred("monitoring", false)
 			collider.position = logNode.position
 
 func _process(delta):
@@ -107,7 +107,7 @@ func resetStone():
 	if not throwableStone == null: 
 		throwableStone.queue_free()
 		throwableStone = null
-		collider.monitoring = false
+		collider.set_deferred("monitoring", false)
 		collider.position = logNode.position
 
 func onAreaEntered(area):

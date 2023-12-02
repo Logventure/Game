@@ -4,10 +4,11 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Events.connect("camera_status", onUpdateCameraStatus)
-	if InputHandler.hasController():
-		$BackButton.grab_focus()
 	
 func _process(delta):
+	if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
+		if $BackButton.visible == true:
+			$BackButton.grab_focus()
 	if Input.is_action_just_pressed("confirm") and not get_viewport().gui_get_focus_owner() == null:
 		get_viewport().gui_get_focus_owner().emit_signal("pressed")	
 

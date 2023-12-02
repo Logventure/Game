@@ -39,6 +39,7 @@ visible_ratio = 0.0
 [node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
+focus_neighbor_right = NodePath("../../../BackButton")
 clip_tabs = false
 
 [node name="Video" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]

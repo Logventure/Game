@@ -13,6 +13,7 @@ var target_screen
 var previous_state = States.MAIN_MENU
 var previous_screen
 
+var last_level_id = "level_1"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -79,7 +80,11 @@ func switchToLevelSelect():
 func switchToLevel(level_id: String):
 	target_state = States.LEVEL
 	target_screen = loadScene("res://Levels/LevelTemplate.tscn")
-	target_screen.setLevelScript(level_id)
+	if level_id == "":
+		target_screen.setLevelScript(last_level_id)
+	else:
+		last_level_id = level_id
+		target_screen.setLevelScript(level_id)
 	replaceScreen(viewer, target_screen)
 
 func switchToPreviousScreen():

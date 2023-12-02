@@ -62,7 +62,9 @@ grow_vertical = 2
 
 [node name="RetryButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../GiveUpButton")
+focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../GiveUpButton")
 focus_next = NodePath("../GiveUpButton")
 focus_previous = NodePath("../GiveUpButton")
@@ -73,7 +75,9 @@ texture_focused = ExtResource("5_7usre")
 
 [node name="GiveUpButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../RetryButton")
+focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../RetryButton")
 focus_next = NodePath("../RetryButton")
 focus_previous = NodePath("../RetryButton")
@@ -82,6 +86,5 @@ texture_pressed = ExtResource("7_5lq6x")
 texture_hover = ExtResource("8_oqr6y")
 texture_focused = ExtResource("8_oqr6y")
 
-[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="Panel/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/GiveUpButton" to="." method="_on_give_up_button_pressed"]

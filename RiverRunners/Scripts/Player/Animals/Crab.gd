@@ -90,6 +90,7 @@ func _process(delta):
 
 		States.BLOCKING:
 			handle_position()
+			Events.emit_signal("can_jump", false)
 
 		States.DESTROYING:
 			handle_position()
@@ -125,6 +126,8 @@ func _on_animation_looped():
 		else:
 			play("idle")
 			current_state = States.IDLE
+			Events.emit_signal("can_jump", true)
 	elif animation == "destroy":
 		play("idle")
 		current_state = States.IDLE
+		Events.emit_signal("can_jump", true)

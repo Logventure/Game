@@ -1,6 +1,8 @@
 extends Polygon2D
 
-var shard_count = 64
+var shard_count = 16
+var shard_count_variation = 2
+
 var shard_velocity_map = {}
 
 var width = 0
@@ -8,6 +10,9 @@ var height = 0
 
 var fade_factor = 0.9
 var scale_factor = 1
+
+var square_max_size = 5
+var square_min_size = 3
 
 func _init(new_position,new_texture,tex_offset):
 	position = new_position
@@ -22,9 +27,8 @@ func _ready():
 	randomize()
 
 func explode():
-	#this will let us add more points to our polygon later on
 	var points = polygon
-	for i in range(shard_count):
+	for i in range(shard_count + (randi() % shard_count_variation - shard_count_variation/2)):
 		points.append(Vector2(randi()%width - width/2, randi()%height  - height/2))
 	
 	
@@ -48,17 +52,20 @@ func explode():
 		center /= 3
 		
 		#create a new polygon to give these points to
-		if isPointWithinPolygon(center) and randf() > 0.2:
+		if isPointWithinPolygon(center):
+			var square_size = square_min_size + randf() * (square_max_size - square_min_size)
+			var square_points = PackedVector2Array([Vector2(center.x-1*square_size/2,center.y-1*square_size/2),Vector2(center.x+square_size/2,center.y-1*square_size/2),Vector2(center.x+square_size/2,center.y+square_size/2),Vector2(center.x-1*square_size/2,center.y+square_size/2)])
+
 			var shard = Polygon2D.new()
-			shard.polygon = shard_pool
+			shard.polygon = square_points
 
 			shard.texture = texture
 			shard.texture_offset = texture_offset
 			shard.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 				
 			shard_velocity_map[shard] = Vector2(0, height*2) - center #position relative to center of sprite
-			shard_velocity_map[shard].x = shard_velocity_map[shard].x * 0.2
-			shard_velocity_map[shard].y = shard_velocity_map[shard].y * 0.4
+			shard_velocity_map[shard].x = shard_velocity_map[shard].x * 0.25
+			shard_velocity_map[shard].y = shard_velocity_map[shard].y * 0.35
 				
 			add_child(shard)
 			print(shard)

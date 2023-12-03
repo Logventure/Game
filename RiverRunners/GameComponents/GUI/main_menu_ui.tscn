@@ -50,7 +50,6 @@ texture = ExtResource("2_vor62")
 expand_mode = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-visible = false
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -106,6 +105,7 @@ texture_hover = ExtResource("14_hvnwo")
 texture_focused = ExtResource("14_hvnwo")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
+visible = false
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -209,6 +209,7 @@ texture_hover = ExtResource("32_wpddu")
 texture_focused = ExtResource("32_wpddu")
 
 [node name="BackButton" type="TextureButton" parent="."]
+visible = false
 texture_filter = 1
 layout_mode = 2
 offset_left = 1176.0

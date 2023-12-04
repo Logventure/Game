@@ -32,6 +32,7 @@ signal on_dialog_end
 signal pause_game
 signal player_died
 signal resume_game
+signal obstacles_ended
 
 signal input_confirm
 signal input_return

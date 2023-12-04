@@ -18,6 +18,8 @@ var aux1_y = 0
 var logNode
 var referenceposition = Vector2.ZERO
 
+var speed_boost = 0
+
 var collider
 var hit_height = 150 #max obstacle height, if the stone collides while below this height it will trigger the obstacles destruction
 
@@ -41,6 +43,8 @@ func _ready():
 	Events.connect("pause_game", onPause)
 	Events.connect("resume_game", onResume)
 
+	Events.connect("player_speed", onUpdatePlayerSpeed)
+
 	collider.connect("area_entered",onAreaEntered)
 
 	#self.connect("area_entered", onAreaEntered)
@@ -62,13 +66,13 @@ func handle_throw(delta):
 	throwTime += delta
 	if throwableStone.position.y - waterheight <= position.y + referenceposition.y - (tileheight * (throwableStone.position.x - position.x - referenceposition.x)/tilewidth) && throwTime >= 0: 
 		#criar variaveis auxiliares para x e para y onde depois guardo no final na position da stone
-		aux_x = pos_original.x + tilewidth/2 * throwTime * throwSpeedX
-		aux_y = pos_original.y - tileheight/2 * throwTime * throwSpeedX
-		aux1_y = aux_y - (throwSpeedY + throwGravity * throwTime * -1) * throwTime
+		aux_x = pos_original.x + tilewidth/2 * throwTime * (throwSpeedX + speed_boost)
+		aux_y = pos_original.y - tileheight/2 * throwTime * (throwSpeedX + speed_boost)
+		aux1_y = aux_y - (throwSpeedY - speed_boost*10 + throwGravity * throwTime * -1) * throwTime
 		throwableStone.position = Vector2(aux_x, aux1_y)
 		throwableStone.visible = true
-		aux_x = referenceposition.x + tilewidth/2 * throwTime * throwSpeedX
-		aux_y = referenceposition.y - tileheight/2 * throwTime * throwSpeedX
+		aux_x = referenceposition.x + tilewidth/2 * throwTime * (throwSpeedX + speed_boost)
+		aux_y = referenceposition.y - tileheight/2 * throwTime * (throwSpeedX + speed_boost)
 		collider.position = Vector2(aux_x, aux_y)
 		if collider.position.distance_to(throwableStone.position) < hit_height:
 			collider.set_deferred("monitoring", true)
@@ -114,3 +118,6 @@ func onAreaEntered(area):
 	if area.has_method("stone_collided"):
 		area.stone_collided()
 		resetStone()
+
+func onUpdatePlayerSpeed(speed):
+	speed_boost = speed * 0.3

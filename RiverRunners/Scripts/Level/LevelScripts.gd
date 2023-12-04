@@ -39,16 +39,16 @@ var levels = {
 				"chat1"         :    {"Time offset" : 1,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/anotherdialogue.txt"},
 				"levelStart"    :    {"Time offset" : 0,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : true},
 				"disableObs"    :    {"Time offset" : 20,   "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false},
-				"endCutscene"   :    {"Time offset" : 15,   "Prerequesites" : ["disableObs"],    "Type" : eventTypes.CUTSCENE,    "File": "whatever"},
-				"levelend"      :    {"Time offset" : 1,    "Prerequesites" : ["endCutscene"],   "Type" : eventTypes.ENDLEVEL},
+				"endCutscene"   :    {"Time offset" : 3,    "Prerequesites" : ["disableObs"],    "Type" : eventTypes.CUTSCENE,    "File": "whatever"},
+				"levelend"      :    {"Time offset" : 1,    "Prerequesites" : ["endCutscene"],   "Type" : eventTypes.ENDLEVEL,	  "WaitForObstacleEnd": true},
 	},
 
 	"level_3" :	{"setup"        :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 5, "ObstacleGroups" : [100]},
 				"chat1"         :    {"Time offset" : 1,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/introtocustomlevels.txt"},
 				"levelStart"    :    {"Time offset" : 0,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : true},
-				"disableObs"    :    {"Time offset" : 10,   "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false},
-				"endCutscene"   :    {"Time offset" : 7,    "Prerequesites" : ["disableObs"],    "Type" : eventTypes.CUTSCENE,    "File": "whatever"},
-				"levelend"      :    {"Time offset" : 1,    "Prerequesites" : ["endCutscene"],   "Type" : eventTypes.ENDLEVEL},
+				"disableObs"    :    {"Time offset" : 20,   "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false},
+				"endCutscene"   :    {"Time offset" : 1,    "Prerequesites" : ["disableObs"],    "Type" : eventTypes.CUTSCENE,    "File": "whatever"},
+				"levelend"      :    {"Time offset" : 1,    "Prerequesites" : ["endCutscene"],   "Type" : eventTypes.ENDLEVEL,	  "WaitForObstacleEnd": true},
 	}
 }
 
@@ -123,7 +123,10 @@ func executeEvent(id : String, details: Dictionary):
 			eventTypes.CUTSCENE:
 				level_events_status[id] = eventStatus.FINISHED
 			eventTypes.ENDLEVEL:
-				level_manager.onLevelEnd()
+				if details.has("WaitForObstacleEnd"):
+					level_manager.onLevelEnd(details["WaitForObstacleEnd"])
+				else:
+					level_manager.onLevelEnd(false)
 				level_events_status[id] = eventStatus.FINISHED
 	updateReadyToProcess()
 

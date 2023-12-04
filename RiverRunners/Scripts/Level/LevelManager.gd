@@ -66,7 +66,7 @@ func _process(delta):
 
 
 func setLevelScript(level_id):
-	level_script = load("res://Levels/LevelScripts.gd").new(self,level_id)
+	level_script = load("res://Scripts/Level/LevelScripts.gd").new(self,level_id)
 	add_child(level_script)
 
 func managePlayerSpeed():
@@ -119,6 +119,14 @@ func updateObstacleState(value: bool):
 	else:
 		map.disableObstacles()
 
-func onLevelEnd():
+func onLevelEnd(wait_for_obstacle_end: bool):
+	if wait_for_obstacle_end:
+		Events.connect("obstacles_ended",finishLevel)
+	else:
+		finishLevel()
+
+func finishLevel():
 	Events.emit_signal("pause_game")
 	current_state = States.LEVEL_END
+	if Events.is_connected("obstacles_ended",finishLevel):
+		Events.disconnect("obstacles_ended",finishLevel)

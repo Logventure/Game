@@ -18,13 +18,14 @@ baseZoom = 0.8
 minZoom = 0.5
 
 [node name="LevelUI" parent="Camera2D" instance=ExtResource("3_0um28")]
+z_index = 550
 offset_left = -1168.0
 offset_top = -596.0
 offset_right = 1184.0
 offset_bottom = 677.0
 
 [node name="DialogueBox" parent="Camera2D" instance=ExtResource("6_17mpq")]
-z_index = 50
+z_index = 530
 position = Vector2(0, 395)
 
 [node name="Map" parent="." instance=ExtResource("1_ihceg")]

@@ -80,8 +80,12 @@ func clearOldModules():
 
 
 func onUpdateCurrentPosition(pos):
-	currentPosition = position.distance_to(pos)/Vector2(tilesize/2,tilesize/-4).length()
+	var new_position = position.distance_to(pos)/Vector2(tilesize/2,tilesize/-4).length()
+	if new_position > lastGeneratedPosition + 10 and currentPosition <= lastGeneratedPosition + 10:
+		Events.emit_signal("obstacles_ended")
+	currentPosition = new_position
 	updateCurrentModule(pos)
+
 
 
 func updateCurrentModule(pos):

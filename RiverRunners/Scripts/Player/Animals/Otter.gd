@@ -71,32 +71,36 @@ func throw():
 
 
 func _process(delta):
+	var char_available = get_node("../").isCharacterAvailable("otter")
+	if visible != char_available:
+		visible = char_available
+
 	var commands = InputHandler.getCommands()
 	match current_state:
 		States.IDLE:
 			handle_position()
 			if len(commands) > 0:
-				if commands.find("jump") != -1:
+				if commands.find("jump") != -1 and get_node("../").isCharacterAvailable("frog"):
 					jump()
-				if commands.find("throw") != -1:
+				if commands.find("throw") != -1 and get_node("../").isCharacterAvailable("otter"):
 					throw()
 			else:
 				var last_input = InputHandler.getLastInput()
-				if last_input == "jump":
+				if last_input == "jump" and get_node("../").isCharacterAvailable("frog"):
 					jump()
 					InputHandler.clearLastInput()
-				elif last_input == "throw":
+				elif last_input == "throw" and get_node("../").isCharacterAvailable("otter"):
 					throw()
 					InputHandler.clearLastInput()
 
 		States.JUMPING:
 			handle_jump(delta)
 			if len(commands) > 0:
-				if commands.find("throw") != -1:
+				if commands.find("throw") != -1 and get_node("../").isCharacterAvailable("otter"):
 					throw()
 			else:
 				var last_input = InputHandler.getLastInput()
-				if last_input == "throw":
+				if last_input == "throw" and get_node("../").isCharacterAvailable("otter"):
 					throw()
 					InputHandler.clearLastInput()
 

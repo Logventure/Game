@@ -13,31 +13,16 @@ var basePosition = position
 func _ready():
 	animal = Animal.new() 
 	logNode = get_node("../Log")
-	#Events.connect("input_jump", jump)
-
-func jump():
-	if not is_jumping:
-		is_jumping = true
-		time = -1*delay
-		pos = logNode.position.y + basePosition.y
-
-
-func handle_jump(delta): 
-	time += delta
-	if is_jumping && position.y <= pos && time >= 0:
-		position.y = pos - (speed + gravity * time * -1) * time 
-	elif time >= 0:
-		if(is_jumping):	#acabou o salto
-			position.y = pos
-			is_jumping = false
-			if not logNode.position.x + basePosition.x == position.x:
-				print("Rip justin")
 	
 func handle_position():
 	if not is_jumping:
 		position = logNode.position + basePosition
 
 func _process(delta):
+	var char_available = get_node("../").isCharacterAvailable("beaver")
+	if visible != char_available:
+		visible = char_available
+
 	handle_position()
 	play("idle")
 	

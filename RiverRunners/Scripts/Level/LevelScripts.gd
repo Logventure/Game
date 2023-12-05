@@ -24,7 +24,7 @@ enum eventTypes {DIALOGUE, SETVALUES, CUTSCENE, ENDLEVEL}
 var level_events = {}
 
 var levels = {
-	"level_1" :	{"setup"        :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 2, "ObstacleGroups" : [100]},
+	"level_1" :	{"setup"        :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 2, "ObstacleGroups" : [100], "Characters" : ["beaver","frog","salmon","crab","otter"]},
 				"chat1"         :    {"Time offset" : 1,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/anotherdialogue.txt"},
 				"levelStart"    :    {"Time offset" : 0,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : true},
 				"speedUp1"      :    {"Time offset" : 5,    "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "Speed" : 3},
@@ -118,6 +118,8 @@ func executeEvent(id : String, details: Dictionary):
 					level_manager.updateObstacleState(details["GenerateObstacles"])
 				if details.has("ObstacleGroups"):
 					level_manager.updateObstacleGroups(details["ObstacleGroups"])
+				if details.has("Characters"):
+					level_manager.setCharacters(details["Characters"])
 
 				level_events_status[id] = eventStatus.FINISHED
 			eventTypes.CUTSCENE:

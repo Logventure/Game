@@ -22,6 +22,8 @@ var is_done = true
 var log
 var is_on_air = 0
 
+var character_availability = {"beaver" : true, "frog" : true, "salmon" : true, "crab" : true, "otter" : true}
+
 var lanePositions = {}
 
 enum States {IDLE, MOVING, PAUSED, DIALOG}
@@ -161,26 +163,26 @@ func _process(delta):
 	match current_state:
 		States.IDLE:
 			if len(commands) > 0:
-				if commands.find("move_left") != -1:
+				if commands.find("move_left") != -1 and isCharacterAvailable("beaver"):
 					moveLeft()
-				elif commands.find("move_right") != -1:
+				elif commands.find("move_right") != -1 and isCharacterAvailable("beaver"):
 					moveRight()
-				elif commands.find("dash_left") != -1:
+				elif commands.find("dash_left") != -1 and isCharacterAvailable("salmon"):
 					dashLeft()
-				elif commands.find("dash_right") != -1:
+				elif commands.find("dash_right") != -1 and isCharacterAvailable("salmon"):
 					dashRight()
 			else:
 				var last_input = InputHandler.getLastInput()
-				if last_input == "move_left":
+				if last_input == "move_left" and isCharacterAvailable("beaver"):
 					moveLeft()
 					InputHandler.clearLastInput()
-				if last_input == "move_right":
+				if last_input == "move_right" and isCharacterAvailable("beaver"):
 					moveRight()
 					InputHandler.clearLastInput()
-				if last_input == "dash_left":
+				if last_input == "dash_left" and isCharacterAvailable("salmon"):
 					dashLeft()
 					InputHandler.clearLastInput()
-				if last_input == "dash_right":
+				if last_input == "dash_right" and isCharacterAvailable("salmon"):
 					dashRight()
 					InputHandler.clearLastInput()
 
@@ -255,3 +257,16 @@ func isOnAir(on_air : bool):
 		Events.emit_signal("can_jump", true)
 	elif is_on_air == 3:
 		Events.emit_signal("can_jump", false)
+
+func updateCharacters(char_list):
+	character_availability["beaver"] = char_list.has("beaver")
+	character_availability["frog"] = char_list.has("frog")
+	character_availability["salmon"] = char_list.has("salmon")
+	character_availability["crab"] = char_list.has("crab")
+	character_availability["otter"] = char_list.has("otter")
+
+func isCharacterAvailable(character):
+	if character_availability.has(character):
+		return character_availability[character]
+
+

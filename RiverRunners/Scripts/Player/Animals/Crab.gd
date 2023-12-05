@@ -67,21 +67,25 @@ func shield():
 	play("block")
 
 func _process(delta):
+	var char_available = get_node("../").isCharacterAvailable("crab")
+	if visible != char_available:
+		visible = char_available
+
 	var commands = InputHandler.getCommands()
 	match current_state:
 		States.IDLE:
 			handle_position()
 			if len(commands) > 0:
-				if commands.find("jump") != -1:
+				if commands.find("jump") != -1 and get_node("../").isCharacterAvailable("frog"):
 					jump()
-				if commands.find("shield") != -1:
+				if commands.find("shield") != -1 and get_node("../").isCharacterAvailable("crab"):
 					shield()
 			else:
 				var last_input = InputHandler.getLastInput()
-				if last_input == "jump":
+				if last_input == "jump" and get_node("../").isCharacterAvailable("frog"):
 					jump()
 					InputHandler.clearLastInput()
-				if last_input == "shield":
+				if last_input == "shield" and get_node("../").isCharacterAvailable("crab"):
 					shield()
 					InputHandler.clearLastInput()
 

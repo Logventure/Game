@@ -119,6 +119,9 @@ func updateObstacleState(value: bool):
 	else:
 		map.disableObstacles()
 
+func setCharacters(character_list):
+	player.updateCharacters(character_list)
+
 func onLevelEnd(wait_for_obstacle_end: bool):
 	if wait_for_obstacle_end:
 		Events.connect("obstacles_ended",finishLevel)

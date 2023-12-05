@@ -38,5 +38,7 @@ func updateCameraPosition():
 
 func updateCameraZoom():
 	var zoom_value = baseZoom - playerSpeed * zoomMultiplier
-	if zoom_value >= minZoom and zoom_value > 0:
+	var scale_value = baseZoom/zoom_value
+	if zoom_value >= minZoom and zoom_value > 0 and zoom_value != zoom.x:
 		zoom = Vector2(zoom_value,zoom_value)
+		scale = Vector2(scale_value,scale_value)

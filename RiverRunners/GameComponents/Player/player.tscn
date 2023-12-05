@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dej1mjtjgtaao"]
+[gd_scene load_steps=31 format=3 uid="uid://dej1mjtjgtaao"]
 
 [ext_resource type="Script" path="res://Scripts/Player/LogMovements.gd" id="1_8lkio"]
 [ext_resource type="Script" path="res://Scripts/Player/CollisionHandler.gd" id="2_cobcv"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cqlcm3vy8pidw" path="res://Assets/Characters/log/Log2.png" id="8_h1anq"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/CrabCollision.gd" id="8_kqh2a"]
 [ext_resource type="Texture2D" uid="uid://kg5yjat0xbh7" path="res://Assets/Characters/log/Log3.png" id="9_awe0w"]
+[ext_resource type="Script" path="res://Scripts/Player/WaterParticles.gd" id="9_pk7q2"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/Otter.gd" id="9_vpltj"]
 [ext_resource type="Texture2D" uid="uid://481njn2w6q86" path="res://Assets/Characters/crab/Crab-16-Block.png" id="10_j1dfe"]
 [ext_resource type="Texture2D" uid="uid://beeoqag4v0p23" path="res://Assets/Characters/crab/Crab-16.png" id="10_n0xnj"]
@@ -42,6 +43,10 @@ animations = [{
 "name": &"idle",
 "speed": 7.0
 }]
+
+[sub_resource type="Curve" id="Curve_km1tf"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.6), -0.4, 0.0, 1, 0]
+point_count = 2
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bggev"]
 animations = [{
@@ -179,6 +184,26 @@ frame_progress = 0.276349
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log"]
 polygon = PackedVector2Array(-178, 118, -223, 97, 56, -56, 116, -42)
+
+[node name="WaterParticles" type="CPUParticles2D" parent="Log"]
+z_index = -1
+position = Vector2(-96, 55)
+amount = 100
+preprocess = 12.12
+randomness = 0.46
+lifetime_randomness = 0.65
+emission_shape = 1
+emission_sphere_radius = 26.86
+direction = Vector2(-1.2, 1)
+gravity = Vector2(0, 20)
+initial_velocity_max = 131.32
+linear_accel_min = -100.0
+linear_accel_max = 80.81
+scale_amount_min = 8.0
+scale_amount_max = 8.0
+scale_amount_curve = SubResource("Curve_km1tf")
+color = Color(0.71875, 0.800781, 0.816406, 1)
+script = ExtResource("9_pk7q2")
 
 [node name="ThrowableStone" type="Node2D" parent="."]
 script = ExtResource("6_8juii")

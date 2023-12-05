@@ -16,6 +16,7 @@ func _ready():
 	$VBoxContainer.visible = true
 	$VBoxContainer2.visible = false
 	$BackButton.visible = false
+	$Panel.visible = false
 
 	Events.connect("go_to_previous_screen", backFromOptions)
 
@@ -64,7 +65,14 @@ func _on_credits_button_pressed():
 
 
 func _on_exit_button_pressed():
+	$Panel.visible = true
+
+func _on_yes_button_pressed():
 	get_tree().quit()
+
+
+func _on_no_button_pressed():
+	$Panel.visible = false
 
 func backFromOptions():
 	$VBoxContainer.visible = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://fdgjnt3f4u6u"]
+[gd_scene load_steps=41 format=3 uid="uid://fdgjnt3f4u6u"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/main_menu_ui.gd" id="1_go47f"]
 [ext_resource type="Texture2D" uid="uid://dtb46jiyiaq7x" path="res://Assets/UI/Main Menu/MainMenu-Background.png" id="2_vor62"]
@@ -26,12 +26,20 @@
 [ext_resource type="Texture2D" uid="uid://bhwegl5wgkyqw" path="res://Assets/UI/Main Menu/LevelButtons/Level-5 Button.png" id="27_ddx1f"]
 [ext_resource type="Texture2D" uid="uid://dwidsocaoroyd" path="res://Assets/UI/Main Menu/LevelButtons/Level-5 Button-Pressed.png" id="28_wciq2"]
 [ext_resource type="Texture2D" uid="uid://ds33i62eb3fb3" path="res://Assets/UI/Main Menu/LevelButtons/Level-5 Button-Hover.png" id="29_3vs32"]
+[ext_resource type="Texture2D" uid="uid://curjr7m07na01" path="res://Assets/UI/Confirm Pop-Up/ConfirmPop-up-Background.png" id="30_icipw"]
 [ext_resource type="Texture2D" uid="uid://b0hvd4kjpm86" path="res://Assets/UI/Main Menu/LevelButtons/Level-6 Button.png" id="30_rrqx1"]
+[ext_resource type="Texture2D" uid="uid://gr3wvxo5yigk" path="res://Assets/UI/Confirm Pop-Up/No-Conf Button.png" id="31_mbblm"]
 [ext_resource type="Texture2D" uid="uid://dwwa47fyw3nw1" path="res://Assets/UI/Main Menu/LevelButtons/Level-6 Button-Pressed.png" id="31_nc1pp"]
+[ext_resource type="Texture2D" uid="uid://b5nlmps1pnxin" path="res://Assets/UI/Confirm Pop-Up/No-Conf Button-Pressed.png" id="32_khr4f"]
 [ext_resource type="Texture2D" uid="uid://bxj62fci3xv72" path="res://Assets/UI/Main Menu/LevelButtons/Level-6 Button-Hover.png" id="32_wpddu"]
 [ext_resource type="Texture2D" uid="uid://cu7kfqkrw5err" path="res://Assets/UI/Main Menu/Back Button.png" id="33_30uxy"]
+[ext_resource type="Texture2D" uid="uid://dg7m8po6qed5p" path="res://Assets/UI/Confirm Pop-Up/No-Conf Button-Hover.png" id="33_ptfo1"]
+[ext_resource type="Texture2D" uid="uid://bq8ko2s81wsub" path="res://Assets/UI/Confirm Pop-Up/Yes-Conf Button.png" id="34_ej826"]
 [ext_resource type="Texture2D" uid="uid://ctm0hhmaekxfb" path="res://Assets/UI/Main Menu/Back Button-Pressed.png" id="34_t5vl2"]
 [ext_resource type="Texture2D" uid="uid://cw0e1qc68r12c" path="res://Assets/UI/Main Menu/Back Button-Hover.png" id="35_dts6u"]
+[ext_resource type="Texture2D" uid="uid://dqiiqicqdsocg" path="res://Assets/UI/Confirm Pop-Up/Yes-Conf Button-Pressed.png" id="35_y7smh"]
+[ext_resource type="Texture2D" uid="uid://dsjvovhqvcjjf" path="res://Assets/UI/Confirm Pop-Up/Yes-Conf Button-Hover.png" id="36_sjqhm"]
+[ext_resource type="Texture2D" uid="uid://tpd4lr0132ti" path="res://Assets/UI/logventure-button.png" id="40_sk7ek"]
 
 [node name="MainMenuUI" type="Control"]
 layout_mode = 3
@@ -208,6 +216,56 @@ texture_pressed = ExtResource("31_nc1pp")
 texture_hover = ExtResource("32_wpddu")
 texture_focused = ExtResource("32_wpddu")
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -724.0
+offset_top = -462.0
+offset_right = 236.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("30_icipw")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -169.0
+offset_top = 59.0
+offset_right = -126.0
+offset_bottom = 70.0
+scale = Vector2(8, 8)
+
+[node name="YesButton" type="TextureButton" parent="Panel/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("34_ej826")
+texture_pressed = ExtResource("35_y7smh")
+texture_hover = ExtResource("36_sjqhm")
+texture_focused = ExtResource("36_sjqhm")
+
+[node name="NoButton" type="TextureButton" parent="Panel/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("31_mbblm")
+texture_pressed = ExtResource("32_khr4f")
+texture_hover = ExtResource("33_ptfo1")
+texture_focused = ExtResource("33_ptfo1")
+
 [node name="BackButton" type="TextureButton" parent="."]
 visible = false
 texture_filter = 1
@@ -231,10 +289,12 @@ texture_focused = ExtResource("35_dts6u")
 [node name="CreditsButton" type="TextureButton" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 1803.0
-offset_top = 992.0
-offset_right = 1803.0
-offset_bottom = 992.0
+offset_left = 1657.0
+offset_top = 894.0
+offset_right = 1698.0
+offset_bottom = 926.0
+scale = Vector2(6, 6)
+texture_normal = ExtResource("40_sk7ek")
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
@@ -245,5 +305,7 @@ offset_bottom = 992.0
 [connection signal="pressed" from="VBoxContainer2/HBoxContainer2/Level4Button" to="." method="_on_level_4_button_pressed"]
 [connection signal="pressed" from="VBoxContainer2/HBoxContainer3/Level5Button" to="." method="_on_level_5_button_pressed"]
 [connection signal="pressed" from="VBoxContainer2/HBoxContainer3/Level6Button" to="." method="_on_level_6_button_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/YesButton" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/NoButton" to="." method="_on_no_button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]

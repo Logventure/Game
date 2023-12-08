@@ -16,12 +16,16 @@ func _process(delta):
 			$Justin.position = Vector2(12.917,38.083)
 
 		States.AWAKE:
-			$Justin.position = Vector2(12.0,56.1)
+			$Justin.position = Vector2(11.9,56.1)
 
 func onJustinPressed():
 	current_state = States.AWAKE
-	$Justin.play("awake")
-	$Justin.position = Vector2(12.0,56.1)
+	if current_state == States.SLEEP:
+		$Justin.play("awake")
+	elif current_state == States.AWAKE:
+		$Justin.stop()
+		$Justin.play("awake")
+	$Justin.position = Vector2(11.9,56.1)
 
 
 

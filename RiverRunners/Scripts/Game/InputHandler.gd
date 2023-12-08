@@ -98,12 +98,16 @@ func getKeyboardCommands():
 		commands.append("shield")
 
 	if commands.has("move_left") and commands.has("move_right") or commands.has("dash_left") or commands.has("dash_right"):
-		commands.remove_at(commands.find("move_left"))
-		commands.remove_at(commands.find("move_right"))
+		if commands.find("move_left") >= 0:
+			commands.remove_at(commands.find("move_left"))
+		if commands.find("move_right") >= 0:
+			commands.remove_at(commands.find("move_right"))
 
 	if commands.has("dash_left") and commands.has("dash_right"):
-		commands.remove_at(commands.find("dash_left"))
-		commands.remove_at(commands.find("dash_right"))
+		if commands.find("dash_left") >= 0:
+			commands.remove_at(commands.find("dash_left"))
+		if commands.find("dash_right") >= 0:
+			commands.remove_at(commands.find("dash_right"))
 
 
 	if commands != []:

@@ -1,12 +1,23 @@
-[gd_scene load_steps=41 format=3 uid="uid://fdgjnt3f4u6u"]
+[gd_scene load_steps=55 format=3 uid="uid://fdgjnt3f4u6u"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/main_menu_ui.gd" id="1_go47f"]
+[ext_resource type="Texture2D" uid="uid://c1lero7mqpehw" path="res://Assets/UI/Main Menu/MainMenu-Background2.png" id="2_op0qx"]
 [ext_resource type="Texture2D" uid="uid://dtb46jiyiaq7x" path="res://Assets/UI/Main Menu/MainMenu-Background.png" id="2_vor62"]
 [ext_resource type="Texture2D" uid="uid://fh64xj0kc8jv" path="res://Assets/UI/Main Menu/Play-MM Button.png" id="3_gctep"]
+[ext_resource type="Texture2D" uid="uid://crjj4urth2qui" path="res://Assets/UI/Main Menu/MainMenu-Background3.png" id="3_sb4u8"]
+[ext_resource type="Texture2D" uid="uid://x0nqrnp0nvg" path="res://Assets/UI/Main Menu/MainMenu-Background4.png" id="4_61d7i"]
 [ext_resource type="Texture2D" uid="uid://c1yafsd7a0jd0" path="res://Assets/UI/Main Menu/Play-MM Button-Pressed.png" id="4_l2jyc"]
 [ext_resource type="Texture2D" uid="uid://r5nowyhpprmr" path="res://Assets/UI/Main Menu/Play-MM Button-Hover.png" id="5_5fman"]
 [ext_resource type="Texture2D" uid="uid://c5bxrhuhkh2rg" path="res://Assets/UI/Main Menu/Options-MM Button.png" id="5_qnn5m"]
 [ext_resource type="Texture2D" uid="uid://xythhli447tu" path="res://Assets/UI/Main Menu/Exit-MM Button.png" id="6_7epq6"]
+[ext_resource type="Texture2D" uid="uid://xbdpv5tq53wy" path="res://Assets/UI/Main Menu/JustinWakeUp1.png" id="6_8mb6r"]
+[ext_resource type="Texture2D" uid="uid://dtmy1a54gfo6k" path="res://Assets/UI/Main Menu/JustinSleeping2.png" id="6_hgkpw"]
+[ext_resource type="Script" path="res://Scripts/GUI/mainmenubackground.gd" id="6_ust7v"]
+[ext_resource type="Texture2D" uid="uid://wphwi8r5lcve" path="res://Assets/UI/Main Menu/JustinSleeping3.png" id="7_fuicp"]
+[ext_resource type="Texture2D" uid="uid://bokoncrgkgqoa" path="res://Assets/UI/Main Menu/JustinWakeUp2.png" id="7_gb2yv"]
+[ext_resource type="Texture2D" uid="uid://bcto0rc11pe6w" path="res://Assets/UI/Main Menu/JustinWakeUp3.png" id="8_dbv6u"]
+[ext_resource type="Texture2D" uid="uid://beslwhfuysc7l" path="res://Assets/UI/Main Menu/JustinSleeping4.png" id="8_fcmab"]
+[ext_resource type="Texture2D" uid="uid://clbghl57u176j" path="res://Assets/UI/Main Menu/JustinWakeUp4.png" id="9_54ny6"]
 [ext_resource type="Texture2D" uid="uid://csngdfwja06g2" path="res://Assets/UI/Main Menu/Options-MM Button-Pressed.png" id="10_8i84i"]
 [ext_resource type="Texture2D" uid="uid://b2ryi8qo6547p" path="res://Assets/UI/Main Menu/Options-MM Button-Hover.png" id="11_xr0bk"]
 [ext_resource type="Texture2D" uid="uid://0pr450nip7dg" path="res://Assets/UI/Main Menu/Exit-MM Button-Pressed.png" id="13_8k2by"]
@@ -41,6 +52,62 @@
 [ext_resource type="Texture2D" uid="uid://dsjvovhqvcjjf" path="res://Assets/UI/Confirm Pop-Up/Yes-Conf Button-Hover.png" id="36_sjqhm"]
 [ext_resource type="Texture2D" uid="uid://tpd4lr0132ti" path="res://Assets/UI/logventure-button.png" id="40_sk7ek"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_4s1lb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_op0qx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sb4u8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_61d7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vor62")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dfgxh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_8mb6r")
+}, {
+"duration": 10.0,
+"texture": ExtResource("7_gb2yv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dbv6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_54ny6")
+}],
+"loop": true,
+"name": &"awake",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_hgkpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fuicp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fcmab")
+}],
+"loop": true,
+"name": &"sleep",
+"speed": 5.0
+}]
+
+[sub_resource type="BitMap" id="BitMap_5ekvv"]
+
 [node name="MainMenuUI" type="Control"]
 layout_mode = 3
 anchors_preset = 0
@@ -49,13 +116,31 @@ offset_bottom = 1080.0
 script = ExtResource("1_go47f")
 metadata/_edit_horizontal_guides_ = []
 
-[node name="BackgroundImage" type="TextureRect" parent="."]
+[node name="BackgroundImage" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-texture = ExtResource("2_vor62")
-expand_mode = 3
+scale = Vector2(12, 12)
+sprite_frames = SubResource("SpriteFrames_4s1lb")
+autoplay = "default"
+frame = 1
+frame_progress = 0.211485
+centered = false
+script = ExtResource("6_ust7v")
+
+[node name="Justin" type="AnimatedSprite2D" parent="BackgroundImage"]
+position = Vector2(12.5, 55.75)
+sprite_frames = SubResource("SpriteFrames_dfgxh")
+animation = &"awake"
+autoplay = "sleep"
+centered = false
+
+[node name="TextureButton" type="TextureButton" parent="BackgroundImage"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 12.4167
+offset_top = 55.5
+offset_right = 39.4167
+offset_bottom = 86.5
+texture_normal = ExtResource("7_gb2yv")
+texture_click_mask = SubResource("BitMap_5ekvv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 texture_filter = 1
@@ -296,6 +381,7 @@ offset_bottom = 926.0
 scale = Vector2(6, 6)
 texture_normal = ExtResource("40_sk7ek")
 
+[connection signal="animation_looped" from="BackgroundImage/Justin" to="BackgroundImage" method="_on_justin_animation_looped"]
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

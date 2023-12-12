@@ -63,7 +63,7 @@ func throw(otter_position):
 		throwTime = 0
 
 func handle_throw(delta):
-	throwTime += delta
+	throwTime += delta*1.7
 	if throwableStone.position.y - waterheight <= position.y + referenceposition.y - (tileheight * (throwableStone.position.x - position.x - referenceposition.x)/tilewidth) && throwTime >= 0: 
 		#criar variaveis auxiliares para x e para y onde depois guardo no final na position da stone
 		aux_x = pos_original.x + tilewidth/2 * throwTime * (throwSpeedX + speed_boost)

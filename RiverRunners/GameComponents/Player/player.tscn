@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dej1mjtjgtaao"]
+[gd_scene load_steps=32 format=3 uid="uid://dej1mjtjgtaao"]
 
 [ext_resource type="Script" path="res://Scripts/Player/LogMovements.gd" id="1_8lkio"]
 [ext_resource type="Script" path="res://Scripts/Player/CollisionHandler.gd" id="2_cobcv"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://ds256m6l1n6ty" path="res://Assets/grid.png" id="15_m36cb"]
 [ext_resource type="Script" path="res://Scripts/Player/FreeLaneDetector.gd" id="15_u2cpq"]
 [ext_resource type="Script" path="res://Scripts/EditorOnlyNode.gd" id="16_qhedj"]
+[ext_resource type="Script" path="res://Scripts/Player/Animals/AnimalTreeCollider.gd" id="21_r641f"]
 [ext_resource type="Texture2D" uid="uid://ci2o2lbjgnot0" path="res://Assets/Characters/beaver/Justin-Beaver-16-Water1.png" id="25_iiqjg"]
 [ext_resource type="Texture2D" uid="uid://c7m0rawpy2dc0" path="res://Assets/Characters/beaver/Justin-Beaver-16-Water2.png" id="26_3astg"]
 [ext_resource type="Texture2D" uid="uid://caf0nlkujk3sh" path="res://Assets/Characters/beaver/Justin-Beaver-16-Water3.png" id="27_tpmef"]
@@ -183,7 +184,7 @@ frame = 1
 frame_progress = 0.276349
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log"]
-polygon = PackedVector2Array(-178, 118, -223, 97, 56, -56, 116, -42)
+polygon = PackedVector2Array(-165, 97, -202, 104, -215, 76, 55, -60, 116, -42)
 
 [node name="WaterParticles" type="CPUParticles2D" parent="Log"]
 z_index = -1
@@ -220,6 +221,18 @@ sprite_frames = SubResource("SpriteFrames_bggev")
 animation = &"block"
 script = ExtResource("8_gjrmx")
 
+[node name="CrabCollider" type="Area2D" parent="Crab"]
+position = Vector2(-152, 64)
+scale = Vector2(0.703125, 0.703125)
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+script = ExtResource("21_r641f")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Crab/CrabCollider"]
+position = Vector2(189.156, -68.2667)
+polygon = PackedVector2Array(-49.7778, 45.5111, 4.26666, 62.5778, 46.9333, 44.0889, -5.68889, 25.6)
+
 [node name="Area2D" type="Area2D" parent="Crab"]
 position = Vector2(-70, 90)
 script = ExtResource("8_kqh2a")
@@ -234,11 +247,32 @@ position = Vector2(-14, -65)
 texture = ExtResource("14_y5sx8")
 script = ExtResource("9_vpltj")
 
+[node name="OtterCollider" type="Area2D" parent="Otter"]
+position = Vector2(-68, 39)
+scale = Vector2(0.703125, 0.703125)
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+script = ExtResource("21_r641f")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Otter/OtterCollider"]
+position = Vector2(105.244, -32.7111)
+polygon = PackedVector2Array(-49.7778, 45.5111, 4.26666, 62.5778, 46.9333, 44.0889, -5.68889, 25.6)
+
 [node name="Frog" type="Sprite2D" parent="."]
 position = Vector2(-82, -26)
 scale = Vector2(0.703125, 0.703125)
 texture = ExtResource("3_7j7sv")
 script = ExtResource("7_pt0qm")
+
+[node name="FrogCollider" type="Area2D" parent="Frog"]
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+script = ExtResource("21_r641f")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Frog/FrogCollider"]
+polygon = PackedVector2Array(-49.7778, 45.5111, 4.26666, 62.5778, 46.9333, 44.0889, -5.68889, 25.6)
 
 [node name="GridHelper(hide)" type="Sprite2D" parent="."]
 z_index = -10

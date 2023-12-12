@@ -10,4 +10,7 @@
  "j": "res://MapGeneration/Modules/Components/obstacle_medium_moss_rock_1.tscn",
  "k": "res://MapGeneration/Modules/Components/obstacle_medium_moss_rock_2.tscn",
  "l": "res://MapGeneration/Modules/Components/obstacle_medium_moss_rock_3.tscn",
- "o": "res://MapGeneration/Modules/Components/obstacle_octopus.tscn"}
+ "o": "res://MapGeneration/Modules/Components/obstacle_octopus.tscn",
+ "a": "res://MapGeneration/Modules/Components/obstacle_tree_small_1.tscn",
+ "t": "res://MapGeneration/Modules/Components/obstacle_tree_small_2.tscn",
+ }

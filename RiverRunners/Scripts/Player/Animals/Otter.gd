@@ -21,6 +21,9 @@ enum States {IDLE, JUMPING, DROWNING, TAKE_DAMAGE, PAUSED}
 var current_state = States.IDLE
 var previous_state = States.IDLE
 
+@onready var collider = get_node("OtterCollider")
+var collider_pos
+
 func _ready():
 	animal = Animal.new() 
 	logNode = get_node("../Log")
@@ -34,6 +37,9 @@ func _ready():
 	Events.connect("pause_game", onPause)
 	Events.connect("resume_game", onResume)
 
+	collider.connect("area_entered",onTreeDetected)
+	collider_pos = collider.position
+
 func jump():
 	if canJump:
 		current_state = States.JUMPING
@@ -45,7 +51,9 @@ func jump():
 func handle_jump(delta): 
 	time += delta
 	if position.y <= pos && time >= 0:
-		position.y = pos - (speed + gravity * time * -1) * time 
+		position.y = pos - (speed + gravity * time * -1) * time
+		z_index = int((speed + gravity * time * -1) * time / 30) * 2 + 1
+		collider.position.y = collider_pos.y + (speed + gravity * time * -1) * time
 	elif time >= 0:
 		position.y = pos
 		current_state = States.IDLE
@@ -74,6 +82,7 @@ func _process(delta):
 	var char_available = get_node("../").isCharacterAvailable("otter")
 	if visible != char_available:
 		visible = char_available
+		collider.monitoring = visible
 
 	var commands = InputHandler.getCommands()
 	match current_state:
@@ -121,3 +130,7 @@ func onPause():
 
 func onResume():
 	current_state = previous_state
+
+func onTreeDetected(area):
+	if z_index < 5:
+		Events.emit_signal("collision_with_tree",area)

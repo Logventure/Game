@@ -46,7 +46,7 @@ func _ready():
 	Events.connect("resume_game", onResume)
 
 	Events.connect("is_lane_free", onUpdateLaneStatus)
-	Events.connect("damage_taken", moveToFreeLane)
+	Events.connect("move_to_free_lane", moveToFreeLane)
 
 	Events.connect("is_on_air", isOnAir)
 
@@ -122,7 +122,7 @@ func moveTo(lane: int):
 		deltaTime = move_speed + distance * multiplier
 		current_state = States.MOVING
 
-func moveToFreeLane(aux):
+func moveToFreeLane():
 	var direction = 1
 	move_speed = correct_speed
 	if currentLane < 3:

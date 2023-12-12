@@ -1,0 +1,106 @@
+[gd_scene load_steps=13 format=3 uid="uid://iu452asjvh4i"]
+
+[ext_resource type="Script" path="res://Scripts/Obstacles/area_entered.gd" id="2_evl5a"]
+[ext_resource type="Texture2D" uid="uid://bk3x15ll84fv0" path="res://Assets/Obstacles/rock_frames/rock12-1.png" id="3_e24w0"]
+[ext_resource type="Texture2D" uid="uid://dt2pyx6jkmsr8" path="res://Assets/Obstacles/rock_frames/rock12-2.png" id="4_0tkx0"]
+[ext_resource type="Texture2D" uid="uid://dns0lsjo3rkxm" path="res://Assets/Obstacles/rock_frames/rock12-3.png" id="5_oq70e"]
+[ext_resource type="Texture2D" uid="uid://drmkqlbr0kb3l" path="res://Assets/Obstacles/rock_frames/rock4-1.png" id="6_hrjts"]
+[ext_resource type="Texture2D" uid="uid://cbgyagu8xwjdv" path="res://Assets/Obstacles/rock_frames/rock4-2.png" id="7_81icx"]
+[ext_resource type="Texture2D" uid="uid://c2vjkg8n1jqs8" path="res://Assets/Obstacles/rock_frames/rock4-3.png" id="8_7hf2g"]
+[ext_resource type="Texture2D" uid="uid://c7uq5ea553j2s" path="res://Assets/Obstacles/Fallen_Trees/oneSpace/tree1.png" id="9_erfh5"]
+[ext_resource type="Texture2D" uid="uid://ds256m6l1n6ty" path="res://Assets/grid.png" id="10_52i6l"]
+[ext_resource type="Script" path="res://Scripts/EditorOnlyNode.gd" id="11_v82re"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_osfxk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_e24w0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0tkx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oq70e")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rx2i4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_hrjts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_81icx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7hf2g")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[node name="Rock" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+z_index = 5
+position = Vector2(301, -30)
+script = ExtResource("2_evl5a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+texture_filter = 1
+position = Vector2(12, -3)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_osfxk")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+visible = false
+scale = Vector2(0.753755, 0.778515)
+polygon = PackedVector2Array(181.757, 83.4923, 245.438, 39.8194, -107.462, 14.1295, -201.657, 73.2163)
+
+[node name="Area2D2" type="Area2D" parent="."]
+z_index = -5
+position = Vector2(-95, -76)
+script = ExtResource("2_evl5a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D2"]
+texture_filter = 1
+position = Vector2(12, 3)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_rx2i4")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D2"]
+visible = false
+scale = Vector2(0.753755, 0.778515)
+polygon = PackedVector2Array(7.96014, 64.2249, 110.115, 16.6985, -7.96014, -28.2589, -106.135, 19.2675)
+
+[node name="Area2D3" type="Area2D" parent="."]
+z_index = 5
+position = Vector2(64, -128)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D3"]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("9_erfh5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D3"]
+visible = false
+scale = Vector2(0.753755, 0.778515)
+polygon = PackedVector2Array(37.1474, 75.7853, 127.362, 17.983, -13.2669, 1.2845, -87.5616, 55.2334)
+disabled = true
+
+[node name="GridHelper(hide)" type="Sprite2D" parent="."]
+visible = false
+z_index = -10
+position = Vector2(769, -477)
+texture = ExtResource("10_52i6l")
+script = ExtResource("11_v82re")

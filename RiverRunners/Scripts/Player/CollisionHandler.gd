@@ -15,6 +15,7 @@ var player
 func _ready():
 	self.connect("area_entered",onAreaEntered)
 	self.connect("area_exited",onAreaExited)
+	Events.connect("collision_with_tree",onTreeCollision)
 	
 	sprite = $LogSprite
 	player = get_node("../")
@@ -36,6 +37,7 @@ func onAreaEntered(area):
 	if colliding <= 0:
 		if not istimercounting:
 			Events.emit_signal("damage_taken", 1)
+			Events.emit_signal("move_to_free_lane")
 			if area.has_method("log_collided"):
 				area.log_collided()
 			get_tree().create_timer(damageCooldown).timeout.connect(onCooldownEnd)
@@ -53,3 +55,12 @@ func onCooldownEnd():
 		istimercounting = true
 	else:
 		istimercounting = false
+
+func onTreeCollision(area):
+	Events.emit_signal("log_collided")
+	if not istimercounting:
+		Events.emit_signal("damage_taken", 1)
+		if area.has_method("log_collided"):
+			area.log_collided()
+		get_tree().create_timer(damageCooldown).timeout.connect(onCooldownEnd)
+		istimercounting = true

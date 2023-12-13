@@ -1,7 +1,93 @@
-[gd_scene load_steps=3 format=3 uid="uid://chkd7lgphi0cv"]
+[gd_scene load_steps=36 format=3 uid="uid://chkd7lgphi0cv"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/options_ui.gd" id="1_vdxw5"]
 [ext_resource type="Texture2D" uid="uid://dtb46jiyiaq7x" path="res://Assets/UI/Main Menu/MainMenu-Background.png" id="2_cgt6h"]
+[ext_resource type="Texture2D" uid="uid://c1lero7mqpehw" path="res://Assets/UI/Main Menu/MainMenu-Background2.png" id="2_osyww"]
+[ext_resource type="Texture2D" uid="uid://xbdpv5tq53wy" path="res://Assets/UI/Main Menu/JustinWakeUp1.png" id="3_ggylj"]
+[ext_resource type="Texture2D" uid="uid://crjj4urth2qui" path="res://Assets/UI/Main Menu/MainMenu-Background3.png" id="3_gxwhw"]
+[ext_resource type="Texture2D" uid="uid://do4b344v101df" path="res://Assets/UI/Pause Menu/PauseMenu-Frame.png" id="3_wu6cc"]
+[ext_resource type="Texture2D" uid="uid://cu7kfqkrw5err" path="res://Assets/UI/Main Menu/Back Button.png" id="4_a10li"]
+[ext_resource type="Texture2D" uid="uid://bokoncrgkgqoa" path="res://Assets/UI/Main Menu/JustinWakeUp2.png" id="4_d2bxy"]
+[ext_resource type="Texture2D" uid="uid://x0nqrnp0nvg" path="res://Assets/UI/Main Menu/MainMenu-Background4.png" id="4_hrum1"]
+[ext_resource type="Texture2D" uid="uid://k13vku8ldwu8" path="res://Assets/UI/Main Menu/Infinite-MM Button.png" id="4_nl85j"]
+[ext_resource type="Texture2D" uid="uid://ctm0hhmaekxfb" path="res://Assets/UI/Main Menu/Back Button-Pressed.png" id="5_1aokt"]
+[ext_resource type="Texture2D" uid="uid://bcto0rc11pe6w" path="res://Assets/UI/Main Menu/JustinWakeUp3.png" id="5_rw7gn"]
+[ext_resource type="Texture2D" uid="uid://b0cjnxurt13yx" path="res://Assets/UI/Main Menu/Infinite-MM Button-Pressed.png" id="5_tjjaw"]
+[ext_resource type="Texture2D" uid="uid://cw0e1qc68r12c" path="res://Assets/UI/Main Menu/Back Button-Hover.png" id="6_8rv3c"]
+[ext_resource type="Script" path="res://Scripts/GUI/mainmenubackground.gd" id="6_mtjgs"]
+[ext_resource type="Texture2D" uid="uid://dh7v3l3n50id8" path="res://Assets/UI/Main Menu/Infinite-MM Button-Hover.png" id="6_qs6ux"]
+[ext_resource type="Texture2D" uid="uid://clbghl57u176j" path="res://Assets/UI/Main Menu/JustinWakeUp4.png" id="6_sddwn"]
+[ext_resource type="Texture2D" uid="uid://fh64xj0kc8jv" path="res://Assets/UI/Main Menu/Play-MM Button.png" id="7_cv0wb"]
+[ext_resource type="Texture2D" uid="uid://dtmy1a54gfo6k" path="res://Assets/UI/Main Menu/JustinSleeping2.png" id="7_iqv2y"]
+[ext_resource type="Texture2D" uid="uid://wphwi8r5lcve" path="res://Assets/UI/Main Menu/JustinSleeping3.png" id="8_8htpq"]
+[ext_resource type="Texture2D" uid="uid://c1yafsd7a0jd0" path="res://Assets/UI/Main Menu/Play-MM Button-Pressed.png" id="8_b0tbi"]
+[ext_resource type="Texture2D" uid="uid://beslwhfuysc7l" path="res://Assets/UI/Main Menu/JustinSleeping4.png" id="9_v061i"]
+[ext_resource type="Texture2D" uid="uid://r5nowyhpprmr" path="res://Assets/UI/Main Menu/Play-MM Button-Hover.png" id="9_xumbk"]
+[ext_resource type="Texture2D" uid="uid://bfo3xx8wk4uwa" path="res://Assets/UI/Main Menu/Story-MM Button.png" id="10_70ew3"]
+[ext_resource type="Texture2D" uid="uid://bm6o5enxlcvb3" path="res://Assets/UI/Main Menu/Story-MM Button-Pressed.png" id="11_f10p4"]
+[ext_resource type="Texture2D" uid="uid://p6ai6sok1me8" path="res://Assets/UI/Main Menu/Story-MM Button-Hover.png" id="12_q1a0j"]
+[ext_resource type="Texture2D" uid="uid://b2tcp8e6quo31" path="res://Assets/UI/GameOver Menu/GameOverMenu-Retry-Button.png" id="13_tiaui"]
+[ext_resource type="Texture2D" uid="uid://cwkbp364o5gwv" path="res://Assets/UI/GameOver Menu/GameOverMenu-Retry-Button-Pressed.png" id="14_4bbx1"]
+[ext_resource type="Texture2D" uid="uid://bttdlgjt7uha1" path="res://Assets/UI/GameOver Menu/GameOverMenu-Retry-Button-Hover.png" id="15_ojolm"]
+[ext_resource type="Texture2D" uid="uid://lyrxxnqeuunm" path="res://Assets/UI/GameOver Menu/GameOverMenu-GiveUp-Button.png" id="16_folq0"]
+[ext_resource type="Texture2D" uid="uid://bxtslgxruvr7r" path="res://Assets/UI/GameOver Menu/GameOverMenu-GiveUp-Button-Pressed.png" id="17_v1sht"]
+[ext_resource type="Texture2D" uid="uid://bjh26wc6jtbeu" path="res://Assets/UI/GameOver Menu/GameOverMenu-GiveUp-Button-Hover.png" id="18_3c5hh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1eedu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_osyww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gxwhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hrum1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_cgt6h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ia0m5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ggylj")
+}, {
+"duration": 10.0,
+"texture": ExtResource("4_d2bxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rw7gn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sddwn")
+}],
+"loop": true,
+"name": &"awake",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_iqv2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8htpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_v061i")
+}],
+"loop": true,
+"name": &"sleep",
+"speed": 5.0
+}]
+
+[sub_resource type="BitMap" id="BitMap_ptb6h"]
 
 [node name="OptionsUI" type="Control"]
 layout_mode = 3
@@ -12,127 +98,351 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vdxw5")
 
-[node name="BackgroundImage" type="TextureRect" parent="."]
+[node name="BackgroundImage2" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-layout_mode = 2
-offset_right = 1920.0
-offset_bottom = 1080.0
-texture = ExtResource("2_cgt6h")
-expand_mode = 3
+scale = Vector2(12, 12)
+sprite_frames = SubResource("SpriteFrames_1eedu")
+autoplay = "default"
+centered = false
+script = ExtResource("6_mtjgs")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Justin" type="AnimatedSprite2D" parent="BackgroundImage2"]
+position = Vector2(12.5, 55.75)
+sprite_frames = SubResource("SpriteFrames_ia0m5")
+animation = &"awake"
+autoplay = "sleep"
+centered = false
+
+[node name="TextureButton" type="TextureButton" parent="BackgroundImage2"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 12.4167
+offset_top = 55.5
+offset_right = 39.4167
+offset_bottom = 86.5
+focus_neighbor_right = NodePath("../../Panel/ButtonContainer/VideoButton")
+texture_normal = ExtResource("4_d2bxy")
+texture_click_mask = SubResource("BitMap_ptb6h")
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 934.0
+offset_top = 519.0
+offset_right = 974.0
+offset_bottom = 559.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+texture_filter = 1
 layout_mode = 0
-offset_left = 1111.0
-offset_top = 328.0
-offset_right = 1700.0
-offset_bottom = 455.0
+offset_left = -453.0
+offset_top = -343.0
+offset_right = -293.0
+offset_bottom = -253.0
+scale = Vector2(11, 11)
+texture = ExtResource("3_wu6cc")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
+[node name="ButtonContainer" type="HBoxContainer" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 164.0
+offset_top = -108.0
+offset_right = 295.0
+offset_bottom = -97.0
+scale = Vector2(4, 4)
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="VideoButton" type="TextureButton" parent="Panel/ButtonContainer"]
 layout_mode = 2
-text = "Settings"
-visible_characters = 0
-visible_ratio = 0.0
+focus_neighbor_left = NodePath("../../../BackgroundImage2/TextureButton")
+focus_neighbor_right = NodePath("../AudioButton")
+focus_neighbor_bottom = NodePath("../../Video/HBoxContainer1/FullscreenButton")
+texture_normal = ExtResource("4_nl85j")
+texture_pressed = ExtResource("5_tjjaw")
+texture_hover = ExtResource("6_qs6ux")
+texture_focused = ExtResource("6_qs6ux")
 
-[node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(500, 0)
+[node name="AudioButton" type="TextureButton" parent="Panel/ButtonContainer"]
 layout_mode = 2
+focus_neighbor_left = NodePath("../VideoButton")
+focus_neighbor_right = NodePath("../ControlsButton")
+focus_neighbor_bottom = NodePath("../../Audio/HBoxContainer/CenterContainer/HSlider")
+texture_normal = ExtResource("7_cv0wb")
+texture_pressed = ExtResource("8_b0tbi")
+texture_hover = ExtResource("9_xumbk")
+texture_focused = ExtResource("9_xumbk")
+
+[node name="ControlsButton" type="TextureButton" parent="Panel/ButtonContainer"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../AudioButton")
 focus_neighbor_right = NodePath("../../../BackButton")
-clip_tabs = false
+texture_normal = ExtResource("10_70ew3")
+texture_pressed = ExtResource("11_f10p4")
+texture_hover = ExtResource("12_q1a0j")
+texture_focused = ExtResource("12_q1a0j")
 
-[node name="Video" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
+[node name="Fullscreen" type="Label" parent="Panel"]
+visible = false
 layout_mode = 2
+offset_left = 153.0
+offset_top = -37.0
+offset_right = 237.0
+offset_bottom = -11.0
+text = "Fullscreen:"
 
-[node name="HBoxContainer1" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Video"]
+[node name="Windowed" type="Label" parent="Panel"]
+visible = false
+layout_mode = 2
+offset_left = 153.0
+offset_top = 25.0
+offset_right = 237.0
+offset_bottom = 51.0
+text = "Window:"
+
+[node name="Video" type="VBoxContainer" parent="Panel"]
+visible = false
+layout_mode = 1
+offset_left = 259.0
+offset_top = -41.0
+offset_right = 299.0
+offset_bottom = -15.0
+scale = Vector2(4, 4)
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="Panel/Video"]
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Video/HBoxContainer1"]
+[node name="FullscreenButton" type="TextureButton" parent="Panel/Video/HBoxContainer1"]
+texture_filter = 1
 layout_mode = 2
-text = "Fullscreen:"
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../../../ButtonContainer/VideoButton")
+focus_neighbor_bottom = NodePath("../../HBoxContainer2/BorderlessButton")
+texture_normal = ExtResource("13_tiaui")
+texture_pressed = ExtResource("14_4bbx1")
+texture_hover = ExtResource("15_ojolm")
+texture_focused = ExtResource("15_ojolm")
 
-[node name="FullscreenButton" type="Button" parent="MarginContainer/VBoxContainer/TabContainer/Video/HBoxContainer1"]
-custom_minimum_size = Vector2(500, 0)
-layout_mode = 2
-text = "Fullscreen
-"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Video"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/Video"]
 layout_mode = 2
 theme_override_constants/separation = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Video/HBoxContainer2"]
+[node name="BorderlessButton" type="TextureButton" parent="Panel/Video/HBoxContainer2"]
+texture_filter = 1
 layout_mode = 2
-text = "Windowed:"
+focus_neighbor_top = NodePath("../../HBoxContainer1/FullscreenButton")
+focus_neighbor_bottom = NodePath("../../../../BackButton")
+texture_normal = ExtResource("16_folq0")
+texture_pressed = ExtResource("17_v1sht")
+texture_hover = ExtResource("18_3c5hh")
+texture_focused = ExtResource("18_3c5hh")
 
-[node name="BorderlessButton" type="Button" parent="MarginContainer/VBoxContainer/TabContainer/Video/HBoxContainer2"]
-custom_minimum_size = Vector2(500, 0)
-layout_mode = 2
-text = "Windowed"
-
-[node name="Audio" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
+[node name="Master Volume" type="Label" parent="Panel"]
 visible = false
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Audio"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Audio/HBoxContainer"]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-text = "Sound:"
-
-[node name="CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/TabContainer/Audio/HBoxContainer"]
-layout_mode = 2
-
-[node name="HBoxContainer1" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Audio"]
-layout_mode = 2
-theme_override_constants/separation = 5
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Audio/HBoxContainer1"]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
+layout_mode = 0
+offset_left = 153.0
+offset_top = -37.0
+offset_right = 207.0
+offset_bottom = -11.0
+scale = Vector2(1.2, 1.2)
 text = "Master Volume:"
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/TabContainer/Audio/HBoxContainer1"]
+[node name="Sound Volume" type="Label" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 153.0
+offset_top = 1.0
+offset_right = 270.0
+offset_bottom = 27.0
+scale = Vector2(1.2, 1.2)
+text = "Sound Volume:"
+
+[node name="Music Volume" type="Label" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 153.0
+offset_top = 38.0
+offset_right = 266.0
+offset_bottom = 64.0
+scale = Vector2(1.2, 1.2)
+text = "Music Volume:"
+
+[node name="Audio" type="VBoxContainer" parent="Panel"]
+visible = false
+layout_mode = 1
+offset_left = 307.0
+offset_top = -30.0
+offset_right = 647.0
+offset_bottom = 66.0
+theme_override_constants/separation = 22
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Audio"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel/Audio/HBoxContainer"]
 custom_minimum_size = Vector2(340, 0)
 layout_mode = 2
 
-[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/TabContainer/Audio/HBoxContainer1/CenterContainer"]
+[node name="HSlider" type="HSlider" parent="Panel/Audio/HBoxContainer/CenterContainer"]
 custom_minimum_size = Vector2(340, 0)
 layout_mode = 2
+focus_neighbor_top = NodePath("../../../../ButtonContainer/AudioButton")
+focus_neighbor_bottom = NodePath("../../../HBoxContainer1/CenterContainer/HSlider")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Audio"]
+[node name="HBoxContainer1" type="HBoxContainer" parent="Panel/Audio"]
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Audio/HBoxContainer2"]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-text = "Music Volume:"
-
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/TabContainer/Audio/HBoxContainer2"]
+[node name="CenterContainer" type="CenterContainer" parent="Panel/Audio/HBoxContainer1"]
 custom_minimum_size = Vector2(340, 0)
 layout_mode = 2
 
-[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/TabContainer/Audio/HBoxContainer2/CenterContainer"]
+[node name="HSlider" type="HSlider" parent="Panel/Audio/HBoxContainer1/CenterContainer"]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+focus_neighbor_top = NodePath("../../../HBoxContainer/CenterContainer/HSlider")
+focus_neighbor_bottom = NodePath("../../../HBoxContainer2/CenterContainer/HSlider")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/Audio"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel/Audio/HBoxContainer2"]
 custom_minimum_size = Vector2(340, 0)
 layout_mode = 2
 
-[node name="Controls" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
+[node name="HSlider" type="HSlider" parent="Panel/Audio/HBoxContainer2/CenterContainer"]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+focus_neighbor_top = NodePath("../../../HBoxContainer1/CenterContainer/HSlider")
+focus_neighbor_bottom = NodePath("../../../../../BackButton")
+
+[node name="Action" type="Label" parent="Panel"]
 visible = false
-layout_mode = 2
+layout_mode = 0
+offset_left = 217.0
+offset_top = -37.0
+offset_right = 267.0
+offset_bottom = -11.0
+text = "Action"
 
-[node name="BackButton" type="Button" parent="."]
-layout_mode = 2
-offset_left = 1655.0
-offset_top = 359.0
-offset_right = 1700.0
-offset_bottom = 390.0
-text = "Back"
+[node name="Keyboard" type="Label" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 385.0
+offset_top = -37.0
+offset_right = 459.0
+offset_bottom = -11.0
+text = "Keyboard"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/TabContainer/Video/HBoxContainer1/FullscreenButton" to="." method="_on_fullscreen_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/TabContainer/Video/HBoxContainer2/BorderlessButton" to="." method="_on_borderless_button_pressed"]
+[node name="Controller" type="Label" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 565.0
+offset_top = -37.0
+offset_right = 644.0
+offset_bottom = -11.0
+text = "Controller"
+
+[node name="Panel2" type="Panel" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 867.0
+offset_top = 524.0
+offset_right = 907.0
+offset_bottom = 564.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel2"]
+layout_mode = 0
+offset_left = -386.0
+offset_top = -200.0
+offset_right = -226.0
+offset_bottom = -110.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_wu6cc")
+
+[node name="Label" type="Label" parent="Panel2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -28.0
+offset_top = 22.0
+offset_right = 77.0
+offset_bottom = 48.0
+scale = Vector2(2.5, 2.5)
+text = "Press any key"
+
+[node name="Panel3" type="Panel" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 867.0
+offset_top = 524.0
+offset_right = 867.0
+offset_bottom = 524.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel3"]
+layout_mode = 0
+offset_left = -386.0
+offset_top = -200.0
+offset_right = -226.0
+offset_bottom = -110.0
+scale = Vector2(6, 6)
+texture = ExtResource("3_wu6cc")
+
+[node name="Label" type="Label" parent="Panel3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -41.0
+offset_top = 17.0
+offset_right = 136.0
+offset_bottom = 69.0
+scale = Vector2(1.5, 1.5)
+text = "That key already exists
+  Choose another key"
+
+[node name="BackButton" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1217.0
+offset_top = 858.0
+offset_right = 1258.0
+offset_bottom = 869.0
+scale = Vector2(7, 7)
+focus_neighbor_left = NodePath("../Panel/ButtonContainer/ControlsButton")
+focus_neighbor_top = NodePath("../Panel/ButtonContainer/ControlsButton")
+focus_neighbor_right = NodePath("../Panel/ButtonContainer/VideoButton")
+focus_neighbor_bottom = NodePath("../BackgroundImage2/TextureButton")
+texture_normal = ExtResource("4_a10li")
+texture_pressed = ExtResource("5_1aokt")
+texture_hover = ExtResource("6_8rv3c")
+texture_focused = ExtResource("6_8rv3c")
+
+[connection signal="animation_looped" from="BackgroundImage2/Justin" to="BackgroundImage2" method="_on_justin_animation_looped"]
+[connection signal="pressed" from="Panel/ButtonContainer/VideoButton" to="." method="_on_video_button_pressed"]
+[connection signal="pressed" from="Panel/ButtonContainer/AudioButton" to="." method="_on_audio_button_pressed"]
+[connection signal="pressed" from="Panel/ButtonContainer/ControlsButton" to="." method="_on_controls_button_pressed"]
+[connection signal="pressed" from="Panel/Video/HBoxContainer1/FullscreenButton" to="." method="_on_fullscreen_button_pressed"]
+[connection signal="pressed" from="Panel/Video/HBoxContainer2/BorderlessButton" to="." method="_on_borderless_button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

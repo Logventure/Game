@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var viewer = $Viewer
 
+const FILE_MANAGEMENT_SCRIPT = preload("res://Scripts/FileManagement.gd")
+
 enum States {MAIN_MENU, OPTIONS, MODE_SELECT, LEVEL_SELECT, LEVEL, LOADING_SCREEN}
 
 var current_state = States.MAIN_MENU
@@ -17,6 +19,7 @@ var last_level_id = "level_1"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	FILE_MANAGEMENT_SCRIPT.loadConfig()
 
 	Events.connect("go_to_main_menu", switchToMainMenu)
 	Events.connect("go_to_options", switchToOptions)

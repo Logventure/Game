@@ -1,5 +1,7 @@
 extends Control
 
+const FILE_MANAGEMENT_SCRIPT = preload("res://Scripts/FileManagement.gd")
+
 var isInInputOverrideMode = false
 var overridingAction = ""
 var keyboardActions = ["dashLeft", "dashRight", "jump", "throw", "shield"]
@@ -245,14 +247,14 @@ func _input(event):
 	if isInInputOverrideMode:
 		if event is InputEventKey:
 			if event.pressed && !overridingAction.contains("controller"):	
-				#check if it already exists on other action
+				#check if it already exists on another action
 				for action in keyboardActions:
 					if InputMap.action_has_event(action, event):
 						has_action = true
 						break
 				if !has_action:
 					validInput = true
-					buttonNode = "Panel/Keyboard/" + getActionButtonName(overridingAction) #can't let controller change
+					buttonNode = "Panel/Keyboard/" + getActionButtonName(overridingAction)
 					var keyCode = event.physical_keycode
 					buttonText = OS.get_keycode_string(keyCode)
 					for oldEvent in InputMap.action_get_events(overridingAction):
@@ -294,7 +296,7 @@ func _input(event):
 						break
 				if !has_action:
 					validInput = true
-					buttonNode = "Panel/Controller/" + getActionButtonName(overridingAction) #can't let keyboard change
+					buttonNode = "Panel/Controller/" + getActionButtonName(overridingAction)
 					if event.axis == 4:
 						buttonText = "L2"
 					elif event.axis == 5:
@@ -347,3 +349,5 @@ func _input(event):
 			get_node(buttonNode).text = buttonText
 			isInInputOverrideMode = false
 			overridingAction = ""
+			FILE_MANAGEMENT_SCRIPT.saveConfig()
+			FILE_MANAGEMENT_SCRIPT.loadConfig()

@@ -1,7 +1,8 @@
 extends Control
 
 const FILE_MANAGEMENT_SCRIPT = preload("res://Scripts/FileManagement.gd")
-
+const TEXT_FONT = preload("res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf")
+var ls = LabelSettings.new()
 var isInInputOverrideMode = false
 var overridingAction = ""
 var keyboardActions = ["dashLeft", "dashRight", "jump", "throw", "shield"]
@@ -11,9 +12,11 @@ var controllerActions = ["controller_dashLeft", "controller_dashRight", "control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Events.connect("camera_status", onUpdateCameraStatus)
+	$Panel/ButtonContainer/VideoButton.grab_focus()
 	$Panel/Video.visible = true
 	$Panel/Fullscreen.visible = true
 	$Panel/Windowed.visible = true
+	initializeFont()
 	makeLabels()
 	redoControllsButtons()
 	
@@ -96,15 +99,18 @@ func getLabelName(action):
 
 func getMouseButtonText(index):
 	if (index == 1):
-		return "Left mouse button"
+		return "Left Click"
 		
 	if (index == 2):
-		return "Right mouse button"
+		return "Right Click"
 
 	if (index == 3):
-		return "Middle mouse button"	
+		return "Middle Click"	
 	
 	assert(false)
+
+func initializeFont():
+	ls.set_font(TEXT_FONT)
 
 func makeLabels():
 	var labels = ["Dash Left", "Dash Right", "Jump", "Throw", "Shield"]
@@ -114,8 +120,9 @@ func makeLabels():
 
 		var newLabel = Label.new()
 		newLabel.set_name(getLabelName(label))
-		newLabel.text = label #adicionar texto com fonte do dialogo
+		newLabel.text = label
 		newLabel.position.y = labelPosY
+		newLabel.label_settings = ls
 
 		$Panel/Action.add_child(newLabel)
 
@@ -130,7 +137,7 @@ func redoControllsButtons():
 	var buttons = Array()
 
 	for keyboardActionIndex in range(0, selectedActions.size()/2):
-		var keyboardActionPosY = 37 + keyboardActionIndex*37
+		var keyboardActionPosY = 33 + keyboardActionIndex*37
 		var keyboardAction = selectedActions[keyboardActionIndex]
 
 		var action_event = InputMap.action_get_events(selectedActions[keyboardActionIndex])[0]	
@@ -142,23 +149,20 @@ func redoControllsButtons():
 			keyString = OS.get_keycode_string(keyCode)
 	
 		var newKeyboardActionButton = Button.new()
-		buttons.push_back(newKeyboardActionButton)
 		newKeyboardActionButton.set_name(getActionButtonName(keyboardAction))
-		newKeyboardActionButton.text = keyString #adicionar texto com fonte do dialogo
+		newKeyboardActionButton.text = keyString
 		newKeyboardActionButton.position.y = keyboardActionPosY
+		newKeyboardActionButton.flat = true
+		newKeyboardActionButton.set("custom_fonts/font", ls)
+		buttons.push_back(newKeyboardActionButton)
 
 		$Panel/Keyboard.add_child(newKeyboardActionButton)
-		
-		if keyboardActionIndex == 0:
-			newKeyboardActionButton.focus_neighbor_top = NodePath("Panel/ButtonContainer/ControlsButton")
-
-			$Panel/ButtonContainer/ControlsButton.focus_neighbor_bottom = NodePath("Panel/Keyboard/" + newKeyboardActionButton.name)
 
 		get_node("Panel/Keyboard/" + newKeyboardActionButton.name).connect("pressed", _on_actionButton_pressed.bind(keyboardAction))
 
 
 	for controllerActionIndex in range(selectedActions.size()/2, selectedActions.size()):
-		var controllerActionPosY = 37 + (controllerActionIndex-5)*37
+		var controllerActionPosY = 33 + (controllerActionIndex-5)*37
 		var controllerAction = selectedActions[controllerActionIndex]
 
 		var action_event = InputMap.action_get_events(selectedActions[controllerActionIndex])[0]
@@ -185,15 +189,14 @@ func redoControllsButtons():
 				keyString = "R1"
 
 		var newControllerActionButton = Button.new()
-		buttons.push_back(newControllerActionButton)
 		newControllerActionButton.set_name(getActionButtonName(controllerAction))
-		newControllerActionButton.text = keyString #adicionar texto com fonte do dialogo
+		newControllerActionButton.text = keyString
 		newControllerActionButton.position.y = controllerActionPosY
+		newControllerActionButton.flat = true
+		newControllerActionButton.set("custom_fonts/font", ls)
+		buttons.push_back(newControllerActionButton)
 
 		$Panel/Controller.add_child(newControllerActionButton)
-
-		if controllerActionIndex == 0:
-			focus_neighbor_top = NodePath("Panel/ButtonContainer/ControlsButton")
 		
 		get_node("Panel/Controller/" + newControllerActionButton.name).connect("pressed", _on_actionButton_pressed.bind(controllerAction))
 
@@ -201,43 +204,41 @@ func redoControllsButtons():
 		var selectedButton = buttons[buttonIndex]
 		match buttonIndex:
 			0:
-				selectedButton.focus_neighbor_right = NodePath("Panel/Controller/controller_dashLeftButton")
-				selectedButton.focus_neighbor_bottom = NodePath("Panel/Keyboard/dashRight")
+				selectedButton.set_focus_neighbor(SIDE_RIGHT, $Panel/Controller/controller_dashLeftButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/Keyboard/dashRightButton.get_path())
 			1:
-				selectedButton.focus_neighbor_top = NodePath("Panel/Keyboard/dashLeftButton")
-				selectedButton.focus_neighbor_right = NodePath("Panel/Controller/controller_dashRightButton")
-				selectedButton.focus_neighbor_bottom = NodePath("Panel/Keyboard/jumpButton")
+				selectedButton.set_focus_neighbor(SIDE_TOP, $Panel/Keyboard/dashLeftButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_RIGHT, $Panel/Controller/controller_dashRightButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/Keyboard/jumpButton.get_path())
 			2:
-				selectedButton.focus_neighbor_top = NodePath("Panel/Keyboard/dashRightButton")
-				selectedButton.focus_neighbor_right = NodePath("Panel/Controller/controller_jumpButton")
-				selectedButton.focus_neighbor_bottom = NodePath("Panel/Keyboard/throwButton")
+				selectedButton.set_focus_neighbor(SIDE_TOP, $Panel/Keyboard/dashRightButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_RIGHT, $Panel/Controller/controller_jumpButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/Keyboard/throwButton.get_path())
 			3:
-				selectedButton.focus_neighbor_top = NodePath("Panel/Keyboard/jumpButton")
-				selectedButton.focus_neighbor_right = NodePath("Panel/Controller/controller_throwButton")
-				selectedButton.focus_neighbor_bottom = NodePath("Panel/Controller/shieldButton")
+				selectedButton.set_focus_neighbor(SIDE_TOP, $Panel/Keyboard/jumpButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_RIGHT, $Panel/Controller/controller_throwButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/Keyboard/shieldButton.get_path())
 			4:
-				selectedButton.focus_neighbor_top = NodePath("Panel/Keyboard/throwButton")
-				selectedButton.focus_neighbor_right = NodePath("Panel/Controller/controller_shieldButton")
-				selectedButton.focus_neighbor_bottom = NodePath("Panel/BackButton")
+				selectedButton.set_focus_neighbor(SIDE_TOP, $Panel/Keyboard/throwButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_RIGHT, $Panel/Controller/controller_shieldButton.get_path())
 			5:
-				selectedButton.focus_neighbor_left = NodePath("Panel/Keyboard/dashLeftButton")
-				selectedButton.focus_neighbor_bottom = NodePath("Panel/Controller/controller_dashRightButton")
+				selectedButton.set_focus_neighbor(SIDE_LEFT, $Panel/Keyboard/dashLeftButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/Controller/controller_dashRightButton.get_path())
 			6:
-				selectedButton.focus_neighbor_top = NodePath("Panel/Controller/controller_dashLeftButton")
-				selectedButton.focus_neighbor_left = NodePath("Panel/Keyboard/dashRightButton")
-				selectedButton.focus_neighbor_bottom = NodePath("Panel/Controller/controller_jumpButton")
+				selectedButton.set_focus_neighbor(SIDE_TOP, $Panel/Controller/controller_dashLeftButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_LEFT, $Panel/Keyboard/dashRightButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/Controller/controller_jumpButton.get_path())
 			7:
-				selectedButton.focus_neighbor_top = NodePath("Panel/Controller/controller_dashRightButton")
-				selectedButton.focus_neighbor_left = NodePath("Panel/Keyboard/jumpButton")
-				selectedButton.focus_neighbor_bottom = NodePath("Panel/Controller/controller_throwButton")
+				selectedButton.set_focus_neighbor(SIDE_TOP, $Panel/Controller/controller_dashRightButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_LEFT, $Panel/Keyboard/jumpButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/Controller/controller_throwButton.get_path())
 			8:
-				selectedButton.focus_neighbor_top = NodePath("Panel/Controller/controller_jumpButton")
-				selectedButton.focus_neighbor_left = NodePath("Panel/Keyboard/throwButton")
-				selectedButton.focus_neighbor_bottom = NodePath("Panel/Controller/controller_shieldButton")
+				selectedButton.set_focus_neighbor(SIDE_TOP, $Panel/Controller/controller_jumpButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_LEFT, $Panel/Keyboard/throwButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/Controller/controller_shieldButton.get_path())
 			9:
-				selectedButton.focus_neighbor_top = NodePath("Panel/Controller/controller_throwButton")
-				selectedButton.focus_neighbor_left = NodePath("Panel/Keyboard/shieldButton")
-				selectedButton.focus_neighbor_bottom = NodePath("Panel/BackButton")
+				selectedButton.set_focus_neighbor(SIDE_TOP, $Panel/Controller/controller_throwButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_LEFT, $Panel/Keyboard/shieldButton.get_path())
 
 func _input(event):
 	var validInput = false
@@ -258,7 +259,6 @@ func _input(event):
 					var keyCode = event.physical_keycode
 					buttonText = OS.get_keycode_string(keyCode)
 					for oldEvent in InputMap.action_get_events(overridingAction):
-						print(oldEvent)
 						if oldEvent is InputEventKey or InputEventMouseButton:
 							InputMap.action_erase_event(overridingAction, oldEvent)
 							break
@@ -278,7 +278,6 @@ func _input(event):
 					buttonNode = "Panel/Keyboard/" + getActionButtonName(overridingAction)
 					buttonText = getMouseButtonText(event.get_button_index())
 					for oldEvent in InputMap.action_get_events(overridingAction):
-						print(oldEvent)
 						if oldEvent is InputEventMouseButton or InputEventKey:
 							InputMap.action_erase_event(overridingAction, oldEvent)
 							break
@@ -296,7 +295,6 @@ func _input(event):
 				if !has_action:
 					validInput = true
 					buttonNode = "Panel/Controller/" + getActionButtonName(overridingAction)
-					print(buttonNode)
 					if event.button_index == 0:
 						buttonText = "Cross"
 					elif event.button_index == 1 or event.button_index == 2:
@@ -322,7 +320,6 @@ func _input(event):
 				$Panel2.visible = false
 		elif event is InputEventJoypadMotion:
 			if (event.axis == 4 and  overridingAction.contains("controller")) or (event.axis == 5 and overridingAction.contains("controller")):
-				print(event)
 				for action in controllerActions:
 					if InputMap.action_has_event(action, event):
 						has_action = true

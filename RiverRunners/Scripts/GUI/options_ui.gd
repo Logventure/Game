@@ -175,8 +175,10 @@ func redoControllsButtons():
 		elif action_event is InputEventJoypadButton:
 			if action_event.button_index == 0:
 				keyString = "Cross"
-			elif action_event.button_index == 1 or action_event.button_index == 2:
+			elif action_event.button_index == 1:
 				keyString = "Circle"
+			elif action_event.button_index == 2:
+				keyString = "Square"
 			elif action_event.button_index == 3:
 				keyString = "Triangle"
 			elif action_event.button_index == 7:
@@ -297,8 +299,10 @@ func _input(event):
 					buttonNode = "Panel/Controller/" + getActionButtonName(overridingAction)
 					if event.button_index == 0:
 						buttonText = "Cross"
-					elif event.button_index == 1 or event.button_index == 2:
+					elif event.button_index == 1:
 						buttonText = "Circle"
+					elif event.button_index == 2:
+						buttonText = "Square"
 					elif event.button_index == 3:
 						buttonText = "Triangle"
 					elif event.button_index == 7:

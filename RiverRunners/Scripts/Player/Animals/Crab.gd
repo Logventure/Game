@@ -146,5 +146,5 @@ func _on_animation_looped():
 		Events.emit_signal("can_jump", true)
 
 func onTreeDetected(area):
-	if z_index < 5:
+	if z_index < 4:
 		Events.emit_signal("collision_with_tree",area)

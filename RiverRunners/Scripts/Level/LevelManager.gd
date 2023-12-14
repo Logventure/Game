@@ -100,12 +100,20 @@ func onDie():
 func isPaused():
 	return current_state == States.PAUSED
 
+func onStartDialogue(file: String, wait_for_obstacle_end: bool):
+	if wait_for_obstacle_end:
+		Events.connect("obstacles_ended",startDialogue.bind(file))
+	else:
+		startDialogue(file)
+
 func startDialogue(file: String):
 	dialogue_box.setFile(file)
 	Events.emit_signal("on_dialog_start")
 	dialogue_box.enable()
 	map.disableObstacles()
 	current_state = States.DIALOG
+	if Events.is_connected("obstacles_ended",startDialogue):
+		Events.disconnect("obstacles_ended",startDialogue)
 
 func updateSpeed(speed):
 	playerTargetSpeed = speed

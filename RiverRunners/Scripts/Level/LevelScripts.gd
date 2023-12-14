@@ -28,10 +28,10 @@ var levels = {
 				"chat1"         :    {"Time offset" : 1,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/anotherdialogue.txt"},
 				"levelStart"    :    {"Time offset" : 0,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : true},
 				"speedUp1"      :    {"Time offset" : 5,    "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "Speed" : 3},
-				"speedUp2"      :    {"Time offset" : 20,   "Prerequesites" : ["speedUp1"],      "Type" : eventTypes.SETVALUES,   "Speed" : 4},
+				"speedUp2"      :    {"Time offset" : 20,   "Prerequesites" : ["speedUp1"],      "Type" : eventTypes.SETVALUES,   "Speed" : 3},
 				"disableObs"    :    {"Time offset" : 10,   "Prerequesites" : ["speedUp2"],      "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false},
 				"endCutscene"   :    {"Time offset" : 7,    "Prerequesites" : ["disableObs"],    "Type" : eventTypes.CUTSCENE,    "File": "whatever"},
-				"chat2"         :    {"Time offset" : 1,    "Prerequesites" : ["endCutscene"],   "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/enddialogue.txt"},
+				"chat2"         :    {"Time offset" : 1,    "Prerequesites" : ["endCutscene"],   "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/enddialogue.txt", "WaitForObstacleEnd": true},
 				"levelend"      :    {"Time offset" : 1,    "Prerequesites" : ["chat2"],   		 "Type" : eventTypes.ENDLEVEL},
 	},
 
@@ -107,7 +107,10 @@ func executeEvent(id : String, details: Dictionary):
 			eventTypes.DIALOGUE:
 				print("Dialogue event: ", id, details)
 				if details.has("File"):
-					level_manager.startDialogue(details["File"])
+					if details.has("WaitForObstacleEnd"):
+						level_manager.onStartDialogue(details["File"],details["WaitForObstacleEnd"])
+					else:
+						level_manager.onStartDialogue(details["File"],false)
 					level_events_status[id] = eventStatus.IN_PROGRESS
 				else:
 					level_events_status[id] = eventStatus.FINISHED

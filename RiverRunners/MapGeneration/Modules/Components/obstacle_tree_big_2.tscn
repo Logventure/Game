@@ -1,0 +1,158 @@
+[gd_scene load_steps=18 format=3 uid="uid://cmmnupvqpgvyw"]
+
+[ext_resource type="Script" path="res://Scripts/Obstacles/unbreakable_block.gd" id="1_yp1k3"]
+[ext_resource type="Texture2D" uid="uid://lhrqkfwuq15" path="res://Assets/Obstacles/rock_frames/rock3-1.png" id="2_lfkfx"]
+[ext_resource type="Texture2D" uid="uid://blgqk11mhrblv" path="res://Assets/Obstacles/rock_frames/rock6-1.png" id="2_snn5m"]
+[ext_resource type="Texture2D" uid="uid://cqfag1sj1gw0j" path="res://Assets/Obstacles/rock_frames/rock3-2.png" id="3_bt5px"]
+[ext_resource type="Texture2D" uid="uid://ounqfa4jnoio" path="res://Assets/Obstacles/rock_frames/rock6-2.png" id="3_f7fji"]
+[ext_resource type="Texture2D" uid="uid://doxchbw1c64mn" path="res://Assets/Obstacles/rock_frames/rock3-3.png" id="4_6fywv"]
+[ext_resource type="Texture2D" uid="uid://clqptdb6n3gdt" path="res://Assets/Obstacles/rock_frames/rock6-3.png" id="4_r0qkd"]
+[ext_resource type="Texture2D" uid="uid://bsqmcv3lnf05n" path="res://Assets/Obstacles/Fallen_Trees/twoPlusSpaces/tree9.png" id="8_h21o5"]
+[ext_resource type="Texture2D" uid="uid://bd0rriyxhxfx7" path="res://Assets/Obstacles/rock_frames/rock7-1.png" id="8_ybk8f"]
+[ext_resource type="Texture2D" uid="uid://c6pe78806rg61" path="res://Assets/Obstacles/rock_frames/rock7-2.png" id="9_fj5kn"]
+[ext_resource type="Texture2D" uid="uid://ds256m6l1n6ty" path="res://Assets/grid.png" id="9_gd4k5"]
+[ext_resource type="Texture2D" uid="uid://vrflid2msj5j" path="res://Assets/Obstacles/rock_frames/rock7-3.png" id="10_lsgi6"]
+[ext_resource type="Script" path="res://Scripts/EditorOnlyNode.gd" id="10_t7pke"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e0u83"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lfkfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bt5px")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6fywv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1cnat"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_snn5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_f7fji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r0qkd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4olsj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ybk8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fj5kn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lsgi6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xqpqx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_h21o5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="Rock" type="Node2D"]
+
+[node name="ExtraRock" type="Area2D" parent="."]
+z_index = -5
+position = Vector2(-21, -236)
+script = ExtResource("1_yp1k3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ExtraRock"]
+texture_filter = 1
+position = Vector2(21, -3)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_e0u83")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ExtraRock"]
+visible = false
+scale = Vector2(0.753755, 0.778515)
+polygon = PackedVector2Array(22.5537, 88.6303, 156.55, 25.6899, 22.5537, -37.2504, -102.155, 25.6899)
+
+[node name="RightRock" type="Area2D" parent="."]
+z_index = -5
+position = Vector2(-8, -146)
+script = ExtResource("1_yp1k3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RightRock"]
+texture_filter = 1
+position = Vector2(21, -3)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_1cnat")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RightRock"]
+visible = false
+scale = Vector2(0.753755, 0.778515)
+polygon = PackedVector2Array(22.5537, 88.6303, 151.243, 11.5605, 5.30676, -46.2419, -100.829, 32.1124)
+
+[node name="LeftRock" type="Area2D" parent="."]
+z_index = 5
+position = Vector2(500, -77)
+script = ExtResource("1_yp1k3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="LeftRock"]
+texture_filter = 1
+position = Vector2(12, -3)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_4olsj")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LeftRock"]
+visible = false
+scale = Vector2(0.753755, 0.778515)
+polygon = PackedVector2Array(199.004, 83.4923, 245.438, 35.9659, -152.569, -12.845, -232.171, 80.9233)
+
+[node name="Tree" type="Area2D" parent="."]
+z_index = 5
+position = Vector2(208, -187)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_yp1k3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tree"]
+texture_filter = 1
+position = Vector2(-3, 10)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_xqpqx")
+frame_progress = 0.293055
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tree"]
+visible = false
+scale = Vector2(0.753755, 0.778515)
+polygon = PackedVector2Array(254.725, 187.537, 287.892, 137.441, -281.259, 52.6644, -317.079, 87.3458)
+
+[node name="GridHelper(hide)" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(769, -477)
+texture = ExtResource("9_gd4k5")
+script = ExtResource("10_t7pke")

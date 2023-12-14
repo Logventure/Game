@@ -1,27 +1,27 @@
-[gd_scene load_steps=14 format=3 uid="uid://xw7jkyxxqwbo"]
+[gd_scene load_steps=14 format=3 uid="uid://byvcuji0tn03h"]
 
-[ext_resource type="Script" path="res://Scripts/Obstacles/unbreakable_block.gd" id="1_edose"]
-[ext_resource type="Texture2D" uid="uid://b260w8n78y2gu" path="res://Assets/Obstacles/rock_frames/rock5-1.png" id="2_ksdjf"]
-[ext_resource type="Texture2D" uid="uid://dawru7bx25vje" path="res://Assets/Obstacles/rock_frames/rock5-2.png" id="3_jler6"]
-[ext_resource type="Texture2D" uid="uid://c0pahml8m584c" path="res://Assets/Obstacles/rock_frames/rock5-3.png" id="4_ru1st"]
-[ext_resource type="Texture2D" uid="uid://bd0rriyxhxfx7" path="res://Assets/Obstacles/rock_frames/rock7-1.png" id="5_t7v88"]
-[ext_resource type="Texture2D" uid="uid://c6pe78806rg61" path="res://Assets/Obstacles/rock_frames/rock7-2.png" id="6_lx7jf"]
-[ext_resource type="Texture2D" uid="uid://vrflid2msj5j" path="res://Assets/Obstacles/rock_frames/rock7-3.png" id="7_jjnvl"]
-[ext_resource type="Texture2D" uid="uid://sbvc8ci1s40j" path="res://Assets/Obstacles/Fallen_Trees/oneSpace/tree2.png" id="8_32ew6"]
-[ext_resource type="Texture2D" uid="uid://ds256m6l1n6ty" path="res://Assets/grid.png" id="9_qx7dr"]
-[ext_resource type="Script" path="res://Scripts/EditorOnlyNode.gd" id="10_h1081"]
+[ext_resource type="Script" path="res://Scripts/Obstacles/unbreakable_block.gd" id="1_81i82"]
+[ext_resource type="Texture2D" uid="uid://dongkl8fgfijm" path="res://Assets/Obstacles/rock_frames/rock1-1.png" id="2_6hqss"]
+[ext_resource type="Texture2D" uid="uid://b1mg0gupkne20" path="res://Assets/Obstacles/rock_frames/rock1-2.png" id="3_bbncf"]
+[ext_resource type="Texture2D" uid="uid://co0oinionrgea" path="res://Assets/Obstacles/rock_frames/rock1-3.png" id="4_na1lq"]
+[ext_resource type="Texture2D" uid="uid://bd0rriyxhxfx7" path="res://Assets/Obstacles/rock_frames/rock7-1.png" id="5_eyoqa"]
+[ext_resource type="Texture2D" uid="uid://c6pe78806rg61" path="res://Assets/Obstacles/rock_frames/rock7-2.png" id="6_rprva"]
+[ext_resource type="Texture2D" uid="uid://vrflid2msj5j" path="res://Assets/Obstacles/rock_frames/rock7-3.png" id="7_fkmnn"]
+[ext_resource type="Texture2D" uid="uid://b80xv3elnyc8e" path="res://Assets/Obstacles/Fallen_Trees/oneSpace/tree6.png" id="8_yrxrp"]
+[ext_resource type="Texture2D" uid="uid://ds256m6l1n6ty" path="res://Assets/grid.png" id="9_ufbvm"]
+[ext_resource type="Script" path="res://Scripts/EditorOnlyNode.gd" id="10_6nah5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1cnat"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ksdjf")
+"texture": ExtResource("2_6hqss")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_jler6")
+"texture": ExtResource("3_bbncf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_ru1st")
+"texture": ExtResource("4_na1lq")
 }],
 "loop": true,
 "name": &"idle",
@@ -32,13 +32,13 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_t7v88")
+"texture": ExtResource("5_eyoqa")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_lx7jf")
+"texture": ExtResource("6_rprva")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_jjnvl")
+"texture": ExtResource("7_fkmnn")
 }],
 "loop": true,
 "name": &"idle",
@@ -49,7 +49,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_32ew6")
+"texture": ExtResource("8_yrxrp")
 }],
 "loop": true,
 "name": &"default",
@@ -60,8 +60,8 @@ animations = [{
 
 [node name="RightRock" type="Area2D" parent="."]
 z_index = 5
-position = Vector2(234, -52)
-script = ExtResource("1_edose")
+position = Vector2(266, -64)
+script = ExtResource("1_81i82")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RightRock"]
 texture_filter = 1
@@ -79,7 +79,7 @@ polygon = PackedVector2Array(-19.9004, 82.2078, 132.669, -1.2845, 30.5139, -35.9
 [node name="LeftRock" type="Area2D" parent="."]
 z_index = -5
 position = Vector2(-130, -139)
-script = ExtResource("1_edose")
+script = ExtResource("1_81i82")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="LeftRock"]
 texture_filter = 1
@@ -99,7 +99,7 @@ z_index = 5
 position = Vector2(114, -161)
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("1_edose")
+script = ExtResource("1_81i82")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tree"]
 texture_filter = 1
@@ -115,5 +115,5 @@ polygon = PackedVector2Array(135.322, 175.976, 214.924, 124.596, -119.402, 44.95
 [node name="GridHelper(hide)" type="Sprite2D" parent="."]
 z_index = -10
 position = Vector2(769, -477)
-texture = ExtResource("9_qx7dr")
-script = ExtResource("10_h1081")
+texture = ExtResource("9_ufbvm")
+script = ExtResource("10_6nah5")

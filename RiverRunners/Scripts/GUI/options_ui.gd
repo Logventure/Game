@@ -245,8 +245,8 @@ func _input(event):
 	var buttonNode = ""
 	var buttonText = ""
 	if isInInputOverrideMode:
-		if event is InputEventKey:
-			if event.pressed && !overridingAction.contains("controller"):	
+		if event is InputEventKey: # maybe nao permitir certas teclas?
+			if event.pressed and !overridingAction.contains("controller"):
 				#check if it already exists on another action
 				for action in keyboardActions:
 					if InputMap.action_has_event(action, event):
@@ -268,9 +268,8 @@ func _input(event):
 			else:
 				$Panel2.visible = false
 		elif event is InputEventMouseButton:
-			if event.pressed && !overridingAction.contains("controller"):
+			if event.pressed and !overridingAction.contains("controller"):
 				for action in keyboardActions:
-					print(InputMap.action_get_events(action))
 					if InputMap.action_has_event(action, event):
 						has_action = true
 						break
@@ -289,7 +288,7 @@ func _input(event):
 			else:
 				$Panel2.visible = false
 		elif event is InputEventJoypadButton:
-			if event.pressed && overridingAction.contains("controller"):
+			if (event.button_index >= 0 and event.button_index <= 3 and overridingAction.contains("controller")) or (event.button_index >= 7 and event.button_index <= 10 and overridingAction.contains("controller")):
 				for action in controllerActions:
 					if InputMap.action_has_event(action, event):
 						has_action = true
@@ -297,28 +296,7 @@ func _input(event):
 				if !has_action:
 					validInput = true
 					buttonNode = "Panel/Controller/" + getActionButtonName(overridingAction)
-					if event.axis == 4:
-						buttonText = "L2"
-					elif event.axis == 5:
-						buttonText = "R2"
-					for oldEvent in InputMap.action_get_events(overridingAction):
-						if oldEvent is InputEventJoypadButton or InputEventJoypadMotion:
-							InputMap.action_erase_event(overridingAction, oldEvent)
-							break
-					InputMap.action_add_event(overridingAction, event)
-				else:
-					$Panel3.visible = true
-			else:
-				$Panel2.visible = false
-		elif event is InputEventJoypadMotion:
-			if event.pressed && overridingAction.contains("controller"):
-				for action in controllerActions:
-					if InputMap.action_has_event(action, event):
-						has_action = true
-						break
-				if !has_action:
-					validInput = true
-					buttonNode = "Panel/Controller/" + getActionButtonName(overridingAction)
+					print(buttonNode)
 					if event.button_index == 0:
 						buttonText = "Cross"
 					elif event.button_index == 1 or event.button_index == 2:
@@ -333,6 +311,29 @@ func _input(event):
 						buttonText = "L1"
 					elif event.button_index == 10:
 						buttonText = "R1"
+					for oldEvent in InputMap.action_get_events(overridingAction):
+						if oldEvent is InputEventJoypadButton or InputEventJoypadMotion:
+							InputMap.action_erase_event(overridingAction, oldEvent)
+							break
+					InputMap.action_add_event(overridingAction, event)
+				else:
+					$Panel3.visible = true
+			else:
+				$Panel2.visible = false
+		elif event is InputEventJoypadMotion:
+			if (event.axis == 4 and  overridingAction.contains("controller")) or (event.axis == 5 and overridingAction.contains("controller")):
+				print(event)
+				for action in controllerActions:
+					if InputMap.action_has_event(action, event):
+						has_action = true
+						break
+				if !has_action:
+					validInput = true
+					buttonNode = "Panel/Controller/" + getActionButtonName(overridingAction)
+					if event.axis == 4:
+						buttonText = "L2"
+					elif event.axis == 5:
+						buttonText = "R2"
 					for oldEvent in InputMap.action_get_events(overridingAction):
 						if oldEvent is InputEventJoypadMotion or InputEventJoypadButton:
 							InputMap.action_erase_event(overridingAction, oldEvent)

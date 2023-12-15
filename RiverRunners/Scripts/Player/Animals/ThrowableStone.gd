@@ -28,11 +28,13 @@ enum States {IDLE, THROWING, PAUSED}
 var current_state = States.IDLE
 var previous_state = States.IDLE
 
+var throwSFX
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	logNode = get_node("../Log")
 	collider = get_node("StoneCollider")
+	throwSFX = get_node("StoneThrowSFX")
 	collider.monitoring = false
 	collider.monitorable = false
 	Events.connect("otter_position", throw)
@@ -61,6 +63,7 @@ func throw(otter_position):
 		pos_original.y += throwoffset
 		current_state = States.THROWING
 		throwTime = 0
+		throwSFX.play()
 
 func handle_throw(delta):
 	throwTime += delta*1.7

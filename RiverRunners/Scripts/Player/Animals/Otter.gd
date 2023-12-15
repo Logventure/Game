@@ -49,6 +49,8 @@ func jump():
 		loseDamage = true
 
 func handle_jump(delta): 
+	if time <= 0 and time + delta >= 0:
+		Utils.playSoundFile(self,"res://Assets/Audio/SFX/jump4.wav","SFX",-12)
 	time += delta
 	if position.y <= pos && time >= 0:
 		position.y = pos - (speed + gravity * time * -1) * time
@@ -58,11 +60,14 @@ func handle_jump(delta):
 		position.y = pos
 		current_state = States.IDLE
 		Events.emit_signal("is_on_air", false)
-		if not logNode.position.x + basePosition.x == position.x && loseDamage:
+		if not logNode.position.x + basePosition.x == position.x:
+			if loseDamage:
+				Events.emit_signal("damage_taken", 1)
 			print("Rip crabby")
 			Events.emit_signal("lose_damage", false)
-			Events.emit_signal("damage_taken", 1)
 			current_state = States.DROWNING
+			Utils.playSoundFile(self,"res://Assets/Audio/SFX/splash1.wav","SFX",-12)
+
 		
 
 func can_jump(value: bool):

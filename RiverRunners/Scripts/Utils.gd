@@ -15,3 +15,16 @@ func arrayHasItemsInCommon(array1: Array, array2: Array):
 		if array2.has(item):
 			count+=1
 	return count
+
+func playSoundFile(parent,filepath: String,bus: String,volume = 0,positional = false):
+	var audiostream = AudioStreamPlayer.new()
+	if positional:
+		audiostream = AudioStreamPlayer2D.new()
+	var stream = AudioStreamWAV.new()
+	stream = load(filepath)
+	audiostream.stream = stream
+	audiostream.bus = bus
+	audiostream.volume_db = volume
+	parent.add_child(audiostream)
+	audiostream.play()
+	print("Play sound, ", audiostream)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dej1mjtjgtaao"]
+[gd_scene load_steps=34 format=3 uid="uid://dej1mjtjgtaao"]
 
 [ext_resource type="Script" path="res://Scripts/Player/LogMovements.gd" id="1_8lkio"]
 [ext_resource type="Script" path="res://Scripts/Player/CollisionHandler.gd" id="2_cobcv"]
@@ -17,7 +17,9 @@
 [ext_resource type="Script" path="res://Scripts/Player/Animals/Otter.gd" id="9_vpltj"]
 [ext_resource type="Texture2D" uid="uid://481njn2w6q86" path="res://Assets/Characters/crab/Crab-16-Block.png" id="10_j1dfe"]
 [ext_resource type="Texture2D" uid="uid://beeoqag4v0p23" path="res://Assets/Characters/crab/Crab-16.png" id="10_n0xnj"]
+[ext_resource type="AudioStream" uid="uid://djnt26apoo0qc" path="res://Assets/Audio/SFX/takedamage.wav" id="10_yh0fn"]
 [ext_resource type="Texture2D" uid="uid://dfkn7f2wsawhl" path="res://Assets/Characters/crab/Crab-16-Blocked.png" id="11_6rd0s"]
+[ext_resource type="AudioStream" uid="uid://sqhqotk8ktbh" path="res://Assets/Audio/SFX/throw.wav" id="11_wwb3s"]
 [ext_resource type="Texture2D" uid="uid://bvo7jugmoprf7" path="res://Assets/Characters/crab/Crab-16-Recover.png" id="12_5pyfs"]
 [ext_resource type="Texture2D" uid="uid://bjgenh0ak0r2" path="res://Assets/Characters/otter/Otter-16.png" id="14_y5sx8"]
 [ext_resource type="Texture2D" uid="uid://ds256m6l1n6ty" path="res://Assets/grid.png" id="15_m36cb"]
@@ -184,7 +186,7 @@ frame = 1
 frame_progress = 0.276349
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Log"]
-polygon = PackedVector2Array(-165, 97, -202, 104, -215, 76, 55, -60, 116, -42)
+polygon = PackedVector2Array(-188, 108, -227, 118, -223, 81, 55, -60, 116, -42)
 
 [node name="WaterParticles" type="CPUParticles2D" parent="Log"]
 z_index = -1
@@ -206,14 +208,24 @@ scale_amount_curve = SubResource("Curve_km1tf")
 color = Color(0.71875, 0.800781, 0.816406, 1)
 script = ExtResource("9_pk7q2")
 
+[node name="DamageSFX" type="AudioStreamPlayer" parent="Log"]
+stream = ExtResource("10_yh0fn")
+bus = &"SFX"
+
 [node name="ThrowableStone" type="Node2D" parent="."]
 script = ExtResource("6_8juii")
 
 [node name="StoneCollider" type="Area2D" parent="ThrowableStone"]
 monitorable = false
 
+[node name="StoneCollisionSFX" type="AudioStreamPlayer" parent="ThrowableStone/StoneCollider"]
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ThrowableStone/StoneCollider"]
 polygon = PackedVector2Array(-11, -18, 35, 3, 1, 21, -44, -1)
+
+[node name="StoneThrowSFX" type="AudioStreamPlayer" parent="ThrowableStone"]
+stream = ExtResource("11_wwb3s")
+bus = &"SFX"
 
 [node name="Crab" type="AnimatedSprite2D" parent="."]
 position = Vector2(70, -90)

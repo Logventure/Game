@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://doyi7e0hxjsg3"]
+[gd_scene load_steps=5 format=3 uid="uid://doyi7e0hxjsg3"]
 
 [ext_resource type="Script" path="res://Scripts/Game/GameManager.gd" id="1_4pynx"]
 [ext_resource type="PackedScene" uid="uid://h1l00yxgtbf0" path="res://Levels/LevelTemplate.tscn" id="1_l67gq"]
+[ext_resource type="AudioStream" uid="uid://c5sdfywlmwqf8" path="res://Assets/Audio/Ambience/Forest_Ambience.wav" id="3_yqvca"]
+[ext_resource type="AudioStream" uid="uid://cehodwef521mp" path="res://Assets/Audio/Ambience/River_Flow.wav" id="4_jcmej"]
 
 [node name="GameManager" type="Node2D"]
 script = ExtResource("1_4pynx")
@@ -11,3 +13,15 @@ script = ExtResource("1_4pynx")
 [node name="LevelManager" parent="Viewer" instance=ExtResource("1_l67gq")]
 
 [node name="Audio" type="Node2D" parent="."]
+
+[node name="ForestAmbience" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("3_yqvca")
+volume_db = -12.0
+autoplay = true
+bus = &"Ambience"
+
+[node name="RiverAmbience" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("4_jcmej")
+volume_db = -18.0
+autoplay = true
+bus = &"Ambience"

@@ -339,6 +339,12 @@ scale = Vector2(8, 8)
 
 [node name="YesButton" type="TextureButton" parent="Panel/HBoxContainer"]
 layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath("../NoButton")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath("../NoButton")
+focus_previous = NodePath("../NoButton")
 texture_normal = ExtResource("34_ej826")
 texture_pressed = ExtResource("35_y7smh")
 texture_hover = ExtResource("36_sjqhm")
@@ -346,6 +352,12 @@ texture_focused = ExtResource("36_sjqhm")
 
 [node name="NoButton" type="TextureButton" parent="Panel/HBoxContainer"]
 layout_mode = 2
+focus_neighbor_left = NodePath("../YesButton")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath("../YesButton")
+focus_previous = NodePath("../YesButton")
 texture_normal = ExtResource("31_mbblm")
 texture_pressed = ExtResource("32_khr4f")
 texture_hover = ExtResource("33_ptfo1")

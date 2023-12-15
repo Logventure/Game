@@ -18,7 +18,7 @@ func crab_collided():
 	#get_node("../").queue_free()
 
 func stone_collided():
-	pass
+	Utils.playSoundFile(self,"res://Assets/Audio/SFX/stoneHit.wav","SFX",0,true)
 
 func explode():
 	var current_texture = $AnimatedSprite2D.get_sprite_frames().get_frame_texture($AnimatedSprite2D.animation,$AnimatedSprite2D.frame)
@@ -33,4 +33,3 @@ func explode():
 	$CollisionPolygon2D.queue_free()
 	add_child(explosion_polygon)
 	explosion_polygon.explode()
-

@@ -1,4 +1,4 @@
-extends Sprite2D
+extends AnimatedSprite2D
 
 var animal
 var stone = load("res://GameComponents/Player/stone.tscn")

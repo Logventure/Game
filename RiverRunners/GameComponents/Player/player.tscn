@@ -1,9 +1,8 @@
-[gd_scene load_steps=34 format=3 uid="uid://dej1mjtjgtaao"]
+[gd_scene load_steps=51 format=3 uid="uid://dej1mjtjgtaao"]
 
 [ext_resource type="Script" path="res://Scripts/Player/LogMovements.gd" id="1_8lkio"]
 [ext_resource type="Script" path="res://Scripts/Player/CollisionHandler.gd" id="2_cobcv"]
 [ext_resource type="Texture2D" uid="uid://cdhappsg7ns70" path="res://Assets/Characters/salmon/Salmon-16.png" id="2_toqo8"]
-[ext_resource type="Texture2D" uid="uid://b6jlwyodbq8e8" path="res://Assets/FrogBack.png" id="3_7j7sv"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/Salmon.gd" id="3_cks82"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/Beaver.gd" id="5_supvc"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/ThrowableStone.gd" id="6_8juii"]
@@ -21,14 +20,30 @@
 [ext_resource type="Texture2D" uid="uid://dfkn7f2wsawhl" path="res://Assets/Characters/crab/Crab-16-Blocked.png" id="11_6rd0s"]
 [ext_resource type="AudioStream" uid="uid://sqhqotk8ktbh" path="res://Assets/Audio/SFX/throw.wav" id="11_wwb3s"]
 [ext_resource type="Texture2D" uid="uid://bvo7jugmoprf7" path="res://Assets/Characters/crab/Crab-16-Recover.png" id="12_5pyfs"]
-[ext_resource type="Texture2D" uid="uid://bjgenh0ak0r2" path="res://Assets/Characters/otter/Otter-16.png" id="14_y5sx8"]
 [ext_resource type="Texture2D" uid="uid://ds256m6l1n6ty" path="res://Assets/grid.png" id="15_m36cb"]
 [ext_resource type="Script" path="res://Scripts/Player/FreeLaneDetector.gd" id="15_u2cpq"]
 [ext_resource type="Script" path="res://Scripts/EditorOnlyNode.gd" id="16_qhedj"]
+[ext_resource type="Texture2D" uid="uid://bc14lf4ihduww" path="res://Assets/Characters/crab/Crab-idle1.png" id="17_vym65"]
+[ext_resource type="Texture2D" uid="uid://bak08iibuvfc8" path="res://Assets/Characters/crab/Crab-idle2.png" id="18_o6otv"]
+[ext_resource type="Texture2D" uid="uid://iwyy10u1j25m" path="res://Assets/Characters/crab/Crab-idle3.png" id="19_ej785"]
+[ext_resource type="Texture2D" uid="uid://xm48ir3sxbso" path="res://Assets/Characters/crab/Crab-idle4.png" id="20_atfqn"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/AnimalTreeCollider.gd" id="21_r641f"]
-[ext_resource type="Texture2D" uid="uid://ci2o2lbjgnot0" path="res://Assets/Characters/beaver/Justin-Beaver-16-Water1.png" id="25_iiqjg"]
-[ext_resource type="Texture2D" uid="uid://c7m0rawpy2dc0" path="res://Assets/Characters/beaver/Justin-Beaver-16-Water2.png" id="26_3astg"]
-[ext_resource type="Texture2D" uid="uid://caf0nlkujk3sh" path="res://Assets/Characters/beaver/Justin-Beaver-16-Water3.png" id="27_tpmef"]
+[ext_resource type="Texture2D" uid="uid://bfpvyvatpw46y" path="res://Assets/Characters/otter/Otter-idle1.png" id="24_4qxpl"]
+[ext_resource type="Texture2D" uid="uid://bnxbqhwccnmyk" path="res://Assets/Characters/otter/Otter-idle2.png" id="25_2wrn7"]
+[ext_resource type="Texture2D" uid="uid://chfplw8p2e1pv" path="res://Assets/Characters/otter/Otter-idle3.png" id="26_v7l0p"]
+[ext_resource type="Texture2D" uid="uid://bqfsc5akf6smu" path="res://Assets/Characters/otter/Otter-idle4.png" id="27_vioc1"]
+[ext_resource type="Texture2D" uid="uid://c5v1sttkinggl" path="res://Assets/Characters/otter/Otter-idleWrock1.png" id="28_1hhm4"]
+[ext_resource type="Texture2D" uid="uid://bmsh7bohg53ux" path="res://Assets/Characters/otter/Otter-idleWrock2.png" id="29_q3v55"]
+[ext_resource type="Texture2D" uid="uid://d00hqgk4sny58" path="res://Assets/Characters/otter/Otter-idleWrock3.png" id="30_rtexg"]
+[ext_resource type="Texture2D" uid="uid://bcjf08gd4sibf" path="res://Assets/Characters/otter/Otter-idleWrock4.png" id="31_roa1a"]
+[ext_resource type="Texture2D" uid="uid://bd2t8vc7yq0sx" path="res://Assets/Characters/frog/Frog-idle1.png" id="33_uja10"]
+[ext_resource type="Texture2D" uid="uid://d3n0k1indcyby" path="res://Assets/Characters/frog/Frog-idle2.png" id="34_my5i5"]
+[ext_resource type="Texture2D" uid="uid://ds8qg4kadht00" path="res://Assets/Characters/frog/Frog-idle3.png" id="35_b0lvv"]
+[ext_resource type="Texture2D" uid="uid://5j6chl5sqgb2" path="res://Assets/Characters/frog/Frog-idle4.png" id="36_jfb8m"]
+[ext_resource type="Texture2D" uid="uid://b0wtngg4wd86k" path="res://Assets/Characters/beaver/Justin-Beaver-idle1.png" id="40_f574g"]
+[ext_resource type="Texture2D" uid="uid://b5pm8g5plwt0g" path="res://Assets/Characters/beaver/Justin-Beaver-idle2.png" id="41_taxjl"]
+[ext_resource type="Texture2D" uid="uid://bkxgfu8oxro4j" path="res://Assets/Characters/beaver/Justin-Beaver-idle3.png" id="42_5rfwx"]
+[ext_resource type="Texture2D" uid="uid://cbonddx2xiqr0" path="res://Assets/Characters/beaver/Justin-Beaver-idle4.png" id="43_rfp8y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iirla"]
 animations = [{
@@ -57,7 +72,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("10_n0xnj")
 }, {
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("10_j1dfe")
 }],
 "loop": true,
@@ -76,8 +91,74 @@ animations = [{
 "speed": 7.0
 }, {
 "frames": [{
+"duration": 3.0,
+"texture": ExtResource("17_vym65")
+}, {
 "duration": 1.0,
-"texture": ExtResource("10_n0xnj")
+"texture": ExtResource("18_o6otv")
+}, {
+"duration": 2.0,
+"texture": ExtResource("19_ej785")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_atfqn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_undwl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_4qxpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_2wrn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_v7l0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_vioc1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_1hhm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_q3v55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_rtexg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_roa1a")
+}],
+"loop": true,
+"name": &"idle_rocks",
+"speed": 7.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xte55"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_uja10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_my5i5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_b0lvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_jfb8m")
 }],
 "loop": true,
 "name": &"idle",
@@ -88,13 +169,16 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("25_iiqjg")
+"texture": ExtResource("40_f574g")
 }, {
 "duration": 1.0,
-"texture": ExtResource("26_3astg")
+"texture": ExtResource("41_taxjl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("27_tpmef")
+"texture": ExtResource("42_5rfwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_rfp8y")
 }],
 "loop": true,
 "name": &"idle",
@@ -113,6 +197,7 @@ texture = ExtResource("2_toqo8")
 script = ExtResource("3_cks82")
 
 [node name="Log" type="Area2D" parent="."]
+texture_filter = 1
 script = ExtResource("2_cobcv")
 
 [node name="FreeLaneDetector" type="Node2D" parent="Log"]
@@ -228,9 +313,13 @@ stream = ExtResource("11_wwb3s")
 bus = &"SFX"
 
 [node name="Crab" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(70, -90)
 sprite_frames = SubResource("SpriteFrames_bggev")
 animation = &"idle"
+autoplay = "idle"
+frame = 2
+frame_progress = 0.88517
 script = ExtResource("8_gjrmx")
 
 [node name="CrabCollider" type="Area2D" parent="Crab"]
@@ -254,9 +343,12 @@ position = Vector2(114, -33)
 polygon = PackedVector2Array(18, -10, -45, -36, -7, -48, 25, -35)
 disabled = true
 
-[node name="Otter" type="Sprite2D" parent="."]
+[node name="Otter" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(-14, -65)
-texture = ExtResource("14_y5sx8")
+sprite_frames = SubResource("SpriteFrames_undwl")
+animation = &"idle"
+autoplay = "idle"
 script = ExtResource("9_vpltj")
 
 [node name="OtterCollider" type="Area2D" parent="Otter"]
@@ -271,10 +363,13 @@ script = ExtResource("21_r641f")
 position = Vector2(105.244, -32.7111)
 polygon = PackedVector2Array(-49.7778, 45.5111, 4.26666, 62.5778, 46.9333, 44.0889, -5.68889, 25.6)
 
-[node name="Frog" type="Sprite2D" parent="."]
+[node name="Frog" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(-82, -26)
 scale = Vector2(0.703125, 0.703125)
-texture = ExtResource("3_7j7sv")
+sprite_frames = SubResource("SpriteFrames_xte55")
+animation = &"idle"
+autoplay = "idle"
 script = ExtResource("7_pt0qm")
 
 [node name="FrogCollider" type="Area2D" parent="Frog"]
@@ -293,9 +388,11 @@ texture = ExtResource("15_m36cb")
 script = ExtResource("16_qhedj")
 
 [node name="Beaver" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(-177, 72)
 sprite_frames = SubResource("SpriteFrames_j8obe")
 animation = &"idle"
+autoplay = "idle"
 frame_progress = 0.806331
 script = ExtResource("5_supvc")
 

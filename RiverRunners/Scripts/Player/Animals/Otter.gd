@@ -94,13 +94,13 @@ func _process(delta):
 		States.IDLE:
 			handle_position()
 			if len(commands) > 0:
-				if commands.find("jump") != -1 and get_node("../").isCharacterAvailable("frog"):
+				if commands.find("jump") != -1 and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
 					jump()
 				if commands.find("throw") != -1 and get_node("../").isCharacterAvailable("otter"):
 					throw()
 			else:
 				var last_input = InputHandler.getLastInput()
-				if last_input == "jump" and get_node("../").isCharacterAvailable("frog"):
+				if last_input == "jump" and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
 					jump()
 					InputHandler.clearLastInput()
 				elif last_input == "throw" and get_node("../").isCharacterAvailable("otter"):

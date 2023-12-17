@@ -152,7 +152,14 @@ func getControllerCommands():
 		commands.append("shield")
 
 	if commands != []:
-		clearLastInput()
+		if commands.find("jump") > commands.find("throw"):
+			last_input = "jump"
+			last_input_age = 0.0
+		elif commands.find("jump") < commands.find("throw"):
+			last_input = "throw"
+			last_input_age = 0.0
+		else:
+			clearLastInput()
 		return commands
 	else:
 		return []

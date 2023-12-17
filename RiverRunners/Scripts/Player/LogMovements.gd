@@ -168,9 +168,11 @@ func _process(delta):
 				elif commands.find("move_right") != -1 and isCharacterAvailable("beaver"):
 					moveRight()
 				elif commands.find("dash_left") != -1 and isCharacterAvailable("salmon"):
-					dashLeft()
+					#dashLeft()
+					pass
 				elif commands.find("dash_right") != -1 and isCharacterAvailable("salmon"):
-					dashRight()
+					#dashRight()
+					pass
 			else:
 				var last_input = InputHandler.getLastInput()
 				if last_input == "move_left" and isCharacterAvailable("beaver"):
@@ -180,11 +182,13 @@ func _process(delta):
 					moveRight()
 					InputHandler.clearLastInput()
 				if last_input == "dash_left" and isCharacterAvailable("salmon"):
-					dashLeft()
-					InputHandler.clearLastInput()
+					#dashLeft()
+					#InputHandler.clearLastInput()
+					pass
 				if last_input == "dash_right" and isCharacterAvailable("salmon"):
-					dashRight()
-					InputHandler.clearLastInput()
+					#dashRight()
+					#InputHandler.clearLastInput()
+					pass
 
 
 			move(delta)
@@ -269,4 +273,5 @@ func isCharacterAvailable(character):
 	if character_availability.has(character):
 		return character_availability[character]
 
-
+func isMoving():
+	return current_state == States.MOVING

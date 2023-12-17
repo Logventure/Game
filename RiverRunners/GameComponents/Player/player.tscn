@@ -1,13 +1,19 @@
-[gd_scene load_steps=51 format=3 uid="uid://dej1mjtjgtaao"]
+[gd_scene load_steps=82 format=3 uid="uid://dej1mjtjgtaao"]
 
 [ext_resource type="Script" path="res://Scripts/Player/LogMovements.gd" id="1_8lkio"]
+[ext_resource type="Texture2D" uid="uid://c041f6oxnqu5j" path="res://Assets/Characters/salmon/Dive/Salmon-Dive1.png" id="2_67xvo"]
 [ext_resource type="Script" path="res://Scripts/Player/CollisionHandler.gd" id="2_cobcv"]
-[ext_resource type="Texture2D" uid="uid://cdhappsg7ns70" path="res://Assets/Characters/salmon/Salmon-16.png" id="2_toqo8"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/Salmon.gd" id="3_cks82"]
+[ext_resource type="Texture2D" uid="uid://beima55vfu6g1" path="res://Assets/Characters/salmon/Dive/Salmon-Dive2.png" id="3_tijgr"]
+[ext_resource type="Texture2D" uid="uid://65nys6kvvugp" path="res://Assets/Characters/salmon/Dive/Salmon-Dive3.png" id="4_w8o5o"]
+[ext_resource type="Texture2D" uid="uid://de7c4sdmwifyv" path="res://Assets/Characters/salmon/Dive/Salmon-Dive4.png" id="5_pe40l"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/Beaver.gd" id="5_supvc"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/ThrowableStone.gd" id="6_8juii"]
+[ext_resource type="Texture2D" uid="uid://cv4d24ki1rmqu" path="res://Assets/Characters/salmon/Dive/Salmon-Dive5.png" id="6_afssf"]
+[ext_resource type="Texture2D" uid="uid://ruxac78hamll" path="res://Assets/Characters/salmon/Dive/Salmon-Dive6.png" id="7_2xvik"]
 [ext_resource type="Texture2D" uid="uid://bv4lhaqlmsrjn" path="res://Assets/Characters/log/Log1.png" id="7_7qrfn"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/Frog.gd" id="7_pt0qm"]
+[ext_resource type="Texture2D" uid="uid://5qixmyu8yog2" path="res://Assets/Characters/salmon/Dive/Salmon-Dive7.png" id="8_6ugt4"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/Crab.gd" id="8_gjrmx"]
 [ext_resource type="Texture2D" uid="uid://cqlcm3vy8pidw" path="res://Assets/Characters/log/Log2.png" id="8_h1anq"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/CrabCollision.gd" id="8_kqh2a"]
@@ -25,25 +31,170 @@
 [ext_resource type="Script" path="res://Scripts/EditorOnlyNode.gd" id="16_qhedj"]
 [ext_resource type="Texture2D" uid="uid://bc14lf4ihduww" path="res://Assets/Characters/crab/Crab-idle1.png" id="17_vym65"]
 [ext_resource type="Texture2D" uid="uid://bak08iibuvfc8" path="res://Assets/Characters/crab/Crab-idle2.png" id="18_o6otv"]
+[ext_resource type="Texture2D" uid="uid://jpoqjxkxmn7c" path="res://Assets/Characters/salmon/Push-Left/Salmon-Push-Left1.png" id="19_78j6b"]
 [ext_resource type="Texture2D" uid="uid://iwyy10u1j25m" path="res://Assets/Characters/crab/Crab-idle3.png" id="19_ej785"]
+[ext_resource type="Texture2D" uid="uid://c0b3jk0ik0fx3" path="res://Assets/Characters/salmon/Push-Left/Salmon-Push-Left2.png" id="20_7kpa3"]
 [ext_resource type="Texture2D" uid="uid://xm48ir3sxbso" path="res://Assets/Characters/crab/Crab-idle4.png" id="20_atfqn"]
+[ext_resource type="Texture2D" uid="uid://c4orkvhpsm2c3" path="res://Assets/Characters/salmon/Push-Left/Salmon-Push-Left3.png" id="21_7grte"]
 [ext_resource type="Script" path="res://Scripts/Player/Animals/AnimalTreeCollider.gd" id="21_r641f"]
+[ext_resource type="Texture2D" uid="uid://bxtf36ljyoyin" path="res://Assets/Characters/salmon/Push-Left/Salmon-Push-Left4.png" id="22_db04y"]
+[ext_resource type="Texture2D" uid="uid://33twwvafmv21" path="res://Assets/Characters/salmon/Surface/Salmon-Surface1.png" id="23_eo7xs"]
+[ext_resource type="Texture2D" uid="uid://clgdbul7bf4vt" path="res://Assets/Characters/salmon/Push-Left/Salmon-Push-Left5.png" id="23_venmn"]
 [ext_resource type="Texture2D" uid="uid://bfpvyvatpw46y" path="res://Assets/Characters/otter/Otter-idle1.png" id="24_4qxpl"]
+[ext_resource type="Texture2D" uid="uid://bs28847blqyxg" path="res://Assets/Characters/salmon/Push-Left/Salmon-Push-Left6.png" id="24_kklf4"]
+[ext_resource type="Texture2D" uid="uid://e2ag0ft7r22s" path="res://Assets/Characters/salmon/Surface/Salmon-Surface2.png" id="24_wtati"]
 [ext_resource type="Texture2D" uid="uid://bnxbqhwccnmyk" path="res://Assets/Characters/otter/Otter-idle2.png" id="25_2wrn7"]
+[ext_resource type="Texture2D" uid="uid://8clo1x62edsw" path="res://Assets/Characters/salmon/Push-Left/Salmon-Push-Left7.png" id="25_888it"]
+[ext_resource type="Texture2D" uid="uid://chqthkup6lm04" path="res://Assets/Characters/salmon/Surface/Salmon-Surface3.png" id="25_pnqnc"]
+[ext_resource type="Texture2D" uid="uid://cg6rluk2q41qq" path="res://Assets/Characters/salmon/Surface/Salmon-Surface4.png" id="26_4ap7i"]
+[ext_resource type="Texture2D" uid="uid://daivxbebpsy" path="res://Assets/Characters/salmon/Push-Right/Salmon-Push-Right1.png" id="26_7nt5i"]
 [ext_resource type="Texture2D" uid="uid://chfplw8p2e1pv" path="res://Assets/Characters/otter/Otter-idle3.png" id="26_v7l0p"]
+[ext_resource type="Texture2D" uid="uid://cc07423n4n7bl" path="res://Assets/Characters/salmon/Surface/Salmon-Surface5.png" id="27_1i1y4"]
+[ext_resource type="Texture2D" uid="uid://l25jylobyfct" path="res://Assets/Characters/salmon/Push-Right/Salmon-Push-Right2.png" id="27_edy5i"]
 [ext_resource type="Texture2D" uid="uid://bqfsc5akf6smu" path="res://Assets/Characters/otter/Otter-idle4.png" id="27_vioc1"]
 [ext_resource type="Texture2D" uid="uid://c5v1sttkinggl" path="res://Assets/Characters/otter/Otter-idleWrock1.png" id="28_1hhm4"]
+[ext_resource type="Texture2D" uid="uid://ckguheakryj7y" path="res://Assets/Characters/salmon/Surface/Salmon-Surface6.png" id="28_dbdsd"]
+[ext_resource type="Texture2D" uid="uid://ccobffxs1ml1x" path="res://Assets/Characters/salmon/Push-Right/Salmon-Push-Right3.png" id="28_w4ixd"]
+[ext_resource type="Texture2D" uid="uid://l42jgycf1eqc" path="res://Assets/Characters/salmon/Push-Right/Salmon-Push-Right4.png" id="29_0b44f"]
 [ext_resource type="Texture2D" uid="uid://bmsh7bohg53ux" path="res://Assets/Characters/otter/Otter-idleWrock2.png" id="29_q3v55"]
 [ext_resource type="Texture2D" uid="uid://d00hqgk4sny58" path="res://Assets/Characters/otter/Otter-idleWrock3.png" id="30_rtexg"]
+[ext_resource type="Texture2D" uid="uid://vbrp6k7rj5y3" path="res://Assets/Characters/salmon/Push-Right/Salmon-Push-Right5.png" id="30_vi6cq"]
+[ext_resource type="Texture2D" uid="uid://dbixsu1ohh3cc" path="res://Assets/Characters/salmon/Push-Right/Salmon-Push-Right6.png" id="31_ip36h"]
 [ext_resource type="Texture2D" uid="uid://bcjf08gd4sibf" path="res://Assets/Characters/otter/Otter-idleWrock4.png" id="31_roa1a"]
+[ext_resource type="Texture2D" uid="uid://cjhywq7nvs6wr" path="res://Assets/Characters/salmon/Push-Right/Salmon-Push-Right7.png" id="32_nujse"]
 [ext_resource type="Texture2D" uid="uid://bd2t8vc7yq0sx" path="res://Assets/Characters/frog/Frog-idle1.png" id="33_uja10"]
 [ext_resource type="Texture2D" uid="uid://d3n0k1indcyby" path="res://Assets/Characters/frog/Frog-idle2.png" id="34_my5i5"]
 [ext_resource type="Texture2D" uid="uid://ds8qg4kadht00" path="res://Assets/Characters/frog/Frog-idle3.png" id="35_b0lvv"]
 [ext_resource type="Texture2D" uid="uid://5j6chl5sqgb2" path="res://Assets/Characters/frog/Frog-idle4.png" id="36_jfb8m"]
+[ext_resource type="Texture2D" uid="uid://ctmkvtwka68qb" path="res://Assets/Characters/salmon/Swim/Salmon-Swim1.png" id="40_6r3cy"]
 [ext_resource type="Texture2D" uid="uid://b0wtngg4wd86k" path="res://Assets/Characters/beaver/Justin-Beaver-idle1.png" id="40_f574g"]
+[ext_resource type="Texture2D" uid="uid://byjwqf1rloskk" path="res://Assets/Characters/salmon/Swim/Salmon-Swim2.png" id="41_7gjmt"]
 [ext_resource type="Texture2D" uid="uid://b5pm8g5plwt0g" path="res://Assets/Characters/beaver/Justin-Beaver-idle2.png" id="41_taxjl"]
+[ext_resource type="Texture2D" uid="uid://ib5v8eg2hoch" path="res://Assets/Characters/salmon/Swim/Salmon-Swim3.png" id="42_0vki1"]
 [ext_resource type="Texture2D" uid="uid://bkxgfu8oxro4j" path="res://Assets/Characters/beaver/Justin-Beaver-idle3.png" id="42_5rfwx"]
+[ext_resource type="Texture2D" uid="uid://bkgln7347ulgl" path="res://Assets/Characters/salmon/Swim/Salmon-Swim4.png" id="43_r6s6k"]
 [ext_resource type="Texture2D" uid="uid://cbonddx2xiqr0" path="res://Assets/Characters/beaver/Justin-Beaver-idle4.png" id="43_rfp8y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8fae2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_67xvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tijgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w8o5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pe40l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_afssf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2xvik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6ugt4")
+}],
+"loop": false,
+"name": &"dive",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_78j6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7kpa3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7grte")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_db04y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_venmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_kklf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_888it")
+}],
+"loop": false,
+"name": &"push-left",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_7nt5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_edy5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_w4ixd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_0b44f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_vi6cq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ip36h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_nujse")
+}],
+"loop": false,
+"name": &"push-right",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_eo7xs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_wtati")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_pnqnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_4ap7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_1i1y4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_dbdsd")
+}],
+"loop": false,
+"name": &"surface",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_6r3cy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_7gjmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_0vki1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_r6s6k")
+}],
+"loop": true,
+"name": &"swim_idle",
+"speed": 7.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iirla"]
 animations = [{
@@ -191,9 +342,12 @@ speed = 5
 base_speed = 1300
 multiplier = 1.0
 
-[node name="Salmon" type="Sprite2D" parent="."]
-position = Vector2(-4, 11)
-texture = ExtResource("2_toqo8")
+[node name="Salmon" type="AnimatedSprite2D" parent="."]
+z_index = -40
+position = Vector2(-309, 213)
+sprite_frames = SubResource("SpriteFrames_8fae2")
+animation = &"push-right"
+autoplay = "swim_idle"
 script = ExtResource("3_cks82")
 
 [node name="Log" type="Area2D" parent="."]
@@ -382,6 +536,7 @@ script = ExtResource("21_r641f")
 polygon = PackedVector2Array(-49.7778, 45.5111, 4.26666, 62.5778, 46.9333, 44.0889, -5.68889, 25.6)
 
 [node name="GridHelper(hide)" type="Sprite2D" parent="."]
+visible = false
 z_index = -10
 position = Vector2(672, -432.5)
 texture = ExtResource("15_m36cb")
@@ -396,4 +551,5 @@ autoplay = "idle"
 frame_progress = 0.806331
 script = ExtResource("5_supvc")
 
+[connection signal="animation_finished" from="Salmon" to="Salmon" method="_on_animation_finished"]
 [connection signal="animation_looped" from="Crab" to="Crab" method="_on_animation_looped"]

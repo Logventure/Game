@@ -7,6 +7,7 @@ var targetPosition = position
 var move_speed = 0.8
 var push_position_right = Vector2(55,91)
 var push_position_left = Vector2(-99,33)
+var base_z_index = -40
 
 
 enum States{IDLE_SWIM,IDLE_DIVE,IDLE_SURFACE,PUSH_LEFT,PUSH_RIGHT,DASHING_LEFT,DASHING_RIGHT,PUSH_RETURN}
@@ -59,17 +60,43 @@ func _process(delta):
 		States.IDLE_DIVE:
 			handle_position(delta)
 			play("dive")
+			if len(commands) > 0:
+				if commands.find("dash_left") != -1 and get_node("../").isCharacterAvailable("salmon"):
+					dashLeft()
+				elif commands.find("dash_right") != -1 and get_node("../").isCharacterAvailable("salmon"):
+					dashRight()
+			else:
+				var last_input = InputHandler.getLastInput()
+				if last_input == "dash_left" and get_node("../").isCharacterAvailable("salmon"):
+					dashLeft()
+					InputHandler.clearLastInput()
+				if last_input == "dash_right" and get_node("../").isCharacterAvailable("salmon"):
+					dashRight()
+					InputHandler.clearLastInput()
 
 		States.IDLE_SURFACE:
 			handle_position(delta)
 			play("surface")
+			if len(commands) > 0:
+				if commands.find("dash_left") != -1 and get_node("../").isCharacterAvailable("salmon"):
+					dashLeft()
+				elif commands.find("dash_right") != -1 and get_node("../").isCharacterAvailable("salmon"):
+					dashRight()
+			else:
+				var last_input = InputHandler.getLastInput()
+				if last_input == "dash_left" and get_node("../").isCharacterAvailable("salmon"):
+					dashLeft()
+					InputHandler.clearLastInput()
+				if last_input == "dash_right" and get_node("../").isCharacterAvailable("salmon"):
+					dashRight()
+					InputHandler.clearLastInput()
 
 		States.PUSH_LEFT:
-			z_index = 2
 			play("push-left")
 			if frame >= 1:
 				get_node("../").dashLeft()
 				current_state = States.DASHING_LEFT
+				z_index = 2
 			else:
 				targetPosition = logNode.position + push_position_right
 				position = position.lerp(targetPosition, delta * 7 + position.distance_to(targetPosition)*0.001*delta)
@@ -88,12 +115,14 @@ func _process(delta):
 				position = logNode.position + push_position_right
 			else:
 				handle_position(delta)
+				z_index = base_z_index
 			
 		States.DASHING_RIGHT:
 			if frame <= 3:
 				position = logNode.position + push_position_left
 			else:
 				handle_position(delta)
+				z_index = base_z_index
 
 
 		States.PUSH_RETURN:
@@ -113,7 +142,7 @@ func _on_animation_finished():
 		States.PUSH_LEFT:
 			play("surface")
 			current_state = States.PUSH_RETURN
-			z_index = -40
+			z_index = base_z_index
 
 		States.PUSH_RIGHT:
 			play("surface")
@@ -122,12 +151,12 @@ func _on_animation_finished():
 		States.DASHING_LEFT:
 			play("surface")
 			current_state = States.PUSH_RETURN
-			z_index = -40
+			z_index = base_z_index
 
 		States.DASHING_RIGHT:
 			play("surface")
 			current_state = States.PUSH_RETURN
-			z_index = -40
+			z_index = base_z_index
 
 		States.PUSH_RETURN:
 			play("swim_idle")

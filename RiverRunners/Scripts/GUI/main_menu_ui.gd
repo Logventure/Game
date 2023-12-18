@@ -91,28 +91,28 @@ func _on_back_button_pressed():
 
 func _on_level_1_button_pressed():
 	lastFocusedButton = get_viewport().gui_get_focus_owner()
-	Events.emit_signal("go_to_level", "level_1")
+	Events.emit_signal("go_to_level", 0)
 
 
 func _on_level_2_button_pressed():
 	lastFocusedButton = get_viewport().gui_get_focus_owner()
-	Events.emit_signal("go_to_level", "level_2")
+	Events.emit_signal("go_to_level", 1)
 
 
 func _on_level_3_button_pressed():
 	lastFocusedButton = get_viewport().gui_get_focus_owner()
-	Events.emit_signal("go_to_level", "level_3")
+	Events.emit_signal("go_to_level", 2)
 
 
 func _on_level_4_button_pressed():
 	lastFocusedButton = get_viewport().gui_get_focus_owner()
-	Events.emit_signal("go_to_level", "level_1")
+	Events.emit_signal("go_to_level", 3)
 
 
 func _on_level_5_button_pressed():
 	lastFocusedButton = get_viewport().gui_get_focus_owner()
-	Events.emit_signal("go_to_level", "level_2")
+	Events.emit_signal("go_to_level", 4)
 
 func _on_level_6_button_pressed():
 	lastFocusedButton = get_viewport().gui_get_focus_owner()
-	Events.emit_signal("go_to_level", "level_3")
+	Events.emit_signal("go_to_level", 5)

@@ -59,7 +59,7 @@ animations = [{
 [node name="Rock" type="Node2D"]
 
 [node name="RightRock" type="Area2D" parent="."]
-z_index = 5
+z_index = 4
 position = Vector2(234, -52)
 script = ExtResource("1_edose")
 

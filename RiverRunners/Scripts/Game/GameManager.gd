@@ -82,16 +82,16 @@ func switchToLevelSelect():
 	replaceScreen(viewer, target_screen)
 
 
-func switchToLevel(level_id: String):
+func switchToLevel(level_id: int):
 	target_state = States.LEVEL
 	target_screen = loadScene("res://Levels/LevelTemplate.tscn")
-	if level_id == "":
+	if level_id < 0 or level_id >= len(level_ids):
 		var last_level_id = level_ids[last_level]
 		target_screen.setLevelScript(last_level_id)
 	else:
-		if level_ids.find(level_id) >= 0:
-			last_level = level_ids.find(level_id)
-		target_screen.setLevelScript(level_id)
+		last_level = level_id
+		var last_level_id = level_ids[last_level]
+		target_screen.setLevelScript(last_level_id)
 	replaceScreen(viewer, target_screen)
 
 func switchToNextLevel():

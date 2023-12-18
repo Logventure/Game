@@ -42,14 +42,19 @@ func _process(delta):
 			if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
 				if $PauseMenu/Panel/VBoxContainer/ResumeButton.visible == true:
 					$PauseMenu/Panel/VBoxContainer/ResumeButton.grab_focus()
+			
 		States.GAMEOVER:
 			if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
 				if $GameoverMenu/Panel/VBoxContainer/RetryButton.visible == true:
 					$GameoverMenu/Panel/VBoxContainer/RetryButton.grab_focus()
+			
 		States.OPTIONS:
 			pass
 		States.COMPLETED:
-			pass
+			if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
+				if $LevelCompleteMenu/Panel/VBoxContainer/NextLevelButton.visible == true:
+					$LevelCompleteMenu/Panel/VBoxContainer/NextLevelButton.grab_focus()
+			
 
 func onDamageTaken(damage):
 	if currentHealth <= 1:
@@ -60,28 +65,38 @@ func onDamageTaken(damage):
 	Events.emit_signal("health_changed", currentHealth)
 
 func pause():
+	gameoverScene.visible = false
+	gameoverScene.release_focus()
+	levelcompleteScene.visible = false
+	levelcompleteScene.release_focus()
+
 	pauseScene.visible = true
 	pauseScene.resetFocusedButton()
 	current_state = States.PAUSED
-	
-	gameoverScene.visible = false
-	levelcompleteScene.visible = false
+
 
 func gameover():
+	pauseScene.visible = false
+	pauseScene.release_focus()
+	levelcompleteScene.visible = false
+	levelcompleteScene.release_focus()
+
 	gameoverScene.visible = true
 	gameoverScene.resetFocusedButton()
 	current_state = States.GAMEOVER
 
-	pauseScene.visible = false
-	levelcompleteScene.visible = false
+
 
 func completed():
+	pauseScene.visible = false
+	pauseScene.release_focus()
+	gameoverScene.visible = false
+	pauseScene.release_focus()
+
 	levelcompleteScene.visible = true
 	levelcompleteScene.resetFocusedButton()
 	current_state = States.COMPLETED
 
-	pauseScene.visible = false
-	gameoverScene.visible = false
 
 func onGoToOptions():
 	current_state = States.OPTIONS

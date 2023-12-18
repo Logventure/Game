@@ -19,6 +19,8 @@ func _ready():
 	initializeFont()
 	makeLabels()
 	redoControllsButtons()
+
+	_on_video_button_pressed()
 	
 func _process(delta):
 	if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:

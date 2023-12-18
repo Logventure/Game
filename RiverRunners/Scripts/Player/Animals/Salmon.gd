@@ -99,7 +99,7 @@ func _process(delta):
 				z_index = 2
 			else:
 				targetPosition = logNode.position + push_position_right
-				position = position.lerp(targetPosition, delta * 7 + position.distance_to(targetPosition)*0.001*delta)
+				position = position.lerp(targetPosition, delta * 8 + position.distance_to(targetPosition)*0.001*delta)
 
 		States.PUSH_RIGHT:
 			play("push-right")
@@ -108,7 +108,7 @@ func _process(delta):
 				current_state = States.DASHING_RIGHT
 			else:
 				targetPosition = logNode.position + push_position_left
-				position = position.lerp(targetPosition, delta * 7 + position.distance_to(targetPosition)*0.001*delta)
+				position = position.lerp(targetPosition, delta * 8 + position.distance_to(targetPosition)*0.001*delta)
 
 		States.DASHING_LEFT:
 			if frame <= 3:

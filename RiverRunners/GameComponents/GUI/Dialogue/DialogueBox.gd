@@ -1,7 +1,7 @@
 extends Node2D
 
 var sprite_paths = {"frog" : "res://Assets/Characters/frog/Frog.png", "beaver" : "res://Assets/Characters/beaver/Justin-Beaver.png", "crab" : "res://Assets/Characters/crab/Crab.png",
-					"otter" : "res://Assets/Characters/otter/Otter.png", "salmon" : "res://Assets/Characters/salmon/Salmon.png"}
+					"otter" : "res://Assets/Characters/otter/Otter.png", "salmon" : "res://Assets/Characters/salmon/Salmon-Baby.png"}
 var character_sprite
 var textbox
 

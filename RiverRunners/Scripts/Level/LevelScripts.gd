@@ -44,7 +44,7 @@ var levels = {
 	},
 
 	"level_3" :	{"setup"        :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 5, "ObstacleGroups" : [100]},
-				"chat1"         :    {"Time offset" : 1,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/introtocustomlevels.txt"},
+				"chat1"         :    {"Time offset" : 1,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/testdialogue.txt"},
 				"levelStart"    :    {"Time offset" : 0,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : true},
 				"disableObs"    :    {"Time offset" : 30,   "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false},
 				"endCutscene"   :    {"Time offset" : 1,    "Prerequesites" : ["disableObs"],    "Type" : eventTypes.CUTSCENE,    "File": "whatever"},

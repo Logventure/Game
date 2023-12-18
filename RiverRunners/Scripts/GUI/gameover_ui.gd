@@ -26,7 +26,7 @@ func _on_give_up_button_pressed():
 func _on_retry_button_pressed():
 	current_state = States.DISABLED
 	visible = false
-	Events.emit_signal("go_to_level", "")
+	Events.emit_signal("go_to_level", -1)
 
 func resetFocusedButton():
 	current_state = States.GAMEOVER

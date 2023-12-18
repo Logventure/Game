@@ -66,9 +66,7 @@ func onDamageTaken(damage):
 
 func pause():
 	gameoverScene.visible = false
-	gameoverScene.release_focus()
 	levelcompleteScene.visible = false
-	levelcompleteScene.release_focus()
 
 	pauseScene.visible = true
 	pauseScene.resetFocusedButton()
@@ -77,9 +75,7 @@ func pause():
 
 func gameover():
 	pauseScene.visible = false
-	pauseScene.release_focus()
 	levelcompleteScene.visible = false
-	levelcompleteScene.release_focus()
 
 	gameoverScene.visible = true
 	gameoverScene.resetFocusedButton()
@@ -89,9 +85,7 @@ func gameover():
 
 func completed():
 	pauseScene.visible = false
-	pauseScene.release_focus()
 	gameoverScene.visible = false
-	pauseScene.release_focus()
 
 	levelcompleteScene.visible = true
 	levelcompleteScene.resetFocusedButton()

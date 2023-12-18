@@ -28,7 +28,6 @@ func resetFocusedButton():
 	if InputHandler.hasController():
 		$Panel/VBoxContainer/NextLevelButton.grab_focus()
 
-
 func _on_next_level_button_pressed():
 	current_state = States.DISABLED
 	visible = false

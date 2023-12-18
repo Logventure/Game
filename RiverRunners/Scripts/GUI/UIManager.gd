@@ -4,10 +4,11 @@ signal health_changed
 @onready var healthContainer = $HealthContainer
 @onready var pauseScene = $PauseMenu
 @onready var gameoverScene = $GameoverMenu
+@onready var levelcompleteScene = $LevelCompleteMenu
 var maxHealth = 3
 var currentHealth = maxHealth
 
-enum States{RUNNING, PAUSED, GAMEOVER, OPTIONS}
+enum States{RUNNING, PAUSED, GAMEOVER, COMPLETED, OPTIONS}
 var current_state = States.RUNNING
 
 # Called when the node enters the scene tree for the first time.
@@ -24,11 +25,14 @@ func _ready():
 
 	Events.connect("resume_game", onResume)
 
+	Events.connect("level_completed", completed)
+
 	Events.connect("go_to_options", onGoToOptions)
 	Events.connect("go_to_previous_screen", backFromOptions)
 
 	pauseScene.visible = false
 	gameoverScene.visible = false
+	levelcompleteScene.visible = false
 
 func _process(delta):
 	match current_state:
@@ -44,7 +48,8 @@ func _process(delta):
 					$GameoverMenu/Panel/VBoxContainer/RetryButton.grab_focus()
 		States.OPTIONS:
 			pass
-
+		States.COMPLETED:
+			pass
 
 func onDamageTaken(damage):
 	if currentHealth <= 1:
@@ -58,11 +63,25 @@ func pause():
 	pauseScene.visible = true
 	pauseScene.resetFocusedButton()
 	current_state = States.PAUSED
+	
+	gameoverScene.visible = false
+	levelcompleteScene.visible = false
 
 func gameover():
 	gameoverScene.visible = true
 	gameoverScene.resetFocusedButton()
 	current_state = States.GAMEOVER
+
+	pauseScene.visible = false
+	levelcompleteScene.visible = false
+
+func completed():
+	levelcompleteScene.visible = true
+	levelcompleteScene.resetFocusedButton()
+	current_state = States.COMPLETED
+
+	pauseScene.visible = false
+	gameoverScene.visible = false
 
 func onGoToOptions():
 	current_state = States.OPTIONS
@@ -74,3 +93,6 @@ func backFromOptions():
 
 func onResume():
 	current_state = States.RUNNING
+	pauseScene.visible = false
+	gameoverScene.visible = false
+	levelcompleteScene.visible = false

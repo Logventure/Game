@@ -35,6 +35,7 @@ signal pause_game
 signal player_died
 signal resume_game
 signal obstacles_ended
+signal level_completed
 
 signal input_confirm
 signal input_return
@@ -44,6 +45,7 @@ signal go_to_main_menu
 signal go_to_mode_select
 signal go_to_level_select
 signal go_to_level(level_id: String)
+signal go_to_next_level
 signal go_to_options
 signal go_to_credits
 signal go_to_previous_screen

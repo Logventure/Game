@@ -15,7 +15,8 @@ var target_screen
 var previous_state = States.MAIN_MENU
 var previous_screen
 
-var last_level_id = "level_1"
+var last_level = 0
+var level_ids = ["level_1", "level_2", "level_3", "level_1", "level_2", "level_3"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,6 +27,7 @@ func _ready():
 	Events.connect("go_to_mode_select", switchToModeSelect)
 	Events.connect("go_to_level_select", switchToLevelSelect)
 	Events.connect("go_to_level", switchToLevel)
+	Events.connect("go_to_next_level", switchToNextLevel)
 	Events.connect("go_to_previous_screen", switchToPreviousScreen)
 
 	switchToMainMenu()
@@ -84,10 +86,21 @@ func switchToLevel(level_id: String):
 	target_state = States.LEVEL
 	target_screen = loadScene("res://Levels/LevelTemplate.tscn")
 	if level_id == "":
+		var last_level_id = level_ids[last_level]
 		target_screen.setLevelScript(last_level_id)
 	else:
-		last_level_id = level_id
+		if level_ids.find(level_id) >= 0:
+			last_level = level_ids.find(level_id)
 		target_screen.setLevelScript(level_id)
+	replaceScreen(viewer, target_screen)
+
+func switchToNextLevel():
+	if last_level + 1 < len(level_ids):
+		last_level += 1
+	target_state = States.LEVEL
+	target_screen = loadScene("res://Levels/LevelTemplate.tscn")
+	var last_level_id = level_ids[last_level]
+	target_screen.setLevelScript(last_level_id)
 	replaceScreen(viewer, target_screen)
 
 func switchToPreviousScreen():

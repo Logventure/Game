@@ -138,6 +138,7 @@ func onLevelEnd(wait_for_obstacle_end: bool):
 
 func finishLevel():
 	Events.emit_signal("pause_game")
+	Events.emit_signal("level_completed")
 	current_state = States.LEVEL_END
 	if Events.is_connected("obstacles_ended",finishLevel):
 		Events.disconnect("obstacles_ended",finishLevel)

@@ -116,14 +116,11 @@ default_font = ExtResource("24_vmuug")
 
 [node name="OptionsUI" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 script = ExtResource("1_vdxw5")
 
 [node name="BackgroundImage2" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 scale = Vector2(12, 12)
 sprite_frames = SubResource("SpriteFrames_1eedu")
@@ -132,6 +129,7 @@ centered = false
 script = ExtResource("6_mtjgs")
 
 [node name="Justin" type="AnimatedSprite2D" parent="BackgroundImage2"]
+visible = false
 position = Vector2(12.5, 55.75)
 sprite_frames = SubResource("SpriteFrames_ia0m5")
 animation = &"awake"
@@ -139,6 +137,7 @@ autoplay = "sleep"
 centered = false
 
 [node name="TextureButton" type="TextureButton" parent="BackgroundImage2"]
+visible = false
 modulate = Color(1, 1, 1, 0)
 offset_left = 12.4167
 offset_top = 55.5
@@ -185,8 +184,11 @@ scale = Vector2(4, 4)
 [node name="VideoButton" type="TextureButton" parent="Panel/ButtonContainer"]
 layout_mode = 2
 focus_neighbor_left = NodePath("../../../BackgroundImage2/TextureButton")
+focus_neighbor_top = NodePath("../../../BackButton")
 focus_neighbor_right = NodePath("../AudioButton")
 focus_neighbor_bottom = NodePath("../../Video/HBoxContainer1/FullscreenButton")
+focus_next = NodePath("../AudioButton")
+focus_previous = NodePath("../ControlsButton")
 texture_normal = ExtResource("15_16n22")
 texture_pressed = ExtResource("16_8or5b")
 texture_hover = ExtResource("17_su33v")
@@ -195,8 +197,11 @@ texture_focused = ExtResource("17_su33v")
 [node name="AudioButton" type="TextureButton" parent="Panel/ButtonContainer"]
 layout_mode = 2
 focus_neighbor_left = NodePath("../VideoButton")
+focus_neighbor_top = NodePath("../../../BackButton")
 focus_neighbor_right = NodePath("../ControlsButton")
 focus_neighbor_bottom = NodePath("../../Audio/HBoxContainer/CenterContainer/HSlider")
+focus_next = NodePath("../ControlsButton")
+focus_previous = NodePath("../VideoButton")
 texture_normal = ExtResource("18_kjfmh")
 texture_pressed = ExtResource("19_u7jnv")
 texture_hover = ExtResource("20_r07cr")
@@ -205,7 +210,11 @@ texture_focused = ExtResource("20_r07cr")
 [node name="ControlsButton" type="TextureButton" parent="Panel/ButtonContainer"]
 layout_mode = 2
 focus_neighbor_left = NodePath("../AudioButton")
+focus_neighbor_top = NodePath("../../../BackButton")
 focus_neighbor_right = NodePath("../../../BackButton")
+focus_neighbor_bottom = NodePath("../../../BackButton")
+focus_next = NodePath("../VideoButton")
+focus_previous = NodePath("../AudioButton")
 texture_normal = ExtResource("21_bh2p4")
 texture_pressed = ExtResource("22_0db4n")
 texture_hover = ExtResource("23_elh3h")
@@ -394,10 +403,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 867.0
-offset_top = 524.0
-offset_right = 907.0
-offset_bottom = 564.0
+offset_left = 1267.0
+offset_top = 600.0
+offset_right = 1307.0
+offset_bottom = 640.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -430,10 +439,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 867.0
-offset_top = 524.0
-offset_right = 867.0
-offset_bottom = 524.0
+offset_left = 1267.0
+offset_top = 600.0
+offset_right = 1267.0
+offset_bottom = 600.0
 grow_horizontal = 2
 grow_vertical = 2
 

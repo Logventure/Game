@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://fdgjnt3f4u6u"]
+[gd_scene load_steps=56 format=3 uid="uid://fdgjnt3f4u6u"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/main_menu_ui.gd" id="1_go47f"]
 [ext_resource type="Texture2D" uid="uid://c1lero7mqpehw" path="res://Assets/UI/Main Menu/MainMenu-Background2.png" id="2_op0qx"]
@@ -51,6 +51,7 @@
 [ext_resource type="Texture2D" uid="uid://dqiiqicqdsocg" path="res://Assets/UI/Confirm Pop-Up/Yes-Conf Button-Pressed.png" id="35_y7smh"]
 [ext_resource type="Texture2D" uid="uid://dsjvovhqvcjjf" path="res://Assets/UI/Confirm Pop-Up/Yes-Conf Button-Hover.png" id="36_sjqhm"]
 [ext_resource type="Texture2D" uid="uid://tpd4lr0132ti" path="res://Assets/UI/logventure-button.png" id="40_sk7ek"]
+[ext_resource type="PackedScene" uid="uid://chkd7lgphi0cv" path="res://GameComponents/GUI/options_ui.tscn" id="52_4k1wg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4s1lb"]
 animations = [{
@@ -392,6 +393,8 @@ offset_right = 1698.0
 offset_bottom = 926.0
 scale = Vector2(6, 6)
 texture_normal = ExtResource("40_sk7ek")
+
+[node name="OptionsUI" parent="." instance=ExtResource("52_4k1wg")]
 
 [connection signal="animation_looped" from="BackgroundImage/Justin" to="BackgroundImage" method="_on_justin_animation_looped"]
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]

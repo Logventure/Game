@@ -14,7 +14,6 @@ playerMaxSpeed = 15
 [node name="Camera2D" parent="." instance=ExtResource("1_16p0x")]
 minDistance = 80
 multiplier = 20
-baseZoom = 0.8
 minZoom = 0.5
 
 [node name="LevelUI" parent="Camera2D" instance=ExtResource("3_0um28")]

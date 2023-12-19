@@ -6,7 +6,7 @@ var playerSpeed = 0.0
 @export var minDistance = 5
 @export var multiplier = 1
 
-@export var baseZoom = 0.5
+@export var baseZoom = 0.8
 @export var minZoom = 0.3
 @export var zoomMultiplier = 0.01
 

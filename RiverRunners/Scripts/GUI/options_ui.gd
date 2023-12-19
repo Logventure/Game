@@ -8,6 +8,7 @@ var overridingAction = ""
 var keyboardActions = ["dashLeft", "dashRight", "jump", "throw", "shield"]
 var controllerActions = ["controller_dashLeft", "controller_dashRight", "controller_jump", "controller_throw", "controller_shield"]
 
+var active = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -23,12 +24,15 @@ func _ready():
 	_on_video_button_pressed()
 	
 func _process(delta):
-	if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
-		if $BackButton.visible == true:
-			$BackButton.grab_focus()
-	if Input.is_action_just_pressed("confirm") and not get_viewport().gui_get_focus_owner() == null:
-		get_viewport().gui_get_focus_owner().emit_signal("pressed")	
+	if active:
+		if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
+			if $BackButton.visible == true:
+				$BackButton.grab_focus()
+		if Input.is_action_just_pressed("confirm") and not get_viewport().gui_get_focus_owner() == null:
+			get_viewport().gui_get_focus_owner().emit_signal("pressed")	
 
+func setActive(value):
+	active = value
 
 func _on_back_button_pressed():
 	Events.emit_signal("go_to_previous_screen")
@@ -78,7 +82,9 @@ func _on_controls_button_pressed():
 
 func onUpdateCameraStatus(pos,zoom): #so that the menu shows up when entered mid level
 	var temp_solution = Vector2(pos.x - 1920/2, pos.y - 1080/2) #temporary solution
-	position = temp_solution
+	#position = temp_solution
+	#var scale_value = 0.8/zoom.x
+	#scale = Vector2(scale_value,scale_value)
 
 
 func _on_borderless_button_pressed():
@@ -203,6 +209,9 @@ func redoControllsButtons():
 		$Panel/Controller.add_child(newControllerActionButton)
 		
 		get_node("Panel/Controller/" + newControllerActionButton.name).connect("pressed", _on_actionButton_pressed.bind(controllerAction))
+
+		$Panel/ButtonContainer/ControlsButton.set_focus_neighbor(SIDE_BOTTOM, buttons[0].get_path())
+
 
 	for buttonIndex in range(0, buttons.size()):
 		var selectedButton = buttons[buttonIndex]

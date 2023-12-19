@@ -24,6 +24,8 @@ func _process(delta):
 
 	match current_state:
 		States.MAIN:
+			$OptionsUI.visible = false
+			$OptionsUI.setActive(false)
 			if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
 				if lastFocusedButton.visible == true:
 					lastFocusedButton.grab_focus()
@@ -32,13 +34,21 @@ func _process(delta):
 					lastFocusedButton = $VBoxContainer/PlayButton
 
 		States.LEVELS:
+			$OptionsUI.visible = false
+			$OptionsUI.setActive(false)
 			if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
 				if $VBoxContainer2/HBoxContainer/Level1Button.visible == true:
 					$VBoxContainer2/HBoxContainer/Level1Button.grab_focus()
 
 
 		States.OPTIONS:
-			pass
+			$OptionsUI.visible = true
+			$OptionsUI.setActive(true)
+			if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
+				if $OptionsUI/Panel/ButtonContainer/VideoButton.visible == true:
+					$OptionsUI/Panel/ButtonContainer/VideoButton.grab_focus()
+			if Input.is_action_just_pressed("confirm") and not get_viewport().gui_get_focus_owner() == null:
+					get_viewport().gui_get_focus_owner().emit_signal("pressed")
 
 	if Input.is_action_just_pressed("confirm") and not get_viewport().gui_get_focus_owner() == null:
 		get_viewport().gui_get_focus_owner().emit_signal("pressed")
@@ -55,8 +65,10 @@ func _on_play_button_pressed():
 
 func _on_options_button_pressed():
 	lastFocusedButton = $VBoxContainer/OptionsButton
-	Events.emit_signal("go_to_options")
+	#Events.emit_signal("go_to_options")
+	$VBoxContainer.visible = false
 	current_state = States.OPTIONS
+	$OptionsUI.visible = true
 
 func _on_credits_button_pressed():
 	pass

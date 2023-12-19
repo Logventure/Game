@@ -11,9 +11,13 @@ func _ready():
 func _process(delta):
 	match current_state:
 		States.DISABLED:
-			visible = false
+			$Panel.visible = false
+			$OptionsUI.visible = false
+			$OptionsUI.setActive(false)
 		States.PAUSED:
-			visible = true
+			$OptionsUI.setActive(false)
+			$Panel.visible = true
+			$OptionsUI.visible = false
 			if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
 				if $Panel/VBoxContainer/ResumeButton.visible == true:
 					$Panel/VBoxContainer/ResumeButton.grab_focus()
@@ -21,19 +25,30 @@ func _process(delta):
 					get_viewport().gui_get_focus_owner().emit_signal("pressed")
 
 		States.OPTIONS:
-			
-			visible = false
+			$Panel.visible = false
+			$OptionsUI.visible = true
+			$OptionsUI.setActive(true)
+			if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
+				if $OptionsUI/Panel/ButtonContainer/VideoButton.visible == true:
+					$OptionsUI/Panel/ButtonContainer/VideoButton.grab_focus()
+			if Input.is_action_just_pressed("confirm") and not get_viewport().gui_get_focus_owner() == null:
+					get_viewport().gui_get_focus_owner().emit_signal("pressed")
 
 func _on_options_button_pressed():
 	current_state = States.OPTIONS
-	Events.emit_signal("go_to_options")
+	$Panel.visible = false
+	$OptionsUI.visible = true
+	if $OptionsUI/Panel/ButtonContainer/VideoButton.visible == true:
+		$OptionsUI/Panel/ButtonContainer/VideoButton.grab_focus()
+	#Events.emit_signal("go_to_options")
 
 func onBackFromOptions():
 	current_state = States.PAUSED
 
 func _on_resume_button_pressed():
 	current_state = States.DISABLED
-	visible = false
+	$Panel.visible = false
+	$OptionsUI.visible = false
 	Events.emit_signal("resume_game")
 
 func _on_give_up_button_pressed():

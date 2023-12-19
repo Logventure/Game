@@ -19,6 +19,8 @@ func _ready():
 	self.connect("area_exited",onAreaExited)
 	Events.connect("collision_with_tree",onTreeCollision)
 	Events.connect("player_died",onPlayerDie)
+	Events.connect("player_drowned",onDrown)
+
 	
 	sprite = $LogSprite
 	player = get_node("../")
@@ -75,6 +77,15 @@ func onTreeCollision(area):
 				area.log_collided()
 			get_tree().create_timer(damageCooldown).timeout.connect(onCooldownEnd)
 			istimercounting = true
+
+func onDrown():
+	if damage_enabled:
+		if not istimercounting:
+			Events.emit_signal("damage_taken", 1)
+			collisionSound.play()
+			get_tree().create_timer(damageCooldown).timeout.connect(onCooldownEnd)
+			istimercounting = true
+
 
 func onPlayerDie():
 	damage_enabled = false

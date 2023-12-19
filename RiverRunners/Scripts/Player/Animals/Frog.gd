@@ -55,8 +55,7 @@ func handle_jump(delta):
 		current_state = States.IDLE
 		Events.emit_signal("is_on_air", false)
 		if not logNode.position.x + basePosition.x == position.x:
-			if loseDamage:
-				Events.emit_signal("damage_taken", 1)
+			Events.emit_signal("player_drowned")
 			print("Rip crabby")
 			Events.emit_signal("lose_damage", false)
 			current_state = States.DROWNING

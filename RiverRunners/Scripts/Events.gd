@@ -27,6 +27,7 @@ signal log_collided
 signal is_lane_free(lane_offset: int, status: bool)
 signal move_to_free_lane
 signal collision_with_tree(area)
+signal player_drowned
 
 signal on_dialog_start
 signal on_dialog_end

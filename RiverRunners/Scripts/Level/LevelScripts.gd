@@ -90,8 +90,7 @@ var levels = {
 				"speedUp1"      :    {"Time offset" : 5,    "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "Speed" : 3},
 				"speedUp2"      :    {"Time offset" : 20,   "Prerequesites" : ["speedUp1"],      "Type" : eventTypes.SETVALUES,   "Speed" : 4},
 				"disableObs"    :    {"Time offset" : 10,   "Prerequesites" : ["speedUp2"],      "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false},
-				"endCutscene"   :    {"Time offset" : 7,    "Prerequesites" : ["disableObs"],    "Type" : eventTypes.CUTSCENE,    "File": "whatever"},
-				"chat2"         :    {"Time offset" : 1,    "Prerequesites" : ["endCutscene"],   "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/enddialogue.txt", "WaitForObstacleEnd": true},
+				"chat2"         :    {"Time offset" : 1,    "Prerequesites" : ["disableObs"],   "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/enddialogue.txt", "WaitForObstacleEnd": true},
 				"levelend"      :    {"Time offset" : 1,    "Prerequesites" : ["chat2"],   		 "Type" : eventTypes.ENDLEVEL},
 	},
 	
@@ -101,8 +100,7 @@ var levels = {
 				"speedUp1"      :    {"Time offset" : 5,    "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "Speed" : 4},
 				"speedUp2"      :    {"Time offset" : 20,   "Prerequesites" : ["speedUp1"],      "Type" : eventTypes.SETVALUES,   "Speed" : 5},
 				"disableObs"    :    {"Time offset" : 10,   "Prerequesites" : ["speedUp2"],      "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false},
-				"endCutscene"   :    {"Time offset" : 7,    "Prerequesites" : ["disableObs"],    "Type" : eventTypes.CUTSCENE,    "File": "whatever"},
-				"chat2"         :    {"Time offset" : 1,    "Prerequesites" : ["endCutscene"],   "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/enddialogue.txt", "WaitForObstacleEnd": true},
+				"chat2"         :    {"Time offset" : 1,    "Prerequesites" : ["disableObs"],    "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/enddialogue.txt", "WaitForObstacleEnd": true},
 				"levelend"      :    {"Time offset" : 1,    "Prerequesites" : ["chat2"],   		 "Type" : eventTypes.ENDLEVEL},
 	},
 	

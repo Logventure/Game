@@ -84,43 +84,44 @@ func _process(delta):
 		visible = char_available
 		collider.monitoring = visible
 
-	var commands = InputHandler.getCommands()
-	match current_state:
-		States.IDLE:
-			handle_position()
-			if len(commands) > 0:
-				if commands.find("jump") != -1 and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
-					jump()
-				if commands.find("shield") != -1 and get_node("../").isCharacterAvailable("crab"):
-					shield()
-			else:
-				var last_input = InputHandler.getLastInput()
-				if last_input == "jump" and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
-					jump()
-					InputHandler.clearLastInput()
-				if last_input == "shield" and get_node("../").isCharacterAvailable("crab"):
-					shield()
-					InputHandler.clearLastInput()
+	if get_node("../").isCharacterAvailable("crab"):
+		var commands = InputHandler.getCommands()
+		match current_state:
+			States.IDLE:
+				handle_position()
+				if len(commands) > 0:
+					if commands.find("jump") != -1 and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
+						jump()
+					if commands.find("shield") != -1 and get_node("../").isCharacterAvailable("crab"):
+						shield()
+				else:
+					var last_input = InputHandler.getLastInput()
+					if last_input == "jump" and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
+						jump()
+						InputHandler.clearLastInput()
+					if last_input == "shield" and get_node("../").isCharacterAvailable("crab"):
+						shield()
+						InputHandler.clearLastInput()
 
-		States.JUMPING:
-			handle_jump(delta)
+			States.JUMPING:
+				handle_jump(delta)
 
-		States.BLOCKING:
-			handle_position()
-			Events.emit_signal("can_jump", false)
+			States.BLOCKING:
+				handle_position()
+				Events.emit_signal("can_jump", false)
 
-		States.DESTROYING:
-			handle_position()
+			States.DESTROYING:
+				handle_position()
 
-		States.DROWNING:
-			current_state = States.IDLE
+			States.DROWNING:
+				current_state = States.IDLE
 
-		States.TAKE_DAMAGE:
-			pass
+			States.TAKE_DAMAGE:
+				pass
 
-		States.PAUSED:
-			pass
-			
+			States.PAUSED:
+				pass
+				
 
 func onPause():
 	previous_state = current_state

@@ -5,6 +5,8 @@ signal health_changed
 @onready var pauseScene = $PauseMenu
 @onready var gameoverScene = $GameoverMenu
 @onready var levelcompleteScene = $LevelCompleteMenu
+@onready var score = $Score
+@onready var endlessgameoverScene = $EndlessGameoverMenu
 var maxHealth = 3
 var currentHealth = maxHealth
 
@@ -70,6 +72,8 @@ func pause():
 
 	pauseScene.visible = true
 	pauseScene.resetFocusedButton()
+
+	score.stop_counting()
 	current_state = States.PAUSED
 
 
@@ -79,8 +83,10 @@ func gameover():
 
 	gameoverScene.visible = true
 	gameoverScene.resetFocusedButton()
-	current_state = States.GAMEOVER
 
+	#enviar sinal com o highest score obtido
+	
+	current_state = States.GAMEOVER
 
 
 func completed():
@@ -89,6 +95,7 @@ func completed():
 
 	levelcompleteScene.visible = true
 	levelcompleteScene.resetFocusedButton()
+
 	current_state = States.COMPLETED
 
 
@@ -105,3 +112,4 @@ func onResume():
 	pauseScene.visible = false
 	gameoverScene.visible = false
 	levelcompleteScene.visible = false
+	score.counting()

@@ -12,6 +12,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if Input.is_action_just_pressed("controller_shield"):
+		onJustinPressed()
+
 	match current_state:
 		States.SLEEP:
 			$Justin.position = Vector2(12.917,38.083)

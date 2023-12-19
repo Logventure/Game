@@ -221,7 +221,6 @@ texture_hover = ExtResource("23_elh3h")
 texture_focused = ExtResource("23_elh3h")
 
 [node name="Fullscreen" type="Label" parent="Panel"]
-visible = false
 layout_mode = 2
 offset_left = 164.0
 offset_top = -37.0
@@ -232,7 +231,6 @@ text = "Fullscreen:"
 label_settings = SubResource("LabelSettings_dqo6c")
 
 [node name="Windowed" type="Label" parent="Panel"]
-visible = false
 layout_mode = 2
 offset_left = 164.0
 offset_top = 25.0
@@ -243,7 +241,6 @@ text = "Window:"
 label_settings = SubResource("LabelSettings_bk4cn")
 
 [node name="Video" type="VBoxContainer" parent="Panel"]
-visible = false
 layout_mode = 1
 offset_left = 315.0
 offset_top = -46.0
@@ -364,6 +361,7 @@ focus_neighbor_top = NodePath("../../../HBoxContainer1/CenterContainer/HSlider")
 focus_neighbor_bottom = NodePath("../../../../../BackButton")
 
 [node name="Action" type="Label" parent="Panel"]
+visible = false
 layout_mode = 0
 offset_left = 164.0
 offset_top = -37.0
@@ -374,6 +372,7 @@ text = "Action"
 label_settings = SubResource("LabelSettings_dq0p6")
 
 [node name="Keyboard" type="Label" parent="Panel"]
+visible = false
 layout_mode = 0
 offset_left = 353.0
 offset_top = -37.0
@@ -384,6 +383,7 @@ theme = SubResource("Theme_bvuy7")
 text = "Keyboard"
 
 [node name="Controller" type="Label" parent="Panel"]
+visible = false
 layout_mode = 0
 offset_left = 552.0
 offset_top = -37.0

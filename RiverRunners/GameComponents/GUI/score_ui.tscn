@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://rsd1vkuyp70p"]
+
+[ext_resource type="Script" path="res://Scripts/GUI/score_ui.gd" id="1_58us5"]
+[ext_resource type="Texture2D" uid="uid://dssdd8dvnk68c" path="res://Assets/UI/Score/ScoreBar.png" id="2_i4hab"]
+[ext_resource type="FontFile" uid="uid://bg1oq07gebwu4" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="3_8rvu6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_geimp"]
+font = ExtResource("3_8rvu6")
+
+[sub_resource type="LabelSettings" id="LabelSettings_i3fxe"]
+font = ExtResource("3_8rvu6")
+
+[node name="score_ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_58us5")
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+layout_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 313.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_i4hab")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 36.0
+text = "SCORE"
+label_settings = SubResource("LabelSettings_geimp")
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 10.0
+offset_right = 130.0
+offset_bottom = 33.0
+label_settings = SubResource("LabelSettings_i3fxe")

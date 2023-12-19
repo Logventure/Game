@@ -15,7 +15,6 @@ func _ready():
 	image = $BackgroundImage
 	$VBoxContainer.visible = true
 	$VBoxContainer2.visible = false
-	$BackButton.visible = false
 	$Panel.visible = false
 
 	Events.connect("go_to_previous_screen", backFromOptions)
@@ -58,7 +57,6 @@ func _on_play_button_pressed():
 	lastFocusedButton = $VBoxContainer/PlayButton
 	$VBoxContainer.visible = false
 	$VBoxContainer2.visible = true
-	$BackButton.visible = true
 	#Events.emit_signal("go_to_level_select")
 	current_state = States.LEVELS
 
@@ -92,14 +90,12 @@ func _on_no_button_pressed():
 func backFromOptions():
 	$VBoxContainer.visible = true
 	$VBoxContainer2.visible = false
-	$BackButton.visible = false
 	current_state = States.MAIN
 
 
 func _on_back_button_pressed():
 	$VBoxContainer.visible = true
 	$VBoxContainer2.visible = false
-	$BackButton.visible = false
 	current_state = States.MAIN
 
 func _on_level_1_button_pressed():
@@ -129,3 +125,6 @@ func _on_level_5_button_pressed():
 func _on_level_6_button_pressed():
 	lastFocusedButton = get_viewport().gui_get_focus_owner()
 	Events.emit_signal("go_to_level", 5)
+
+func _on_infinite_button_pressed():
+	pass # Replace with function body.

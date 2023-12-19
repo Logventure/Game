@@ -41,6 +41,7 @@ func _on_options_button_pressed():
 	if $OptionsUI/Panel/ButtonContainer/VideoButton.visible == true:
 		$OptionsUI/Panel/ButtonContainer/VideoButton.grab_focus()
 	#Events.emit_signal("go_to_options")
+	$OptionsUI.resetFocus()
 
 func onBackFromOptions():
 	current_state = States.PAUSED

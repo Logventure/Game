@@ -34,6 +34,10 @@ func _process(delta):
 func setActive(value):
 	active = value
 
+func resetFocus():
+	$Panel/ButtonContainer/VideoButton.grab_focus()
+	_on_video_button_pressed()
+
 func _on_back_button_pressed():
 	Events.emit_signal("go_to_previous_screen")
 

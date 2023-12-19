@@ -69,6 +69,7 @@ func _on_options_button_pressed():
 	$VBoxContainer.visible = false
 	current_state = States.OPTIONS
 	$OptionsUI.visible = true
+	$OptionsUI.resetFocus()
 
 func _on_credits_button_pressed():
 	pass

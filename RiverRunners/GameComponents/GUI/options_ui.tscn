@@ -11,28 +11,28 @@
 [ext_resource type="Texture2D" uid="uid://x0nqrnp0nvg" path="res://Assets/UI/Main Menu/MainMenu-Background4.png" id="4_hrum1"]
 [ext_resource type="Texture2D" uid="uid://ctm0hhmaekxfb" path="res://Assets/UI/Main Menu/Back Button-Pressed.png" id="5_1aokt"]
 [ext_resource type="Texture2D" uid="uid://bcto0rc11pe6w" path="res://Assets/UI/Main Menu/JustinWakeUp3.png" id="5_rw7gn"]
-[ext_resource type="Texture2D" uid="uid://cw0e1qc68r12c" path="res://Assets/UI/Main Menu/Back Button-Hover.png" id="6_8rv3c"]
 [ext_resource type="Script" path="res://Scripts/GUI/mainmenubackground.gd" id="6_mtjgs"]
 [ext_resource type="Texture2D" uid="uid://clbghl57u176j" path="res://Assets/UI/Main Menu/JustinWakeUp4.png" id="6_sddwn"]
 [ext_resource type="Texture2D" uid="uid://dtmy1a54gfo6k" path="res://Assets/UI/Main Menu/JustinSleeping2.png" id="7_iqv2y"]
 [ext_resource type="Texture2D" uid="uid://wphwi8r5lcve" path="res://Assets/UI/Main Menu/JustinSleeping3.png" id="8_8htpq"]
 [ext_resource type="Texture2D" uid="uid://beslwhfuysc7l" path="res://Assets/UI/Main Menu/JustinSleeping4.png" id="9_v061i"]
-[ext_resource type="Texture2D" uid="uid://cyidfjc8nma67" path="res://Assets/UI/Options Menu/Options-Video Button.png" id="15_16n22"]
-[ext_resource type="Texture2D" uid="uid://dd7pfprasoyva" path="res://Assets/UI/Options Menu/Options-Video Button-Pressed.png" id="16_8or5b"]
-[ext_resource type="Texture2D" uid="uid://dboq34ugnmwi4" path="res://Assets/UI/Options Menu/Options-Video Button-Hover.png" id="17_su33v"]
+[ext_resource type="Texture2D" uid="uid://ci2mpjqhe7c1j" path="res://Assets/UI/Options Menu/Options-General Button.png" id="15_e3ohw"]
+[ext_resource type="Texture2D" uid="uid://bhljhekiapf6m" path="res://Assets/UI/Options Menu/Options-General-Pressed Button.png" id="16_ua2j8"]
+[ext_resource type="Texture2D" uid="uid://dd0d6hjf1k8ce" path="res://Assets/UI/Options Menu/Options-General-Highligt Button.png" id="17_ilx8q"]
 [ext_resource type="Texture2D" uid="uid://c1nxy18coxrb7" path="res://Assets/UI/Options Menu/Options-Audio Button.png" id="18_kjfmh"]
 [ext_resource type="Texture2D" uid="uid://haxutr3gliri" path="res://Assets/UI/Options Menu/Options-Audio Button-Pressed.png" id="19_u7jnv"]
-[ext_resource type="Texture2D" uid="uid://cjahuwp6uaqkj" path="res://Assets/UI/Options Menu/Options-Audio Button-Hover.png" id="20_r07cr"]
+[ext_resource type="Texture2D" uid="uid://cotfes8k40f26" path="res://Assets/UI/Options Menu/Options-Audio Button-Highlight.png" id="20_o1edi"]
 [ext_resource type="Texture2D" uid="uid://bqyhovo1vl5ay" path="res://Assets/UI/Options Menu/Options-Controls Button.png" id="21_bh2p4"]
 [ext_resource type="Texture2D" uid="uid://cnaff7gwam2qi" path="res://Assets/UI/Options Menu/Options-Controls Button-Pressed.png" id="22_0db4n"]
-[ext_resource type="Texture2D" uid="uid://dpj2mvnllffu7" path="res://Assets/UI/Options Menu/Options-Controls Button-Hover.png" id="23_elh3h"]
+[ext_resource type="Texture2D" uid="uid://binp15k0xx8gi" path="res://Assets/UI/Options Menu/Options-Controls Button-Highlight.png" id="23_7t7jx"]
 [ext_resource type="FontFile" uid="uid://bg1oq07gebwu4" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="24_vmuug"]
 [ext_resource type="Texture2D" uid="uid://hncaibncfe8f" path="res://Assets/UI/Options Menu/Options-Fullscreen Button.png" id="25_5gllq"]
 [ext_resource type="Texture2D" uid="uid://jjtpg2cfjskp" path="res://Assets/UI/Options Menu/Options-Fullscreen Button-Pressed.png" id="26_yqtt8"]
-[ext_resource type="Texture2D" uid="uid://cdvrkwu7op5gp" path="res://Assets/UI/Options Menu/Options-Fullscreen Button-Hover.png" id="27_r3758"]
+[ext_resource type="Texture2D" uid="uid://boc6jph2ymqb5" path="res://Assets/UI/Options Menu/Options-Fullscreen Button-Highlight.png" id="27_xmhy8"]
 [ext_resource type="Texture2D" uid="uid://845xkfffbsiu" path="res://Assets/UI/Options Menu/Options-Windowed Button.png" id="28_cnmo5"]
 [ext_resource type="Texture2D" uid="uid://bcmwk8ncx3r1v" path="res://Assets/UI/Options Menu/Options-Windowed Button-Pressed.png" id="29_w0f7l"]
-[ext_resource type="Texture2D" uid="uid://bavqwvv0xhl3h" path="res://Assets/UI/Options Menu/Options-Windowed Button-Hover.png" id="30_076wk"]
+[ext_resource type="Texture2D" uid="uid://5txq2v8tcreg" path="res://Assets/UI/Options Menu/Options-Windowed Button-Highlight.png" id="30_vdmed"]
+[ext_resource type="Texture2D" uid="uid://dv2amfmi6e8m0" path="res://Assets/UI/Main Menu/Back Button-Highlight.png" id="33_v0rdl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1eedu"]
 animations = [{
@@ -143,7 +143,7 @@ offset_left = 12.4167
 offset_top = 55.5
 offset_right = 39.4167
 offset_bottom = 86.5
-focus_neighbor_right = NodePath("../../Panel/ButtonContainer/VideoButton")
+focus_neighbor_right = NodePath("../../Panel/ButtonContainer/GeneralButton")
 texture_normal = ExtResource("4_d2bxy")
 texture_click_mask = SubResource("BitMap_ptb6h")
 
@@ -181,7 +181,7 @@ offset_right = 295.0
 offset_bottom = -97.0
 scale = Vector2(4, 4)
 
-[node name="VideoButton" type="TextureButton" parent="Panel/ButtonContainer"]
+[node name="GeneralButton" type="TextureButton" parent="Panel/ButtonContainer"]
 layout_mode = 2
 focus_neighbor_left = NodePath("../../../BackgroundImage2/TextureButton")
 focus_neighbor_top = NodePath("../../../BackButton")
@@ -189,23 +189,23 @@ focus_neighbor_right = NodePath("../AudioButton")
 focus_neighbor_bottom = NodePath("../../Video/HBoxContainer1/FullscreenButton")
 focus_next = NodePath("../AudioButton")
 focus_previous = NodePath("../ControlsButton")
-texture_normal = ExtResource("15_16n22")
-texture_pressed = ExtResource("16_8or5b")
-texture_hover = ExtResource("17_su33v")
-texture_focused = ExtResource("17_su33v")
+texture_normal = ExtResource("15_e3ohw")
+texture_pressed = ExtResource("16_ua2j8")
+texture_hover = ExtResource("17_ilx8q")
+texture_focused = ExtResource("17_ilx8q")
 
 [node name="AudioButton" type="TextureButton" parent="Panel/ButtonContainer"]
 layout_mode = 2
-focus_neighbor_left = NodePath("../VideoButton")
+focus_neighbor_left = NodePath("../GeneralButton")
 focus_neighbor_top = NodePath("../../../BackButton")
 focus_neighbor_right = NodePath("../ControlsButton")
 focus_neighbor_bottom = NodePath("../../Audio/HBoxContainer/CenterContainer/HSlider")
 focus_next = NodePath("../ControlsButton")
-focus_previous = NodePath("../VideoButton")
+focus_previous = NodePath("../GeneralButton")
 texture_normal = ExtResource("18_kjfmh")
 texture_pressed = ExtResource("19_u7jnv")
-texture_hover = ExtResource("20_r07cr")
-texture_focused = ExtResource("20_r07cr")
+texture_hover = ExtResource("20_o1edi")
+texture_focused = ExtResource("20_o1edi")
 
 [node name="ControlsButton" type="TextureButton" parent="Panel/ButtonContainer"]
 layout_mode = 2
@@ -213,12 +213,12 @@ focus_neighbor_left = NodePath("../AudioButton")
 focus_neighbor_top = NodePath("../../../BackButton")
 focus_neighbor_right = NodePath("../../../BackButton")
 focus_neighbor_bottom = NodePath("../../../BackButton")
-focus_next = NodePath("../VideoButton")
+focus_next = NodePath("../GeneralButton")
 focus_previous = NodePath("../AudioButton")
 texture_normal = ExtResource("21_bh2p4")
 texture_pressed = ExtResource("22_0db4n")
-texture_hover = ExtResource("23_elh3h")
-texture_focused = ExtResource("23_elh3h")
+texture_hover = ExtResource("23_7t7jx")
+texture_focused = ExtResource("23_7t7jx")
 
 [node name="Fullscreen" type="Label" parent="Panel"]
 layout_mode = 2
@@ -256,12 +256,12 @@ theme_override_constants/separation = 5
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
-focus_neighbor_top = NodePath("../../../ButtonContainer/VideoButton")
+focus_neighbor_top = NodePath("../../../ButtonContainer/GeneralButton")
 focus_neighbor_bottom = NodePath("../../HBoxContainer2/BorderlessButton")
 texture_normal = ExtResource("25_5gllq")
 texture_pressed = ExtResource("26_yqtt8")
-texture_hover = ExtResource("27_r3758")
-texture_focused = ExtResource("27_r3758")
+texture_hover = ExtResource("27_xmhy8")
+texture_focused = ExtResource("27_xmhy8")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Panel/Video"]
 layout_mode = 2
@@ -274,8 +274,8 @@ focus_neighbor_top = NodePath("../../HBoxContainer1/FullscreenButton")
 focus_neighbor_bottom = NodePath("../../../../BackButton")
 texture_normal = ExtResource("28_cnmo5")
 texture_pressed = ExtResource("29_w0f7l")
-texture_hover = ExtResource("30_076wk")
-texture_focused = ExtResource("30_076wk")
+texture_hover = ExtResource("30_vdmed")
+texture_focused = ExtResource("30_vdmed")
 
 [node name="Master Volume" type="Label" parent="Panel"]
 visible = false
@@ -475,15 +475,15 @@ offset_right = 1258.0
 offset_bottom = 863.0
 scale = Vector2(7, 7)
 focus_neighbor_left = NodePath("../Panel/ButtonContainer/ControlsButton")
-focus_neighbor_right = NodePath("../Panel/ButtonContainer/VideoButton")
+focus_neighbor_right = NodePath("../Panel/ButtonContainer/GeneralButton")
 focus_neighbor_bottom = NodePath("../BackgroundImage2/TextureButton")
 texture_normal = ExtResource("4_a10li")
 texture_pressed = ExtResource("5_1aokt")
-texture_hover = ExtResource("6_8rv3c")
-texture_focused = ExtResource("6_8rv3c")
+texture_hover = ExtResource("33_v0rdl")
+texture_focused = ExtResource("33_v0rdl")
 
 [connection signal="animation_looped" from="BackgroundImage2/Justin" to="BackgroundImage2" method="_on_justin_animation_looped"]
-[connection signal="pressed" from="Panel/ButtonContainer/VideoButton" to="." method="_on_video_button_pressed"]
+[connection signal="pressed" from="Panel/ButtonContainer/GeneralButton" to="." method="_on_general_button_pressed"]
 [connection signal="pressed" from="Panel/ButtonContainer/AudioButton" to="." method="_on_audio_button_pressed"]
 [connection signal="pressed" from="Panel/ButtonContainer/ControlsButton" to="." method="_on_controls_button_pressed"]
 [connection signal="pressed" from="Panel/Video/HBoxContainer1/FullscreenButton" to="." method="_on_fullscreen_button_pressed"]

@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://bv5ntikltbagw" path="res://Assets/UI/GameOver Menu/GameOverMenu-Frame.png" id="2_66bdl"]
 [ext_resource type="Texture2D" uid="uid://b2tcp8e6quo31" path="res://Assets/UI/GameOver Menu/GameOverMenu-Retry-Button.png" id="3_mjtmr"]
 [ext_resource type="Texture2D" uid="uid://cwkbp364o5gwv" path="res://Assets/UI/GameOver Menu/GameOverMenu-Retry-Button-Pressed.png" id="4_d34e0"]
-[ext_resource type="Texture2D" uid="uid://bttdlgjt7uha1" path="res://Assets/UI/GameOver Menu/GameOverMenu-Retry-Button-Hover.png" id="5_7usre"]
+[ext_resource type="Texture2D" uid="uid://tknspo8cg5uk" path="res://Assets/UI/GameOver Menu/GameOverMenu-Retry-Button-Highlight.png" id="5_10qti"]
 [ext_resource type="Texture2D" uid="uid://lyrxxnqeuunm" path="res://Assets/UI/GameOver Menu/GameOverMenu-GiveUp-Button.png" id="6_o1fix"]
 [ext_resource type="Texture2D" uid="uid://bxtslgxruvr7r" path="res://Assets/UI/GameOver Menu/GameOverMenu-GiveUp-Button-Pressed.png" id="7_5lq6x"]
-[ext_resource type="Texture2D" uid="uid://bjh26wc6jtbeu" path="res://Assets/UI/GameOver Menu/GameOverMenu-GiveUp-Button-Hover.png" id="8_oqr6y"]
+[ext_resource type="Texture2D" uid="uid://i4imm3kfp0pq" path="res://Assets/UI/GameOver Menu/GameOverMenu-GiveUp-Button-Highlight.png" id="8_tnkys"]
 
 [node name="gameover_ui" type="Control"]
 process_mode = 2
@@ -70,8 +70,8 @@ focus_next = NodePath("../GiveUpButton")
 focus_previous = NodePath("../GiveUpButton")
 texture_normal = ExtResource("3_mjtmr")
 texture_pressed = ExtResource("4_d34e0")
-texture_hover = ExtResource("5_7usre")
-texture_focused = ExtResource("5_7usre")
+texture_hover = ExtResource("5_10qti")
+texture_focused = ExtResource("5_10qti")
 
 [node name="GiveUpButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -83,8 +83,8 @@ focus_next = NodePath("../RetryButton")
 focus_previous = NodePath("../RetryButton")
 texture_normal = ExtResource("6_o1fix")
 texture_pressed = ExtResource("7_5lq6x")
-texture_hover = ExtResource("8_oqr6y")
-texture_focused = ExtResource("8_oqr6y")
+texture_hover = ExtResource("8_tnkys")
+texture_focused = ExtResource("8_tnkys")
 
 [connection signal="pressed" from="Panel/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/GiveUpButton" to="." method="_on_give_up_button_pressed"]

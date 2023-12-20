@@ -20,7 +20,7 @@ func _process(delta):
 					get_viewport().gui_get_focus_owner().emit_signal("pressed")
 
 
-func _on_give_up_button_pressed():
+func _on_exit_up_button_pressed():
 	Events.emit_signal("go_to_main_menu")
 
 func resetFocusedButton():
@@ -32,3 +32,7 @@ func _on_next_level_button_pressed():
 	current_state = States.DISABLED
 	visible = false
 	Events.emit_signal("go_to_next_level")
+
+
+func _on_exit_button_pressed():
+	pass # Replace with function body.

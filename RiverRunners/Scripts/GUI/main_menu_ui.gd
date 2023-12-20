@@ -1,5 +1,7 @@
 extends Control
 
+const FILE_MANAGEMENT_SCRIPT = preload("res://Scripts/FileManagement.gd")
+
 var image
 var lastFocusedButton = null
 
@@ -16,6 +18,8 @@ func _ready():
 	$VBoxContainer.visible = true
 	$VBoxContainer2.visible = false
 	$Panel.visible = false
+	$BackButton.visible = false
+	$Panel2.visible = false
 
 	Events.connect("go_to_previous_screen", backFromOptions)
 
@@ -23,6 +27,7 @@ func _process(delta):
 
 	match current_state:
 		States.MAIN:
+			$CreditsButton.visible = true
 			$OptionsUI.visible = false
 			$OptionsUI.setActive(false)
 			if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
@@ -57,7 +62,12 @@ func _on_play_button_pressed():
 	lastFocusedButton = $VBoxContainer/PlayButton
 	$VBoxContainer.visible = false
 	$VBoxContainer2.visible = true
+	$Panel2.visible = true
+	$BackButton.visible = true
 	#Events.emit_signal("go_to_level_select")
+
+	update_score() 	#call update score to score ui on main menu and finish when having infinite mode
+
 	current_state = States.LEVELS
 
 
@@ -65,6 +75,7 @@ func _on_options_button_pressed():
 	lastFocusedButton = $VBoxContainer/OptionsButton
 	#Events.emit_signal("go_to_options")
 	$VBoxContainer.visible = false
+	$CreditsButton.visible = false
 	current_state = States.OPTIONS
 	$OptionsUI.visible = true
 	$OptionsUI.resetFocus()
@@ -96,6 +107,8 @@ func backFromOptions():
 func _on_back_button_pressed():
 	$VBoxContainer.visible = true
 	$VBoxContainer2.visible = false
+	$BackButton.visible = false
+	$Panel2.visible = false
 	current_state = States.MAIN
 
 func _on_level_1_button_pressed():
@@ -128,3 +141,9 @@ func _on_level_6_button_pressed():
 
 func _on_infinite_button_pressed():
 	pass # Replace with function body.
+
+func update_score():
+	if FILE_MANAGEMENT_SCRIPT.loadHighestScore() == null:
+		$Panel2/Label2.text = str(0)
+	else: 
+		$Panel2/Label2.text = str(FILE_MANAGEMENT_SCRIPT.loadHighestScore())

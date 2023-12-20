@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://clgig3oyqsskp" path="res://Assets/UI/LevelComplete/LevelCompleteMenu.png" id="2_8o1uv"]
 [ext_resource type="Texture2D" uid="uid://wsew405vkc51" path="res://Assets/UI/LevelComplete/NextLevel Button.png" id="3_6wdo1"]
 [ext_resource type="Texture2D" uid="uid://wulug0tdy4wd" path="res://Assets/UI/LevelComplete/NextLevel Button-Pressed.png" id="4_8u4ih"]
-[ext_resource type="Texture2D" uid="uid://b4o5ogflqwm71" path="res://Assets/UI/LevelComplete/NextLevel Button-Hover.png" id="5_7evwh"]
+[ext_resource type="Texture2D" uid="uid://xscyrrna2hql" path="res://Assets/UI/LevelComplete/NextLevel Button-Highlight.png" id="5_soewb"]
 [ext_resource type="Texture2D" uid="uid://cmg7thhkoaink" path="res://Assets/UI/LevelComplete/NextLevel-Exit Button.png" id="6_5kkqp"]
 [ext_resource type="Texture2D" uid="uid://do2vgu4x8hsi0" path="res://Assets/UI/LevelComplete/NextLevel-Exit Button-Pressed.png" id="7_4rtgi"]
-[ext_resource type="Texture2D" uid="uid://dry5p53x8mv1i" path="res://Assets/UI/LevelComplete/NextLevel-Exit Button-Hover.png" id="8_gukdy"]
+[ext_resource type="Texture2D" uid="uid://ui24djjr6pth" path="res://Assets/UI/LevelComplete/NextLevel-Exit Button-Highlight.png" id="8_duhro"]
 
 [node name="levelcomplete_ui" type="Control"]
 process_mode = 2
@@ -65,18 +65,18 @@ grow_vertical = 2
 [node name="NextLevelButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_left = NodePath(".")
-focus_neighbor_top = NodePath("../GiveUpButton")
+focus_neighbor_top = NodePath("../ExitButton")
 focus_neighbor_right = NodePath(".")
-focus_neighbor_bottom = NodePath("../GiveUpButton")
-focus_next = NodePath("../GiveUpButton")
-focus_previous = NodePath("../GiveUpButton")
+focus_neighbor_bottom = NodePath("../ExitButton")
+focus_next = NodePath("../ExitButton")
+focus_previous = NodePath("../ExitButton")
 texture_normal = ExtResource("3_6wdo1")
 texture_pressed = ExtResource("4_8u4ih")
-texture_hover = ExtResource("5_7evwh")
+texture_hover = ExtResource("5_soewb")
 texture_disabled = ExtResource("4_8u4ih")
-texture_focused = ExtResource("5_7evwh")
+texture_focused = ExtResource("5_soewb")
 
-[node name="GiveUpButton" type="TextureButton" parent="Panel/VBoxContainer"]
+[node name="ExitButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../NextLevelButton")
@@ -86,9 +86,9 @@ focus_next = NodePath("../NextLevelButton")
 focus_previous = NodePath("../NextLevelButton")
 texture_normal = ExtResource("6_5kkqp")
 texture_pressed = ExtResource("7_4rtgi")
-texture_hover = ExtResource("8_gukdy")
+texture_hover = ExtResource("8_duhro")
 texture_disabled = ExtResource("7_4rtgi")
-texture_focused = ExtResource("8_gukdy")
+texture_focused = ExtResource("8_duhro")
 
 [connection signal="pressed" from="Panel/VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/GiveUpButton" to="." method="_on_give_up_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

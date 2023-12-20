@@ -81,11 +81,15 @@ func gameover():
 	pauseScene.visible = false
 	levelcompleteScene.visible = false
 
-	gameoverScene.visible = true
+	gameoverScene.visible = false
 	gameoverScene.resetFocusedButton()
 
-	#enviar sinal com o highest score obtido
-	
+	#enviar sinal com o highest score obtido e verificar se o score e maior que o highestscore
+	score.stop_counting()
+	score.checkHighestScore()
+	endlessgameoverScene.visible = true
+	endlessgameoverScene.highest_score(score.get_points())
+
 	current_state = States.GAMEOVER
 
 
@@ -95,6 +99,10 @@ func completed():
 
 	levelcompleteScene.visible = true
 	levelcompleteScene.resetFocusedButton()
+	
+	score.stop_counting()
+	score.checkHighestScore()
+
 
 	current_state = States.COMPLETED
 

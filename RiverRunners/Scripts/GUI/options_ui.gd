@@ -13,7 +13,7 @@ var active = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Events.connect("camera_status", onUpdateCameraStatus)
-	$Panel/ButtonContainer/VideoButton.grab_focus()
+	$Panel/ButtonContainer/GeneralButton.grab_focus()
 	$Panel/Video.visible = true
 	$Panel/Fullscreen.visible = true
 	$Panel/Windowed.visible = true
@@ -21,7 +21,7 @@ func _ready():
 	makeLabels()
 	redoControllsButtons()
 
-	_on_video_button_pressed()
+	_on_general_button_pressed()
 	
 func _process(delta):
 	if active:
@@ -35,8 +35,8 @@ func setActive(value):
 	active = value
 
 func resetFocus():
-	$Panel/ButtonContainer/VideoButton.grab_focus()
-	_on_video_button_pressed()
+	$Panel/ButtonContainer/GeneralButton.grab_focus()
+	_on_general_button_pressed()
 
 func _on_back_button_pressed():
 	Events.emit_signal("go_to_previous_screen")
@@ -56,7 +56,7 @@ func _on_audio_button_pressed():
 	$Panel/Keyboard.visible = false
 	$Panel/Controller.visible = false	
 
-func _on_video_button_pressed():
+func _on_general_button_pressed():
 	$Panel/Video.visible = true
 	$Panel/Fullscreen.visible = true
 	$Panel/Windowed.visible = true

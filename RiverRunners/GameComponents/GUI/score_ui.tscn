@@ -39,9 +39,9 @@ texture = ExtResource("2_i4hab")
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 12.0
+offset_left = 11.0
 offset_top = 10.0
-offset_right = 75.0
+offset_right = 74.0
 offset_bottom = 36.0
 text = "SCORE"
 label_settings = SubResource("LabelSettings_geimp")

@@ -1,4 +1,5 @@
 const SAVE_PATH = "user://settings.cfg"
+const SAVE_PATH_SCORE = "user://score.cfg"
 
 static func loadConfig():
 	var config = ConfigFile.new()
@@ -29,3 +30,21 @@ static func saveConfig():
 		config.set_value("input", action, InputMap.action_get_events(action))
 
 	config.save(SAVE_PATH)
+
+static func loadHighestScore():
+	var config = ConfigFile.new()
+
+	var valid = config.load(SAVE_PATH_SCORE) == OK
+
+	if valid:
+		valid = config.has_section("score")
+	
+	if valid:
+		return config.get_value("score", "highestScore")
+
+static func saveHighestScore(score):
+	var config = ConfigFile.new()
+
+	config.set_value("score", "highestScore", score)
+
+	config.save(SAVE_PATH_SCORE)

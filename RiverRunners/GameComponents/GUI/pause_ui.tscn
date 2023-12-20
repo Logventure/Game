@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://do4b344v101df" path="res://Assets/UI/Pause Menu/PauseMenu-Frame.png" id="2_sdw8s"]
 [ext_resource type="Texture2D" uid="uid://cgevkdg44ju4u" path="res://Assets/UI/Pause Menu/PauseMenu-Resume-Button.png" id="3_q6qj3"]
 [ext_resource type="Texture2D" uid="uid://is7fmvdn2sbp" path="res://Assets/UI/Pause Menu/PauseMenu-Resume-Button-Pressed.png" id="4_lx0jt"]
-[ext_resource type="Texture2D" uid="uid://g2nk5o2wkadu" path="res://Assets/UI/Pause Menu/PauseMenu-Resume-Button-Hover.png" id="5_prr7u"]
+[ext_resource type="Texture2D" uid="uid://cqwg5ic6q23dh" path="res://Assets/UI/Pause Menu/PauseMenu-Resume-Button-Highlight.png" id="5_0obxa"]
 [ext_resource type="Texture2D" uid="uid://c75x7pfcwff0o" path="res://Assets/UI/Pause Menu/PauseMenu-Options-Button.png" id="6_mopkv"]
 [ext_resource type="Texture2D" uid="uid://c10anpe3pamvh" path="res://Assets/UI/Pause Menu/PauseMenu-Options-Button-Pressed.png" id="7_ctrhb"]
-[ext_resource type="Texture2D" uid="uid://cpj2ak457tba0" path="res://Assets/UI/Pause Menu/PauseMenu-Options-Button-Hover.png" id="8_vi0sp"]
+[ext_resource type="Texture2D" uid="uid://cguq7k8aq8ygo" path="res://Assets/UI/Pause Menu/PauseMenu-Options-Button-Highlight.png" id="8_j71cu"]
 [ext_resource type="Texture2D" uid="uid://div7ccodqwkb6" path="res://Assets/UI/Pause Menu/PauseMenu-GiveUp-Button.png" id="9_h8777"]
 [ext_resource type="Texture2D" uid="uid://o4fajle06pf8" path="res://Assets/UI/Pause Menu/PauseMenu-GiveUp-Button-Pressed.png" id="10_bugpt"]
-[ext_resource type="Texture2D" uid="uid://d4nn4pl0lq266" path="res://Assets/UI/Pause Menu/PauseMenu-GiveUp-Button-Hover.png" id="11_mveuc"]
+[ext_resource type="Texture2D" uid="uid://decfd5u0bvfhr" path="res://Assets/UI/Pause Menu/PauseMenu-GiveUp-Button-Highlight.png" id="11_t1un7"]
 [ext_resource type="PackedScene" uid="uid://chkd7lgphi0cv" path="res://GameComponents/GUI/options_ui.tscn" id="12_syo3b"]
 
 [node name="pause_ui" type="Control"]
@@ -74,8 +74,8 @@ focus_next = NodePath("../OptionsButton")
 focus_previous = NodePath("../GiveUpButton")
 texture_normal = ExtResource("3_q6qj3")
 texture_pressed = ExtResource("4_lx0jt")
-texture_hover = ExtResource("5_prr7u")
-texture_focused = ExtResource("5_prr7u")
+texture_hover = ExtResource("5_0obxa")
+texture_focused = ExtResource("5_0obxa")
 
 [node name="OptionsButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -86,8 +86,8 @@ focus_next = NodePath("../GiveUpButton")
 focus_previous = NodePath("../ResumeButton")
 texture_normal = ExtResource("6_mopkv")
 texture_pressed = ExtResource("7_ctrhb")
-texture_hover = ExtResource("8_vi0sp")
-texture_focused = ExtResource("8_vi0sp")
+texture_hover = ExtResource("8_j71cu")
+texture_focused = ExtResource("8_j71cu")
 
 [node name="GiveUpButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -98,8 +98,8 @@ focus_next = NodePath("../ResumeButton")
 focus_previous = NodePath("../OptionsButton")
 texture_normal = ExtResource("9_h8777")
 texture_pressed = ExtResource("10_bugpt")
-texture_hover = ExtResource("11_mveuc")
-texture_focused = ExtResource("11_mveuc")
+texture_hover = ExtResource("11_t1un7")
+texture_focused = ExtResource("11_t1un7")
 
 [node name="OptionsUI" parent="." instance=ExtResource("12_syo3b")]
 offset_left = -1731.0

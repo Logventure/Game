@@ -29,8 +29,8 @@ func _process(delta):
 			$OptionsUI.visible = true
 			$OptionsUI.setActive(true)
 			if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
-				if $OptionsUI/Panel/ButtonContainer/VideoButton.visible == true:
-					$OptionsUI/Panel/ButtonContainer/VideoButton.grab_focus()
+				if $OptionsUI/Panel/ButtonContainer/GeneralButton.visible == true:
+					$OptionsUI/Panel/ButtonContainer/GeneralButton.grab_focus()
 			if Input.is_action_just_pressed("confirm") and not get_viewport().gui_get_focus_owner() == null:
 					get_viewport().gui_get_focus_owner().emit_signal("pressed")
 
@@ -38,8 +38,8 @@ func _on_options_button_pressed():
 	current_state = States.OPTIONS
 	$Panel.visible = false
 	$OptionsUI.visible = true
-	if $OptionsUI/Panel/ButtonContainer/VideoButton.visible == true:
-		$OptionsUI/Panel/ButtonContainer/VideoButton.grab_focus()
+	if $OptionsUI/Panel/ButtonContainer/GeneralButton.visible == true:
+		$OptionsUI/Panel/ButtonContainer/GeneralButton.grab_focus()
 	#Events.emit_signal("go_to_options")
 	$OptionsUI.resetFocus()
 

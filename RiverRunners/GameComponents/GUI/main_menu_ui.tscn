@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://fdgjnt3f4u6u"]
+[gd_scene load_steps=61 format=3 uid="uid://fdgjnt3f4u6u"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/main_menu_ui.gd" id="1_go47f"]
 [ext_resource type="Texture2D" uid="uid://c1lero7mqpehw" path="res://Assets/UI/Main Menu/MainMenu-Background2.png" id="2_op0qx"]
@@ -112,8 +112,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="BitMap" id="BitMap_5ekvv"]
-
 [sub_resource type="LabelSettings" id="LabelSettings_auydg"]
 font = ExtResource("57_lvlfe")
 font_size = 20
@@ -150,7 +148,6 @@ offset_top = 55.5
 offset_right = 39.4167
 offset_bottom = 86.5
 texture_normal = ExtResource("7_gb2yv")
-texture_click_mask = SubResource("BitMap_5ekvv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 visible = false

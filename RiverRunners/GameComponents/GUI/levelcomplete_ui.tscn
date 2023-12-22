@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://ui24djjr6pth" path="res://Assets/UI/LevelComplete/NextLevel-Exit Button-Highlight.png" id="8_duhro"]
 
 [node name="levelcomplete_ui" type="Control"]
-process_mode = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

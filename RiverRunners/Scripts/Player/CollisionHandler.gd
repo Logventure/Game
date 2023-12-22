@@ -4,8 +4,8 @@ var colliding = 0 #stores how many areas the log is currently colliding with
 var istimercounting = false
 var time_elapsed = 0.0
 
-@export var damageCooldown = 1.0
-@export var continuousDamageCooldown = 0.5
+@export var damageCooldown = 2.0
+@export var continuousDamageCooldown = 2.0
 
 var damage_enabled = true
 

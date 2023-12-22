@@ -13,6 +13,8 @@ var environmentTemplates = [] #pre-made environment templates are stored here
 var mapModules = [] #stores current map sections, oldest to newest
 var environmentModules = [] #stores current environment sections, oldest to newest
 
+var empty_module = {"module": Node2D.new(), "difficulty": 1, "group": 1, "length": 0, "entry_lanes": [1,2,3,4,5], "exit_lanes": [1,2,3,4,5]}
+
 @export var minGeneratedTiles = 10 #minimum number of tiles that should always be kept on the map
 @export var tilesize = 380 #width of each tile in pixels
 
@@ -175,11 +177,13 @@ func loadModuleInfoFromFile(path: String):
 
 #returns a random module from the loaded templates
 func randomizeModule(possibleModules,difficulty = 0,possibleGroups: Array = []): 
+	print("random module: ", possibleModules, difficulty, possibleGroups)
 	var randomModule = possibleModules[randi() % len(possibleModules)]
 	if randomModule["difficulty"] <= difficulty or difficulty < 1:	
 		for group in randomModule["group"]:
 			if group < 0:
-				return randomizeModule(possibleModules,difficulty,possibleGroups)
+				return empty_module
+				#return randomizeModule(possibleModules,difficulty,possibleGroups)
 			if possibleGroups.has(group) or possibleGroups == []:
 				return randomModule
 	return randomizeModule(possibleModules,difficulty,possibleGroups)

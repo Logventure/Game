@@ -35,7 +35,7 @@ func checkHighestScore():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if to_count:
-		time += delta * 2
+		time += delta * 3
 		points = snapped(time, 1)
 		$Panel/Label2.text = str(points)
 		print(points)

@@ -145,5 +145,9 @@ func _on_infinite_button_pressed():
 func update_score():
 	if FILE_MANAGEMENT_SCRIPT.loadHighestScore() == null:
 		$Panel2/Label2.text = str(0)
-	else: 
-		$Panel2/Label2.text = str(FILE_MANAGEMENT_SCRIPT.loadHighestScore())
+	else:
+		var labeled_score = $Panel2/Label2.text
+		if labeled_score.to_int() < FILE_MANAGEMENT_SCRIPT.loadHighestScore():
+			$Panel2/Label2.text = str(FILE_MANAGEMENT_SCRIPT.loadHighestScore())
+			$Panel2/Label2.position.x -= $Panel2/Label2.size.x/2
+			$Panel2/Label2.position.y -= $Panel2/Label2.size.y/2

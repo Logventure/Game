@@ -7,6 +7,8 @@ var isInInputOverrideMode = false
 var overridingAction = ""
 var keyboardActions = ["dashLeft", "dashRight", "jump", "throw", "shield"]
 var controllerActions = ["controller_dashLeft", "controller_dashRight", "controller_jump", "controller_throw", "controller_shield"]
+enum States {GENERAL, AUDIO, CONTROLS}
+var current_state = States.GENERAL
 
 var active = true
 
@@ -14,7 +16,7 @@ var active = true
 func _ready():
 	Events.connect("camera_status", onUpdateCameraStatus)
 	$Panel/ButtonContainer/GeneralButton.grab_focus()
-	$Panel/Video.visible = true
+	$Panel/General.visible = true
 	$Panel/Fullscreen.visible = true
 	$Panel/Windowed.visible = true
 	initializeFont()
@@ -30,6 +32,16 @@ func _process(delta):
 				$BackButton.grab_focus()
 		if Input.is_action_just_pressed("confirm") and not get_viewport().gui_get_focus_owner() == null:
 			get_viewport().gui_get_focus_owner().emit_signal("pressed")	
+	
+	match current_state:
+		States.GENERAL:
+			pass
+
+		States.AUDIO:
+			pass
+
+		States.CONTROLS:
+			pass
 
 func setActive(value):
 	active = value
@@ -43,21 +55,40 @@ func _on_back_button_pressed():
 
 
 func _on_audio_button_pressed():
+	current_state = States.AUDIO
+
+	audio_button_clicked()	
+
+func _on_general_button_pressed():
+	current_state = States.GENERAL
+
+	general_button_clicked()
+
+func _on_controls_button_pressed():
+	current_state = States.CONTROLS
+
+	controls_button_clicked()
+
+func audio_button_clicked():
 	$"Panel/Master Volume".visible = true	
 	$"Panel/Sound Volume".visible = true
 	$"Panel/Music Volume".visible = true
 	$Panel/Audio.visible = true
 
-	$Panel/Video.visible = false
+	$Panel/General.visible = false
 	$Panel/Fullscreen.visible = false
 	$Panel/Windowed.visible = false
 
 	$Panel/Action.visible = false
 	$Panel/Keyboard.visible = false
-	$Panel/Controller.visible = false	
+	$Panel/Controller.visible = false
 
-func _on_general_button_pressed():
-	$Panel/Video.visible = true
+	$Panel/ButtonContainer/GeneralButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/Audio/HBoxContainer/CenterContainer/HSlider.get_path())
+	$Panel/ButtonContainer/AudioButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/Audio/HBoxContainer/CenterContainer/HSlider.get_path())
+	$Panel/ButtonContainer/ControlsButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/Audio/HBoxContainer/CenterContainer/HSlider.get_path())
+
+func general_button_clicked():
+	$Panel/General.visible = true
 	$Panel/Fullscreen.visible = true
 	$Panel/Windowed.visible = true
 
@@ -70,12 +101,16 @@ func _on_general_button_pressed():
 	$Panel/Keyboard.visible = false
 	$Panel/Controller.visible = false
 
-func _on_controls_button_pressed():
+	$Panel/ButtonContainer/GeneralButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/General/HBoxContainer1/FullscreenButton.get_path())
+	$Panel/ButtonContainer/AudioButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/General/HBoxContainer1/FullscreenButton.get_path())
+	$Panel/ButtonContainer/ControlsButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/General/HBoxContainer1/FullscreenButton.get_path())
+
+func controls_button_clicked():
 	$Panel/Action.visible = true
 	$Panel/Keyboard.visible = true
 	$Panel/Controller.visible = true
 
-	$Panel/Video.visible = false
+	$Panel/General.visible = false
 	$Panel/Fullscreen.visible = false
 	$Panel/Windowed.visible = false
 
@@ -83,6 +118,10 @@ func _on_controls_button_pressed():
 	$"Panel/Sound Volume".visible = false
 	$"Panel/Music Volume".visible = false
 	$Panel/Audio.visible = false
+
+	$Panel/ButtonContainer/GeneralButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/Keyboard/dashLeftButton.get_path())
+	$Panel/ButtonContainer/AudioButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/Keyboard/dashLeftButton.get_path())
+	$Panel/ButtonContainer/ControlsButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/Controller/controller_dashLeftButton.get_path())
 
 func onUpdateCameraStatus(pos,zoom): #so that the menu shows up when entered mid level
 	var temp_solution = Vector2(pos.x - 1920/2, pos.y - 1080/2) #temporary solution
@@ -221,6 +260,7 @@ func redoControllsButtons():
 		var selectedButton = buttons[buttonIndex]
 		match buttonIndex:
 			0:
+				selectedButton.set_focus_neighbor(SIDE_TOP, $Panel/ButtonContainer/ControlsButton.get_path())
 				selectedButton.set_focus_neighbor(SIDE_RIGHT, $Panel/Controller/controller_dashLeftButton.get_path())
 				selectedButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/Keyboard/dashRightButton.get_path())
 			1:
@@ -238,7 +278,9 @@ func redoControllsButtons():
 			4:
 				selectedButton.set_focus_neighbor(SIDE_TOP, $Panel/Keyboard/throwButton.get_path())
 				selectedButton.set_focus_neighbor(SIDE_RIGHT, $Panel/Controller/controller_shieldButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_BOTTOM, $BackButton.get_path())
 			5:
+				selectedButton.set_focus_neighbor(SIDE_TOP, $Panel/ButtonContainer/ControlsButton.get_path())
 				selectedButton.set_focus_neighbor(SIDE_LEFT, $Panel/Keyboard/dashLeftButton.get_path())
 				selectedButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/Controller/controller_dashRightButton.get_path())
 			6:
@@ -256,6 +298,7 @@ func redoControllsButtons():
 			9:
 				selectedButton.set_focus_neighbor(SIDE_TOP, $Panel/Controller/controller_throwButton.get_path())
 				selectedButton.set_focus_neighbor(SIDE_LEFT, $Panel/Keyboard/shieldButton.get_path())
+				selectedButton.set_focus_neighbor(SIDE_BOTTOM, $BackButton.get_path())
 
 func _input(event):
 	var validInput = false

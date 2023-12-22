@@ -183,12 +183,11 @@ scale = Vector2(4, 4)
 
 [node name="GeneralButton" type="TextureButton" parent="Panel/ButtonContainer"]
 layout_mode = 2
-focus_neighbor_left = NodePath("../../../BackgroundImage2/TextureButton")
+focus_neighbor_left = NodePath("../../../BackButton")
 focus_neighbor_top = NodePath("../../../BackButton")
 focus_neighbor_right = NodePath("../AudioButton")
-focus_neighbor_bottom = NodePath("../../Video/HBoxContainer1/FullscreenButton")
 focus_next = NodePath("../AudioButton")
-focus_previous = NodePath("../ControlsButton")
+focus_previous = NodePath("../../../BackButton")
 texture_normal = ExtResource("15_e3ohw")
 texture_pressed = ExtResource("16_ua2j8")
 texture_hover = ExtResource("17_ilx8q")
@@ -199,7 +198,6 @@ layout_mode = 2
 focus_neighbor_left = NodePath("../GeneralButton")
 focus_neighbor_top = NodePath("../../../BackButton")
 focus_neighbor_right = NodePath("../ControlsButton")
-focus_neighbor_bottom = NodePath("../../Audio/HBoxContainer/CenterContainer/HSlider")
 focus_next = NodePath("../ControlsButton")
 focus_previous = NodePath("../GeneralButton")
 texture_normal = ExtResource("18_kjfmh")
@@ -212,7 +210,6 @@ layout_mode = 2
 focus_neighbor_left = NodePath("../AudioButton")
 focus_neighbor_top = NodePath("../../../BackButton")
 focus_neighbor_right = NodePath("../../../BackButton")
-focus_neighbor_bottom = NodePath("../../../BackButton")
 focus_next = NodePath("../GeneralButton")
 focus_previous = NodePath("../AudioButton")
 texture_normal = ExtResource("21_bh2p4")
@@ -240,7 +237,7 @@ scale = Vector2(1.25, 1.25)
 text = "Window:"
 label_settings = SubResource("LabelSettings_bk4cn")
 
-[node name="Video" type="VBoxContainer" parent="Panel"]
+[node name="General" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
 offset_left = 315.0
 offset_top = -46.0
@@ -248,11 +245,11 @@ offset_right = 363.0
 offset_bottom = -20.0
 scale = Vector2(4, 4)
 
-[node name="HBoxContainer1" type="HBoxContainer" parent="Panel/Video"]
+[node name="HBoxContainer1" type="HBoxContainer" parent="Panel/General"]
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="FullscreenButton" type="TextureButton" parent="Panel/Video/HBoxContainer1"]
+[node name="FullscreenButton" type="TextureButton" parent="Panel/General/HBoxContainer1"]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
@@ -263,11 +260,11 @@ texture_pressed = ExtResource("26_yqtt8")
 texture_hover = ExtResource("27_xmhy8")
 texture_focused = ExtResource("27_xmhy8")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/Video"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/General"]
 layout_mode = 2
 theme_override_constants/separation = 2
 
-[node name="BorderlessButton" type="TextureButton" parent="Panel/Video/HBoxContainer2"]
+[node name="BorderlessButton" type="TextureButton" parent="Panel/General/HBoxContainer2"]
 texture_filter = 1
 layout_mode = 2
 focus_neighbor_top = NodePath("../../HBoxContainer1/FullscreenButton")
@@ -486,6 +483,6 @@ texture_focused = ExtResource("33_v0rdl")
 [connection signal="pressed" from="Panel/ButtonContainer/GeneralButton" to="." method="_on_general_button_pressed"]
 [connection signal="pressed" from="Panel/ButtonContainer/AudioButton" to="." method="_on_audio_button_pressed"]
 [connection signal="pressed" from="Panel/ButtonContainer/ControlsButton" to="." method="_on_controls_button_pressed"]
-[connection signal="pressed" from="Panel/Video/HBoxContainer1/FullscreenButton" to="." method="_on_fullscreen_button_pressed"]
-[connection signal="pressed" from="Panel/Video/HBoxContainer2/BorderlessButton" to="." method="_on_borderless_button_pressed"]
+[connection signal="pressed" from="Panel/General/HBoxContainer1/FullscreenButton" to="." method="_on_fullscreen_button_pressed"]
+[connection signal="pressed" from="Panel/General/HBoxContainer2/BorderlessButton" to="." method="_on_borderless_button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

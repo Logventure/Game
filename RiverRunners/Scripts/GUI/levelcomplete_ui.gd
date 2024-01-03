@@ -25,6 +25,7 @@ func _on_exit_button_pressed():
 
 func resetFocusedButton():
 	current_state = States.COMPLETED
+	Events.emit_signal("new_level_completed")
 	if InputHandler.hasController():
 		$Panel/VBoxContainer/NextLevelButton.grab_focus()
 

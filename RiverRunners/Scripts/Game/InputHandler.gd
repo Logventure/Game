@@ -82,6 +82,9 @@ func getKeyboardCommands():
 	if Input.is_action_just_pressed("dashLeft"):
 		commands.append("dash_left")
 
+	if Input.is_action_just_pressed("dashFront"):
+		commands.append("dash_front")
+
 	if Input.is_action_pressed("left"):
 			commands.append("move_left")
 

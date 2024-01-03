@@ -11,6 +11,8 @@ var current_state = States.MAIN
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	setLevels()
+
 	if InputHandler.hasController():
 		$VBoxContainer/PlayButton.grab_focus()
 		lastFocusedButton = $VBoxContainer/PlayButton
@@ -20,7 +22,7 @@ func _ready():
 	$Panel.visible = false
 	$BackButton.visible = false
 	$Panel2.visible = false
-
+	
 	Events.connect("go_to_previous_screen", backFromOptions)
 
 func _process(delta):
@@ -151,3 +153,121 @@ func update_score():
 			$Panel2/Label2.text = str(FILE_MANAGEMENT_SCRIPT.loadHighestScore())
 			$Panel2/Label2.position.x -= $Panel2/Label2.size.x/2
 			$Panel2/Label2.position.y -= $Panel2/Label2.size.y/2
+
+func setLevels():
+	var savedLevels = FILE_MANAGEMENT_SCRIPT.loadLevels()
+	if savedLevels == null:
+		savedLevels = 0
+	print("saved levels: ", savedLevels)
+	match savedLevels:
+		0:
+			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
+			$VBoxContainer2/HBoxContainer/Level1Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level2Button.disabled = true
+			$VBoxContainer2/HBoxContainer/Level2Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer2/Level3Button.disabled = true
+			$VBoxContainer2/HBoxContainer2/Level3Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer2/Level4Button.disabled = true
+			$VBoxContainer2/HBoxContainer2/Level4Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer3/Level5Button.disabled = true
+			$VBoxContainer2/HBoxContainer3/Level5Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer3/Level6Button.disabled = true
+			$VBoxContainer2/HBoxContainer3/Level6Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.disabled = true
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
+		
+		1:
+			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
+			$VBoxContainer2/HBoxContainer/Level1Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level2Button.disabled = false
+			$VBoxContainer2/HBoxContainer/Level2Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level3Button.disabled = true
+			$VBoxContainer2/HBoxContainer2/Level3Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer2/Level4Button.disabled = true
+			$VBoxContainer2/HBoxContainer2/Level4Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer3/Level5Button.disabled = true
+			$VBoxContainer2/HBoxContainer3/Level5Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer3/Level6Button.disabled = true
+			$VBoxContainer2/HBoxContainer3/Level6Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.disabled = true
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
+
+		2:
+			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
+			$VBoxContainer2/HBoxContainer/Level1Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level2Button.disabled = false
+			$VBoxContainer2/HBoxContainer/Level2Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level3Button.disabled = false
+			$VBoxContainer2/HBoxContainer2/Level3Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level4Button.disabled = true
+			$VBoxContainer2/HBoxContainer2/Level4Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer3/Level5Button.disabled = true
+			$VBoxContainer2/HBoxContainer3/Level5Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer3/Level6Button.disabled = true
+			$VBoxContainer2/HBoxContainer3/Level6Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.disabled = true
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
+
+		3:
+			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
+			$VBoxContainer2/HBoxContainer/Level1Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level2Button.disabled = false
+			$VBoxContainer2/HBoxContainer/Level2Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level3Button.disabled = false
+			$VBoxContainer2/HBoxContainer2/Level3Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level4Button.disabled = false
+			$VBoxContainer2/HBoxContainer2/Level4Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer3/Level5Button.disabled = true
+			$VBoxContainer2/HBoxContainer3/Level5Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer3/Level6Button.disabled = true
+			$VBoxContainer2/HBoxContainer3/Level6Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.disabled = true
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
+
+		4:
+			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
+			$VBoxContainer2/HBoxContainer/Level1Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level2Button.disabled = false
+			$VBoxContainer2/HBoxContainer/Level2Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level3Button.disabled = false
+			$VBoxContainer2/HBoxContainer2/Level3Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level4Button.disabled = false
+			$VBoxContainer2/HBoxContainer2/Level4Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer3/Level5Button.disabled = false
+			$VBoxContainer2/HBoxContainer3/Level5Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer3/Level6Button.disabled = true
+			$VBoxContainer2/HBoxContainer3/Level6Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.disabled = true
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
+
+		5:
+			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
+			$VBoxContainer2/HBoxContainer/Level1Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level2Button.disabled = false
+			$VBoxContainer2/HBoxContainer/Level2Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level3Button.disabled = false
+			$VBoxContainer2/HBoxContainer2/Level3Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level4Button.disabled = false
+			$VBoxContainer2/HBoxContainer2/Level4Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer3/Level5Button.disabled = false
+			$VBoxContainer2/HBoxContainer3/Level5Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer3/Level6Button.disabled = false
+			$VBoxContainer2/HBoxContainer3/Level6Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.disabled = true
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
+		6:
+			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
+			$VBoxContainer2/HBoxContainer/Level1Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level2Button.disabled = false
+			$VBoxContainer2/HBoxContainer/Level2Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level3Button.disabled = false
+			$VBoxContainer2/HBoxContainer2/Level3Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level4Button.disabled = false
+			$VBoxContainer2/HBoxContainer2/Level4Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer3/Level5Button.disabled = false
+			$VBoxContainer2/HBoxContainer3/Level5Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer3/Level6Button.disabled = false
+			$VBoxContainer2/HBoxContainer3/Level6Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.disabled = false
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_STOP
+

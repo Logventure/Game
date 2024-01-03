@@ -37,6 +37,7 @@ signal player_died
 signal resume_game
 signal obstacles_ended
 signal level_completed
+signal new_level_completed
 
 signal input_confirm
 signal input_return

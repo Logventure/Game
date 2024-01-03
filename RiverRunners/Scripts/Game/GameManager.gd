@@ -29,6 +29,7 @@ func _ready():
 	Events.connect("go_to_level", switchToLevel)
 	Events.connect("go_to_next_level", switchToNextLevel)
 	Events.connect("go_to_previous_screen", switchToPreviousScreen)
+	Events.connect("new_level_completed", levelCompleted)
 
 	switchToMainMenu()
 
@@ -95,13 +96,22 @@ func switchToLevel(level_id: int):
 	replaceScreen(viewer, target_screen)
 
 func switchToNextLevel():
-	if last_level + 1 < len(level_ids):
-		last_level += 1
 	target_state = States.LEVEL
 	target_screen = loadScene("res://Levels/LevelTemplate.tscn")
-	var last_level_id = level_ids[last_level]
+	if last_level == len(level_ids):
+		last_level -= 1
+	var last_level_id = level_ids[last_level] #crashes when finishing last level and clicking next level. So on last level maybe take off the button next level??
 	target_screen.setLevelScript(last_level_id)
 	replaceScreen(viewer, target_screen)
+
+func levelCompleted():
+	if last_level + 1 < len(level_ids) + 1:
+		last_level += 1
+	var savedLevel = FILE_MANAGEMENT_SCRIPT.loadLevels()
+	if savedLevel == null:
+		savedLevel = 0
+	if last_level > savedLevel and last_level < len(level_ids) + 1:
+		FILE_MANAGEMENT_SCRIPT.saveLevels(last_level)
 
 func switchToPreviousScreen():
 	if previous_screen != null:

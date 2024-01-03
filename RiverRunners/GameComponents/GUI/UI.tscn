@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://xxdcxkrjegxv" path="res://GameComponents/GUI/gameover_ui.tscn" id="4_0kkfx"]
 [ext_resource type="PackedScene" uid="uid://xfkbxa5pluwk" path="res://GameComponents/GUI/levelcomplete_ui.tscn" id="5_xl6ur"]
 [ext_resource type="PackedScene" uid="uid://rsd1vkuyp70p" path="res://GameComponents/GUI/score_ui.tscn" id="6_nsksp"]
-[ext_resource type="PackedScene" path="res://GameComponents/GUI/endless_gameover_ui.tscn" id="7_3urrg"]
+[ext_resource type="PackedScene" uid="uid://ck88aacg8oi77" path="res://GameComponents/GUI/endless_gameover_ui.tscn" id="7_3urrg"]
 
 [node name="UI" type="Control"]
 layout_mode = 3

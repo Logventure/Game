@@ -98,19 +98,17 @@ func switchToLevel(level_id: int):
 func switchToNextLevel():
 	target_state = States.LEVEL
 	target_screen = loadScene("res://Levels/LevelTemplate.tscn")
-	if last_level == len(level_ids):
-		last_level -= 1
-	var last_level_id = level_ids[last_level] #crashes when finishing last level and clicking next level. So on last level maybe take off the button next level??
+	var last_level_id = level_ids[last_level]
 	target_screen.setLevelScript(last_level_id)
 	replaceScreen(viewer, target_screen)
 
 func levelCompleted():
-	if last_level + 1 < len(level_ids) + 1:
+	if last_level + 1 < len(level_ids):
 		last_level += 1
 	var savedLevel = FILE_MANAGEMENT_SCRIPT.loadLevels()
 	if savedLevel == null:
 		savedLevel = 0
-	if last_level > savedLevel and last_level < len(level_ids) + 1:
+	if last_level > savedLevel and last_level < len(level_ids):
 		FILE_MANAGEMENT_SCRIPT.saveLevels(last_level)
 
 func switchToPreviousScreen():

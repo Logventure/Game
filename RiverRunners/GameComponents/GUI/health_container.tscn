@@ -8,11 +8,11 @@ offset_left = 5.0
 offset_top = 58.0
 offset_right = 255.0
 offset_bottom = 133.0
-theme_override_constants/separation = 98
+theme_override_constants/separation = 107
 script = ExtResource("1_tos3v")
 
 [node name="empty_health_container" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(150, 1)
-scale = Vector2(6.5, 7.385)
+position = Vector2(167, 7)
+scale = Vector2(7.15, 8.124)
 texture = ExtResource("2_eihjt")

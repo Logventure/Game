@@ -11,6 +11,6 @@ script = ExtResource("1_8nt6j")
 
 [node name="health_bar" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(149, -2.38419e-07)
-scale = Vector2(6.45833, 7.665)
+position = Vector2(166, 5)
+scale = Vector2(7.1, 8.174)
 texture = ExtResource("1_4epq1")

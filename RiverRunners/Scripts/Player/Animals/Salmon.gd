@@ -93,6 +93,7 @@ func _process(delta):
 
 		States.PUSH_LEFT:
 			play("push-left")
+			Events.emit_signal("dashing")
 			if frame >= 1:
 				get_node("../").dashLeft()
 				current_state = States.DASHING_LEFT
@@ -103,6 +104,7 @@ func _process(delta):
 
 		States.PUSH_RIGHT:
 			play("push-right")
+			Events.emit_signal("dashing")
 			if frame >= 1:
 				get_node("../").dashRight()
 				current_state = States.DASHING_RIGHT

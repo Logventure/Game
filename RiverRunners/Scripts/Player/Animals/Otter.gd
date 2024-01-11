@@ -83,6 +83,7 @@ func handle_position():
 	
 func throw():
 	Events.emit_signal("otter_position",position)
+	Events.emit_signal("throwing")
 
 
 func _process(delta):

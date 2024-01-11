@@ -20,6 +20,7 @@ var level_ids = ["level_justin", "level_frog", "level_salmon", "level_crab", "le
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+
 	FILE_MANAGEMENT_SCRIPT.loadConfig()
 
 	Events.connect("go_to_main_menu", switchToMainMenu)
@@ -29,7 +30,7 @@ func _ready():
 	Events.connect("go_to_level", switchToLevel)
 	Events.connect("go_to_next_level", switchToNextLevel)
 	Events.connect("go_to_previous_screen", switchToPreviousScreen)
-	Events.connect("new_level_completed", levelCompleted)
+	Events.connect("level_completed", levelCompleted)
 
 	switchToMainMenu()
 

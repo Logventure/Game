@@ -19,11 +19,12 @@ static func loadConfig():
 		match(section):
 			"input":
 				for key in config.get_section_keys(section):
-					InputMap.action_erase_events(key)
-					
-					var events = config.get_value(section, key)
-					for event in events:
-						InputMap.action_add_event(key, event)
+					if InputMap.has_action(key):
+						InputMap.action_erase_events(key)
+						
+						var events = config.get_value(section, key)
+						for event in events:
+							InputMap.action_add_event(key, event)
 
 static func saveConfig():
 	var config = ConfigFile.new()

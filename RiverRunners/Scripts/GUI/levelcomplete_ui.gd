@@ -13,7 +13,7 @@ func _process(delta):
 			visible = false
 		States.COMPLETED:
 			visible = true		
-			if InputHandler.hasController() and get_viewport().gui_get_focus_owner() != $Panel/VBoxContainer/NextLevelButton and get_viewport().gui_get_focus_owner() != $Panel/VBoxContainer/GiveUpButton:
+			if InputHandler.hasController() and get_viewport().gui_get_focus_owner() != $Panel/VBoxContainer/NextLevelButton and get_viewport().gui_get_focus_owner() != $Panel/VBoxContainer/ExitButton:
 				if $Panel/VBoxContainer/NextLevelButton.visible == true:
 					$Panel/VBoxContainer/NextLevelButton.grab_focus()
 			if Input.is_action_just_pressed("confirm") and not get_viewport().gui_get_focus_owner() == null:
@@ -25,9 +25,9 @@ func _on_exit_button_pressed():
 
 func resetFocusedButton():
 	current_state = States.COMPLETED
-	Events.emit_signal("new_level_completed")
 	if InputHandler.hasController():
 		$Panel/VBoxContainer/NextLevelButton.grab_focus()
+	Events.emit_signal("new_level_completed")
 
 func _on_next_level_button_pressed():
 	current_state = States.DISABLED

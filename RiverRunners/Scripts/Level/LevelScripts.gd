@@ -228,3 +228,13 @@ func onDialogueEnd():
 		if level_events_status[id] == eventStatus.IN_PROGRESS and level_events[id]["Type"] == eventTypes.DIALOGUE:
 			level_events_status[id] = eventStatus.FINISHED
 			updateReadyToProcess()
+
+func isEndless():
+	var endless = true
+	for id in level_events.keys():
+		if level_events[id]["Type"] == eventTypes.DIALOGUE:
+			endless = false
+	return endless
+
+
+	

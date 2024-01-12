@@ -100,6 +100,11 @@ func onDie():
 func isPaused():
 	return current_state == States.PAUSED
 
+func isEndless():
+	if level_script:
+		return level_script.isEndless()
+	return true
+
 func onStartDialogue(file: String, wait_for_obstacle_end: bool):
 	if wait_for_obstacle_end:
 		Events.connect("obstacles_ended",startDialogue.bind(file))

@@ -128,7 +128,6 @@ func getLastInput():
 
 func clearLastInput():
 	last_input_age += max_age
-	print("Clear last input")
 
 func getControllerCommands():
 	var commands = []

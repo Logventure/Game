@@ -68,7 +68,6 @@ func explode():
 			shard_velocity_map[shard].y = shard_velocity_map[shard].y * 0.35
 				
 			add_child(shard)
-			print(shard)
 		
 	#this will make our base sprite invisible
 	color.a = 0

@@ -23,14 +23,14 @@ var empty_module = {"module": Node2D.new(), "difficulty": 1, "group": 1, "length
 
 var generateObstacles = true
 
-var obstacleQueue = ["res://MapGeneration/Modules/module1.tscn"] #if there are paths here, those modules will be added before the randomizer is used
+var obstacleQueue = [] #if there are paths here, those modules will be added before the randomizer is used
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#loads all scenes available on the Modules and Environment folders
 	var mapinfo = loadModuleInfoFromFile("res://TextFiles/moduleinfo.txt")
-	environmentTemplates.append_array(loadMapModuleTemplates("res://MapGeneration/Environment/",mapinfo))
-	mapModuleTemplates.append_array(loadMapModuleTemplates("res://MapGeneration/Modules/",mapinfo))
+	environmentTemplates.append_array(loadMapModuleTemplates(mapinfo))
+	#mapModuleTemplates.append_array(loadMapModuleTemplates("res://MapGeneration/Modules/",mapinfo))
 	mapModuleTemplates.append_array(ModuleBuilder.buildMapModulesFromFile("res://TextFiles/moduledescription.txt", loadJsonFromFile("res://TextFiles/componentmap.txt"), tilesize))
 
 	while lastEnvironmentPosition < minGeneratedTiles:
@@ -100,27 +100,36 @@ func updateCurrentModule(pos):
 
 #loads all scenes available on the Modules folders and returns them in a list
 #will add more later
-func loadMapModuleTemplates(path: String, modulesInfo = {}):
+func loadMapModuleTemplates(modulesInfo = {}):
+	# var templates = []
+	# var dir = DirAccess.open(path)
+	# if dir:
+	# 	dir.list_dir_begin()
+	# 	var file_name = dir.get_next()
+	# 	while file_name != "":
+	# 		if not dir.current_is_dir():
+	# 			print("Loading Map Module: " + file_name)
+	# 			var full_path = path + file_name
+	# 			var module = {"module" : load(full_path), "path" : full_path}
+	# 			if modulesInfo.has(full_path):
+	# 				module.merge(modulesInfo[full_path])
+	# 			else:
+	# 				#invalid module, will not be used
+	# 				module.merge({"difficulty": 1, "group": [-1], "length": 1, "entry_lanes": [], "exit_lanes":[]})
+	# 			templates.append(module)
+	# 		file_name = dir.get_next()
+	# else:
+	# 	print("An error occurred when trying to access the path.")
+	# return templates
+
 	var templates = []
-	var dir = DirAccess.open(path)
-	if dir:
-		dir.list_dir_begin()
-		var file_name = dir.get_next()
-		while file_name != "":
-			if not dir.current_is_dir():
-				print("Loading Map Module: " + file_name)
-				var full_path = path + file_name
-				var module = {"module" : load(full_path), "path" : full_path}
-				if modulesInfo.has(full_path):
-					module.merge(modulesInfo[full_path])
-				else:
-					#invalid module, will not be used
-					module.merge({"difficulty": 1, "group": [-1], "length": 1, "entry_lanes": [], "exit_lanes":[]})
-				templates.append(module)
-			file_name = dir.get_next()
-	else:
-		print("An error occurred when trying to access the path.")
+	for filepath in modulesInfo.keys():
+		var module = {"module" : load(filepath), "path" : filepath}
+		module.merge(modulesInfo[filepath])
+		templates.append(module)
 	return templates
+
+	
 
 
 func loadJsonFromFile(path: String):
@@ -177,16 +186,20 @@ func loadModuleInfoFromFile(path: String):
 
 #returns a random module from the loaded templates
 func randomizeModule(possibleModules,difficulty = 0,possibleGroups: Array = []): 
-	print("random module: ", possibleModules, difficulty, possibleGroups)
-	var randomModule = possibleModules[randi() % len(possibleModules)]
-	if randomModule["difficulty"] <= difficulty or difficulty < 1:	
-		for group in randomModule["group"]:
-			if group < 0:
-				return empty_module
-				#return randomizeModule(possibleModules,difficulty,possibleGroups)
-			if possibleGroups.has(group) or possibleGroups == []:
-				return randomModule
-	return randomizeModule(possibleModules,difficulty,possibleGroups)
+	if len(possibleModules) == 0:
+		print("Error: No possible modules!")
+		return empty_module
+	var index = randi() % len(possibleModules)
+	var i = index
+	var randomModule = possibleModules[i]
+	while randomModule["difficulty"] <= difficulty or randomModule["difficulty"] < 1 or (Utils.arrayHasItemsInCommon(randomModule["group"],possibleGroups) < 1 and len(possibleGroups) > 0) or Utils.arrayHasItemsInCommon(randomModule["group"],[0]):
+		i += 1
+		if i >= len(possibleModules):
+			i = 0
+		if i == index:
+			return empty_module
+		randomModule = possibleModules[i]
+	return randomModule
 	
 
 
@@ -205,7 +218,6 @@ func addMapModule(prevPosition: int, steps: int = 1, difficulty = 0, possibleGro
 		randomModule = randomizeModule(mapModuleTemplates,difficulty,possibleGroups)
 		while Utils.arrayHasItemsInCommon(randomModule["entry_lanes"],possibleLanes) < 2:
 			randomModule = randomizeModule(mapModuleTemplates,difficulty,possibleGroups)
-
 
 	possibleLanes = randomModule["exit_lanes"]
 	var newMapModule
@@ -243,11 +255,11 @@ func addEnvironment(prevPosition: int, steps: int = 1):
 	environmentModules.append(newMapEnvironment)
 	add_child(newMapEnvironment)
 	lastEnvironmentPosition = prevPosition + randomModule["length"]
-
 	
 func increaseObjectsZindex(array,value=1):
 	for object in array:
-		object.z_index+=value
+		if object.z_index + value < RenderingServer.CANVAS_ITEM_Z_MAX and object.z_index + value > RenderingServer.CANVAS_ITEM_Z_MIN:
+			object.z_index+=value
 	
 #just for testing purposes
 func moveLog(delta):

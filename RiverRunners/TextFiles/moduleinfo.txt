@@ -1,55 +1,8 @@
 
-#Obstacle Modules
-
-{
-Path: res://MapGeneration/Modules/module1.tscn
-Difficulty: 1
-Group: -1
-Length: 2
-Entry Lanes: 1,2,3,4,5
-Exit Lanes: 1,2,3,4,5
-}
-
-#{
-#Path: res://MapGeneration/Modules/module2.tscn
-#Difficulty: 1
-#Group: 6
-#Length: 2
-#Entry Lanes: 3,4,5
-#Exit Lanes: 3,4,5
-#}
-
-#{
-#Path: res://MapGeneration/Modules/module3.tscn
-#Difficulty: 1
-#Group: 6
-#Length: 2
-#Entry Lanes: 1,2,3
-#Exit Lanes: 1,2,3
-#}
-
-
+# no longer using this for Obstacle Modules, dm if you need it
 
 
 #Environment modules
-
-#{
-#Path: res://MapGeneration/Environment/baseriver.tscn
-#Difficulty: 1
-#Group: 10
-#Length: 2
-#Entry Lanes: 1,2,3,4,5
-#Exit Lanes: 1,2,3,4,5
-#}
-
-#{
-#Path: res://MapGeneration/Environment/baseriver2.tscn
-#Difficulty: 1
-#Group: 10
-#Length: 2
-#Entry Lanes:
-#Exit Lanes:
-#}
 
 {
 Path: res://MapGeneration/Environment/EnvironmentTemplate-Test.tscn

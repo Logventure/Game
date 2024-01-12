@@ -38,4 +38,4 @@ func _process(delta):
 		time += delta * 3
 		points = snapped(time, 1)
 		$Panel/Label2.text = str(points)
-		print(points)
+		#print(points)

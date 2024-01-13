@@ -105,6 +105,11 @@ func isEndless():
 		return level_script.isEndless()
 	return true
 
+func getProgress():
+	if level_script:
+		return level_script.getProgress()
+	return 0
+
 func onStartDialogue(file: String, wait_for_obstacle_end: bool):
 	if wait_for_obstacle_end:
 		Events.connect("obstacles_ended",startDialogue.bind(file))

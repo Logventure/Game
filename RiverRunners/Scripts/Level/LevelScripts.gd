@@ -115,7 +115,9 @@ var ready_to_process = {}
 
 var paused = false
 
-var activeTimers = []
+var activeTimers = {}
+
+var progress = 0
 
 func _init(manager, level_id):
 	level_manager = manager
@@ -142,7 +144,7 @@ func _ready():
 func _process(delta):
 	if not paused:
 		processEvents()
-
+		updateProgress()
 
 
 func processEvents():
@@ -150,7 +152,7 @@ func processEvents():
 		if level_events_status[id] == eventStatus.NOT_DONE and ready_to_process[id] == true:
 			if level_events[id]["Time offset"] == 0:
 				executeEvent(id, level_events[id])
-			else:
+			elif not activeTimers.keys().has(id):
 				scheduleEvent(id, level_events[id])
 
 func executeEvent(id : String, details: Dictionary):
@@ -193,11 +195,11 @@ func scheduleEvent(id : String, details: Dictionary):
 	new_timer.autostart = true
 	new_timer.wait_time = details["Time offset"]
 	new_timer.timeout.connect(onTimerEnd.bind(new_timer,id,details))
-	activeTimers.append(new_timer)
+	activeTimers[id] = new_timer
 	add_child(new_timer)
 
 func onTimerEnd(timer: Timer,id : String, details: Dictionary):
-	activeTimers.remove_at(activeTimers.find(timer))
+	activeTimers.erase(id)
 	timer.queue_free()
 	executeEvent(id,details)
 
@@ -219,7 +221,7 @@ func onResume():
 	updateTimersState()
 
 func updateTimersState():
-	for timer in activeTimers:
+	for timer in activeTimers.values():
 		if timer is Timer:
 			timer.paused = paused
 
@@ -236,5 +238,22 @@ func isEndless():
 			endless = false
 	return endless
 
+func updateProgress():
+	var total = 0
+	var completed = 0
+	for id in level_events.keys():
+		total += level_events[id]["Time offset"]
 
-	
+		if level_events_status[id] == eventStatus.NOT_DONE:
+			if activeTimers.keys().has(id):
+				completed += level_events[id]["Time offset"] - activeTimers[id].time_left
+
+		if level_events_status[id] == eventStatus.FINISHED:
+			completed += level_events[id]["Time offset"]
+
+	if total > 0 and completed > 0:
+		if completed/total > 0:
+			progress = completed/total * 100
+
+func getProgress():
+	return progress

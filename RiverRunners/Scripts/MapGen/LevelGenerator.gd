@@ -12,6 +12,7 @@ var mapModuleTemplates = [] #pre-made obstacle templates are stored here
 var environmentTemplates = [] #pre-made environment templates are stored here
 var mapModules = [] #stores current map sections, oldest to newest
 var environmentModules = [] #stores current environment sections, oldest to newest
+var validModules = [] 
 
 var empty_module = {"module": Node2D.new(), "difficulty": 1, "group": 1, "length": 0, "entry_lanes": [1,2,3,4,5], "exit_lanes": [1,2,3,4,5]}
 
@@ -71,6 +72,11 @@ func addToQueue(array):
 
 func updateModuleGroups(array):
 	level_groups = array
+	updatePossibleModules()
+
+func updateModuleDifficulty(value: int):
+	level_difficulty = value
+	updatePossibleModules()
 
 func clearOldModules():
 	if len(mapModules) > 0:
@@ -96,7 +102,11 @@ func updateCurrentModule(pos):
 		z_index = -1 * mapModules[currentModule].z_index
 
 		
-
+func updatePossibleModules():
+	validModules = []
+	for module in mapModuleTemplates:
+		if module["difficulty"] > level_difficulty and module["difficulty"] >= 1 and (Utils.arrayHasItemsInCommon(module["group"],level_groups) >= 1 or len(level_groups) == 0):
+			validModules.append(module)
 
 #loads all scenes available on the Modules folders and returns them in a list
 #will add more later
@@ -215,9 +225,9 @@ func addMapModule(prevPosition: int, steps: int = 1, difficulty = 0, possibleGro
 					obstacleQueue.remove_at(0)
 					break
 	else:
-		randomModule = randomizeModule(mapModuleTemplates,difficulty,possibleGroups)
+		randomModule = randomizeModule(validModules,difficulty,possibleGroups)
 		while Utils.arrayHasItemsInCommon(randomModule["entry_lanes"],possibleLanes) < 2:
-			randomModule = randomizeModule(mapModuleTemplates,difficulty,possibleGroups)
+			randomModule = randomizeModule(validModules,difficulty,possibleGroups)
 
 	possibleLanes = randomModule["exit_lanes"]
 	var newMapModule

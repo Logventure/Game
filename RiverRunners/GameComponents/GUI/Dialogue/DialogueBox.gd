@@ -5,6 +5,7 @@ var sprite_paths = {"frog" : "res://Assets/Characters/frog/Frog.png", "beaver" :
 var character_sprite
 var textbox
 var cutscene_sprite
+var cutscene_previous_sprite
 
 var cutscene_frames = {}
 
@@ -18,6 +19,9 @@ var dialogues = []
 var dialogue_index = 0
 
 var current_frame = ""
+var current_opacity = 0
+var target_opacity = 0
+var fade_time = 0.25
 
 var paused = false
 
@@ -25,6 +29,7 @@ var paused = false
 func _ready():
 	character_sprite = get_node("Textbox/Character_sprite")
 	cutscene_sprite = get_node("Control/Cutscene")
+	cutscene_previous_sprite = get_node("Control/CutscenePrevious")
 	textbox = get_node("Textbox/Text")
 
 	visible = false
@@ -37,6 +42,7 @@ func _ready():
 func _process(delta):
 	if visible and not paused:
 		updateDialogue(delta)
+		updateCutscene(delta)
 		if Input.is_action_just_pressed("confirm"):
 			onContinue()
 
@@ -64,6 +70,7 @@ func enable():
 	dialogue_index = 0
 	onContinue()
 	visible = true
+	cutscene_sprite.visible = true
 
 func disable():
 	visible = false
@@ -131,10 +138,30 @@ func updateDialogue(delta):
 
 func newCutscene(cutscene_file):
 	if cutscene_file == "none":
-		cutscene_sprite.visible = false
+		#cutscene_sprite.visible = false
+		target_opacity = 0
+		cutscene_previous_sprite.modulate.a = 0
 	elif cutscene_file != "":
 		cutscene_sprite.texture = load(cutscene_file)
-		cutscene_sprite.visible = true
+		current_opacity = 0
+		cutscene_sprite.modulate.a = current_opacity
+		target_opacity = 1
+
+func updateCutscene(delta):
+	current_opacity = cutscene_sprite.modulate.a
+	if target_opacity > current_opacity:
+		current_opacity += delta/fade_time
+	elif target_opacity < current_opacity:
+		current_opacity -= delta/fade_time
+	if current_opacity > 1:
+		current_opacity = 1
+	if current_opacity < 0:
+		current_opacity = 0
+	cutscene_sprite.modulate.a = current_opacity
+
+	if current_opacity == 1:
+		cutscene_previous_sprite.texture = cutscene_sprite.texture.duplicate()
+		cutscene_previous_sprite.modulate.a = 1
 
 func onPause():
 	paused = true

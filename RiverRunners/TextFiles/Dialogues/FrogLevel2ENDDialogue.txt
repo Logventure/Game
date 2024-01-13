@@ -1,0 +1,46 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: beaver
+
+*Text*: Definetly couldn't have gotten through over some of those tree trunks Sir Frog.
+>>>>>
+
+
+*Character*: frog
+
+*Text*: Sir Frogginton.
+>>>>>
+
+*Text*: The third.
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: Uh, yes of course.
+>>>>>
+
+*Text*: Well, let's hurry up, there might be other innocent lovable souls out there in need of help.
+>>>>>
+
+
+*Character*: frog
+
+*Text*: Indeed, i would hope to find some intellectual equal on this journey.
+>>>>>
+
+#
+#Use one text file for each conversation
+#

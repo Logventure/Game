@@ -12,38 +12,18 @@
 #
 
 
-*Character*: crab
-
-*Text*: Looks like we have different levels now
->>>>>
-
-
 *Character*: beaver
 
-*Text*: Yay, so we're finally gonna have the full story!
+*Text*: I Have to be quick and check if anyone is hurt.
 >>>>>
 
-*Text*: ...
+*Text*: Seems like the rocks here pose the most danger.
 >>>>>
 
-*Text*: ...
+*Text*: Thankfully they seem to follow a weirdly similar pattern, i should be able to avoid them by going LEFT and RIGHT.
 >>>>>
 
-*Text*: They just used the same level 6 times haven't they?
->>>>>
 
-*Character*: crab
-
-*Text*: Yup
->>>>>
-
-*Character*: beaver
-
-*Text*: *sigh*
->>>>>
-
-*Text*: Alright then, we can wait a little longer...
->>>>>
 
 #
 #Use one text file for each conversation

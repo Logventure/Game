@@ -12,38 +12,21 @@
 #
 
 
-*Character*: crab
-
-*Text*: Looks like we have different levels now
->>>>>
-
-
 *Character*: beaver
 
-*Text*: Yay, so we're finally gonna have the full story!
+*Text*: Think i made it through just fine, i knew my trusty log wouldn't fail me.
 >>>>>
 
-*Text*: ...
+*Text*: Hm? What's that sound?
 >>>>>
 
-*Text*: ...
+*Text*: Is that... an extremely high pitched croaking i hear?
 >>>>>
 
-*Text*: They just used the same level 6 times haven't they?
+*Text*: I wonder what that could be from...
 >>>>>
 
-*Character*: crab
 
-*Text*: Yup
->>>>>
-
-*Character*: beaver
-
-*Text*: *sigh*
->>>>>
-
-*Text*: Alright then, we can wait a little longer...
->>>>>
 
 #
 #Use one text file for each conversation

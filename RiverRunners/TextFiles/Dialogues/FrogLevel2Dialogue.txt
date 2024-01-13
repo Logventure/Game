@@ -1,0 +1,73 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: frog
+
+*Text*: Thank you for saving me from that hazardous situation sir.
+>>>>>
+
+*Text*: Not that i couldn't eventually get out of that precarious bind by my lonesome of course...
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: You're very welcome sir Frog.
+>>>>>
+
+
+*Character*: frog
+
+*Text*: Sir Frogginton.
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: You're still very welcome sir Frogginton.
+>>>>>
+
+
+*Character*: frog
+
+*Text*: The third.
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: Uh...
+>>>>>
+
+*Text*: Sure.
+>>>>>
+
+*Text*: Well, i'm definetly glad to have a friendly face to keep me company on this journey.
+>>>>>
+
+
+*Character*: frog
+
+*Text*: Yes, yes, i do have to say this is indeed a mighty vessel.
+>>>>>
+
+*Text*: I do believe it may face some vertical based issues ahead however.
+>>>>>
+
+*Text*: For this purpose i pledge my insurmoutable leg strength. If we encounter any fallen trees on our path, we may now overcome them by pressing [SPACEBAR].
+>>>>>
+
+#
+#Use one text file for each conversation
+#

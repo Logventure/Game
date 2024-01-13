@@ -111,27 +111,6 @@ func updatePossibleModules():
 #loads all scenes available on the Modules folders and returns them in a list
 #will add more later
 func loadMapModuleTemplates(modulesInfo = {}):
-	# var templates = []
-	# var dir = DirAccess.open(path)
-	# if dir:
-	# 	dir.list_dir_begin()
-	# 	var file_name = dir.get_next()
-	# 	while file_name != "":
-	# 		if not dir.current_is_dir():
-	# 			print("Loading Map Module: " + file_name)
-	# 			var full_path = path + file_name
-	# 			var module = {"module" : load(full_path), "path" : full_path}
-	# 			if modulesInfo.has(full_path):
-	# 				module.merge(modulesInfo[full_path])
-	# 			else:
-	# 				#invalid module, will not be used
-	# 				module.merge({"difficulty": 1, "group": [-1], "length": 1, "entry_lanes": [], "exit_lanes":[]})
-	# 			templates.append(module)
-	# 		file_name = dir.get_next()
-	# else:
-	# 	print("An error occurred when trying to access the path.")
-	# return templates
-
 	var templates = []
 	for filepath in modulesInfo.keys():
 		var module = {"module" : load(filepath), "path" : filepath}

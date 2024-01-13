@@ -11,22 +11,36 @@
 #If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
 #
 
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/a-CS-Justin-Dam-Break1.png
+>>>>>
+
+*Cutscene*: res://Assets/Cutscenes/c-CS-Justin-Dam-Break3.png
+>>>>>
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/b-CS-Justin-Dam-Break2.png
+>>>>>
 
 *Character*: beaver
 
-*Text*: Heyyy! We finally have level scripts!
+*Text*: Oh no...
 >>>>>
 
+*Character*: beaver
 
-*Character*: otter
-
-*Text*: Bet it's gonna crash.
+*Text*: What if someone got hurt?
 >>>>>
 
-*Text*: Well, only one way to find out.
+*Cutscene*: none
+
+*Text*: Better check it out...
 >>>>>
 
-
+*Text*: Woah... the river's full of debris, gotta be careful not to hit anything.
+>>>>>
 
 #
 #Use one text file for each conversation

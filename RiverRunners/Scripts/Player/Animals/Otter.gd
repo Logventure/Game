@@ -16,6 +16,8 @@ var logNode
 var basePosition = position
 var canJump = true
 var loseDamage = true
+var canThrow = true
+var timer
 
 enum States {IDLE, JUMPING, DROWNING, TAKE_DAMAGE, PAUSED}
 var current_state = States.IDLE
@@ -84,7 +86,22 @@ func handle_position():
 func throw():
 	Events.emit_signal("otter_position",position)
 	Events.emit_signal("throwing")
+	createTimer()
 
+func createTimer():
+	canThrow = false
+	timer = Timer.new()
+	add_child(timer)
+
+	timer.wait_time = 0.7
+	timer.one_shot = true
+	timer.start()
+
+	timer.connect("timeout", onTimerTimeout)
+
+func onTimerTimeout():
+	canThrow = true
+	timer.queue_free()
 
 func _process(delta):
 	var char_available = get_node("../").isCharacterAvailable("otter")
@@ -100,14 +117,14 @@ func _process(delta):
 				if len(commands) > 0:
 					if commands.find("jump") != -1 and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
 						jump()
-					if commands.find("throw") != -1 and get_node("../").isCharacterAvailable("otter"):
+					if commands.find("throw") != -1 and get_node("../").isCharacterAvailable("otter") and canThrow:
 						throw()
 				else:
 					var last_input = InputHandler.getLastInput()
 					if last_input == "jump" and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
 						jump()
 						InputHandler.clearLastInput()
-					elif last_input == "throw" and get_node("../").isCharacterAvailable("otter"):
+					elif last_input == "throw" and get_node("../").isCharacterAvailable("otter") and canThrow:
 						throw()
 						InputHandler.clearLastInput()
 
@@ -136,9 +153,11 @@ func _process(delta):
 func onPause():
 	previous_state = current_state
 	current_state = States.PAUSED
+	Events.emit_signal("pauseOtterCooldown")
 
 func onResume():
 	current_state = previous_state
+	Events.emit_signal("resumeOtterCooldown")
 
 func onTreeDetected(area):
 	if z_index < 5:

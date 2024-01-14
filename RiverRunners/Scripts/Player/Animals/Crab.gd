@@ -11,6 +11,8 @@ var logNode
 var basePosition = position
 var canJump = true
 var loseDamage = true
+var canBlock = true
+var timer
 
 @onready var collider = get_node("CrabCollider")
 var collider_pos
@@ -76,7 +78,24 @@ func handle_position():
 func shield():
 	current_state = States.BLOCKING
 	Events.emit_signal("crab_shield")
+	Events.emit_signal("blocking")
 	play("block")
+	createTimer()
+
+func createTimer():
+	canBlock = false
+	timer = Timer.new()
+	add_child(timer)
+
+	timer.wait_time = 7.5
+	timer.one_shot = true
+	timer.start()
+
+	timer.connect("timeout", onTimerTimeout)
+
+func onTimerTimeout():
+	canBlock = true
+	timer.queue_free()
 
 func _process(delta):
 	var char_available = get_node("../").isCharacterAvailable("crab")
@@ -92,14 +111,14 @@ func _process(delta):
 				if len(commands) > 0:
 					if commands.find("jump") != -1 and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
 						jump()
-					if commands.find("shield") != -1 and get_node("../").isCharacterAvailable("crab"):
+					if commands.find("shield") != -1 and get_node("../").isCharacterAvailable("crab") and canBlock:
 						shield()
 				else:
 					var last_input = InputHandler.getLastInput()
 					if last_input == "jump" and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
 						jump()
 						InputHandler.clearLastInput()
-					if last_input == "shield" and get_node("../").isCharacterAvailable("crab"):
+					if last_input == "shield" and get_node("../").isCharacterAvailable("crab") and canBlock:
 						shield()
 						InputHandler.clearLastInput()
 
@@ -126,10 +145,15 @@ func _process(delta):
 func onPause():
 	previous_state = current_state
 	current_state = States.PAUSED
+	if timer != null:
+		timer.paused = true
+		Events.emit_signal("pauseCrabCooldown")
 
 func onResume():
 	current_state = previous_state
-
+	if timer != null:
+		timer.paused = false
+		Events.emit_signal("resumeCrabCooldown")
 
 func _on_animation_finished():
 	pass

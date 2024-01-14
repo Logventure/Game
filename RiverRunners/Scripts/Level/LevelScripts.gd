@@ -100,6 +100,16 @@ var levels = {
 				"chat2"         :    {"Time offset" : 1,    "Prerequesites" : ["disableObs"],    "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/OtterLevel5ENDDialogue.txt", "WaitForObstacleEnd": true},
 				"levelend"      :    {"Time offset" : 1,    "Prerequesites" : ["chat2"],   		 "Type" : eventTypes.ENDLEVEL},
 	},
+	
+		"level_shork" :	{"setup"        :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 4, "ObstacleGroups" : [10,20,30,40,50,60], "Characters" : ["beaver","frog","salmon","crab","otter"]},
+				"chat1"         :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/ShorkLevel6Dialogue.txt"},
+				"levelStart"    :    {"Time offset" : 0,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : true},
+				"speedUp1"      :    {"Time offset" : 5,    "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "Speed" : 4},
+				"speedUp2"      :    {"Time offset" : 20,   "Prerequesites" : ["speedUp1"],      "Type" : eventTypes.SETVALUES,   "Speed" : 5},
+				"disableObs"    :    {"Time offset" : 10,   "Prerequesites" : ["speedUp2"],      "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false},
+				"chat2"         :    {"Time offset" : 1,    "Prerequesites" : ["disableObs"],    "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/ShorkLevel6ENDDialogue.txt", "WaitForObstacleEnd": true},
+				"levelend"      :    {"Time offset" : 1,    "Prerequesites" : ["chat2"],   		 "Type" : eventTypes.ENDLEVEL},
+	},
 
 	"level_infinite" :	{"setup"        :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 2, "ObstacleGroups" : [10,20,30,40,50], "Characters" : ["beaver","frog","salmon","crab","otter"]},
 				"chat1"         :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/anotherdialogue.txt"},

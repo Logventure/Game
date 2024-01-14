@@ -1,0 +1,73 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: beaver
+
+*Text*: There's no end to those tentacles, bring some down, and more pop up.
+>>>>>
+
+
+*Character*: crab
+
+*Text*: Aye, it's downright scary.
+>>>>>
+
+*Text*: Haven't seen anything this presistent in a while.
+>>>>>
+
+
+*Character*: otter
+
+*Text*: We need to keep pushing through! There's only one way we'll reach a conclusion, we have to keep going.
+>>>>>
+
+
+*Character*: frog
+
+*Text*: Do we really have to?!?
+>>>>>
+
+*Text*: Can't we just turn back? Leave this to someone el-.... more qualified??
+>>>>>
+
+
+*Character*: salmon
+
+*Text*: <.<
+>>>>>
+
+*Text*: Glu, gluuuuu...
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: We have to keep going! More animals might be in danger!
+>>>>>
+
+
+*Character*: otter
+
+*Text*: We should be close, i've been tracking this thing for a while now, the increased activity is a sure sign.
+>>>>>
+
+*Character*: crab
+
+*Text*: On we go.
+>>>>>
+
+
+#
+#Use one text file for each conversation
+#

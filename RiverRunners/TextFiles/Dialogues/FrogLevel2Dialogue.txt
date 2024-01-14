@@ -12,6 +12,31 @@
 #
 
 
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/d-CS-FrogJoins.png
+>>>>>
+
+*Character*: frog
+
+*Text*: HHHEEEELPPPPPP.
+>>>>>
+
+*Character*: beaver
+
+*Text*: So that's what that high pitched croaking was. Hm, let me see if i can get them out of there.
+>>>>>
+
+*Text*: HEY! YOU THERE! JUMP ONTO MY LOG!
+>>>>>
+
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/e-CS-Common1.png
+>>>>>
+
+
 *Character*: frog
 
 *Text*: Thank you for saving me from that hazardous situation sir.
@@ -53,6 +78,9 @@
 *Text*: Sure.
 >>>>>
 
+*Cutscene*: none
+>>>>>
+
 *Text*: Well, i'm definetly glad to have a friendly face to keep me company on this journey.
 >>>>>
 
@@ -65,7 +93,7 @@
 *Text*: I do believe it may face some vertical based issues ahead however.
 >>>>>
 
-*Text*: For this purpose i pledge my insurmoutable leg strength. If we encounter any fallen trees on our path, we may now overcome them by pressing [SPACEBAR].
+*Text*: For this purpose i pledge my insurmoutable leg strength. If we encounter any fallen trees on our path, we may now overcome them by jumping. [PRESS SPACEBAR]
 >>>>>
 
 #

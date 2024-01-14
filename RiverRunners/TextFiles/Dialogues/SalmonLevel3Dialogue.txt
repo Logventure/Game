@@ -12,60 +12,182 @@
 #
 
 
-*Character*: frog
+*Character*: none
 
-*Text*: Thank you for saving me from that hazardous situation sir.
+*Cutscene*: res://Assets/Cutscenes/f-CS-Sal.png
 >>>>>
 
-*Text*: Not that i couldn't eventually get out of that precarious bind by my lonesome of course...
->>>>>
+*Character*: salmon_gray
 
-
-*Character*: beaver
-
-*Text*: You're very welcome sir Frog.
->>>>>
-
-
-*Character*: frog
-
-*Text*: Sir Frogginton.
+*Text*: Glu, glu, glu...
 >>>>>
 
 
 *Character*: beaver
 
-*Text*: You're still very welcome sir Frogginton.
+*Text*: Did your hear anything Sir Frogginton?
 >>>>>
 
 
 *Character*: frog
 
-*Text*: The third.
+*Text*: The th-
 >>>>>
 
 
 *Character*: beaver
 
-*Text*: Uh...
+*Text*: Yes yes yes, ok.
 >>>>>
 
-*Text*: Sure.
->>>>>
-
-*Text*: Well, i'm definetly glad to have a friendly face to keep me company on this journey.
+*Text*: Did you hear anything though?
 >>>>>
 
 
 *Character*: frog
 
-*Text*: Yes, yes, i do have to say this is indeed a mighty vessel.
+*Text*: I am indeed sensing some like minded fellows brainwaves...
 >>>>>
 
-*Text*: I do believe it may face some vertical based issues ahead however.
+
+*Character*: salmon_gray
+
+*Text*: Glu, glu, gluuuu?..
 >>>>>
 
-*Text*: For this purpose i pledge my insurmoutable leg strength. If we encounter any fallen trees on our path, we may now overcome them by pressing [SPACEBAR].
+
+*Character*: beaver
+
+*Text*: There it is again!
+>>>>>
+
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/g-CS-Common2.png
+>>>>>
+
+*Character*: salmon
+
+*Text*: Glu, glu, GlUuUuUuuuu!!!
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: There they are!
+>>>>>
+
+*Character*: frog
+
+*Text*: Can u sense it Sir Justin?
+>>>>>
+
+*Text*: It's indubitably a genius, it's understanding of physics to be able to leap in that fashion is unmistakable!
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: Isn't that...
+>>>>>
+
+*Text*: ... a pacifier?
+>>>>>
+
+
+*Character*: frog
+
+*Text*: Don't offend it in such a heinous manner Sir Justin.
+>>>>>
+
+*Text*: That's rude.
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: I was just stating a fact?
+>>>>>
+
+*Cutscene*: none
+>>>>>
+
+*Text*: Hm, it does seem to be following us now.
+>>>>>
+
+
+*Character*: frog
+
+*Text*: No doubt because it understands and shares our plight.
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: Hmm. I wonder what their name is.
+>>>>>
+
+
+*Character*: salmon
+
+*Text*: Glu, gluuu, gluu.
+>>>>>
+
+
+*Character*: frog
+
+*Text*: Salomon the enlightened it says.
+>>>>>
+
+
+*Character*: salmon
+
+*Text*: Glu?...
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: What?...
+>>>>>
+
+*Text*: So, you can understand fish speak?
+>>>>>
+
+
+*Character*: frog
+
+*Text*: Why yes of course.
+>>>>>
+
+*Character*: beaver
+
+*Text*: ...
+>>>>>
+
+*Text*: (I'm just gonna call them Sal) .
+>>>>>
+
+
+*Character*: salmon
+
+*Text*: Glu, gluuu, gluu, glu.
+>>>>>
+
+
+*Character*: frog
+
+*Text*: It also says it can help us with quick manuvering if need be.
+>>>>>
+
+*Text*: If we need to suddenly cover a larger distance RIGHT or LEFT, Salomon says he will push the boat in either direction. [PRESS Q or E respectively]
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: That could indeed come in handy to cover more ground quickly.
 >>>>>
 
 #

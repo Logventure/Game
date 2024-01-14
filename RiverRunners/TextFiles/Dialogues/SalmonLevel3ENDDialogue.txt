@@ -14,31 +14,40 @@
 
 *Character*: beaver
 
-*Text*: Definetly couldn't have gotten through over some of those tree trunks Sir Frog.
+*Text*: I'm surprised at their strength, they have some impressive swimming abilities to be able to keep up with us like this.
 >>>>>
 
 
 *Character*: frog
 
-*Text*: Sir Frogginton.
+*Text*: Salmon are vigorous swimmers Sir Justin.
 >>>>>
 
-*Text*: The third.
+*Text*: And this one, as i sensed, is indeed an impressive specimen.
+>>>>>
+
+
+*Character*: salmon
+
+*Text*: GluuUuuuUuuUuu!
 >>>>>
 
 
 *Character*: beaver
 
-*Text*: Uh, yes of course.
->>>>>
-
-*Text*: Well, let's hurry up, there might be other innocent lovable souls out there in need of help.
+*Text*: Good to have you on board Sal!
 >>>>>
 
 
-*Character*: frog
+*Character*: salmon
 
-*Text*: Indeed, i would hope to find some intellectual equal on this journey.
+*Text*: GluUu, GluUu!
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: Let's see if we can find any other standofish fellows further ahead...
 >>>>>
 
 #

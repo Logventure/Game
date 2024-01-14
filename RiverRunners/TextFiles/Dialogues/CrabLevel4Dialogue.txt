@@ -1,0 +1,203 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/h-CS-Crab.png
+>>>>>
+
+*Character*: beaver
+
+*Text*: So, Sir Frogginton, are your brainwaves sensing anything, any potential friends? Enemies?
+>>>>>
+
+
+*Character*: frog
+
+*Text*: Hmmmmm, i can't say i'm sense much this time around.
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: What about you Sal?
+>>>>>
+
+
+*Character*: salmon
+
+*Text*: Gluu, glu, gluuu...
+>>>>>
+
+
+*Character*: frog
+
+*Text*: I figured as much. As i said, there doesn't seem to be anything of note nearby.
+>>>>>
+
+
+*Character*: crab_gray
+
+*Text*: Hhrmm...
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: Well, let's keep on going either way.
+>>>>>
+
+
+
+
+*Character*: crab
+
+*Cutscene*: res://Assets/Cutscenes/i-CS-Common3.png
+
+*Text*: HEY, I'M SWIMMIN HERE!
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: Oh, i'm sorry! I didn't see you there.
+>>>>>
+
+*Character*: crab
+
+*Text*: Well duh, i came from below.
+>>>>>
+
+*Text*: But i what i really want to know, is what you're doing round these parts.
+>>>>>
+
+*Text*: This is my turf y'see, and i don't recall givin you folks permission to strut your fannies round here.
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: This must be some kind of missunderstanding...
+>>>>>
+
+*Text*: We're actually checking if anyone needs help, something happened to the nearby Dam, 
+>>>>>
+
+
+*Character*: crab
+
+*Text*: Hm, ya don't say...
+>>>>>
+
+*Text*: ...
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: ...
+>>>>>
+
+*Character*: frog
+
+*Text*: ...
+>>>>>
+
+
+*Character*: salmon
+
+*Text*: ...
+>>>>>
+
+*Character*: crab
+
+*Text*: Well in that case, i don't mind helpin ya along the way.
+>>>>>
+
+*Text*: I myself want to know who's messin with these waters.
+>>>>>
+
+*Text*: Nobody jepordizes my river and gets away with it.
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: I'm not gonna say no to some extra help.
+>>>>>
+
+*Text*: Oh, i didn't catch your name.
+>>>>>
+
+
+*Character*: crab
+
+*Text*: The name's Don Vito Crableone.
+>>>>>
+
+*Text*: But you can call me Vito.
+>>>>>
+
+
+
+*Character*: beaver
+
+*Text*: Good to know.
+>>>>>
+
+*Text*: So, is everyone in favor of having Vito join us in this journey?
+>>>>>
+
+
+*Character*: salmon
+
+*Text*: Gluu, gluuu~
+>>>>>
+
+
+*Character*: frog
+
+*Text*: Hmmmm, i don't typically mingle with brutes...
+>>>>>
+
+
+*Character*: crab
+
+*Cutscene*: none
+
+*Text*: Eh, you'll thank me when we come across some rocks we just can't maneuver around.
+>>>>>
+
+*Text*: I can protect ya with this hard shell of mine, just gotta time the block properly. [PRESS S at the appropriate time]
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: Thank you for lending us your pincers Vito.
+>>>>>
+
+
+*Character*: crab
+
+*Text*: No problem bud.
+>>>>>
+
+*Text*: Now let's get this show on the road.
+>>>>>
+
+
+#
+#Use one text file for each conversation
+#

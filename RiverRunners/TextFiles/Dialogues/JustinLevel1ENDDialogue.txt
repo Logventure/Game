@@ -17,8 +17,26 @@
 *Text*: Think i made it through just fine, i knew my trusty log wouldn't fail me.
 >>>>>
 
+
+*Character*: frog_gray
+
+*Text*: HHHHHAAAAAAAAAAAAA.
+>>>>>
+
+
+*Character*: beaver
+
 *Text*: Hm? What's that sound?
 >>>>>
+
+
+*Character*: frog_gray
+
+*Text*: HHHHHEEEELLLLPPP MEEEEEEEE.
+>>>>>
+
+
+*Character*: beaver
 
 *Text*: Is that... an extremely high pitched croaking i hear?
 >>>>>

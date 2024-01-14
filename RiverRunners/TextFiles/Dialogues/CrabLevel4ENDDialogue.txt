@@ -1,0 +1,76 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: beaver
+
+*Text*: You really do have a hard shell don't u Vito?
+>>>>>
+
+
+*Character*: crab
+
+*Text*: Sure do Kiddo.
+>>>>>
+
+*Text*: Been in this business for a long time now.
+>>>>>
+
+
+*Character*: salmon
+
+*Text*: Gluu, glu?
+>>>>>
+
+
+*Character*: frog
+
+*Text*: The rock breaking business?
+>>>>>
+
+
+*Character*: crab
+
+*Text*: Sure...
+>>>>>
+
+*Text*: You could call it that, hehehe.
+>>>>>
+
+
+*Character*: frog
+
+*Text*: (Gulp.)
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: Anywaayyyy...
+>>>>>
+
+*Text*: That hard shell of your's will surely come in handy.
+>>>>>
+
+*Text*: Glad to have u aboard Vito.
+>>>>>
+
+
+*Character*: crab
+
+*Text*: Same here Kiddo.
+>>>>>
+
+#
+#Use one text file for each conversation
+#

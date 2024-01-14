@@ -142,7 +142,8 @@ func _on_level_6_button_pressed():
 	Events.emit_signal("go_to_level", 5)
 
 func _on_infinite_button_pressed():
-	pass # Replace with function body.
+	lastFocusedButton = get_viewport().gui_get_focus_owner()
+	Events.emit_signal("go_to_level", 6)
 
 func update_score():
 	if FILE_MANAGEMENT_SCRIPT.loadHighestScore() == null:

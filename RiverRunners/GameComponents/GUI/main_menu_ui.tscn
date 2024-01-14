@@ -460,6 +460,7 @@ horizontal_alignment = 1
 [connection signal="pressed" from="VBoxContainer2/HBoxContainer2/Level4Button" to="." method="_on_level_4_button_pressed"]
 [connection signal="pressed" from="VBoxContainer2/HBoxContainer3/Level5Button" to="." method="_on_level_5_button_pressed"]
 [connection signal="pressed" from="VBoxContainer2/HBoxContainer3/Level6Button" to="." method="_on_level_6_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer4/InfiniteButton" to="." method="_on_infinite_button_pressed"]
 [connection signal="pressed" from="Panel/HBoxContainer/YesButton" to="." method="_on_yes_button_pressed"]
 [connection signal="pressed" from="Panel/HBoxContainer/NoButton" to="." method="_on_no_button_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]

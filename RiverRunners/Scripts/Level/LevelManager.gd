@@ -3,6 +3,8 @@ extends Node2D
 @onready var player = $Player
 @onready var map = $Map
 @onready var dialogue_box = $Camera2D/DialogueBox
+@onready var level_ui = $Camera2D/LevelUI
+@onready var score = $Camera2D/LevelUI/Score
 
 
 signal player_status(position, playerSpeed)
@@ -37,6 +39,8 @@ func _ready():
 
 	Events.emit_signal("player_speed",playerSpeed)
 
+	score.visible = true if isEndless()	else false
+
 	#level_script = load("res://Levels/LevelTestScript.gd").new()
 	#add_child(level_script)
 	#level_script.setManager(self)
@@ -64,6 +68,7 @@ func _process(delta):
 		States.LEVEL_END:
 			player.set_process(false)
 
+	updateProgressBar()
 
 func setLevelScript(level_id):
 	level_script = load("res://Scripts/Level/LevelScripts.gd").new(self,level_id)
@@ -110,6 +115,9 @@ func getProgress():
 		return level_script.getProgress()
 	return 0
 
+func updateProgressBar():
+	level_ui.updateProgressBar(getProgress())
+
 func onStartDialogue(file: String, wait_for_obstacle_end: bool):
 	if wait_for_obstacle_end:
 		Events.connect("obstacles_ended",startDialogue.bind(file))
@@ -139,6 +147,7 @@ func updateObstacleState(value: bool):
 
 func setCharacters(character_list):
 	player.updateCharacters(character_list)
+	level_ui.updateCharacters(character_list)
 
 func onLevelEnd(wait_for_obstacle_end: bool):
 	if wait_for_obstacle_end:

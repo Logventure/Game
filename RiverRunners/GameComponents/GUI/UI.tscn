@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dbiug4njj0xm7"]
+[gd_scene load_steps=12 format=3 uid="uid://dfter0tp83ji5"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/UIManager.gd" id="1_8vvr1"]
 [ext_resource type="PackedScene" uid="uid://xech0a6r2ni6" path="res://GameComponents/GUI/health_container.tscn" id="3_g5a5p"]
@@ -6,10 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://xxdcxkrjegxv" path="res://GameComponents/GUI/gameover_ui.tscn" id="4_0kkfx"]
 [ext_resource type="PackedScene" uid="uid://xfkbxa5pluwk" path="res://GameComponents/GUI/levelcomplete_ui.tscn" id="5_xl6ur"]
 [ext_resource type="PackedScene" uid="uid://rsd1vkuyp70p" path="res://GameComponents/GUI/score_ui.tscn" id="6_nsksp"]
-[ext_resource type="PackedScene" path="res://GameComponents/GUI/endless_gameover_ui.tscn" id="7_3urrg"]
+[ext_resource type="PackedScene" uid="uid://ck88aacg8oi77" path="res://GameComponents/GUI/endless_gameover_ui.tscn" id="7_3urrg"]
 [ext_resource type="PackedScene" uid="uid://dfmcohcun6eg1" path="res://GameComponents/GUI/cooldowns/salmon_cooldown.tscn" id="8_eco8i"]
 [ext_resource type="PackedScene" uid="uid://dmx6x1wpknqd0" path="res://GameComponents/GUI/cooldowns/crab_cooldown.tscn" id="9_x7g5d"]
 [ext_resource type="PackedScene" uid="uid://cbdhb6i2ygr68" path="res://GameComponents/GUI/cooldowns/otter_cooldown.tscn" id="10_qu3if"]
+[ext_resource type="PackedScene" uid="uid://lyd3etqegdj6" path="res://GameComponents/GUI/progress_bar.tscn" id="11_5gn12"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -60,23 +61,30 @@ offset_top = -90.0
 offset_right = 660.0
 offset_bottom = -18.0
 
-[node name="Control" parent="." instance=ExtResource("8_eco8i")]
+[node name="SalmonCooldown" parent="." instance=ExtResource("8_eco8i")]
 layout_mode = 1
 offset_left = 68.0
 offset_top = 170.0
 offset_right = -1850.0
 offset_bottom = -908.0
 
-[node name="Control2" parent="." instance=ExtResource("9_x7g5d")]
+[node name="CrabCooldown" parent="." instance=ExtResource("9_x7g5d")]
 layout_mode = 1
 offset_left = 68.0
 offset_top = 315.0
 offset_right = -1850.0
 offset_bottom = -763.0
 
-[node name="Control3" parent="." instance=ExtResource("10_qu3if")]
+[node name="OtterCooldown" parent="." instance=ExtResource("10_qu3if")]
 layout_mode = 1
 offset_left = 68.0
 offset_top = 464.0
 offset_right = -1850.0
 offset_bottom = -614.0
+
+[node name="ProgressBar" parent="." instance=ExtResource("11_5gn12")]
+layout_mode = 1
+offset_left = 946.0
+offset_top = -34.0
+offset_right = -972.0
+offset_bottom = -1112.0

@@ -7,8 +7,11 @@ signal health_changed
 @onready var levelcompleteScene = $LevelCompleteMenu
 @onready var score = $Score
 @onready var endlessgameoverScene = $EndlessGameoverMenu
+@onready var progressBar = $ProgressBar
 var maxHealth = 3
 var currentHealth = maxHealth
+
+var character_availability = {"beaver" : true, "frog" : true, "salmon" : true, "crab" : true, "otter" : true}
 
 enum States{RUNNING, PAUSED, GAMEOVER, COMPLETED, OPTIONS}
 var current_state = States.RUNNING
@@ -36,10 +39,14 @@ func _ready():
 	gameoverScene.visible = false
 	levelcompleteScene.visible = false
 
+	#$SalmonCooldown.visible = false
+	#$CrabCooldown.visible = false
+	#$OtterCooldown.visible = false
+
 func _process(delta):
 	match current_state:
 		States.RUNNING:
-			pass
+			cooldowns()
 		States.PAUSED:
 			if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
 				if $PauseMenu/Panel/VBoxContainer/ResumeButton.visible == true:
@@ -121,3 +128,22 @@ func onResume():
 	gameoverScene.visible = false
 	levelcompleteScene.visible = false
 	score.counting()
+
+func updateProgressBar(progress):
+	progressBar.updateProgressBar(progress)
+
+func updateCharacters(char_list):
+	character_availability["beaver"] = char_list.has("beaver")
+	character_availability["frog"] = char_list.has("frog")
+	character_availability["salmon"] = char_list.has("salmon")
+	character_availability["crab"] = char_list.has("crab")
+	character_availability["otter"] = char_list.has("otter")
+
+func isCharacterAvailable(character):
+	if character_availability.has(character):
+		return character_availability[character]
+
+func cooldowns():
+	$SalmonCooldown.visible = true if isCharacterAvailable("salmon") else false
+	$CrabCooldown.visible = true if isCharacterAvailable("crab") else false
+	$OtterCooldown.visible = true if isCharacterAvailable("otter") else false

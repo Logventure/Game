@@ -16,7 +16,7 @@ var previous_state = States.MAIN_MENU
 var previous_screen
 
 var last_level = 0
-var level_ids = ["level_justin", "level_frog", "level_salmon", "level_crab", "level_otter", "level_shork", "level_1", "level_infinite"]
+var level_ids = ["level_justin", "level_frog", "level_salmon", "level_crab", "level_otter", "level_shork", "level_infinite"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -1,9 +1,9 @@
 extends Node2D
 
 var sprite_paths = {"frog" : "res://Assets/Characters/frog/Frog.png", "beaver" : "res://Assets/Characters/beaver/Justin-Beaver.png", "crab" : "res://Assets/Characters/crab/Crab.png",
-					"otter" : "res://Assets/Characters/otter/Otter.png", "salmon" : "res://Assets/Characters/salmon/Salmon-Baby.png",
+					"otter" : "res://Assets/Characters/otter/Otter.png", "salmon" : "res://Assets/Characters/salmon/Salmon-Baby.png", "shork" : "res://Assets/Characters/Shork/Shork.png",
 					"frog_gray" : "res://Assets/Characters/frog/Frog-Gray.png", "beaver_gray" : "res://Assets/Characters/beaver/Justin-Beaver-Gray.png", "crab_gray" : "res://Assets/Characters/crab/Crab-Gray.png",
-					"otter_gray" : "res://Assets/Characters/otter/Otter-Gray.png", "salmon_gray" : "res://Assets/Characters/salmon/Salmon-Gray.png"}
+					"otter_gray" : "res://Assets/Characters/otter/Otter-Gray.png", "salmon_gray" : "res://Assets/Characters/salmon/Salmon-Gray.png", "shork_gray" : "res://Assets/Characters/Shork/Shork-Gray.png"}
 var character_sprite
 var textbox
 var cutscene_sprite
@@ -53,6 +53,8 @@ func onContinue():
 		if dialogue_index < len(dialogues):
 			newDialogue(dialogues[dialogue_index][0],dialogues[dialogue_index][1])
 			newCutscene(dialogues[dialogue_index][2])
+			if dialogues[dialogue_index][3] != "":
+				playSound(dialogues[dialogue_index][3])
 			dialogue_index += 1
 		else:
 			disable()
@@ -92,19 +94,23 @@ func loadChat(filepath: String):
 	var character = ""
 	var text = ""
 	var cutscene_frame = ""
+	var sound = ""
 	while file.get_position() < file.get_length():
 		if not line == "" and not line.begins_with("#") and not line.begins_with(">>>>>"):
 			if line.begins_with("*Character*: "):
 				character = line.replace("*Character*: ","")
 			elif line.begins_with("*Cutscene*: "):
 				cutscene_frame = line.replace("*Cutscene*: ","")
+			elif line.begins_with("*Sound*: "):
+				sound = line.replace("*Sound*: ","")
 			elif line.begins_with("*Text*: "):
 				text = line.replace("*Text*: ","")
 			else:
 				text += line
 		elif line.begins_with(">>>>>"):
-			dialogues.append([character,text,cutscene_frame])
+			dialogues.append([character,text,cutscene_frame,sound])
 			text = ""
+			sound = ""
 		
 		line = file.get_line()
 
@@ -114,11 +120,13 @@ func loadChat(filepath: String):
 func newDialogue(character, text):
 	if character == "none":
 		get_node("Textbox/Box_sprite").visible = false
+		get_node("ColorRect").visible = false
 		character_sprite.visible = false
 		textbox.visible = false
 
 	elif character != "":
 		get_node("Textbox/Box_sprite").visible = true
+		get_node("ColorRect").visible = true
 		character_sprite.visible = true
 		textbox.visible = true
 
@@ -164,6 +172,9 @@ func updateCutscene(delta):
 	if current_opacity == 1:
 		cutscene_previous_sprite.texture = cutscene_sprite.texture.duplicate()
 		cutscene_previous_sprite.modulate.a = 1
+
+func playSound(filepath):
+	Utils.playSoundFile(self,filepath,"SFX",0)
 
 func onPause():
 	paused = true

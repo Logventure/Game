@@ -20,6 +20,8 @@
 
 *Character*: shork_gray
 
+*Sound*: res://Assets/Audio/Cutscenes/damcrash.wav
+
 *Text*: (CRASH!!)
 >>>>>
 

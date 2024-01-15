@@ -19,6 +19,8 @@
 
 *Character*: shork_gray
 
+*Sound*: res://Assets/Audio/Cutscenes/shorkroar.wav
+
 *Text*: (Crash) Raaawwwwwrrr!!
 >>>>>
 

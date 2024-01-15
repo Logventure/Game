@@ -142,8 +142,10 @@ func updateObstacleGroups(groups):
 func updateObstacleState(value: bool):
 	if value:
 		map.enableObstacles()
+		current_state = States.RUNNING
 	else:
 		map.disableObstacles()
+		current_state = States.NO_OBSTACLES
 
 func setCharacters(character_list):
 	player.updateCharacters(character_list)

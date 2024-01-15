@@ -14,15 +14,15 @@
 *Character*: none
 
 *Cutscene*: res://Assets/Cutscenes/a-CS-Justin-Dam-Break1.png
+>>>>>
+
+*Cutscene*: res://Assets/Cutscenes/c-CS-Justin-Dam-Break3.png
 
 *Character*: shork_gray
 
 *Text*: (CRASH!!)
 >>>>>
 
-*Cutscene*: res://Assets/Cutscenes/c-CS-Justin-Dam-Break3.png
-
->>>>>
 
 *Character*: beaver
 

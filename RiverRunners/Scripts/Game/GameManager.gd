@@ -95,6 +95,7 @@ func switchToLevel(level_id: int):
 		var last_level_id = level_ids[last_level]
 		target_screen.setLevelScript(last_level_id)
 	replaceScreen(viewer, target_screen)
+	Events.emit_signal("start_score")
 
 func switchToNextLevel():
 	target_state = States.LEVEL

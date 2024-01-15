@@ -10,6 +10,7 @@ signal health_changed
 @onready var progressBar = $ProgressBar
 var maxHealth = 3
 var currentHealth = maxHealth
+var isInfinite
 
 var character_availability = {"beaver" : true, "frog" : true, "salmon" : true, "crab" : true, "otter" : true}
 
@@ -38,10 +39,6 @@ func _ready():
 	pauseScene.visible = false
 	gameoverScene.visible = false
 	levelcompleteScene.visible = false
-
-	#$SalmonCooldown.visible = false
-	#$CrabCooldown.visible = false
-	#$OtterCooldown.visible = false
 
 func _process(delta):
 	match current_state:
@@ -88,14 +85,22 @@ func gameover():
 	pauseScene.visible = false
 	levelcompleteScene.visible = false
 
-	gameoverScene.visible = false
-	gameoverScene.resetFocusedButton()
+	print("is infinite:", isInfinite)
 
-	#enviar sinal com o highest score obtido e verificar se o score e maior que o highestscore
-	score.stop_counting()
-	score.checkHighestScore()
-	endlessgameoverScene.visible = true
-	endlessgameoverScene.highest_score(score.get_points())
+	if isInfinite:
+		gameoverScene.visible = false
+		gameoverScene.resetFocusedButton()
+
+		#enviar sinal com o highest score obtido e verificar se o score e maior que o highestscore
+		score.stop_counting()
+		score.checkHighestScore()
+		endlessgameoverScene.visible = true
+		endlessgameoverScene.highest_score(score.get_points())
+	else: 		
+		endlessgameoverScene.visible = false
+
+		gameoverScene.visible = true
+		gameoverScene.resetFocusedButton()
 
 	current_state = States.GAMEOVER
 
@@ -106,10 +111,6 @@ func completed():
 
 	levelcompleteScene.visible = true
 	levelcompleteScene.resetFocusedButton()
-	
-	score.stop_counting()
-	score.checkHighestScore()
-
 
 	current_state = States.COMPLETED
 

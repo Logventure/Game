@@ -8,6 +8,7 @@ signal input_jump
 signal input_throw
 signal input_shield
 
+signal start_score
 signal player_position(position)
 signal player_speed(speed)
 

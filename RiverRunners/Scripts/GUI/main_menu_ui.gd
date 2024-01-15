@@ -25,6 +25,7 @@ var infinite_level_button_normal_image = Image.load_from_file("res://Assets/UI/M
 var infinite_level_button_hover_image = Image.load_from_file("res://Assets/UI/Main Menu/Infinite-MM Button-Hover.png")
 var score_normal_image = Image.load_from_file("res://Assets/UI/Score/HighestScore.png")
 var score_hover_image = Image.load_from_file("res://Assets/UI/Score/HighestScore-Hover.png")
+var infinite_unblocked = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -181,14 +182,15 @@ func _on_infinite_button_pressed():
 	Events.emit_signal("go_to_level", 6)
 
 func update_score():
-	if FILE_MANAGEMENT_SCRIPT.loadHighestScore() == null:
-		$Panel2/Label2.text = str(0)
-	else:
-		var labeled_score = $Panel2/Label2.text
-		if labeled_score.to_int() < FILE_MANAGEMENT_SCRIPT.loadHighestScore():
-			$Panel2/Label2.text = str(FILE_MANAGEMENT_SCRIPT.loadHighestScore())
-			$Panel2/Label2.position.x -= $Panel2/Label2.size.x/2
-			$Panel2/Label2.position.y -= $Panel2/Label2.size.y/2
+	if infinite_unblocked:
+		if FILE_MANAGEMENT_SCRIPT.loadHighestScore() == null:
+			$Panel2/Label2.text = str(0)
+		else:
+			var labeled_score = $Panel2/Label2.text
+			if labeled_score.to_int() <= FILE_MANAGEMENT_SCRIPT.loadHighestScore():
+				$Panel2/Label2.text = str(FILE_MANAGEMENT_SCRIPT.loadHighestScore())
+				$Panel2/Label2.position.x -= $Panel2/Label2.size.x/2
+				$Panel2/Label2.position.y -= $Panel2/Label2.size.y/2
 
 func setLevels():
 	var savedLevels = FILE_MANAGEMENT_SCRIPT.loadLevels()
@@ -225,7 +227,8 @@ func setLevels():
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.texture_normal = ImageTexture.create_from_image(infinite_level_button_hover_image)
 			$Panel2/TextureRect.texture = ImageTexture.create_from_image(score_hover_image)
-		
+			$Panel2/Label2.label_settings.font_color = Color.GRAY
+			
 		1:
 			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
 			$VBoxContainer2/HBoxContainer/Level1Button.mouse_filter = MOUSE_FILTER_STOP
@@ -255,6 +258,7 @@ func setLevels():
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.texture_normal = ImageTexture.create_from_image(infinite_level_button_hover_image)
 			$Panel2/TextureRect.texture = ImageTexture.create_from_image(score_hover_image)
+			$Panel2/Label2.label_settings.font_color = Color.GRAY
 
 		2:
 			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
@@ -285,6 +289,7 @@ func setLevels():
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.texture_normal = ImageTexture.create_from_image(infinite_level_button_hover_image)
 			$Panel2/TextureRect.texture = ImageTexture.create_from_image(score_hover_image)
+			$Panel2/Label2.label_settings.font_color = Color.GRAY
 
 		3:
 			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
@@ -315,6 +320,7 @@ func setLevels():
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.texture_normal = ImageTexture.create_from_image(infinite_level_button_hover_image)
 			$Panel2/TextureRect.texture = ImageTexture.create_from_image(score_hover_image)
+			$Panel2/Label2.label_settings.font_color = Color.GRAY
 
 		4:
 			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
@@ -345,6 +351,7 @@ func setLevels():
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.texture_normal = ImageTexture.create_from_image(infinite_level_button_hover_image)
 			$Panel2/TextureRect.texture = ImageTexture.create_from_image(score_hover_image)
+			$Panel2/Label2.label_settings.font_color = Color.GRAY
 
 		5:
 			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
@@ -375,8 +382,10 @@ func setLevels():
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.texture_normal = ImageTexture.create_from_image(infinite_level_button_hover_image)
 			$Panel2/TextureRect.texture = ImageTexture.create_from_image(score_hover_image)
+			$Panel2/Label2.label_settings.font_color = Color.GRAY
 
 		6:
+			infinite_unblocked = true
 			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
 			$VBoxContainer2/HBoxContainer/Level1Button.mouse_filter = MOUSE_FILTER_STOP
 			$VBoxContainer2/HBoxContainer/Level1Button.texture_normal = ImageTexture.create_from_image(level1_button_normal_image)
@@ -405,3 +414,7 @@ func setLevels():
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_STOP
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.texture_normal = ImageTexture.create_from_image(infinite_level_button_normal_image)
 			$Panel2/TextureRect.texture = ImageTexture.create_from_image(score_normal_image)
+			$Panel2/Label2.label_settings.font_color = Color.WHITE
+
+		7:
+			infinite_unblocked = true

@@ -2,13 +2,14 @@ extends Control
 
 const FILE_MANAGEMENT_SCRIPT = preload("res://Scripts/FileManagement.gd")
 
-var to_count = true # trocar para false e por true quando começa o nivel
+var to_count = false
 var time
 var points
 var highest_score
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Events.connect("start_score", counting)
 	time = 0.0
 	points = 0.0
 
@@ -34,6 +35,7 @@ func checkHighestScore():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	print(to_count)
 	if to_count:
 		time += delta * 3
 		points = snapped(time, 1)

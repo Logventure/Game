@@ -5,7 +5,7 @@ extends Node2D
 @onready var dialogue_box = $Camera2D/DialogueBox
 @onready var level_ui = $Camera2D/LevelUI
 @onready var score = $Camera2D/LevelUI/Score
-
+@onready var progress_bar = $Camera2D/LevelUI/ProgressBar
 
 signal player_status(position, playerSpeed)
 
@@ -39,7 +39,14 @@ func _ready():
 
 	Events.emit_signal("player_speed",playerSpeed)
 
-	score.visible = true if isEndless()	else false
+	if isEndless():
+		score.visible = true
+		progress_bar.visible = false
+		level_ui.isInfinite = true
+	else:
+		score.visible = false
+		progress_bar.visible = true
+		level_ui.isInfinite = false
 
 	#level_script = load("res://Levels/LevelTestScript.gd").new()
 	#add_child(level_script)

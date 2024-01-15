@@ -11,16 +11,16 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if onCredits:
-		$Label.position.y -= 2.5
-		$Label2.position.y -= 2.5
-		$Label3.position.y -= 2.5
-		$Label4.position.y -= 2.5
-		$Label5.position.y -= 2.5
-		$Label6.position.y -= 2.5
-		$Label7.position.y -= 2.5
-		$Label8.position.y -= 2.5
-		$Label9.position.y -= 2.5
-		$Label10.position.y -= 2.5
+		$Label.position.y -= 2.5 * delta
+		$Label2.position.y -= 2.5 * delta
+		$Label3.position.y -= 2.5 * delta
+		$Label4.position.y -= 2.5 * delta
+		$Label5.position.y -= 2.5 * delta
+		$Label6.position.y -= 2.5 * delta
+		$Label7.position.y -= 2.5 * delta
+		$Label8.position.y -= 2.5 * delta
+		$Label9.position.y -= 2.5 * delta
+		$Label10.position.y -= 2.5 * delta
 
 func credits():
 	timer.start(34)

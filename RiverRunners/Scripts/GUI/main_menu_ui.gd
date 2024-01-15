@@ -9,6 +9,23 @@ enum States{MAIN, LEVELS, OPTIONS, CREDITS}
 
 var current_state = States.MAIN
 
+var level1_button_normal_image = Image.load_from_file("res://Assets/UI/Main Menu/LevelButtons/Level-1 Button.png")
+var level1_button_hover_image = Image.load_from_file("res://Assets/UI/Main Menu/LevelButtons/Level-1 Button-Hover.png")
+var level2_button_normal_image = Image.load_from_file("res://Assets/UI/Main Menu/LevelButtons/Level-2 Button.png")
+var level2_button_hover_image = Image.load_from_file("res://Assets/UI/Main Menu/LevelButtons/Level-2 Button-Hover.png")
+var level3_button_normal_image = Image.load_from_file("res://Assets/UI/Main Menu/LevelButtons/Level-3 Button.png")
+var level3_button_hover_image = Image.load_from_file("res://Assets/UI/Main Menu/LevelButtons/Level-3 Button-Hover.png")
+var level4_button_normal_image = Image.load_from_file("res://Assets/UI/Main Menu/LevelButtons/Level-4 Button.png")
+var level4_button_hover_image = Image.load_from_file("res://Assets/UI/Main Menu/LevelButtons/Level-4 Button-Hover.png")
+var level5_button_normal_image = Image.load_from_file("res://Assets/UI/Main Menu/LevelButtons/Level-5 Button.png")
+var level5_button_hover_image = Image.load_from_file("res://Assets/UI/Main Menu/LevelButtons/Level-5 Button-Hover.png")
+var level6_button_normal_image = Image.load_from_file("res://Assets/UI/Main Menu/LevelButtons/Level-6 Button.png")
+var level6_button_hover_image = Image.load_from_file("res://Assets/UI/Main Menu/LevelButtons/Level-6 Button-Hover.png")
+var infinite_level_button_normal_image = Image.load_from_file("res://Assets/UI/Main Menu/Infinite-MM Button.png")
+var infinite_level_button_hover_image = Image.load_from_file("res://Assets/UI/Main Menu/Infinite-MM Button-Hover.png")
+var score_normal_image = Image.load_from_file("res://Assets/UI/Score/HighestScore.png")
+var score_hover_image = Image.load_from_file("res://Assets/UI/Score/HighestScore-Hover.png")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	setLevels()
@@ -182,111 +199,209 @@ func setLevels():
 		0:
 			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
 			$VBoxContainer2/HBoxContainer/Level1Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level1Button.texture_normal = ImageTexture.create_from_image(level1_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer/Level2Button.disabled = true
 			$VBoxContainer2/HBoxContainer/Level2Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer/Level2Button.texture_normal = ImageTexture.create_from_image(level2_button_hover_image)
+
 			$VBoxContainer2/HBoxContainer2/Level3Button.disabled = true
 			$VBoxContainer2/HBoxContainer2/Level3Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer2/Level3Button.texture_normal = ImageTexture.create_from_image(level3_button_hover_image)
+
 			$VBoxContainer2/HBoxContainer2/Level4Button.disabled = true
 			$VBoxContainer2/HBoxContainer2/Level4Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer2/Level4Button.texture_normal = ImageTexture.create_from_image(level4_button_hover_image)
+
 			$VBoxContainer2/HBoxContainer3/Level5Button.disabled = true
 			$VBoxContainer2/HBoxContainer3/Level5Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer3/Level5Button.texture_normal = ImageTexture.create_from_image(level5_button_hover_image)
+
 			$VBoxContainer2/HBoxContainer3/Level6Button.disabled = true
 			$VBoxContainer2/HBoxContainer3/Level6Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer3/Level6Button.texture_normal = ImageTexture.create_from_image(level6_button_hover_image)
+
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.disabled = true
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.texture_normal = ImageTexture.create_from_image(infinite_level_button_hover_image)
+			$Panel2/TextureRect.texture = ImageTexture.create_from_image(score_hover_image)
 		
 		1:
 			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
 			$VBoxContainer2/HBoxContainer/Level1Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level1Button.texture_normal = ImageTexture.create_from_image(level1_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer/Level2Button.disabled = false
 			$VBoxContainer2/HBoxContainer/Level2Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level2Button.texture_normal = ImageTexture.create_from_image(level2_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer2/Level3Button.disabled = true
 			$VBoxContainer2/HBoxContainer2/Level3Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer2/Level3Button.texture_normal = ImageTexture.create_from_image(level3_button_hover_image)
+
 			$VBoxContainer2/HBoxContainer2/Level4Button.disabled = true
 			$VBoxContainer2/HBoxContainer2/Level4Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer2/Level4Button.texture_normal = ImageTexture.create_from_image(level4_button_hover_image)
+
 			$VBoxContainer2/HBoxContainer3/Level5Button.disabled = true
 			$VBoxContainer2/HBoxContainer3/Level5Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer3/Level5Button.texture_normal = ImageTexture.create_from_image(level5_button_hover_image)
+
 			$VBoxContainer2/HBoxContainer3/Level6Button.disabled = true
 			$VBoxContainer2/HBoxContainer3/Level6Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer3/Level6Button.texture_normal = ImageTexture.create_from_image(level6_button_hover_image)
+
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.disabled = true
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.texture_normal = ImageTexture.create_from_image(infinite_level_button_hover_image)
+			$Panel2/TextureRect.texture = ImageTexture.create_from_image(score_hover_image)
 
 		2:
 			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
 			$VBoxContainer2/HBoxContainer/Level1Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level1Button.texture_normal = ImageTexture.create_from_image(level1_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer/Level2Button.disabled = false
 			$VBoxContainer2/HBoxContainer/Level2Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level2Button.texture_normal = ImageTexture.create_from_image(level2_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer2/Level3Button.disabled = false
 			$VBoxContainer2/HBoxContainer2/Level3Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level3Button.texture_normal = ImageTexture.create_from_image(level3_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer2/Level4Button.disabled = true
 			$VBoxContainer2/HBoxContainer2/Level4Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer2/Level4Button.texture_normal = ImageTexture.create_from_image(level4_button_hover_image)
+
 			$VBoxContainer2/HBoxContainer3/Level5Button.disabled = true
 			$VBoxContainer2/HBoxContainer3/Level5Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer3/Level5Button.texture_normal = ImageTexture.create_from_image(level5_button_hover_image)
+
 			$VBoxContainer2/HBoxContainer3/Level6Button.disabled = true
 			$VBoxContainer2/HBoxContainer3/Level6Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer3/Level6Button.texture_normal = ImageTexture.create_from_image(level6_button_hover_image)
+
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.disabled = true
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.texture_normal = ImageTexture.create_from_image(infinite_level_button_hover_image)
+			$Panel2/TextureRect.texture = ImageTexture.create_from_image(score_hover_image)
 
 		3:
 			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
 			$VBoxContainer2/HBoxContainer/Level1Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level1Button.texture_normal = ImageTexture.create_from_image(level1_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer/Level2Button.disabled = false
 			$VBoxContainer2/HBoxContainer/Level2Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level2Button.texture_normal = ImageTexture.create_from_image(level2_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer2/Level3Button.disabled = false
 			$VBoxContainer2/HBoxContainer2/Level3Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level3Button.texture_normal = ImageTexture.create_from_image(level3_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer2/Level4Button.disabled = false
 			$VBoxContainer2/HBoxContainer2/Level4Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level4Button.texture_normal = ImageTexture.create_from_image(level4_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer3/Level5Button.disabled = true
 			$VBoxContainer2/HBoxContainer3/Level5Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer3/Level5Button.texture_normal = ImageTexture.create_from_image(level5_button_hover_image)
+
 			$VBoxContainer2/HBoxContainer3/Level6Button.disabled = true
 			$VBoxContainer2/HBoxContainer3/Level6Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer3/Level6Button.texture_normal = ImageTexture.create_from_image(level6_button_hover_image)
+
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.disabled = true
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.texture_normal = ImageTexture.create_from_image(infinite_level_button_hover_image)
+			$Panel2/TextureRect.texture = ImageTexture.create_from_image(score_hover_image)
 
 		4:
 			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
 			$VBoxContainer2/HBoxContainer/Level1Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level1Button.texture_normal = ImageTexture.create_from_image(level1_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer/Level2Button.disabled = false
 			$VBoxContainer2/HBoxContainer/Level2Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level2Button.texture_normal = ImageTexture.create_from_image(level2_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer2/Level3Button.disabled = false
 			$VBoxContainer2/HBoxContainer2/Level3Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level3Button.texture_normal = ImageTexture.create_from_image(level3_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer2/Level4Button.disabled = false
 			$VBoxContainer2/HBoxContainer2/Level4Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level4Button.texture_normal = ImageTexture.create_from_image(level4_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer3/Level5Button.disabled = false
 			$VBoxContainer2/HBoxContainer3/Level5Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer3/Level5Button.texture_normal = ImageTexture.create_from_image(level5_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer3/Level6Button.disabled = true
 			$VBoxContainer2/HBoxContainer3/Level6Button.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer3/Level6Button.texture_normal = ImageTexture.create_from_image(level6_button_hover_image)
+
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.disabled = true
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.texture_normal = ImageTexture.create_from_image(infinite_level_button_hover_image)
+			$Panel2/TextureRect.texture = ImageTexture.create_from_image(score_hover_image)
 
 		5:
 			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
 			$VBoxContainer2/HBoxContainer/Level1Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level1Button.texture_normal = ImageTexture.create_from_image(level1_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer/Level2Button.disabled = false
 			$VBoxContainer2/HBoxContainer/Level2Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level2Button.texture_normal = ImageTexture.create_from_image(level2_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer2/Level3Button.disabled = false
 			$VBoxContainer2/HBoxContainer2/Level3Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level3Button.texture_normal = ImageTexture.create_from_image(level3_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer2/Level4Button.disabled = false
 			$VBoxContainer2/HBoxContainer2/Level4Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level4Button.texture_normal = ImageTexture.create_from_image(level4_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer3/Level5Button.disabled = false
 			$VBoxContainer2/HBoxContainer3/Level5Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer3/Level5Button.texture_normal = ImageTexture.create_from_image(level5_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer3/Level6Button.disabled = false
 			$VBoxContainer2/HBoxContainer3/Level6Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer3/Level6Button.texture_normal = ImageTexture.create_from_image(level6_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.disabled = true
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_IGNORE
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.texture_normal = ImageTexture.create_from_image(infinite_level_button_hover_image)
+			$Panel2/TextureRect.texture = ImageTexture.create_from_image(score_hover_image)
+
 		6:
 			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
 			$VBoxContainer2/HBoxContainer/Level1Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level1Button.texture_normal = ImageTexture.create_from_image(level1_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer/Level2Button.disabled = false
 			$VBoxContainer2/HBoxContainer/Level2Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer/Level2Button.texture_normal = ImageTexture.create_from_image(level2_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer2/Level3Button.disabled = false
 			$VBoxContainer2/HBoxContainer2/Level3Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level3Button.texture_normal = ImageTexture.create_from_image(level3_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer2/Level4Button.disabled = false
 			$VBoxContainer2/HBoxContainer2/Level4Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer2/Level4Button.texture_normal = ImageTexture.create_from_image(level4_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer3/Level5Button.disabled = false
 			$VBoxContainer2/HBoxContainer3/Level5Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer3/Level5Button.texture_normal = ImageTexture.create_from_image(level5_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer3/Level6Button.disabled = false
 			$VBoxContainer2/HBoxContainer3/Level6Button.mouse_filter = MOUSE_FILTER_STOP
+			$VBoxContainer2/HBoxContainer3/Level6Button.texture_normal = ImageTexture.create_from_image(level6_button_normal_image)
+
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.disabled = false
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_STOP
-
+			$VBoxContainer2/HBoxContainer4/InfiniteButton.texture_normal = ImageTexture.create_from_image(infinite_level_button_normal_image)
+			$Panel2/TextureRect.texture = ImageTexture.create_from_image(score_normal_image)

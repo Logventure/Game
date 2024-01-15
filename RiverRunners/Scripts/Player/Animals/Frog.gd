@@ -44,12 +44,12 @@ func jump():
 			number_of_animals += 1
 		time = -1*delay*number_of_animals
 		pos = logNode.position.y + basePosition.y
-		Events.emit_signal("is_on_air", true)
 		loseDamage = true
 
 func handle_jump(delta): 
 	if time <= 0 and time + delta >= 0:
 		Utils.playSoundFile(self,"res://Assets/Audio/SFX/jump5.wav","SFX",-12)
+		Events.emit_signal("can_jump", false)
 	time += delta
 	if position.y <= pos && time >= 0:
 		position.y = pos - (speed + gravity * time * -1) * time
@@ -58,7 +58,7 @@ func handle_jump(delta):
 	elif time >= 0:
 		position.y = pos
 		current_state = States.IDLE
-		Events.emit_signal("is_on_air", false)
+		Events.emit_signal("can_jump", true)
 		if not logNode.position.x + basePosition.x == position.x:
 			Events.emit_signal("player_drowned")
 			print("Rip crabby")

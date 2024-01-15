@@ -5,7 +5,7 @@ var pos = Vector2.ZERO
 var gravity = 400
 var time = 0
 var speed = 500
-var delay = 0
+var delay = 0.001
 var is_jumping = false
 var logNode
 var basePosition = position
@@ -42,7 +42,6 @@ func jump():
 		current_state = States.JUMPING
 		time = -1*delay
 		pos = logNode.position.y + basePosition.y
-		Events.emit_signal("is_on_air", true)
 		loseDamage = true
 
 func handle_jump(delta): 
@@ -56,7 +55,6 @@ func handle_jump(delta):
 	elif time >= 0:
 		position.y = pos
 		current_state = States.IDLE
-		Events.emit_signal("is_on_air", false)
 		if not logNode.position.x + basePosition.x == position.x:
 			Events.emit_signal("player_drowned")
 			print("Rip crabby")
@@ -117,7 +115,7 @@ func _process(delta):
 					var last_input = InputHandler.getLastInput()
 					if last_input == "jump" and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
 						jump()
-						InputHandler.clearLastInput()
+						#InputHandler.clearLastInput() #clearing would prevent others from jumping
 					if last_input == "shield" and get_node("../").isCharacterAvailable("crab") and canBlock:
 						shield()
 						InputHandler.clearLastInput()

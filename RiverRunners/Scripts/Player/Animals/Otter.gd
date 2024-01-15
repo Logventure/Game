@@ -50,7 +50,6 @@ func jump():
 			number_of_animals += 1
 		time = -1*delay*number_of_animals
 		pos = logNode.position.y + basePosition.y
-		Events.emit_signal("is_on_air", true)
 		loseDamage = true
 
 func handle_jump(delta): 
@@ -64,7 +63,6 @@ func handle_jump(delta):
 	elif time >= 0:
 		position.y = pos
 		current_state = States.IDLE
-		Events.emit_signal("is_on_air", false)
 		if not logNode.position.x + basePosition.x == position.x:
 			Events.emit_signal("player_drowned")
 			print("Rip crabby")
@@ -101,7 +99,8 @@ func createTimer():
 
 func onTimerTimeout():
 	canThrow = true
-	timer.queue_free()
+	if timer != null:
+		timer.queue_free()
 
 func _process(delta):
 	var char_available = get_node("../").isCharacterAvailable("otter")
@@ -123,7 +122,7 @@ func _process(delta):
 					var last_input = InputHandler.getLastInput()
 					if last_input == "jump" and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
 						jump()
-						InputHandler.clearLastInput()
+						#InputHandler.clearLastInput()  #clearing would prevent others from jumping
 					elif last_input == "throw" and get_node("../").isCharacterAvailable("otter") and canThrow:
 						throw()
 						InputHandler.clearLastInput()

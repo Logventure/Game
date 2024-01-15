@@ -48,7 +48,7 @@ func _ready():
 	Events.connect("is_lane_free", onUpdateLaneStatus)
 	Events.connect("move_to_free_lane", moveToFreeLane)
 
-	Events.connect("is_on_air", isOnAir)
+	Events.emit_signal("resume_game")
 
 func move(delta):
 	pos.x += tilewidth/2 * delta * speed
@@ -251,16 +251,6 @@ func onUpdateLaneStatus(lane_offset,status):
 	var lane_id = currentLane + lane_offset
 	if lane_id in laneStatus.keys():
 		laneStatus[lane_id] = status
-
-func isOnAir(on_air : bool):
-	if on_air:
-		is_on_air += 1
-	else:
-		is_on_air -= 1
-	if is_on_air == 0:
-		Events.emit_signal("can_jump", true)
-	elif is_on_air == 3:
-		Events.emit_signal("can_jump", false)
 
 func updateCharacters(char_list):
 	character_availability["beaver"] = char_list.has("beaver")

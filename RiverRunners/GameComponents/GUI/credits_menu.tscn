@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cb1i5u782gu14"]
+[gd_scene load_steps=22 format=3 uid="uid://cb1i5u782gu14"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/credits_menu.gd" id="1_xjimh"]
 [ext_resource type="Texture2D" uid="uid://dp6ppprxdyxto" path="res://Assets/UI/Credits/CreditsMenu1.png" id="1_xueiu"]
@@ -11,7 +11,7 @@
 
 [sub_resource type="Animation" id="Animation_id2l5"]
 resource_name = "credits_loop"
-length = 0.9
+length = 0.95
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -20,7 +20,7 @@ tracks/0/path = NodePath("TextureRect:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.15),
+"times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -32,7 +32,7 @@ tracks/1/path = NodePath("TextureRect2:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.15, 0.3),
+"times": PackedFloat32Array(0.2, 0.35),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -44,7 +44,7 @@ tracks/2/path = NodePath("TextureRect3:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.3, 0.45),
+"times": PackedFloat32Array(0.35, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -56,7 +56,7 @@ tracks/3/path = NodePath("TextureRect4:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.45, 0.6),
+"times": PackedFloat32Array(0.5, 0.65),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -68,7 +68,7 @@ tracks/4/path = NodePath("TextureRect5:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.6, 0.75),
+"times": PackedFloat32Array(0.65, 0.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -80,7 +80,7 @@ tracks/5/path = NodePath("TextureRect6:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0.75, 0.9),
+"times": PackedFloat32Array(0.8, 0.95),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -137,6 +137,10 @@ line_spacing = 10.0
 font = ExtResource("8_na3el")
 font_size = 25
 
+[sub_resource type="LabelSettings" id="LabelSettings_8sh2y"]
+font = ExtResource("8_na3el")
+font_size = 20
+
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -147,6 +151,7 @@ grow_vertical = 2
 script = ExtResource("1_xjimh")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 texture_filter = 1
 layout_mode = 0
 offset_right = 1920.0
@@ -162,7 +167,6 @@ offset_bottom = 1080.0
 texture = ExtResource("2_dvsdf")
 
 [node name="TextureRect3" type="TextureRect" parent="."]
-visible = false
 texture_filter = 1
 layout_mode = 0
 offset_right = 1920.0
@@ -454,4 +458,19 @@ label_settings = SubResource("LabelSettings_ad7j2")
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="Label11" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -306.0
+offset_top = -69.0
+offset_right = -48.0
+offset_bottom = -41.0
+grow_horizontal = 0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_8sh2y")
+
+[connection signal="timeout" from="Timer" to="." method="on_timer_timeout"]

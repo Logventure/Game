@@ -3,6 +3,7 @@ extends Control
 @onready var animation = $AnimationPlayer
 @onready var timer = $Timer
 var onCredits = false
+var skipTime = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,6 +12,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if onCredits:
+		skipTime += delta
+		if skipTime > 5:
+			skipKey()
+		if Input.is_action_just_pressed("confirm") and skipTime > 5:
+			on_timer_timeout()
 		$Label.position.y -= 2.5 * delta * 60
 		$Label2.position.y -= 2.5 * delta * 60
 		$Label3.position.y -= 2.5 * delta * 60
@@ -24,10 +30,11 @@ func _process(delta):
 
 func credits():
 	timer.start(34)
+	skipTime = 0
 	animation.play("credits_loop")
 	onCredits = true
 
-func _on_timer_timeout():
+func on_timer_timeout():
 	onCredits = false
 	$Label.position.y = 1081
 	$Label2.position.y = 1350
@@ -39,4 +46,18 @@ func _on_timer_timeout():
 	$Label8.position.y = 3170
 	$Label9.position.y = 3260
 	$Label10.position.y = 3260
+	$Label11.text = ""
 	Events.emit_signal("go_from_credits_to_main_menu")
+
+func skipKey():
+	var input_type = InputHandler.lastInputType()
+	var confirm_actions = InputMap.action_get_events("confirm")
+	var keyString
+	print("type: ", input_type)
+	if input_type == "controller":
+		keyString = "X"
+		$Label11.text = str("Press ", keyString, " to skip.")
+	elif input_type == "kbm":
+		var keyCode = confirm_actions[0].physical_keycode
+		keyString = OS.get_keycode_string(keyCode)
+		$Label11.text = str("Press ", keyString, " to skip.")

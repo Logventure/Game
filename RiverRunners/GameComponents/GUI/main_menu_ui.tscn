@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://fdgjnt3f4u6u"]
+[gd_scene load_steps=62 format=3 uid="uid://fdgjnt3f4u6u"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/main_menu_ui.gd" id="1_go47f"]
 [ext_resource type="Texture2D" uid="uid://c1lero7mqpehw" path="res://Assets/UI/Main Menu/MainMenu-Background2.png" id="2_op0qx"]
@@ -57,6 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://dv2amfmi6e8m0" path="res://Assets/UI/Main Menu/Back Button-Highlight.png" id="55_hk6jm"]
 [ext_resource type="Texture2D" uid="uid://dh8uxvwelnqim" path="res://Assets/UI/Score/HighestScore.png" id="56_y3vlv"]
 [ext_resource type="FontFile" uid="uid://bg1oq07gebwu4" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="57_lvlfe"]
+[ext_resource type="PackedScene" uid="uid://cb1i5u782gu14" path="res://GameComponents/GUI/credits_menu.tscn" id="58_goy0w"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4s1lb"]
 animations = [{
@@ -169,11 +170,11 @@ scale = Vector2(12, 12)
 [node name="PlayButton" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 focus_neighbor_left = NodePath(".")
-focus_neighbor_top = NodePath("../ExitButton")
+focus_neighbor_top = NodePath("../../CreditsButton")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../OptionsButton")
 focus_next = NodePath("../OptionsButton")
-focus_previous = NodePath("../ExitButton")
+focus_previous = NodePath("../../CreditsButton")
 texture_normal = ExtResource("3_gctep")
 texture_pressed = ExtResource("4_l2jyc")
 texture_hover = ExtResource("16_c1wso")
@@ -197,8 +198,8 @@ layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../OptionsButton")
 focus_neighbor_right = NodePath(".")
-focus_neighbor_bottom = NodePath("../PlayButton")
-focus_next = NodePath("../PlayButton")
+focus_neighbor_bottom = NodePath("../../CreditsButton")
+focus_next = NodePath("../../CreditsButton")
 focus_previous = NodePath("../OptionsButton")
 texture_normal = ExtResource("6_7epq6")
 texture_pressed = ExtResource("13_8k2by")
@@ -395,6 +396,12 @@ offset_top = 907.0
 offset_right = 1721.0
 offset_bottom = 939.0
 scale = Vector2(6, 6)
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../VBoxContainer/ExitButton")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../VBoxContainer/PlayButton")
+focus_next = NodePath("../VBoxContainer/PlayButton")
+focus_previous = NodePath("../VBoxContainer/ExitButton")
 texture_normal = ExtResource("40_sk7ek")
 
 [node name="OptionsUI" parent="." instance=ExtResource("52_4k1wg")]
@@ -449,6 +456,10 @@ offset_right = 449.0
 offset_bottom = 98.0
 label_settings = SubResource("LabelSettings_auydg")
 horizontal_alignment = 1
+
+[node name="Credits" parent="." instance=ExtResource("58_goy0w")]
+visible = false
+layout_mode = 1
 
 [connection signal="animation_looped" from="BackgroundImage/Justin" to="BackgroundImage" method="_on_justin_animation_looped"]
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]

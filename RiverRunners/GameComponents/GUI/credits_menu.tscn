@@ -1,0 +1,457 @@
+[gd_scene load_steps=21 format=3 uid="uid://cb1i5u782gu14"]
+
+[ext_resource type="Script" path="res://Scripts/GUI/credits_menu.gd" id="1_xjimh"]
+[ext_resource type="Texture2D" uid="uid://dp6ppprxdyxto" path="res://Assets/UI/Credits/CreditsMenu1.png" id="1_xueiu"]
+[ext_resource type="Texture2D" uid="uid://c1n6h4gvjilut" path="res://Assets/UI/Credits/CreditsMenu2.png" id="2_dvsdf"]
+[ext_resource type="Texture2D" uid="uid://gxrjor18bfr6" path="res://Assets/UI/Credits/CreditsMenu3.png" id="3_o0p1e"]
+[ext_resource type="Texture2D" uid="uid://blfcjmqoapfd2" path="res://Assets/UI/Credits/CreditsMenu4.png" id="4_qkuko"]
+[ext_resource type="Texture2D" uid="uid://dtl42lmgtdmjc" path="res://Assets/UI/Credits/CreditsMenu5.png" id="5_8p3s0"]
+[ext_resource type="Texture2D" uid="uid://d1d036ax17rbo" path="res://Assets/UI/Credits/CreditsMenu6.png" id="6_chmsc"]
+[ext_resource type="FontFile" uid="uid://bg1oq07gebwu4" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="8_na3el"]
+
+[sub_resource type="Animation" id="Animation_id2l5"]
+resource_name = "credits_loop"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3, 0.45),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRect4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.45, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextureRect5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.6, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextureRect6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.75, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c4aeq"]
+_data = {
+"credits_loop": SubResource("Animation_id2l5")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_mhwy4"]
+font = ExtResource("8_na3el")
+font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_63e8d"]
+font = ExtResource("8_na3el")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_yohu8"]
+line_spacing = 30.0
+font = ExtResource("8_na3el")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_x0uy5"]
+line_spacing = 10.0
+font = ExtResource("8_na3el")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_bs4l1"]
+font = ExtResource("8_na3el")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_d3md3"]
+line_spacing = 30.0
+font = ExtResource("8_na3el")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_jd4fq"]
+line_spacing = 10.0
+font = ExtResource("8_na3el")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_vythi"]
+font = ExtResource("8_na3el")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_5iuqe"]
+line_spacing = 92.0
+font = ExtResource("8_na3el")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_ad7j2"]
+line_spacing = 10.0
+font = ExtResource("8_na3el")
+font_size = 25
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xjimh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_xueiu")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_dvsdf")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("3_o0p1e")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("4_qkuko")
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("5_8p3s0")
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("6_chmsc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "credits_loop"
+libraries = {
+"": SubResource("AnimationLibrary_c4aeq")
+}
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -259.0
+offset_top = 1.0
+offset_right = 259.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "LogVenture"
+label_settings = SubResource("LabelSettings_mhwy4")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.5
+offset_top = 270.0
+offset_right = 150.5
+offset_bottom = 316.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Programmers"
+label_settings = SubResource("LabelSettings_63e8d")
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -411.0
+offset_top = 350.0
+offset_right = -5.0
+offset_bottom = 1158.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "   Gameplay Programmers
+
+        UI/UX Programmers
+
+  Animation Programmers
+
+          Audio Programmer
+
+       Physics Programmer
+
+Environment Programmer
+
+           Build Programmer"
+label_settings = SubResource("LabelSettings_yohu8")
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 348.0
+offset_right = 260.0
+offset_bottom = 1239.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Daniel Oliveira 
+Inês Santos
+
+Daniel Oliveira
+Inês Santos
+
+Inês Santos
+Daniel Oliveira
+
+Inês Santos
+
+
+Inês Santos 
+Daniel Oliveira
+
+Inês Santos
+
+
+Inês Santos"
+label_settings = SubResource("LabelSettings_x0uy5")
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = 1240.0
+offset_right = 77.0
+offset_bottom = 1286.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Artists"
+label_settings = SubResource("LabelSettings_bs4l1")
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -368.0
+offset_top = 1320.0
+offset_right = -8.0
+offset_bottom = 2002.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Environment Art Artist
+
+        Cutscenes Artist
+
+      Animations Artists
+
+               UI/UX Artist
+
+       Character Artists
+
+      Concept Art Artist"
+label_settings = SubResource("LabelSettings_d3md3")
+
+[node name="Label7" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 1336.0
+offset_right = 275.0
+offset_bottom = 1992.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Bruno Brandão
+
+
+Duarte Cunha
+
+
+Duarte Cunha
+Bruno Brandão
+
+Duarte Cunha
+
+
+Duarte Cunha
+Bruno Brandão
+
+Duarte Cunha"
+label_settings = SubResource("LabelSettings_jd4fq")
+
+[node name="Label8" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = 2090.0
+offset_right = 112.0
+offset_bottom = 2136.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Designers"
+label_settings = SubResource("LabelSettings_vythi")
+
+[node name="Label9" type="Label" parent="."]
+layout_mode = 0
+offset_left = 598.0
+offset_top = 3260.0
+offset_right = 956.0
+offset_bottom = 4859.0
+text = "   Gameplay Designers
+
+         Level Designers
+
+Characters Designers
+
+   Narrative Designers
+
+              Story Writer
+
+          Sound Designer
+
+         UI/UX Designers"
+label_settings = SubResource("LabelSettings_5iuqe")
+
+[node name="Label10" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 3260.0
+offset_right = 1235.0
+offset_bottom = 4859.0
+text = "Inês Santos
+Daniel Oliveira
+Duarte Cunha
+Bruno Brandão
+
+
+Inês Santos
+Daniel Oliveira
+Duarte Cunha
+Bruno Brandão
+
+
+Duarte Cunha
+Bruno Brandão
+
+
+
+
+Inês Santos
+Daniel Oliveira
+Duarte Cunha
+Bruno Brandão
+
+
+Duarte Cunha
+
+
+
+
+
+Inês Santos
+
+
+
+
+
+Duarte Cunha
+Daniel Oliveira
+
+"
+label_settings = SubResource("LabelSettings_ad7j2")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

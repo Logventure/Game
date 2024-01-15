@@ -60,3 +60,5 @@ signal go_to_next_level
 signal go_to_options
 signal go_to_credits
 signal go_to_previous_screen
+signal go_from_main_menu_to_credits
+signal go_from_credits_to_main_menu

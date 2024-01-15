@@ -253,7 +253,7 @@ func onDialogueEnd():
 func isEndless():
 	var endless = true
 	for id in level_events.keys():
-		if level_events[id]["Type"] == eventTypes.DIALOGUE:
+		if level_events[id]["Type"] == eventTypes.ENDLEVEL:
 			endless = false
 	return endless
 

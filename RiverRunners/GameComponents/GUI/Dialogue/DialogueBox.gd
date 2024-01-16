@@ -124,6 +124,21 @@ func newDialogue(character, text):
 		character_sprite.visible = false
 		textbox.visible = false
 
+	elif character == "hidden":
+		get_node("Textbox/Box_sprite").visible = true
+		get_node("ColorRect").visible = false
+		character_sprite.visible = false
+		textbox.visible = true
+
+		if text != "":
+			current_text = text
+			textbox.text = ""
+			char_count = 0
+			deltatime = 0.0
+			if character in sprite_paths.keys():
+				character_sprite.texture = load(sprite_paths[character])
+
+
 	elif character != "":
 		get_node("Textbox/Box_sprite").visible = true
 		get_node("ColorRect").visible = true

@@ -12,10 +12,6 @@
 #
 
 
-*Character*: beaver
-
-*Text*: What is this thing following us??
->>>>>
 
 *Character*: beaver
 

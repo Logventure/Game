@@ -25,6 +25,7 @@
 *Text*: (CRASH!!)
 >>>>>
 
+*Cutscene*: res://Assets/Cutscenes/c-CS-Justin-Dam-Break3-noJustin.png
 
 *Character*: beaver
 

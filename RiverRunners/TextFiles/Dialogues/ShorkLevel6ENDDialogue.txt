@@ -14,59 +14,93 @@
 
 *Character*: beaver
 
-*Text*: There's no end to those tentacles, bring some down, and more pop up.
+*Text*: What is this thing following us??
 >>>>>
-
-
-*Character*: crab
-
-*Text*: Aye, it's downright scary.
->>>>>
-
-*Text*: Haven't seen anything this presistent in a while.
->>>>>
-
-
-*Character*: otter
-
-*Text*: We need to keep pushing through! There's only one way we'll reach a conclusion, we have to keep going.
->>>>>
-
-
-*Character*: frog
-
-*Text*: Do we really have to?!?
->>>>>
-
-*Text*: Can't we just turn back? Leave this to someone el-.... more qualified??
->>>>>
-
-
-*Character*: salmon
-
-*Text*: <.<
->>>>>
-
-*Text*: Glu, gluuuuu...
->>>>>
-
 
 *Character*: beaver
 
-*Text*: We have to keep going! More animals might be in danger!
+*Text*: What is this thing following us??
 >>>>>
 
+*Character*: frog
 
-*Character*: otter
-
-*Text*: We should be close, i've been tracking this thing for a while now, the increased activity is a sure sign.
+*Text*: A shark!?
 >>>>>
 
 *Character*: crab
 
-*Text*: On we go.
+*Text*: An octopus.
 >>>>>
 
+*Character*: salmon
+
+*Text*: glu gluUu?
+>>>>>
+
+*Character*: otter
+
+*Text*: A danger is what it is
+>>>>>
+
+*Character*: beaver
+
+*Text*: Shorktopus.
+>>>>>
+
+*Character*: shork
+
+*Text*: Rawwwwwrr
+>>>>>
+
+*Character*: crab
+
+*Text*: I'd take that as a yes kiddo.
+>>>>>
+
+*Character*: otter
+
+*Text*: The question is why it's here in the first place.
+>>>>>
+
+*Text*: This thing needs to be taken care of.
+>>>>>
+
+
+*Character*: shork
+
+*Cutscene*: res://Assets/Cutscenes/l-CS-Common5.png
+
+*Text*: Waaaaiitt!!
+>>>>>
+
+*Character*: frog
+
+*Text*: It speaks??
+>>>>>
+
+*Character*: salmon
+
+*Text*: GluUuUuu??
+>>>>>
+
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/m-CS-Final.png
+>>>>>
+
+*Character*: shork
+
+*Text*: Thank you for understanding my plight my friends.
+>>>>>
+
+*Text*: And even though the lab is out reach, we may just find more wayward souls if we keep looking.
+>>>>>
+
+*Character*: beaver
+
+*Text*: Hm, but for now, what do u guys say we take a well deserved break?
+>>>>>
 
 #
 #Use one text file for each conversation

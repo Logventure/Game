@@ -47,6 +47,7 @@ func jump():
 func handle_jump(delta): 
 	if time <= 0 and time + delta >= 0:
 		Utils.playSoundFile(self,"res://Assets/Audio/SFX/jump.wav","SFX",-12)
+		play("jump")
 	time += delta
 	if position.y <= pos && time >= 0:
 		position.y = pos - (speed + gravity * time * -1) * time 
@@ -171,6 +172,9 @@ func _on_animation_looped():
 		play("idle")
 		current_state = States.IDLE
 		Events.emit_signal("can_jump", true)
+	elif animation == "jump":
+		play("idle")
+
 
 func onTreeDetected(area):
 	if z_index < 4:

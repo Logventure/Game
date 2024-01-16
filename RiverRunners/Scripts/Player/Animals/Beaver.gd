@@ -10,6 +10,10 @@ var is_jumping = false
 var logNode
 var basePosition = position
 
+enum States {IDLE, JUMPING, PAUSED}
+var current_state = States.IDLE
+var previous_state = States.IDLE
+
 func _ready():
 	animal = Animal.new() 
 	logNode = get_node("../Log")
@@ -24,5 +28,23 @@ func _process(delta):
 		visible = char_available
 
 	handle_position()
-	play("idle")
 	
+	if get_node("../").isCharacterAvailable("beaver"):
+		var commands = InputHandler.getCommands()
+		match current_state:
+			States.IDLE:
+				handle_position()
+				if len(commands) > 0:
+					if commands.find("jump") != -1 and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
+						play("dive")
+				else:
+					var last_input = InputHandler.getLastInput()
+					if last_input == "jump" and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
+						play("dive")
+						InputHandler.clearLastInput()
+
+
+
+func _on_animation_looped():
+	if animation == "dive":
+		play("idle")

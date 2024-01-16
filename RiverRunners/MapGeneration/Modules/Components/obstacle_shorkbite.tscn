@@ -1,0 +1,131 @@
+[gd_scene load_steps=23 format=3 uid="uid://dixn0vk4wm6dy"]
+
+[ext_resource type="Script" path="res://Scripts/Obstacles/shork_obstacle.gd" id="1_6adhc"]
+[ext_resource type="Texture2D" uid="uid://lf2uumkw677m" path="res://Assets/Characters/Shork/Shork-Bite/Shork-Bite1.png" id="2_stkg5"]
+[ext_resource type="Texture2D" uid="uid://b8ytnbf1f7h7s" path="res://Assets/Characters/Shork/Shork-Bite/Shork-Bite2.png" id="3_fcp4c"]
+[ext_resource type="Texture2D" uid="uid://cnlf0jvkheb3d" path="res://Assets/Characters/Shork/Shork-Bite/Shork-Bite3.png" id="4_jns2p"]
+[ext_resource type="Texture2D" uid="uid://bl22f4vj3wbvp" path="res://Assets/Characters/Shork/Shork-Bite/Shork-Bite4.png" id="5_84v1w"]
+[ext_resource type="Texture2D" uid="uid://cs0scx7hk6jqv" path="res://Assets/Characters/Shork/Shork-Bite/Shork-Bite5.png" id="6_auvnt"]
+[ext_resource type="Texture2D" uid="uid://yp65k7qt6ft7" path="res://Assets/Characters/Shork/Shork-Bite/Shork-Bite6.png" id="7_p885j"]
+[ext_resource type="Texture2D" uid="uid://cfds01ibd5sjl" path="res://Assets/Characters/Shork/Shork-Bite/Shork-Bite7.png" id="8_i12sj"]
+[ext_resource type="Texture2D" uid="uid://1jn57e365so1" path="res://Assets/Characters/Shork/Shork-Bite/Shork-Bite8.png" id="9_bf5c7"]
+[ext_resource type="Texture2D" uid="uid://ddjdlnoapti5d" path="res://Assets/Characters/Shork/Shork-Bite/Shork-Bite9.png" id="10_2dhk3"]
+[ext_resource type="Texture2D" uid="uid://byqqp8v24kei6" path="res://Assets/Characters/Shork/Shork-Bite/Shork-Bite10.png" id="11_esgm1"]
+[ext_resource type="Texture2D" uid="uid://ds4wnhxypp4fi" path="res://Assets/Characters/Shork/Shork-Bite/Shork-Bite11.png" id="12_en0g3"]
+[ext_resource type="Texture2D" uid="uid://bags6sr4w420v" path="res://Assets/Characters/Shork/Shor-Idle-UnderWater/Shork-Idle UW1.png" id="12_yhdo2"]
+[ext_resource type="Texture2D" uid="uid://daspmi4cnqdwm" path="res://Assets/Characters/Shork/Shork-Bite/Shork-Bite12.png" id="13_2g7op"]
+[ext_resource type="Texture2D" uid="uid://b4hywojj22wt0" path="res://Assets/Characters/Shork/Shor-Idle-UnderWater/Shork-Idle UW2.png" id="13_idtnn"]
+[ext_resource type="Texture2D" uid="uid://cvsjoepl0ym0k" path="res://Assets/Characters/Shork/Shork-Bite/Shork-Bite13.png" id="14_i6l4o"]
+[ext_resource type="Texture2D" uid="uid://borslomcp0h8i" path="res://Assets/Characters/Shork/Shor-Idle-UnderWater/Shork-Idle UW3.png" id="14_pct8m"]
+[ext_resource type="Texture2D" uid="uid://c8dcagus23yc0" path="res://Assets/Characters/Shork/Shor-Idle-UnderWater/Shork-Idle UW4.png" id="15_6xo88"]
+[ext_resource type="Texture2D" uid="uid://bpfl5xkoc2rgc" path="res://Assets/Characters/Shork/Shork-Bite/Shork-Bite14.png" id="15_ljkwh"]
+[ext_resource type="Texture2D" uid="uid://d365jw560o4r8" path="res://Assets/Characters/Shork/Shor-Idle-UnderWater/Shork-Idle UW5.png" id="16_yb71t"]
+[ext_resource type="Texture2D" uid="uid://h8jn0jemd1b1" path="res://Assets/Characters/Shork/Shor-Idle-UnderWater/Shork-Idle UW6.png" id="18_i606r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ixqgw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_stkg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fcp4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jns2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_84v1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_auvnt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_p885j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_i12sj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bf5c7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2dhk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_esgm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_en0g3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2g7op")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_i6l4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ljkwh")
+}],
+"loop": true,
+"name": &"bite",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"empty_idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_6xo88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_yb71t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_i606r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yhdo2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_idtnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_pct8m")
+}],
+"loop": true,
+"name": &"underwater_idle",
+"speed": 7.0
+}]
+
+[node name="Shork" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_6adhc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+texture_filter = 1
+position = Vector2(0, -7)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ixqgw")
+animation = &"bite"
+autoplay = "empty_idle"
+frame = 5
+frame_progress = 0.620842
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(35, 36, 141, -38, -5, -173, -117, -110)
+
+[node name="playerdetetor" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="playerdetetor"]
+polygon = PackedVector2Array(-553, -202, 69, 395, 848, -91, 84, -634)
+
+[connection signal="animation_looped" from="Area2D/AnimatedSprite2D" to="Area2D" method="_on_animated_sprite_2d_animation_looped"]

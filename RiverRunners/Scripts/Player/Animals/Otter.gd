@@ -55,6 +55,7 @@ func jump():
 func handle_jump(delta): 
 	if time <= 0 and time + delta >= 0:
 		Utils.playSoundFile(self,"res://Assets/Audio/SFX/jump4.wav","SFX",-12)
+		play("jump")
 	time += delta
 	if position.y <= pos && time >= 0:
 		position.y = pos - (speed + gravity * time * -1) * time
@@ -161,3 +162,8 @@ func onResume():
 func onTreeDetected(area):
 	if z_index < 5:
 		Events.emit_signal("collision_with_tree",area)
+
+
+func _on_animation_looped():
+	if animation == "jump":
+		play("idle")

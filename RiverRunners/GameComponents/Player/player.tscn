@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=3 uid="uid://dej1mjtjgtaao"]
+[gd_scene load_steps=95 format=3 uid="uid://dej1mjtjgtaao"]
 
 [ext_resource type="Script" path="res://Scripts/Player/LogMovements.gd" id="1_8lkio"]
 [ext_resource type="Texture2D" uid="uid://c041f6oxnqu5j" path="res://Assets/Characters/salmon/Dive/Salmon-Dive1.png" id="2_67xvo"]
@@ -74,6 +74,19 @@
 [ext_resource type="Texture2D" uid="uid://bkxgfu8oxro4j" path="res://Assets/Characters/beaver/Justin-Beaver-idle3.png" id="42_5rfwx"]
 [ext_resource type="Texture2D" uid="uid://bkgln7347ulgl" path="res://Assets/Characters/salmon/Swim/Salmon-Swim4.png" id="43_r6s6k"]
 [ext_resource type="Texture2D" uid="uid://cbonddx2xiqr0" path="res://Assets/Characters/beaver/Justin-Beaver-idle4.png" id="43_rfp8y"]
+[ext_resource type="Texture2D" uid="uid://do3gmotrfoc15" path="res://Assets/Characters/crab/Crab-jump1.png" id="51_xkvco"]
+[ext_resource type="Texture2D" uid="uid://d0eotuua3odi" path="res://Assets/Characters/crab/Crab-jump2.png" id="52_g36r5"]
+[ext_resource type="Texture2D" uid="uid://y5pjy2g43ld" path="res://Assets/Characters/crab/Crab-jump3.png" id="53_e0574"]
+[ext_resource type="Texture2D" uid="uid://57ntmlku7g2v" path="res://Assets/Characters/crab/Crab-jump4.png" id="54_eqeom"]
+[ext_resource type="Texture2D" uid="uid://bsrmgvin7wjmm" path="res://Assets/Characters/otter/Otter-jump1.png" id="66_26epy"]
+[ext_resource type="Texture2D" uid="uid://c7lmntjvtj2bd" path="res://Assets/Characters/otter/Otter-jump2.png" id="67_hiohc"]
+[ext_resource type="Texture2D" uid="uid://do7163ox5ybkp" path="res://Assets/Characters/otter/Otter-jump3.png" id="68_2os8e"]
+[ext_resource type="Texture2D" uid="uid://sdh5vgyxhc1i" path="res://Assets/Characters/otter/Otter-jump4.png" id="69_54t7c"]
+[ext_resource type="Texture2D" uid="uid://dn3tbesifvxuo" path="res://Assets/Characters/frog/frog-jump.png" id="75_228ub"]
+[ext_resource type="Texture2D" uid="uid://dye6pi5r1jp2j" path="res://Assets/Characters/beaver/Justin-Beaver-Jump-Duck1.png" id="79_4e4nf"]
+[ext_resource type="Texture2D" uid="uid://v3xb7mbtayyg" path="res://Assets/Characters/beaver/Justin-Beaver-Jump-Duck2.png" id="80_xssce"]
+[ext_resource type="Texture2D" uid="uid://bg4puv6f4tjds" path="res://Assets/Characters/beaver/Justin-Beaver-Jump-Duck3.png" id="81_i8uei"]
+[ext_resource type="Texture2D" uid="uid://cw73wk68jht3" path="res://Assets/Characters/beaver/Justin-Beaver-Jump-Duck4.png" id="82_him14"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8fae2"]
 animations = [{
@@ -257,6 +270,23 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_xkvco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_g36r5")
+}, {
+"duration": 2.0,
+"texture": ExtResource("53_e0574")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_eqeom")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 4.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_undwl"]
@@ -294,6 +324,26 @@ animations = [{
 "loop": true,
 "name": &"idle_rocks",
 "speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("66_26epy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_hiohc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_2os8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_54t7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_26epy")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xte55"]
@@ -314,10 +364,50 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("75_228ub")
+}, {
+"duration": 4.0,
+"texture": ExtResource("36_jfb8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_b0lvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_228ub")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j8obe"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_f574g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_4e4nf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_xssce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_i8uei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_him14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_5rfwx")
+}],
+"loop": true,
+"name": &"dive",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("40_f574g")
@@ -352,6 +442,7 @@ script = ExtResource("3_cks82")
 
 [node name="Log" type="Area2D" parent="."]
 texture_filter = 1
+collision_layer = 17
 script = ExtResource("2_cobcv")
 
 [node name="FreeLaneDetector" type="Node2D" parent="Log"]
@@ -470,10 +561,9 @@ bus = &"SFX"
 texture_filter = 1
 position = Vector2(70, -90)
 sprite_frames = SubResource("SpriteFrames_bggev")
-animation = &"idle"
+animation = &"jump"
 autoplay = "idle"
-frame = 2
-frame_progress = 0.88517
+frame_progress = 0.0071237
 script = ExtResource("8_gjrmx")
 
 [node name="CrabCollider" type="Area2D" parent="Crab"]
@@ -501,7 +591,7 @@ disabled = true
 texture_filter = 1
 position = Vector2(-14, -65)
 sprite_frames = SubResource("SpriteFrames_undwl")
-animation = &"idle"
+animation = &"jump"
 autoplay = "idle"
 script = ExtResource("9_vpltj")
 
@@ -522,8 +612,9 @@ texture_filter = 1
 position = Vector2(-82, -26)
 scale = Vector2(0.703125, 0.703125)
 sprite_frames = SubResource("SpriteFrames_xte55")
-animation = &"idle"
+animation = &"jump"
 autoplay = "idle"
+frame_progress = 0.370821
 script = ExtResource("7_pt0qm")
 
 [node name="FrogCollider" type="Area2D" parent="Frog"]
@@ -546,10 +637,13 @@ script = ExtResource("16_qhedj")
 texture_filter = 1
 position = Vector2(-177, 72)
 sprite_frames = SubResource("SpriteFrames_j8obe")
-animation = &"idle"
+animation = &"dive"
 autoplay = "idle"
-frame_progress = 0.806331
+frame_progress = 0.384468
 script = ExtResource("5_supvc")
 
 [connection signal="animation_finished" from="Salmon" to="Salmon" method="_on_animation_finished"]
 [connection signal="animation_looped" from="Crab" to="Crab" method="_on_animation_looped"]
+[connection signal="animation_looped" from="Otter" to="Otter" method="_on_animation_looped"]
+[connection signal="animation_looped" from="Frog" to="Frog" method="_on_animation_looped"]
+[connection signal="animation_looped" from="Beaver" to="Beaver" method="_on_animation_looped"]

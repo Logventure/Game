@@ -1,15 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://ca2p58nhcntvb"]
+[gd_scene load_steps=6 format=3 uid="uid://ca2p58nhcntvb"]
 
 [ext_resource type="Texture2D" uid="uid://ds256m6l1n6ty" path="res://Assets/grid.png" id="1_djakf"]
 [ext_resource type="Script" path="res://Scripts/EditorOnlyNode.gd" id="2_h848v"]
 [ext_resource type="Texture2D" uid="uid://cmhfycdiuwgqs" path="res://Assets/Tilesets/Tile-Atlas.png" id="3_63s6w"]
-[ext_resource type="Texture2D" uid="uid://c5qd055efc2fv" path="res://Assets/Tilesets/Water Tilesets/wateranimations.png" id="4_mf656"]
-[ext_resource type="Texture2D" uid="uid://cm3k43to53vcd" path="res://Assets/Tilesets/Water Tilesets/wateranimations2.png" id="5_iqkpd"]
-[ext_resource type="Texture2D" uid="uid://bm2xoq6tms15d" path="res://Assets/Tilesets/Water Tilesets/wateranimations3.png" id="6_uqsdn"]
-[ext_resource type="Texture2D" uid="uid://bvjn8a735l007" path="res://Assets/Tilesets/Water Tilesets/wateranimations4.png" id="7_l3opl"]
-[ext_resource type="Texture2D" uid="uid://d2uoy7b6tqd04" path="res://Assets/Tilesets/Water Tilesets/wateranimations5.png" id="8_jtuth"]
-[ext_resource type="Texture2D" uid="uid://decr78fg4cecq" path="res://Assets/Tilesets/Water Tilesets/wateranimations6.png" id="9_0rvgq"]
-[ext_resource type="Texture2D" uid="uid://bid8kk7wocawt" path="res://Assets/Tilesets/Water Tilesets/wateranimations7.png" id="10_ob8et"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wt4to"]
 texture = ExtResource("3_63s6w")
@@ -62,94 +55,10 @@ texture = ExtResource("3_63s6w")
 3:7/0 = 0
 3:3/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vjxjk"]
-texture = ExtResource("4_mf656")
-0:0/animation_columns = 3
-0:0/animation_frame_0/duration = 0.4
-0:0/animation_frame_1/duration = 0.2
-0:0/animation_frame_2/duration = 0.2
-0:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jakr4"]
-texture = ExtResource("5_iqkpd")
-0:0/animation_columns = 3
-0:0/animation_frame_0/duration = 0.4
-0:0/animation_frame_1/duration = 0.2
-0:0/animation_frame_2/duration = 0.2
-0:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wi3c5"]
-texture = ExtResource("6_uqsdn")
-0:0/animation_columns = 3
-0:0/animation_frame_0/duration = 0.4
-0:0/animation_frame_1/duration = 0.2
-0:0/animation_frame_2/duration = 0.2
-0:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_266p4"]
-texture = ExtResource("7_l3opl")
-0:0/animation_columns = 3
-0:0/animation_frame_0/duration = 0.4
-0:0/animation_frame_1/duration = 0.2
-0:0/animation_frame_2/duration = 0.2
-0:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x6y5o"]
-texture = ExtResource("8_jtuth")
-0:0/animation_columns = 3
-0:0/animation_frame_0/duration = 0.4
-0:0/animation_frame_1/duration = 0.2
-0:0/animation_frame_2/duration = 0.2
-0:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ud4oe"]
-texture = ExtResource("9_0rvgq")
-0:0/animation_columns = 3
-0:0/animation_frame_0/duration = 0.4
-0:0/animation_frame_1/duration = 0.2
-0:0/animation_frame_2/duration = 0.2
-0:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5bpbm"]
-texture = ExtResource("10_ob8et")
-0:0/animation_columns = 3
-0:0/animation_frame_0/duration = 0.4
-0:0/animation_frame_1/duration = 0.2
-0:0/animation_frame_2/duration = 0.2
-0:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-
 [sub_resource type="TileSet" id="TileSet_jpmhy"]
 tile_shape = 1
 tile_size = Vector2i(16, 8)
 sources/1 = SubResource("TileSetAtlasSource_wt4to")
-sources/2 = SubResource("TileSetAtlasSource_vjxjk")
-sources/3 = SubResource("TileSetAtlasSource_jakr4")
-sources/4 = SubResource("TileSetAtlasSource_wi3c5")
-sources/5 = SubResource("TileSetAtlasSource_266p4")
-sources/6 = SubResource("TileSetAtlasSource_x6y5o")
-sources/7 = SubResource("TileSetAtlasSource_ud4oe")
-sources/8 = SubResource("TileSetAtlasSource_5bpbm")
 
 [node name="Node2D" type="Node2D"]
 

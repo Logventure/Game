@@ -11,8 +11,6 @@
 #If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
 #
 
-
-
 *Character*: beaver
 
 *Text*: What is this thing following us??
@@ -45,7 +43,7 @@
 
 *Character*: shork
 
-*Text*: Rawwwwwrr
+*Text*: Rawwwwwrr!
 >>>>>
 
 *Character*: crab
@@ -127,12 +125,178 @@
 *Text*: I think, i remember.
 >>>>>
 
+*Text*: The doctors....
+>>>>>
+
+*Character*: frog
+
+*Text*: The strange wardrobe choices.
+>>>>>
+
+*Character*: salmon
+
+*Text*: Gluuu?
+>>>>>
+
+*Character*: frog
+
+*Text*: Yes exactly!
+>>>>>
+
+*Character*: shork
+
+*Text*: I Understand you've been out for a while. But i could still sense that stentch on you all.
+>>>>>
+
+*Text*: I thought u were part of the scientists, trying to recapture me.
+>>>>>
+
+*Character*: crab
+
+*Text*: So you're the one that broke the dam?
+>>>>>
+
+*Text*: To escape?
+>>>>>
+
+*Character*: shork
+
+*Text*: Yes. 
+>>>>>
+
+*Text*: Those people, what i saw them doing, what they did to me...
+>>>>>
+
+*Text*: I had to break out.
+>>>>>
+
+*Character*: otter
+
+*Text*: We all came from that place, didnt we?
+>>>>>
+
+*Text*: That lab, below the reservoir.
+>>>>>
+
+*Character*: salmon
+
+*Text*: GluUuuuu...?
+>>>>>
+
+*Character*: frog
+
+*Text*: It can't be, i only recall being in the wilds, searching for other like minded fellows.
+>>>>>
+
+*Character*: shork
+
+*Text*: I believe they were attempting to improve your capabilities, altering your bodies, your mind, your memories...
+>>>>>
+
+*Text*: Thankfully i managed to escape before they could wipe what i had seen, what i had experienced, from my mind.
+>>>>>
+
+*Character*: crab
+
+*Text*: I can't stand hearin this.
+>>>>>
+
+*Text*: I'm not gonna take this laying down, we need to go back, teach those monsters a lesson.
+>>>>>
+
+*Character*: otter
+
+*Text*: We can't, there's no way we could swim up the river and through the dam, the waters are too strong.
+>>>>>
+
+*Text*: Maybe Sal could, but that'd be suicide.
+>>>>>
+
+*Character*: beaver
+
+*Text*: I don't want to go back... i don't want to lose any of you.
+>>>>>
+
+*Text*: It would be dangerous and reckless...
+>>>>>
+
+*Character*: frog
+
+*Text*: IT, just broke through the lab regardless, it's likely in shambles.
+>>>>>
+
+*Character*: shork
+
+*Text*: Don't call me it!
+>>>>>
+
+*Character*: frog
+
+*Text*: Oh, my apologies. We didn't even ask your name.
+>>>>>
+
+*Character*: shork
+
+*Text*: I... I don't have a name...
+>>>>>
+
+*Text*: I don't even know what i am....
+>>>>>
 
 
+*Character*: beaver
 
+*Text*: We could give you a name.
+>>>>>
 
+*Text*: Do any of you have any ideas my friends?
+>>>>>
 
+*Character*: shork
 
+*Text*: Friends...
+>>>>>
+
+*Text*: Friend, i like that.
+>>>>>
+
+*Character*: salmon
+
+*Text*: Glu, GluuUuuU~
+>>>>>
+
+*Character*: frog
+
+*Text*: That does sound nice.
+>>>>>
+
+*Character*: crab
+
+*Text*: Any objections?
+>>>>>
+
+*Character*: hidden
+
+*Text*: ...
+>>>>>
+
+*Character*: beaver
+
+*Text*: Friend it is.
+>>>>>
+
+*Character*: shork
+
+*Text*: Thank you... friends.
+>>>>>
+
+*Character*: beaver
+
+*Text*: And do you have anywhere to go?
+>>>>>
+
+*Text*: If not, you could join us!
+>>>>>
 
 *Character*: none
 
@@ -140,6 +304,9 @@
 >>>>>
 
 *Character*: shork
+
+*Text*: I... i would like that.
+>>>>>
 
 *Text*: Thank you for understanding my plight my friends.
 >>>>>
@@ -150,6 +317,31 @@
 *Character*: beaver
 
 *Text*: Hm, but for now, what do u guys say we take a well deserved break?
+>>>>>
+
+*Character*: frog
+
+*Text*: I do need to give this head of mine a rest.
+>>>>>
+
+*Character*: crab
+
+*Text*: I guess kickin back and enjoyin the ocean breeze don't sound so bad.
+>>>>>
+
+*Character*: otter
+
+*Text*: Other animals may also need our help, we could keep an eye out for them.
+>>>>>
+
+*Character*: salmon
+
+*Text*: GluuUuuUuuUuU!!
+>>>>>
+
+*Character*: shork
+
+*Text*: A rest, that sounds wonderful...
 >>>>>
 
 #

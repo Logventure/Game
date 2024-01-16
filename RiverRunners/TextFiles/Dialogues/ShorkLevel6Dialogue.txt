@@ -12,195 +12,32 @@
 #
 
 
-*Character*: none
+*Character*: otter
 
-*Cutscene*: res://Assets/Cutscenes/j-CS-OT.png
+*Text*: It has to be close, i can sense it
 >>>>>
 
-*Character*: shork_gray
+*Character*: crab
+
+*Text*: Ah, the waters are agitated.
+>>>>>
+
+*Text*: It's trying to get close to us itself.
+>>>>>
+
+
+*Character*: shork
 
 *Sound*: res://Assets/Audio/Cutscenes/shorkroar.wav
 
-*Text*: (Crash) Raaawwwwwrrr!!
->>>>>
-
-
-*Character*: frog
-
-*Text*: Holy Makerel!!
->>>>>
-
-*Text*: What was that!?
->>>>>
-
-
-*Character*: beaver
-
-*Text*: That does sound scary...
->>>>>
-
-
-*Character*: crab
-
-*Text*: A lil roaring's got you all quaking in your boots.
->>>>>
-
-*Text*: I've heard much more intense screams...
->>>>>
-
-
-*Character*: salmon
-
-*Text*: Glu, gluuu??...
->>>>>
-
-
-*Character*: otter_gray
-
-*Text*: (Hmm, these folks seem hopeless)
->>>>>
-
-*Text*: (And somewhat suspicious...)
->>>>>
-
-*Cutscene*: res://Assets/Cutscenes/k-CS-Common4.png
-
-
-*Character*: otter
-
-*Text*: Who are you and what are you doing in these woods!?
+*Text*: Raaawwwwwrrr!!
 >>>>>
 
 *Character*: frog
 
-*Text*: HAAAAAAA!!
+*Text*: For the love of all that is holy, keep rowing Sir Justin!
 >>>>>
 
-*Character*: beaver
-
-*Text*: We mean no harm ma'am.
->>>>>
-
-*Character*: salmon
-
-*Text*: GluUu, Gluuuu, GlUU!
->>>>>
-
-*Character*: crab
-
-*Text*: You don't get to come in here and start askin questions.
->>>>>
-
-*Cutscene*: none
-
-*Character*: otter
-
-*Text*: Sounds like some of you have a problem with authority.
->>>>>
-
-*Text*: I'm Ranger Ottivia Timber. I scout and take care of these woods.
->>>>>
-
-*Text*: What about you folks, mind introducing yourselves?
->>>>>
-
-*Character*: crab
-
-*Text*: ...
->>>>>
-
-*Character*: beaver
-
-*Text*: My name's Justin, Justin Beaver, i live near the dam, so as soon as i heard it breaking, i came rushing to check if anyone had been hurt.
->>>>>
-
-*Character*: otter
-
-*Text*: An exemplary citizen it seems.
->>>>>
-
-*Character*: beaver
-
-*Text*: Treat others how you would like to be treated, that's how i try to live my life.
->>>>>
-
-*Text*: This here is Sir Frogginton the third, Sal, and Vito.
->>>>>
-
-*Character*: frog
-
-*Text*: It's a pleasure to meet you ma'am.
->>>>>
-
-*Character*: salmon
-
-*Text*: Glu gluUuUu~.
->>>>>
-
-*Character*: crab
-
-*Text*: Hm, yeah, that's the name.
->>>>>
-
-*Character*: otter
-
-*Text*: Hm, seems like you're mostly well meaning folk then.
->>>>>
-
-*Text*: I'm investigating the source of this disaster myself.
->>>>>
-
-
-*Character*: crab
-
-*Text*: Hrm, seems like our goals might align after all then.
->>>>>
-
-*Character*: otter
-
-*Text*: Indeed, and you might just be in need of my throwing arm. Through my investigation i've seen some concerning signs.
->>>>>
-
-*Text*: Signs that another creature might be behind this. I've encountered strange tentacles around these waters.
->>>>>
-
-*Character*: frog
-
-*Text*: Ten-Ten-Tentacles you say???...
->>>>>
-
-*Character*: salmon
-
-*Text*: Glu Gluu!
->>>>>
-
-*Character*: frog
-
-*Text*: Don't talk to me like that Salomon, i've done nothing wrong!
->>>>>
-
-*Text*: Fear is a normal and vital survival instant...
->>>>>
-
-*Character*: salmon
-
-*Text*: Gluu, gluUu, gluuuu...
->>>>>
-
-*Character*: crab
-
-*Text*: Fears aside, this does sound like a good lead.
->>>>>
-
-*Character*: beaver
-
-*Text*: Lets get to the bottom of this then.
->>>>>
-
-*Character*: otter
-
-*Text*: Indeed, if we encounter any tentacles, i can help of course. [PRESS W to THROW rocks at the tentacles]
->>>>>
 
 
 #

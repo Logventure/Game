@@ -1,0 +1,53 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: frog
+
+*Text*: Didn't we say we were gonna get some rest.
+>>>>>
+
+*Character*: beaver
+
+*Text*: Well, some daily exercise can't hurt?
+>>>>>
+
+*Character*: salmon
+
+*Text*: GluuUuu, gluuuu.
+>>>>>
+
+*Character*: otter
+
+*Text*: Lets get going then.
+>>>>>
+
+*Character*: crab
+
+*Text*: Aye, this log ain't gonna row and defend itself.
+>>>>>
+
+*Character*: shork
+
+*Text*: Oh,also... 
+>>>>>
+
+*Text*: If you encounter another shark trying to bite you, uh, that's not me, it's my cousin...
+>>>>>
+
+*Text*: Dave.
+>>>>>
+
+#
+#Use one text file for each conversation
+#

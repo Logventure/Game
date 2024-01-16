@@ -43,6 +43,8 @@
 
 *Character*: shork
 
+*Sound*: res://Assets/Audio/Cutscenes/shorkroar.wav
+
 *Text*: Rawwwwwrr!
 >>>>>
 

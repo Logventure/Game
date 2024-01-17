@@ -255,6 +255,14 @@ animations = [{
 "speed": 7.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 3.0,
 "texture": ExtResource("17_vym65")
 }, {
@@ -291,6 +299,14 @@ animations = [{
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_undwl"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("24_4qxpl")
@@ -348,6 +364,14 @@ animations = [{
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xte55"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("33_uja10")
@@ -561,9 +585,8 @@ bus = &"SFX"
 texture_filter = 1
 position = Vector2(70, -90)
 sprite_frames = SubResource("SpriteFrames_bggev")
-animation = &"jump"
+animation = &"empty"
 autoplay = "idle"
-frame_progress = 0.0071237
 script = ExtResource("8_gjrmx")
 
 [node name="CrabCollider" type="Area2D" parent="Crab"]
@@ -587,13 +610,55 @@ position = Vector2(114, -33)
 polygon = PackedVector2Array(18, -10, -45, -36, -7, -48, 25, -35)
 disabled = true
 
+[node name="WaterParticles" type="CPUParticles2D" parent="Crab"]
+position = Vector2(-8, 38)
+scale = Vector2(0.703125, 0.703125)
+emitting = false
+amount = 100
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+randomness = 0.25
+lifetime_randomness = 0.3
+emission_shape = 3
+emission_rect_extents = Vector2(50, 50)
+direction = Vector2(0.4, -1)
+spread = 35.39
+gravity = Vector2(0, 500)
+initial_velocity_max = 743.62
+scale_amount_min = 8.0
+scale_amount_max = 8.0
+scale_amount_curve = SubResource("Curve_km1tf")
+color = Color(0.71875, 0.800781, 0.816406, 1)
+
 [node name="Otter" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-14, -65)
 sprite_frames = SubResource("SpriteFrames_undwl")
-animation = &"jump"
+animation = &"idle"
 autoplay = "idle"
 script = ExtResource("9_vpltj")
+
+[node name="WaterParticles" type="CPUParticles2D" parent="Otter"]
+position = Vector2(-8, 38)
+scale = Vector2(0.703125, 0.703125)
+emitting = false
+amount = 100
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+randomness = 0.25
+lifetime_randomness = 0.3
+emission_shape = 3
+emission_rect_extents = Vector2(50, 50)
+direction = Vector2(0.4, -1)
+spread = 35.39
+gravity = Vector2(0, 500)
+initial_velocity_max = 743.62
+scale_amount_min = 8.0
+scale_amount_max = 8.0
+scale_amount_curve = SubResource("Curve_km1tf")
+color = Color(0.71875, 0.800781, 0.816406, 1)
 
 [node name="OtterCollider" type="Area2D" parent="Otter"]
 position = Vector2(-68, 39)
@@ -612,9 +677,8 @@ texture_filter = 1
 position = Vector2(-82, -26)
 scale = Vector2(0.703125, 0.703125)
 sprite_frames = SubResource("SpriteFrames_xte55")
-animation = &"jump"
+animation = &"empty"
 autoplay = "idle"
-frame_progress = 0.370821
 script = ExtResource("7_pt0qm")
 
 [node name="FrogCollider" type="Area2D" parent="Frog"]
@@ -625,6 +689,27 @@ script = ExtResource("21_r641f")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Frog/FrogCollider"]
 polygon = PackedVector2Array(-49.7778, 45.5111, 4.26666, 62.5778, 46.9333, 44.0889, -5.68889, 25.6)
+
+[node name="WaterParticles" type="CPUParticles2D" parent="Frog"]
+position = Vector2(-8, 38)
+scale = Vector2(0.703125, 0.703125)
+emitting = false
+amount = 100
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+randomness = 0.25
+lifetime_randomness = 0.3
+emission_shape = 3
+emission_rect_extents = Vector2(50, 50)
+direction = Vector2(0.4, -1)
+spread = 35.39
+gravity = Vector2(0, 500)
+initial_velocity_max = 743.62
+scale_amount_min = 8.0
+scale_amount_max = 8.0
+scale_amount_curve = SubResource("Curve_km1tf")
+color = Color(0.71875, 0.800781, 0.816406, 1)
 
 [node name="GridHelper(hide)" type="Sprite2D" parent="."]
 visible = false

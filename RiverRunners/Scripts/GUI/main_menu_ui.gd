@@ -93,6 +93,7 @@ func _process(delta):
 
 
 func _on_play_button_pressed():
+	Utils.playUISound(self, -6)
 	lastFocusedButton = $VBoxContainer/PlayButton
 	$VBoxContainer.visible = false
 	$VBoxContainer2.visible = true
@@ -107,6 +108,7 @@ func _on_play_button_pressed():
 
 
 func _on_options_button_pressed():
+	Utils.playUISound(self, -6)
 	lastFocusedButton = $VBoxContainer/OptionsButton
 	#Events.emit_signal("go_to_options")
 	$VBoxContainer.visible = false
@@ -116,6 +118,7 @@ func _on_options_button_pressed():
 	$OptionsUI.resetFocus()
 
 func _on_credits_button_pressed():
+	Utils.playUISound(self, -6)
 	lastFocusedButton = $CreditsButton
 	$BackgroundImage.visible = false
 	$VBoxContainer.visible = false
@@ -138,6 +141,7 @@ func backFromCredits():
 	$Credits.visible = false
 
 func _on_exit_button_pressed():
+	Utils.playUISound(self, -6)
 	$Panel.visible = true
 	if InputHandler.hasController():
 		$Panel/HBoxContainer/NoButton.grab_focus()
@@ -147,6 +151,7 @@ func _on_yes_button_pressed():
 
 
 func _on_no_button_pressed():
+	Utils.playUISound(self, -6)
 	$Panel.visible = false
 
 func backFromOptions():
@@ -156,6 +161,7 @@ func backFromOptions():
 
 
 func _on_back_button_pressed():
+	Utils.playUISound(self, -6)
 	$VBoxContainer.visible = true
 	$VBoxContainer2.visible = false
 	$BackButton.visible = false
@@ -163,34 +169,41 @@ func _on_back_button_pressed():
 	current_state = States.MAIN
 
 func _on_level_1_button_pressed():
+	Utils.playUISound(self, -6)
 	lastFocusedButton = get_viewport().gui_get_focus_owner()
 	Events.emit_signal("go_to_level", 0)
 
 
 func _on_level_2_button_pressed():
+	Utils.playUISound(self, -6)
 	lastFocusedButton = get_viewport().gui_get_focus_owner()
 	Events.emit_signal("go_to_level", 1)
 
 
 func _on_level_3_button_pressed():
+	Utils.playUISound(self, -6)
 	lastFocusedButton = get_viewport().gui_get_focus_owner()
 	Events.emit_signal("go_to_level", 2)
 
 
 func _on_level_4_button_pressed():
+	Utils.playUISound(self, -6)
 	lastFocusedButton = get_viewport().gui_get_focus_owner()
 	Events.emit_signal("go_to_level", 3)
 
 
 func _on_level_5_button_pressed():
+	Utils.playUISound(self, -6)
 	lastFocusedButton = get_viewport().gui_get_focus_owner()
 	Events.emit_signal("go_to_level", 4)
 
 func _on_level_6_button_pressed():
+	Utils.playUISound(self, -6)
 	lastFocusedButton = get_viewport().gui_get_focus_owner()
 	Events.emit_signal("go_to_level", 5)
 
 func _on_infinite_button_pressed():
+	Utils.playUISound(self, -6)
 	lastFocusedButton = get_viewport().gui_get_focus_owner()
 	Events.emit_signal("go_to_level", 6)
 

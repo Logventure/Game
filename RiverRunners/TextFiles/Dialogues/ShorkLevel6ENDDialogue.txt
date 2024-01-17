@@ -35,6 +35,8 @@
 
 *Character*: otter
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk2.wav
+
 *Text*: A danger is what it is
 >>>>>
 
@@ -57,8 +59,12 @@
 
 *Character*: otter
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk4.wav
+
 *Text*: The question is why it's here in the first place.
 >>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk2.wav
 
 *Text*: This thing needs to be taken care of.
 >>>>>
@@ -115,6 +121,8 @@
 
 
 *Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-stoprightthere.wav
 
 *Text*: The lab... I... my head...
 >>>>>
@@ -176,8 +184,12 @@
 
 *Character*: otter
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-talkingtoself.wav
+
 *Text*: We all came from that place, didnt we?
 >>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-whatevertalk.wav
 
 *Text*: That lab, below the reservoir.
 >>>>>
@@ -210,8 +222,12 @@
 
 *Character*: otter
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk1.wav
+
 *Text*: We can't, there's no way we could swim up the river and through the dam, the waters are too strong.
 >>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
 
 *Text*: Maybe Sal could, but that'd be suicide.
 >>>>>
@@ -334,6 +350,8 @@
 >>>>>
 
 *Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
 
 *Text*: Other animals may also need our help, we could keep an eye out for them.
 >>>>>

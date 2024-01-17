@@ -61,6 +61,7 @@ func handle_jump(delta):
 			print("Rip crabby")
 			Events.emit_signal("lose_damage", false)
 			current_state = States.DROWNING
+			$WaterParticles.emitting = true
 			Utils.playSoundFile(self,"res://Assets/Audio/SFX/splash1.wav","SFX",-12)
 
 		
@@ -133,7 +134,10 @@ func _process(delta):
 				handle_position()
 
 			States.DROWNING:
-				current_state = States.IDLE
+				play("empty")
+				if not $WaterParticles.emitting:
+					current_state = States.IDLE
+					play("idle")
 
 			States.TAKE_DAMAGE:
 				pass

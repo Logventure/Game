@@ -1,6 +1,8 @@
 extends Node
 
 const tilesize = 380
+var lastUIsoundIndex = 1
+var increasingIndex = false
 
 #returns the position of a tile relative to the position of a reference tile
 func gridRelativePosition(position, tilesX, tilesY, tilesize):
@@ -28,3 +30,22 @@ func playSoundFile(parent,filepath: String,bus: String,volume = 0,positional = f
 	parent.add_child(audiostream)
 	audiostream.play()
 	print("Play sound, ", audiostream)
+
+func playUISound(parent,volume = 0):
+	var soundfiles = ["res://Assets/Audio/SFX/UI/UI-1.wav", "res://Assets/Audio/SFX/UI/UI-2.wav", "res://Assets/Audio/SFX/UI/UI-3.wav"]
+	var index = lastUIsoundIndex
+	if increasingIndex:
+		if index < len(soundfiles) - 1:
+			index += 1
+		else:
+			index -= 1
+			increasingIndex = false
+	else:
+		if index > 0:
+			index -= 1
+		else:
+			index += 1
+			increasingIndex = true
+
+	lastUIsoundIndex = index
+	playSoundFile(parent,soundfiles[index],"SFX",volume)

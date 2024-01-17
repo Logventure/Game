@@ -30,6 +30,8 @@
 
 *Character*: otter
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-stoprightthere.wav
+
 *Text*: We need to keep pushing through! There's only one way we'll reach a conclusion, we have to keep going.
 >>>>>
 
@@ -59,6 +61,8 @@
 
 
 *Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk1.wav
 
 *Text*: We should be close, i've been tracking this thing for a while now, the increased activity is a sure sign.
 >>>>>

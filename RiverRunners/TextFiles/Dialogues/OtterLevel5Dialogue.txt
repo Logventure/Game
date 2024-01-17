@@ -57,8 +57,12 @@
 
 *Character*: otter_gray
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
+
 *Text*: (Hmm, these folks seem hopeless)
 >>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-talkingtoself.wav
 
 *Text*: (And somewhat suspicious...)
 >>>>>
@@ -67,6 +71,8 @@
 
 
 *Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-stoprightthere.wav
 
 *Text*: Who are you and what are you doing in these woods!?
 >>>>>
@@ -95,11 +101,17 @@
 
 *Character*: otter
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk2.wav
+
 *Text*: Sounds like some of you have a problem with authority.
 >>>>>
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk1.wav
+
 *Text*: I'm Ranger Ottivia Timber. I scout and take care of these woods.
 >>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk2.wav
 
 *Text*: What about you folks, mind introducing yourselves?
 >>>>>
@@ -115,6 +127,8 @@
 >>>>>
 
 *Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk2.wav
 
 *Text*: An exemplary citizen it seems.
 >>>>>
@@ -144,8 +158,12 @@
 
 *Character*: otter
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
+
 *Text*: Hm, seems like you're mostly well meaning folk then.
 >>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-talkingtoself.wav
 
 *Text*: I'm investigating the source of this disaster myself.
 >>>>>
@@ -158,8 +176,12 @@
 
 *Character*: otter
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk4.wav
+
 *Text*: Indeed, and you might just be in need of my throwing arm. Through my investigation i've seen some concerning signs.
 >>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk2.wav
 
 *Text*: Signs that another creature might be behind this. I've encountered strange tentacles around these waters.
 >>>>>
@@ -198,6 +220,8 @@
 >>>>>
 
 *Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
 
 *Text*: Indeed, if we encounter any tentacles, i can help of course. [PRESS W to THROW rocks at the tentacles]
 >>>>>

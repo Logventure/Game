@@ -235,7 +235,7 @@ func updateCutscene(delta):
 		cutscene_previous_sprite.modulate.a = 1
 
 func playSound(filepath):
-	Utils.playSoundFile(self,filepath,"SFX",0)
+	Utils.playSoundFile(self,filepath,"SFX",-6)
 
 func onPause():
 	paused = true

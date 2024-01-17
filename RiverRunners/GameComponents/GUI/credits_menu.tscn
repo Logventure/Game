@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cb1i5u782gu14"]
+[gd_scene load_steps=31 format=3 uid="uid://cb1i5u782gu14"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/credits_menu.gd" id="1_xjimh"]
 [ext_resource type="Texture2D" uid="uid://dp6ppprxdyxto" path="res://Assets/UI/Credits/CreditsMenu1.png" id="1_xueiu"]
@@ -8,6 +8,14 @@
 [ext_resource type="Texture2D" uid="uid://dtl42lmgtdmjc" path="res://Assets/UI/Credits/CreditsMenu5.png" id="5_8p3s0"]
 [ext_resource type="Texture2D" uid="uid://d1d036ax17rbo" path="res://Assets/UI/Credits/CreditsMenu6.png" id="6_chmsc"]
 [ext_resource type="FontFile" uid="uid://bg1oq07gebwu4" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="8_na3el"]
+[ext_resource type="Texture2D" uid="uid://ceoh8osowrh1w" path="res://Assets/UI/Small_loader_animation/loader-skipdialogue-1.png" id="9_388c7"]
+[ext_resource type="Texture2D" uid="uid://dtdm27eexmmc1" path="res://Assets/UI/Small_loader_animation/loader-skipdialogue-2.png" id="10_ieo2x"]
+[ext_resource type="Texture2D" uid="uid://cgvs3ryqyp275" path="res://Assets/UI/Small_loader_animation/loader-skipdialogue-3.png" id="11_y70yk"]
+[ext_resource type="Texture2D" uid="uid://b5drx0utlitqf" path="res://Assets/UI/Small_loader_animation/loader-skipdialogue-4.png" id="12_21gjj"]
+[ext_resource type="Texture2D" uid="uid://kposukv1dgop" path="res://Assets/UI/Small_loader_animation/loader-skipdialogue-5.png" id="13_kvdj8"]
+[ext_resource type="Texture2D" uid="uid://5hkfnkkkuefp" path="res://Assets/UI/Small_loader_animation/loader-skipdialogue-6.png" id="14_m13gy"]
+[ext_resource type="Texture2D" uid="uid://cxnqfts737ds5" path="res://Assets/UI/Small_loader_animation/loader-skipdialogue-7.png" id="15_e3lkv"]
+[ext_resource type="Texture2D" uid="uid://cdvgxi3js8ex2" path="res://Assets/UI/Small_loader_animation/loader-skipdialogue-8.png" id="16_ujyt3"]
 
 [sub_resource type="Animation" id="Animation_id2l5"]
 resource_name = "credits_loop"
@@ -140,6 +148,41 @@ font_size = 25
 [sub_resource type="LabelSettings" id="LabelSettings_8sh2y"]
 font = ExtResource("8_na3el")
 font_size = 20
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d4s5w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_388c7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ieo2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_y70yk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_21gjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kvdj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_m13gy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_e3lkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ujyt3")
+}],
+"loop": false,
+"name": &"load",
+"speed": 10.0
+}]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -472,5 +515,14 @@ offset_bottom = -41.0
 grow_horizontal = 0
 grow_vertical = 0
 label_settings = SubResource("LabelSettings_8sh2y")
+
+[node name="loader_circle" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1577, 1025)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_d4s5w")
+animation = &"load"
+frame = 8
+frame_progress = 1.0
 
 [connection signal="timeout" from="Timer" to="." method="on_timer_timeout"]

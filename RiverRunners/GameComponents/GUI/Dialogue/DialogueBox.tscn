@@ -1,13 +1,62 @@
-[gd_scene load_steps=6 format=3 uid="uid://dj6cpg6bgxphr"]
+[gd_scene load_steps=18 format=3 uid="uid://dj6cpg6bgxphr"]
 
 [ext_resource type="Texture2D" uid="uid://caknn66xsxyt2" path="res://Assets/UI/DialogueFrame.png" id="1_d34fv"]
 [ext_resource type="Script" path="res://GameComponents/GUI/Dialogue/DialogueBox.gd" id="1_fpy87"]
 [ext_resource type="Texture2D" uid="uid://d2q3jr0oiv40u" path="res://Assets/Characters/frog/Frog.png" id="2_iyggp"]
 [ext_resource type="FontFile" uid="uid://bg1oq07gebwu4" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="4_fdulk"]
+[ext_resource type="Texture2D" uid="uid://bljbgwqy0oq1u" path="res://Assets/Cutscenes/d-CS-FrogJoins.png" id="5_5ask1"]
+[ext_resource type="FontFile" uid="uid://ceocyx73k4hb0" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidMono-d94EV.ttf" id="6_2r1gu"]
+[ext_resource type="Texture2D" uid="uid://ceoh8osowrh1w" path="res://Assets/UI/Small_loader_animation/loader-skipdialogue-1.png" id="7_6osjd"]
+[ext_resource type="Texture2D" uid="uid://dtdm27eexmmc1" path="res://Assets/UI/Small_loader_animation/loader-skipdialogue-2.png" id="8_m6nu7"]
+[ext_resource type="Texture2D" uid="uid://cgvs3ryqyp275" path="res://Assets/UI/Small_loader_animation/loader-skipdialogue-3.png" id="9_bg6wl"]
+[ext_resource type="Texture2D" uid="uid://b5drx0utlitqf" path="res://Assets/UI/Small_loader_animation/loader-skipdialogue-4.png" id="10_dpruu"]
+[ext_resource type="Texture2D" uid="uid://kposukv1dgop" path="res://Assets/UI/Small_loader_animation/loader-skipdialogue-5.png" id="11_vyi1e"]
+[ext_resource type="Texture2D" uid="uid://5hkfnkkkuefp" path="res://Assets/UI/Small_loader_animation/loader-skipdialogue-6.png" id="12_rxbjy"]
+[ext_resource type="Texture2D" uid="uid://cxnqfts737ds5" path="res://Assets/UI/Small_loader_animation/loader-skipdialogue-7.png" id="13_jhtpb"]
+[ext_resource type="Texture2D" uid="uid://cdvgxi3js8ex2" path="res://Assets/UI/Small_loader_animation/loader-skipdialogue-8.png" id="14_5mf2k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mrv80"]
 font = ExtResource("4_fdulk")
 font_size = 45
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6kpxl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6osjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_m6nu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bg6wl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_dpruu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vyi1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rxbjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jhtpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5mf2k")
+}],
+"loop": false,
+"name": &"load",
+"speed": 10.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5gs46"]
+font = ExtResource("6_2r1gu")
+font_size = 30
 
 [node name="DialogueBox" type="Node2D"]
 script = ExtResource("1_fpy87")
@@ -50,6 +99,7 @@ grow_vertical = 2
 z_index = -2
 texture_filter = 1
 scale = Vector2(15, 15)
+texture = ExtResource("5_5ask1")
 
 [node name="CutscenePrevious" type="Sprite2D" parent="Control"]
 z_index = -3
@@ -63,3 +113,25 @@ offset_top = -2128.0
 offset_right = 1943.0
 offset_bottom = 872.0
 color = Color(0.196078, 0.196078, 0.196078, 0.388235)
+
+[node name="InstructionsBox" type="HBoxContainer" parent="."]
+offset_left = 224.0
+offset_top = 194.0
+offset_right = 1048.0
+offset_bottom = 234.0
+
+[node name="loader_circle" type="AnimatedSprite2D" parent="InstructionsBox"]
+texture_filter = 1
+position = Vector2(-29, 19)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_6kpxl")
+animation = &"load"
+frame = 8
+frame_progress = 1.0
+
+[node name="Instructions" type="Label" parent="InstructionsBox"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Press SPACEBAR to continue - Hold to skip"
+label_settings = SubResource("LabelSettings_5gs46")
+horizontal_alignment = 2

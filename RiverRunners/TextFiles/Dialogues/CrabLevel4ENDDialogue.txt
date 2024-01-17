@@ -12,6 +12,8 @@
 #
 
 
+*Cutscene*: none
+
 *Character*: beaver
 
 *Text*: You really do have a hard shell don't u Vito?

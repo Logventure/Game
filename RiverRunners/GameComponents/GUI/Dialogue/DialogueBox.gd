@@ -25,6 +25,8 @@ var current_opacity = 0
 var target_opacity = 0
 var fade_time = 0.25
 
+var holdtime = 0
+
 var paused = false
 
 # Called when the node enters the scene tree for the first time.
@@ -47,6 +49,7 @@ func _process(delta):
 		updateCutscene(delta)
 		if Input.is_action_just_pressed("confirm"):
 			onContinue()
+		handleSkip(delta)
 
 func onContinue():
 	if char_count == len(current_text):
@@ -62,7 +65,23 @@ func onContinue():
 	else:
 		char_count = len(current_text) - 1
 
-	
+func handleSkip(delta):
+	if InputHandler.hasController():
+		$InstructionsBox/Instructions.text = "Press X to continue - Hold to skip"
+	else:
+		$InstructionsBox/Instructions.text = "Press SPACEBAR to continue - Hold to skip"
+
+	if Input.is_action_pressed("confirm"):
+		holdtime += delta
+		if holdtime > 0.1:
+			if not $InstructionsBox/loader_circle.is_playing():
+				$InstructionsBox/loader_circle.play("load")
+		if holdtime > 1.0:
+			skip()
+
+	else:
+		holdtime = 0
+		$InstructionsBox/loader_circle.set_frame_and_progress(0, 0)
 
 func enable():
 	textbox.text = ""
@@ -82,6 +101,14 @@ func disable():
 	current_text = ""
 	char_count = 0
 	cutscene_sprite.visible = false
+
+func skip():
+	for d in dialogues:
+		if d[2] == "credits":
+			Events.emit_signal("level_completed")
+			Events.emit_signal("go_to_credits")
+	disable()
+	Events.emit_signal("on_dialog_end")
 
 func setFile(filepath: String):
 	if FileAccess.file_exists(filepath):
@@ -166,6 +193,11 @@ func newCutscene(cutscene_file):
 		#cutscene_sprite.visible = false
 		target_opacity = 0
 		cutscene_previous_sprite.modulate.a = 0
+		
+	elif cutscene_file == "credits":
+		Events.emit_signal("level_completed")
+		Events.emit_signal("go_to_credits")
+
 	elif cutscene_file != "":
 		cutscene_sprite.texture = load(cutscene_file)
 		current_opacity = 0

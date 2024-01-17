@@ -11,6 +11,8 @@
 #If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
 #
 
+*Cutscene*: none
+
 *Character*: beaver
 
 *Text*: What is this thing following us??
@@ -344,6 +346,12 @@
 *Character*: shork
 
 *Text*: A rest, that sounds wonderful...
+>>>>>
+
+*Character*: none
+>>>>>
+
+*Cutscene*: credits
 >>>>>
 
 #

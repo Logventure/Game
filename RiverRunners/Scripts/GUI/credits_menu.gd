@@ -5,6 +5,8 @@ extends Control
 var onCredits = false
 var skipTime = 0
 
+var holdtime = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Events.connect("go_from_main_menu_to_credits", credits)
@@ -15,8 +17,11 @@ func _process(delta):
 		skipTime += delta
 		if skipTime > 5:
 			skipKey()
-		if Input.is_action_just_pressed("confirm") and skipTime > 5:
-			on_timer_timeout()
+			holdToSkip(delta)
+		else:
+			$loader_circle.set_frame_and_progress(0, 0)
+		#if Input.is_action_just_pressed("confirm") and skipTime > 5:
+			#on_timer_timeout()
 		$Label.position.y -= 2.5 * delta * 60
 		$Label2.position.y -= 2.5 * delta * 60
 		$Label3.position.y -= 2.5 * delta * 60
@@ -33,6 +38,19 @@ func credits():
 	skipTime = 0
 	animation.play("credits_loop")
 	onCredits = true
+
+func holdToSkip(delta):
+	if Input.is_action_pressed("confirm"):
+		holdtime += delta
+		if holdtime > 0.1:
+			if not $loader_circle.is_playing():
+				$loader_circle.play("load")
+		if holdtime > 1.0:
+			on_timer_timeout()
+
+	else:
+		holdtime = 0
+		$loader_circle.set_frame_and_progress(0, 0)
 
 func on_timer_timeout():
 	onCredits = false
@@ -56,8 +74,8 @@ func skipKey():
 	print("type: ", input_type)
 	if input_type == "controller":
 		keyString = "X"
-		$Label11.text = str("Press ", keyString, " to skip.")
+		$Label11.text = str("Hold ", keyString, " to skip.")
 	elif input_type == "kbm":
 		var keyCode = confirm_actions[0].physical_keycode
 		keyString = OS.get_keycode_string(keyCode)
-		$Label11.text = str("Press ", keyString, " to skip.")
+		$Label11.text = str("Hold ", keyString, " to skip.")

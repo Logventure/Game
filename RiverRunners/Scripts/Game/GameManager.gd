@@ -30,6 +30,7 @@ func _ready():
 	Events.connect("go_to_level", switchToLevel)
 	Events.connect("go_to_next_level", switchToNextLevel)
 	Events.connect("go_to_previous_screen", switchToPreviousScreen)
+	Events.connect("go_to_credits", switchToCredits)
 	Events.connect("level_completed", levelCompleted)
 
 	switchToMainMenu()
@@ -65,6 +66,10 @@ func switchToMainMenu():
 	target_screen = loadScene("res://GameComponents/GUI/main_menu_ui.tscn")
 	replaceScreen(viewer, target_screen)
 
+func switchToCredits():
+	switchToMainMenu()
+	if current_screen.has_method("_on_credits_button_pressed"):
+		current_screen._on_credits_button_pressed()
 		
 func switchToOptions():
 	previous_state = current_state

@@ -32,9 +32,10 @@ func _process(delta):
 		$Label8.position.y -= 2.5 * delta * 60
 		$Label9.position.y -= 2.5 * delta * 60
 		$Label10.position.y -= 2.5 * delta * 60
+		$Label12.position.y -= 2.5 * delta * 60
 
 func credits():
-	timer.start(34)
+	timer.start(35)
 	skipTime = 0
 	animation.play("credits_loop")
 	onCredits = true
@@ -65,6 +66,7 @@ func on_timer_timeout():
 	$Label9.position.y = 3260
 	$Label10.position.y = 3260
 	$Label11.text = ""
+	$Label12.position.y = 5000
 	Events.emit_signal("go_from_credits_to_main_menu")
 
 func skipKey():

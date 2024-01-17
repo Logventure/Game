@@ -150,37 +150,6 @@ func onUpdateCameraStatus(pos,zoom): #so that the menu shows up when entered mid
 	#var scale_value = 0.8/zoom.x
 	#scale = Vector2(scale_value,scale_value)
 
-func setSound():
-	var soundsArray = FILE_MANAGEMENT_SCRIPT.loadSounds() # 0 -> Master, 1 -> Sound, 2 -> Music, 3 -> Ambience
-	
-	var i = 0
-	while i != 4:
-		if soundsArray != null:
-			if soundsArray[i] != null:
-				match i:
-					0:
-						print("Master: ",soundsArray[i])
-						$Panel/Audio/HBoxContainer/CenterContainer/HSlider.on_value_changed(soundsArray[i])
-					1:
-						print("Sound: ",soundsArray[i])
-						$Panel/Audio/HBoxContainer1/CenterContainer/HSlider.on_value_changed(soundsArray[i])
-					2:
-						print("Music: ",soundsArray[i])
-						$Panel/Audio/HBoxContainer2/CenterContainer/HSlider.on_value_changed(soundsArray[i])
-					3:	
-						print("Ambience: ",soundsArray[i])
-						$Panel/Audio/HBoxContainer3/CenterContainer/HSlider.on_value_changed(soundsArray[i])
-		"""else:
-			match i:
-				0:
-					$Panel/Audio/HBoxContainer/CenterContainer/HSlider.set_value_changed(0.5, true)
-				1:
-					$Panel/Audio/HBoxContainer1/CenterContainer/HSlider.set_value_changed(0.5, true)
-				2:
-					$Panel/Audio/HBoxContainer2/CenterContainer/HSlider.set_value_changed(0.5, true)
-				#3:	
-				#	$Panel/Audio/HBoxContainer3/CenterContainer/HSlider.set_value_changed(soundsArray[i], true)"""
-		i +=1
 
 func _on_borderless_button_pressed():
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)

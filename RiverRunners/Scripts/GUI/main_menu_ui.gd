@@ -47,7 +47,6 @@ func _ready():
 	options_difficulty.visible = true
 	options_mode_buttons.visible = true
 	$OptionsUI.showDifficulty = true
-	#$OptionsUI.setSound()
 
 	Events.connect("go_to_previous_screen", backFromOptions)
 	Events.connect("go_from_credits_to_main_menu", backFromCredits)

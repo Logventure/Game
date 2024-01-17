@@ -498,9 +498,6 @@ Daniel Oliveira
 "
 label_settings = SubResource("LabelSettings_ad7j2")
 
-[node name="Timer" type="Timer" parent="."]
-one_shot = true
-
 [node name="Label11" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 3
@@ -515,6 +512,25 @@ offset_bottom = -41.0
 grow_horizontal = 0
 grow_vertical = 0
 label_settings = SubResource("LabelSettings_8sh2y")
+
+[node name="Label12" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -417.5
+offset_top = 3920.0
+offset_right = 417.5
+offset_bottom = 4009.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Thanks for playing"
+label_settings = SubResource("LabelSettings_mhwy4")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
 
 [node name="loader_circle" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

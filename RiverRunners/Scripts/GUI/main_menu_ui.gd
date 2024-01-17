@@ -27,6 +27,9 @@ var score_normal_image = load("res://Assets/UI/Score/HighestScore.png")
 var score_hover_image = load("res://Assets/UI/Score/HighestScore-Hover.png")
 var infinite_unblocked = false
 
+@onready var options_difficulty = $OptionsUI/Panel/Difficulty
+@onready var options_mode_buttons = $OptionsUI/Panel/ButtonContainer1
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	setLevels()
@@ -41,6 +44,11 @@ func _ready():
 	$BackButton.visible = false
 	$Panel2.visible = false
 	
+	options_difficulty.visible = true
+	options_mode_buttons.visible = true
+	$OptionsUI.showDifficulty = true
+	#$OptionsUI.setSound()
+
 	Events.connect("go_to_previous_screen", backFromOptions)
 	Events.connect("go_from_credits_to_main_menu", backFromCredits)
 

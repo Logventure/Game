@@ -1,7 +1,6 @@
 extends Control
 
 const FILE_MANAGEMENT_SCRIPT = preload("res://Scripts/FileManagement.gd")
-
 var to_count = false
 var time
 var points
@@ -31,13 +30,9 @@ func checkHighestScore():
 	if highest_score > saved_score:
 		FILE_MANAGEMENT_SCRIPT.saveHighestScore(highest_score)
 		
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(to_count)
 	if to_count:
 		time += delta * 3
 		points = snapped(time, 1)
 		$Panel/Label2.text = str(points)
-		#print(points)

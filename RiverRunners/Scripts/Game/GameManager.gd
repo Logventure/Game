@@ -22,6 +22,7 @@ var level_ids = ["level_justin", "level_frog", "level_salmon", "level_crab", "le
 func _ready():
 
 	FILE_MANAGEMENT_SCRIPT.loadConfig()
+	setSound()
 
 	Events.connect("go_to_main_menu", switchToMainMenu)
 	Events.connect("go_to_options", switchToOptions)
@@ -149,3 +150,53 @@ func returnFromTemporaryScreen(parent: Node, temp_screen: Node):
 	current_state = previous_state
 	for child in parent.get_children():
 		child.visible = true
+
+func setSound():
+	var soundsArray = FILE_MANAGEMENT_SCRIPT.loadSounds() # 0 -> Master, 1 -> Sound, 2 -> Music, 3 -> Ambience
+	
+	var i = 0
+	while i != 4:
+		if soundsArray != null:
+			if soundsArray[i] != null:
+				match i:
+					0:
+						AudioServer.set_bus_volume_db(0, linear_to_db(soundsArray[i]))
+						print(AudioServer.get_bus_volume_db(0))
+					1:
+						AudioServer.set_bus_volume_db(2, linear_to_db(soundsArray[i]))
+						print(AudioServer.get_bus_volume_db(2))
+					2:
+						AudioServer.set_bus_volume_db(3, linear_to_db(soundsArray[i]))
+						print(AudioServer.get_bus_volume_db(3))
+					3:	
+						AudioServer.set_bus_volume_db(1, linear_to_db(soundsArray[i]))
+						print(AudioServer.get_bus_volume_db(1))
+			else:
+				match i:
+					0:
+						AudioServer.set_bus_volume_db(0, linear_to_db(1))
+						print(AudioServer.get_bus_volume_db(0))
+					1:
+						AudioServer.set_bus_volume_db(2, linear_to_db(1))
+						print(AudioServer.get_bus_volume_db(2))
+					2:
+						AudioServer.set_bus_volume_db(3, linear_to_db(1))
+						print(AudioServer.get_bus_volume_db(3))
+					3:	
+						AudioServer.set_bus_volume_db(1, linear_to_db(1))
+						print(AudioServer.get_bus_volume_db(1))
+		else:
+			match i:
+				0:
+					AudioServer.set_bus_volume_db(0, linear_to_db(1))
+					print(AudioServer.get_bus_volume_db(0))
+				1:
+					AudioServer.set_bus_volume_db(2, linear_to_db(1))
+					print(AudioServer.get_bus_volume_db(2))
+				2:
+					AudioServer.set_bus_volume_db(3, linear_to_db(1))
+					print(AudioServer.get_bus_volume_db(3))
+				3:	
+					AudioServer.set_bus_volume_db(1, linear_to_db(1))
+					print(AudioServer.get_bus_volume_db(1))
+		i +=1

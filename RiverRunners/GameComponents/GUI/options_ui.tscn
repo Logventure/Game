@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://chkd7lgphi0cv"]
+[gd_scene load_steps=61 format=3 uid="uid://chkd7lgphi0cv"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/options_ui.gd" id="1_vdxw5"]
 [ext_resource type="Texture2D" uid="uid://dtb46jiyiaq7x" path="res://Assets/UI/Main Menu/MainMenu-Background.png" id="2_cgt6h"]
@@ -26,13 +26,29 @@
 [ext_resource type="Texture2D" uid="uid://cnaff7gwam2qi" path="res://Assets/UI/Options Menu/Options-Controls Button-Pressed.png" id="22_0db4n"]
 [ext_resource type="Texture2D" uid="uid://binp15k0xx8gi" path="res://Assets/UI/Options Menu/Options-Controls Button-Highlight.png" id="23_7t7jx"]
 [ext_resource type="FontFile" uid="uid://bg1oq07gebwu4" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="24_vmuug"]
+[ext_resource type="Texture2D" uid="uid://cno4v3i05dvx" path="res://Assets/UI/Options Menu/Button-Easy.png" id="25_3cwxq"]
 [ext_resource type="Texture2D" uid="uid://hncaibncfe8f" path="res://Assets/UI/Options Menu/Options-Fullscreen Button.png" id="25_5gllq"]
+[ext_resource type="Texture2D" uid="uid://cuj8lasjkufk" path="res://Assets/UI/Options Menu/Button-Easy-Pressed.png" id="26_u3mxu"]
 [ext_resource type="Texture2D" uid="uid://jjtpg2cfjskp" path="res://Assets/UI/Options Menu/Options-Fullscreen Button-Pressed.png" id="26_yqtt8"]
+[ext_resource type="Texture2D" uid="uid://bbra00xq6jlw6" path="res://Assets/UI/Options Menu/Button-Easy-Disabled.png" id="27_2pp7n"]
 [ext_resource type="Texture2D" uid="uid://boc6jph2ymqb5" path="res://Assets/UI/Options Menu/Options-Fullscreen Button-Highlight.png" id="27_xmhy8"]
 [ext_resource type="Texture2D" uid="uid://845xkfffbsiu" path="res://Assets/UI/Options Menu/Options-Windowed Button.png" id="28_cnmo5"]
+[ext_resource type="Texture2D" uid="uid://bb414n4nurb2" path="res://Assets/UI/Options Menu/Button-Easy-Highlight.png" id="28_kbjbc"]
+[ext_resource type="Texture2D" uid="uid://cyis2kfjy0ls8" path="res://Assets/UI/Options Menu/Button-Normal.png" id="29_icmhl"]
 [ext_resource type="Texture2D" uid="uid://bcmwk8ncx3r1v" path="res://Assets/UI/Options Menu/Options-Windowed Button-Pressed.png" id="29_w0f7l"]
+[ext_resource type="Texture2D" uid="uid://doqr7yqp10ufc" path="res://Assets/UI/Options Menu/Button-Normal-Pressed.png" id="30_52x13"]
 [ext_resource type="Texture2D" uid="uid://5txq2v8tcreg" path="res://Assets/UI/Options Menu/Options-Windowed Button-Highlight.png" id="30_vdmed"]
+[ext_resource type="Script" path="res://Scripts/GUI/MasterVolumeSlider.gd" id="31_34lla"]
+[ext_resource type="Texture2D" uid="uid://c17gtgc21gwh3" path="res://Assets/UI/Options Menu/Button-Normal-Disabled.png" id="31_t1ylb"]
+[ext_resource type="Script" path="res://Scripts/GUI/SoundVolumeSlider.gd" id="32_oypkq"]
+[ext_resource type="Texture2D" uid="uid://ctjk3vhsx0dls" path="res://Assets/UI/Options Menu/Button-Normal-Highlight.png" id="32_vnjel"]
+[ext_resource type="Texture2D" uid="uid://u1ovqldchf07" path="res://Assets/UI/Options Menu/Button-Hard.png" id="33_jpc32"]
+[ext_resource type="Script" path="res://Scripts/GUI/MusicVolumeSlider.gd" id="33_olgn3"]
 [ext_resource type="Texture2D" uid="uid://dv2amfmi6e8m0" path="res://Assets/UI/Main Menu/Back Button-Highlight.png" id="33_v0rdl"]
+[ext_resource type="Script" path="res://Scripts/GUI/AmbienceVolumeSlider.gd" id="34_itoog"]
+[ext_resource type="Texture2D" uid="uid://1g6pmpdlo8qq" path="res://Assets/UI/Options Menu/Button-Hard-Pressed.png" id="34_tefo8"]
+[ext_resource type="Texture2D" uid="uid://j310e7w2fbtu" path="res://Assets/UI/Options Menu/Button-Hard-Disabled.png" id="35_rai5o"]
+[ext_resource type="Texture2D" uid="uid://j1dhl54iiqds" path="res://Assets/UI/Options Menu/Button-Hard-Highlight.png" id="36_ka0dj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1eedu"]
 animations = [{
@@ -218,6 +234,7 @@ texture_hover = ExtResource("23_7t7jx")
 texture_focused = ExtResource("23_7t7jx")
 
 [node name="Fullscreen" type="Label" parent="Panel"]
+texture_filter = 1
 layout_mode = 2
 offset_left = 164.0
 offset_top = -37.0
@@ -228,6 +245,7 @@ text = "Fullscreen:"
 label_settings = SubResource("LabelSettings_dqo6c")
 
 [node name="Windowed" type="Label" parent="Panel"]
+texture_filter = 1
 layout_mode = 2
 offset_left = 164.0
 offset_top = 25.0
@@ -237,11 +255,69 @@ scale = Vector2(1.25, 1.25)
 text = "Window:"
 label_settings = SubResource("LabelSettings_bk4cn")
 
+[node name="Difficulty" type="Label" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 372.0
+offset_top = 80.0
+offset_right = 465.0
+offset_bottom = 106.0
+scale = Vector2(1.25, 1.25)
+text = "Difficulty"
+label_settings = SubResource("LabelSettings_bk4cn")
+
+[node name="ButtonContainer1" type="HBoxContainer" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 164.0
+offset_top = 120.0
+offset_right = 296.0
+offset_bottom = 131.0
+scale = Vector2(4, 4)
+
+[node name="EasyModeButton" type="TextureButton" parent="Panel/ButtonContainer1"]
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../General/HBoxContainer2/BorderlessButton")
+focus_neighbor_right = NodePath("../NormalModeButton")
+focus_neighbor_bottom = NodePath("../../../BackButton")
+focus_next = NodePath("../NormalModeButton")
+focus_previous = NodePath(".")
+texture_normal = ExtResource("25_3cwxq")
+texture_pressed = ExtResource("26_u3mxu")
+texture_hover = ExtResource("27_2pp7n")
+texture_focused = ExtResource("28_kbjbc")
+
+[node name="NormalModeButton" type="TextureButton" parent="Panel/ButtonContainer1"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../EasyModeButton")
+focus_neighbor_top = NodePath("../../General/HBoxContainer2/BorderlessButton")
+focus_neighbor_right = NodePath("../HardModeButton")
+focus_next = NodePath("../HardModeButton")
+focus_previous = NodePath("../EasyModeButton")
+texture_normal = ExtResource("29_icmhl")
+texture_pressed = ExtResource("30_52x13")
+texture_hover = ExtResource("31_t1ylb")
+texture_focused = ExtResource("32_vnjel")
+
+[node name="HardModeButton" type="TextureButton" parent="Panel/ButtonContainer1"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../NormalModeButton")
+focus_neighbor_top = NodePath("../../General/HBoxContainer2/BorderlessButton")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../../BackButton")
+focus_next = NodePath(".")
+focus_previous = NodePath("../NormalModeButton")
+texture_normal = ExtResource("33_jpc32")
+texture_pressed = ExtResource("34_tefo8")
+texture_hover = ExtResource("35_rai5o")
+texture_focused = ExtResource("36_ka0dj")
+
 [node name="General" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
-offset_left = 315.0
+offset_left = 335.0
 offset_top = -46.0
-offset_right = 363.0
+offset_right = 383.0
 offset_bottom = -20.0
 scale = Vector2(4, 4)
 
@@ -267,8 +343,11 @@ theme_override_constants/separation = 2
 [node name="BorderlessButton" type="TextureButton" parent="Panel/General/HBoxContainer2"]
 texture_filter = 1
 layout_mode = 2
+focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../../HBoxContainer1/FullscreenButton")
-focus_neighbor_bottom = NodePath("../../../../BackButton")
+focus_neighbor_right = NodePath(".")
+focus_next = NodePath("../../../ButtonContainer1/NormalModeButton")
+focus_previous = NodePath("../../HBoxContainer1/FullscreenButton")
 texture_normal = ExtResource("28_cnmo5")
 texture_pressed = ExtResource("29_w0f7l")
 texture_hover = ExtResource("30_vdmed")
@@ -307,13 +386,24 @@ scale = Vector2(1.2, 1.2)
 text = "Music Volume:"
 label_settings = SubResource("LabelSettings_p1syv")
 
+[node name="Ambience Volume" type="Label" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 164.0
+offset_top = 75.0
+offset_right = 344.0
+offset_bottom = 101.0
+scale = Vector2(1.2, 1.2)
+text = "Ambience Volume:"
+label_settings = SubResource("LabelSettings_p1syv")
+
 [node name="Audio" type="VBoxContainer" parent="Panel"]
 visible = false
 layout_mode = 1
-offset_left = 355.0
+offset_left = 372.5
 offset_top = -33.0
-offset_right = 695.0
-offset_bottom = 63.0
+offset_right = 712.5
+offset_bottom = 97.0
 theme_override_constants/separation = 22
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/Audio"]
@@ -324,10 +414,14 @@ custom_minimum_size = Vector2(340, 0)
 layout_mode = 2
 
 [node name="HSlider" type="HSlider" parent="Panel/Audio/HBoxContainer/CenterContainer"]
-custom_minimum_size = Vector2(326, 0)
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 focus_neighbor_top = NodePath("../../../../ButtonContainer/AudioButton")
 focus_neighbor_bottom = NodePath("../../../HBoxContainer1/CenterContainer/HSlider")
+max_value = 1.0
+step = 0.001
+script = ExtResource("31_34lla")
+bus_name = "Master"
 
 [node name="HBoxContainer1" type="HBoxContainer" parent="Panel/Audio"]
 layout_mode = 2
@@ -338,10 +432,14 @@ custom_minimum_size = Vector2(340, 0)
 layout_mode = 2
 
 [node name="HSlider" type="HSlider" parent="Panel/Audio/HBoxContainer1/CenterContainer"]
-custom_minimum_size = Vector2(326, 0)
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 focus_neighbor_top = NodePath("../../../HBoxContainer/CenterContainer/HSlider")
 focus_neighbor_bottom = NodePath("../../../HBoxContainer2/CenterContainer/HSlider")
+max_value = 1.0
+step = 0.001
+script = ExtResource("32_oypkq")
+bus_name = "SFX"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Panel/Audio"]
 layout_mode = 2
@@ -352,10 +450,31 @@ custom_minimum_size = Vector2(340, 0)
 layout_mode = 2
 
 [node name="HSlider" type="HSlider" parent="Panel/Audio/HBoxContainer2/CenterContainer"]
-custom_minimum_size = Vector2(326, 0)
+custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 focus_neighbor_top = NodePath("../../../HBoxContainer1/CenterContainer/HSlider")
 focus_neighbor_bottom = NodePath("../../../../../BackButton")
+max_value = 1.0
+step = 0.001
+script = ExtResource("33_olgn3")
+bus_name = "Music"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/Audio"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel/Audio/HBoxContainer3"]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Panel/Audio/HBoxContainer3/CenterContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+focus_neighbor_top = NodePath("../../../../ButtonContainer/AudioButton")
+focus_neighbor_bottom = NodePath("../../../HBoxContainer1/CenterContainer/HSlider")
+max_value = 1.0
+step = 0.001
+script = ExtResource("34_itoog")
+bus_name = "Ambience"
 
 [node name="Action" type="Label" parent="Panel"]
 visible = false
@@ -483,6 +602,9 @@ texture_focused = ExtResource("33_v0rdl")
 [connection signal="pressed" from="Panel/ButtonContainer/GeneralButton" to="." method="_on_general_button_pressed"]
 [connection signal="pressed" from="Panel/ButtonContainer/AudioButton" to="." method="_on_audio_button_pressed"]
 [connection signal="pressed" from="Panel/ButtonContainer/ControlsButton" to="." method="_on_controls_button_pressed"]
+[connection signal="pressed" from="Panel/ButtonContainer1/EasyModeButton" to="." method="_on_easy_mode_button_pressed"]
+[connection signal="pressed" from="Panel/ButtonContainer1/NormalModeButton" to="." method="_on_normal_mode_button_pressed"]
+[connection signal="pressed" from="Panel/ButtonContainer1/HardModeButton" to="." method="_on_hard_mode_button_pressed"]
 [connection signal="pressed" from="Panel/General/HBoxContainer1/FullscreenButton" to="." method="_on_fullscreen_button_pressed"]
 [connection signal="pressed" from="Panel/General/HBoxContainer2/BorderlessButton" to="." method="_on_borderless_button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

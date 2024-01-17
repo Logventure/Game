@@ -95,14 +95,20 @@ func onUpdatePlayerPosition(newposition):
 func onDialogEnd():
 	current_state = States.RUNNING
 	dialogue_box.disable()
+	if isEndless():
+		score.counting()
 
 func resume():
 	current_state = States.RUNNING
 	player.set_process(true)
+	if isEndless():
+		score.counting()
 
 func onPause():
 	player.set_process(false)
 	current_state = States.PAUSED
+	if isEndless():
+		score.stop_counting()
 
 func onDie():
 	player.set_process(false)

@@ -77,7 +77,6 @@ func pause():
 	pauseScene.visible = true
 	pauseScene.resetFocusedButton()
 
-	score.stop_counting()
 	current_state = States.PAUSED
 
 
@@ -128,7 +127,6 @@ func onResume():
 	pauseScene.visible = false
 	gameoverScene.visible = false
 	levelcompleteScene.visible = false
-	score.counting()
 
 func updateProgressBar(progress):
 	progressBar.updateProgressBar(progress)

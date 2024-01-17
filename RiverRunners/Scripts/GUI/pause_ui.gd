@@ -3,9 +3,16 @@ extends Control
 enum States{DISABLED, PAUSED, OPTIONS}
 var current_state = States.DISABLED
 
+@onready var options_difficulty = $OptionsUI/Panel/Difficulty
+@onready var options_mode_buttons = $OptionsUI/Panel/ButtonContainer1
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Events.connect("go_to_previous_screen", onBackFromOptions)
+
+	options_difficulty.visible = false
+	options_mode_buttons.visible = false
+	$OptionsUI.showDifficulty = false
 
 
 func _process(delta):

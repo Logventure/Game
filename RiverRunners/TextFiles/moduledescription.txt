@@ -226,7 +226,7 @@ Group: 101
 }
 
 #Justin Modules--------------------------------
-Difficulty: 1
+Difficulty: 5
 Group: 10
 {
 -v---
@@ -239,7 +239,7 @@ Group: 10
 
 }
 
-Difficulty: 1
+Difficulty: 5
 Group: 10
 {
 -*---
@@ -254,7 +254,7 @@ b----
 
 }
 
-Difficulty: 1
+Difficulty: 5
 Group: 10
 {
 -----
@@ -266,7 +266,7 @@ Group: 10
 
 }
 
-Difficulty: 1
+Difficulty: 5
 Group: 10
 {
 -----
@@ -279,7 +279,7 @@ Group: 10
 
 }
 
-Difficulty: 1
+Difficulty: 5
 Group: 10
 {
 ***--
@@ -293,7 +293,7 @@ x--v-
 }
 
 #Frog Modules--------------------------------
-Difficulty: 1
+Difficulty: 5
 Group: 20
 {
 -----
@@ -313,26 +313,27 @@ Group: 20
 -----
 -----
 -----
+-----
 ---e-
 -----
 -----
 
 }
 
-Difficulty: 1
+Difficulty: 5
 Group: 20
 {
------
+*----
 -----
 -b-v-
 j-w--
--c---
+-----
 -----
 **---
 
 }
 
-Difficulty: 1
+Difficulty: 5
 Group: 20
 {
 -**--
@@ -346,18 +347,20 @@ Group: 20
 
 }
 
-Difficulty: 1
+Difficulty: 3
 Group: 20
 {
 **--*
 -----
 -----
-crx--
+cr---
+-----
 -----
 -----
 -----
 ----c
--wbxn
+--bxn
+-w---
 -----
 -----
 *---*
@@ -365,7 +368,7 @@ crx--
 }
 
 #Salmon Modules--------------------------------
-Difficulty: 1
+Difficulty: 5
 Group: 30
 {
 --*--
@@ -379,14 +382,16 @@ cf--x
 
 }
 
-Difficulty: 1
+Difficulty: 5
 Group: 30
 {
---*--
+*---*
 -----
 -----
 -----
-cntmx
+----x
+cnt--
+-----
 -----
 -----
 *---*
@@ -394,7 +399,7 @@ cntmx
 }
 
 #Crab Modules--------------------------------
-Difficulty: 1
+Difficulty: 5
 Group: 40
 {
 --*--
@@ -408,7 +413,7 @@ cx-k-
 }
 
 #Otter Modules--------------------------------
-Difficulty: 1
+Difficulty: 5
 Group: 50
 {
 -*-*-
@@ -421,7 +426,21 @@ Group: 50
 
 }
 
-Difficulty: 1
+Difficulty: 5
+Group: 50
+{
+----*
+-----
+-----
+--vob
+-----
+-----
+nox--
+*-*--
+
+}
+
+Difficulty: 5
 Group: 50
 {
 -----
@@ -439,15 +458,15 @@ noxof
 
 }
 
-Difficulty: 1
+Difficulty: 5
 Group: 50
 {
 -----
 -----
 -v--c
 -----
----o-
--xfo-
+---on
+-xb--
 -----
 **---
 
@@ -455,7 +474,7 @@ Group: 50
 
 #Shork modules
 
-Difficulty: 1
+Difficulty: 5
 Group: 60
 {
 -v---
@@ -468,7 +487,7 @@ s---v
 
 }
 
-Difficulty: 1
+Difficulty: 5
 Group: 60
 {
 -*---
@@ -483,7 +502,7 @@ s--n-
 
 }
 
-Difficulty: 1
+Difficulty: 5
 Group: 60
 {
 -----
@@ -495,7 +514,7 @@ Group: 60
 
 }
 
-Difficulty: 1
+Difficulty: 5
 Group: 60
 {
 -----

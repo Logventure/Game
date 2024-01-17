@@ -209,7 +209,7 @@ func setLevels():
 	var savedLevels = FILE_MANAGEMENT_SCRIPT.loadLevels()
 	if savedLevels == null:
 		savedLevels = 0
-	print("saved levels: ", savedLevels)
+	#print("saved levels: ", savedLevels)
 	match savedLevels:
 		0:
 			$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
@@ -428,3 +428,35 @@ func setLevels():
 			$VBoxContainer2/HBoxContainer4/InfiniteButton.texture_normal = infinite_level_button_normal_image
 			$Panel2/TextureRect.texture = score_normal_image
 			$Panel2/Label2.label_settings.font_color = Color.WHITE
+
+	if savedLevels >= 6:
+		infinite_unblocked = true
+		$VBoxContainer2/HBoxContainer/Level1Button.disabled = false
+		$VBoxContainer2/HBoxContainer/Level1Button.mouse_filter = MOUSE_FILTER_STOP
+		$VBoxContainer2/HBoxContainer/Level1Button.texture_normal = level1_button_normal_image
+
+		$VBoxContainer2/HBoxContainer/Level2Button.disabled = false
+		$VBoxContainer2/HBoxContainer/Level2Button.mouse_filter = MOUSE_FILTER_STOP
+		$VBoxContainer2/HBoxContainer/Level2Button.texture_normal = level2_button_normal_image
+
+		$VBoxContainer2/HBoxContainer2/Level3Button.disabled = false
+		$VBoxContainer2/HBoxContainer2/Level3Button.mouse_filter = MOUSE_FILTER_STOP
+		$VBoxContainer2/HBoxContainer2/Level3Button.texture_normal = level3_button_normal_image
+
+		$VBoxContainer2/HBoxContainer2/Level4Button.disabled = false
+		$VBoxContainer2/HBoxContainer2/Level4Button.mouse_filter = MOUSE_FILTER_STOP
+		$VBoxContainer2/HBoxContainer2/Level4Button.texture_normal = level4_button_normal_image
+
+		$VBoxContainer2/HBoxContainer3/Level5Button.disabled = false
+		$VBoxContainer2/HBoxContainer3/Level5Button.mouse_filter = MOUSE_FILTER_STOP
+		$VBoxContainer2/HBoxContainer3/Level5Button.texture_normal = level5_button_normal_image
+
+		$VBoxContainer2/HBoxContainer3/Level6Button.disabled = false
+		$VBoxContainer2/HBoxContainer3/Level6Button.mouse_filter = MOUSE_FILTER_STOP
+		$VBoxContainer2/HBoxContainer3/Level6Button.texture_normal = level6_button_normal_image
+
+		$VBoxContainer2/HBoxContainer4/InfiniteButton.disabled = false
+		$VBoxContainer2/HBoxContainer4/InfiniteButton.mouse_filter = MOUSE_FILTER_STOP
+		$VBoxContainer2/HBoxContainer4/InfiniteButton.texture_normal = infinite_level_button_normal_image
+		$Panel2/TextureRect.texture = score_normal_image
+		$Panel2/Label2.label_settings.font_color = Color.WHITE

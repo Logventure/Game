@@ -16,7 +16,7 @@ var playerSpeed = 1
 var playerTargetSpeed = 1
 
 @export var playerMaxSpeed = 10
-@export var playerAcceleration = 0.1
+@export var playerAcceleration = 1
 
 enum States {DIALOG,RUNNING,PAUSED,NO_OBSTACLES,LEVEL_END}
 
@@ -62,14 +62,14 @@ func _process(delta):
 			pass
 
 		States.RUNNING:
-			managePlayerSpeed()
+			managePlayerSpeed(delta)
 
 
 		States.PAUSED:
 			pass
 
 		States.NO_OBSTACLES:
-			managePlayerSpeed()
+			managePlayerSpeed(delta)
 			map.disableObstacles()
 				
 		States.LEVEL_END:
@@ -81,12 +81,17 @@ func setLevelScript(level_id):
 	level_script = load("res://Scripts/Level/LevelScripts.gd").new(self,level_id)
 	add_child(level_script)
 
-func managePlayerSpeed():
-	if not playerSpeed == playerTargetSpeed:
-		playerSpeed += playerAcceleration * (playerTargetSpeed - playerSpeed)
+func managePlayerSpeed(delta):
+	if playerSpeed > playerTargetSpeed:
+		playerSpeed -= playerAcceleration * delta
+		if playerSpeed < playerTargetSpeed:
+			playerSpeed = playerTargetSpeed
 		Events.emit_signal("player_speed",playerSpeed)
-	if abs(playerTargetSpeed - playerSpeed) < 0.01 and not playerTargetSpeed == playerSpeed:
-		playerSpeed = playerTargetSpeed
+
+	elif playerSpeed < playerTargetSpeed:
+		playerSpeed += playerAcceleration * delta
+		if playerSpeed > playerTargetSpeed:
+			playerSpeed = playerTargetSpeed
 		Events.emit_signal("player_speed",playerSpeed)
 
 func onUpdatePlayerPosition(newposition):

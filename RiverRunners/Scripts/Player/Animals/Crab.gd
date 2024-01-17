@@ -79,6 +79,7 @@ func shield():
 	Events.emit_signal("crab_shield")
 	Events.emit_signal("blocking")
 	play("block")
+	Utils.playSoundFile(self,"res://Assets/Audio/SFX/crab_shield.wav","SFX",-6)
 	createTimer()
 
 func createTimer():
@@ -158,6 +159,7 @@ func _on_animation_finished():
 	pass
 
 func destroyObstacle():
+	Utils.playSoundFile(self,"res://Assets/Audio/SFX/destroy_rock.wav","SFX",-6)
 	current_state = States.DESTROYING
 
 func _on_animation_looped():

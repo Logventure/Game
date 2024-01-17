@@ -19,7 +19,7 @@ extends Node
 #
 #
 
-enum eventTypes {DIALOGUE, SETVALUES, CUTSCENE, ENDLEVEL}
+enum eventTypes {DIALOGUE, SETVALUES, TUTORIAL, CUTSCENE, ENDLEVEL}
 
 var level_events = {}
 
@@ -54,6 +54,7 @@ var levels = {
 	"level_justin" :	{"setup"        :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 2, "ObstacleGroups" : [10], "Characters" : ["beaver"]},
 				"chat1"         :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/JustinLevel1Dialogue.txt"},
 				"levelStart"    :    {"Time offset" : 0,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : true},
+				"tutorial"    :    	 {"Time offset" : 1,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.TUTORIAL,   "Ability" : "move"},
 				"speedUp1"      :    {"Time offset" : 5,    "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "Speed" : 2},
 				"speedUp2"      :    {"Time offset" : 20,   "Prerequesites" : ["speedUp1"],      "Type" : eventTypes.SETVALUES,   "Speed" : 3},
 				"disableObs"    :    {"Time offset" : 10,   "Prerequesites" : ["speedUp2"],      "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false},
@@ -64,6 +65,7 @@ var levels = {
 	"level_frog" :	{"setup"        :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 2, "ObstacleGroups" : [10,20], "Characters" : ["beaver","frog"]},
 				"chat1"         :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/FrogLevel2Dialogue.txt"},
 				"levelStart"    :    {"Time offset" : 0,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : true},
+				"tutorial"    :    	 {"Time offset" : 1,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.TUTORIAL,   "Ability" : "jump"},
 				"speedUp1"      :    {"Time offset" : 5,    "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "Speed" : 2},
 				"speedUp2"      :    {"Time offset" : 20,   "Prerequesites" : ["speedUp1"],      "Type" : eventTypes.SETVALUES,   "Speed" : 3},
 				"disableObs"    :    {"Time offset" : 10,   "Prerequesites" : ["speedUp2"],      "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false},
@@ -74,6 +76,7 @@ var levels = {
 	"level_salmon" :	{"setup"        :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 3, "ObstacleGroups" : [10,20,30], "Characters" : ["beaver","frog","salmon"]},
 				"chat1"         :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/SalmonLevel3Dialogue.txt"},
 				"levelStart"    :    {"Time offset" : 0,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : true},
+				"tutorial"    :    	 {"Time offset" : 1,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.TUTORIAL,   "Ability" : "dash"},
 				"speedUp1"      :    {"Time offset" : 5,    "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "Speed" : 3},
 				"speedUp2"      :    {"Time offset" : 20,   "Prerequesites" : ["speedUp1"],      "Type" : eventTypes.SETVALUES,   "Speed" : 4},
 				"disableObs"    :    {"Time offset" : 10,   "Prerequesites" : ["speedUp2"],      "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false},
@@ -84,6 +87,7 @@ var levels = {
 	"level_crab" :	{"setup"        :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 3, "ObstacleGroups" : [10,20,30,40], "Characters" : ["beaver","frog","salmon","crab"]},
 				"chat1"         :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/CrabLevel4Dialogue.txt"},
 				"levelStart"    :    {"Time offset" : 0,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : true},
+				"tutorial"    :    	 {"Time offset" : 1,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.TUTORIAL,   "Ability" : "shield"},
 				"speedUp1"      :    {"Time offset" : 5,    "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "Speed" : 3},
 				"speedUp2"      :    {"Time offset" : 20,   "Prerequesites" : ["speedUp1"],      "Type" : eventTypes.SETVALUES,   "Speed" : 4},
 				"disableObs"    :    {"Time offset" : 10,   "Prerequesites" : ["speedUp2"],      "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false},
@@ -94,6 +98,7 @@ var levels = {
 	"level_otter" :	{"setup"        :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 4, "ObstacleGroups" : [10,20,30,40,50], "Characters" : ["beaver","frog","salmon","crab","otter"]},
 				"chat1"         :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/OtterLevel5Dialogue.txt"},
 				"levelStart"    :    {"Time offset" : 0,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : true},
+				"tutorial"    :    	 {"Time offset" : 1,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.TUTORIAL,   "Ability" : "throw"},
 				"speedUp1"      :    {"Time offset" : 5,    "Prerequesites" : ["levelStart"],    "Type" : eventTypes.SETVALUES,   "Speed" : 4},
 				"speedUp2"      :    {"Time offset" : 20,   "Prerequesites" : ["speedUp1"],      "Type" : eventTypes.SETVALUES,   "Speed" : 5},
 				"disableObs"    :    {"Time offset" : 10,   "Prerequesites" : ["speedUp2"],      "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false},
@@ -198,6 +203,10 @@ func executeEvent(id : String, details: Dictionary):
 
 				level_events_status[id] = eventStatus.FINISHED
 			eventTypes.CUTSCENE:
+				level_events_status[id] = eventStatus.FINISHED
+			eventTypes.TUTORIAL:
+				if details.has("Ability"):
+					Events.emit_signal("showTutorial",details["Ability"])
 				level_events_status[id] = eventStatus.FINISHED
 			eventTypes.ENDLEVEL:
 				if details.has("WaitForObstacleEnd"):

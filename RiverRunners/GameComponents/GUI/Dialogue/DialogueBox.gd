@@ -56,6 +56,7 @@ func onContinue():
 		if dialogue_index < len(dialogues):
 			newDialogue(dialogues[dialogue_index][0],dialogues[dialogue_index][1])
 			newCutscene(dialogues[dialogue_index][2])
+			fade_time = dialogues[dialogue_index][4]
 			if dialogues[dialogue_index][3] != "":
 				playSound(dialogues[dialogue_index][3])
 			dialogue_index += 1
@@ -103,6 +104,10 @@ func disable():
 	cutscene_sprite.visible = false
 
 func skip():
+	cutscene_sprite.modulate.a = 0
+	current_opacity = 0
+	target_opacity = 0
+	cutscene_previous_sprite.modulate.a = 0
 	for d in dialogues:
 		if d[2] == "credits":
 			Events.emit_signal("level_completed")
@@ -122,6 +127,7 @@ func loadChat(filepath: String):
 	var text = ""
 	var cutscene_frame = ""
 	var sound = ""
+	var fade_time = 0.25
 	while file.get_position() < file.get_length():
 		if not line == "" and not line.begins_with("#") and not line.begins_with(">>>>>"):
 			if line.begins_with("*Character*: "):
@@ -130,14 +136,21 @@ func loadChat(filepath: String):
 				cutscene_frame = line.replace("*Cutscene*: ","")
 			elif line.begins_with("*Sound*: "):
 				sound = line.replace("*Sound*: ","")
+			elif line.begins_with("*FadeTime*: "):
+				fade_time = line.replace("*FadeTime*: ","")
+				if fade_time.is_valid_float():
+					fade_time = fade_time.to_float()
+				else:
+					fade_time = 0.25
 			elif line.begins_with("*Text*: "):
 				text = line.replace("*Text*: ","")
 			else:
 				text += line
 		elif line.begins_with(">>>>>"):
-			dialogues.append([character,text,cutscene_frame,sound])
+			dialogues.append([character,text,cutscene_frame,sound,fade_time])
 			text = ""
 			sound = ""
+			fade_time = 0.25
 		
 		line = file.get_line()
 
@@ -193,12 +206,13 @@ func newCutscene(cutscene_file):
 		#cutscene_sprite.visible = false
 		target_opacity = 0
 		cutscene_previous_sprite.modulate.a = 0
-		
+
 	elif cutscene_file == "credits":
 		Events.emit_signal("level_completed")
 		Events.emit_signal("go_to_credits")
 
 	elif cutscene_file != "":
+		cutscene_sprite.visible = true
 		cutscene_sprite.texture = load(cutscene_file)
 		current_opacity = 0
 		cutscene_sprite.modulate.a = current_opacity

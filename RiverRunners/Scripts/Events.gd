@@ -42,6 +42,8 @@ signal player_drowned
 signal on_dialog_start
 signal on_dialog_end
 
+signal showTutorial(ability)
+
 signal pause_game
 signal player_died
 signal resume_game

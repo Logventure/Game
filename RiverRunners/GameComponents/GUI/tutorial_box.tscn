@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://ta7c58nhd1in"]
+
+[ext_resource type="Texture2D" uid="uid://do7ywqc5j37pl" path="res://Assets/UI/Tutorial Box.png" id="1_4utl6"]
+[ext_resource type="FontFile" uid="uid://bg1oq07gebwu4" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="1_djyx1"]
+[ext_resource type="Script" path="res://Scripts/GUI/tutorial_box.gd" id="1_grp6e"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4uaet"]
+font = ExtResource("1_djyx1")
+font_size = 40
+
+[node name="tutorial_box" type="Node2D"]
+script = ExtResource("1_grp6e")
+
+[node name="Box" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(12, 12)
+texture = ExtResource("1_4utl6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -216.0
+offset_top = -70.0
+offset_right = 224.0
+offset_bottom = 70.0
+text = "Press SPACEBAR to JUMP"
+label_settings = SubResource("LabelSettings_4uaet")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

@@ -94,6 +94,7 @@ offset_top = -395.0
 offset_bottom = -395.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.01, 1.01)
 
 [node name="Cutscene" type="Sprite2D" parent="Control"]
 z_index = -2
@@ -115,14 +116,14 @@ offset_bottom = 872.0
 color = Color(0.196078, 0.196078, 0.196078, 0.388235)
 
 [node name="InstructionsBox" type="HBoxContainer" parent="."]
-offset_left = 224.0
-offset_top = 194.0
-offset_right = 1048.0
-offset_bottom = 234.0
+offset_left = 85.0
+offset_top = 213.0
+offset_right = 985.0
+offset_bottom = 253.0
 
 [node name="loader_circle" type="AnimatedSprite2D" parent="InstructionsBox"]
 texture_filter = 1
-position = Vector2(-29, 19)
+position = Vector2(935, 20)
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_6kpxl")
 animation = &"load"
@@ -130,8 +131,9 @@ frame = 8
 frame_progress = 1.0
 
 [node name="Instructions" type="Label" parent="InstructionsBox"]
+custom_minimum_size = Vector2(900, 0)
 layout_mode = 2
-size_flags_horizontal = 0
 text = "Press SPACEBAR to continue - Hold to skip"
 label_settings = SubResource("LabelSettings_5gs46")
 horizontal_alignment = 2
+vertical_alignment = 1

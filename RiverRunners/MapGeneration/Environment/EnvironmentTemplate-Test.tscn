@@ -140,8 +140,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/animation_columns = 4
 0:0/animation_frame_0/duration = 2.2
 0:0/animation_frame_1/duration = 0.4
-0:0/animation_frame_2/duration = 1.8
-0:0/animation_frame_3/duration = 0.5
+0:0/animation_frame_2/duration = 0.3
+0:0/animation_frame_3/duration = 0.2
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8cmq3"]
@@ -149,9 +149,9 @@ texture = ExtResource("6_ydh3g")
 texture_region_size = Vector2i(32, 32)
 0:0/animation_columns = 4
 0:0/animation_frame_0/duration = 2.0
-0:0/animation_frame_1/duration = 2.0
+0:0/animation_frame_1/duration = 0.2
 0:0/animation_frame_2/duration = 0.4
-0:0/animation_frame_3/duration = 0.5
+0:0/animation_frame_3/duration = 0.2
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4byxt"]
@@ -263,7 +263,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/animation_frame_0/duration = 3.0
 0:0/animation_frame_1/duration = 0.2
 0:0/animation_frame_2/duration = 0.3
-0:0/animation_frame_3/duration = 0.3
+0:0/animation_frame_3/duration = 0.2
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7om8s"]
@@ -271,9 +271,9 @@ texture = ExtResource("11_xrdpw")
 texture_region_size = Vector2i(32, 32)
 0:0/animation_columns = 4
 0:0/animation_frame_0/duration = 2.2
-0:0/animation_frame_1/duration = 0.5
+0:0/animation_frame_1/duration = 0.2
 0:0/animation_frame_2/duration = 0.3
-0:0/animation_frame_3/duration = 0.3
+0:0/animation_frame_3/duration = 0.2
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wbpng"]
@@ -281,9 +281,9 @@ texture = ExtResource("12_phtkl")
 texture_region_size = Vector2i(32, 32)
 0:0/animation_columns = 4
 0:0/animation_frame_0/duration = 1.2
-0:0/animation_frame_1/duration = 0.5
-0:0/animation_frame_2/duration = 1.4
-0:0/animation_frame_3/duration = 0.8
+0:0/animation_frame_1/duration = 0.2
+0:0/animation_frame_2/duration = 0.3
+0:0/animation_frame_3/duration = 0.2
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hh2it"]
@@ -291,8 +291,8 @@ texture = ExtResource("13_nrsdy")
 texture_region_size = Vector2i(32, 32)
 0:0/animation_columns = 4
 0:0/animation_frame_0/duration = 1.5
-0:0/animation_frame_1/duration = 0.7
-0:0/animation_frame_2/duration = 0.4
+0:0/animation_frame_1/duration = 0.3
+0:0/animation_frame_2/duration = 0.2
 0:0/animation_frame_3/duration = 0.3
 0:0/0 = 0
 
@@ -301,9 +301,9 @@ texture = ExtResource("14_c6k78")
 texture_region_size = Vector2i(32, 32)
 0:0/animation_columns = 4
 0:0/animation_frame_0/duration = 1.7
-0:0/animation_frame_1/duration = 1.4
-0:0/animation_frame_2/duration = 0.6
-0:0/animation_frame_3/duration = 0.6
+0:0/animation_frame_1/duration = 0.3
+0:0/animation_frame_2/duration = 0.3
+0:0/animation_frame_3/duration = 0.3
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_jpmhy"]

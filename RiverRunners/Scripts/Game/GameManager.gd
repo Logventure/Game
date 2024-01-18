@@ -90,6 +90,12 @@ func switchToModeSelect():
 	replaceScreen(viewer, target_screen)
 
 func switchToLevelSelect():
+	var difficulty = FILE_MANAGEMENT_SCRIPT.loadDifficulty()
+	if difficulty == 0:
+		level_list = level_ids_easy
+	if difficulty == 2:
+		level_list = level_ids_hard
+
 	target_state = States.LEVEL_SELECT
 	target_screen = loadScene("res://GameComponents/GUI/levels_ui.tscn")
 	replaceScreen(viewer, target_screen)
@@ -127,7 +133,17 @@ func switchToLevel(level_id: int):
 func switchToNextLevel():
 	target_state = States.LEVEL
 	target_screen = loadScene("res://Levels/LevelTemplate.tscn")
-	var last_level_id = level_ids[last_level]
+	var last_level_id = level_list[last_level]
+
+	if last_level >= 0 and last_level < 3:
+		Events.emit_signal("changeMusic","EASY")
+	elif last_level >= 3 and last_level < 5:
+		Events.emit_signal("changeMusic","MEDIUM")
+	elif last_level == 5:
+		Events.emit_signal("changeMusic","HARD")
+	elif last_level > 5:
+		Events.emit_signal("changeMusic","INFINITE")
+
 	target_screen.setLevelScript(last_level_id)
 	replaceScreen(viewer, target_screen)
 

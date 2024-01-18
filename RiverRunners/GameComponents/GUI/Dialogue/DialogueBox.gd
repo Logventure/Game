@@ -58,7 +58,7 @@ func onContinue():
 			newCutscene(dialogues[dialogue_index][2])
 			fade_time = dialogues[dialogue_index][4]
 			if dialogues[dialogue_index][3] != "":
-				playSound(dialogues[dialogue_index][3])
+				playSound(dialogues[dialogue_index][3],dialogues[dialogue_index][5])
 			dialogue_index += 1
 		else:
 			disable()
@@ -128,6 +128,7 @@ func loadChat(filepath: String):
 	var cutscene_frame = ""
 	var sound = ""
 	var fade_time = 0.25
+	var volume = 0
 	while file.get_position() < file.get_length():
 		if not line == "" and not line.begins_with("#") and not line.begins_with(">>>>>"):
 			if line.begins_with("*Character*: "):
@@ -136,6 +137,13 @@ func loadChat(filepath: String):
 				cutscene_frame = line.replace("*Cutscene*: ","")
 			elif line.begins_with("*Sound*: "):
 				sound = line.replace("*Sound*: ","")
+			elif line.begins_with("*Volume*: "):
+				volume = line.replace("*Volume*: ","")
+				if volume.is_valid_float():
+					volume = volume.to_float()
+				else:
+					volume = 0
+
 			elif line.begins_with("*FadeTime*: "):
 				fade_time = line.replace("*FadeTime*: ","")
 				if fade_time.is_valid_float():
@@ -147,10 +155,11 @@ func loadChat(filepath: String):
 			else:
 				text += line
 		elif line.begins_with(">>>>>"):
-			dialogues.append([character,text,cutscene_frame,sound,fade_time])
+			dialogues.append([character,text,cutscene_frame,sound,fade_time,volume])
 			text = ""
 			sound = ""
 			fade_time = 0.25
+			volume = 0
 		
 		line = file.get_line()
 
@@ -234,8 +243,8 @@ func updateCutscene(delta):
 		cutscene_previous_sprite.texture = cutscene_sprite.texture.duplicate()
 		cutscene_previous_sprite.modulate.a = 1
 
-func playSound(filepath):
-	Utils.playSoundFile(self,filepath,"SFX",-6)
+func playSound(filepath,volume):
+	Utils.playSoundFile(self,filepath,"SFX",volume)
 
 func onPause():
 	paused = true

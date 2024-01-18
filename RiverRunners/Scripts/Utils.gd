@@ -3,6 +3,12 @@ extends Node
 const tilesize = 380
 var lastUIsoundIndex = 1
 var increasingIndex = false
+var playtimeUI = 0
+
+func _ready():
+	pass
+func _process(delta):
+	playtimeUI += delta
 
 #returns the position of a tile relative to the position of a reference tile
 func gridRelativePosition(position, tilesX, tilesY, tilesize):
@@ -32,20 +38,22 @@ func playSoundFile(parent,filepath: String,bus: String,volume = 0,positional = f
 	print("Play sound, ", audiostream)
 
 func playUISound(parent,volume = 0):
-	var soundfiles = ["res://Assets/Audio/SFX/UI/UI-1.wav", "res://Assets/Audio/SFX/UI/UI-2.wav", "res://Assets/Audio/SFX/UI/UI-3.wav"]
-	var index = lastUIsoundIndex
-	if increasingIndex:
-		if index < len(soundfiles) - 1:
-			index += 1
+	if playtimeUI > 0.2:
+		var soundfiles = ["res://Assets/Audio/SFX/UI/UI-1.wav", "res://Assets/Audio/SFX/UI/UI-2.wav", "res://Assets/Audio/SFX/UI/UI-3.wav"]
+		var index = lastUIsoundIndex
+		if increasingIndex:
+			if index < len(soundfiles) - 1:
+				index += 1
+			else:
+				index -= 1
+				increasingIndex = false
 		else:
-			index -= 1
-			increasingIndex = false
-	else:
-		if index > 0:
-			index -= 1
-		else:
-			index += 1
-			increasingIndex = true
+			if index > 0:
+				index -= 1
+			else:
+				index += 1
+				increasingIndex = true
 
-	lastUIsoundIndex = index
-	playSoundFile(parent,soundfiles[index],"SFX",volume)
+		lastUIsoundIndex = index
+		playSoundFile(self,soundfiles[index],"SFX",volume)
+		playtimeUI = 0

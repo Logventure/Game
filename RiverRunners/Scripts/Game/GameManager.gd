@@ -66,6 +66,7 @@ func switchToMainMenu():
 	target_state = States.MAIN_MENU
 	target_screen = loadScene("res://GameComponents/GUI/main_menu_ui.tscn")
 	replaceScreen(viewer, target_screen)
+	Events.emit_signal("changeMusic","MENU")
 
 func switchToCredits():
 	switchToMainMenu()
@@ -100,6 +101,16 @@ func switchToLevel(level_id: int):
 		last_level = level_id
 		var last_level_id = level_ids[last_level]
 		target_screen.setLevelScript(last_level_id)
+
+	if level_id >= 0 and level_id < 3:
+		Events.emit_signal("changeMusic","EASY")
+	elif level_id >= 3 and level_id < 5:
+		Events.emit_signal("changeMusic","MEDIUM")
+	elif level_id == 5:
+		Events.emit_signal("changeMusic","HARD")
+	elif level_id > 5:
+		Events.emit_signal("changeMusic","INFINITE")
+		
 	replaceScreen(viewer, target_screen)
 	Events.emit_signal("start_score")
 

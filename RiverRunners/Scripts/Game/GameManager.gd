@@ -181,21 +181,21 @@ func setSound():
 			else:
 				match i:
 					0:
-						AudioServer.set_bus_volume_db(0, linear_to_db(1))
+						AudioServer.set_bus_volume_db(0, linear_to_db(0.5))
 					1:
-						AudioServer.set_bus_volume_db(2, linear_to_db(1))
+						AudioServer.set_bus_volume_db(2, linear_to_db(0.5))
 					2:
-						AudioServer.set_bus_volume_db(3, linear_to_db(1))
+						AudioServer.set_bus_volume_db(3, linear_to_db(0.5))
 					3:	
-						AudioServer.set_bus_volume_db(1, linear_to_db(1))
+						AudioServer.set_bus_volume_db(1, linear_to_db(0.5))
 		else:
 			match i:
 				0:
-					AudioServer.set_bus_volume_db(0, linear_to_db(1))
+					AudioServer.set_bus_volume_db(0, linear_to_db(0.5))
 				1:
-					AudioServer.set_bus_volume_db(2, linear_to_db(1))
+					AudioServer.set_bus_volume_db(2, linear_to_db(0.5))
 				2:
-					AudioServer.set_bus_volume_db(3, linear_to_db(1))
+					AudioServer.set_bus_volume_db(3, linear_to_db(0.5))
 				3:	
-					AudioServer.set_bus_volume_db(1, linear_to_db(1))
+					AudioServer.set_bus_volume_db(1, linear_to_db(0.5))
 		i +=1

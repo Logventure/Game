@@ -13,12 +13,12 @@
 
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-question.wav
 *Text*: Didn't we say we were gonna get some rest.
 >>>>>
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-Inquisitive.wav
 *Text*: Well, some daily exercise can't hurt?
 >>>>>
 
@@ -28,7 +28,7 @@
 >>>>>
 
 *Character*: otter
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk4.wav
 *Text*: Lets get going then.
 >>>>>
 

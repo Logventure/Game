@@ -18,19 +18,19 @@
 >>>>>
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
 *Text*: So, Sir Frogginton, are your brainwaves sensing anything, any potential friends? Enemies?
 >>>>>
 
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
 *Text*: Hmmmmm, i can't say i'm sense much this time around.
 >>>>>
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
 *Text*: What about you Sal?
 >>>>>
 
@@ -42,7 +42,7 @@
 
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
 *Text*: I figured as much. As i said, there doesn't seem to be anything of note nearby.
 >>>>>
 
@@ -70,7 +70,7 @@
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Text*: Oh, i'm sorry! I didn't see you there.
 >>>>>
 
@@ -87,10 +87,10 @@
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-explanation.wav
 *Text*: This must be some kind of missunderstanding...
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
 *Text*: We're actually checking if anyone needs help, something happened to the nearby Dam, 
 >>>>>
 
@@ -105,12 +105,12 @@
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
 *Text*: ...
 >>>>>
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
 *Text*: ...
 >>>>>
 
@@ -133,10 +133,10 @@
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Text*: I'm not gonna say no to some extra help.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Text*: Oh, i didn't catch your name.
 >>>>>
 
@@ -152,10 +152,10 @@
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
 *Text*: Good to know.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
 *Text*: So, is everyone in favor of having Vito join us in this journey?
 >>>>>
 
@@ -167,7 +167,7 @@
 
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
 *Text*: Hmmmm, i don't typically mingle with brutes...
 >>>>>
 
@@ -184,7 +184,7 @@
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
 *Text*: Thank you for lending us your pincers Vito.
 >>>>>
 

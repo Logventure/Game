@@ -55,7 +55,7 @@
 
 
 *Character*: salmon
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared1.wav
 *Text*: Glu, gluuu??...
 >>>>>
 
@@ -99,7 +99,7 @@
 
 
 *Character*: salmon
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-explaining.wav
 *Text*: GluUu, Gluuuu, GlUU!
 >>>>>
 
@@ -170,7 +170,7 @@
 
 
 *Character*: salmon
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-joy1.wav
 *Text*: Glu gluUuUu~.
 >>>>>
 
@@ -218,7 +218,7 @@
 
 
 *Character*: salmon
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared2.wav
 *Text*: Glu Gluu!
 >>>>>
 
@@ -234,7 +234,7 @@
 >>>>>
 
 *Character*: salmon
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared1.wav
 *Text*: Gluu, gluUu, gluuuu...
 >>>>>
 

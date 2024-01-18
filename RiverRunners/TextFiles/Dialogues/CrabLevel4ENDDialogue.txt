@@ -30,7 +30,7 @@
 
 
 *Character*: salmon
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared1.wav
 *Text*: Gluu, glu?
 >>>>>
 

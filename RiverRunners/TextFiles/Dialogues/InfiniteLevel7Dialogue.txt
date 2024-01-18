@@ -23,7 +23,7 @@
 >>>>>
 
 *Character*: salmon
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-joy1.wav
 *Text*: GluuUuu, gluuuu.
 >>>>>
 

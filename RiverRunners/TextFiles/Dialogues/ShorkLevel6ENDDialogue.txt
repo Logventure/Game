@@ -14,18 +14,18 @@
 *Cutscene*: none
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-inquisitive-long.wav
 *Text*: What is this thing following us??
 >>>>>
 
-*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-inquisitive-long.wav
+
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-scared2.wav
 *Text*: A shark!?
 >>>>>
 
-*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-scared2.wav
+
 
 *Character*: crab
 
@@ -45,10 +45,10 @@
 >>>>>
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-exclamation.wav
 *Text*: Shorktopus.
 >>>>>
-*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-exclamation.wav
+
 *Character*: shork
 
 *Sound*: res://Assets/Audio/Cutscenes/shorkroar.wav
@@ -82,7 +82,7 @@
 >>>>>
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-question.wav
 *Text*: It speaks??
 >>>>>
 
@@ -104,6 +104,7 @@
 >>>>>
 
 *Character*: frog
+*Text*: A Shorktopus?
 
 *Text*: A Shorktopus?
 >>>>>
@@ -137,15 +138,15 @@
 >>>>>
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-exclamation.wav
 *Text*: I think, i remember.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-normal2.wav
 *Text*: The doctors....
 >>>>>
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-exclamation2.wav
 *Text*: The strange wardrobe choices.
 >>>>>
 
@@ -155,7 +156,7 @@
 >>>>>
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-exclamation.wav
 *Text*: Yes exactly!
 >>>>>
 
@@ -204,7 +205,7 @@
 >>>>>
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-explanation.wav
 *Text*: It can't be, i only recall being in the wilds, searching for other like minded fellows.
 >>>>>
 
@@ -237,15 +238,15 @@
 >>>>>
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-explanation.wav
 *Text*: I don't want to go back... i don't want to lose any of you.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-normal2.wav
 *Text*: It would be dangerous and reckless...
 >>>>>
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-exclamation2.wav
 *Text*: IT, just broke through the lab regardless, it's likely in shambles.
 >>>>>
 
@@ -255,7 +256,7 @@
 >>>>>
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-normal.wav
 *Text*: Oh, my apologies. We didn't even ask your name.
 >>>>>
 
@@ -269,10 +270,10 @@
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-exclamation.wav
 *Text*: We could give you a name.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-inquisitive-long.wav
 *Text*: Do any of you have any ideas my friends?
 >>>>>
 
@@ -290,7 +291,7 @@
 >>>>>
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-exclamation2.wav
 *Text*: That does sound nice.
 >>>>>
 
@@ -315,10 +316,10 @@
 >>>>>
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-normal2.wav
 *Text*: And do you have anywhere to go?
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-exclamation.wav
 *Text*: If not, you could join us!
 >>>>>
 
@@ -339,12 +340,12 @@
 >>>>>
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-Inquisitive.wav
 *Text*: Hm, but for now, what do u guys say we take a well deserved break?
 >>>>>
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-normal2.wav
 *Text*: I do need to give this head of mine a rest.
 >>>>>
 

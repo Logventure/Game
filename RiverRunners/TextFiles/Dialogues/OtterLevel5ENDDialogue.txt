@@ -39,15 +39,15 @@
 
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-scared.wav
 *Text*: Do we really have to?!?
 >>>>>
 
-*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-scared.wav
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-scared2.wav
 
 *Text*: Can't we just turn back? Leave this to someone el-.... more qualified??
 >>>>>
-*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-scared2.wav
+
 
 *Character*: salmon
 
@@ -59,11 +59,11 @@
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-exclamation.wav
 *Text*: We have to keep going! More animals might be in danger!
 >>>>>
 
-*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-exclamation.wav
+
 
 *Character*: otter
 

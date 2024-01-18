@@ -36,7 +36,7 @@
 
 
 *Character*: salmon
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking1.wav
 *Text*: Gluu, glu, gluuu...
 >>>>>
 
@@ -116,7 +116,7 @@
 
 
 *Character*: salmon
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking2.wav
 *Text*: ...
 >>>>>
 
@@ -161,7 +161,7 @@
 
 
 *Character*: salmon
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-joy1.wav
 *Text*: Gluu, gluuu~
 >>>>>
 

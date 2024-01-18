@@ -50,10 +50,10 @@
 
 
 *Character*: salmon
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared1.wav
 *Text*: <.<
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-explaining.wav
 *Text*: Glu, gluuuuu...
 >>>>>
 

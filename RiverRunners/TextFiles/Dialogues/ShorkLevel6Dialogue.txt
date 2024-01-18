@@ -36,10 +36,10 @@
 >>>>>
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-scared2.wav
 *Text*: For the love of all that is holy, keep rowing Sir Justin!
 >>>>>
-*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-scared2.wav
+
 
 
 

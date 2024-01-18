@@ -21,7 +21,7 @@
 
 
 *Character*: crab
-*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking1.wav
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
 *Text*: Sure do Kiddo.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav

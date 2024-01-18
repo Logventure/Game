@@ -6,7 +6,7 @@ var current_state = States.MENU
 var playlist = [preload("res://Assets/Audio/Music/HoliznaCC0-Level1.mp3")]
 
 
-var base_volume = -6
+var base_volume = -12
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

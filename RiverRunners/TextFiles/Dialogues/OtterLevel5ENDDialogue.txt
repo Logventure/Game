@@ -14,7 +14,7 @@
 *Cutscene*: none
 
 *Character*: beaver
-
+*Volume*: 10
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-exclamation.wav
 
 *Text*: There's no end to those tentacles, bring some down, and more pop up.
@@ -23,6 +23,7 @@
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Volume*: -12
 *Text*: Aye, it's downright scary.
 >>>>>
 
@@ -33,13 +34,14 @@
 *Character*: otter
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-stoprightthere.wav
-
+*Volume*: -6
 *Text*: We need to keep pushing through! There's only one way we'll reach a conclusion, we have to keep going.
 >>>>>
 
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-scared.wav
+*Volume*: 10
 *Text*: Do we really have to?!?
 >>>>>
 
@@ -51,6 +53,7 @@
 
 *Character*: salmon
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared1.wav
+*Volume*: -12
 *Text*: <.<
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-explaining.wav
@@ -60,6 +63,7 @@
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-exclamation.wav
+*Volume*: 10
 *Text*: We have to keep going! More animals might be in danger!
 >>>>>
 
@@ -68,12 +72,13 @@
 *Character*: otter
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk1.wav
-
+*Volume*: -6
 *Text*: We should be close, i've been tracking this thing for a while now, the increased activity is a sure sign.
 >>>>>
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Volume*: -12
 *Text*: On we go.
 >>>>>
 

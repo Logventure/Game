@@ -159,7 +159,7 @@ func loadChat(filepath: String):
 			text = ""
 			sound = ""
 			fade_time = 0.25
-			volume = 0
+			#volume = 0
 		
 		line = file.get_line()
 

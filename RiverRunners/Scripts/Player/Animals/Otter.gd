@@ -84,9 +84,11 @@ func handle_position():
 	position = logNode.position + basePosition
 	
 func throw():
-	Events.emit_signal("otter_position",position)
-	Events.emit_signal("throwing")
-	createTimer()
+	play("throw")
+	#Events.emit_signal("otter_position",position)
+	#Events.emit_signal("throwing")
+	#createTimer()
+
 
 func createTimer():
 	canThrow = false
@@ -170,4 +172,9 @@ func onTreeDetected(area):
 
 func _on_animation_looped():
 	if animation == "jump":
+		play("idle")
+	elif animation == "throw":
+		Events.emit_signal("otter_position",position)
+		Events.emit_signal("throwing")
+		createTimer()
 		play("idle")

@@ -15,30 +15,36 @@
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
-*Text*: Definetly couldn't have gotten through over some of those tree trunks Sir Frog.
+*Volume*: 10
+*Text*: Definitely couldn't have gotten through over some of those tree trunks Sir Frog.
 >>>>>
 
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Volume*: 10
 *Text*: Sir Frogginton.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Volume*: 10
 *Text*: The third.
 >>>>>
 
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-explanation.wav
+*Volume*: 10
 *Text*: Uh, yes of course.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
 *Text*: Well, let's hurry up, there might be other innocent lovable souls out there in need of help.
 >>>>>
 
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
+*Volume*: 10
 *Text*: Indeed, i would hope to find some intellectual equal on this journey.
 >>>>>
 

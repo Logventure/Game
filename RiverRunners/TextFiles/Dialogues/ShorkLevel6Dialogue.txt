@@ -15,12 +15,13 @@
 *Character*: otter
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-talkingtoself.wav
-
+*Volume*: -6
 *Text*: It has to be close, i can sense it
 >>>>>
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
+*Volume*: -12
 *Text*: Ah, the waters are agitated.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
@@ -31,12 +32,13 @@
 *Character*: shork
 
 *Sound*: res://Assets/Audio/Cutscenes/shorkroar.wav
-
+*Volume*: -6
 *Text*: Raaawwwwwrrr!!
 >>>>>
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-scared2.wav
+*Volume*: 10
 *Text*: For the love of all that is holy, keep rowing Sir Justin!
 >>>>>
 

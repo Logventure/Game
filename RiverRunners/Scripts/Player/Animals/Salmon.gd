@@ -121,6 +121,8 @@ func _process(delta):
 			Events.emit_signal("dashing")
 			if frame >= 1:
 				get_node("../").dashLeft()
+				var soundfile = ["res://Assets/Audio/SFX/dash-1.wav", "res://Assets/Audio/SFX/dash-2.wav", "res://Assets/Audio/SFX/dash-3.wav"].pick_random()
+				Utils.playSoundFile(self,soundfile,"SFX",0,true)
 				current_state = States.DASHING_LEFT
 				z_index = 2
 			else:
@@ -132,6 +134,8 @@ func _process(delta):
 			Events.emit_signal("dashing")
 			if frame >= 1:
 				get_node("../").dashRight()
+				var soundfile = ["res://Assets/Audio/SFX/dash-1.wav", "res://Assets/Audio/SFX/dash-2.wav", "res://Assets/Audio/SFX/dash-3.wav"].pick_random()
+				Utils.playSoundFile(self,soundfile,"SFX",0,true)
 				current_state = States.DASHING_RIGHT
 			else:
 				targetPosition = logNode.position + push_position_left

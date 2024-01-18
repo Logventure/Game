@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=3 uid="uid://dej1mjtjgtaao"]
+[gd_scene load_steps=99 format=3 uid="uid://dej1mjtjgtaao"]
 
 [ext_resource type="Script" path="res://Scripts/Player/LogMovements.gd" id="1_8lkio"]
 [ext_resource type="Texture2D" uid="uid://c041f6oxnqu5j" path="res://Assets/Characters/salmon/Dive/Salmon-Dive1.png" id="2_67xvo"]
@@ -82,6 +82,10 @@
 [ext_resource type="Texture2D" uid="uid://c7lmntjvtj2bd" path="res://Assets/Characters/otter/Otter-jump2.png" id="67_hiohc"]
 [ext_resource type="Texture2D" uid="uid://do7163ox5ybkp" path="res://Assets/Characters/otter/Otter-jump3.png" id="68_2os8e"]
 [ext_resource type="Texture2D" uid="uid://sdh5vgyxhc1i" path="res://Assets/Characters/otter/Otter-jump4.png" id="69_54t7c"]
+[ext_resource type="Texture2D" uid="uid://co5i7cljhvh6w" path="res://Assets/Characters/otter/Otter-attack1.png" id="70_3ocon"]
+[ext_resource type="Texture2D" uid="uid://b4ck4j4g7aiyu" path="res://Assets/Characters/otter/Otter-attack2.png" id="71_vq3j3"]
+[ext_resource type="Texture2D" uid="uid://i8b3pvj33gsg" path="res://Assets/Characters/otter/Otter-attack3.png" id="72_ydhq1"]
+[ext_resource type="Texture2D" uid="uid://daj84ytt68em3" path="res://Assets/Characters/otter/Otter-attack4.png" id="73_bb7nt"]
 [ext_resource type="Texture2D" uid="uid://dn3tbesifvxuo" path="res://Assets/Characters/frog/frog-jump.png" id="75_228ub"]
 [ext_resource type="Texture2D" uid="uid://dye6pi5r1jp2j" path="res://Assets/Characters/beaver/Justin-Beaver-Jump-Duck1.png" id="79_4e4nf"]
 [ext_resource type="Texture2D" uid="uid://v3xb7mbtayyg" path="res://Assets/Characters/beaver/Justin-Beaver-Jump-Duck2.png" id="80_xssce"]
@@ -360,6 +364,23 @@ animations = [{
 "loop": true,
 "name": &"jump",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("70_3ocon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_vq3j3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_ydhq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_bb7nt")
+}],
+"loop": true,
+"name": &"throw",
+"speed": 14.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xte55"]
@@ -635,7 +656,7 @@ color = Color(0.71875, 0.800781, 0.816406, 1)
 texture_filter = 1
 position = Vector2(-14, -65)
 sprite_frames = SubResource("SpriteFrames_undwl")
-animation = &"idle"
+animation = &"throw"
 autoplay = "idle"
 script = ExtResource("9_vpltj")
 

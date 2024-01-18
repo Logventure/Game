@@ -20,7 +20,7 @@
 *Character*: shork_gray
 
 *Sound*: res://Assets/Audio/Cutscenes/shorkroar.wav
-
+*Volume*: -6
 *Text*: Raaawwwwwrrr!!
 >>>>>
 
@@ -47,6 +47,7 @@
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
+*Volume*: -12
 *Text*: A lil roaring's got you all quaking in your boots.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
@@ -100,6 +101,7 @@
 
 *Character*: salmon
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-explaining.wav
+*Volume*: -12
 *Text*: GluUu, Gluuuu, GlUU!
 >>>>>
 
@@ -129,6 +131,7 @@
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
+*Volume*: -12
 *Text*: ...
 >>>>>
 
@@ -171,6 +174,7 @@
 
 *Character*: salmon
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-joy1.wav
+*Volume*: -12
 *Text*: Glu gluUuUu~.
 >>>>>
 
@@ -194,6 +198,7 @@
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy1.wav
+*Volume*: -12
 *Text*: Hrm, seems like our goals might align after all then.
 >>>>>
 
@@ -219,6 +224,7 @@
 
 *Character*: salmon
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared2.wav
+*Volume*: -12
 *Text*: Glu Gluu!
 >>>>>
 
@@ -235,6 +241,7 @@
 
 *Character*: salmon
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared1.wav
+*Volume*: -12
 *Text*: Gluu, gluUu, gluuuu...
 >>>>>
 
@@ -255,7 +262,7 @@
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
 *Volume*: -6
-*Text*: Indeed, if we encounter any tentacles, i can help of course. [PRESS W to THROW rocks at the tentacles]
+*Text*: Indeed, if we encounter any tentacles, i can help of course.
 >>>>>
 
 

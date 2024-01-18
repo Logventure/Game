@@ -21,7 +21,7 @@
 *Character*: shork_gray
 
 *Sound*: res://Assets/Audio/Cutscenes/damcrash.wav
-
+*Volume*: -6
 *Text*: (CRASH!!)
 >>>>>
 
@@ -29,18 +29,22 @@
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-scared.wav
+*Volume*: 10
 *Text*: Oh no! The dam broke!?
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
+*Volume*: 10
 *Text*: How did that happen?
 >>>>>
 
 *Cutscene*: res://Assets/Cutscenes/b-CS-Justin-Dam-Break2.png
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
 *Text*: The water is flowing rapidly into the river bank!
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-scared.wav
+*Volume*: 10
 *Text*: This could affect a lot of animals in the forest.
 >>>>>
 
@@ -48,13 +52,16 @@
 *Cutscene*: none
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
 *Text*: I Have to be quick and check if anyone is hurt.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10
 *Text*: Seems like the rocks here pose the most danger.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
-*Text*: Thankfully they seem to follow a weirdly similar pattern, i should be able to avoid them by going LEFT and RIGHT. [PRESS A and D respectively]
+*Volume*: 10
+*Text*: Thankfully they seem to follow a weirdly similar pattern, i should be able to avoid them by going LEFT and RIGHT.
 >>>>>
 
 

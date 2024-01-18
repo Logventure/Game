@@ -8,7 +8,7 @@ var pos_original = Vector2.ZERO
 var is_throwing = false
 var throwGravity = 400
 var throwSpeedX = 2.5
-var throwSpeedY = 300
+var throwSpeedY = 350
 var throwTime = 0
 var throwoffset = 0
 var waterheight = 30 #to adjust where the stone hits the water
@@ -66,7 +66,7 @@ func throw(otter_position):
 		throwSFX.play()
 
 func handle_throw(delta):
-	throwTime += delta*1.7
+	throwTime += delta*2.2
 	if throwableStone.position.y - waterheight <= position.y + referenceposition.y - (tileheight * (throwableStone.position.x - position.x - referenceposition.x)/tilewidth) && throwTime >= 0: 
 		#criar variaveis auxiliares para x e para y onde depois guardo no final na position da stone
 		aux_x = pos_original.x + tilewidth/2 * throwTime * (throwSpeedX + speed_boost)

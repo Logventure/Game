@@ -16,12 +16,14 @@
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
 *Text*: You really do have a hard shell don't u Vito?
 >>>>>
 
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Volume*: -12
 *Text*: Sure do Kiddo.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
@@ -37,12 +39,14 @@
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-question.wav
+*Volume*: 10
 *Text*: The rock breaking business?
 >>>>>
 
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
+*Volume*: -12
 *Text*: Sure...
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
@@ -52,6 +56,7 @@
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared.wav
+*Volume*: 10
 *Text*: (Gulp.)
 >>>>>
 
@@ -61,7 +66,7 @@
 *Text*: Anywaayyyy...
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
-*Text*: That hard shell of your's will surely come in handy.
+*Text*: That hard shell of yours will surely come in handy.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Text*: Glad to have u aboard Vito.
@@ -70,6 +75,7 @@
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy1.wav
+*Volume*: -12
 *Text*: Same here Kiddo.
 >>>>>
 

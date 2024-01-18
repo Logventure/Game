@@ -19,12 +19,14 @@
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
+*Volume*: 10
 *Text*: So, Sir Frogginton, are your brainwaves sensing anything, any potential friends? Enemies?
 >>>>>
 
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
+*Volume*: 10
 *Text*: Hmmmmm, i can't say i'm sense much this time around.
 >>>>>
 
@@ -37,18 +39,21 @@
 
 *Character*: salmon
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking1.wav
+*Volume*: -12
 *Text*: Gluu, glu, gluuu...
 >>>>>
 
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Volume*: 10
 *Text*: I figured as much. As i said, there doesn't seem to be anything of note nearby.
 >>>>>
 
 
 *Character*: crab_gray
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
+*Volume*: -12
 *Text*: Hhrmm...
 >>>>>
 
@@ -65,17 +70,20 @@
 
 *Cutscene*: res://Assets/Cutscenes/i-CS-Common3.png
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-scared.wav
+*Volume*: -12
 *Text*: HEY, I'M SWIMMIN HERE!
 >>>>>
 
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
 *Text*: Oh, i'm sorry! I didn't see you there.
 >>>>>
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Volume*: -12
 *Text*: Well duh, i came from below.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
@@ -88,6 +96,7 @@
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-explanation.wav
+*Volume*: 10
 *Text*: This must be some kind of missunderstanding...
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
@@ -97,6 +106,7 @@
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Volume*: -12
 *Text*: Hm, ya don't say...
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
@@ -106,6 +116,7 @@
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10
 *Text*: ...
 >>>>>
 
@@ -117,6 +128,7 @@
 
 *Character*: salmon
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking2.wav
+*Volume*: -12
 *Text*: ...
 >>>>>
 
@@ -134,6 +146,7 @@
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
 *Text*: I'm not gonna say no to some extra help.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
@@ -143,6 +156,7 @@
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Volume*: -12
 *Text*: The name's Don Vito Crableone.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
@@ -153,6 +167,7 @@
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
+*Volume*: 10
 *Text*: Good to know.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
@@ -162,12 +177,14 @@
 
 *Character*: salmon
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-joy1.wav
+*Volume*: -12
 *Text*: Gluu, gluuu~
 >>>>>
 
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Volume*: 10
 *Text*: Hmmmm, i don't typically mingle with brutes...
 >>>>>
 
@@ -176,21 +193,24 @@
 
 *Cutscene*: none
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Volume*: -12
 *Text*: Eh, you'll thank me when we come across some rocks we just can't maneuver around.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
-*Text*: I can protect ya with this hard shell of mine, just gotta time the block properly. [PRESS S at the appropriate time]
+*Text*: I can protect ya with this hard shell of mine, just gotta time the block properly.
 >>>>>
 
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10
 *Text*: Thank you for lending us your pincers Vito.
 >>>>>
 
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
+*Volume*: -12
 *Text*: No problem bud.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav

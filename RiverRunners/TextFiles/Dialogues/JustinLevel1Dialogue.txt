@@ -28,32 +28,32 @@
 *Cutscene*: res://Assets/Cutscenes/c-CS-Justin-Dam-Break3-noJustin.png
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-scared.wav
 *Text*: Oh no! The dam broke!?
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
 *Text*: How did that happen?
 >>>>>
 
 *Cutscene*: res://Assets/Cutscenes/b-CS-Justin-Dam-Break2.png
 
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Text*: The water is flowing rapidly into the river bank!
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-scared.wav
 *Text*: This could affect a lot of animals in the forest.
 >>>>>
 
 
 *Cutscene*: none
 
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Text*: I Have to be quick and check if anyone is hurt.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Text*: Seems like the rocks here pose the most danger.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
 *Text*: Thankfully they seem to follow a weirdly similar pattern, i should be able to avoid them by going LEFT and RIGHT. [PRESS A and D respectively]
 >>>>>
 

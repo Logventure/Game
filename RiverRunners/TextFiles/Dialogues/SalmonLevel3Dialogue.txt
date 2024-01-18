@@ -24,28 +24,28 @@
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Text*: Did your hear anything Sir Frogginton?
 >>>>>
 
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Text*: The th-
 >>>>>
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
 *Text*: Yes yes yes, ok.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Text*: Did you hear anything though?
 >>>>>
 
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Text*: I am indeed sensing some like minded fellows brainwaves...
 >>>>>
 
@@ -57,7 +57,7 @@
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Text*: There it is again!
 >>>>>
 
@@ -74,38 +74,40 @@
 
 
 *Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 
 *Text*: There they are!
 >>>>>
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-question.wav
 *Text*: Can u sense it Sir Justin?
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation.wav
 *Text*: It's indubitably a genius, it's understanding of physics to be able to leap in that fashion is unmistakable!
 >>>>>
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Text*: Isn't that...
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive-long.wav
 *Text*: ... a pacifier?
 >>>>>
 
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Text*: Don't offend it in such a heinous manner Sir Justin.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
 *Text*: That's rude.
 >>>>>
 
 
 *Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 
 *Text*: I was just stating a fact?
 >>>>>
@@ -118,13 +120,13 @@
 
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
 *Text*: No doubt because it understands and shares our plight.
 >>>>>
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Text*: Hmm. I wonder what their name is.
 >>>>>
 
@@ -136,7 +138,7 @@
 
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Text*: Salomon the enlightened it says.
 >>>>>
 
@@ -148,24 +150,24 @@
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Text*: What?...
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive-long.wav
 *Text*: So, you can understand fish speak?
 >>>>>
 
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Text*: Why yes of course.
 >>>>>
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
 *Text*: ...
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
 *Text*: (I'm just gonna call them Sal) .
 >>>>>
 
@@ -177,16 +179,16 @@
 
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal2.wav
 *Text*: It also says it can help us with quick manuvering if need be.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
 *Text*: If we need to suddenly cover a larger distance RIGHT or LEFT, Salomon says he will push the boat in either direction. [PRESS Q or E respectively]
 >>>>>
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
 *Text*: That could indeed come in handy to cover more ground quickly.
 >>>>>
 

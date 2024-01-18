@@ -14,16 +14,16 @@
 *Cutscene*: none
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Text*: I'm surprised at their strength, they have some impressive swimming abilities to be able to keep up with us like this.
 >>>>>
 
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
 *Text*: Salmon are vigorous swimmers Sir Justin.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation.wav
 *Text*: And this one, as i sensed, is indeed an impressive specimen.
 >>>>>
 
@@ -35,7 +35,7 @@
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Text*: Good to have you on board Sal!
 >>>>>
 
@@ -47,7 +47,7 @@
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
 *Text*: Let's see if we can find any other standofish fellows further ahead...
 >>>>>
 

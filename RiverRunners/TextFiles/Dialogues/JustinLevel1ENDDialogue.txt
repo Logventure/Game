@@ -14,34 +14,34 @@
 *Cutscene*: none
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
 *Text*: Think i made it through just fine, i knew my trusty log wouldn't fail me.
 >>>>>
 
 
 *Character*: frog_gray
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared.wav
 *Text*: HHHHHAAAAAAAAAAAAA.
 >>>>>
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
 *Text*: Hm? What's that sound?
 >>>>>
 
 
 *Character*: frog_gray
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared2.wav
 *Text*: HHHHHEEEELLLLPPP MEEEEEEEE.
 >>>>>
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Text*: Is that... an extremely high pitched croaking i hear?
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
 *Text*: I wonder what that could be from...
 >>>>>
 

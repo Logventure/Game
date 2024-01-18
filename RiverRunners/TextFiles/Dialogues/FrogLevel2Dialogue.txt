@@ -18,15 +18,15 @@
 >>>>>
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared2.wav
 *Text*: HHHEEEELPPPPPP.
 >>>>>
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
 *Text*: So that's what that high pitched croaking was. Hm, let me see if i can get them out of there.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Text*: HEY! YOU THERE! JUMP ONTO MY LOG!
 >>>>>
 
@@ -38,61 +38,61 @@
 
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Text*: Thank you for saving me from that hazardous situation sir.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
 *Text*: Not that i couldn't eventually get out of that precarious bind by my lonesome of course...
 >>>>>
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Text*: You're very welcome sir Frog.
 >>>>>
 
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
 *Text*: Sir Frogginton.
 >>>>>
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
 *Text*: You're still very welcome sir Frogginton.
 >>>>>
 
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation.wav
 *Text*: The third.
 >>>>>
 
 
 *Character*: beaver
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal.wav
 *Text*: Uh...
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Text*: Sure.
 >>>>>
 
 *Cutscene*: none
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal.wav
 *Text*: Well, i'm definetly glad to have a friendly face to keep me company on this journey.
 >>>>>
 
 
 *Character*: frog
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
 *Text*: Yes, yes, i do have to say this is indeed a mighty vessel.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
 *Text*: I do believe it may face some vertical based issues ahead however.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Text*: For this purpose i pledge my insurmoutable leg strength. If we encounter any fallen trees on our path, we may now overcome them by jumping. [PRESS SPACEBAR]
 >>>>>
 

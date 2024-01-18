@@ -17,6 +17,10 @@ var previous_screen
 
 var last_level = 0
 var level_ids = ["level_justin", "level_frog", "level_salmon", "level_crab", "level_otter", "level_shork", "level_infinite"]
+var level_ids_easy = ["level_justin_easy", "level_frog_easy", "level_salmon_easy", "level_crab_easy", "level_otter_easy", "level_shork_easy", "level_infinite"]
+var level_ids_hard = ["level_justin_hard", "level_frog_hard", "level_salmon_hard", "level_crab_hard", "level_otter_hard", "level_shork_hard", "level_infinite"]
+
+var level_list = level_ids
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -92,14 +96,20 @@ func switchToLevelSelect():
 
 
 func switchToLevel(level_id: int):
+	var difficulty = FILE_MANAGEMENT_SCRIPT.loadDifficulty()
+	if difficulty == 0:
+		level_list = level_ids_easy
+	if difficulty == 2:
+		level_list = level_ids_hard
+
 	target_state = States.LEVEL
 	target_screen = loadScene("res://Levels/LevelTemplate.tscn")
-	if level_id < 0 or level_id >= len(level_ids):
-		var last_level_id = level_ids[last_level]
+	if level_id < 0 or level_id >= len(level_list):
+		var last_level_id = level_list[last_level]
 		target_screen.setLevelScript(last_level_id)
 	else:
 		last_level = level_id
-		var last_level_id = level_ids[last_level]
+		var last_level_id = level_list[last_level]
 		target_screen.setLevelScript(last_level_id)
 
 	if level_id >= 0 and level_id < 3:

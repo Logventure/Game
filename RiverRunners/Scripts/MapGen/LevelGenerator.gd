@@ -105,8 +105,9 @@ func updateCurrentModule(pos):
 func updatePossibleModules():
 	validModules = []
 	for module in mapModuleTemplates:
-		if module["difficulty"] > level_difficulty and module["difficulty"] >= 1 and (Utils.arrayHasItemsInCommon(module["group"],level_groups) >= 1 or len(level_groups) == 0):
+		if module["difficulty"] >= level_difficulty and module["difficulty"] >= 1 and (Utils.arrayHasItemsInCommon(module["group"],level_groups) >= 1 or len(level_groups) == 0):
 			validModules.append(module)
+
 
 #loads all scenes available on the Modules folders and returns them in a list
 #will add more later

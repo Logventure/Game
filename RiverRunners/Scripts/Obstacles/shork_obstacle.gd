@@ -34,7 +34,7 @@ func _process(delta):
 			monitorable = false
 
 		States.BITE:
-			print("Shork frame: ", sprite.frame)
+			#print("Shork frame: ", sprite.frame)
 			if sprite.frame < 8:
 				monitorable = true
 			else:

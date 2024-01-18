@@ -35,7 +35,7 @@ func playSoundFile(parent,filepath: String,bus: String,volume = 0,positional = f
 	audiostream.volume_db = volume
 	parent.add_child(audiostream)
 	audiostream.play()
-	print("Play sound, ", audiostream)
+	#print("Play sound, ", audiostream)
 
 func playUISound(parent,volume = 0):
 	if playtimeUI > 0.2:

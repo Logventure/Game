@@ -153,9 +153,13 @@ func startDialogue(file: String):
 
 func updateSpeed(speed):
 	playerTargetSpeed = speed
+	updateObstacleDifficulty(speed - 1)
 
 func updateObstacleGroups(groups):
 	map.updateModuleGroups(groups)
+
+func updateObstacleDifficulty(difficulty):
+	map.updateModuleDifficulty(difficulty)
 
 func updateObstacleState(value: bool):
 	if value:

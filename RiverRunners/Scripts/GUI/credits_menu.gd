@@ -73,7 +73,7 @@ func skipKey():
 	var input_type = InputHandler.lastInputType()
 	var confirm_actions = InputMap.action_get_events("confirm")
 	var keyString
-	print("type: ", input_type)
+	#print("type: ", input_type)
 	if input_type == "controller":
 		keyString = "X"
 		$Label11.text = str("Hold ", keyString, " to skip.")

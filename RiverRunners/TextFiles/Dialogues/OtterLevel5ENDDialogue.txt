@@ -15,6 +15,8 @@
 
 *Character*: beaver
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-exclamation.wav
+
 *Text*: There's no end to those tentacles, bring some down, and more pop up.
 >>>>>
 
@@ -41,9 +43,11 @@
 *Text*: Do we really have to?!?
 >>>>>
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-scared.wav
+
 *Text*: Can't we just turn back? Leave this to someone el-.... more qualified??
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-scared2.wav
 
 *Character*: salmon
 
@@ -59,6 +63,7 @@
 *Text*: We have to keep going! More animals might be in danger!
 >>>>>
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-exclamation.wav
 
 *Character*: otter
 

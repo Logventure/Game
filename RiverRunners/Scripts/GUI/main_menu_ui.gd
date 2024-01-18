@@ -80,7 +80,8 @@ func _process(delta):
 				if $OptionsUI/Panel/ButtonContainer/VideoButton.visible == true:
 					$OptionsUI/Panel/ButtonContainer/VideoButton.grab_focus()
 			if Input.is_action_just_pressed("confirm") and not get_viewport().gui_get_focus_owner() == null:
-					get_viewport().gui_get_focus_owner().emit_signal("pressed")
+					if get_viewport().gui_get_focus_owner().has_signal("pressed"):
+						get_viewport().gui_get_focus_owner().emit_signal("pressed")
 
 		States.CREDITS:
 			pass

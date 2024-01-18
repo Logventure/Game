@@ -18,10 +18,14 @@
 *Text*: What is this thing following us??
 >>>>>
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-inquisitive-long.wav
+
 *Character*: frog
 
 *Text*: A shark!?
 >>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-scared2.wav
 
 *Character*: crab
 
@@ -44,7 +48,7 @@
 
 *Text*: Shorktopus.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-exclamation.wav
 *Character*: shork
 
 *Sound*: res://Assets/Audio/Cutscenes/shorkroar.wav

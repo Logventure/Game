@@ -21,6 +21,7 @@ func _process(delta):
 
 
 func _on_exit_button_pressed():
+	Utils.playUISound(self, -6)
 	Events.emit_signal("go_to_main_menu")
 
 func resetFocusedButton():
@@ -30,6 +31,7 @@ func resetFocusedButton():
 	Events.emit_signal("new_level_completed")
 
 func _on_next_level_button_pressed():
+	Utils.playUISound(self, -6)
 	current_state = States.DISABLED
 	visible = false
 	Events.emit_signal("go_to_next_level")

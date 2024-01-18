@@ -44,6 +44,8 @@ signal on_dialog_end
 
 signal showTutorial(ability)
 
+signal changeMusic(mode: String)
+
 signal pause_game
 signal player_died
 signal resume_game

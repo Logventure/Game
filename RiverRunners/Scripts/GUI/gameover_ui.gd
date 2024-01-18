@@ -21,9 +21,11 @@ func _process(delta):
 
 
 func _on_give_up_button_pressed():
+	Utils.playUISound(self, -6)
 	Events.emit_signal("go_to_main_menu")
 
 func _on_retry_button_pressed():
+	Utils.playUISound(self, -6)
 	current_state = States.DISABLED
 	visible = false
 	Events.emit_signal("go_to_level", -1)

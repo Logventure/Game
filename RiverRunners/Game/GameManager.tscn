@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://doyi7e0hxjsg3"]
+[gd_scene load_steps=6 format=3 uid="uid://doyi7e0hxjsg3"]
 
 [ext_resource type="Script" path="res://Scripts/Game/GameManager.gd" id="1_4pynx"]
 [ext_resource type="AudioStream" uid="uid://c5sdfywlmwqf8" path="res://Assets/Audio/Ambience/Forest_Ambience.wav" id="3_yqvca"]
+[ext_resource type="AudioStream" uid="uid://d0fuc6dn4dgnl" path="res://Assets/Audio/Music/HoliznaCC0-Level1.mp3" id="4_60vnl"]
 [ext_resource type="AudioStream" uid="uid://cehodwef521mp" path="res://Assets/Audio/Ambience/River_Flow.wav" id="4_jcmej"]
+[ext_resource type="Script" path="res://Scripts/MusicPlayer.gd" id="4_wq00a"]
 
 [node name="GameManager" type="Node2D"]
 script = ExtResource("1_4pynx")
@@ -22,3 +24,10 @@ stream = ExtResource("4_jcmej")
 volume_db = -18.0
 autoplay = true
 bus = &"Ambience"
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("4_60vnl")
+bus = &"Music"
+script = ExtResource("4_wq00a")
+
+[connection signal="finished" from="Audio/MusicPlayer" to="Audio/MusicPlayer" method="_on_finished"]

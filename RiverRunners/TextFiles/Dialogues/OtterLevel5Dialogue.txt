@@ -30,15 +30,17 @@
 *Text*: Holy Makerel!!
 >>>>>
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-scared.wav
+
 *Text*: What was that!?
 >>>>>
 
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-question.wav
 *Character*: beaver
 
 *Text*: That does sound scary...
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-Inquisitive.wav
 
 *Character*: crab
 
@@ -82,10 +84,14 @@
 *Text*: HAAAAAAA!!
 >>>>>
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-scared2.wav
+
 *Character*: beaver
 
 *Text*: We mean no harm ma'am.
 >>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-normal2.wav
 
 *Character*: salmon
 
@@ -126,6 +132,8 @@
 *Text*: My name's Justin, Justin Beaver, i live near the dam, so as soon as i heard it breaking, i came rushing to check if anyone had been hurt.
 >>>>>
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-exclamation.wav
+
 *Character*: otter
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk2.wav
@@ -138,13 +146,19 @@
 *Text*: Treat others how you would like to be treated, that's how i try to live my life.
 >>>>>
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-normal.wav
+
 *Text*: This here is Sir Frogginton the third, Sal, and Vito.
 >>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-explanation.wav
 
 *Character*: frog
 
 *Text*: It's a pleasure to meet you ma'am.
 >>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-normal2.wav
 
 *Character*: salmon
 
@@ -191,6 +205,8 @@
 *Text*: Ten-Ten-Tentacles you say???...
 >>>>>
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-scared.wav
+
 *Character*: salmon
 
 *Text*: Glu Gluu!
@@ -201,9 +217,10 @@
 *Text*: Don't talk to me like that Salomon, i've done nothing wrong!
 >>>>>
 
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-exclamation2.wav
 *Text*: Fear is a normal and vital survival instant...
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-explanation.wav
 *Character*: salmon
 
 *Text*: Gluu, gluUu, gluuuu...
@@ -218,6 +235,8 @@
 
 *Text*: Lets get to the bottom of this then.
 >>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-Inquisitive.wav
 
 *Character*: otter
 

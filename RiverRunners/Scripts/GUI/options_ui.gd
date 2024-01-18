@@ -40,7 +40,8 @@ func _process(delta):
 			if $BackButton.visible == true:
 				$BackButton.grab_focus()
 		if Input.is_action_just_pressed("confirm") and not get_viewport().gui_get_focus_owner() == null:
-			get_viewport().gui_get_focus_owner().emit_signal("pressed")	
+			if get_viewport().gui_get_focus_owner().has_signal("pressed"):
+				get_viewport().gui_get_focus_owner().emit_signal("pressed")	
 	
 	match current_state:
 		States.GENERAL:
@@ -60,20 +61,24 @@ func resetFocus():
 	_on_general_button_pressed()
 
 func _on_back_button_pressed():
+	Utils.playUISound(self, -6)
 	Events.emit_signal("go_to_previous_screen")
 
 
 func _on_audio_button_pressed():
+	Utils.playUISound(self, -6)
 	current_state = States.AUDIO
 
 	audio_button_clicked()	
 
 func _on_general_button_pressed():
+	Utils.playUISound(self, -6)
 	current_state = States.GENERAL
 
 	general_button_clicked()
 
 func _on_controls_button_pressed():
+	Utils.playUISound(self, -6)
 	current_state = States.CONTROLS
 
 	controls_button_clicked()
@@ -152,12 +157,15 @@ func onUpdateCameraStatus(pos,zoom): #so that the menu shows up when entered mid
 
 
 func _on_borderless_button_pressed():
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	Utils.playUISound(self, -6)
+	#DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 func _on_fullscreen_button_pressed():
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	Utils.playUISound(self, -6)
+	#DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func _on_actionButton_pressed(action):
+	Utils.playUISound(self, -6)
 	$Panel3.visible = false
 	$Panel2.visible = true
 	isInInputOverrideMode = true
@@ -436,6 +444,7 @@ func _input(event):
 
 
 func _on_hard_mode_button_pressed():
+	Utils.playUISound(self, -6)
 	FILE_MANAGEMENT_SCRIPT.saveDifficulty(2)
 
 	$Panel/ButtonContainer1/HardModeButton.texture_normal = hard_mode_button_normal_image
@@ -443,6 +452,7 @@ func _on_hard_mode_button_pressed():
 	$Panel/ButtonContainer1/NormalModeButton.texture_normal = normal_mode_button_hover_image
 
 func _on_normal_mode_button_pressed():
+	Utils.playUISound(self, -6)
 	FILE_MANAGEMENT_SCRIPT.saveDifficulty(1)
 
 	$Panel/ButtonContainer1/NormalModeButton.texture_normal = normal_mode_button_normal_image
@@ -450,6 +460,7 @@ func _on_normal_mode_button_pressed():
 	$Panel/ButtonContainer1/HardModeButton.texture_normal = hard_mode_button_hover_image
 
 func _on_easy_mode_button_pressed():
+	Utils.playUISound(self, -6)
 	FILE_MANAGEMENT_SCRIPT.saveDifficulty(0)
 
 	$Panel/ButtonContainer1/EasyModeButton.texture_normal = easy_mode_button_normal_image

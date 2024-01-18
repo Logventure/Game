@@ -46,10 +46,10 @@
 
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
 *Text*: A lil roaring's got you all quaking in your boots.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
 *Text*: I've heard much more intense screams...
 >>>>>
 
@@ -104,7 +104,7 @@
 >>>>>
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
 *Text*: You don't get to come in here and start askin questions.
 >>>>>
 
@@ -128,7 +128,7 @@
 >>>>>
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
 *Text*: ...
 >>>>>
 
@@ -175,7 +175,7 @@
 >>>>>
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
 *Text*: Hm, yeah, that's the name.
 >>>>>
 
@@ -193,7 +193,7 @@
 
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy1.wav
 *Text*: Hrm, seems like our goals might align after all then.
 >>>>>
 
@@ -239,7 +239,7 @@
 >>>>>
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
 *Text*: Fears aside, this does sound like a good lead.
 >>>>>
 

@@ -20,10 +20,10 @@
 >>>>>
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
 *Text*: Ah, the waters are agitated.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
 *Text*: It's trying to get close to us itself.
 >>>>>
 

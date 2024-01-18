@@ -28,7 +28,7 @@
 
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
 *Text*: An octopus.
 >>>>>
 
@@ -57,7 +57,7 @@
 >>>>>
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
 *Text*: I'd take that as a yes kiddo.
 >>>>>
 
@@ -133,7 +133,7 @@
 >>>>>
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-question.wav
 *Text*: Hrm, that sounds, familiar.
 >>>>>
 
@@ -169,10 +169,10 @@
 >>>>>
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-question.wav
 *Text*: So you're the one that broke the dam?
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
 *Text*: To escape?
 >>>>>
 
@@ -218,10 +218,10 @@
 >>>>>
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
 *Text*: I can't stand hearin this.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
 *Text*: I'm not gonna take this laying down, we need to go back, teach those monsters a lesson.
 >>>>>
 
@@ -296,7 +296,7 @@
 >>>>>
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-question.wav
 *Text*: Any objections?
 >>>>>
 
@@ -350,7 +350,7 @@
 >>>>>
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
 *Text*: I guess kickin back and enjoyin the ocean breeze don't sound so bad.
 >>>>>
 

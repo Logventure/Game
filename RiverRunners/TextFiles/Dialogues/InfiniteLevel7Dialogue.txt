@@ -33,7 +33,7 @@
 >>>>>
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
 *Text*: Aye, this log ain't gonna row and defend itself.
 >>>>>
 

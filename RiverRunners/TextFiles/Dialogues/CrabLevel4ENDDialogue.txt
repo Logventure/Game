@@ -21,10 +21,10 @@
 
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking1.wav
 *Text*: Sure do Kiddo.
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
 *Text*: Been in this business for a long time now.
 >>>>>
 
@@ -42,10 +42,10 @@
 
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
 *Text*: Sure...
 >>>>>
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
 *Text*: You could call it that, hehehe.
 >>>>>
 
@@ -69,7 +69,7 @@
 
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy1.wav
 *Text*: Same here Kiddo.
 >>>>>
 

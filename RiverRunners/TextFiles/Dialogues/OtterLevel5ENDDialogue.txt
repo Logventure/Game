@@ -22,7 +22,7 @@
 
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
 *Text*: Aye, it's downright scary.
 >>>>>
 
@@ -73,7 +73,7 @@
 >>>>>
 
 *Character*: crab
-
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
 *Text*: On we go.
 >>>>>
 

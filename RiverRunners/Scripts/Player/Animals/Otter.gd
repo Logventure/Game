@@ -5,19 +5,24 @@ var stone = load("res://GameComponents/Player/stone.tscn")
 var throwableStone
 const tilewidth: int = 380
 const tileheight: int = 190
-var pos = Vector2.ZERO
+var pos = 0
 var pos_original = Vector2.ZERO
-var gravity = 400
+var gravity = 800
+var base_gravity = 800
+var dive_gravity = 3000
 var time = 0
 var speed = 500
 var delay = 0.12
 var is_jumping = false
+var current_jump_position = 0
+var current_jump_speed = 0
 var logNode
 var basePosition = position
 var canJump = true
 var loseDamage = true
 var canThrow = true
 var timer
+var base_z_index = 0
 
 enum States {IDLE, JUMPING, DROWNING, TAKE_DAMAGE, PAUSED}
 var current_state = States.IDLE
@@ -42,6 +47,8 @@ func _ready():
 	collider.connect("area_entered",onTreeDetected)
 	collider_pos = collider.position
 
+	base_z_index = z_index
+
 func jump():
 	if canJump:
 		current_state = States.JUMPING
@@ -51,18 +58,28 @@ func jump():
 		time = -1*delay*number_of_animals
 		pos = logNode.position.y + basePosition.y
 		loseDamage = true
+		gravity = base_gravity
 
 func handle_jump(delta): 
 	if time <= 0 and time + delta >= 0:
 		Utils.playSoundFile(self,"res://Assets/Audio/SFX/jump4.wav","SFX",-12)
 		play("jump")
+		current_jump_speed = speed
+		current_jump_position = pos
 	time += delta
 	if position.y <= pos && time >= 0:
-		position.y = pos - (speed + gravity * time * -1) * time
-		z_index = int((speed + gravity * time * -1) * time / 30) * 2 + 1
-		collider.position.y = collider_pos.y + (speed + gravity * time * -1) * time
+		current_jump_speed = current_jump_speed + gravity * delta * -1
+		position.y = position.y - current_jump_speed * delta
+		#position.y = pos - (speed + gravity * time * -1) * time 
+		current_jump_position = position.y
+		z_index = base_z_index - int((current_jump_position - pos) / 10)
+		if z_index < base_z_index:
+			z_index = base_z_index
+		#z_index = int((speed + gravity * time * -1) * time / 30) * 2
+		collider.position.y = collider_pos.y - current_jump_position + pos
 	elif time >= 0:
 		position.y = pos
+		current_jump_position = position.y
 		current_state = States.IDLE
 		if not logNode.position.x + basePosition.x == position.x:
 			Events.emit_signal("player_drowned")
@@ -132,6 +149,13 @@ func _process(delta):
 						InputHandler.clearLastInput()
 
 			States.JUMPING:
+				if len(commands) > 0:
+					if commands.find("jump") != -1 and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
+						var number_of_animals = 0
+						if get_node("../").isCharacterAvailable("crab"):
+							number_of_animals += 1
+						if time > -1*delay*number_of_animals + 0.3:
+							gravity = dive_gravity
 				handle_jump(delta)
 				if len(commands) > 0:
 					if commands.find("throw") != -1 and get_node("../").isCharacterAvailable("otter"):
@@ -166,8 +190,10 @@ func onResume():
 	Events.emit_signal("resumeOtterCooldown")
 
 func onTreeDetected(area):
-	if z_index < 5:
+	pos = logNode.position.y + basePosition.y
+	if position.y - pos > -75:
 		Events.emit_signal("collision_with_tree",area)
+		
 
 
 func _on_animation_looped():

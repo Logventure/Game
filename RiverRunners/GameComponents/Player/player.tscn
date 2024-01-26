@@ -606,7 +606,7 @@ bus = &"SFX"
 texture_filter = 1
 position = Vector2(70, -90)
 sprite_frames = SubResource("SpriteFrames_bggev")
-animation = &"empty"
+animation = &"idle"
 autoplay = "idle"
 script = ExtResource("8_gjrmx")
 

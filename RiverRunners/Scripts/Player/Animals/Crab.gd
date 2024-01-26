@@ -1,11 +1,15 @@
 extends AnimatedSprite2D
 
 var animal
-var pos = Vector2.ZERO
-var gravity = 400
+var pos = 0
+var base_gravity = 800
+var dive_gravity = 3000
+var gravity = 800
 var time = 0
 var speed = 500
 var delay = 0.001
+var current_jump_position = 0
+var current_jump_speed = 0
 var is_jumping = false
 var logNode
 var basePosition = position
@@ -13,6 +17,7 @@ var canJump = true
 var loseDamage = true
 var canBlock = true
 var timer
+var base_z_index = 0
 
 @onready var collider = get_node("CrabCollider")
 var collider_pos
@@ -37,24 +42,36 @@ func _ready():
 
 	collider_pos = collider.position
 
+	base_z_index = z_index
+
 func jump():
 	if canJump:
 		current_state = States.JUMPING
 		time = -1*delay
 		pos = logNode.position.y + basePosition.y
 		loseDamage = true
+		gravity = base_gravity
 
 func handle_jump(delta): 
 	if time <= 0 and time + delta >= 0:
 		Utils.playSoundFile(self,"res://Assets/Audio/SFX/jump.wav","SFX",-12)
 		play("jump")
+		current_jump_speed = speed
+		current_jump_position = pos
 	time += delta
 	if position.y <= pos && time >= 0:
-		position.y = pos - (speed + gravity * time * -1) * time 
-		z_index = int((speed + gravity * time * -1) * time / 30) * 2
-		collider.position.y = collider_pos.y + (speed + gravity * time * -1) * time
+		current_jump_speed = current_jump_speed + gravity * delta * -1
+		position.y = position.y - current_jump_speed * delta
+		#position.y = pos - (speed + gravity * time * -1) * time 
+		current_jump_position = position.y
+		z_index = base_z_index - int((current_jump_position - pos) / 10)
+		if z_index < base_z_index:
+			z_index = base_z_index
+		#z_index = int((speed + gravity * time * -1) * time / 30) * 2
+		collider.position.y = collider_pos.y - current_jump_position + pos
 	elif time >= 0:
 		position.y = pos
+		current_jump_position = position.y
 		current_state = States.IDLE
 		if not logNode.position.x + basePosition.x == position.x:
 			Events.emit_signal("player_drowned")
@@ -124,6 +141,10 @@ func _process(delta):
 						InputHandler.clearLastInput()
 
 			States.JUMPING:
+				if len(commands) > 0:
+					if commands.find("jump") != -1 and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
+						if time > 0.3:
+							gravity = dive_gravity
 				handle_jump(delta)
 
 			States.BLOCKING:
@@ -183,5 +204,6 @@ func _on_animation_looped():
 
 
 func onTreeDetected(area):
-	if z_index < 4:
+	pos = logNode.position.y + basePosition.y
+	if position.y - pos > -100:
 		Events.emit_signal("collision_with_tree",area)

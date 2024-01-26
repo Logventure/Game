@@ -1,7 +1,7 @@
 extends Node
 
 
-var max_age = 0.03
+var max_age = 0.02
 
 var resuming_delay = 0.0
 

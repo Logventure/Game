@@ -17,4 +17,9 @@
  "e": "res://MapGeneration/Modules/Components/obstacle_tree_big_1.tscn",
  "r": "res://MapGeneration/Modules/Components/obstacle_tree_big_2.tscn",
  "s": "res://MapGeneration/Modules/Components/obstacle_shorkbite.tscn",
+ "1": "res://MapGeneration/Modules/Components/tutorial_info_jump.tscn",
+ "2": "res://MapGeneration/Modules/Components/tutorial_info_dash_l.tscn",
+ "3": "res://MapGeneration/Modules/Components/tutorial_info_dash_r.tscn",
+ "4": "res://MapGeneration/Modules/Components/tutorial_info_shield.tscn",
+ "5": "res://MapGeneration/Modules/Components/tutorial_info_throw.tscn",
  }

@@ -93,6 +93,8 @@ func switchToLevelSelect():
 	var difficulty = FILE_MANAGEMENT_SCRIPT.loadDifficulty()
 	if difficulty == 0:
 		level_list = level_ids_easy
+	if difficulty == 1:
+		level_list = level_ids
 	if difficulty == 2:
 		level_list = level_ids_hard
 
@@ -105,6 +107,8 @@ func switchToLevel(level_id: int):
 	var difficulty = FILE_MANAGEMENT_SCRIPT.loadDifficulty()
 	if difficulty == 0:
 		level_list = level_ids_easy
+	if difficulty == 1:
+		level_list = level_ids
 	if difficulty == 2:
 		level_list = level_ids_hard
 
@@ -126,9 +130,10 @@ func switchToLevel(level_id: int):
 		Events.emit_signal("changeMusic","HARD")
 	elif level_id > 5:
 		Events.emit_signal("changeMusic","INFINITE")
-		
+
 	replaceScreen(viewer, target_screen)
 	Events.emit_signal("start_score")
+
 
 func switchToNextLevel():
 	target_state = States.LEVEL

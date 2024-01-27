@@ -147,9 +147,8 @@ sprite_frames = SubResource("SpriteFrames_xqpqx")
 frame_progress = 0.293055
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tree"]
-visible = false
 scale = Vector2(0.753755, 0.778515)
-polygon = PackedVector2Array(254.725, 187.537, 287.892, 137.441, -281.259, 52.6644, -317.079, 87.3458)
+polygon = PackedVector2Array(269.318, 196.528, 297.179, 157.993, -261.358, 32.1124, -306.466, 73.2163)
 
 [node name="GridHelper(hide)" type="Sprite2D" parent="."]
 z_index = -10

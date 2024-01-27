@@ -1,0 +1,127 @@
+[gd_scene load_steps=18 format=3 uid="uid://bbqjtrtppgonw"]
+
+[ext_resource type="Texture2D" uid="uid://bnhjvi7vy2dnv" path="res://Assets/UI/LoadingScreen/loadingscreen-close-1.png" id="1_c6ly2"]
+[ext_resource type="Script" path="res://Scripts/GUI/loading_screen.gd" id="1_qpyvj"]
+[ext_resource type="Texture2D" uid="uid://bhxmafu1o38u1" path="res://Assets/UI/LoadingScreen/loadingscreen-close-0.png" id="1_xj6by"]
+[ext_resource type="Texture2D" uid="uid://cr58av0q16vvv" path="res://Assets/UI/LoadingScreen/loadingscreen-close-2.png" id="2_75mrh"]
+[ext_resource type="Texture2D" uid="uid://cv26351uita5v" path="res://Assets/UI/LoadingScreen/loadingscreen-close-3.png" id="3_5ipca"]
+[ext_resource type="Texture2D" uid="uid://ds75ksi24qo2r" path="res://Assets/UI/LoadingScreen/loadingscreen-close-4.png" id="4_enpjv"]
+[ext_resource type="Texture2D" uid="uid://fduodbv0k6gk" path="res://Assets/UI/LoadingScreen/loadingscreen-close-5.png" id="5_3n47n"]
+[ext_resource type="Texture2D" uid="uid://dk3oumi48mud7" path="res://Assets/UI/LoadingScreen/loadingscreen-close-6.png" id="6_p3drt"]
+[ext_resource type="Texture2D" uid="uid://bguacjqsrd7nw" path="res://Assets/UI/LoadingScreen/loadingscreen-close-7.png" id="7_lo641"]
+[ext_resource type="Texture2D" uid="uid://bogsffr6testn" path="res://Assets/UI/LoadingScreen/loadingscreen-open-1.png" id="8_lh0d8"]
+[ext_resource type="Texture2D" uid="uid://b4hu36slsnrw1" path="res://Assets/UI/LoadingScreen/loadingscreen-open-0.png" id="9_jd8nc"]
+[ext_resource type="Texture2D" uid="uid://c4bv5luna0r8u" path="res://Assets/UI/LoadingScreen/loadingscreen-open-2.png" id="9_k5w6h"]
+[ext_resource type="Texture2D" uid="uid://1wuk3tjmdkv5" path="res://Assets/UI/LoadingScreen/loadingscreen-open-3.png" id="10_wqlau"]
+[ext_resource type="Texture2D" uid="uid://b5k0s3jkdk4g3" path="res://Assets/UI/LoadingScreen/loadingscreen-open-4.png" id="11_gmlql"]
+[ext_resource type="Texture2D" uid="uid://b17hfcxhtjahg" path="res://Assets/UI/LoadingScreen/loadingscreen-open-5.png" id="12_nfssc"]
+[ext_resource type="Texture2D" uid="uid://dg7jnyhux2udi" path="res://Assets/UI/LoadingScreen/loadingscreen-open-6.png" id="13_61ik4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2cj34"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_xj6by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_c6ly2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_75mrh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5ipca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_enpjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3n47n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p3drt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lo641")
+}],
+"loop": false,
+"name": &"close",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_lo641")
+}],
+"loop": false,
+"name": &"full",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_lo641")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jd8nc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lh0d8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_k5w6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wqlau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gmlql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nfssc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_61ik4")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"open",
+"speed": 16.0
+}]
+
+[node name="loading_screen" type="Node2D"]
+script = ExtResource("1_qpyvj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1500.0
+offset_top = -1500.0
+offset_right = 1500.0
+offset_bottom = 1500.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_2cj34")
+animation = &"open"
+centered = false
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

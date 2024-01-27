@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://phmgvr1sl5sv"]
+[gd_scene load_steps=7 format=3 uid="uid://cnmwkafqdwtsu"]
 
 [ext_resource type="Script" path="res://Scripts/Obstacles/rock_obstacles.gd" id="1_b215k"]
 [ext_resource type="Texture2D" uid="uid://cmo8sbw41wx4n" path="res://Assets/Obstacles/rock_frames/rock2-1.png" id="1_u2xkr"]

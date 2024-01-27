@@ -17,6 +17,10 @@ var canJump = true
 var loseDamage = true
 var base_z_index = 0
 
+var is_over_tree = false
+var detected_tree
+var number_of_animals
+
 enum States {IDLE, JUMPING, DROWNING, TAKE_DAMAGE, PAUSED}
 var current_state = States.IDLE
 var previous_state = States.IDLE
@@ -37,6 +41,7 @@ func _ready():
 	Events.connect("resume_game", onResume)
 
 	collider.connect("area_entered",onTreeDetected)
+	collider.connect("area_exited",onTreeExited)
 	collider_pos = collider.position
 
 	base_z_index = z_index
@@ -44,7 +49,7 @@ func _ready():
 func jump():
 	if canJump:
 		current_state = States.JUMPING
-		var number_of_animals = 0
+		number_of_animals = 0
 		if get_node("../").isCharacterAvailable("crab"):
 			number_of_animals += 1
 		if get_node("../").isCharacterAvailable("otter"):
@@ -72,6 +77,10 @@ func handle_jump(delta):
 			z_index = base_z_index
 		#z_index = int((speed + gravity * time * -1) * time / 30) * 2
 		collider.position.y = collider_pos.y - current_jump_position + pos
+
+		if is_over_tree and position.y - pos > -50 + number_of_animals * 25 and detected_tree != null:
+			Events.emit_signal("collision_with_tree",detected_tree)
+
 	elif time >= 0:
 		position.y = pos
 		current_jump_position = position.y
@@ -148,11 +157,19 @@ func onResume():
 	current_state = previous_state
 
 func onTreeDetected(area):
+	is_over_tree = true
+	detected_tree = area
 	pos = logNode.position.y + basePosition.y
-	if position.y - pos > -50:
+	number_of_animals = 0
+	if get_node("../").isCharacterAvailable("crab"):
+		number_of_animals += 1
+	if get_node("../").isCharacterAvailable("otter"):
+		number_of_animals += 1
+	if position.y - pos > -100 + number_of_animals * 25:
 		Events.emit_signal("collision_with_tree",area)
 		
-
+func onTreeExited(area):
+	is_over_tree = false
 
 func _on_animation_looped():
 	if animation == "jump":

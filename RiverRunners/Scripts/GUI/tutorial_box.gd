@@ -5,6 +5,8 @@ var time = 0
 var completed = false
 var baseposition
 
+var wait_time = 0
+
 enum States {HIDDEN, VISIBLE, COMPLETED}
 var current_state = States.HIDDEN
 
@@ -97,6 +99,8 @@ func setText(ability: String):
 		$Label.text = "Move " + key + " to " + action
 
 	current_state = States.VISIBLE
+	wait_time = 0
+
 
 func getKeyString(action_event, iscontroller = false):
 	var keyString = ""
@@ -150,6 +154,8 @@ func _process(delta):
 
 		States.VISIBLE:
 			time += delta
+			wait_time += delta
+
 			var y = 30 + time*-60
 			if y < 0:
 				y = 0
@@ -161,10 +167,11 @@ func _process(delta):
 
 			if time > 1:
 				var commands = InputHandler.getCommands()
-				if commands.find(actionToWaitFor) != -1:
+				if commands.find(actionToWaitFor) != -1 or wait_time > 20:
 					current_state = States.COMPLETED
 					time = 0
 		
+			
 
 		States.COMPLETED:
 			time += delta

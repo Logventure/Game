@@ -22,6 +22,10 @@ var base_z_index = 0
 @onready var collider = get_node("CrabCollider")
 var collider_pos
 
+var is_over_tree = false
+var detected_tree
+
+
 enum States {IDLE, JUMPING, BLOCKING, DESTROYING, DROWNING, TAKE_DAMAGE, PAUSED}
 var current_state = States.IDLE
 var previous_state = States.IDLE
@@ -39,7 +43,7 @@ func _ready():
 	Events.connect("resume_game", onResume)
 
 	collider.connect("area_entered",onTreeDetected)
-
+	collider.connect("area_exited",onTreeExited)
 	collider_pos = collider.position
 
 	base_z_index = z_index
@@ -69,6 +73,10 @@ func handle_jump(delta):
 			z_index = base_z_index
 		#z_index = int((speed + gravity * time * -1) * time / 30) * 2
 		collider.position.y = collider_pos.y - current_jump_position + pos
+
+		if is_over_tree and position.y - pos > -50 and detected_tree != null:
+			Events.emit_signal("collision_with_tree",detected_tree)
+
 	elif time >= 0:
 		position.y = pos
 		current_jump_position = position.y
@@ -204,6 +212,11 @@ func _on_animation_looped():
 
 
 func onTreeDetected(area):
+	is_over_tree = true
+	detected_tree = area
 	pos = logNode.position.y + basePosition.y
-	if position.y - pos > -100:
+	if position.y - pos > -75:
 		Events.emit_signal("collision_with_tree",area)
+
+func onTreeExited(area):
+	is_over_tree = false

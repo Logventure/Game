@@ -485,3 +485,8 @@ func default_mode():
 		$Panel/ButtonContainer1/HardModeButton.texture_normal = hard_mode_button_normal_image
 		$Panel/ButtonContainer1/EasyModeButton.texture_normal = easy_mode_button_hover_image
 		$Panel/ButtonContainer1/NormalModeButton.texture_normal = normal_mode_button_hover_image
+
+	elif difficulty_mode > 2:
+		$Panel/ButtonContainer1/EasyModeButton.texture_normal = easy_mode_button_hover_image
+		$Panel/ButtonContainer1/NormalModeButton.texture_normal = normal_mode_button_hover_image
+		$Panel/ButtonContainer1/HardModeButton.texture_normal = hard_mode_button_hover_image

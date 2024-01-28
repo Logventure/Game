@@ -6,6 +6,7 @@ extends Node2D
 @onready var level_ui = $Camera2D/LevelUI
 @onready var score = $Camera2D/LevelUI/Score
 @onready var progress_bar = $Camera2D/LevelUI/ProgressBar
+@onready var health_bar = $Camera2D/LevelUI/HealthContainer
 
 signal player_status(position, playerSpeed)
 
@@ -16,7 +17,9 @@ var playerSpeed = 1
 var playerTargetSpeed = 1
 
 @export var playerMaxSpeed = 10
-@export var playerAcceleration = 1
+@export var playerAcceleration = 0.5
+
+var relax_mode = false
 
 enum States {DIALOG,RUNNING,PAUSED,NO_OBSTACLES,LEVEL_END}
 
@@ -48,6 +51,9 @@ func _ready():
 		progress_bar.visible = true
 		level_ui.isInfinite = false
 
+	level_ui.setRelaxMode(relax_mode)
+	
+	
 	#level_script = load("res://Levels/LevelTestScript.gd").new()
 	#add_child(level_script)
 	#level_script.setManager(self)
@@ -116,9 +122,9 @@ func onPause():
 		score.stop_counting()
 
 func onDie():
-	player.set_process(false)
-	Events.emit_signal("pause_game")
-
+	if not relax_mode:
+		player.set_process(false)
+		Events.emit_signal("pause_game")
 
 func isPaused():
 	return current_state == States.PAUSED
@@ -185,3 +191,8 @@ func finishLevel():
 	current_state = States.LEVEL_END
 	if Events.is_connected("obstacles_ended",finishLevel):
 		Events.disconnect("obstacles_ended",finishLevel)
+
+func setRelaxMode(value: bool):
+	relax_mode = value
+	if level_ui != null:
+		level_ui.setRelaxMode(relax_mode)

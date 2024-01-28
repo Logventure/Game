@@ -21,7 +21,7 @@
 >>>>>
 
 
-*Character*: crab
+*Character*: crab_dissapointed
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
 *Volume*: -12
 *Text*: Aye, it's downright scary.

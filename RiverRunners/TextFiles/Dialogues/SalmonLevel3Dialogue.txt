@@ -18,6 +18,7 @@
 >>>>>
 
 *Character*: salmon_gray
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking1.wav
 *Volume*: -6
 *Text*: Glu, glu, glu...
@@ -31,7 +32,7 @@
 >>>>>
 
 
-*Character*: frog
+*Character*: frog_notamused
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Volume*: 10
 *Text*: The th-
@@ -57,13 +58,14 @@
 
 
 *Character*: salmon_gray
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking2.wav
 *Volume*: -6
 *Text*: Glu, glu, gluuuu?..
 >>>>>
 
 
-*Character*: beaver
+*Character*: beaver_surprised
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
 *Text*: There it is again!
@@ -75,14 +77,14 @@
 *Cutscene*: res://Assets/Cutscenes/g-CS-Common2.png
 >>>>>
 
-*Character*: salmon
+*Character*: salmon_suprised
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared1.wav
 *Volume*: -6
 *Text*: Glu, glu, GlUuUuUuuuu!!!
 >>>>>
 
 
-*Character*: beaver
+*Character*: beaver_suprised
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
 *Text*: There they are!
@@ -110,7 +112,7 @@
 >>>>>
 
 
-*Character*: frog
+*Character*: frog_notamused
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Volume*: 10
 *Text*: Don't offend it in such a heinous manner Sir Justin.
@@ -121,10 +123,10 @@
 >>>>>
 
 
-*Character*: beaver
+*Character*: beaver_sad
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
-*Text*: I was just stating a fact?
+*Text*: I was just stating a fact...
 >>>>>
 
 *Cutscene*: none
@@ -162,7 +164,7 @@
 >>>>>
 
 
-*Character*: salmon
+*Character*: salmon_questioning
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-question2.wav
 *Volume*: -10
 *Text*: Glu?...
@@ -215,7 +217,7 @@
 >>>>>
 
 
-*Character*: beaver
+*Character*: beaver_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
 *Volume*: 10
 *Text*: That could indeed come in handy to cover more ground quickly.

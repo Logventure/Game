@@ -29,7 +29,7 @@
 
 *Cutscene*: res://Assets/Cutscenes/c-CS-Justin-Dam-Break3-noJustin.png
 
-*Character*: beaver
+*Character*: beaver_surprised
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-scared.wav
 *Volume*: 10
 *Text*: Oh no! The dam broke!?
@@ -45,6 +45,7 @@
 *Volume*: 10
 *Text*: The water is flowing rapidly into the river bank!
 >>>>>
+*Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-scared.wav
 *Volume*: 10
 *Text*: This could affect a lot of animals in the forest.

@@ -37,7 +37,7 @@
 >>>>>
 
 
-*Character*: salmon
+*Character*: salmon_questioning
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking1.wav
 *Volume*: -12
 *Text*: Gluu, glu, gluuu...
@@ -52,6 +52,7 @@
 
 
 *Character*: crab_gray
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
 *Volume*: -12
 *Text*: Hhrmm...
@@ -66,7 +67,7 @@
 
 
 
-*Character*: crab
+*Character*: crab_angry
 
 *Cutscene*: res://Assets/Cutscenes/i-CS-Common3.png
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-scared.wav
@@ -75,17 +76,18 @@
 >>>>>
 
 
-*Character*: beaver
+*Character*: beaver_surprised
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
 *Text*: Oh, i'm sorry! I didn't see you there.
 >>>>>
 
-*Character*: crab
+*Character*: crab_dissapointed
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
 *Volume*: -12
 *Text*: Well duh, i came from below.
 >>>>>
+*Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
 *Text*: But i what i really want to know, is what you're doing round these parts.
 >>>>>
@@ -144,11 +146,12 @@
 >>>>>
 
 
-*Character*: beaver
+*Character*: beaver_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
 *Text*: I'm not gonna say no to some extra help.
 >>>>>
+*Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Text*: Oh, i didn't catch your name.
 >>>>>
@@ -165,24 +168,25 @@
 
 
 
-*Character*: beaver
+*Character*: beaver_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
 *Volume*: 10
 *Text*: Good to know.
 >>>>>
+*Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
 *Text*: So, is everyone in favor of having Vito join us in this journey?
 >>>>>
 
 
-*Character*: salmon
+*Character*: salmon_pog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-joy1.wav
 *Volume*: -12
 *Text*: Gluu, gluuu~
 >>>>>
 
 
-*Character*: frog
+*Character*: frog_notamused
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
 *Volume*: 10
 *Text*: Hmmmm, i don't typically mingle with brutes...
@@ -201,7 +205,7 @@
 >>>>>
 
 
-*Character*: beaver
+*Character*: beaver_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
 *Volume*: 10
 *Text*: Thank you for lending us your pincers Vito.

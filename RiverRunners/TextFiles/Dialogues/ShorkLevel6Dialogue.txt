@@ -36,7 +36,7 @@
 *Text*: Raaawwwwwrrr!!
 >>>>>
 
-*Character*: frog
+*Character*: frog_scream
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-scared2.wav
 *Volume*: 10
 *Text*: For the love of all that is holy, keep rowing Sir Justin!

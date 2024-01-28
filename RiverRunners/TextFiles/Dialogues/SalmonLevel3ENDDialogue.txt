@@ -38,7 +38,7 @@
 >>>>>
 
 
-*Character*: beaver
+*Character*: beaver_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
 *Text*: Good to have you on board Sal!

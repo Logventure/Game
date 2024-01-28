@@ -31,7 +31,7 @@
 >>>>>
 
 
-*Character*: salmon
+*Character*: salmon_questioning
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared1.wav
 *Text*: Gluu, glu?
 >>>>>
@@ -44,11 +44,12 @@
 >>>>>
 
 
-*Character*: crab
+*Character*: crab_dissapointed
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
 *Volume*: -12
 *Text*: Sure...
 >>>>>
+*Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
 *Text*: You could call it that, hehehe.
 >>>>>
@@ -65,6 +66,7 @@
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-scared.wav
 *Text*: Anywaayyyy...
 >>>>>
+*Character*: beaver_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
 *Text*: That hard shell of yours will surely come in handy.
 >>>>>

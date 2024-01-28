@@ -45,7 +45,7 @@
 >>>>>
 
 
-*Character*: crab_dissapointed
+*Character*: crab_disappointed
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
 *Volume*: -12
 *Text*: A lil roaring's got you all quaking in your boots.

@@ -27,7 +27,7 @@
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
 *Volume*: 10
-*Text*: Hmmmmm, i can't say i'm sense much this time around.
+*Text*: Hmmmmm, i can't say i'm sensing much this time around.
 >>>>>
 
 
@@ -82,7 +82,7 @@
 *Text*: Oh, i'm sorry! I didn't see you there.
 >>>>>
 
-*Character*: crab_dissapointed
+*Character*: crab_disappointed
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
 *Volume*: -12
@@ -145,6 +145,7 @@
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
 *Text*: I myself want to know who's messin with these waters.
 >>>>>
+*Character*: crab_disappointed
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy1.wav
 *Text*: Nobody jepordizes my river and gets away with it.
 >>>>>

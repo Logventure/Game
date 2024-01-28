@@ -147,7 +147,7 @@
 *Text*: The lab... I... my head...
 >>>>>
 
-*Character*: crab_dissapointed
+*Character*: crab_disappointed
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-question.wav
 *Volume*: -12
 *Text*: Hrm, that sounds, familiar.

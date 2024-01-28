@@ -30,7 +30,7 @@
 
 
 *Character*: shork
-
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/shorkroar.wav
 *Volume*: -6
 *Text*: Raaawwwwwrrr!!

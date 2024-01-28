@@ -53,7 +53,7 @@
 >>>>>
 
 *Character*: shork
-
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/shorkroar.wav
 *Volume*: -6
 *Text*: Rawwwwwrr!
@@ -79,7 +79,7 @@
 
 
 *Character*: hidden
-
+*Name*: ???
 *Cutscene*: res://Assets/Cutscenes/l-CS-Common5.png
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
 *Volume*: 0
@@ -100,6 +100,7 @@
 
 
 *Character*: shork_happy
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
 *Volume*: 0
 
@@ -107,6 +108,7 @@
 >>>>>
 
 *Character*: shork
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
 *Text*: Well, i did, but that was before i understood you were...
@@ -123,17 +125,19 @@
 >>>>>
 
 *Character*: shork
-
+*Name*: ???
 *Text*: ...
 >>>>>
 
 *Character*: shork
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
 *Text*: No.
 >>>>>
 
 *Character*: shork
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
 *Volume*: 0
 *Text*: I meant the lab...
@@ -180,6 +184,7 @@
 >>>>>
 
 *Character*: shork
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
 *Text*: I Understand you've been out for a while. But i could still sense that stentch on you all.
@@ -199,11 +204,13 @@
 >>>>>
 
 *Character*: shork
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
 *Text*: Yes. 
 >>>>>
 *Character*: shork_sad
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
 *Text*: Those people, what i saw them doing, what they did to me...
@@ -238,6 +245,7 @@
 >>>>>
 
 *Character*: shork
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
 *Volume*: 0
 *Text*: I believe they were attempting to improve your capabilities, altering your bodies, your mind, your memories...
@@ -286,6 +294,7 @@
 >>>>>
 
 *Character*: shork
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/shorkroar.wav
 *Volume*: -6
 *Text*: Don't call me it!
@@ -298,11 +307,13 @@
 >>>>>
 
 *Character*: shork
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
 *Text*: I... I don't have a name...
 >>>>>
 *Character*: shork_sad
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
 *Text*: I don't even know what i am....
@@ -320,6 +331,7 @@
 >>>>>
 
 *Character*: shork
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
 *Text*: Friends...

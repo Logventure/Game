@@ -220,6 +220,7 @@ func newDialogue(character, text, name):
 		character_sprite.visible = false
 		textbox.visible = true
 		$Name.visible = true
+		$Name.text = name
 
 		if text != "":
 			current_text = text

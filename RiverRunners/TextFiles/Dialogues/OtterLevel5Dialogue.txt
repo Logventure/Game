@@ -77,7 +77,7 @@
 
 
 *Character*: otter
-
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-stoprightthere.wav
 *Volume*: -6
 *Text*: Who are you and what are you doing in these woods!?
@@ -113,7 +113,7 @@
 *Cutscene*: none
 
 *Character*: otter_nervous
-
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk2.wav
 *Volume*: -6
 *Text*: Sounds like some of you have a problem with authority.

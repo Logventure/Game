@@ -68,7 +68,7 @@
 
 
 *Character*: crab_angry
-
+*Name*: ???
 *Cutscene*: res://Assets/Cutscenes/i-CS-Common3.png
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-scared.wav
 *Volume*: -12
@@ -83,11 +83,13 @@
 >>>>>
 
 *Character*: crab_dissapointed
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
 *Volume*: -12
 *Text*: Well duh, i came from below.
 >>>>>
 *Character*: crab
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
 *Text*: But i what i really want to know, is what you're doing round these parts.
 >>>>>
@@ -107,6 +109,7 @@
 
 
 *Character*: crab
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
 *Volume*: -12
 *Text*: Hm, ya don't say...
@@ -135,6 +138,7 @@
 >>>>>
 
 *Character*: crab
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
 *Text*: Well in that case, i don't mind helpin ya along the way.
 >>>>>

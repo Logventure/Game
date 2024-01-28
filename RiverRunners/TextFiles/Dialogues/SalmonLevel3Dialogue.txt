@@ -77,14 +77,15 @@
 *Cutscene*: res://Assets/Cutscenes/g-CS-Common2.png
 >>>>>
 
-*Character*: salmon_suprised
+*Character*: salmon_surprised
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared1.wav
 *Volume*: -6
 *Text*: Glu, glu, GlUuUuUuuuu!!!
 >>>>>
 
 
-*Character*: beaver_suprised
+*Character*: beaver_surprised
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
 *Text*: There they are!
@@ -151,6 +152,7 @@
 
 
 *Character*: salmon
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-explaining.wav
 *Volume*: -10
 *Text*: Glu, gluuu, gluu.
@@ -165,6 +167,7 @@
 
 
 *Character*: salmon_questioning
+*Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-question2.wav
 *Volume*: -10
 *Text*: Glu?...

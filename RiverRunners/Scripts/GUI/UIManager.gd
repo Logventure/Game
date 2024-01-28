@@ -12,6 +12,8 @@ var maxHealth = 3
 var currentHealth = maxHealth
 var isInfinite
 
+var relax_mode = false
+
 var character_availability = {"beaver" : true, "frog" : true, "salmon" : true, "crab" : true, "otter" : true}
 
 enum States{RUNNING, PAUSED, GAMEOVER, COMPLETED, OPTIONS}
@@ -63,12 +65,13 @@ func _process(delta):
 			
 
 func onDamageTaken(damage):
-	if currentHealth <= 1:
-		#currentHealth = maxHealth #when dies send signal to levelManager, who receives the signal and sends it to a onDie function to change the state to PAUSED. After that, level manager send signal to UImanager back to pop up gameover scene
-		#healthContainer.setMaxHealth(maxHealth)
-		Events.emit_signal("player_died")
-	currentHealth -= damage
-	Events.emit_signal("health_changed", currentHealth)
+	if not relax_mode:
+		if currentHealth <= 1:
+			#currentHealth = maxHealth #when dies send signal to levelManager, who receives the signal and sends it to a onDie function to change the state to PAUSED. After that, level manager send signal to UImanager back to pop up gameover scene
+			#healthContainer.setMaxHealth(maxHealth)
+			Events.emit_signal("player_died")
+		currentHealth -= damage
+		Events.emit_signal("health_changed", currentHealth)
 
 func pause():
 	gameoverScene.visible = false
@@ -92,7 +95,8 @@ func gameover():
 
 		#enviar sinal com o highest score obtido e verificar se o score e maior que o highestscore
 		score.stop_counting()
-		score.checkHighestScore()
+		if not relax_mode:
+			score.checkHighestScore()
 		endlessgameoverScene.visible = true
 		endlessgameoverScene.highest_score(score.get_points())
 	else: 		
@@ -146,3 +150,7 @@ func cooldowns():
 	$SalmonCooldown.visible = true if isCharacterAvailable("salmon") else false
 	$CrabCooldown.visible = true if isCharacterAvailable("crab") else false
 	$OtterCooldown.visible = true if isCharacterAvailable("otter") else false
+
+func setRelaxMode(value: bool):
+	relax_mode = value
+	healthContainer.visible = not relax_mode

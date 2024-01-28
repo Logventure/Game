@@ -111,6 +111,8 @@ func switchToLevel(level_id: int):
 		level_list = level_ids
 	if difficulty == 2:
 		level_list = level_ids_hard
+	if difficulty > 2:
+		level_list = level_ids
 
 	target_state = States.LEVEL
 	target_screen = loadScene("res://Levels/LevelTemplate.tscn")
@@ -131,6 +133,12 @@ func switchToLevel(level_id: int):
 	elif level_id > 5:
 		Events.emit_signal("changeMusic","INFINITE")
 
+	if target_screen.has_method("setRelaxMode"):
+		if difficulty > 2:
+			target_screen.setRelaxMode(true)
+		else:
+			target_screen.setRelaxMode(false)
+
 	replaceScreen(viewer, target_screen)
 	Events.emit_signal("start_score")
 
@@ -148,6 +156,14 @@ func switchToNextLevel():
 		Events.emit_signal("changeMusic","HARD")
 	elif last_level > 5:
 		Events.emit_signal("changeMusic","INFINITE")
+
+	var difficulty = FILE_MANAGEMENT_SCRIPT.loadDifficulty()
+	if target_screen.has_method("setRelaxMode"):
+		if difficulty > 2:
+			target_screen.setRelaxMode(true)
+		else:
+			target_screen.setRelaxMode(false)
+
 
 	target_screen.setLevelScript(last_level_id)
 	replaceScreen(viewer, target_screen)

@@ -155,6 +155,7 @@ func _on_no_button_pressed():
 	$Panel.visible = false
 
 func backFromOptions():
+	setLevels()
 	$VBoxContainer.visible = true
 	$VBoxContainer2.visible = false
 	current_state = States.MAIN
@@ -473,3 +474,8 @@ func setLevels():
 		$VBoxContainer2/HBoxContainer4/InfiniteButton.texture_normal = infinite_level_button_normal_image
 		$Panel2/TextureRect.texture = score_normal_image
 		$Panel2/Label2.label_settings.font_color = Color.WHITE
+
+
+	if FILE_MANAGEMENT_SCRIPT.loadDifficulty() > 2:
+		$Panel2/TextureRect.texture = score_hover_image
+		$Panel2/Label2.label_settings.font_color = Color.GRAY

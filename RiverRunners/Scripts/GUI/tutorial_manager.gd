@@ -12,7 +12,8 @@ func setTutorial(ability: String):
 			$tutorial_boxleft.setText("move_left")
 			$tutorial_boxright.setText("move_right")
 		"jump":
-			$tutorial_box.setText("jump")
+			$tutorial_boxleft.setText("jump")
+			$tutorial_boxright.setText("dive")
 		"dash":
 			$tutorial_boxleft.setText("dash_left")
 			$tutorial_boxright.setText("dash_right")

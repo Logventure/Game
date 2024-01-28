@@ -33,6 +33,8 @@ signal throwing
 signal pauseOtterCooldown
 signal resumeOtterCooldown
 
+signal jump_dive
+
 signal log_collided
 signal is_lane_free(lane_offset: int, status: bool)
 signal move_to_free_lane

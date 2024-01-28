@@ -134,6 +134,7 @@ func _process(delta):
 							number_of_animals += 1
 						if time > -1*delay*number_of_animals + 0.3:
 							gravity = dive_gravity
+							Events.emit_signal("jump_dive")
 				handle_jump(delta)
 
 			States.DROWNING:

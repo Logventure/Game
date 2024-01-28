@@ -1,9 +1,33 @@
 extends Node2D
 
-var sprite_paths = {"frog" : "res://Assets/Characters/frog/Frog.png", "beaver" : "res://Assets/Characters/beaver/Justin-Beaver.png", "crab" : "res://Assets/Characters/crab/Crab.png",
-					"otter" : "res://Assets/Characters/otter/Otter.png", "salmon" : "res://Assets/Characters/salmon/Salmon-Baby.png", "shork" : "res://Assets/Characters/Shork/Shork.png",
-					"frog_gray" : "res://Assets/Characters/frog/Frog-Gray.png", "beaver_gray" : "res://Assets/Characters/beaver/Justin-Beaver-Gray.png", "crab_gray" : "res://Assets/Characters/crab/Crab-Gray.png",
-					"otter_gray" : "res://Assets/Characters/otter/Otter-Gray.png", "salmon_gray" : "res://Assets/Characters/salmon/Salmon-Gray.png", "shork_gray" : "res://Assets/Characters/Shork/Shork-Gray.png"}
+var sprite_paths = {"frog" : "res://Assets/Characters/frog/Frog.png",
+					"beaver" : "res://Assets/Characters/beaver/Justin-Beaver.png",
+					"crab" : "res://Assets/Characters/crab/Crab.png",
+					"otter" : "res://Assets/Characters/otter/Otter.png",
+					"salmon" : "res://Assets/Characters/salmon/Salmon-Baby.png",
+					"shork" : "res://Assets/Characters/Shork/Shork.png",
+					"frog_gray" : "res://Assets/Characters/frog/Frog-Gray.png",
+					"beaver_gray" : "res://Assets/Characters/beaver/Justin-Beaver-Gray.png",
+					"crab_gray" : "res://Assets/Characters/crab/Crab-Gray.png",
+					"otter_gray" : "res://Assets/Characters/otter/Otter-Gray.png",
+					"salmon_gray" : "res://Assets/Characters/salmon/Salmon-Gray.png",
+					"shork_gray" : "res://Assets/Characters/Shork/Shork-Gray.png",
+					"crab_angry" : "res://Assets/Characters/Emotions/Crab-Angry.png",
+					"crab_disappointed" : "res://Assets/Characters/Emotions/Crab-Dissapointed.png",
+					"frog_notamused" : "res://Assets/Characters/Emotions/Frog-NotAmused.png",
+					"frog_scream" : "res://Assets/Characters/Emotions/Frog-Scream.png",
+					"beaver_happy" : "res://Assets/Characters/Emotions/Justin-Beaver-Happy.png",
+					"beaver_sad" : "res://Assets/Characters/Emotions/Justin-Beaver-Sad.png",
+					"beaver_surprised" : "res://Assets/Characters/Emotions/Justin-Beaver-Surprised.png",
+					"otter_happy" : "res://Assets/Characters/Emotions/Otter-Happy.png",
+					"otter_nervous" : "res://Assets/Characters/Emotions/Otter-Nervous.png",
+					"salmon_pog" : "res://Assets/Characters/Emotions/Salmon-Pog.png",
+					"salmon_questioning" : "res://Assets/Characters/Emotions/Salmon-Questioning.png",
+					"salmon_sad" : "res://Assets/Characters/Emotions/Salmon-Sad.png",
+					"salmon_surprised" : "res://Assets/Characters/Emotions/Salmon-Surprised.png",
+					"shork_happy" : "res://Assets/Characters/Emotions/Shork-Happy.png",
+					"shork_sad" : "res://Assets/Characters/Emotions/Shork-Sad.png",
+				}
 var character_sprite
 var textbox
 var cutscene_sprite
@@ -54,7 +78,7 @@ func _process(delta):
 func onContinue():
 	if char_count == len(current_text):
 		if dialogue_index < len(dialogues):
-			newDialogue(dialogues[dialogue_index][0],dialogues[dialogue_index][1])
+			newDialogue(dialogues[dialogue_index][0],dialogues[dialogue_index][1],dialogues[dialogue_index][6])
 			newCutscene(dialogues[dialogue_index][2])
 			fade_time = dialogues[dialogue_index][4]
 			if dialogues[dialogue_index][3] != "":
@@ -124,6 +148,7 @@ func loadChat(filepath: String):
 	var line = file.get_line()
 	var dialogues = []
 	var character = ""
+	var name = ""
 	var text = ""
 	var cutscene_frame = ""
 	var sound = ""
@@ -133,6 +158,21 @@ func loadChat(filepath: String):
 		if not line == "" and not line.begins_with("#") and not line.begins_with(">>>>>"):
 			if line.begins_with("*Character*: "):
 				character = line.replace("*Character*: ","")
+				if character.begins_with("beaver"):
+					name = "Justin"
+				elif character.begins_with("frog"):
+					name = "Sir Frogginton III"
+				elif character.begins_with("crab"):
+					name = "Vito"
+				elif character.begins_with("salmon"):
+					name = "Sal"
+				elif character.begins_with("otter"):
+					name = "O.T."
+				elif character.begins_with("shork"):
+					name = "Friend"
+
+			elif line.begins_with("*Name*: "):
+				name = line.replace("*Name*: ","")
 			elif line.begins_with("*Cutscene*: "):
 				cutscene_frame = line.replace("*Cutscene*: ","")
 			elif line.begins_with("*Sound*: "):
@@ -155,7 +195,7 @@ func loadChat(filepath: String):
 			else:
 				text += line
 		elif line.begins_with(">>>>>"):
-			dialogues.append([character,text,cutscene_frame,sound,fade_time,volume])
+			dialogues.append([character,text,cutscene_frame,sound,fade_time,volume,name])
 			text = ""
 			sound = ""
 			fade_time = 0.25
@@ -166,18 +206,20 @@ func loadChat(filepath: String):
 	return dialogues
 		
 
-func newDialogue(character, text):
+func newDialogue(character, text, name):
 	if character == "none":
 		get_node("Textbox/Box_sprite").visible = false
 		get_node("ColorRect").visible = false
 		character_sprite.visible = false
 		textbox.visible = false
+		$Name.visible = false
 
 	elif character == "hidden":
 		get_node("Textbox/Box_sprite").visible = true
 		get_node("ColorRect").visible = false
 		character_sprite.visible = false
 		textbox.visible = true
+		$Name.visible = true
 
 		if text != "":
 			current_text = text
@@ -193,6 +235,8 @@ func newDialogue(character, text):
 		get_node("ColorRect").visible = true
 		character_sprite.visible = true
 		textbox.visible = true
+		$Name.text = name
+		$Name.visible = true
 
 		if text != "":
 			current_text = text

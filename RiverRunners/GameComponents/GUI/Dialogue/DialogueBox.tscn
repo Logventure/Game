@@ -137,3 +137,15 @@ text = "Press SPACEBAR to continue - Hold to skip"
 label_settings = SubResource("LabelSettings_5gs46")
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="Name" type="Label" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(800, 0)
+offset_left = 236.0
+offset_top = -219.0
+offset_right = 1036.0
+offset_bottom = -161.0
+text = "Character"
+label_settings = SubResource("LabelSettings_mrv80")
+horizontal_alignment = 2
+vertical_alignment = 1

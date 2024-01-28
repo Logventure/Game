@@ -14,6 +14,8 @@ var current_state = States.HIDDEN
 func _ready():
 	baseposition = position
 
+	Events.connect("jump_dive",onDive)
+
 
 func setText(ability: String):
 	var key = ""
@@ -93,6 +95,18 @@ func setText(ability: String):
 				key = getKeyString(action_event, false)
 			
 			action = "THROW a stone"
+
+		"dive":
+			if InputHandler.hasController():
+				var action_event = InputMap.action_get_events("controller_jump")[0]
+				key = getKeyString(action_event, true)
+			else:
+				var action_event = InputMap.action_get_events("jump")[0]
+				key = getKeyString(action_event, false)
+
+			key = key + " while on air"
+			action = "FALL"
+		
 
 	$Label.text = "Press " + key + " to " + action
 	if key == "JOYSTICK":
@@ -180,3 +194,9 @@ func _process(delta):
 			if alpha < 0:
 				alpha = 0
 			modulate.a = alpha
+
+
+func onDive():
+	if current_state == States.VISIBLE and time > 1 and actionToWaitFor == "dive":
+		current_state = States.COMPLETED
+		time = 0

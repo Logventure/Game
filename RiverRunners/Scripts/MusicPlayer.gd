@@ -4,7 +4,7 @@ enum States {MENU, LEVELS_EASY, LEVELS_MEDIUM, LEVELS_HARD, INFINITE}
 var current_state = States.MENU
 
 var playlist = [preload("res://Assets/Audio/Music/HoliznaCC0-Level1.mp3")]
-
+var last_music = playlist[0]
 
 var base_volume = -12
 
@@ -32,6 +32,10 @@ func playMusic():
 			playlist = [preload("res://Assets/Audio/Music/HoliznaCC0-RedSkies.mp3"), preload("res://Assets/Audio/Music/HoliznaCC0-SunnyAfternoon.mp3"), preload("res://Assets/Audio/Music/HoliznaCC0-Level2.mp3")]
 
 	var file = playlist.pick_random()
+	while file == last_music and len(playlist) > 1:
+		file = playlist.pick_random()
+
+	last_music = file
 
 	stop()
 	stream = file

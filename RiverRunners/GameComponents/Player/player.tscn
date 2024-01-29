@@ -703,6 +703,7 @@ autoplay = "idle"
 script = ExtResource("7_pt0qm")
 
 [node name="FrogCollider" type="Area2D" parent="Frog"]
+position = Vector2(1, 1)
 collision_layer = 2
 collision_mask = 2
 monitorable = false

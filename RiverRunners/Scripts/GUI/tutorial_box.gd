@@ -184,6 +184,7 @@ func _process(delta):
 				if commands.find(actionToWaitFor) != -1 or wait_time > 20:
 					current_state = States.COMPLETED
 					time = 0
+					Utils.playSoundFile(self,"res://Assets/Audio/SFX/tutorial_success.wav","SFX",0,true)
 		
 			
 
@@ -200,3 +201,4 @@ func onDive():
 	if current_state == States.VISIBLE and time > 1 and actionToWaitFor == "dive":
 		current_state = States.COMPLETED
 		time = 0
+		Utils.playSoundFile(self,"res://Assets/Audio/SFX/tutorial_success.wav","SFX",0,true)

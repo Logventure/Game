@@ -78,6 +78,8 @@ func handle_jump(delta):
 		#z_index = int((speed + gravity * time * -1) * time / 30) * 2
 		collider.position.y = collider_pos.y - current_jump_position + pos
 
+		print("Frog - Collider position: ", collider.position, " - collider_pos: ", collider_pos, " - current_jump_position: ", current_jump_position, " - pos: ", pos)
+
 		if is_over_tree and position.y - pos > -50 + number_of_animals * 25 and detected_tree != null:
 			Events.emit_signal("collision_with_tree",detected_tree)
 
@@ -118,6 +120,7 @@ func _process(delta):
 				if len(commands) > 0:
 					if commands.find("jump") != -1 and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
 						jump()
+						pass
 				else:
 					var last_input = InputHandler.getLastInput()
 					if last_input == "jump" and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
@@ -160,7 +163,6 @@ func onResume():
 func onTreeDetected(area):
 	is_over_tree = true
 	detected_tree = area
-	pos = logNode.position.y + basePosition.y
 	number_of_animals = 0
 	if get_node("../").isCharacterAvailable("crab"):
 		number_of_animals += 1

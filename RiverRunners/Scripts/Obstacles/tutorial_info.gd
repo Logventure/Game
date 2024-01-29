@@ -75,6 +75,7 @@ func _process(delta):
 func completed():
 	$Text.modulate = Color.GREEN
 	time_since_completed = 0
+	Utils.playSoundFile(self,"res://Assets/Audio/SFX/tutorial_success2.wav","SFX",0,true)
 
 func _on_area_2d_area_exited(area:Area2D):
 	area_count -= 1

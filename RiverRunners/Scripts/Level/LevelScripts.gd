@@ -199,7 +199,7 @@ var levels = {
 	},
 
 	
-	"level_justin_hard" :	{"setup"        :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 2, "ObstacleGroups" : [12], "Characters" : ["beaver"]},
+	"level_justin_hard" :	{"setup"        :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : false, "Speed" : 2, "ObstacleGroups" : [10,12], "Characters" : ["beaver"]},
 				"chat1"         :    {"Time offset" : 0,    "Prerequesites" : [],                "Type" : eventTypes.DIALOGUE,    "File": "res://TextFiles/Dialogues/JustinLevel1Dialogue.txt"},
 				"levelStart"    :    {"Time offset" : 0,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.SETVALUES,   "GenerateObstacles" : true},
 				"tutorial"    :    	 {"Time offset" : 1,    "Prerequesites" : ["chat1"],         "Type" : eventTypes.TUTORIAL,   "Ability" : "move"},

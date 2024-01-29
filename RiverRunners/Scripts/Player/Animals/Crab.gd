@@ -74,6 +74,8 @@ func handle_jump(delta):
 		#z_index = int((speed + gravity * time * -1) * time / 30) * 2
 		collider.position.y = collider_pos.y - current_jump_position + pos
 
+		print("Crab - Collider position: ", collider.position, " - collider_pos: ", collider_pos, " - current_jump_position: ", current_jump_position, " - pos: ", pos)
+
 		if is_over_tree and position.y - pos > -50 and detected_tree != null:
 			Events.emit_signal("collision_with_tree",detected_tree)
 
@@ -214,7 +216,6 @@ func _on_animation_looped():
 func onTreeDetected(area):
 	is_over_tree = true
 	detected_tree = area
-	pos = logNode.position.y + basePosition.y
 	if position.y - pos > -75:
 		Events.emit_signal("collision_with_tree",area)
 

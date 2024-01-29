@@ -202,7 +202,6 @@ func onResume():
 func onTreeDetected(area):
 	is_over_tree = true
 	detected_tree = area
-	pos = logNode.position.y + basePosition.y
 	number_of_animals = 0
 	if get_node("../").isCharacterAvailable("crab"):
 		number_of_animals += 1

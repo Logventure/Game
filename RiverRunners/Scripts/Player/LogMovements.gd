@@ -31,6 +31,8 @@ enum States {IDLE, MOVING, PAUSED, DIALOG}
 var current_state = States.IDLE
 var previous_state = States.IDLE
 
+var sounds = ["res://Assets/Audio/SFX/move1.wav", "res://Assets/Audio/SFX/move2.wav", "res://Assets/Audio/SFX/move3.wav", "res://Assets/Audio/SFX/move4.wav", "res://Assets/Audio/SFX/move5.wav"]
+
 #adicionar variavel que indique quantos animais estao no tronco a partir do level manager
 
 # Called when the node enters the scene tree for the first time.
@@ -54,6 +56,9 @@ func move(delta):
 	pos.x += tilewidth/2 * delta * speed
 	pos.y -= tileheight/2 * delta * speed
 	
+func playMoveSound():
+	var sound = sounds.pick_random()
+	Utils.playSoundFile(self,sound,"SFX",-6)
 	
 func moveLeft():
 	if current_state == States.IDLE:
@@ -65,6 +70,7 @@ func moveLeft():
 			move_speed = base_speed
 			deltaTime = move_speed + distance * multiplier
 			current_state = States.MOVING
+			playMoveSound()
 
 func moveRight():
 	if current_state == States.IDLE:
@@ -76,6 +82,7 @@ func moveRight():
 			move_speed = base_speed
 			deltaTime = move_speed + distance * multiplier
 			current_state = States.MOVING
+			playMoveSound()
 		
 func dashLeft():
 	if current_state == States.IDLE:

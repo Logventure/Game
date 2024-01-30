@@ -13,12 +13,10 @@ var current_state = States.GENERAL
 var active = true
 var showDifficulty = true
 
-var easy_mode_button_normal_image = load("res://Assets/UI/Options Menu/Button-Easy.png")
-var easy_mode_button_hover_image = load("res://Assets/UI/Options Menu/Button-Easy-Disabled.png")
-var normal_mode_button_normal_image = load("res://Assets/UI/Options Menu/Button-Normal.png")
-var normal_mode_button_hover_image = load("res://Assets/UI/Options Menu/Button-Normal-Disabled.png")
-var hard_mode_button_normal_image = load("res://Assets/UI/Options Menu/Button-Hard.png")
-var hard_mode_button_hover_image = load("res://Assets/UI/Options Menu/Button-Hard-Disabled.png")
+var empty_button_normal_image = load("res://Assets/UI/Empty Buttons/Button-Empty.png")
+var empty_button_hover_image = load("res://Assets/UI/Empty Buttons/Button-Empty-Disabled.png")
+var normal_color = "f5ffe8"
+var disabled_color = "8f928e"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -447,25 +445,40 @@ func _on_hard_mode_button_pressed():
 	Utils.playUISound(self, -6)
 	FILE_MANAGEMENT_SCRIPT.saveDifficulty(2)
 
-	$Panel/ButtonContainer1/HardModeButton.texture_normal = hard_mode_button_normal_image
-	$Panel/ButtonContainer1/EasyModeButton.texture_normal = easy_mode_button_hover_image
-	$Panel/ButtonContainer1/NormalModeButton.texture_normal = normal_mode_button_hover_image
+	$Panel/ButtonContainer1/HardModeButton.texture_normal = empty_button_normal_image
+	$Panel/ButtonContainer1/HardModeButton/Hard.label_settings.font_color = normal_color
+
+	$Panel/ButtonContainer1/EasyModeButton.texture_normal = empty_button_hover_image
+	$Panel/ButtonContainer1/EasyModeButton/Easy.label_settings.font_color = disabled_color
+
+	$Panel/ButtonContainer1/NormalModeButton.texture_normal = empty_button_hover_image
+	$Panel/ButtonContainer1/NormalModeButton/Normal.label_settings.font_color = disabled_color
 
 func _on_normal_mode_button_pressed():
 	Utils.playUISound(self, -6)
 	FILE_MANAGEMENT_SCRIPT.saveDifficulty(1)
 
-	$Panel/ButtonContainer1/NormalModeButton.texture_normal = normal_mode_button_normal_image
-	$Panel/ButtonContainer1/EasyModeButton.texture_normal = easy_mode_button_hover_image
-	$Panel/ButtonContainer1/HardModeButton.texture_normal = hard_mode_button_hover_image
+	$Panel/ButtonContainer1/NormalModeButton.texture_normal = empty_button_normal_image
+	$Panel/ButtonContainer1/NormalModeButton/Normal.label_settings.font_color = normal_color
+
+	$Panel/ButtonContainer1/EasyModeButton.texture_normal = empty_button_hover_image	
+	$Panel/ButtonContainer1/EasyModeButton/Easy.label_settings.font_color = disabled_color
+
+	$Panel/ButtonContainer1/HardModeButton.texture_normal = empty_button_hover_image
+	$Panel/ButtonContainer1/HardModeButton/Hard.label_settings.font_color = disabled_color
 
 func _on_easy_mode_button_pressed():
 	Utils.playUISound(self, -6)
 	FILE_MANAGEMENT_SCRIPT.saveDifficulty(0)
 
-	$Panel/ButtonContainer1/EasyModeButton.texture_normal = easy_mode_button_normal_image
-	$Panel/ButtonContainer1/NormalModeButton.texture_normal = normal_mode_button_hover_image
-	$Panel/ButtonContainer1/HardModeButton.texture_normal = hard_mode_button_hover_image
+	$Panel/ButtonContainer1/EasyModeButton.texture_normal = empty_button_normal_image
+	$Panel/ButtonContainer1/EasyModeButton/Easy.label_settings.font_color = normal_color
+
+	$Panel/ButtonContainer1/NormalModeButton.texture_normal = empty_button_hover_image
+	$Panel/ButtonContainer1/NormalModeButton/Normal.label_settings.font_color = disabled_color
+
+	$Panel/ButtonContainer1/HardModeButton.texture_normal = empty_button_hover_image
+	$Panel/ButtonContainer1/HardModeButton/Hard.label_settings.font_color = disabled_color
 
 func default_mode():
 	var difficulty_mode = FILE_MANAGEMENT_SCRIPT.loadDifficulty() #0 is easy, 1 is normal and 2 is hard
@@ -474,19 +487,37 @@ func default_mode():
 		difficulty_mode = 1
 
 	if difficulty_mode == 0:
-		$Panel/ButtonContainer1/EasyModeButton.texture_normal = easy_mode_button_normal_image
-		$Panel/ButtonContainer1/NormalModeButton.texture_normal = normal_mode_button_hover_image
-		$Panel/ButtonContainer1/HardModeButton.texture_normal = hard_mode_button_hover_image
+		$Panel/ButtonContainer1/EasyModeButton.texture_normal = empty_button_normal_image
+		$Panel/ButtonContainer1/EasyModeButton/Easy.label_settings.font_color = normal_color
+
+		$Panel/ButtonContainer1/NormalModeButton.texture_normal = empty_button_hover_image
+		$Panel/ButtonContainer1/NormalModeButton/Normal.label_settings.font_color = disabled_color
+
+		$Panel/ButtonContainer1/HardModeButton.texture_normal = empty_button_hover_image
+		$Panel/ButtonContainer1/HardModeButton/Hard.label_settings.font_color = disabled_color
 	elif difficulty_mode == 1:
-		$Panel/ButtonContainer1/NormalModeButton.texture_normal = normal_mode_button_normal_image
-		$Panel/ButtonContainer1/EasyModeButton.texture_normal = easy_mode_button_hover_image
-		$Panel/ButtonContainer1/HardModeButton.texture_normal = hard_mode_button_hover_image
+		$Panel/ButtonContainer1/NormalModeButton.texture_normal = empty_button_normal_image
+		$Panel/ButtonContainer1/NormalModeButton/Normal.label_settings.font_color = normal_color
+
+		$Panel/ButtonContainer1/EasyModeButton.texture_normal = empty_button_hover_image
+		$Panel/ButtonContainer1/EasyModeButton/Easy.label_settings.font_color = disabled_color
+
+		$Panel/ButtonContainer1/HardModeButton.texture_normal = empty_button_hover_image
+		$Panel/ButtonContainer1/HardModeButton/Hard.label_settings.font_color = disabled_color
 	elif difficulty_mode == 2:
-		$Panel/ButtonContainer1/HardModeButton.texture_normal = hard_mode_button_normal_image
-		$Panel/ButtonContainer1/EasyModeButton.texture_normal = easy_mode_button_hover_image
-		$Panel/ButtonContainer1/NormalModeButton.texture_normal = normal_mode_button_hover_image
+		$Panel/ButtonContainer1/HardModeButton.texture_normal = empty_button_normal_image
+		$Panel/ButtonContainer1/HardModeButton/Hard.label_settings.font_color = normal_color
+
+		$Panel/ButtonContainer1/EasyModeButton.texture_normal = empty_button_hover_image
+		$Panel/ButtonContainer1/EasyModeButton/Easy.label_settings.font_color = disabled_color
+
+		$Panel/ButtonContainer1/NormalModeButton.texture_normal = empty_button_hover_image
+		$Panel/ButtonContainer1/NormalModeButton/Normal.label_settings.font_color = disabled_color
 
 	elif difficulty_mode > 2:
-		$Panel/ButtonContainer1/EasyModeButton.texture_normal = easy_mode_button_hover_image
-		$Panel/ButtonContainer1/NormalModeButton.texture_normal = normal_mode_button_hover_image
-		$Panel/ButtonContainer1/HardModeButton.texture_normal = hard_mode_button_hover_image
+		$Panel/ButtonContainer1/EasyModeButton.texture_normal = empty_button_hover_image
+		$Panel/ButtonContainer1/EasyModeButton/Easy.label_settings.font_color = disabled_color
+		$Panel/ButtonContainer1/NormalModeButton.texture_normal = empty_button_hover_image
+		$Panel/ButtonContainer1/NormalModeButton/Normal.label_settings.font_color = disabled_color
+		$Panel/ButtonContainer1/HardModeButton.texture_normal = empty_button_hover_image
+		$Panel/ButtonContainer1/HardModeButton/Hard.label_settings.font_color = disabled_color

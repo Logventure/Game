@@ -2,12 +2,16 @@
 
 [ext_resource type="Script" path="res://Scripts/GUI/levelcomplete_ui.gd" id="1_u8gdt"]
 [ext_resource type="Texture2D" uid="uid://clgig3oyqsskp" path="res://Assets/UI/LevelComplete/LevelCompleteMenu.png" id="2_8o1uv"]
-[ext_resource type="Texture2D" uid="uid://wsew405vkc51" path="res://Assets/UI/LevelComplete/NextLevel Button.png" id="3_6wdo1"]
-[ext_resource type="Texture2D" uid="uid://wulug0tdy4wd" path="res://Assets/UI/LevelComplete/NextLevel Button-Pressed.png" id="4_8u4ih"]
-[ext_resource type="Texture2D" uid="uid://xscyrrna2hql" path="res://Assets/UI/LevelComplete/NextLevel Button-Highlight.png" id="5_soewb"]
-[ext_resource type="Texture2D" uid="uid://cmg7thhkoaink" path="res://Assets/UI/LevelComplete/NextLevel-Exit Button.png" id="6_5kkqp"]
-[ext_resource type="Texture2D" uid="uid://do2vgu4x8hsi0" path="res://Assets/UI/LevelComplete/NextLevel-Exit Button-Pressed.png" id="7_4rtgi"]
-[ext_resource type="Texture2D" uid="uid://ui24djjr6pth" path="res://Assets/UI/LevelComplete/NextLevel-Exit Button-Highlight.png" id="8_duhro"]
+[ext_resource type="Texture2D" uid="uid://b41515u70snph" path="res://Assets/UI/Empty Buttons/Button-Empty.png" id="3_7savh"]
+[ext_resource type="Texture2D" uid="uid://dlisuewnoi6s4" path="res://Assets/UI/Empty Buttons/Button-Empty-Pressed.png" id="4_ufru0"]
+[ext_resource type="Texture2D" uid="uid://bqtov3bjn6o2a" path="res://Assets/UI/Empty Buttons/Button-Empty-Highlighted.png" id="5_v17es"]
+[ext_resource type="Texture2D" uid="uid://b8vw66qk33hpm" path="res://Assets/UI/Empty Buttons/Button-Empty-Disabled.png" id="6_mdvpg"]
+[ext_resource type="FontFile" uid="uid://bg1oq07gebwu4" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="9_ib1li"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fbets"]
+font = ExtResource("9_ib1li")
+font_size = 60
+font_color = Color(0.960784, 1, 0.909804, 1)
 
 [node name="levelcomplete_ui" type="Control"]
 layout_mode = 3
@@ -54,10 +58,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -23.0
-offset_top = -5.3
-offset_right = 23.0
-offset_bottom = 20.7
+offset_left = -20.8571
+offset_top = -5.28571
+offset_right = 25.1429
+offset_bottom = 20.7143
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -69,11 +73,20 @@ focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../ExitButton")
 focus_next = NodePath("../ExitButton")
 focus_previous = NodePath("../ExitButton")
-texture_normal = ExtResource("3_6wdo1")
-texture_pressed = ExtResource("4_8u4ih")
-texture_hover = ExtResource("5_soewb")
-texture_disabled = ExtResource("4_8u4ih")
-texture_focused = ExtResource("5_soewb")
+texture_normal = ExtResource("3_7savh")
+texture_pressed = ExtResource("4_ufru0")
+texture_hover = ExtResource("5_v17es")
+texture_disabled = ExtResource("6_mdvpg")
+texture_focused = ExtResource("5_v17es")
+
+[node name="NextLevel" type="Label" parent="Panel/VBoxContainer/NextLevelButton"]
+offset_left = 4.85712
+offset_top = 3.42859
+offset_right = 460.857
+offset_bottom = 86.4286
+scale = Vector2(0.07, 0.07)
+text = "NEXT LEVEL"
+label_settings = SubResource("LabelSettings_fbets")
 
 [node name="ExitButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -83,11 +96,20 @@ focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../NextLevelButton")
 focus_next = NodePath("../NextLevelButton")
 focus_previous = NodePath("../NextLevelButton")
-texture_normal = ExtResource("6_5kkqp")
-texture_pressed = ExtResource("7_4rtgi")
-texture_hover = ExtResource("8_duhro")
-texture_disabled = ExtResource("7_4rtgi")
-texture_focused = ExtResource("8_duhro")
+texture_normal = ExtResource("3_7savh")
+texture_pressed = ExtResource("4_ufru0")
+texture_hover = ExtResource("5_v17es")
+texture_disabled = ExtResource("6_mdvpg")
+texture_focused = ExtResource("5_v17es")
+
+[node name="Exit" type="Label" parent="Panel/VBoxContainer/ExitButton"]
+offset_left = 15.0
+offset_top = 2.85718
+offset_right = 350.0
+offset_bottom = 85.8572
+scale = Vector2(0.07, 0.07)
+text = "EXIT"
+label_settings = SubResource("LabelSettings_fbets")
 
 [connection signal="pressed" from="Panel/VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

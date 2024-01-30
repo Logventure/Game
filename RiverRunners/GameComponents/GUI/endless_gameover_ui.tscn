@@ -1,14 +1,21 @@
-[gd_scene load_steps=11 format=3 uid="uid://ck88aacg8oi77"]
+[gd_scene load_steps=10 format=3 uid="uid://ck88aacg8oi77"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/endless_gameover_ui.gd" id="1_vbghm"]
 [ext_resource type="Texture2D" uid="uid://uq6r3is3cq2o" path="res://Assets/UI/Score/GameOverMenu-Endless.png" id="1_w7cxl"]
-[ext_resource type="Texture2D" uid="uid://b2tcp8e6quo31" path="res://Assets/UI/GameOver Menu/GameOverMenu-Retry-Button.png" id="2_u066j"]
-[ext_resource type="Texture2D" uid="uid://cwkbp364o5gwv" path="res://Assets/UI/GameOver Menu/GameOverMenu-Retry-Button-Pressed.png" id="3_hl30n"]
-[ext_resource type="Texture2D" uid="uid://bttdlgjt7uha1" path="res://Assets/UI/GameOver Menu/GameOverMenu-Retry-Button-Hover.png" id="4_08i4h"]
-[ext_resource type="Texture2D" uid="uid://lyrxxnqeuunm" path="res://Assets/UI/GameOver Menu/GameOverMenu-GiveUp-Button.png" id="5_vnat1"]
-[ext_resource type="Texture2D" uid="uid://bxtslgxruvr7r" path="res://Assets/UI/GameOver Menu/GameOverMenu-GiveUp-Button-Pressed.png" id="6_oct1t"]
-[ext_resource type="Texture2D" uid="uid://bjh26wc6jtbeu" path="res://Assets/UI/GameOver Menu/GameOverMenu-GiveUp-Button-Hover.png" id="7_4p17i"]
+[ext_resource type="Texture2D" uid="uid://b41515u70snph" path="res://Assets/UI/Empty Buttons/Button-Empty.png" id="3_hoiag"]
+[ext_resource type="Texture2D" uid="uid://dlisuewnoi6s4" path="res://Assets/UI/Empty Buttons/Button-Empty-Pressed.png" id="4_wjoi8"]
+[ext_resource type="Texture2D" uid="uid://bqtov3bjn6o2a" path="res://Assets/UI/Empty Buttons/Button-Empty-Highlighted.png" id="5_ijayu"]
 [ext_resource type="FontFile" uid="uid://bg1oq07gebwu4" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="9_eaqfi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_avjek"]
+font = ExtResource("9_eaqfi")
+font_size = 60
+font_color = Color(0.960784, 1, 0.909804, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mysmi"]
+font = ExtResource("9_eaqfi")
+font_size = 60
+font_color = Color(0.960784, 1, 0.909804, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_tmkj4"]
 font = ExtResource("9_eaqfi")
@@ -71,10 +78,19 @@ focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../GiveUpButton")
 focus_next = NodePath("../GiveUpButton")
 focus_previous = NodePath("../GiveUpButton")
-texture_normal = ExtResource("2_u066j")
-texture_pressed = ExtResource("3_hl30n")
-texture_hover = ExtResource("4_08i4h")
-texture_focused = ExtResource("4_08i4h")
+texture_normal = ExtResource("3_hoiag")
+texture_pressed = ExtResource("4_wjoi8")
+texture_hover = ExtResource("5_ijayu")
+texture_focused = ExtResource("5_ijayu")
+
+[node name="NextLevel" type="Label" parent="Panel/VBoxContainer/RetryButton"]
+offset_left = 4.85712
+offset_top = 3.42859
+offset_right = 460.857
+offset_bottom = 86.4286
+scale = Vector2(0.07, 0.07)
+text = "NEXT LEVEL"
+label_settings = SubResource("LabelSettings_avjek")
 
 [node name="GiveUpButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -84,10 +100,19 @@ focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../RetryButton")
 focus_next = NodePath("../RetryButton")
 focus_previous = NodePath("../RetryButton")
-texture_normal = ExtResource("5_vnat1")
-texture_pressed = ExtResource("6_oct1t")
-texture_hover = ExtResource("7_4p17i")
-texture_focused = ExtResource("7_4p17i")
+texture_normal = ExtResource("3_hoiag")
+texture_pressed = ExtResource("4_wjoi8")
+texture_hover = ExtResource("5_ijayu")
+texture_focused = ExtResource("5_ijayu")
+
+[node name="Exit" type="Label" parent="Panel/VBoxContainer/GiveUpButton"]
+offset_left = 15.0
+offset_top = 2.85718
+offset_right = 350.0
+offset_bottom = 85.8572
+scale = Vector2(0.07, 0.07)
+text = "EXIT"
+label_settings = SubResource("LabelSettings_mysmi")
 
 [node name="Label" type="Label" parent="."]
 texture_filter = 1

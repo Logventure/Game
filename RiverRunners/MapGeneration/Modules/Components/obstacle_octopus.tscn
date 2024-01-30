@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b44er5nd6mgye"]
+[gd_scene load_steps=23 format=3 uid="uid://b44er5nd6mgye"]
 
 [ext_resource type="Script" path="res://Scripts/Obstacles/tentacle_obstacles.gd" id="1_ntls1"]
 [ext_resource type="Texture2D" uid="uid://dj2rnd3hf6msl" path="res://Assets/Obstacles/Tentacles/Idle/Tentacle-Idle1.png" id="3_oikq5"]
@@ -17,6 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://dww7xt1guaku2" path="res://Assets/Obstacles/Tentacles/Spawn/Tentacle-Spawn4.png" id="15_1dvm1"]
 [ext_resource type="Texture2D" uid="uid://djhbhxnb4qy4g" path="res://Assets/Obstacles/Tentacles/Spawn/Tentacle-Spawn5.png" id="16_8fpld"]
 [ext_resource type="Texture2D" uid="uid://be1bfmu8uv5cb" path="res://Assets/Obstacles/Tentacles/Spawn/Tentacle-Spawn6.png" id="17_e4k52"]
+[ext_resource type="Texture2D" uid="uid://ctqen775whou" path="res://Assets/Obstacles/Tentacles/Idle-UnderWater/Tentacle-Idle UW2.png" id="18_a4rx4"]
+[ext_resource type="Texture2D" uid="uid://cs68hkqngk40" path="res://Assets/Obstacles/Tentacles/Idle-UnderWater/Tentacle-Idle UW3.png" id="19_tn42w"]
+[ext_resource type="Texture2D" uid="uid://cwcnamuanw4qv" path="res://Assets/Obstacles/Tentacles/Idle-UnderWater/Tentacle-Idle UW4.png" id="20_jlgnd"]
+[ext_resource type="Texture2D" uid="uid://c3jd3qgxtuu3m" path="res://Assets/Obstacles/Tentacles/Idle-UnderWater/Tentacle-Idle UW5.png" id="21_i485i"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ixqgw"]
 animations = [{
@@ -86,6 +90,18 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("12_kay2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_a4rx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_tn42w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jlgnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_i485i")
 }],
 "loop": true,
 "name": &"underwater_idle",
@@ -103,6 +119,7 @@ position = Vector2(0, -7)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_ixqgw")
 animation = &"underwater_idle"
+frame_progress = 0.51752
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(-1, 42, 72, 12, -1, -15, -75, 11)

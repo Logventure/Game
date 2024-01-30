@@ -84,13 +84,17 @@ texture_hover = ExtResource("5_ijayu")
 texture_focused = ExtResource("5_ijayu")
 
 [node name="NextLevel" type="Label" parent="Panel/VBoxContainer/RetryButton"]
-offset_left = 4.85712
-offset_top = 3.42859
-offset_right = 460.857
-offset_bottom = 86.4286
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 0
+offset_left = 4.51288
+offset_top = 2.19452
+offset_right = 460.513
+offset_bottom = 102.195
 scale = Vector2(0.07, 0.07)
-text = "NEXT LEVEL"
+text = "RETRY"
 label_settings = SubResource("LabelSettings_avjek")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="GiveUpButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -106,13 +110,17 @@ texture_hover = ExtResource("5_ijayu")
 texture_focused = ExtResource("5_ijayu")
 
 [node name="Exit" type="Label" parent="Panel/VBoxContainer/GiveUpButton"]
-offset_left = 15.0
-offset_top = 2.85718
-offset_right = 350.0
-offset_bottom = 85.8572
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 0
+offset_left = 6.51294
+offset_top = 2.28546
+offset_right = 406.513
+offset_bottom = 102.285
 scale = Vector2(0.07, 0.07)
 text = "EXIT"
 label_settings = SubResource("LabelSettings_mysmi")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label" type="Label" parent="."]
 texture_filter = 1

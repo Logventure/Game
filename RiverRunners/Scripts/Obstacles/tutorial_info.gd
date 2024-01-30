@@ -37,8 +37,8 @@ func _process(delta):
 	var commands = InputHandler.getCommands()
 	match current_state:
 		States.IDLE:
-			if time_since_completed < 1:
-				$Text.modulate.a = time_since_completed
+			if time_since_completed < 0.3:
+				$Text.modulate.a = time_since_completed * 2 + 0.4
 				time_since_completed += delta
 			else:
 				$Text.modulate.a = 1
@@ -62,12 +62,14 @@ func _process(delta):
 				$Text.position.y += -20 * delta
 
 		States.HIDDEN:
-			time_since_completed += delta
-			if time_since_completed > 1:
-				$Text.modulate.a = 0
-			if $Text.modulate.a > 0:
-				$Text.modulate.a = 1 - time_since_completed
+			if time_since_completed < 0.3:
+				$Text.modulate.a = 1 - time_since_completed * 2
+			else:
+				$Text.modulate.a = 0.4
 
+			$Text.position.y = text_base_position.y + sin(time * 2) * 20
+
+			time_since_completed += delta
 			if time_since_completed > cooldown:
 				current_state = States.IDLE
 				time_since_completed = 0

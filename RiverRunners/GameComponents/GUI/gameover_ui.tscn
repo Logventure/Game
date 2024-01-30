@@ -77,13 +77,15 @@ texture_hover = ExtResource("5_uur5g")
 texture_focused = ExtResource("5_uur5g")
 
 [node name="Retry" type="Label" parent="Panel/VBoxContainer/RetryButton"]
-offset_left = 9.42856
-offset_top = 1.78571
-offset_right = 344.429
-offset_bottom = 84.7857
+layout_mode = 0
+offset_left = 3.57144
+offset_top = 1.64285
+offset_right = 338.572
+offset_bottom = 84.6428
 scale = Vector2(0.1, 0.1)
 text = "RETRY"
 label_settings = SubResource("LabelSettings_i54tf")
+horizontal_alignment = 1
 
 [node name="GiveUpButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -99,10 +101,11 @@ texture_hover = ExtResource("5_uur5g")
 texture_focused = ExtResource("5_uur5g")
 
 [node name="GiveUp" type="Label" parent="Panel/VBoxContainer/GiveUpButton"]
-offset_left = 6.64288
-offset_top = 1.78571
-offset_right = 341.643
-offset_bottom = 84.7857
+layout_mode = 0
+offset_left = 5.64288
+offset_top = 1.64285
+offset_right = 340.643
+offset_bottom = 84.6428
 scale = Vector2(0.1, 0.1)
 text = "GIVE UP"
 label_settings = SubResource("LabelSettings_i54tf")

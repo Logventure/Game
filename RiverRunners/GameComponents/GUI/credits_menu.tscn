@@ -267,6 +267,7 @@ text = "LogVenture"
 label_settings = SubResource("LabelSettings_mhwy4")
 
 [node name="Label2" type="Label" parent="."]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -284,6 +285,7 @@ text = "Programmers"
 label_settings = SubResource("LabelSettings_63e8d")
 
 [node name="Label3" type="Label" parent="."]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -313,6 +315,7 @@ Environment Programmer
 label_settings = SubResource("LabelSettings_yohu8")
 
 [node name="Label4" type="Label" parent="."]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -348,6 +351,7 @@ Inês Santos"
 label_settings = SubResource("LabelSettings_x0uy5")
 
 [node name="Label5" type="Label" parent="."]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -365,6 +369,7 @@ text = "Artists"
 label_settings = SubResource("LabelSettings_bs4l1")
 
 [node name="Label6" type="Label" parent="."]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -392,6 +397,7 @@ text = "Environment Art Artist
 label_settings = SubResource("LabelSettings_d3md3")
 
 [node name="Label7" type="Label" parent="."]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -424,6 +430,7 @@ Duarte Cunha"
 label_settings = SubResource("LabelSettings_jd4fq")
 
 [node name="Label8" type="Label" parent="."]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -441,6 +448,7 @@ text = "Designers"
 label_settings = SubResource("LabelSettings_vythi")
 
 [node name="Label9" type="Label" parent="."]
+visible = false
 z_index = 1
 layout_mode = 0
 offset_left = 598.0
@@ -463,6 +471,7 @@ Characters Designers
 label_settings = SubResource("LabelSettings_5iuqe")
 
 [node name="Label10" type="Label" parent="."]
+visible = false
 z_index = 1
 layout_mode = 0
 offset_left = 1000.0
@@ -536,9 +545,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -517.0
-offset_top = 3870.0
+offset_top = 290.0
 offset_right = 517.0
-offset_bottom = 4100.0
+offset_bottom = 520.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Music by HoliznaCC0
@@ -558,13 +567,31 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -429.0
-offset_top = 4320.0
+offset_top = 620.0
 offset_right = 429.0
-offset_bottom = 4409.0
+offset_bottom = 709.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Thanks for playing!"
 label_settings = SubResource("LabelSettings_mhwy4")
+
+[node name="Label14" type="Label" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -517.0
+offset_top = 170.0
+offset_right = 517.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Creators credits hidden in this version"
+label_settings = SubResource("LabelSettings_q11py")
+horizontal_alignment = 1
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

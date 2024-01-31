@@ -23,7 +23,7 @@ func _process(delta):
 		#if Input.is_action_just_pressed("confirm") and skipTime > 5:
 			#on_timer_timeout()
 		$Label.position.y -= 2.5 * delta * 60
-		$Label2.position.y -= 2.5 * delta * 60
+		"$Label2.position.y -= 2.5 * delta * 60
 		$Label3.position.y -= 2.5 * delta * 60
 		$Label4.position.y -= 2.5 * delta * 60
 		$Label5.position.y -= 2.5 * delta * 60
@@ -31,12 +31,13 @@ func _process(delta):
 		$Label7.position.y -= 2.5 * delta * 60
 		$Label8.position.y -= 2.5 * delta * 60
 		$Label9.position.y -= 2.5 * delta * 60
-		$Label10.position.y -= 2.5 * delta * 60
+		$Label10.position.y -= 2.5 * delta * 60"
 		$Label12.position.y -= 2.5 * delta * 60
 		$Label13.position.y -= 2.5 * delta * 60
+		$Label14.position.y -= 2.5 * delta * 60
 
 func credits():
-	timer.start(38)
+	timer.start(13) #normal version -> 38
 	skipTime = 0
 	animation.play("credits_loop")
 	onCredits = true
@@ -57,7 +58,10 @@ func holdToSkip(delta):
 func on_timer_timeout():
 	onCredits = false
 	$Label.position.y = 1081
-	$Label2.position.y = 1350
+	$Label12.position.y = 1370
+	$Label13.position.y = 1700
+	$Label14.position.y = 1250
+	"$Label2.position.y = 1350
 	$Label3.position.y = 1430
 	$Label4.position.y = 1430
 	$Label5.position.y = 2320
@@ -65,10 +69,10 @@ func on_timer_timeout():
 	$Label7.position.y = 2400
 	$Label8.position.y = 3170
 	$Label9.position.y = 3260
-	$Label10.position.y = 3260
+	$Label10.position.y = 3260"
 	$Label11.text = ""
-	$Label12.position.y = 4950
-	$Label13.position.y = 5400
+	#$Label12.position.y = 4950
+	#$Label13.position.y = 5400
 	Events.emit_signal("go_from_credits_to_main_menu")
 
 func skipKey():

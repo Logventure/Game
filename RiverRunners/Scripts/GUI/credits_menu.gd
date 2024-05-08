@@ -37,7 +37,7 @@ func _process(delta):
 		$Label14.position.y -= 2.5 * delta * 60
 
 func credits():
-	timer.start(13) #normal version -> 38
+	timer.start(38) #normal version -> 38  no credits -> 13
 	skipTime = 0
 	animation.play("credits_loop")
 	onCredits = true

@@ -266,8 +266,7 @@ grow_vertical = 0
 text = "LogVenture"
 label_settings = SubResource("LabelSettings_mhwy4")
 
-[node name="Label2" type="Label" parent="."]
-visible = false
+[node name="Label2" type="Label" parent="Label"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -276,16 +275,15 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -150.5
-offset_top = 270.0
+offset_top = 180.0
 offset_right = 150.5
-offset_bottom = 316.0
+offset_bottom = 226.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Programmers"
 label_settings = SubResource("LabelSettings_63e8d")
 
-[node name="Label3" type="Label" parent="."]
-visible = false
+[node name="Label3" type="Label" parent="Label"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -294,9 +292,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -411.0
-offset_top = 350.0
+offset_top = 260.0
 offset_right = -5.0
-offset_bottom = 1158.0
+offset_bottom = 1068.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "   Gameplay Programmers
@@ -314,8 +312,7 @@ Environment Programmer
            Build Programmer"
 label_settings = SubResource("LabelSettings_yohu8")
 
-[node name="Label4" type="Label" parent="."]
-visible = false
+[node name="Label4" type="Label" parent="Label"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -324,9 +321,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = 40.0
-offset_top = 348.0
+offset_top = 258.0
 offset_right = 260.0
-offset_bottom = 1239.0
+offset_bottom = 1149.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Daniel Oliveira 
@@ -350,8 +347,7 @@ Inês Santos
 Inês Santos"
 label_settings = SubResource("LabelSettings_x0uy5")
 
-[node name="Label5" type="Label" parent="."]
-visible = false
+[node name="Label5" type="Label" parent="Label"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -360,16 +356,15 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -77.0
-offset_top = 1240.0
+offset_top = 1150.0
 offset_right = 77.0
-offset_bottom = 1286.0
+offset_bottom = 1196.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Artists"
 label_settings = SubResource("LabelSettings_bs4l1")
 
-[node name="Label6" type="Label" parent="."]
-visible = false
+[node name="Label6" type="Label" parent="Label"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -378,9 +373,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -368.0
-offset_top = 1320.0
+offset_top = 1230.0
 offset_right = -8.0
-offset_bottom = 2002.0
+offset_bottom = 1912.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Environment Art Artist
@@ -396,8 +391,7 @@ text = "Environment Art Artist
       Concept Art Artist"
 label_settings = SubResource("LabelSettings_d3md3")
 
-[node name="Label7" type="Label" parent="."]
-visible = false
+[node name="Label7" type="Label" parent="Label"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -406,9 +400,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = 40.0
-offset_top = 1336.0
+offset_top = 1246.0
 offset_right = 275.0
-offset_bottom = 1992.0
+offset_bottom = 1902.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Bruno Brandão
@@ -429,8 +423,7 @@ Bruno Brandão
 Duarte Cunha"
 label_settings = SubResource("LabelSettings_jd4fq")
 
-[node name="Label8" type="Label" parent="."]
-visible = false
+[node name="Label8" type="Label" parent="Label"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -439,22 +432,21 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -112.0
-offset_top = 2090.0
+offset_top = 2000.0
 offset_right = 112.0
-offset_bottom = 2136.0
+offset_bottom = 2046.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Designers"
 label_settings = SubResource("LabelSettings_vythi")
 
-[node name="Label9" type="Label" parent="."]
-visible = false
+[node name="Label9" type="Label" parent="Label"]
 z_index = 1
 layout_mode = 0
-offset_left = 598.0
-offset_top = 3260.0
-offset_right = 956.0
-offset_bottom = 4859.0
+offset_left = -103.0
+offset_top = 2179.0
+offset_right = 255.0
+offset_bottom = 3778.0
 text = "   Gameplay Designers
 
          Level Designers
@@ -470,14 +462,13 @@ Characters Designers
          UI/UX Designers"
 label_settings = SubResource("LabelSettings_5iuqe")
 
-[node name="Label10" type="Label" parent="."]
-visible = false
+[node name="Label10" type="Label" parent="Label"]
 z_index = 1
 layout_mode = 0
-offset_left = 1000.0
-offset_top = 3260.0
-offset_right = 1235.0
-offset_bottom = 4859.0
+offset_left = 299.0
+offset_top = 2179.0
+offset_right = 534.0
+offset_bottom = 3778.0
 text = "Inês Santos
 Daniel Oliveira
 Duarte Cunha
@@ -520,7 +511,7 @@ Daniel Oliveira
 "
 label_settings = SubResource("LabelSettings_ad7j2")
 
-[node name="Label11" type="Label" parent="."]
+[node name="Label11" type="Label" parent="Label"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 3
@@ -528,15 +519,15 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -306.0
-offset_top = -69.0
-offset_right = -48.0
-offset_bottom = -41.0
+offset_left = 395.0
+offset_top = -159.0
+offset_right = 653.0
+offset_bottom = -131.0
 grow_horizontal = 0
 grow_vertical = 0
 label_settings = SubResource("LabelSettings_8sh2y")
 
-[node name="Label12" type="Label" parent="."]
+[node name="Label12" type="Label" parent="Label"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -545,9 +536,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -517.0
-offset_top = 290.0
+offset_top = 3892.0
 offset_right = 517.0
-offset_bottom = 520.0
+offset_bottom = 4121.99
 grow_horizontal = 2
 grow_vertical = 0
 text = "Music by HoliznaCC0
@@ -558,7 +549,7 @@ Sound Effects provided by MixKit and Pixabay"
 label_settings = SubResource("LabelSettings_q11py")
 horizontal_alignment = 1
 
-[node name="Label13" type="Label" parent="."]
+[node name="Label13" type="Label" parent="Label"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -567,15 +558,16 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -429.0
-offset_top = 620.0
+offset_top = 4296.0
 offset_right = 429.0
-offset_bottom = 709.0
+offset_bottom = 4385.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Thanks for playing!"
 label_settings = SubResource("LabelSettings_mhwy4")
 
-[node name="Label14" type="Label" parent="."]
+[node name="Label14" type="Label" parent="Label"]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -584,9 +576,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -517.0
-offset_top = 170.0
+offset_top = 80.0
 offset_right = 517.0
-offset_bottom = 210.0
+offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Creators credits hidden in this version"

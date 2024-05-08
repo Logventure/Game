@@ -13,7 +13,8 @@ config_version=5
 config/name="RiverRunners"
 run/main_scene="res://Game/GameManager.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://Assets/icon.svg"
+config/icon="res://Assets/UI/RR-Icon.png"
+config/windows_native_icon="res://Assets/UI/RR-Icon.ico"
 
 [autoload]
 

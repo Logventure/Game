@@ -21,3 +21,4 @@ func pause():
 
 func resume():
 	animation.play("blocking")
+

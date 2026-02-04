@@ -92,9 +92,9 @@ func onContinue():
 
 func handleSkip(delta):
 	if InputHandler.hasController():
-		$InstructionsBox/Instructions.text = "Press X to continue - Hold to skip"
+		$InstructionsBox/Instructions.text = tr("DIALOGUE_INSTRUCTIONS_CTRL")
 	else:
-		$InstructionsBox/Instructions.text = "Press SPACEBAR to continue - Hold to skip"
+		$InstructionsBox/Instructions.text = tr("DIALOGUE_INSTRUCTIONS_KB")
 
 	if Input.is_action_pressed("confirm"):
 		holdtime += delta

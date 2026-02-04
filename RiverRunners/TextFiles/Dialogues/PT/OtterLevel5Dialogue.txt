@@ -1,0 +1,272 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/j-CS-OT.png
+>>>>>
+
+*Character*: shork_gray
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/shorkroar.wav
+*Volume*: -6
+*Text*: Raaawwwwwrrr!!
+>>>>>
+
+
+*Character*: frog_scream
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared.wav
+
+*Volume*: 10.0
+*Text*: Holy Makerel!!
+>>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-question.wav
+*Volume*: 10.0
+*Text*: What was that!?
+>>>>>
+
+
+*Character*: beaver_surprised
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10.0
+*Text*: That does sound scary...
+>>>>>
+
+
+*Character*: crab_disappointed
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
+*Volume*: -12
+*Text*: A lil roaring's got you all quaking in your boots.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Text*: I've heard much more intense screams...
+>>>>>
+
+
+*Character*: salmon_surprised
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared1.wav
+*Text*: Glu, gluuu??...
+>>>>>
+
+
+*Character*: otter_gray
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
+*Volume*: -6
+*Text*: (Hmm, these folks seem hopeless)
+>>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-talkingtoself.wav
+*Volume*: -6
+*Text*: (And somewhat suspicious...)
+>>>>>
+
+*Cutscene*: res://Assets/Cutscenes/k-CS-Common4.png
+
+
+*Character*: otter
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-stoprightthere.wav
+*Volume*: -6
+*Text*: Who are you and what are you doing in these woods!?
+>>>>>
+
+*Character*: frog_scream
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared2.wav
+*Volume*: 10.0
+*Text*: HAAAAAAA!!
+>>>>>
+
+
+
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10.0
+*Text*: We mean no harm ma'am.
+>>>>>
+
+
+
+*Character*: salmon_surprised
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-explaining.wav
+*Volume*: -12
+*Text*: GluUu, Gluuuu, GlUU!
+>>>>>
+
+*Character*: crab_angry
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
+*Text*: You don't get to come in here and start askin questions.
+>>>>>
+
+*Cutscene*: none
+
+*Character*: otter_nervous
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk2.wav
+*Volume*: -6
+*Text*: Sounds like some of you have a problem with authority.
+>>>>>
+
+*Character*: otter
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk1.wav
+*Volume*: -6
+*Text*: I'm Ranger Ottivia Timber. I scout and take care of these woods.
+>>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk2.wav
+*Volume*: -6
+*Text*: What about you folks, mind introducing yourselves?
+>>>>>
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
+*Volume*: -12
+*Text*: ...
+>>>>>
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10.0
+*Text*: My name's Justin, Justin Beaver, i live near the dam, so as soon as i heard it breaking, i came rushing to check if anyone had been hurt.
+>>>>>
+
+
+
+*Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk2.wav
+*Volume*: -6
+*Text*: An exemplary citizen it seems.
+>>>>>
+
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal.wav
+*Volume*: 10.0
+*Text*: Treat others how you would like to be treated, that's how i try to live my life.
+>>>>>
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-explanation.wav
+*Volume*: 10.0
+*Text*: This here is Sir Frogginton the third, Sal, and Vito.
+>>>>>
+
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal2.wav
+*Volume*: 10.0
+*Text*: It's a pleasure to meet you ma'am.
+>>>>>
+
+
+
+*Character*: salmon
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-joy1.wav
+*Volume*: -12
+*Text*: Glu gluUuUu~.
+>>>>>
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Text*: Hm, yeah, that's the name.
+>>>>>
+
+*Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
+*Volume*: -6
+*Text*: Hm, seems like you're mostly well meaning folk then.
+>>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-talkingtoself.wav
+*Volume*: -6
+*Text*: I'm investigating the source of this disaster myself.
+>>>>>
+
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy1.wav
+*Volume*: -12
+*Text*: Hrm, seems like our goals might align after all then.
+>>>>>
+
+*Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk4.wav
+*Volume*: -6
+*Text*: Indeed, and you might just be in need of my throwing arm. Through my investigation i've seen some concerning signs.
+>>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk2.wav
+*Volume*: -6
+*Text*: Signs that another creature might be behind this. I've encountered strange tentacles around these waters.
+>>>>>
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared.wav
+*Volume*: 6
+*Text*: Ten-Ten-Tentacles you say???...
+>>>>>
+
+
+
+*Character*: salmon_questioning
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared2.wav
+*Volume*: -12
+*Text*: Glu Gluu!
+>>>>>
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Volume*: 10.0
+*Text*: Don't talk to me like that Salomon, i've done nothing wrong!
+>>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Volume*: 10.0
+*Text*: Fear is a normal and vital survival instant...
+>>>>>
+
+*Character*: salmon_questioning
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared1.wav
+*Volume*: -12
+*Text*: Gluu, gluUu, gluuuu...
+>>>>>
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
+*Text*: Fears aside, this does sound like a good lead.
+>>>>>
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10.0
+*Text*: Lets get to the bottom of this then.
+>>>>>
+
+
+
+*Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
+*Volume*: -6
+*Text*: Indeed, if we encounter any tentacles, i can help of course.
+>>>>>
+
+
+#
+#Use one text file for each conversation
+#

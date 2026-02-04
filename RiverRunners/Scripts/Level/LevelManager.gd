@@ -21,6 +21,10 @@ var playerTargetSpeed = 1
 
 var relax_mode = false
 
+const dialogueFolder = "res://TextFiles/Dialogues/"
+const languageFolders = {"en":"EN/", "pt":"PT/", "es":"ES/"}
+var locale = TranslationServer.get_locale()
+
 enum States {DIALOG,RUNNING,PAUSED,NO_OBSTACLES,LEVEL_END}
 
 var current_state = States.NO_OBSTACLES
@@ -143,10 +147,13 @@ func updateProgressBar():
 	level_ui.updateProgressBar(getProgress())
 
 func onStartDialogue(file: String, wait_for_obstacle_end: bool):
+	var filepath = dialogueFolder + languageFolders[locale] + file
+	if not locale in languageFolders.keys():
+		filepath = dialogueFolder + languageFolders["en"] + file
 	if wait_for_obstacle_end:
-		Events.connect("obstacles_ended",startDialogue.bind(file))
+		Events.connect("obstacles_ended",startDialogue.bind(filepath))
 	else:
-		startDialogue(file)
+		startDialogue(filepath)
 
 func startDialogue(file: String):
 	dialogue_box.setFile(file)

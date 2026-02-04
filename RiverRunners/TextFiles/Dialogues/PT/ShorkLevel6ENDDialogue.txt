@@ -1,0 +1,452 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+*Cutscene*: none
+
+*Character*: beaver_surprised
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
+*Volume*: 10
+*Text*: What is this thing following us??
+>>>>>
+
+
+
+*Character*: frog_scream
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared2.wav
+*Text*: A shark!?
+>>>>>
+
+
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Volume*: -12
+*Text*: An octopus.
+>>>>>
+
+*Character*: salmon
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared2.wav
+*Text*: glu gluUu?
+>>>>>
+
+*Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk2.wav
+*Volume*: -6
+*Text*: A danger is what it is.
+>>>>>
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: Shorktopus.
+>>>>>
+
+*Character*: shork
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/shorkroar.wav
+*Volume*: -6
+*Text*: Rawwwwwrr!
+>>>>>
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Volume*: -12
+*Text*: I'd take that as a yes kiddo.
+>>>>>
+
+*Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk4.wav
+*Volume*: -6
+*Text*: The question is why it's here in the first place.
+>>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk2.wav
+
+*Text*: This thing needs to be taken care of.
+>>>>>
+
+
+*Character*: hidden
+*Name*: ???
+*Cutscene*: res://Assets/Cutscenes/l-CS-Common5.png
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
+*Volume*: 0
+*Text*: Waaaaiitt!!
+>>>>>
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-question.wav
+*Volume*: 10
+*Text*: It speaks??
+>>>>>
+
+*Character*: salmon_questioning
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-question1.wav
+*Volume*: -12
+*Text*: GluUuUuu??
+>>>>>
+
+
+*Character*: shork_happy
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
+*Volume*: 0
+
+*Text*: I don't mean any harm!
+>>>>>
+
+*Character*: shork
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
+*Volume*: 0
+*Text*: Well, i did, but that was before i understood you were...
+>>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
+*Volume*: 0
+*Text*: Just like me.
+>>>>>
+
+*Character*: frog
+*Volume*: 10
+*Text*: A Shorktopus?
+>>>>>
+
+*Character*: shork
+*Name*: ???
+*Text*: ...
+>>>>>
+
+*Character*: shork
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
+*Volume*: 0
+*Text*: No.
+>>>>>
+
+*Character*: shork
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
+*Volume*: 0
+*Text*: I meant the lab...
+>>>>>
+
+
+*Character*: otter_nervous
+*Volume*: -6
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-stoprightthere.wav
+
+*Text*: The lab... I... my head...
+>>>>>
+
+*Character*: crab_disappointed
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-question.wav
+*Volume*: -12
+*Text*: Hrm, that sounds, familiar.
+>>>>>
+
+*Character*: beaver
+*Volume*: 10
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Text*: I think, i remember.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Text*: The doctors....
+>>>>>
+
+*Character*: frog_notamused
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Text*: The strange wardrobe choices.
+>>>>>
+
+*Character*: salmon_questioning
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-question2.wav
+*Volume*: -12
+*Text*: Gluuu?
+>>>>>
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation.wav
+*Volume*: 10
+*Text*: Yes exactly!
+>>>>>
+
+*Character*: shork
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
+*Volume*: 0
+*Text*: I Understand you've been out for a while. But i could still sense that stentch on you all.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
+*Volume*: 0
+*Text*: I thought u were part of the scientists, trying to recapture me.
+>>>>>
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-question.wav
+*Volume*: -12
+*Text*: So you're the one that broke the dam?
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
+*Text*: To escape?
+>>>>>
+
+*Character*: shork
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
+*Volume*: 0
+*Text*: Yes. 
+>>>>>
+*Character*: shork_sad
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
+*Volume*: 0
+*Text*: Those people, what i saw them doing, what they did to me...
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
+*Volume*: 0
+*Text*: I had to break out.
+>>>>>
+
+*Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-talkingtoself.wav
+*Volume*: -6
+*Text*: We all came from that place, didnt we?
+>>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-whatevertalk.wav
+
+*Text*: That lab, below the reservoir.
+>>>>>
+
+*Character*: salmon
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-question1.wav
+*Volume*: -12
+*Text*: GluUuuuu...?
+>>>>>
+
+*Character*: frog
+*Volume*: 10
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Text*: It can't be, i only recall being in the wilds, searching for other like minded fellows.
+>>>>>
+
+*Character*: shork
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
+*Volume*: 0
+*Text*: I believe they were attempting to improve your capabilities, altering your bodies, your mind, your memories...
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
+*Volume*: 0
+*Text*: Thankfully i managed to escape before they could wipe what i had seen, what i had experienced, from my mind.
+>>>>>
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Volume*: -12
+*Text*: I can't stand hearin this.
+>>>>>
+*Character*: crab_angry
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Text*: I'm not gonna take this laying down, we need to go back, teach those monsters a lesson.
+>>>>>
+
+*Character*: otter_nervous
+*Volume*: -6
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk1.wav
+
+*Text*: We can't, there's no way we could swim up the river and through the dam, the waters are too strong.
+>>>>>
+
+*Character*: otter
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
+
+*Text*: Maybe Sal could, but that'd be suicide.
+>>>>>
+
+*Character*: beaver_sad
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-explanation.wav
+*Text*: I don't want to go back... i don't want to lose any of you.
+*Volume*: 10
+>>>>>
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Text*: It would be dangerous and reckless...
+>>>>>
+
+*Character*: frog_notamused
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Text*: IT, just broke through the lab regardless, it's likely in shambles.
+>>>>>
+
+*Character*: shork
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/shorkroar.wav
+*Volume*: -6
+*Text*: Don't call me it!
+>>>>>
+
+*Character*: frog
+*Volume*: 10
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
+*Text*: Oh, my apologies. We didn't even ask your name.
+>>>>>
+
+*Character*: shork
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
+*Volume*: 0
+*Text*: I... I don't have a name...
+>>>>>
+*Character*: shork_sad
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
+*Volume*: 0
+*Text*: I don't even know what i am....
+>>>>>
+
+
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: We could give you a name.
+>>>>>
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
+*Text*: Do any of you have any ideas my friends?
+>>>>>
+
+*Character*: shork
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
+*Volume*: 0
+*Text*: Friends...
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
+*Volume*: 0
+*Text*: Friend, i like that.
+>>>>>
+
+*Character*: salmon
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-joy2.wav
+*Volume*: -12
+*Text*: Glu, GluuUuuU~
+>>>>>
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Volume*: 10
+*Text*: That does sound nice.
+>>>>>
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-question.wav
+*Volume*: -12
+*Text*: Any objections?
+>>>>>
+
+*Character*: hidden
+
+*Text*: ...
+>>>>>
+
+*Character*: beaver_happy
+
+*Text*: Friend it is.
+>>>>>
+
+*Character*: shork_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
+*Volume*: 0
+*Text*: Thank you... friends.
+>>>>>
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10
+*Text*: And do you have anywhere to go?
+>>>>>
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Text*: If not, you could join us!
+>>>>>
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/m-CS-Final.png
+>>>>>
+
+*Character*: shork_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
+*Volume*: 0
+*Text*: I... i would like that.
+>>>>>
+*Character*: shork
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
+*Volume*: 0
+*Text*: Thank you for understanding my plight my friends.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
+*Volume*: 0
+*Text*: And even though the lab is out reach, we may just find more wayward souls if we keep looking.
+>>>>>
+
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10
+*Text*: Hm, but for now, what do u guys say we take a well deserved break?
+>>>>>
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal2.wav
+*Text*: I do need to give this head of mine a rest.
+>>>>>
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
+*Volume*: -12
+*Text*: I guess kickin back and enjoyin the ocean breeze don't sound so bad.
+>>>>>
+
+*Character*: otter_happy
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
+*Volume*: -6
+*Text*: Other animals may also need our help, we could keep an eye out for them.
+>>>>>
+
+*Character*: salmon
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-joy1.wav
+*Volume*: -12
+*Text*: GluuUuuUuuUuU!!
+>>>>>
+
+*Character*: shork_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
+*Volume*: 0
+*Text*: A rest, that sounds wonderful...
+>>>>>
+
+*Character*: none
+>>>>>
+
+*Cutscene*: credits
+>>>>>
+
+#
+#Use one text file for each conversation
+#

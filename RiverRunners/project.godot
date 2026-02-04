@@ -147,6 +147,15 @@ confirm={
 ]
 }
 
+[internationalization]
+
+locale/translation_remaps={
+"res://Assets/UI/Confirm Pop-Up/ConfirmPop-up-Background.png": PackedStringArray("res://Assets/UI/Translated/PT/ConfirmPop-up-Background.png:pt")
+}
+locale/translations=PackedStringArray("res://TextFiles/Translations/ui_translation.en.translation", "res://TextFiles/Translations/ui_translation.es.translation", "res://TextFiles/Translations/ui_translation.pt.translation")
+locale/test="pt"
+locale/locale_filter_mode=0
+
 [rendering]
 
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)

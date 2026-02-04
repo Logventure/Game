@@ -204,13 +204,14 @@ texture_focused = ExtResource("17_8ecwu")
 
 [node name="General" type="Label" parent="Panel/ButtonContainer/GeneralButton"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 2.25
-offset_right = 341.0
-offset_bottom = 85.25
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 440.0
+offset_bottom = 85.0
 scale = Vector2(0.09, 0.09)
 text = "GENERAL"
 label_settings = SubResource("LabelSettings_gsrir")
+horizontal_alignment = 1
 
 [node name="AudioButton" type="TextureButton" parent="Panel/ButtonContainer"]
 layout_mode = 2
@@ -226,13 +227,14 @@ texture_focused = ExtResource("17_8ecwu")
 
 [node name="Audio" type="Label" parent="Panel/ButtonContainer/AudioButton"]
 layout_mode = 0
-offset_left = 11.0
+offset_left = 2.0
 offset_top = 2.0
-offset_right = 232.0
+offset_right = 421.0
 offset_bottom = 85.0
 scale = Vector2(0.09, 0.09)
 text = "AUDIO"
 label_settings = SubResource("LabelSettings_gsrir")
+horizontal_alignment = 1
 
 [node name="ControlsButton" type="TextureButton" parent="Panel/ButtonContainer"]
 layout_mode = 2
@@ -248,13 +250,14 @@ texture_focused = ExtResource("17_8ecwu")
 
 [node name="Controls" type="Label" parent="Panel/ButtonContainer/ControlsButton"]
 layout_mode = 0
-offset_left = 3.5
-offset_top = 2.25
-offset_right = 385.5
-offset_bottom = 85.25
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 432.0
+offset_bottom = 85.0
 scale = Vector2(0.09, 0.09)
 text = "CONTROLS"
 label_settings = SubResource("LabelSettings_gsrir")
+horizontal_alignment = 1
 
 [node name="Fullscreen" type="Label" parent="Panel"]
 texture_filter = 1
@@ -313,13 +316,14 @@ texture_focused = ExtResource("17_8ecwu")
 
 [node name="Easy" type="Label" parent="Panel/ButtonContainer1/EasyModeButton"]
 layout_mode = 0
-offset_left = 14.25
-offset_top = 2.75
-offset_right = 218.25
-offset_bottom = 85.75
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 545.0
+offset_bottom = 86.0
 scale = Vector2(0.07, 0.07)
 text = "EASY"
 label_settings = SubResource("LabelSettings_fqk4y")
+horizontal_alignment = 1
 
 [node name="NormalModeButton" type="TextureButton" parent="Panel/ButtonContainer1"]
 layout_mode = 2
@@ -335,13 +339,14 @@ texture_focused = ExtResource("17_8ecwu")
 
 [node name="Normal" type="Label" parent="Panel/ButtonContainer1/NormalModeButton"]
 layout_mode = 0
-offset_left = 11.25
-offset_top = 3.25
-offset_right = 312.25
-offset_bottom = 86.25
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 534.0
+offset_bottom = 86.0
 scale = Vector2(0.07, 0.07)
 text = "NORMAL"
 label_settings = SubResource("LabelSettings_nqakr")
+horizontal_alignment = 1
 
 [node name="HardModeButton" type="TextureButton" parent="Panel/ButtonContainer1"]
 layout_mode = 2
@@ -358,13 +363,14 @@ texture_focused = ExtResource("17_8ecwu")
 
 [node name="Hard" type="Label" parent="Panel/ButtonContainer1/HardModeButton"]
 layout_mode = 0
-offset_left = 14.0
+offset_left = 2.0
 offset_top = 3.0
-offset_right = 218.0
+offset_right = 538.0
 offset_bottom = 86.0
 scale = Vector2(0.07, 0.07)
 text = "HARD"
 label_settings = SubResource("LabelSettings_2ghjk")
+horizontal_alignment = 1
 
 [node name="General" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
@@ -673,13 +679,14 @@ texture_focused = ExtResource("17_8ecwu")
 
 [node name="Back" type="Label" parent="BackButton"]
 layout_mode = 0
-offset_left = 12.4
-offset_top = 2.429
-offset_right = 216.4
-offset_bottom = 85.429
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 431.0
+offset_bottom = 85.0
 scale = Vector2(0.09, 0.09)
 text = "BACK"
 label_settings = SubResource("LabelSettings_gsrir")
+horizontal_alignment = 1
 
 [connection signal="animation_looped" from="BackgroundImage2/Justin" to="BackgroundImage2" method="_on_justin_animation_looped"]
 [connection signal="pressed" from="Panel/ButtonContainer/GeneralButton" to="." method="_on_general_button_pressed"]

@@ -1,0 +1,232 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/h-CS-Crab.png
+>>>>>
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
+*Volume*: 10
+*Text*: So, Sir Frogginton, are your brainwaves sensing anything, any potential friends? Enemies?
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
+*Volume*: 10
+*Text*: Hmmmmm, i can't say i'm sensing much this time around.
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
+*Text*: What about you Sal?
+>>>>>
+
+
+*Character*: salmon_questioning
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking1.wav
+*Volume*: -12
+*Text*: Gluu, glu, gluuu...
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Volume*: 10
+*Text*: I figured as much. As i said, there doesn't seem to be anything of note nearby.
+>>>>>
+
+
+*Character*: crab_gray
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
+*Volume*: -12
+*Text*: Hhrmm...
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: Well, let's keep on going either way.
+>>>>>
+
+
+
+
+*Character*: crab_angry
+*Name*: ???
+*Cutscene*: res://Assets/Cutscenes/i-CS-Common3.png
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-scared.wav
+*Volume*: -12
+*Text*: HEY, I'M SWIMMIN HERE!
+>>>>>
+
+
+*Character*: beaver_surprised
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: Oh, i'm sorry! I didn't see you there.
+>>>>>
+
+*Character*: crab_disappointed
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Volume*: -12
+*Text*: Well duh, i came from below.
+>>>>>
+*Character*: crab
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
+*Text*: But i what i really want to know, is what you're doing round these parts.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Text*: This is my turf y'see, and i don't recall givin you folks permission to strut your fannies round here.
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-explanation.wav
+*Volume*: 10
+*Text*: This must be some kind of missunderstanding...
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Text*: We're actually checking if anyone needs help, something happened to the nearby Dam, 
+>>>>>
+
+
+*Character*: crab
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Volume*: -12
+*Text*: Hm, ya don't say...
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
+*Text*: ...
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10
+*Text*: ...
+>>>>>
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
+*Text*: ...
+>>>>>
+
+
+*Character*: salmon
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking2.wav
+*Volume*: -12
+*Text*: ...
+>>>>>
+
+*Character*: crab
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Text*: Well in that case, i don't mind helpin ya along the way.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Text*: I myself want to know who's messin with these waters.
+>>>>>
+*Character*: crab_disappointed
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy1.wav
+*Text*: Nobody jepordizes my river and gets away with it.
+>>>>>
+
+
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: I'm not gonna say no to some extra help.
+>>>>>
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Text*: Oh, i didn't catch your name.
+>>>>>
+
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Volume*: -12
+*Text*: The name's Don Vito Crableone.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
+*Text*: But you can call me Vito.
+>>>>>
+
+
+
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
+*Volume*: 10
+*Text*: Good to know.
+>>>>>
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
+*Text*: So, is everyone in favor of having Vito join us in this journey?
+>>>>>
+
+
+*Character*: salmon_pog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-joy1.wav
+*Volume*: -12
+*Text*: Gluu, gluuu~
+>>>>>
+
+
+*Character*: frog_notamused
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Volume*: 10
+*Text*: Hmmmm, i don't typically mingle with brutes...
+>>>>>
+
+
+*Character*: crab
+
+*Cutscene*: none
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Volume*: -12
+*Text*: Eh, you'll thank me when we come across some rocks we just can't maneuver around.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Text*: I can protect ya with this hard shell of mine, just gotta time the block properly.
+>>>>>
+
+
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10
+*Text*: Thank you for lending us your pincers Vito.
+>>>>>
+
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
+*Volume*: -12
+*Text*: No problem bud.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Text*: Now let's get this show on the road.
+>>>>>
+
+
+#
+#Use one text file for each conversation
+#

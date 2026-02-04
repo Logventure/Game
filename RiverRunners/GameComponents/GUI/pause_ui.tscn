@@ -78,13 +78,14 @@ texture_focused = ExtResource("5_hv5s5")
 
 [node name="Resume" type="Label" parent="Panel/VBoxContainer/ResumeButton"]
 layout_mode = 0
-offset_left = 6.35715
-offset_top = 2.14285
-offset_right = 341.357
-offset_bottom = 85.1429
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 391.0
+offset_bottom = 85.0
 scale = Vector2(0.1, 0.1)
 text = "RESUME"
 label_settings = SubResource("LabelSettings_2ypd2")
+horizontal_alignment = 1
 
 [node name="OptionsButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -100,13 +101,14 @@ texture_focused = ExtResource("5_hv5s5")
 
 [node name="Options" type="Label" parent="Panel/VBoxContainer/OptionsButton"]
 layout_mode = 0
-offset_left = 5.35715
-offset_top = 2.28571
-offset_right = 340.357
-offset_bottom = 85.2857
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 392.0
+offset_bottom = 85.0
 scale = Vector2(0.1, 0.1)
 text = "OPTIONS"
 label_settings = SubResource("LabelSettings_2ypd2")
+horizontal_alignment = 1
 
 [node name="GiveUpButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -123,10 +125,10 @@ texture_focused = ExtResource("5_hv5s5")
 [node name="GiveUp" type="Label" parent="Panel/VBoxContainer/GiveUpButton"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 0
-offset_left = 5.5
-offset_top = 1.50003
-offset_right = 300.5
-offset_bottom = 101.5
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 390.0
+offset_bottom = 102.0
 scale = Vector2(0.1, 0.1)
 text = "GIVE UP"
 label_settings = SubResource("LabelSettings_2ypd2")

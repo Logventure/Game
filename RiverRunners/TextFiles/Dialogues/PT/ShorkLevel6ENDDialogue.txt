@@ -16,14 +16,14 @@
 *Character*: beaver_surprised
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
 *Volume*: 10
-*Text*: What is this thing following us??
+*Text*: O que é esta coisa que nos está a seguir??
 >>>>>
 
 
 
 *Character*: frog_scream
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared2.wav
-*Text*: A shark!?
+*Text*: Um tubarão!?
 >>>>>
 
 
@@ -31,7 +31,7 @@
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
 *Volume*: -12
-*Text*: An octopus.
+*Text*: Um polvo.
 >>>>>
 
 *Character*: salmon
@@ -43,7 +43,7 @@
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk2.wav
 *Volume*: -6
-*Text*: A danger is what it is.
+*Text*: É um perigo, isso sim.
 >>>>>
 
 *Character*: beaver
@@ -62,19 +62,19 @@
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
 *Volume*: -12
-*Text*: I'd take that as a yes kiddo.
+*Text*: Eu consideraria isso um sim, miúdo.
 >>>>>
 
 *Character*: otter
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk4.wav
 *Volume*: -6
-*Text*: The question is why it's here in the first place.
+*Text*: A questão é porque está aqui em primeiro lugar.
 >>>>>
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk2.wav
 
-*Text*: This thing needs to be taken care of.
+*Text*: Esta coisa precisa ser tratada.
 >>>>>
 
 
@@ -83,13 +83,13 @@
 *Cutscene*: res://Assets/Cutscenes/l-CS-Common5.png
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
 *Volume*: 0
-*Text*: Waaaaiitt!!
+*Text*: Eeeeepa!!
 >>>>>
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-question.wav
 *Volume*: 10
-*Text*: It speaks??
+*Text*: Fala??
 >>>>>
 
 *Character*: salmon_questioning
@@ -104,19 +104,19 @@
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
 *Volume*: 0
 
-*Text*: I don't mean any harm!
+*Text*: Não quero causar mal!
 >>>>>
 
 *Character*: shork
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: Well, i did, but that was before i understood you were...
+*Text*: Bem, queria, mas foi antes de perceber que tu eras...
 >>>>>
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: Just like me.
+*Text*: Igual a mim.
 >>>>>
 
 *Character*: frog
@@ -133,14 +133,14 @@
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: No.
+*Text*: Não.
 >>>>>
 
 *Character*: shork
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
 *Volume*: 0
-*Text*: I meant the lab...
+*Text*: Queria dizer o laboratório...
 >>>>>
 
 
@@ -148,27 +148,27 @@
 *Volume*: -6
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-stoprightthere.wav
 
-*Text*: The lab... I... my head...
+*Text*: O laboratório... Minha cabeça...
 >>>>>
 
 *Character*: crab_disappointed
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-question.wav
 *Volume*: -12
-*Text*: Hrm, that sounds, familiar.
+*Text*: Hrm, isso soa familiar.
 >>>>>
 
 *Character*: beaver
 *Volume*: 10
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
-*Text*: I think, i remember.
+*Text*: Acho que me lembro.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
-*Text*: The doctors....
+*Text*: Os médicos...
 >>>>>
 
 *Character*: frog_notamused
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
-*Text*: The strange wardrobe choices.
+*Text*: As escolhas estranhas de roupa.
 >>>>>
 
 *Character*: salmon_questioning
@@ -180,56 +180,56 @@
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation.wav
 *Volume*: 10
-*Text*: Yes exactly!
+*Text*: Sim, exatamente!
 >>>>>
 
 *Character*: shork
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: I Understand you've been out for a while. But i could still sense that stentch on you all.
+*Text*: Entendo que estavas fora por um tempo. Mas eu ainda podia sentir aquele fedor em vocês.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
 *Volume*: 0
-*Text*: I thought u were part of the scientists, trying to recapture me.
+*Text*: Pensei que fosses um dos cientistas, tentando me recapturar.
 >>>>>
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-question.wav
 *Volume*: -12
-*Text*: So you're the one that broke the dam?
+*Text*: Então és tu quem partiu a barragem?
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
-*Text*: To escape?
+*Text*: Para escapar?
 >>>>>
 
 *Character*: shork
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: Yes. 
+*Text*: Sim. 
 >>>>>
 *Character*: shork_sad
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: Those people, what i saw them doing, what they did to me...
+*Text*: Essas pessoas, o que as vi fazer, o que me fizeram...
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
 *Volume*: 0
-*Text*: I had to break out.
+*Text*: Tive que escapar.
 >>>>>
 
 *Character*: otter
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-talkingtoself.wav
 *Volume*: -6
-*Text*: We all came from that place, didnt we?
+*Text*: Todos viemos daquele lugar, não foi?
 >>>>>
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-whatevertalk.wav
 
-*Text*: That lab, below the reservoir.
+*Text*: Esse laboratório, abaixo do reservatório.
 >>>>>
 
 *Character*: salmon
@@ -241,104 +241,104 @@
 *Character*: frog
 *Volume*: 10
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
-*Text*: It can't be, i only recall being in the wilds, searching for other like minded fellows.
+*Text*: Não pode ser, só me lembro de estar na natureza, procurando outros semelhantes.
 >>>>>
 
 *Character*: shork
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
 *Volume*: 0
-*Text*: I believe they were attempting to improve your capabilities, altering your bodies, your mind, your memories...
+*Text*: Acredito que estavam tentando melhorar as tuas capacidades, alterando o corpo, a mente, as memórias...
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: Thankfully i managed to escape before they could wipe what i had seen, what i had experienced, from my mind.
+*Text*: Felizmente consegui escapar antes que apagassem da minha mente o que vi e experimentei.
 >>>>>
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
 *Volume*: -12
-*Text*: I can't stand hearin this.
+*Text*: Não suporto ouvir isto.
 >>>>>
 *Character*: crab_angry
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
-*Text*: I'm not gonna take this laying down, we need to go back, teach those monsters a lesson.
+*Text*: Não vou ficar parado, temos que voltar e ensinar uma lição àqueles monstros.
 >>>>>
 
 *Character*: otter_nervous
 *Volume*: -6
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk1.wav
 
-*Text*: We can't, there's no way we could swim up the river and through the dam, the waters are too strong.
+*Text*: Não podemos, não há como nadar rio acima e passar pela barragem, a água está muito forte.
 >>>>>
 
 *Character*: otter
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
 
-*Text*: Maybe Sal could, but that'd be suicide.
+*Text*: Talvez o Sal pudesse, mas isso seria suicídio.
 >>>>>
 
 *Character*: beaver_sad
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-explanation.wav
-*Text*: I don't want to go back... i don't want to lose any of you.
+*Text*: Não quero voltar... não quero perder nenhum de vocês.
 *Volume*: 10
 >>>>>
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
-*Text*: It would be dangerous and reckless...
+*Text*: Seria perigoso e imprudente...
 >>>>>
 
 *Character*: frog_notamused
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
-*Text*: IT, just broke through the lab regardless, it's likely in shambles.
+*Text*: ELE acabou de invadir o laboratório, provavelmente está em ruínas.
 >>>>>
 
 *Character*: shork
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/shorkroar.wav
 *Volume*: -6
-*Text*: Don't call me it!
+*Text*: Não me chames “ele”!
 >>>>>
 
 *Character*: frog
 *Volume*: 10
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
-*Text*: Oh, my apologies. We didn't even ask your name.
+*Text*: Oh, minhas desculpas. Nem perguntámos o teu nome.
 >>>>>
 
 *Character*: shork
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: I... I don't have a name...
+*Text*: Eu... Eu não tenho nome...
 >>>>>
 *Character*: shork_sad
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: I don't even know what i am....
+*Text*: Nem sei o que sou...
 >>>>>
 
 
 *Character*: beaver_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
-*Text*: We could give you a name.
+*Text*: Podemos dar-te um nome.
 >>>>>
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
-*Text*: Do any of you have any ideas my friends?
+*Text*: Algum de vocês tem alguma ideia, meus amigos?
 >>>>>
 
 *Character*: shork
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: Friends...
+*Text*: Amigos...
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
 *Volume*: 0
-*Text*: Friend, i like that.
+*Text*: Amigo, gosto disso.
 >>>>>
 
 *Character*: salmon
@@ -350,13 +350,13 @@
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Volume*: 10
-*Text*: That does sound nice.
+*Text*: Isso soa bem.
 >>>>>
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-question.wav
 *Volume*: -12
-*Text*: Any objections?
+*Text*: Alguma objeção?
 >>>>>
 
 *Character*: hidden
@@ -366,23 +366,23 @@
 
 *Character*: beaver_happy
 
-*Text*: Friend it is.
+*Text*: Amigo será.
 >>>>>
 
 *Character*: shork_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: Thank you... friends.
+*Text*: Obrigado... amigos.
 >>>>>
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
 *Volume*: 10
-*Text*: And do you have anywhere to go?
+*Text*: E tens algum lugar para onde ir?
 >>>>>
 *Character*: beaver_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
-*Text*: If not, you could join us!
+*Text*: Se não, podes juntar-te a nós!
 >>>>>
 
 *Character*: none
@@ -393,40 +393,40 @@
 *Character*: shork_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
 *Volume*: 0
-*Text*: I... i would like that.
+*Text*: Eu... eu gostaria disso.
 >>>>>
 *Character*: shork
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: Thank you for understanding my plight my friends.
+*Text*: Obrigado por entender a minha situação, amigos meus.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
 *Volume*: 0
-*Text*: And even though the lab is out reach, we may just find more wayward souls if we keep looking.
+*Text*: E embora o laboratório esteja fora de alcance, talvez encontremos mais almas perdidas se continuarmos procurando.
 >>>>>
 
 *Character*: beaver_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Volume*: 10
-*Text*: Hm, but for now, what do u guys say we take a well deserved break?
+*Text*: Hm, mas por agora, que tal darmos uma pausa merecida?
 >>>>>
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal2.wav
-*Text*: I do need to give this head of mine a rest.
+*Text*: Eu preciso dar um descanso a esta minha cabeça.
 >>>>>
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
 *Volume*: -12
-*Text*: I guess kickin back and enjoyin the ocean breeze don't sound so bad.
+*Text*: Acho que relaxar e aproveitar a brisa do mar não soa tão mal.
 >>>>>
 
 *Character*: otter_happy
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
 *Volume*: -6
-*Text*: Other animals may also need our help, we could keep an eye out for them.
+*Text*: Outros animais também podem precisar da nossa ajuda, podemos ficar de olho neles.
 >>>>>
 
 *Character*: salmon
@@ -438,7 +438,7 @@
 *Character*: shork_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: A rest, that sounds wonderful...
+*Text*: Um descanso, isso soa maravilhoso...
 >>>>>
 
 *Character*: none

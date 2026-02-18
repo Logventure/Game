@@ -28,32 +28,32 @@
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Volume*: 10
-*Text*: Did your hear anything Sir Frogginton?
+*Text*: Ouviste alguma coisa, senhor Frogginton?
 >>>>>
 
 
 *Character*: frog_notamused
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Volume*: 10
-*Text*: The th-
+*Text*: O te-
 >>>>>
 
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
 *Volume*: 10
-*Text*: Yes yes yes, ok.
+*Text*: Sim, sim, sim, está bem.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Volume*: 10
-*Text*: Did you hear anything though?
+*Text*: Mas ouviste alguma coisa?
 >>>>>
 
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Volume*: 10
-*Text*: I am indeed sensing some like minded fellows brainwaves...
+*Text*: De facto estou a sentir ondas cerebrais de alguns companheiros com mentalidade semelhante...
 >>>>>
 
 
@@ -68,7 +68,7 @@
 *Character*: beaver_surprised
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
-*Text*: There it is again!
+*Text*: Aí está outra vez!
 >>>>>
 
 
@@ -88,66 +88,66 @@
 *Character*: beaver_surprised
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
-*Text*: There they are!
+*Text*: Lá estão eles!
 >>>>>
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-question.wav
 *Volume*: 10
-*Text*: Can u sense it Sir Justin?
+*Text*: Consegue senti-lo, senhor Justin?
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation.wav
 *Volume*: 10
-*Text*: It's indubitably a genius, it's understanding of physics to be able to leap in that fashion is unmistakable!
+*Text*: É sem dúvida um génio; a sua compreensão da física para saltar daquela forma é inconfundível!
 >>>>>
 
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Volume*: 10
-*Text*: Isn't that...
+*Text*: Isso não é...
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive-long.wav
 *Volume*: 10
-*Text*: ... a pacifier?
+*Text*: ... uma chucha?
 >>>>>
 
 
 *Character*: frog_notamused
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Volume*: 10
-*Text*: Don't offend it in such a heinous manner Sir Justin.
+*Text*: Não o ofendas de forma tão horrível, senhor Justin.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
 *Volume*: 10
-*Text*: That's rude.
+*Text*: Isso é rude.
 >>>>>
 
 
 *Character*: beaver_sad
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
-*Text*: I was just stating a fact...
+*Text*: Só estava a constatar um facto...
 >>>>>
 
 *Cutscene*: none
 >>>>>
 
-*Text*: Hm, it does seem to be following us now.
+*Text*: Hm, parece estar a seguir-nos agora.
 >>>>>
 
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
 *Volume*: 10
-*Text*: No doubt because it understands and shares our plight.
+*Text*: Sem dúvida porque compreende e partilha da nossa aflição.
 >>>>>
 
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Volume*: 10
-*Text*: Hmm. I wonder what their name is.
+*Text*: Hmm. Pergunto-me qual será o seu nome.
 >>>>>
 
 
@@ -162,7 +162,7 @@
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Volume*: 10
-*Text*: Salomon the enlightened it says.
+*Text*: Diz que se chama Salomão, o iluminado.
 >>>>>
 
 
@@ -177,18 +177,18 @@
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Volume*: 10
-*Text*: What?...
+*Text*: O quê?...
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive-long.wav
 *Volume*: 10
-*Text*: So, you can understand fish speak?
+*Text*: Então consegues perceber o que os peixes dizem?
 >>>>>
 
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Volume*: 10
-*Text*: Why yes of course.
+*Text*: Sim, claro.
 >>>>>
 
 *Character*: beaver
@@ -198,7 +198,7 @@
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
 *Volume*: 10
-*Text*: (I'm just gonna call them Sal) .
+*Text*: (Vou chamá-lo de Sal).
 >>>>>
 
 
@@ -212,18 +212,18 @@
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal2.wav
 *Volume*: 10
-*Text*: It also says it can help us with quick manuvering if need be.
+*Text*: Também diz que pode ajudar-nos com manobras rápidas se necessário.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
 *Volume*: 10
-*Text*: If we need to suddenly cover a larger distance RIGHT or LEFT, Salomon says he will push the boat in either direction.
+*Text*: Se precisarmos cobrir uma distância maior repentinamente para a DIREITA ou ESQUERDA, o Salomão diz que empurrará o barco nessa direção.
 >>>>>
 
 
 *Character*: beaver_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
 *Volume*: 10
-*Text*: That could indeed come in handy to cover more ground quickly.
+*Text*: Isso poderá ser realmente útil para cobrir terreno rapidamente.
 >>>>>
 
 #

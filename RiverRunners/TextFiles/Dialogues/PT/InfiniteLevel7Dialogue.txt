@@ -14,12 +14,12 @@
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-question.wav
-*Text*: Didn't we say we were gonna get some rest.
+*Text*: Não dissemos que íamos descansar?
 >>>>>
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-Inquisitive.wav
-*Text*: Well, some daily exercise can't hurt?
+*Text*: Bem, um pouco de exercício diário não faz mal, não é?
 >>>>>
 
 *Character*: salmon
@@ -29,20 +29,20 @@
 
 *Character*: otter
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk4.wav
-*Text*: Lets get going then.
+*Text*: Então vamos lá.
 >>>>>
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
-*Text*: Aye, this log ain't gonna row and defend itself.
+*Text*: Sim, este tronco não vai remar e defender-se sozinho.
 >>>>>
 
 *Character*: shork
 
-*Text*: Oh,also... 
+*Text*: Ah, também... 
 >>>>>
 
-*Text*: If you encounter another shark trying to bite you, uh, that's not me, it's my cousin...
+*Text*: Se encontrares outro tubarão a tentar morder-te, uh, esse não sou eu, é o meu primo...
 >>>>>
 
 *Text*: Dave.

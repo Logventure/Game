@@ -16,36 +16,36 @@
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
-*Text*: Definitely couldn't have gotten through over some of those tree trunks Sir Frog.
+*Text*: Definitivamente não teria conseguido passar por alguns daqueles troncos, senhor Sapo.
 >>>>>
 
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
 *Volume*: 10
-*Text*: Sir Frogginton.
+*Text*: Senhor Frogginton.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Volume*: 10
-*Text*: The third.
+*Text*: O terceiro.
 >>>>>
 
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-explanation.wav
 *Volume*: 10
-*Text*: Uh, yes of course.
+*Text*: Hum, sim, claro.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
-*Text*: Well, let's hurry up, there might be other innocent lovable souls out there in need of help.
+*Text*: Bem, vamos despachar-nos, pode haver outras almas inocentes e adoráveis por aí a precisar de ajuda.
 >>>>>
 
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
 *Volume*: 10
-*Text*: Indeed, i would hope to find some intellectual equal on this journey.
+*Text*: De facto, espero encontrar algum igual intelectual nesta viagem.
 >>>>>
 
 #

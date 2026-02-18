@@ -20,20 +20,20 @@
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
 *Volume*: 10
-*Text*: So, Sir Frogginton, are your brainwaves sensing anything, any potential friends? Enemies?
+*Text*: Então, senhor Frogginton, as suas ondas cerebrais estão a sentir alguma coisa? Potenciais amigos? Inimigos?
 >>>>>
 
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
 *Volume*: 10
-*Text*: Hmmmmm, i can't say i'm sensing much this time around.
+*Text*: Hmmmm, desta vez não me parece que esteja a sentir muito.
 >>>>>
 
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
-*Text*: What about you Sal?
+*Text*: E quanto a ti, Sal?
 >>>>>
 
 
@@ -47,7 +47,7 @@
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
 *Volume*: 10
-*Text*: I figured as much. As i said, there doesn't seem to be anything of note nearby.
+*Text*: Já desconfiava disso. Como disse, não parece haver nada de relevante por perto.
 >>>>>
 
 
@@ -61,7 +61,7 @@
 
 *Character*: beaver
 
-*Text*: Well, let's keep on going either way.
+*Text*: Bem, vamos continuar, em todo o caso.
 >>>>>
 
 
@@ -72,39 +72,39 @@
 *Cutscene*: res://Assets/Cutscenes/i-CS-Common3.png
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-scared.wav
 *Volume*: -12
-*Text*: HEY, I'M SWIMMIN HERE!
+*Text*: EI, EU ESTOU A NADAR AQUI!
 >>>>>
 
 
 *Character*: beaver_surprised
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
-*Text*: Oh, i'm sorry! I didn't see you there.
+*Text*: Oh, peço desculpa! Não vos vi aí.
 >>>>>
 
 *Character*: crab_disappointed
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
 *Volume*: -12
-*Text*: Well duh, i came from below.
+*Text*: Bem, obvio, vim lá de baixo.
 >>>>>
 *Character*: crab
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
-*Text*: But i what i really want to know, is what you're doing round these parts.
+*Text*: Mas o que eu realmente quero saber é o que estão a fazer por estas bandas.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
-*Text*: This is my turf y'see, and i don't recall givin you folks permission to strut your fannies round here.
+*Text*: Este é o meu território, percebem, e não me lembro de vos ter dado permissão para andar por aqui.
 >>>>>
 
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-explanation.wav
 *Volume*: 10
-*Text*: This must be some kind of missunderstanding...
+*Text*: Isto deve ser algum tipo de mal-entendido...
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
-*Text*: We're actually checking if anyone needs help, something happened to the nearby Dam, 
+*Text*: Estamos na verdade a verificar se alguém precisa de ajuda, aconteceu algo com a barragem mais perto, 
 >>>>>
 
 
@@ -112,7 +112,7 @@
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
 *Volume*: -12
-*Text*: Hm, ya don't say...
+*Text*: Hm, realmente dizes isso...
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
 *Text*: ...
@@ -140,35 +140,35 @@
 *Character*: crab
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
-*Text*: Well in that case, i don't mind helpin ya along the way.
+*Text*: Nesse caso, não me importo de vos ajudar pelo caminho.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
-*Text*: I myself want to know who's messin with these waters.
+*Text*: Eu próprio quero saber quem anda a mexer nestas águas.
 >>>>>
 *Character*: crab_disappointed
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy1.wav
-*Text*: Nobody jepordizes my river and gets away with it.
+*Text*: Ninguém põe em risco o meu rio e sai impune.
 >>>>>
 
 
 *Character*: beaver_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
-*Text*: I'm not gonna say no to some extra help.
+*Text*: Não vou dizer não a uma ajuda extra.
 >>>>>
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
-*Text*: Oh, i didn't catch your name.
+*Text*: Ah, esqueci-me do seu nome.
 >>>>>
 
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
 *Volume*: -12
-*Text*: The name's Don Vito Crableone.
+*Text*: O nome é Don Vito Crableone.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
-*Text*: But you can call me Vito.
+*Text*: Mas podem chamar-me Vito.
 >>>>>
 
 
@@ -176,11 +176,11 @@
 *Character*: beaver_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
 *Volume*: 10
-*Text*: Good to know.
+*Text*: Bom saber.
 >>>>>
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
-*Text*: So, is everyone in favor of having Vito join us in this journey?
+*Text*: Portanto, estão todos a favor de ter o Vito connosco nesta jornada?
 >>>>>
 
 
@@ -194,7 +194,7 @@
 *Character*: frog_notamused
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
 *Volume*: 10
-*Text*: Hmmmm, i don't typically mingle with brutes...
+*Text*: Hmmmm, normalmente não me misturo com brutos...
 >>>>>
 
 
@@ -203,27 +203,27 @@
 *Cutscene*: none
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
 *Volume*: -12
-*Text*: Eh, you'll thank me when we come across some rocks we just can't maneuver around.
+*Text*: Eh, vão agradecer-me quando nos depararmos com algumas rochas que simplesmente não conseguimos contornar.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
-*Text*: I can protect ya with this hard shell of mine, just gotta time the block properly.
+*Text*: Posso proteger-vos com esta carapaça dura, só precisamos acertar o bloqueio à hora certa.
 >>>>>
 
 
 *Character*: beaver_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
 *Volume*: 10
-*Text*: Thank you for lending us your pincers Vito.
+*Text*: Obrigado por nos emprestares as tuas pinças, Vito.
 >>>>>
 
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
 *Volume*: -12
-*Text*: No problem bud.
+*Text*: Sem problema, companheiro.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
-*Text*: Now let's get this show on the road.
+*Text*: Agora vamos colocar este espetáculo na estrada.
 >>>>>
 
 

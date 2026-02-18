@@ -17,17 +17,17 @@
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
-*Text*: You really do have a hard shell don't u Vito?
+*Text*: Tens mesmo uma carapaça dura, não tens, Vito?
 >>>>>
 
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
 *Volume*: -12
-*Text*: Sure do Kiddo.
+*Text*: Pois tenho, miúdo.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
-*Text*: Been in this business for a long time now.
+*Text*: Já estou neste ramo há muito tempo.
 >>>>>
 
 
@@ -40,45 +40,45 @@
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-question.wav
 *Volume*: 10
-*Text*: The rock breaking business?
+*Text*: No ramo de partir pedras?
 >>>>>
 
 
 *Character*: crab_disappointed
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
 *Volume*: -12
-*Text*: Sure...
+*Text*: Claro...
 >>>>>
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
-*Text*: You could call it that, hehehe.
+*Text*: Podes chamar-lhe isso, hehe.
 >>>>>
 
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared.wav
 *Volume*: 10
-*Text*: (Gulp.)
+*Text*: (Glup.)
 >>>>>
 
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-scared.wav
-*Text*: Anywaayyyy...
+*Text*: Enfimmm...
 >>>>>
 *Character*: beaver_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
-*Text*: That hard shell of yours will surely come in handy.
+*Text*: Essa tua carapaça vai certamente ser útil.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
-*Text*: Glad to have u aboard Vito.
+*Text*: É bom ter-te connosco, Vito.
 >>>>>
 
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy1.wav
 *Volume*: -12
-*Text*: Same here Kiddo.
+*Text*: Digo o mesmo, miúdo.
 >>>>>
 
 #

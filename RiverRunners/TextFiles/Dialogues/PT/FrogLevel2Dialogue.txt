@@ -21,16 +21,16 @@
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared2.wav
 *Volume*: 10
-*Text*: HHHEEEELPPPPPP.
+*Text*: AJUUUUUUDA.
 >>>>>
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
 *Volume*: 10
-*Text*: So that's what that high pitched croaking was. Hm, let me see if i can get them out of there.
+*Text*: Então era esse o grasnido agudo que ouvia.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
-*Text*: HEY! YOU THERE! JUMP ONTO MY LOG!
+*Text*: EI! TU AÍ! SALTA PARA O MEU TRONCO!
 >>>>>
 
 
@@ -44,74 +44,74 @@
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Volume*: 10
-*Text*: Thank you for saving me from that hazardous situation sir.
+*Text*: Obrigado por me salvar daquela situação perigosa, senhor.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
 *Volume*: 10
-*Text*: Not that i couldn't eventually get out of that precarious bind by my lonesome of course...
+*Text*: Não que eu não pudesse eventualmente sair dessa situação precária sozinho, claro...
 >>>>>
 
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
-*Text*: You're very welcome sir Frog.
+*Text*: De nada, senhor Sapo.
 >>>>>
 
 
 *Character*: frog_notamused
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
 *Volume*: 10
-*Text*: Sir Frogginton.
+*Text*: Senhor Frogginton.
 >>>>>
 
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
 *Volume*: 10
-*Text*: You're still very welcome sir Frogginton.
+*Text*: Continua a ser um prazer, senhor Frogginton.
 >>>>>
 
 
 *Character*: frog_notamused
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation.wav
 *Volume*: 10
-*Text*: The third.
+*Text*: O terceiro.
 >>>>>
 
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal.wav
 *Volume*: 10
-*Text*: Uh...
+*Text*: Hum...
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Volume*: 10
-*Text*: Sure.
+*Text*: Claro.
 >>>>>
 
 *Cutscene*: none
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal.wav
 *Volume*: 10
-*Text*: Well, i'm definitely glad to have a friendly face to keep me company on this journey.
+*Text*: Bem, estou definitivamente feliz por ter uma cara amiga para me fazer companhia nesta viagem.
 >>>>>
 
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
 *Volume*: 10
-*Text*: Yes, yes, i do have to say this is indeed a mighty vessel.
+*Text*: Sim, sim, tenho que dizer que este é de facto um navio poderoso.
 >>>>>
 *Character*: frog_notamused
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
 *Volume*: 10
-*Text*: I do believe it may face some vertical based issues ahead however.
+*Text*: Acredito que poderá enfrentar alguns problemas verticais à frente, no entanto.
 >>>>>
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Volume*: 10
-*Text*: For this purpose i pledge my insurmoutable leg strength. If we encounter any fallen trees on our path, we may now overcome them by jumping.
+*Text*: Para este propósito, prometo a minha força insuperável nas pernas. Se encontrarmos árvores caídas no nosso caminho, agora podemos ultrapassá-las saltando.
 >>>>>
 
 #

@@ -24,7 +24,7 @@
 
 *Sound*: res://Assets/Audio/Cutscenes/damcrash.wav
 *Volume*: -6
-*Text*: (CRASH!!)
+*Text*: (ESTRONDO!!)
 >>>>>
 
 *Cutscene*: res://Assets/Cutscenes/c-CS-Justin-Dam-Break3-noJustin.png
@@ -32,23 +32,23 @@
 *Character*: beaver_surprised
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-scared.wav
 *Volume*: 10
-*Text*: Meu deus que porra é essa?
+*Text*: Oh não! A barragem rebentou!?
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
 *Volume*: 10
-*Text*: Vou só fingir que o diálogo está todo em português.
+*Text*: Como é que isso aconteceu?
 >>>>>
 
 *Cutscene*: res://Assets/Cutscenes/b-CS-Justin-Dam-Break2.png
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
-*Text*: The water is flowing rapidly into the river bank!
+*Text*: A água está a correr rapidamente para a margem do rio!
 >>>>>
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-scared.wav
 *Volume*: 10
-*Text*: This could affect a lot of animals in the forest.
+*Text*: Isto pode afetar muitos animais na floresta.
 >>>>>
 
 
@@ -56,15 +56,15 @@
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
-*Text*: I Have to be quick and check if anyone is hurt.
+*Text*: Tenho de ser rápido e verificar se alguém se magoou.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Volume*: 10
-*Text*: Seems like the rocks here pose the most danger.
+*Text*: Parece que as rochas aqui são o maior perigo.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
 *Volume*: 10
-*Text*: Thankfully they seem to follow a weirdly similar pattern, i should be able to avoid them by going LEFT and RIGHT.
+*Text*: Felizmente, parecem seguir um padrão estranho e repetido, devo conseguir evitá-las indo PARA A ESQUERDA e DIREITA.
 >>>>>
 
 

@@ -29,29 +29,29 @@
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared.wav
 
 *Volume*: 10.0
-*Text*: Holy Makerel!!
+*Text*: Santo Carapau!!
 >>>>>
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-question.wav
 *Volume*: 10.0
-*Text*: What was that!?
+*Text*: O que foi isso!?
 >>>>>
 
 
 *Character*: beaver_surprised
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Volume*: 10.0
-*Text*: That does sound scary...
+*Text*: Isso soa assustador...
 >>>>>
 
 
 *Character*: crab_disappointed
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
 *Volume*: -12
-*Text*: A lil roaring's got you all quaking in your boots.
+*Text*: Um rugidinho e já estão todos a tremer.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
-*Text*: I've heard much more intense screams...
+*Text*: Já ouvi gritos bem mais intensos...
 >>>>>
 
 
@@ -65,12 +65,12 @@
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
 *Volume*: -6
-*Text*: (Hmm, these folks seem hopeless)
+*Text*: (Hmm, estes parecem sem esperança)
 >>>>>
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-talkingtoself.wav
 *Volume*: -6
-*Text*: (And somewhat suspicious...)
+*Text*: (E algo suspeitos...)
 >>>>>
 
 *Cutscene*: res://Assets/Cutscenes/k-CS-Common4.png
@@ -80,7 +80,7 @@
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-stoprightthere.wav
 *Volume*: -6
-*Text*: Who are you and what are you doing in these woods!?
+*Text*: Quem são vocês e o que fazem nestes bosques!?
 >>>>>
 
 *Character*: frog_scream
@@ -94,7 +94,7 @@
 *Character*: beaver_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
 *Volume*: 10.0
-*Text*: We mean no harm ma'am.
+*Text*: Não queremos fazer mal senhora.
 >>>>>
 
 
@@ -107,7 +107,7 @@
 
 *Character*: crab_angry
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
-*Text*: You don't get to come in here and start askin questions.
+*Text*: Não podem entrar aqui e começar a fazer perguntas.
 >>>>>
 
 *Cutscene*: none
@@ -116,18 +116,18 @@
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk2.wav
 *Volume*: -6
-*Text*: Sounds like some of you have a problem with authority.
+*Text*: Parece que alguns de vocês têm problemas com autoridade.
 >>>>>
 
 *Character*: otter
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk1.wav
 *Volume*: -6
-*Text*: I'm Ranger Ottivia Timber. I scout and take care of these woods.
+*Text*: Sou a Ranger Ottivia Timber. Patrulho e cuido destes bosques.
 >>>>>
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk2.wav
 *Volume*: -6
-*Text*: What about you folks, mind introducing yourselves?
+*Text*: E vocês, quem são? Querem apresentar-se?
 >>>>>
 
 *Character*: crab
@@ -139,7 +139,7 @@
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10.0
-*Text*: My name's Justin, Justin Beaver, i live near the dam, so as soon as i heard it breaking, i came rushing to check if anyone had been hurt.
+*Text*: O meu nome é Justin, Justin Castor, vivo perto da barragem e quando ouvi que ela se partiu, vim a correr ver se alguém se feriu.
 >>>>>
 
 
@@ -148,19 +148,19 @@
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk2.wav
 *Volume*: -6
-*Text*: An exemplary citizen it seems.
+*Text*: Um cidadão exemplar, ao que parece.
 >>>>>
 
 *Character*: beaver_happy
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal.wav
 *Volume*: 10.0
-*Text*: Treat others how you would like to be treated, that's how i try to live my life.
+*Text*: Trata os outros como gostarias de ser tratado, é assim que tento viver.
 >>>>>
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-explanation.wav
 *Volume*: 10.0
-*Text*: This here is Sir Frogginton the third, Sal, and Vito.
+*Text*: Este aqui é o Sir Frogginton III, o Sal e o Vito.
 >>>>>
 
 
@@ -168,7 +168,7 @@
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal2.wav
 *Volume*: 10.0
-*Text*: It's a pleasure to meet you ma'am.
+*Text*: É um prazer conhecê-la, senhora.
 >>>>>
 
 
@@ -181,44 +181,44 @@
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
-*Text*: Hm, yeah, that's the name.
+*Text*: Hm, sim, é esse o nome.
 >>>>>
 
 *Character*: otter
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
 *Volume*: -6
-*Text*: Hm, seems like you're mostly well meaning folk then.
+*Text*: Hm, parece que são pessoas de boas intenções.
 >>>>>
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-talkingtoself.wav
 *Volume*: -6
-*Text*: I'm investigating the source of this disaster myself.
+*Text*: Estou a investigar a origem deste desastre.
 >>>>>
 
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy1.wav
 *Volume*: -12
-*Text*: Hrm, seems like our goals might align after all then.
+*Text*: Hm, parece que os nossos objetivos se alinham.
 >>>>>
 
 *Character*: otter
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk4.wav
 *Volume*: -6
-*Text*: Indeed, and you might just be in need of my throwing arm. Through my investigation i've seen some concerning signs.
+*Text*: De facto, e pode ser que precises do meu braço para lançar coisas. Durante a minha investigação, vi sinais preocupantes.
 >>>>>
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk2.wav
 *Volume*: -6
-*Text*: Signs that another creature might be behind this. I've encountered strange tentacles around these waters.
+*Text*: Sinais de que outra criatura pode estar por trás disto. Encontrei tentáculos estranhos nestas águas.
 >>>>>
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared.wav
 *Volume*: 6
-*Text*: Ten-Ten-Tentacles you say???...
+*Text*: T-T-Tentáculos, disseste???...
 >>>>>
 
 
@@ -232,12 +232,12 @@
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Volume*: 10.0
-*Text*: Don't talk to me like that Salomon, i've done nothing wrong!
+*Text*: Não me fales assim Salomon, não fiz nada de mal!
 >>>>>
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
 *Volume*: 10.0
-*Text*: Fear is a normal and vital survival instant...
+*Text*: O medo é um instinto normal e vital de sobrevivência...
 >>>>>
 
 *Character*: salmon_questioning
@@ -248,13 +248,13 @@
 
 *Character*: crab
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
-*Text*: Fears aside, this does sound like a good lead.
+*Text*: Medos à parte, isto parece uma boa pista.
 >>>>>
 
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
 *Volume*: 10.0
-*Text*: Lets get to the bottom of this then.
+*Text*: Vamos então descobrir a verdade.
 >>>>>
 
 
@@ -263,7 +263,7 @@
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
 *Volume*: -6
-*Text*: Indeed, if we encounter any tentacles, i can help of course.
+*Text*: Sem dúvida, se encontrarmos tentáculos, posso ajudar, claro.
 >>>>>
 
 

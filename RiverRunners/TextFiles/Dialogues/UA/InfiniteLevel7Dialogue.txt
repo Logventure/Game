@@ -1,0 +1,53 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-question.wav
+*Text*: Хіба ми не казали, що відпочинемо?
+>>>>>
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-Inquisitive.wav
+*Text*: Ну, немного ежедневных упражнений не повредит, правда?
+>>>>>
+
+*Character*: salmon
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-joy1.wav
+*Text*: ГлууУуу, глуууу.
+>>>>>
+
+*Character*: otter
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk4.wav
+*Text*: Тоді поїхали.
+>>>>>
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Text*: Так, цей колода сама не буде гребти і захищатися.
+>>>>>
+
+*Character*: shork
+
+*Text*: О, і ще...
+>>>>>
+
+*Text*: Якщо ти зустрінеш іншого акулу, що намагається тебе вкусити, е-е, це не я, це мій кузен...
+>>>>>
+
+*Text*: Дейв.
+>>>>>
+
+#
+#Use one text file for each conversation
+#

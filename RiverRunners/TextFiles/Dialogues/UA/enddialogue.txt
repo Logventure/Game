@@ -1,0 +1,52 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: otter
+
+*Text*: Uh, looks like we survived.
+>>>>>
+
+
+*Character*: frog
+
+*Text*: You shouldn't underestimate our player's skills.
+>>>>>
+
+*Character*: crab
+
+*Text*: Are you kidding? They lost 3 times.
+>>>>>
+
+*Character*: frog
+
+*Text*: Things like this take time to learn.
+>>>>>
+
+*Character*: crab
+
+*Text*: They lost 3 times...
+>>>>>
+
+*Text*: On a TEST level.
+>>>>>
+
+*Text*: ON A GAME THEY MADE.
+>>>>>
+
+*Text*: At this point it's just skill issue tbh.
+>>>>>
+
+#
+#Use one text file for each conversation
+#

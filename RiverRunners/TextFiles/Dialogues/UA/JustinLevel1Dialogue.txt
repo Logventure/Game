@@ -1,0 +1,74 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/a-CS-Justin-Dam-Break1.png
+>>>>>
+
+*Cutscene*: res://Assets/Cutscenes/c-CS-Justin-Dam-Break3.png
+
+*Character*: shork_gray
+
+*Name*: ???
+
+*Sound*: res://Assets/Audio/Cutscenes/damcrash.wav
+*Volume*: -6
+*Text*: (ГАВ!)
+>>>>>
+
+*Cutscene*: res://Assets/Cutscenes/c-CS-Justin-Dam-Break3-noJustin.png
+
+*Character*: beaver_surprised
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-scared.wav
+*Volume*: 10
+*Text*: О ні! Дамбу прорвало!?
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
+*Volume*: 10
+*Text*: Як це сталося?
+>>>>>
+
+*Cutscene*: res://Assets/Cutscenes/b-CS-Justin-Dam-Break2.png
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: Вода стрімко тече до берега річки!
+>>>>>
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-scared.wav
+*Volume*: 10
+*Text*: Це може вплинути на багатьох тварин у лісі.
+>>>>>
+
+
+*Cutscene*: none
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: Я маю бути швидким і перевірити, чи ніхто не постраждав.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10
+*Text*: Схоже, що найбільша небезпека тут — це скелі.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10
+*Text*: На щастя, вони слідують дивному шаблону — я зможу їх оминути, рухаючись ЛІВОРУЧ і ПРАВОРУЧ.
+>>>>>
+
+
+
+#
+#Use one text file for each conversation
+#

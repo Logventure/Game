@@ -1,0 +1,231 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/f-CS-Sal.png
+>>>>>
+
+*Character*: salmon_gray
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking1.wav
+*Volume*: -6
+*Text*: Глу, глу, глу...
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10
+*Text*: Ви щось чули, сер Фроггінтон?
+>>>>>
+
+
+*Character*: frog_notamused
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Volume*: 10
+*Text*: Тр-
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
+*Volume*: 10
+*Text*: Так, так, так, гаразд.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10
+*Text*: Але ти щось почув?
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Volume*: 10
+*Text*: Справді, я відчуваю мозкові хвилі споріднених розумів...
+>>>>>
+
+
+*Character*: salmon_gray
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking2.wav
+*Volume*: -6
+*Text*: Глу, глу, глуууу?..
+>>>>>
+
+
+*Character*: beaver_surprised
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: Ось знову воно!
+>>>>>
+
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/g-CS-Common2.png
+>>>>>
+
+*Character*: salmon_surprised
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared1.wav
+*Volume*: -6
+*Text*: Глу, глу, ГЛУууУууУууу!!!
+>>>>>
+
+
+*Character*: beaver_surprised
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: Ось вони!
+>>>>>
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-question.wav
+*Volume*: 10
+*Text*: Ви це відчуваєте, сер Джастіне?
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation.wav
+*Volume*: 10
+*Text*: Це безперечно геній — його розуміння фізики при таких стрибках безпомилкове!
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10
+*Text*: Хіба це не... ?
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive-long.wav
+*Volume*: 10
+*Text*: ... соска?
+>>>>>
+
+
+*Character*: frog_notamused
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Volume*: 10
+*Text*: Не ображай його так жорстоко, сер Джастіне.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Volume*: 10
+*Text*: Це грубо.
+>>>>>
+
+
+*Character*: beaver_sad
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: Я просто сказав факт...
+>>>>>
+
+*Cutscene*: none
+>>>>>
+
+*Text*: Хмм, здається, він іде за нами.
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
+*Volume*: 10
+*Text*: Без сумніву, бо він розуміє і поділяє нашу біду.
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10
+*Text*: Хмм. Цікаво, яке в нього ім’я.
+>>>>>
+
+
+*Character*: salmon
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-explaining.wav
+*Volume*: -10
+*Text*: Глу, глууу, глуу.
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Volume*: 10
+*Text*: Каже, що його звати Саломон Просвітлений.
+>>>>>
+
+
+*Character*: salmon_questioning
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-question2.wav
+*Volume*: -10
+*Text*: Глу?...
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10
+*Text*: Що?...
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive-long.wav
+*Volume*: 10
+*Text*: То ти розумієш мову риб?
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Volume*: 10
+*Text*: Так, звісно.
+>>>>>
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
+*Volume*: 10
+*Text*: ...
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10
+*Text*: (Я просто назву його Сал).
+>>>>>
+
+
+*Character*: salmon
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking1.wav
+*Volume*: -10
+*Text*: Глу, глууу, глуу, глу.
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal2.wav
+*Volume*: 10
+*Text*: Також каже, що може допомогти з швидким маневруванням, якщо потрібно.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Volume*: 10
+*Text*: Якщо нам потрібно буде раптово пересунутися вправо чи вліво, Саломон каже, що штовхне човен.
+>>>>>
+
+
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10
+*Text*: Це справді може стати в пригоді для швидкого руху вперед.
+>>>>>
+
+#
+#Use one text file for each conversation
+#

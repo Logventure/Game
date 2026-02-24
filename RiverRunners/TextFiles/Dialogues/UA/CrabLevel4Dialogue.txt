@@ -1,0 +1,232 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/h-CS-Crab.png
+>>>>>
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
+*Volume*: 10
+*Text*: Отже, сер Фроггінтон, ваші мозкові хвилі щось відчувають? Потенційні друзі? Вороги?
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
+*Volume*: 10
+*Text*: Хмммм, цього разу мене не дуже щось відчувається.
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
+*Text*: А ти як, Сал?
+>>>>>
+
+
+*Character*: salmon_questioning
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking1.wav
+*Volume*: -12
+*Text*: Глуу, глу, глууу...
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Volume*: 10
+*Text*: Я так і відчував. Як я казав, поруч нема нічого суттєвого.
+>>>>>
+
+
+*Character*: crab_gray
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
+*Volume*: -12
+*Text*: Хрммм...
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: Гаразд, продовжимо в будь‑якому випадку.
+>>>>>
+
+
+
+
+*Character*: crab_angry
+*Name*: ???
+*Cutscene*: res://Assets/Cutscenes/i-CS-Common3.png
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-scared.wav
+*Volume*: -12
+*Text*: ЕЙ, Я ТУТ ПЛАВАЮ!
+>>>>>
+
+
+*Character*: beaver_surprised
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: Ой, вибач! Я вас тут не помітив.
+>>>>>
+
+*Character*: crab_disappointed
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Volume*: -12
+*Text*: Ну, очевидно, я звідти, знизу прийшов.
+>>>>>
+*Character*: crab
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
+*Text*: Але що я насправді хочу знати — що ви тут взагалі робите.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Text*: Це моя територія, розумієте, і я не пригадую, щоб я дозволяв вам шаритися тут.
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-explanation.wav
+*Volume*: 10
+*Text*: Напевно це якесь непорозуміння...
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Text*: Ми насправді перевіряємо, чи комусь потрібна допомога — щось сталося з найближчою греблею, 
+>>>>>
+
+
+*Character*: crab
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Volume*: -12
+*Text*: Мм, саме так ти і кажеш...
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
+*Text*: ...
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10
+*Text*: ...
+>>>>>
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
+*Text*: ...
+>>>>>
+
+
+*Character*: salmon
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking2.wav
+*Volume*: -12
+*Text*: ...
+>>>>>
+
+*Character*: crab
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Text*: У такому разі я не проти допомогти вам у дорозі.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Text*: Я сам хочу знати, хто тут ворушить ці води.
+>>>>>
+*Character*: crab_disappointed
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy1.wav
+*Text*: Ніхто не загрожує моїй річці і не залишається непокараним.
+>>>>>
+
+
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: Я не відмовлюся від додаткової допомоги.
+>>>>>
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Text*: Ой, я забув вашого імені.
+>>>>>
+
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Volume*: -12
+*Text*: Ім’я — Дон Віто Креблеоне.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
+*Text*: Але можете називати мене Віто.
+>>>>>
+
+
+
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
+*Volume*: 10
+*Text*: Приємно знати.
+>>>>>
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
+*Text*: Отже, всі за те, щоб Віто приєднався до нас у цій подорожі?
+>>>>>
+
+
+*Character*: salmon_pog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-joy1.wav
+*Volume*: -12
+*Text*: Глуу, глууу~
+>>>>>
+
+
+*Character*: frog_notamused
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Volume*: 10
+*Text*: Хмммм, зазвичай я не воджуся з грубіянами...
+>>>>>
+
+
+*Character*: crab
+
+*Cutscene*: none
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Volume*: -12
+*Text*: Ех, ви мені будете вдячні, коли натрапимо на кілька скель, які просто не зможемо обійти.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Text*: Я можу захистити вас цією твердою панцерлю, треба лише правильно вгадати момент блокування.
+>>>>>
+
+
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10
+*Text*: Дякую, що позичаєш нам свої клешні, Віто.
+>>>>>
+
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
+*Volume*: -12
+*Text*: Немає проблем, друже.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Text*: Тепер виведемо це шоу на дорогу.
+>>>>>
+
+
+#
+#Use one text file for each conversation
+#

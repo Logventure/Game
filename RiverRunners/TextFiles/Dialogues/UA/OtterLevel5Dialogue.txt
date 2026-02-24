@@ -1,0 +1,272 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/j-CS-OT.png
+>>>>>
+
+*Character*: shork_gray
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/shorkroar.wav
+*Volume*: -6
+*Text*: Рааааррр!!
+>>>>>
+
+
+*Character*: frog_scream
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared.wav
+
+*Volume*: 10.0
+*Text*: Святі макрелі!
+>>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-question.wav
+*Volume*: 10.0
+*Text*: Що це було!?
+>>>>>
+
+
+*Character*: beaver_surprised
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10.0
+*Text*: Це звучить страшно...
+>>>>>
+
+
+*Character*: crab_disappointed
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
+*Volume*: -12
+*Text*: Легке гарчання — і всі вже в паніці.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Text*: Я чув набагато сильніші крики...
+>>>>>
+
+
+*Character*: salmon_surprised
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared1.wav
+*Text*: Глу, глууу??...
+>>>>>
+
+
+*Character*: otter_gray
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
+*Volume*: -6
+*Text*: (Гм, ці здаються безнадійними)
+>>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-talkingtoself.wav
+*Volume*: -6
+*Text*: (І трохи підозрілі...)
+>>>>>
+
+*Cutscene*: res://Assets/Cutscenes/k-CS-Common4.png
+
+
+*Character*: otter
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-stoprightthere.wav
+*Volume*: -6
+*Text*: Хто ви і що ви тут робите в цьому лісі!?
+>>>>>
+
+*Character*: frog_scream
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared2.wav
+*Volume*: 10.0
+*Text*: ААААААА!!
+>>>>>
+
+
+
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10.0
+*Text*: Ми не маємо лихих намірів, пані.
+>>>>>
+
+
+
+*Character*: salmon_surprised
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-explaining.wav
+*Volume*: -12
+*Text*: ГлуУу, глуууу, глуУУ!
+>>>>>
+
+*Character*: crab_angry
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
+*Text*: Не можна просто так прийти й почати ставити запитання.
+>>>>>
+
+*Cutscene*: none
+
+*Character*: otter_nervous
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk2.wav
+*Volume*: -6
+*Text*: Дехто з вас має проблеми з владою.
+>>>>>
+
+*Character*: otter
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk1.wav
+*Volume*: -6
+*Text*: Я рейнджер Оттівія Тімбер. Я наглядаю за цим лісом.
+>>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk2.wav
+*Volume*: -6
+*Text*: А ви? Представитесь?
+>>>>>
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
+*Volume*: -12
+*Text*: ...
+>>>>>
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10.0
+*Text*: Я Джастін, живу біля дамби. Як тільки почув, що вона зламалась, одразу прибіг.
+>>>>>
+
+
+
+*Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk2.wav
+*Volume*: -6
+*Text*: Зразковий громадянин, схоже.
+>>>>>
+
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal.wav
+*Volume*: 10.0
+*Text*: Стався до інших так, як хочеш, щоб ставились до тебе — ось мій принцип.
+>>>>>
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-explanation.wav
+*Volume*: 10.0
+*Text*: Це Сер Фроггінгтон III, Сал і Віто.
+>>>>>
+
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal2.wav
+*Volume*: 10.0
+*Text*: Приємно познайомитися, пані.
+>>>>>
+
+
+
+*Character*: salmon
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-joy1.wav
+*Volume*: -12
+*Text*: Глу глуУуУу~.
+>>>>>
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Text*: Гм, так, саме це ім’я.
+>>>>>
+
+*Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
+*Volume*: -6
+*Text*: Гм, здається, ви з добрими намірами.
+>>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-talkingtoself.wav
+*Volume*: -6
+*Text*: Я розслідую причину цього лиха.
+>>>>>
+
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy1.wav
+*Volume*: -12
+*Text*: Здається, наші цілі збігаються.
+>>>>>
+
+*Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk4.wav
+*Volume*: -6
+*Text*: Справді, можливо, знадобиться моя рука для метання. Під час розслідування я побачила тривожні ознаки.
+>>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk2.wav
+*Volume*: -6
+*Text*: Ознаки того, що за цим стоїть інша істота. Я бачила дивні щупальця у воді.
+>>>>>
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared.wav
+*Volume*: 6
+*Text*: Щ-Щ-Щупальця, ти сказала?..
+>>>>>
+
+
+
+*Character*: salmon_questioning
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared2.wav
+*Volume*: -12
+*Text*: Глу Глуу!
+>>>>>
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Volume*: 10.0
+*Text*: Не говори так зі мною, Саломоне, я нічого не зробив!
+>>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Volume*: 10.0
+*Text*: Страх — це нормальний та життєво необхідний інстинкт виживання...
+>>>>>
+
+*Character*: salmon_questioning
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared1.wav
+*Volume*: -12
+*Text*: Глуу, глуУу, глуууу...
+>>>>>
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
+*Text*: Попри страхи, це схоже на добру зачіпку.
+>>>>>
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10.0
+*Text*: Давайте з’ясуємо, що сталося.
+>>>>>
+
+
+
+*Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
+*Volume*: -6
+*Text*: Якщо ми знайдемо щупальця — я допоможу.
+>>>>>
+
+
+#
+#Use one text file for each conversation
+#

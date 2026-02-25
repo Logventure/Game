@@ -1,0 +1,119 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/d-CS-FrogJoins.png
+>>>>>
+
+*Character*: frog_scream
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared2.wav
+*Volume*: 10
+*Text*: AUUUUUUUTEEEEEEE.
+>>>>>
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
+*Volume*: 10
+*Text*: Alors c'était ce croassement aigu.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Text*: HEY! TOI LÀ! SAUTE SUR MA BÛCHE!
+>>>>>
+
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/e-CS-Common1.png
+>>>>>
+
+
+*Character*: frog
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Volume*: 10
+*Text*: Merci de m'avoir sauvé de cette situation dangereuse, monsieur.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Volume*: 10
+*Text*: Ce n'est pas que je ne puisse éventuellement sortir de cette situation précaire tout seul, bien sûr...
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: Je vous en prie, monsieur Grenouille.
+>>>>>
+
+
+*Character*: frog_notamused
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
+*Volume*: 10
+*Text*: Monsieur Frogginton.
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10
+*Text*: Vous êtes toujours le bienvenu, monsieur Frogginton.
+>>>>>
+
+
+*Character*: frog_notamused
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation.wav
+*Volume*: 10
+*Text*: Le troisième.
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal.wav
+*Volume*: 10
+*Text*: Euh...
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10
+*Text*: Bien sûr.
+>>>>>
+
+*Cutscene*: none
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal.wav
+*Volume*: 10
+*Text*: Eh bien, je suis définitivement content d'avoir un visage amical pour me tenir compagnie pendant ce voyage.
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
+*Volume*: 10
+*Text*: Oui, oui, je dois dire que c'est en effet un navire puissant.
+>>>>>
+*Character*: frog_notamused
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Volume*: 10
+*Text*: Je crois qu'il pourrait cependant rencontrer quelques problèmes verticaux à venir.
+>>>>>
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Volume*: 10
+*Text*: À cet effet, je prête ma force insurmontable des jambes. Si nous rencontrons des arbres tombés sur notre chemin, nous pouvons maintenant les surmonter en sautant.
+>>>>>
+
+#
+#Use one text file for each conversation
+#

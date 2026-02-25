@@ -1,0 +1,53 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Frog/Frog-question.wav
+*Text*: N’avons-nous pas dit qu’on allait se reposer ?
+>>>>>
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/Beaver/Beaver-Inquisitive.wav
+*Text*: Eh bien, un peu d’exercice quotidien ne fait pas de mal, non ?
+>>>>>
+
+*Character*: salmon
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-joy1.wav
+*Text*: GluuUuu, gluuuu.
+>>>>>
+
+*Character*: otter
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk4.wav
+*Text*: Alors, allons-y.
+>>>>>
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Text*: Oui, cette bûche ne va pas ramer et se défendre toute seule.
+>>>>>
+
+*Character*: shork
+
+*Text*: Oh, aussi... 
+>>>>>
+
+*Text*: Si tu rencontres un autre requin qui essaie de te mordre, euh, ce n’est pas moi, c’est mon cousin...
+>>>>>
+
+*Text*: Dave.
+>>>>>
+
+#
+#Use one text file for each conversation
+#

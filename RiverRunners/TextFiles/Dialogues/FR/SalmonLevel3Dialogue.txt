@@ -1,0 +1,231 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/f-CS-Sal.png
+>>>>>
+
+*Character*: salmon_gray
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking1.wav
+*Volume*: -6
+*Text*: Glou, glou, glou...
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10
+*Text*: Avez-vous entendu quelque chose, monsieur Frogginton ?
+>>>>>
+
+
+*Character*: frog_notamused
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Volume*: 10
+*Text*: Le tro-
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
+*Volume*: 10
+*Text*: Oui, oui, oui, d’accord.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10
+*Text*: Mais, avez-vous entendu quelque chose ?
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Volume*: 10
+*Text*: En effet, je perçois des ondes cérébrales d’esprits semblables...
+>>>>>
+
+
+*Character*: salmon_gray
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking2.wav
+*Volume*: -6
+*Text*: Glou, glou, glouuuuu?..
+>>>>>
+
+
+*Character*: beaver_surprised
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: Le revoilà !
+>>>>>
+
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/g-CS-Common2.png
+>>>>>
+
+*Character*: salmon_surprised
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared1.wav
+*Volume*: -6
+*Text*: Glou, glou, GlUuUuUuuuu !!!
+>>>>>
+
+
+*Character*: beaver_surprised
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: Les voilà !
+>>>>>
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-question.wav
+*Volume*: 10
+*Text*: Pouvez-vous le sentir, monsieur Justin ?
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation.wav
+*Volume*: 10
+*Text*: C’est indubitablement un génie, sa compréhension de la physique pour sauter ainsi est remarquable !
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10
+*Text*: N’est-ce pas... ?
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive-long.wav
+*Volume*: 10
+*Text*: ... une tétine ?
+>>>>>
+
+
+*Character*: frog_notamused
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Volume*: 10
+*Text*: Ne l’offensez pas de manière aussi horrible, monsieur Justin.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Volume*: 10
+*Text*: C’est impoli.
+>>>>>
+
+
+*Character*: beaver_sad
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: Je ne faisais qu’énoncer un fait...
+>>>>>
+
+*Cutscene*: none
+>>>>>
+
+*Text*: Hmm, il semble qu’il nous suive maintenant.
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
+*Volume*: 10
+*Text*: Sans doute parce qu’il comprend et partage notre détresse.
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10
+*Text*: Hmm. Je me demande quel est son nom.
+>>>>>
+
+
+*Character*: salmon
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-explaining.wav
+*Volume*: -10
+*Text*: Glou, gluuu, glou.
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Volume*: 10
+*Text*: Il dit s’appeler Salomon le lumineux.
+>>>>>
+
+
+*Character*: salmon_questioning
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-question2.wav
+*Volume*: -10
+*Text*: Glou?...
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10
+*Text*: Quoi ?...
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive-long.wav
+*Volume*: 10
+*Text*: Vous comprenez le langage des poissons ?
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
+*Volume*: 10
+*Text*: Oui, bien sûr.
+>>>>>
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
+*Volume*: 10
+*Text*: ...
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10
+*Text*: (Je vais l’appeler Sal).
+>>>>>
+
+
+*Character*: salmon
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking1.wav
+*Volume*: -10
+*Text*: Glou, gluuu, glou, glou.
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal2.wav
+*Volume*: 10
+*Text*: Il dit aussi qu’il peut nous aider à manœuvrer rapidement si besoin.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Volume*: 10
+*Text*: Si nous devons couvrir rapidement une plus grande distance vers la DROITE ou la GAUCHE, Salomon dit qu’il poussera le bateau.
+>>>>>
+
+
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10
+*Text*: That could indeed come in handy to cover more ground quickly.
+>>>>>
+
+#
+#Use one text file for each conversation
+#

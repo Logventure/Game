@@ -1,0 +1,88 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+*Cutscene*: none
+
+*Character*: beaver
+*Volume*: 10
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+
+*Text*: No hay fin para esos tentáculos, eliminas algunos y aparecen más.
+>>>>>
+
+
+*Character*: crab_disappointed
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Volume*: -12
+*Text*: Sí, da mucho miedo.
+>>>>>
+
+*Text*: Hace tiempo que no veía algo tan persistente.
+>>>>>
+
+
+*Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-stoprightthere.wav
+*Volume*: -6
+*Text*: ¡Tenemos que seguir adelante! Solo hay una forma de llegar a una conclusión: continuar.
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared.wav
+*Volume*: 10
+*Text*: ¿De verdad tenemos que hacerlo?!?
+>>>>>
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared2.wav
+
+*Text*: ¿No podemos simplemente dar la vuelta? ¿Dejar esto a alguien más… calificado?
+>>>>>
+
+
+*Character*: salmon
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-scared1.wav
+*Volume*: -12
+*Text*: <.<
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-explaining.wav
+*Text*: Glu, gluuuuu...
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: ¡Tenemos que seguir! ¡Más animales podrían estar en peligro!
+>>>>>
+
+
+
+*Character*: otter
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk1.wav
+*Volume*: -6
+*Text*: Debemos de estar cerca. Llevo tiempo rastreando esto, y esta actividad es una clara señal.
+>>>>>
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Volume*: -12
+*Text*: Sigamos entonces.
+>>>>>
+
+
+#
+#Use one text file for each conversation
+#

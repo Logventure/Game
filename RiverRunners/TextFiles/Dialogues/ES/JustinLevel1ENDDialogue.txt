@@ -1,0 +1,59 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+*Cutscene*: none
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10
+*Text*: Creo que lo logré sin problemas, sabía que mi tronco confiable no me fallaría.
+>>>>>
+
+
+*Character*: frog_gray
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared.wav
+*Volume*: 10
+*Text*: AAAAAAHHHHHHH.
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
+*Volume*: 10
+*Text*: ¿Hmm? ¿Qué es ese sonido?
+>>>>>
+
+
+*Character*: frog_gray
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared2.wav
+*Volume*: 10
+*Text*: AAAAYUUUUUUDAAAA.
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10
+*Text*: ¿Eso es... un croar extremadamente agudo?
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
+*Text*: Me pregunto de dónde vendrá eso...
+>>>>>
+
+
+
+#
+#Use one text file for each conversation
+#

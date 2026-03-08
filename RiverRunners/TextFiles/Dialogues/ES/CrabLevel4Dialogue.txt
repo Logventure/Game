@@ -1,0 +1,232 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/h-CS-Crab.png
+>>>>>
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
+*Volume*: 10
+*Text*: Entonces, señor Frogginton, ¿sus ondas cerebrales están percibiendo algo? ¿Posibles amigos? ¿Enemigos?
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
+*Volume*: 10
+*Text*: Hmmmm, esta vez no diría que estoy percibiendo mucho.
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
+*Text*: ¿Y tú, Sal?
+>>>>>
+
+
+*Character*: salmon_questioning
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking1.wav
+*Volume*: -12
+*Text*: Gluu, glu, gluuu...
+>>>>>
+
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Volume*: 10
+*Text*: Me lo imaginaba. Como dije, no parece haber nada relevante cerca.
+>>>>>
+
+
+*Character*: crab_gray
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
+*Volume*: -12
+*Text*: Hhrmm...
+>>>>>
+
+
+*Character*: beaver
+
+*Text*: Bueno, sigamos adelante de todas formas.
+>>>>>
+
+
+
+
+*Character*: crab_angry
+*Name*: ???
+*Cutscene*: res://Assets/Cutscenes/i-CS-Common3.png
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-scared.wav
+*Volume*: -12
+*Text*: ¡OYE, ESTOY NADANDO AQUÍ!
+>>>>>
+
+
+*Character*: beaver_surprised
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: Oh, lo siento! No os vi allí.
+>>>>>
+
+*Character*: crab_disappointed
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Volume*: -12
+*Text*: Bueno, obvio, vengo de abajo.
+>>>>>
+*Character*: crab
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
+*Text*: Pero lo que realmente quiero saber es qué están haciendo por estas tierras.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Text*: Este es mi territorio, ¿ven? y no recuerdo haberles dado permiso para andar por aquí.
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-explanation.wav
+*Volume*: 10
+*Text*: Esto debe ser algún tipo de malentendido...
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Text*: En realidad estamos verificando si alguien necesita ayuda, ocurrió algo con la presa cercana,
+>>>>>
+
+
+*Character*: crab
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Volume*: -12
+*Text*: Mmm, eso es lo que dices...
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
+*Text*: ...
+>>>>>
+
+
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10
+*Text*: ...
+>>>>>
+
+*Character*: frog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-normal.wav
+*Text*: ...
+>>>>>
+
+
+*Character*: salmon
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-talking2.wav
+*Volume*: -12
+*Text*: ...
+>>>>>
+
+*Character*: crab
+*Name*: ???
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Text*: En ese caso, no me molesta ayudarles por el camino.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Text*: Yo mismo quiero saber quién está moviendo estas aguas.
+>>>>>
+*Character*: crab_disappointed
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy1.wav
+*Text*: Nadie pone en peligro mi río y se sale con la suya.
+>>>>>
+
+
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: No voy a rechazar una ayuda extra.
+>>>>>
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Text*: Ah, se me olvidó su nombre.
+>>>>>
+
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Volume*: -12
+*Text*: El nombre es Don Vito Crableone.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-joy2.wav
+*Text*: Pero pueden llamarme Vito.
+>>>>>
+
+
+
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Normal.wav
+*Volume*: 10
+*Text*: Bien saberlo.
+>>>>>
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
+*Text*: Entonces, ¿están todos a favor de tener a Vito con ustedes en esta travesía?
+>>>>>
+
+
+*Character*: salmon_pog
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/sal/sal-joy1.wav
+*Volume*: -12
+*Text*: Gluu, gluuu~
+>>>>>
+
+
+*Character*: frog_notamused
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
+*Volume*: 10
+*Text*: Mmmmm, normalmente no me relaciono con brutos...
+>>>>>
+
+
+*Character*: crab
+
+*Cutscene*: none
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Volume*: -12
+*Text*: Eh, me lo agradecerán cuando nos topemos con algunas rocas que simplemente no podemos rodear.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-explain.wav
+*Text*: Puedo protegerlos con este caparazón duro, solo tenemos que cronometrar bien el bloqueo.
+>>>>>
+
+
+*Character*: beaver_happy
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10
+*Text*: Gracias por prestarnos tus pinzas, Vito.
+>>>>>
+
+
+*Character*: crab
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-mini.wav
+*Volume*: -12
+*Text*: No hay problema, amigo.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-talking-1.wav
+*Text*: Ahora llevemos este espectáculo a la carretera.
+>>>>>
+
+
+#
+#Use one text file for each conversation
+#

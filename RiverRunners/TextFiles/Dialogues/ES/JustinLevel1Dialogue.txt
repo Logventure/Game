@@ -1,0 +1,74 @@
+#
+#Test file for dialogues
+#
+#Use following format:
+#
+#*Character*: frog
+#*Text*: blah blah blah blah blah
+#blah blah blah blah
+#>>>>>
+#
+#If the same character speaks several times in a row you don't need to write the character again (only do when the character changes)
+#
+
+*Character*: none
+
+*Cutscene*: res://Assets/Cutscenes/a-CS-Justin-Dam-Break1.png
+>>>>>
+
+*Cutscene*: res://Assets/Cutscenes/c-CS-Justin-Dam-Break3.png
+
+*Character*: shork_gray
+
+*Name*: ???
+
+*Sound*: res://Assets/Audio/Cutscenes/damcrash.wav
+*Volume*: -6
+*Text*: (¡CHOQUE!)
+>>>>>
+
+*Cutscene*: res://Assets/Cutscenes/c-CS-Justin-Dam-Break3-noJustin.png
+
+*Character*: beaver_surprised
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-scared.wav
+*Volume*: 10
+*Text*: ¡Oh no! ¿La presa se rompió?
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-inquisitive-long.wav
+*Volume*: 10
+*Text*: ¿Cómo pasó eso?
+>>>>>
+
+*Cutscene*: res://Assets/Cutscenes/b-CS-Justin-Dam-Break2.png
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: ¡El agua fluye rápidamente hacia la orilla del río!
+>>>>>
+*Character*: beaver
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-scared.wav
+*Volume*: 10
+*Text*: Esto podría afectar a muchos animales en el bosque.
+>>>>>
+
+
+*Cutscene*: none
+
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
+*Volume*: 10
+*Text*: Tengo que ser rápido y ver si alguien está herido.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-Inquisitive.wav
+*Volume*: 10
+*Text*: Parece que las rocas aquí representan el mayor peligro.
+>>>>>
+*Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-normal2.wav
+*Volume*: 10
+*Text*: Por suerte siguen un patrón extraño, debería poder evitarlas yendo a la IZQUIERDA y DERECHA.
+>>>>>
+
+
+
+#
+#Use one text file for each conversation
+#

@@ -2,14 +2,20 @@ extends Control
 
 @onready var animation = $AnimationPlayer
 @onready var timer = $Timer
+@onready var credits_text = $TextParent
+@onready var skiplabel = $Skip
+
 var onCredits = false
 var skipTime = 0
-
 var holdtime = 0
+
+var original_position : Vector2 = Vector2()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Events.connect("go_from_main_menu_to_credits", credits)
+	original_position = credits_text.position
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -20,21 +26,8 @@ func _process(delta):
 			holdToSkip(delta)
 		else:
 			$loader_circle.set_frame_and_progress(0, 0)
-		#if Input.is_action_just_pressed("confirm") and skipTime > 5:
-			#on_timer_timeout()
-		$Label.position.y -= 2.5 * delta * 60
-		"$Label2.position.y -= 2.5 * delta * 60
-		$Label3.position.y -= 2.5 * delta * 60
-		$Label4.position.y -= 2.5 * delta * 60
-		$Label5.position.y -= 2.5 * delta * 60
-		$Label6.position.y -= 2.5 * delta * 60
-		$Label7.position.y -= 2.5 * delta * 60
-		$Label8.position.y -= 2.5 * delta * 60
-		$Label9.position.y -= 2.5 * delta * 60
-		$Label10.position.y -= 2.5 * delta * 60"
-		$Label12.position.y -= 2.5 * delta * 60
-		$Label13.position.y -= 2.5 * delta * 60
-		$Label14.position.y -= 2.5 * delta * 60
+			skiplabel.visible = false
+		credits_text.position.y -= 2.5 * delta * 60
 
 func credits():
 	timer.start(38) #normal version -> 38  no credits -> 13
@@ -50,40 +43,26 @@ func holdToSkip(delta):
 				$loader_circle.play("load")
 		if holdtime > 1.0:
 			on_timer_timeout()
-
+		
 	else:
 		holdtime = 0
 		$loader_circle.set_frame_and_progress(0, 0)
 
 func on_timer_timeout():
 	onCredits = false
-	$Label.position.y = 1081
-	$Label12.position.y = 1370
-	$Label13.position.y = 1700
-	$Label14.position.y = 1250
-	"$Label2.position.y = 1350
-	$Label3.position.y = 1430
-	$Label4.position.y = 1430
-	$Label5.position.y = 2320
-	$Label6.position.y = 2400
-	$Label7.position.y = 2400
-	$Label8.position.y = 3170
-	$Label9.position.y = 3260
-	$Label10.position.y = 3260"
-	$Label11.text = ""
-	#$Label12.position.y = 4950
-	#$Label13.position.y = 5400
+	credits_text.position = original_position
 	Events.emit_signal("go_from_credits_to_main_menu")
 
 func skipKey():
-	var input_type = InputHandler.lastInputType()
+	skiplabel.visible = true
+	var input_controller = InputHandler.hasController()
 	var confirm_actions = InputMap.action_get_events("confirm")
 	var keyString
-	#print("type: ", input_type)
-	if input_type == "controller":
-		keyString = "X"
-		$Label11.text = str("Hold ", keyString, " to skip.")
-	elif input_type == "kbm":
+	
+	if input_controller:
+		keyString = tr("KEY_CROSS")
+		skiplabel.text = tr("CREDITSSKIP").format({key = keyString})
+	else:
 		var keyCode = confirm_actions[0].physical_keycode
-		keyString = OS.get_keycode_string(keyCode)
-		$Label11.text = str("Hold ", keyString, " to skip.")
+		keyString = tr(OS.get_keycode_string(keyCode))
+		skiplabel.text = tr("CREDITSSKIP").format({key = keyString})

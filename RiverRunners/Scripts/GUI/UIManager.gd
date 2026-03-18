@@ -42,10 +42,12 @@ func _ready():
 	gameoverScene.visible = false
 	levelcompleteScene.visible = false
 
+	cooldowns()
+
 func _process(delta):
 	match current_state:
 		States.RUNNING:
-			cooldowns()
+			pass
 		States.PAUSED:
 			if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
 				if $PauseMenu/Panel/VBoxContainer/ResumeButton.visible == true:
@@ -142,14 +144,22 @@ func updateCharacters(char_list):
 	character_availability["crab"] = char_list.has("crab")
 	character_availability["otter"] = char_list.has("otter")
 
+	cooldowns()
+
 func isCharacterAvailable(character):
 	if character_availability.has(character):
 		return character_availability[character]
 
 func cooldowns():
-	$SalmonCooldown.visible = true if isCharacterAvailable("salmon") else false
-	$CrabCooldown.visible = true if isCharacterAvailable("crab") else false
-	$OtterCooldown.visible = true if isCharacterAvailable("otter") else false
+	if $SalmonCooldown:
+		$SalmonCooldown.visible = isCharacterAvailable("salmon")
+		$SalmonCooldown.set_process(isCharacterAvailable("salmon"))
+	if $CrabCooldown:
+		$CrabCooldown.visible = isCharacterAvailable("crab")
+		$CrabCooldown.set_process(isCharacterAvailable("crab"))
+	if $OtterCooldown:
+		$OtterCooldown.visible = isCharacterAvailable("otter")
+		$OtterCooldown.set_process(isCharacterAvailable("otter"))
 
 func setRelaxMode(value: bool):
 	relax_mode = value

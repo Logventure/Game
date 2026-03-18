@@ -159,17 +159,17 @@ func loadChat(filepath: String):
 			if line.begins_with("*Character*: "):
 				character = line.replace("*Character*: ","")
 				if character.begins_with("beaver"):
-					name = "Justin"
+					name = tr("JUSTIN")
 				elif character.begins_with("frog"):
-					name = "Sir Frogginton III"
+					name = tr("SIRFROG")
 				elif character.begins_with("crab"):
-					name = "Vito"
+					name = tr("VITO")
 				elif character.begins_with("salmon"):
-					name = "Sal"
+					name = tr("SAL")
 				elif character.begins_with("otter"):
-					name = "O.T."
+					name = tr("OT")
 				elif character.begins_with("shork"):
-					name = "Friend"
+					name = tr("SHORK")
 
 			elif line.begins_with("*Name*: "):
 				name = line.replace("*Name*: ","")

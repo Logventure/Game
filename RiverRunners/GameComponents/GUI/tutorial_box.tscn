@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ta7c58nhd1in"]
+[gd_scene load_steps=6 format=3 uid="uid://ta7c58nhd1in"]
 
 [ext_resource type="Texture2D" uid="uid://do7ywqc5j37pl" path="res://Assets/UI/Tutorial Box.png" id="1_4utl6"]
 [ext_resource type="FontFile" uid="uid://bg1oq07gebwu4" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="1_djyx1"]
 [ext_resource type="Script" path="res://Scripts/GUI/tutorial_box.gd" id="1_grp6e"]
+[ext_resource type="Script" path="res://Scripts/GUI/text_resize.gd" id="4_wtngr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4uaet"]
 font = ExtResource("1_djyx1")
@@ -26,3 +27,8 @@ label_settings = SubResource("LabelSettings_4uaet")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+script = ExtResource("4_wtngr")
+original_font_size = 40
+min_font_size = 28
+resize_factor = 1
+max_characters = 32

@@ -263,7 +263,7 @@
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
 *Volume*: -6
-*Text*: Indeed, if we encounter any tentacles, i can help of course.
+*Text*: Indeed, if we encounter any tentacles, I can help of course.
 >>>>>
 
 

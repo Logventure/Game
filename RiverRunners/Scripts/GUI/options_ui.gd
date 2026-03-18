@@ -22,9 +22,7 @@ var disabled_color = "8f928e"
 func _ready():
 	Events.connect("camera_status", onUpdateCameraStatus)
 	$Panel/ButtonContainer/GeneralButton.grab_focus()
-	$Panel/General.visible = true
 	$Panel/Fullscreen.visible = true
-	$Panel/Windowed.visible = true
 	initializeFont()
 	makeLabels()
 	redoControllsButtons()
@@ -33,13 +31,21 @@ func _ready():
 	default_mode()
 	
 func _process(delta):
-	if active:
+	if active and !isInInputOverrideMode: # <-- skip while rebinding 
+		if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null: 
+			if $BackButton.visible == true: 
+				$BackButton.grab_focus()
+			if Input.is_action_just_pressed("confirm") and get_viewport().gui_get_focus_owner() != null: 
+				if get_viewport().gui_get_focus_owner().has_signal("pressed"): 
+					get_viewport().gui_get_focus_owner().emit_signal("pressed")
+	
+	"if active:
 		if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
 			if $BackButton.visible == true:
 				$BackButton.grab_focus()
-		if Input.is_action_just_pressed("confirm") and not get_viewport().gui_get_focus_owner() == null:
-			if get_viewport().gui_get_focus_owner().has_signal("pressed"):
-				get_viewport().gui_get_focus_owner().emit_signal("pressed")	
+		if Input.is_action_just_pressed(confirm) and not get_viewport().gui_get_focus_owner() == null:
+			if get_viewport().gui_get_focus_owner().has_signal(pressed):
+				get_viewport().gui_get_focus_owner().emit_signal(pressed)"
 	
 	match current_state:
 		States.GENERAL:
@@ -88,9 +94,8 @@ func audio_button_clicked():
 	$"Panel/Ambience Volume".visible = true
 	$Panel/Audio.visible = true
 
-	$Panel/General.visible = false
+	$Panel/LanguageSelect.visible = false
 	$Panel/Fullscreen.visible = false
-	$Panel/Windowed.visible = false
 	if showDifficulty:
 		$Panel/Difficulty.visible = false
 		$Panel/ButtonContainer1.visible = false
@@ -104,9 +109,8 @@ func audio_button_clicked():
 	$Panel/ButtonContainer/ControlsButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/Audio/HBoxContainer/CenterContainer/HSlider.get_path())
 
 func general_button_clicked():
-	$Panel/General.visible = true
+	$Panel/LanguageSelect.visible = true
 	$Panel/Fullscreen.visible = true
-	$Panel/Windowed.visible = true
 	if showDifficulty:
 		$Panel/Difficulty.visible = true
 		$Panel/ButtonContainer1.visible = true
@@ -121,18 +125,17 @@ func general_button_clicked():
 	$Panel/Keyboard.visible = false
 	$Panel/Controller.visible = false
 
-	$Panel/ButtonContainer/GeneralButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/General/HBoxContainer1/FullscreenButton.get_path())
-	$Panel/ButtonContainer/AudioButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/General/HBoxContainer1/FullscreenButton.get_path())
-	$Panel/ButtonContainer/ControlsButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/General/HBoxContainer1/FullscreenButton.get_path())
+	#$Panel/ButtonContainer/GeneralButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/General/HBoxContainer1/FullscreenButton.get_path())
+	#$Panel/ButtonContainer/AudioButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/General/HBoxContainer1/FullscreenButton.get_path())
+	#$Panel/ButtonContainer/ControlsButton.set_focus_neighbor(SIDE_BOTTOM, $Panel/General/HBoxContainer1/FullscreenButton.get_path())
 
 func controls_button_clicked():
 	$Panel/Action.visible = true
 	$Panel/Keyboard.visible = true
 	$Panel/Controller.visible = true
 
-	$Panel/General.visible = false
+	$Panel/LanguageSelect.visible = false
 	$Panel/Fullscreen.visible = false
-	$Panel/Windowed.visible = false
 	if showDifficulty:
 		$Panel/Difficulty.visible = false
 		$Panel/ButtonContainer1.visible = false
@@ -167,7 +170,13 @@ func _on_actionButton_pressed(action):
 	$Panel3.visible = false
 	$Panel2.visible = true
 	isInInputOverrideMode = true
+	await get_tree().process_frame
 	overridingAction = str(action)
+	active = false
+	Input.flush_buffered_events()
+	await get_tree().process_frame
+	get_viewport().set_input_as_handled()
+	get_viewport().gui_release_focus()
 
 func getActionButtonName(action):
 	return str(action)+"Button"
@@ -177,13 +186,13 @@ func getLabelName(action):
 
 func getMouseButtonText(index):
 	if (index == 1):
-		return "Left Click"
+		return tr("KEY_CLICKL")
 		
 	if (index == 2):
-		return "Right Click"
+		return tr("KEY_CLICKR")
 
 	if (index == 3):
-		return "Middle Click"	
+		return tr("KEY_CLICKM")
 	
 	assert(false)
 
@@ -191,7 +200,7 @@ func initializeFont():
 	ls.set_font(TEXT_FONT)
 
 func makeLabels():
-	var labels = ["Dash Left", "Dash Right", "Jump", "Throw", "Shield"]
+	var labels = [tr("DASHL"), tr("DASHR"), tr("JUMP"), tr("THROW"), tr("SHIELD")]
 	for labelIndex in range(0, 5):
 		var labelPosY = 37 + labelIndex*37
 		var label = labels[labelIndex]
@@ -247,26 +256,26 @@ func redoControllsButtons():
 		var keyString = ""
 		if action_event is InputEventJoypadMotion:
 			if action_event.axis == 4:
-				keyString = "L2"
+				keyString = tr("KEY_L2")
 			elif action_event.axis == 5:
-				keyString = "R2"
+				keyString = tr("KEY_R2")
 		elif action_event is InputEventJoypadButton:
 			if action_event.button_index == 0:
-				keyString = "Cross"
+				keyString = tr("KEY_CROSS")
 			elif action_event.button_index == 1:
-				keyString = "Circle"
+				keyString = tr("KEY_CIRCLE")
 			elif action_event.button_index == 2:
-				keyString = "Square"
+				keyString = tr("KEY_SQUARE")
 			elif action_event.button_index == 3:
-				keyString = "Triangle"
+				keyString = tr("KEY_TRIANGLE")
 			elif action_event.button_index == 7:
-				keyString = "L3"
+				keyString = tr("KEY_L3")
 			elif action_event.button_index == 8:
-				keyString = "R3"
+				keyString = tr("KEY_R3")
 			elif action_event.button_index == 9:
-				keyString = "L1"
+				keyString = tr("KEY_L1")
 			elif action_event.button_index == 10:
-				keyString = "R1"
+				keyString = tr("KEY_R1")
 
 		var newControllerActionButton = Button.new()
 		newControllerActionButton.set_name(getActionButtonName(controllerAction))
@@ -327,117 +336,129 @@ func redoControllsButtons():
 				selectedButton.set_focus_neighbor(SIDE_LEFT, $Panel/Keyboard/shieldButton.get_path())
 				selectedButton.set_focus_neighbor(SIDE_BOTTOM, $BackButton.get_path())
 
+func cancel_rebind():
+	$Panel2.visible = false
+	$Panel3.visible = false
+	isInInputOverrideMode = false
+	active = true
+	overridingAction = ""
+	$Panel/ButtonContainer/ControlsButton.grab_focus()
+
 func _input(event):
+	if !isInInputOverrideMode:
+		return
+	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
+		cancel_rebind()
+		return
+	if event is InputEventJoypadButton and event.pressed and event.button_index == 6: # Controller options
+		cancel_rebind()
+		return
+	
 	var validInput = false
 	var has_action = false
 	var buttonNode = ""
 	var buttonText = ""
-	if isInInputOverrideMode:
-		if event is InputEventKey: # maybe nao permitir certas teclas?
-			if event.pressed and !overridingAction.contains("controller"):
-				#check if it already exists on another action
-				for action in keyboardActions:
-					if InputMap.action_has_event(action, event):
-						has_action = true
+	
+	if event is InputEventKey: # maybe nao permitir certas teclas?
+		if event.pressed and !overridingAction.contains("controller"):
+			#check if it already exists on another action
+			for action in keyboardActions:
+				if InputMap.action_has_event(action, event):
+					has_action = true
+					break
+			if !has_action:
+				validInput = true
+				buttonNode = "Panel/Keyboard/" + getActionButtonName(overridingAction)
+				var keyCode = event.physical_keycode
+				buttonText = OS.get_keycode_string(keyCode)
+				for oldEvent in InputMap.action_get_events(overridingAction):
+					if oldEvent is InputEventKey or oldEvent is InputEventMouseButton:
+						InputMap.action_erase_event(overridingAction, oldEvent)
 						break
-				if !has_action:
-					validInput = true
-					buttonNode = "Panel/Keyboard/" + getActionButtonName(overridingAction)
-					var keyCode = event.physical_keycode
-					buttonText = OS.get_keycode_string(keyCode)
-					for oldEvent in InputMap.action_get_events(overridingAction):
-						if oldEvent is InputEventKey or InputEventMouseButton:
-							InputMap.action_erase_event(overridingAction, oldEvent)
-							break
-					InputMap.action_add_event(overridingAction, event)
-				else:
-					$Panel3.visible = true
+				InputMap.action_add_event(overridingAction, event)
 			else:
-				$Panel2.visible = false
-		elif event is InputEventMouseButton:
-			if event.pressed and !overridingAction.contains("controller"):
-				for action in keyboardActions:
-					if InputMap.action_has_event(action, event):
-						has_action = true
+				$Panel3.visible = true
+	elif event is InputEventMouseButton:
+		if event.pressed and !overridingAction.contains("controller"):
+			for action in keyboardActions:
+				if InputMap.action_has_event(action, event):
+					has_action = true
+					break
+			if !has_action:
+				validInput = true
+				buttonNode = "Panel/Keyboard/" + getActionButtonName(overridingAction)
+				buttonText = getMouseButtonText(event.get_button_index())
+				for oldEvent in InputMap.action_get_events(overridingAction):
+					if oldEvent is InputEventMouseButton or oldEvent is InputEventKey:
+						InputMap.action_erase_event(overridingAction, oldEvent)
 						break
-				if !has_action:
-					validInput = true
-					buttonNode = "Panel/Keyboard/" + getActionButtonName(overridingAction)
-					buttonText = getMouseButtonText(event.get_button_index())
-					for oldEvent in InputMap.action_get_events(overridingAction):
-						if oldEvent is InputEventMouseButton or InputEventKey:
-							InputMap.action_erase_event(overridingAction, oldEvent)
-							break
-					InputMap.action_add_event(overridingAction, event)
-				else:
-					$Panel3.visible = true
+				InputMap.action_add_event(overridingAction, event)
 			else:
-				$Panel2.visible = false
-		elif event is InputEventJoypadButton:
-			if (event.button_index >= 0 and event.button_index <= 3 and overridingAction.contains("controller")) or (event.button_index >= 7 and event.button_index <= 10 and overridingAction.contains("controller")):
-				for action in controllerActions:
-					if InputMap.action_has_event(action, event):
-						has_action = true
+				$Panel3.visible = true
+	elif event is InputEventJoypadButton and event.pressed:
+		if (event.button_index >= 0 and event.button_index <= 3 and overridingAction.contains("controller")) or (event.button_index >= 7 and event.button_index <= 10 and overridingAction.contains("controller")):
+			for action in controllerActions:
+				if InputMap.action_has_event(action, event):
+					has_action = true
+					break
+			if !has_action:
+				validInput = true
+				buttonNode = "Panel/Controller/" + getActionButtonName(overridingAction)
+				if event.button_index == 0:
+					buttonText = tr("KEY_CROSS")
+				elif event.button_index == 1:
+					buttonText = tr("KEY_CIRCLE")
+				elif event.button_index == 2:
+					buttonText = tr("KEY_SQUARE")
+				elif event.button_index == 3:
+					buttonText = tr("KEY_TRIANGLE")
+				elif event.button_index == 7:
+					buttonText = tr("KEY_L3")
+				elif event.button_index == 8:
+					buttonText = tr("KEY_R3")
+				elif event.button_index == 9:
+					buttonText = tr("KEY_L1")
+				elif event.button_index == 10:
+					buttonText = tr("KEY_R1")
+				for oldEvent in InputMap.action_get_events(overridingAction):
+					if oldEvent is InputEventJoypadButton or oldEvent is InputEventJoypadMotion:
+						InputMap.action_erase_event(overridingAction, oldEvent)
 						break
-				if !has_action:
-					validInput = true
-					buttonNode = "Panel/Controller/" + getActionButtonName(overridingAction)
-					if event.button_index == 0:
-						buttonText = "Cross"
-					elif event.button_index == 1:
-						buttonText = "Circle"
-					elif event.button_index == 2:
-						buttonText = "Square"
-					elif event.button_index == 3:
-						buttonText = "Triangle"
-					elif event.button_index == 7:
-						buttonText = "L3"
-					elif event.button_index == 8:
-						buttonText = "R3"
-					elif event.button_index == 9:
-						buttonText = "L1"
-					elif event.button_index == 10:
-						buttonText = "R1"
-					for oldEvent in InputMap.action_get_events(overridingAction):
-						if oldEvent is InputEventJoypadButton or InputEventJoypadMotion:
-							InputMap.action_erase_event(overridingAction, oldEvent)
-							break
-					InputMap.action_add_event(overridingAction, event)
-				else:
-					$Panel3.visible = true
+				InputMap.action_add_event(overridingAction, event)
 			else:
-				$Panel2.visible = false
-		elif event is InputEventJoypadMotion:
-			if (event.axis == 4 and  overridingAction.contains("controller")) or (event.axis == 5 and overridingAction.contains("controller")):
-				for action in controllerActions:
-					if InputMap.action_has_event(action, event):
-						has_action = true
+				$Panel3.visible = true
+	elif event is InputEventJoypadMotion and abs(event.axis_value) > 0.5:
+		if (event.axis == 4 and  overridingAction.contains("controller")) or (event.axis == 5 and overridingAction.contains("controller")):
+			for action in controllerActions:
+				if InputMap.action_has_event(action, event):
+					has_action = true
+					break
+			if !has_action:
+				validInput = true
+				buttonNode = "Panel/Controller/" + getActionButtonName(overridingAction)
+				if event.axis == 4:
+					buttonText = "L2"
+				elif event.axis == 5:
+					buttonText = "R2"
+				for oldEvent in InputMap.action_get_events(overridingAction):
+					if oldEvent is InputEventJoypadMotion or oldEvent is InputEventJoypadButton:
+						InputMap.action_erase_event(overridingAction, oldEvent)
 						break
-				if !has_action:
-					validInput = true
-					buttonNode = "Panel/Controller/" + getActionButtonName(overridingAction)
-					if event.axis == 4:
-						buttonText = "L2"
-					elif event.axis == 5:
-						buttonText = "R2"
-					for oldEvent in InputMap.action_get_events(overridingAction):
-						if oldEvent is InputEventJoypadMotion or InputEventJoypadButton:
-							InputMap.action_erase_event(overridingAction, oldEvent)
-							break
-					InputMap.action_add_event(overridingAction, event)
-				else:
-					$Panel3.visible = true
+				InputMap.action_add_event(overridingAction, event)
 			else:
-				$Panel2.visible = false
-		if validInput:
-			$Panel2.visible = false
-			$Panel3.visible = false
-			get_viewport().set_input_as_handled()
-			get_node(buttonNode).text = buttonText
-			isInInputOverrideMode = false
-			overridingAction = ""
-			FILE_MANAGEMENT_SCRIPT.saveConfig()
-			FILE_MANAGEMENT_SCRIPT.loadConfig()
+				$Panel3.visible = true
+	if validInput:
+		Input.flush_buffered_events()
+		$Panel2.visible = false
+		$Panel3.visible = false
+		get_viewport().set_input_as_handled()
+		get_node(buttonNode).text = buttonText
+		isInInputOverrideMode = false
+		active = true
+		overridingAction = ""
+		FILE_MANAGEMENT_SCRIPT.saveConfig()
+		FILE_MANAGEMENT_SCRIPT.loadConfig()
+		$Panel/ButtonContainer/ControlsButton.grab_focus()
 
 
 

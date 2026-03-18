@@ -35,14 +35,14 @@
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-stoprightthere.wav
 *Volume*: -6
-*Text*: Temos de continuar a avançar! Só há uma forma de chegar ao fim — é seguir em frente!
+*Text*: Temos de continuar a avançar! Só há uma forma de chegar ao fim - é seguir em frente!
 >>>>>
 
 
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared.wav
 *Volume*: 10
-*Text*: Mesmo temos de o fazer?!?
+*Text*: Temos mesmo de o fazer?!?
 >>>>>
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-scared2.wav

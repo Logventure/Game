@@ -31,7 +31,7 @@ func setText(ability: String):
 				var action_event = InputMap.action_get_events("left")[0]
 				key = getKeyString(action_event, false)
 			
-			action = "go LEFT"
+			action = tr("TUTORIAL_MOVELEFT")
 
 		"move_right":
 			if InputHandler.hasController():
@@ -42,7 +42,7 @@ func setText(ability: String):
 				var action_event = InputMap.action_get_events("right")[0]
 				key = getKeyString(action_event, false)
 			
-			action = "go RIGHT"
+			action = tr("TUTORIAL_MOVERIGHT")
 
 		"jump":
 			if InputHandler.hasController():
@@ -52,7 +52,7 @@ func setText(ability: String):
 				var action_event = InputMap.action_get_events("jump")[0]
 				key = getKeyString(action_event, false)
 			
-			action = "JUMP"
+			action = tr("TUTORIAL_JUMP")
 
 		"dash_left":
 			if InputHandler.hasController():
@@ -62,7 +62,7 @@ func setText(ability: String):
 				var action_event = InputMap.action_get_events("dashLeft")[0]
 				key = getKeyString(action_event, false)
 			
-			action = "DASH LEFT"
+			action = tr("TUTORIAL_DASHLEFT")
 			
 		"dash_right":
 			if InputHandler.hasController():
@@ -72,7 +72,7 @@ func setText(ability: String):
 				var action_event = InputMap.action_get_events("dashRight")[0]
 				key = getKeyString(action_event, false)
 			
-			action = "DASH RIGHT"
+			action = tr("TUTORIAL_DASHRIGHT")
 
 		"shield":
 			if InputHandler.hasController():
@@ -84,7 +84,7 @@ func setText(ability: String):
 			
 
 			key = key
-			action = "DESTROY rocks"
+			action = tr("TUTORIAL_DESTROY")
 			
 		"throw":
 			if InputHandler.hasController():
@@ -94,7 +94,7 @@ func setText(ability: String):
 				var action_event = InputMap.action_get_events("throw")[0]
 				key = getKeyString(action_event, false)
 			
-			action = "THROW a stone"
+			action = tr("TUTORIAL_THROW")
 
 		"dive":
 			if InputHandler.hasController():
@@ -104,13 +104,13 @@ func setText(ability: String):
 				var action_event = InputMap.action_get_events("jump")[0]
 				key = getKeyString(action_event, false)
 
-			key = key + " while on air"
-			action = "FALL"
+			key = tr("TUTORIAL_DIVE_CONDITION").format({key = key})
+			action = tr("TUTORIAL_DIVE")
 		
 
-	$Label.text = "Press " + key + " to " + action
+	$Label.text = tr("TUTORIAL_BASE").format({key = key, action = action})
 	if key == "JOYSTICK":
-		$Label.text = "Move " + key + " to " + action
+		$Label.text = tr("TUTORIAL_MOVE").format({key = key, action = action})
 
 	current_state = States.VISIBLE
 	wait_time = 0
@@ -121,38 +121,40 @@ func getKeyString(action_event, iscontroller = false):
 	if iscontroller:
 		if action_event is InputEventJoypadMotion:
 			if action_event.axis == 4:
-				keyString = "L2"
+				keyString = tr("KEY_L2")
 			elif action_event.axis == 5:
-				keyString = "R2"
+				keyString = tr("KEY_R2")
 		elif action_event is InputEventJoypadButton:
 			if action_event.button_index == 0:
-				keyString = "Cross"
+				keyString = tr("KEY_CROSS")
 			elif action_event.button_index == 1:
-				keyString = "Circle"
+				keyString = tr("KEY_CIRCLE")
 			elif action_event.button_index == 2:
-				keyString = "Square"
+				keyString = tr("KEY_SQUARE")
 			elif action_event.button_index == 3:
-				keyString = "Triangle"
+				keyString = tr("KEY_TRIANGLE")
 			elif action_event.button_index == 7:
-				keyString = "L3"
+				keyString = tr("KEY_L3")
 			elif action_event.button_index == 8:
-				keyString = "R3"
+				keyString = tr("KEY_R3")
 			elif action_event.button_index == 9:
-				keyString = "L1"
+				keyString = tr("KEY_L1")
 			elif action_event.button_index == 10:
-				keyString = "R1"
+				keyString = tr("KEY_R1")
 
 	else:
 		if action_event is InputEventMouse:
 			if (action_event.get_button_index() == 1):
-				keyString = "Left Click"
+				keyString = tr("KEY_CLICKL")
 			if (action_event.get_button_index() == 2):
-				keyString = "Right Click"
+				keyString = tr("KEY_CLICKR")
 			if (action_event.get_button_index() == 3):
-				keyString = "Middle Click"	
+				keyString = tr("KEY_CLICKM")	
 		else:
 			var keyCode = action_event.physical_keycode
 			keyString = OS.get_keycode_string(keyCode)
+			if keyString == "Space":
+				keyString = tr("KEY_SPACE")
 
 
 	return keyString

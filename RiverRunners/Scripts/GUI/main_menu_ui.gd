@@ -17,6 +17,7 @@ var normal_color = "f5ffe8"
 var disabled_color = "8f928e"
 var infinite_unblocked = false
 
+@onready var options_ui = $OptionsUI
 @onready var options_difficulty = $OptionsUI/Panel/Difficulty
 @onready var options_mode_buttons = $OptionsUI/Panel/ButtonContainer1
 
@@ -66,12 +67,23 @@ func _process(delta):
 		States.OPTIONS:
 			$OptionsUI.visible = true
 			$OptionsUI.setActive(true)
-			if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
-				if $OptionsUI/Panel/ButtonContainer/VideoButton.visible == true:
-					$OptionsUI/Panel/ButtonContainer/VideoButton.grab_focus()
-			if Input.is_action_just_pressed("confirm") and not get_viewport().gui_get_focus_owner() == null:
+			
+			if not options_ui.isInInputOverrideMode:
+				# Only grab focus if we're not rebinding
+				if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
+					if $OptionsUI/Panel/ButtonContainer/ControlsButton.visible:
+						$OptionsUI/Panel/ButtonContainer/ControlsButton.grab_focus()
+				# Only emit "pressed" if not rebinding
+				if Input.is_action_just_pressed("confirm") and get_viewport().gui_get_focus_owner() != null:
 					if get_viewport().gui_get_focus_owner().has_signal("pressed"):
 						get_viewport().gui_get_focus_owner().emit_signal("pressed")
+			
+			"if InputHandler.hasController() and get_viewport().gui_get_focus_owner() == null:
+				if $OptionsUI/Panel/ButtonContainer/GeneralButton.visible == true:
+					$OptionsUI/Panel/ButtonContainer/GeneralButton.grab_focus()
+			if Input.is_action_just_pressed(confirm) and not get_viewport().gui_get_focus_owner() == null:
+					if get_viewport().gui_get_focus_owner().has_signal(pressed):
+						get_viewport().gui_get_focus_owner().emit_signal(pressed)"
 
 		States.CREDITS:
 			pass
@@ -529,6 +541,7 @@ func setLevels():
 		$Panel2/Label2.label_settings.font_color = normal_color
 		$Panel2/HighestScore.label_settings.font_color = normal_color
 
-	if FILE_MANAGEMENT_SCRIPT.loadDifficulty() > 2:
+	var mode = FILE_MANAGEMENT_SCRIPT.loadDifficulty()
+	if mode != null && mode > 2:
 		$Panel2/TextureRect.texture = score_hover_image
 		$Panel2/Label2.label_settings.font_color = Color.GRAY

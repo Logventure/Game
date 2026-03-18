@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://xfkbxa5pluwk"]
+[gd_scene load_steps=10 format=3 uid="uid://xfkbxa5pluwk"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/levelcomplete_ui.gd" id="1_u8gdt"]
 [ext_resource type="Texture2D" uid="uid://clgig3oyqsskp" path="res://Assets/UI/LevelComplete/LevelCompleteMenu.png" id="2_8o1uv"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dlisuewnoi6s4" path="res://Assets/UI/Empty Buttons/Button-Empty-Pressed.png" id="4_ufru0"]
 [ext_resource type="Texture2D" uid="uid://bqtov3bjn6o2a" path="res://Assets/UI/Empty Buttons/Button-Empty-Highlighted.png" id="5_v17es"]
 [ext_resource type="Texture2D" uid="uid://b8vw66qk33hpm" path="res://Assets/UI/Empty Buttons/Button-Empty-Disabled.png" id="6_mdvpg"]
+[ext_resource type="Script" path="res://Scripts/GUI/text_resize.gd" id="8_mw3ni"]
 [ext_resource type="FontFile" uid="uid://bg1oq07gebwu4" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="9_ib1li"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fbets"]
@@ -80,13 +81,18 @@ texture_disabled = ExtResource("6_mdvpg")
 texture_focused = ExtResource("5_v17es")
 
 [node name="NextLevel" type="Label" parent="Panel/VBoxContainer/NextLevelButton"]
-offset_left = 4.85712
-offset_top = 3.42859
-offset_right = 460.857
-offset_bottom = 86.4286
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 547.0
+offset_bottom = 108.0
 scale = Vector2(0.07, 0.07)
-text = "NEXT LEVEL"
+text = "NEXTLVL"
 label_settings = SubResource("LabelSettings_fbets")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("8_mw3ni")
+max_characters = 10
 
 [node name="ExitButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -103,13 +109,18 @@ texture_disabled = ExtResource("6_mdvpg")
 texture_focused = ExtResource("5_v17es")
 
 [node name="Exit" type="Label" parent="Panel/VBoxContainer/ExitButton"]
-offset_left = 15.0
-offset_top = 2.85718
-offset_right = 350.0
-offset_bottom = 85.8572
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 539.0
+offset_bottom = 95.0
 scale = Vector2(0.07, 0.07)
 text = "EXIT"
 label_settings = SubResource("LabelSettings_fbets")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("8_mw3ni")
+max_characters = 10
 
 [connection signal="pressed" from="Panel/VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

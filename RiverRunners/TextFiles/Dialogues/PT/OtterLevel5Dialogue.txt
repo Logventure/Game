@@ -65,7 +65,7 @@
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
 *Volume*: -6
-*Text*: (Hmm, estes parecem sem esperança)
+*Text*: (Hmm, estes parecem ser um caso perdido)
 >>>>>
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-talkingtoself.wav
@@ -107,7 +107,7 @@
 
 *Character*: crab_angry
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/crab/crab-inquiring.wav
-*Text*: Não podem entrar aqui e começar a fazer perguntas.
+*Text*: Não podes entrar aqui e começar a fazer perguntas.
 >>>>>
 
 *Cutscene*: none
@@ -207,7 +207,7 @@
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk4.wav
 *Volume*: -6
-*Text*: De facto, e pode ser que precises do meu braço para lançar coisas. Durante a minha investigação, vi sinais preocupantes.
+*Text*: De facto, e pode ser que precisem do meu braço para lançar coisas. Durante a minha investigação, vi sinais preocupantes.
 >>>>>
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-normaltalk2.wav
@@ -232,7 +232,7 @@
 *Character*: frog
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
 *Volume*: 10.0
-*Text*: Não me fales assim Salomon, não fiz nada de mal!
+*Text*: Não me fales assim Salomão, não fiz nada de mal!
 >>>>>
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-explanation.wav
@@ -263,7 +263,7 @@
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/otter/otter-shorttalk1.wav
 *Volume*: -6
-*Text*: Sem dúvida, se encontrarmos tentáculos, posso ajudar, claro.
+*Text*: Sem dúvida, e se encontrarmos tentáculos, posso ajudar, claro.
 >>>>>
 
 

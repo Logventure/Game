@@ -1,6 +1,12 @@
 keys,en,pt,es
-DIALOGUE_INSTRUCTIONS_KB,Press SPACEBAR to continue - Hold to skip,Prima ESPAÇO para continuar - Segure para saltar,Presione la BARRA ESPACIADORA para continuar - Mantenga para saltar
-DIALOGUE_INSTRUCTIONS_CTRL,Press X to continue - Hold to skip,Prima X para continuar - Segure para saltar,Presione X para continuar - Mantenga para saltar
+DIALOGUE_INSTRUCTIONS_KB,Press SPACEBAR to continue - Hold to skip,Prima ESPAÇO para continuar - Segure para saltar,Pulsa la BARRA ESPACIADORA para continuar - Mantenga para saltar
+DIALOGUE_INSTRUCTIONS_CTRL,Press A to continue - Hold to skip,Prima A para continuar - Segure para saltar,Pulsa A para continuar - Mantenga para saltar
+JUSTIN,Justin,Justin,Justin
+SIRFROG,Sir Frogginton III,Sir Frogginton III,Señor Frogginton III
+SAL,Sal,Sal,Sal
+VITO,Vito,Vito,Vito
+OT,O.T.,O.T.,O.T.
+SHORK,Friend,Friend,Friend
 YES,YES,SIM,SÍ
 NO,NO,NÃO,NO
 PLAY,PLAY,JOGAR,JUGAR
@@ -18,11 +24,82 @@ HIGHEST SCORE,HIGHEST SCORE,PONTUAÇÃO MAIS ALTA,PUNTUACIÓN MÁS ALTA
 RESUME,RESUME,CONTINUAR,CONTINUAR
 GIVE UP,GIVE UP,DESISTIR,ABANDONAR
 RETRY,RETRY,DE NOVO,DE NUEVO
+NEXTLVL,NEXT LEVEL,CONTINUAR,CONTINUAR
+EXIT,EXIT,SAIR,SALIR
 GENERAL,GENERAL,GERAL,GENERAL
 AUDIO,AUDIO,ÁUDIO,AUDIO
 CONTROLS,CONTROLS,CONTROLOS,CONTROLES
+LANGUAGE,Language,Idioma,Idioma
 Difficulty,Difficulty,Dificuldade,Dificuldad
 EASY,EASY,FÁCIL,FÁCIL
 NORMAL,NORMAL,NORMAL,NORMAL
 HARD,HARD,DIFÍCIL,DIFÍCIL
+MASTERVOL,Master Volume:,Volume Principal:,Volumen Maestro:
+MUSICVOL,Music Volume:,Volume da Música:,Volumen de Música:
+SFXVOL,Sound Volume:,Volume dos Sons:,Volumen de Sonidos:
+AMBIVOL,Ambience Volume:,Volume do Ambiente:,Volumen del Ambiente:
+ACTION,Action,Ação,Acción
+KEYBOARD,Keyboard,Teclado,Teclado
+CONTROLLER,Controller,Controlador,Mando
+PRESSANY,Press any key,Prima qualquer tecla,Pulsa cualquier tecla
+INVALIDKEY,That key already exists\nChoose another key,Essa tecla já está em uso\nEscolha outra tecla,Esta tecla ya está en uso\nElija otra tecla
+SCORE,SCORE,PONTOS,PUNTOS
+TUTORIAL_BASE,Press {key} to {action},Prima {key} para {action},Pulsa {key} para {action}
+TUTORIAL_MOVE,Move {key} to {action},Move {key} para {action},Mueve {key} para {action}
+TUTORIAL_MOVELEFT,go LEFT,ir para a ESQUERDA,ir a la IZQUIERDA
+TUTORIAL_MOVERIGHT,go RIGHT,ir para a DIREITA,ir a la DERECHA
+TUTORIAL_JUMP,JUMP,SALTAR,SALTAR
+TUTORIAL_DIVE_CONDITION,{key} while on air,{key} enquanto no ar,{key} mientras en el aire
+TUTORIAL_DIVE,FALL,CAIR,CAER
+TUTORIAL_DASHLEFT,DASH LEFT,ESQUIVAR para a ESQUERDA,ESQUIVAR a la IZQUIERDA
+TUTORIAL_DASHRIGHT,DASH RIGHT,ESQUIVAR para a DIREITA,ESQUIVAR a la DERECHA
+TUTORIAL_DESTROY,DESTROY rocks,DESTRUIR pedras,DESTRUIR rocas
+TUTORIAL_THROW,THROW a stone,LANÇAR uma pedra,LANZAR una piedra
+DASHL,Dash Left,Esquivar Esq.,Esquivar Izq.
+DASHR,Dash Right,Esquivar Dir.,Esquivar Der.
+JUMP,Jump,Saltar,Saltar
+THROW,Throw,Lançar,Lanzar
+SHIELD,Shield,Escudo,Escudo
+KEY_CLICKR,Right Click,Clique Direito,Clic Derecho
+KEY_CLICKL,Left Click,Clique Esquerdo,Clic Izquierdo
+KEY_CLICKM,Middle Click,Clique do Meio,Clic del Medio
+KEY_L1,L1,L1,L1
+KEY_R1,R1,R1,R1
+KEY_L2,L2,L2,L2
+KEY_R2,R2,R2,R2
+KEY_L3,L3,L3,L3
+KEY_R3,R3,R3,R3
+KEY_CROSS,A,A,A
+KEY_CIRCLE,B,B,B
+KEY_SQUARE,X,X,X
+KEY_TRIANGLE,Y,Y,Y
+KEY_SPACE,SPACE,ESPAÇO,la barra ESPACIADORA
+Space,Space,Espaço,Espaciadora
+PROGRAMMERS,Programmers,Programadores,Programadores
+GAMEPROG,Gameplay Programmers,Programadores de Jogabilidade,Programadores de Jugabilidad
+UIPROG,UI/UX Programmers,Programadores de UI/UX,Programadores de UI/UX
+ANIMPROG,Animation Programmers,Programadores de Animação,Programadores de Animación
+AUDIOPROG,Audio Programmer,Programadora de Áudio,Programadora de Audio
+PHYSPROG,Physics Programmers,Programadores de Física,Programadores de Física
+ENVPROG,Environment Programmer,Programadora de Ambiente,Programadora de Ambiente
+BUILDPROG,Build Programmer,Programadora de Build,Programadora de Build
+ARTISTS,Artists,Artistas,Artistas
+ENVART,Environment Art Artist,Artista de Ambiente,Artista de Ambiente
+CUTART,Cutscenes Artist,Artista de Cutscene,Artista de Cutscene
+ANIMART,Animation Artists,Artistas de Animação,Artistas de Animación
+UIART,UI/UX Artist,Artista de UI/UX,Artista de UI/UX
+CHARART,Character Artists,Artistas de Personagem,Artistas de Personajes
+CONCART,Concept Artist,Artista Conceptual,Artista Conceptual
+DESIGNERS,Designers,Designers,Diseñadores
+GAMEDES,Gameplay Designers,Designers de Jogabilidade,Diseñadores de Jugabilidad
+LEVELDES,Level Designers,Designers de Nível,Diseñadores de Niveles
+CHARDES,Character Designers,Designers de Personagem,Diseñadores de Personaje
+NARRDES,Narrative Designers,Designers de Narrativa,Diseñadores de Narrativa
+WRITER,Story Writer,Escritor de História,Escritor de la Historia
+SOUNDDES,Sound Designer,Designer de Som,Diseñadora de Sonido
+UIDES,UI/UX Designers,Designers de UI/UX,Diseñadores de UI/UX
+MUSICBY,Music by HoliznaCC0\nAlbum: ChipTunes\nLicensed under CC0 1.0 Universal\n\nSound Effects provided by MixKit and Pixabay,Música de HoliznaCC0\nÁlbum: ChipTunes\nLicença: CC0 1.0 Universal\n\nSound Efeitos de som: MixKit e Pixabay,Música de HoliznaCC0\nÁlbum: ChipTunes\nLicencia: CC0 1.0 Universal\n\nEfectos sonoros de MixKit y Pixabay
+THX,Thanks for playing!,Obrigado por jogar!,Gracias por jugar!
+CREDITSSKIP,Hold {key} to SKIP,Mantenha {key} premido para SALTAR,Mantenga {key} para SALTAR
+
 

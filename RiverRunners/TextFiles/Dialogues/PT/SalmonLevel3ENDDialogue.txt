@@ -16,7 +16,7 @@
 *Character*: beaver
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
-*Text*: Estou surpreendido com a força deles, têm capacidades de natação impressionantes para conseguirem acompanhar-nos assim.
+*Text*: Estou surpreendido com a força dele, tem capacidades de natação impressionantes para conseguir acompanhar-nos assim.
 >>>>>
 
 

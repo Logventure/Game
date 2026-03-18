@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://fdgjnt3f4u6u"]
+[gd_scene load_steps=42 format=3 uid="uid://fdgjnt3f4u6u"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/main_menu_ui.gd" id="1_go47f"]
 [ext_resource type="Texture2D" uid="uid://c1lero7mqpehw" path="res://Assets/UI/Main Menu/MainMenu-Background2.png" id="2_op0qx"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://b41515u70snph" path="res://Assets/UI/Empty Buttons/Button-Empty.png" id="14_isf0h"]
 [ext_resource type="Texture2D" uid="uid://dlisuewnoi6s4" path="res://Assets/UI/Empty Buttons/Button-Empty-Pressed.png" id="15_sa5gh"]
 [ext_resource type="Texture2D" uid="uid://bqtov3bjn6o2a" path="res://Assets/UI/Empty Buttons/Button-Empty-Highlighted.png" id="16_tyhqo"]
+[ext_resource type="Script" path="res://Scripts/GUI/text_resize.gd" id="18_m4033"]
 [ext_resource type="Texture2D" uid="uid://blulf1rcmd2mb" path="res://Assets/UI/Empty Buttons/Yes-Button-Frame.png" id="19_nrvs0"]
 [ext_resource type="Texture2D" uid="uid://c6jvr7p3la1hj" path="res://Assets/UI/Empty Buttons/Yes-Button-Frame.Pressed.png" id="20_kyl4u"]
 [ext_resource type="Texture2D" uid="uid://veuh0v2ue41u" path="res://Assets/UI/Empty Buttons/Yes-Button-Frame.Highlight.png" id="22_wt2pm"]
@@ -206,6 +207,7 @@ text = "PLAY"
 label_settings = SubResource("LabelSettings_gfefl")
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("18_m4033")
 
 [node name="OptionsButton" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
@@ -232,6 +234,7 @@ text = "OPTIONS"
 label_settings = SubResource("LabelSettings_gfefl")
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("18_m4033")
 
 [node name="ExitButton" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
@@ -257,9 +260,10 @@ text = "EXIT GAME"
 label_settings = SubResource("LabelSettings_gfefl")
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("18_m4033")
+max_characters = 9
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
-visible = false
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -293,13 +297,16 @@ texture_focused = ExtResource("16_tyhqo")
 
 [node name="Level1" type="Label" parent="VBoxContainer2/HBoxContainer/Level1Button"]
 layout_mode = 2
-offset_left = 7.4
-offset_top = 2.2
-offset_right = 316.4
-offset_bottom = 85.2
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 432.0
+offset_bottom = 85.0
 scale = Vector2(0.09, 0.09)
 text = "LEVEL 1"
 label_settings = SubResource("LabelSettings_pjcio")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("18_m4033")
 
 [node name="Level2Button" type="TextureButton" parent="VBoxContainer2/HBoxContainer"]
 layout_mode = 2
@@ -316,13 +323,16 @@ texture_focused = ExtResource("16_tyhqo")
 
 [node name="Play3" type="Label" parent="VBoxContainer2/HBoxContainer/Level2Button"]
 layout_mode = 2
-offset_left = 7.4
-offset_top = 2.2
-offset_right = 316.4
-offset_bottom = 85.2
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 418.0
+offset_bottom = 85.0
 scale = Vector2(0.09, 0.09)
 text = "LEVEL 2"
 label_settings = SubResource("LabelSettings_nf7o4")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("18_m4033")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2"]
 layout_mode = 2
@@ -342,13 +352,16 @@ texture_focused = ExtResource("16_tyhqo")
 
 [node name="Play4" type="Label" parent="VBoxContainer2/HBoxContainer2/Level3Button"]
 layout_mode = 2
-offset_left = 7.4
-offset_top = 2.2
-offset_right = 316.4
-offset_bottom = 85.2
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 414.0
+offset_bottom = 85.0
 scale = Vector2(0.09, 0.09)
 text = "LEVEL 3"
 label_settings = SubResource("LabelSettings_xp3e4")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("18_m4033")
 
 [node name="Level4Button" type="TextureButton" parent="VBoxContainer2/HBoxContainer2"]
 layout_mode = 2
@@ -365,13 +378,16 @@ texture_focused = ExtResource("16_tyhqo")
 
 [node name="Play5" type="Label" parent="VBoxContainer2/HBoxContainer2/Level4Button"]
 layout_mode = 2
-offset_left = 7.4
-offset_top = 2.2
-offset_right = 316.4
-offset_bottom = 85.2
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 419.0
+offset_bottom = 85.0
 scale = Vector2(0.09, 0.09)
 text = "LEVEL 4"
 label_settings = SubResource("LabelSettings_hlpmw")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("18_m4033")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer2"]
 layout_mode = 2
@@ -391,13 +407,16 @@ texture_focused = ExtResource("16_tyhqo")
 
 [node name="Play6" type="Label" parent="VBoxContainer2/HBoxContainer3/Level5Button"]
 layout_mode = 2
-offset_left = 7.4
-offset_top = 2.2
-offset_right = 316.4
-offset_bottom = 85.2
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 418.0
+offset_bottom = 85.0
 scale = Vector2(0.09, 0.09)
 text = "LEVEL 5"
 label_settings = SubResource("LabelSettings_86t7l")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("18_m4033")
 
 [node name="Level6Button" type="TextureButton" parent="VBoxContainer2/HBoxContainer3"]
 layout_mode = 2
@@ -414,13 +433,16 @@ texture_focused = ExtResource("16_tyhqo")
 
 [node name="Play7" type="Label" parent="VBoxContainer2/HBoxContainer3/Level6Button"]
 layout_mode = 2
-offset_left = 7.4
-offset_top = 2.2
-offset_right = 316.4
-offset_bottom = 85.2
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 424.0
+offset_bottom = 85.0
 scale = Vector2(0.09, 0.09)
 text = "LEVEL 6"
 label_settings = SubResource("LabelSettings_aedfi")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("18_m4033")
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer2"]
 layout_mode = 2
@@ -440,13 +462,16 @@ texture_focused = ExtResource("16_tyhqo")
 
 [node name="Play8" type="Label" parent="VBoxContainer2/HBoxContainer4/InfiniteButton"]
 layout_mode = 2
-offset_left = 5.49
-offset_top = 2.2
-offset_right = 351.49
-offset_bottom = 85.2
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 420.0
+offset_bottom = 85.0
 scale = Vector2(0.09, 0.09)
 text = "INFINITE"
 label_settings = SubResource("LabelSettings_qw8dv")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("18_m4033")
 
 [node name="Panel" type="Panel" parent="."]
 visible = false
@@ -508,6 +533,9 @@ scale = Vector2(0.09, 0.09)
 text = "YES"
 label_settings = SubResource("LabelSettings_gfefl")
 horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("18_m4033")
+max_characters = 3
 
 [node name="NoButton" type="TextureButton" parent="Panel/HBoxContainer"]
 layout_mode = 2
@@ -532,6 +560,9 @@ scale = Vector2(0.09, 0.09)
 text = "NO"
 label_settings = SubResource("LabelSettings_gfefl")
 horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("18_m4033")
+max_characters = 3
 
 [node name="CreditsButton" type="TextureButton" parent="."]
 texture_filter = 1
@@ -576,13 +607,16 @@ layout_mode = 0
 offset_left = 1.0
 offset_top = 2.0
 offset_right = 434.0
-offset_bottom = 85.0
+offset_bottom = 79.0
 scale = Vector2(0.09, 0.09)
 text = "BACK"
 label_settings = SubResource("LabelSettings_gfefl")
 horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("18_m4033")
 
 [node name="Panel2" type="Panel" parent="."]
+visible = false
 self_modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 layout_mode = 2
@@ -616,13 +650,17 @@ horizontal_alignment = 1
 [node name="HighestScore" type="Label" parent="Panel2"]
 layout_mode = 0
 offset_left = 12.0
-offset_top = 26.0
+offset_top = 16.0
 offset_right = 870.0
-offset_bottom = 109.0
+offset_bottom = 99.0
 scale = Vector2(0.45, 0.45)
 text = "HIGHEST SCORE"
 label_settings = SubResource("LabelSettings_4p73v")
 horizontal_alignment = 1
+vertical_alignment = 2
+script = ExtResource("18_m4033")
+original_font_size = 50
+max_characters = 20
 
 [node name="Credits" parent="." instance=ExtResource("58_goy0w")]
 visible = false

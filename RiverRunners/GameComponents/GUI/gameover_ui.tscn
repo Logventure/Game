@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://xxdcxkrjegxv"]
+[gd_scene load_steps=9 format=3 uid="uid://xxdcxkrjegxv"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/gameover_ui.gd" id="1_p3cil"]
 [ext_resource type="Texture2D" uid="uid://bv5ntikltbagw" path="res://Assets/UI/GameOver Menu/GameOverMenu-Frame.png" id="2_66bdl"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dlisuewnoi6s4" path="res://Assets/UI/Empty Buttons/Button-Empty-Pressed.png" id="4_j6n0p"]
 [ext_resource type="Texture2D" uid="uid://bqtov3bjn6o2a" path="res://Assets/UI/Empty Buttons/Button-Empty-Highlighted.png" id="5_uur5g"]
 [ext_resource type="FontFile" uid="uid://bg1oq07gebwu4" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="6_i6kbn"]
+[ext_resource type="Script" path="res://Scripts/GUI/text_resize.gd" id="7_jpg57"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_i54tf"]
 font = ExtResource("6_i6kbn")
@@ -78,14 +79,17 @@ texture_focused = ExtResource("5_uur5g")
 
 [node name="Retry" type="Label" parent="Panel/VBoxContainer/RetryButton"]
 layout_mode = 0
-offset_left = 3.57144
-offset_top = 1.64285
-offset_right = 338.572
-offset_bottom = 84.6428
+offset_left = 2.0
+offset_top = 1.57147
+offset_right = 373.0
+offset_bottom = 78.5715
 scale = Vector2(0.1, 0.1)
 text = "RETRY"
 label_settings = SubResource("LabelSettings_i54tf")
 horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_jpg57")
+max_characters = 7
 
 [node name="GiveUpButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -102,13 +106,17 @@ texture_focused = ExtResource("5_uur5g")
 
 [node name="GiveUp" type="Label" parent="Panel/VBoxContainer/GiveUpButton"]
 layout_mode = 0
-offset_left = 5.64288
-offset_top = 1.64285
-offset_right = 340.643
-offset_bottom = 84.6428
+offset_left = 2.0
+offset_top = 1.78574
+offset_right = 377.0
+offset_bottom = 78.7857
 scale = Vector2(0.1, 0.1)
 text = "GIVE UP"
 label_settings = SubResource("LabelSettings_i54tf")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_jpg57")
+max_characters = 7
 
 [connection signal="pressed" from="Panel/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/GiveUpButton" to="." method="_on_give_up_button_pressed"]

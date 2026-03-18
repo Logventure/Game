@@ -22,7 +22,7 @@ var playerTargetSpeed = 1
 var relax_mode = false
 
 const dialogueFolder = "res://TextFiles/Dialogues/"
-const languageFolders = {"en":"EN/", "pt":"PT/", "es":"ES/"}
+const languageFolders = {"en":"EN/", "pt":"PT/", "es":"ES/", "fr":"FR/", "ua":"UA/"}
 var locale = TranslationServer.get_locale()
 
 enum States {DIALOG,RUNNING,PAUSED,NO_OBSTACLES,LEVEL_END}

@@ -192,20 +192,28 @@ func _process(delta):
 
 func onPause():
 	previous_state = current_state
+	print("current state: ", current_state)
 	current_state = States.PAUSED
-	Events.emit_signal("pauseOtterCooldown")
+	if timer != null:
+		timer.paused = true
+		Events.emit_signal("pauseOtterCooldown")
+		pause()	
 
 func onResume():
 	current_state = previous_state
-	Events.emit_signal("resumeOtterCooldown")
+	if timer != null:
+		timer.paused = false
+		Events.emit_signal("resumeOtterCooldown")
+		play()
 
 func onTreeDetected(area):
+	print("Otter collided with treeeee")
 	is_over_tree = true
 	detected_tree = area
 	number_of_animals = 0
 	if get_node("../").isCharacterAvailable("crab"):
 		number_of_animals += 1
-	if position.y - pos > -100 + number_of_animals * 25:
+	if position.y - pos > -100 + number_of_animals * 25 or current_state == States.IDLE:
 		Events.emit_signal("collision_with_tree",area)
 		
 func onTreeExited(area):

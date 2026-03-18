@@ -83,7 +83,7 @@
 *Cutscene*: res://Assets/Cutscenes/l-CS-Common5.png
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
 *Volume*: 0
-*Text*: Eeeeepa!!
+*Text*: Espeeeraaaa!!
 >>>>>
 
 *Character*: frog
@@ -111,17 +111,17 @@
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: Bem, queria, mas foi antes de perceber que tu eras...
+*Text*: Bem, queria, mas foi antes de perceber que vocês são...
 >>>>>
 
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: Igual a mim.
+*Text*: Tal como eu.
 >>>>>
 
 *Character*: frog
 *Volume*: 10
-*Text*: A Shorktopus?
+*Text*: Um Shorktopus?
 >>>>>
 
 *Character*: shork
@@ -191,7 +191,7 @@
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
 *Volume*: 0
-*Text*: Pensei que fosses um dos cientistas, tentando me recapturar.
+*Text*: Pensei que fossem parte dos cientistas, tentando me recapturar.
 >>>>>
 
 *Character*: crab
@@ -252,7 +252,7 @@
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: Felizmente consegui escapar antes que apagassem da minha mente o que vi e experimentei.
+*Text*: Felizmente consegui escapar antes que apagassem da minha mente o que vi e experienciei.
 >>>>>
 
 *Character*: crab

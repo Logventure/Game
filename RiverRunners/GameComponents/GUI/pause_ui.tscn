@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://c0evnav84nr83"]
+[gd_scene load_steps=10 format=3 uid="uid://c0evnav84nr83"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/pause_ui.gd" id="1_igw7q"]
 [ext_resource type="Texture2D" uid="uid://do4b344v101df" path="res://Assets/UI/Pause Menu/PauseMenu-Frame.png" id="2_sdw8s"]
 [ext_resource type="Texture2D" uid="uid://b41515u70snph" path="res://Assets/UI/Empty Buttons/Button-Empty.png" id="3_p8lfh"]
 [ext_resource type="Texture2D" uid="uid://dlisuewnoi6s4" path="res://Assets/UI/Empty Buttons/Button-Empty-Pressed.png" id="4_pgoyx"]
 [ext_resource type="Texture2D" uid="uid://bqtov3bjn6o2a" path="res://Assets/UI/Empty Buttons/Button-Empty-Highlighted.png" id="5_hv5s5"]
+[ext_resource type="Script" path="res://Scripts/GUI/text_resize.gd" id="7_6psqa"]
 [ext_resource type="PackedScene" uid="uid://chkd7lgphi0cv" path="res://GameComponents/GUI/options_ui.tscn" id="12_syo3b"]
 [ext_resource type="FontFile" uid="uid://bg1oq07gebwu4" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="13_fsa0v"]
 
@@ -79,13 +80,16 @@ texture_focused = ExtResource("5_hv5s5")
 [node name="Resume" type="Label" parent="Panel/VBoxContainer/ResumeButton"]
 layout_mode = 0
 offset_left = 1.0
-offset_top = 2.0
+offset_top = 1.50002
 offset_right = 391.0
-offset_bottom = 85.0
+offset_bottom = 78.5
 scale = Vector2(0.1, 0.1)
 text = "RESUME"
 label_settings = SubResource("LabelSettings_2ypd2")
 horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_6psqa")
+max_characters = 7
 
 [node name="OptionsButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -102,13 +106,16 @@ texture_focused = ExtResource("5_hv5s5")
 [node name="Options" type="Label" parent="Panel/VBoxContainer/OptionsButton"]
 layout_mode = 0
 offset_left = 1.0
-offset_top = 2.0
+offset_top = 1.50009
 offset_right = 392.0
-offset_bottom = 85.0
+offset_bottom = 78.5001
 scale = Vector2(0.1, 0.1)
 text = "OPTIONS"
 label_settings = SubResource("LabelSettings_2ypd2")
 horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_6psqa")
+max_characters = 7
 
 [node name="GiveUpButton" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -123,16 +130,18 @@ texture_hover = ExtResource("5_hv5s5")
 texture_focused = ExtResource("5_hv5s5")
 
 [node name="GiveUp" type="Label" parent="Panel/VBoxContainer/GiveUpButton"]
-custom_minimum_size = Vector2(0, 100)
 layout_mode = 0
 offset_left = 1.0
-offset_top = 2.0
+offset_top = 1.57138
 offset_right = 390.0
-offset_bottom = 102.0
+offset_bottom = 78.5714
 scale = Vector2(0.1, 0.1)
 text = "GIVE UP"
 label_settings = SubResource("LabelSettings_2ypd2")
 horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_6psqa")
+max_characters = 7
 
 [node name="OptionsUI" parent="." instance=ExtResource("12_syo3b")]
 offset_left = -1731.0

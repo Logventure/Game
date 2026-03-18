@@ -161,6 +161,7 @@ func onResume():
 	current_state = previous_state
 
 func onTreeDetected(area):
+	print("Frog collided with treeeee")
 	is_over_tree = true
 	detected_tree = area
 	number_of_animals = 0
@@ -168,7 +169,7 @@ func onTreeDetected(area):
 		number_of_animals += 1
 	if get_node("../").isCharacterAvailable("otter"):
 		number_of_animals += 1
-	if position.y - pos > -100 + number_of_animals * 25:
+	if position.y - pos > -100 + number_of_animals * 25 or current_state == States.IDLE:
 		Events.emit_signal("collision_with_tree",area)
 		
 func onTreeExited(area):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cb1i5u782gu14"]
+[gd_scene load_steps=25 format=3 uid="uid://cb1i5u782gu14"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/credits_menu.gd" id="1_xjimh"]
 [ext_resource type="Texture2D" uid="uid://dp6ppprxdyxto" path="res://Assets/UI/Credits/CreditsMenu1.png" id="1_xueiu"]
@@ -108,50 +108,17 @@ font = ExtResource("8_na3el")
 font_size = 35
 
 [sub_resource type="LabelSettings" id="LabelSettings_yohu8"]
-line_spacing = 30.0
-font = ExtResource("8_na3el")
-font_size = 25
-
-[sub_resource type="LabelSettings" id="LabelSettings_x0uy5"]
 line_spacing = 10.0
 font = ExtResource("8_na3el")
 font_size = 25
-
-[sub_resource type="LabelSettings" id="LabelSettings_bs4l1"]
-font = ExtResource("8_na3el")
-font_size = 35
-
-[sub_resource type="LabelSettings" id="LabelSettings_d3md3"]
-line_spacing = 30.0
-font = ExtResource("8_na3el")
-font_size = 25
-
-[sub_resource type="LabelSettings" id="LabelSettings_jd4fq"]
-line_spacing = 10.0
-font = ExtResource("8_na3el")
-font_size = 25
-
-[sub_resource type="LabelSettings" id="LabelSettings_vythi"]
-font = ExtResource("8_na3el")
-font_size = 35
-
-[sub_resource type="LabelSettings" id="LabelSettings_5iuqe"]
-line_spacing = 92.0
-font = ExtResource("8_na3el")
-font_size = 25
-
-[sub_resource type="LabelSettings" id="LabelSettings_ad7j2"]
-line_spacing = 10.0
-font = ExtResource("8_na3el")
-font_size = 25
-
-[sub_resource type="LabelSettings" id="LabelSettings_8sh2y"]
-font = ExtResource("8_na3el")
-font_size = 20
 
 [sub_resource type="LabelSettings" id="LabelSettings_q11py"]
 font = ExtResource("8_na3el")
 font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_8sh2y"]
+font = ExtResource("8_na3el")
+font_size = 20
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d4s5w"]
 animations = [{
@@ -249,7 +216,12 @@ libraries = {
 "": SubResource("AnimationLibrary_c4aeq")
 }
 
-[node name="Label" type="Label" parent="."]
+[node name="TextParent" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="TextParent"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -257,333 +229,554 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -259.0
-offset_top = 1.0
-offset_right = 259.0
-offset_bottom = 90.0
+offset_left = 681.0
+offset_top = 1041.0
+offset_right = 1199.0
+offset_bottom = 1130.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "LogVenture"
 label_settings = SubResource("LabelSettings_mhwy4")
 
-[node name="Label2" type="Label" parent="."]
-z_index = 1
+[node name="List" type="VBoxContainer" parent="TextParent"]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = -1
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -150.5
-offset_top = 270.0
-offset_right = 150.5
-offset_bottom = 316.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Programmers"
+offset_top = 1307.0
+offset_right = 1880.0
+offset_bottom = 2451.0
+
+[node name="Programmers" type="Label" parent="TextParent/List"]
+z_index = 1
+layout_mode = 2
+text = "PROGRAMMERS"
 label_settings = SubResource("LabelSettings_63e8d")
+horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="."]
-z_index = 1
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -411.0
-offset_top = 350.0
-offset_right = -5.0
-offset_bottom = 1158.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "   Gameplay Programmers
+[node name="Spacer-start" type="BoxContainer" parent="TextParent/List"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 
-        UI/UX Programmers
+[node name="VBoxContainer" type="VBoxContainer" parent="TextParent/List"]
+z_index = 10
+layout_mode = 2
 
-  Animation Programmers
+[node name="RoleBlock" type="HBoxContainer" parent="TextParent/List/VBoxContainer"]
+layout_mode = 2
+alignment = 1
 
-          Audio Programmer
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer/RoleBlock"]
+custom_minimum_size = Vector2(750, 120)
+layout_mode = 2
+text = "GAMEPROG"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
 
-       Physics Programmer
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer/RoleBlock"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
 
-Environment Programmer
-
-           Build Programmer"
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer/RoleBlock"]
+custom_minimum_size = Vector2(700, 120)
+layout_mode = 2
+text = "Daniel Oliveira
+Inês Santos"
 label_settings = SubResource("LabelSettings_yohu8")
 
-[node name="Label4" type="Label" parent="."]
-z_index = 1
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 40.0
-offset_top = 348.0
-offset_right = 260.0
-offset_bottom = 1239.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Daniel Oliveira 
-Inês Santos
+[node name="RoleBlock2" type="HBoxContainer" parent="TextParent/List/VBoxContainer"]
+layout_mode = 2
+alignment = 1
 
-Daniel Oliveira
-Inês Santos
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer/RoleBlock2"]
+custom_minimum_size = Vector2(750, 120)
+layout_mode = 2
+text = "UIPROG"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
 
-Inês Santos
-Daniel Oliveira
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer/RoleBlock2"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
 
-Inês Santos
-
-
-Inês Santos 
-Daniel Oliveira
-
-Inês Santos
-
-
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer/RoleBlock2"]
+custom_minimum_size = Vector2(700, 120)
+layout_mode = 2
+text = "Daniel Oliveira
 Inês Santos"
-label_settings = SubResource("LabelSettings_x0uy5")
+label_settings = SubResource("LabelSettings_yohu8")
 
-[node name="Label5" type="Label" parent="."]
+[node name="RoleBlock3" type="HBoxContainer" parent="TextParent/List/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer/RoleBlock3"]
+custom_minimum_size = Vector2(750, 120)
+layout_mode = 2
+text = "ANIMPROG"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
+
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer/RoleBlock3"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer/RoleBlock3"]
+custom_minimum_size = Vector2(700, 120)
+layout_mode = 2
+text = "Inês Santos
+Daniel Oliveira"
+label_settings = SubResource("LabelSettings_yohu8")
+
+[node name="RoleBlock4" type="HBoxContainer" parent="TextParent/List/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer/RoleBlock4"]
+custom_minimum_size = Vector2(750, 120)
+layout_mode = 2
+text = "AUDIOPROG"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
+
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer/RoleBlock4"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer/RoleBlock4"]
+custom_minimum_size = Vector2(700, 120)
+layout_mode = 2
+text = "Inês Santos"
+label_settings = SubResource("LabelSettings_yohu8")
+
+[node name="RoleBlock5" type="HBoxContainer" parent="TextParent/List/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer/RoleBlock5"]
+custom_minimum_size = Vector2(750, 120)
+layout_mode = 2
+text = "PHYSPROG"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
+
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer/RoleBlock5"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer/RoleBlock5"]
+custom_minimum_size = Vector2(700, 120)
+layout_mode = 2
+text = "Inês Santos
+Daniel Oliveira"
+label_settings = SubResource("LabelSettings_yohu8")
+
+[node name="RoleBlock6" type="HBoxContainer" parent="TextParent/List/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer/RoleBlock6"]
+custom_minimum_size = Vector2(750, 120)
+layout_mode = 2
+text = "ENVPROG"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
+
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer/RoleBlock6"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer/RoleBlock6"]
+custom_minimum_size = Vector2(700, 120)
+layout_mode = 2
+text = "Inês Santos"
+label_settings = SubResource("LabelSettings_yohu8")
+
+[node name="RoleBlock7" type="HBoxContainer" parent="TextParent/List/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer/RoleBlock7"]
+custom_minimum_size = Vector2(750, 120)
+layout_mode = 2
+text = "BUILDPROG"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
+
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer/RoleBlock7"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer/RoleBlock7"]
+custom_minimum_size = Vector2(700, 120)
+layout_mode = 2
+text = "Inês Santos"
+label_settings = SubResource("LabelSettings_yohu8")
+
+[node name="Spacer-end" type="BoxContainer" parent="TextParent/List"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Artists" type="Label" parent="TextParent/List"]
 z_index = 1
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -77.0
-offset_top = 1240.0
-offset_right = 77.0
-offset_bottom = 1286.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Artists"
-label_settings = SubResource("LabelSettings_bs4l1")
+layout_mode = 2
+text = "ARTISTS"
+label_settings = SubResource("LabelSettings_63e8d")
+horizontal_alignment = 1
 
-[node name="Label6" type="Label" parent="."]
+[node name="Spacer-start2" type="BoxContainer" parent="TextParent/List"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TextParent/List"]
+z_index = 10
+layout_mode = 2
+
+[node name="RoleBlock" type="HBoxContainer" parent="TextParent/List/VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer2/RoleBlock"]
+custom_minimum_size = Vector2(750, 120)
+layout_mode = 2
+text = "ENVART"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
+
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer2/RoleBlock"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer2/RoleBlock"]
+custom_minimum_size = Vector2(700, 120)
+layout_mode = 2
+text = "Bruno Brandão"
+label_settings = SubResource("LabelSettings_yohu8")
+
+[node name="RoleBlock2" type="HBoxContainer" parent="TextParent/List/VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer2/RoleBlock2"]
+custom_minimum_size = Vector2(750, 120)
+layout_mode = 2
+text = "CUTART"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
+
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer2/RoleBlock2"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer2/RoleBlock2"]
+custom_minimum_size = Vector2(700, 120)
+layout_mode = 2
+text = "Duarte Cunha"
+label_settings = SubResource("LabelSettings_yohu8")
+
+[node name="RoleBlock3" type="HBoxContainer" parent="TextParent/List/VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer2/RoleBlock3"]
+custom_minimum_size = Vector2(750, 120)
+layout_mode = 2
+text = "ANIMART"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
+
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer2/RoleBlock3"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer2/RoleBlock3"]
+custom_minimum_size = Vector2(700, 120)
+layout_mode = 2
+text = "Duarte Cunha
+Bruno Brandão"
+label_settings = SubResource("LabelSettings_yohu8")
+
+[node name="RoleBlock4" type="HBoxContainer" parent="TextParent/List/VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer2/RoleBlock4"]
+custom_minimum_size = Vector2(750, 120)
+layout_mode = 2
+text = "UIART"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
+
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer2/RoleBlock4"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer2/RoleBlock4"]
+custom_minimum_size = Vector2(700, 120)
+layout_mode = 2
+text = "Duarte Cunha"
+label_settings = SubResource("LabelSettings_yohu8")
+
+[node name="RoleBlock5" type="HBoxContainer" parent="TextParent/List/VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer2/RoleBlock5"]
+custom_minimum_size = Vector2(750, 120)
+layout_mode = 2
+text = "CHARART"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
+
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer2/RoleBlock5"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer2/RoleBlock5"]
+custom_minimum_size = Vector2(700, 120)
+layout_mode = 2
+text = "Duarte Cunha
+Bruno Brandão"
+label_settings = SubResource("LabelSettings_yohu8")
+
+[node name="RoleBlock6" type="HBoxContainer" parent="TextParent/List/VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer2/RoleBlock6"]
+custom_minimum_size = Vector2(750, 120)
+layout_mode = 2
+text = "CONCART"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
+
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer2/RoleBlock6"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer2/RoleBlock6"]
+custom_minimum_size = Vector2(700, 120)
+layout_mode = 2
+text = "Duarte Cunha"
+label_settings = SubResource("LabelSettings_yohu8")
+
+[node name="Spacer-end2" type="BoxContainer" parent="TextParent/List"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Designers" type="Label" parent="TextParent/List"]
 z_index = 1
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -368.0
-offset_top = 1320.0
-offset_right = -8.0
-offset_bottom = 2002.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Environment Art Artist
+layout_mode = 2
+text = "DESIGNERS"
+label_settings = SubResource("LabelSettings_63e8d")
+horizontal_alignment = 1
 
-        Cutscenes Artist
+[node name="Spacer-start3" type="BoxContainer" parent="TextParent/List"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 
-      Animations Artists
+[node name="VBoxContainer3" type="VBoxContainer" parent="TextParent/List"]
+z_index = 10
+layout_mode = 2
 
-               UI/UX Artist
+[node name="RoleBlock" type="HBoxContainer" parent="TextParent/List/VBoxContainer3"]
+layout_mode = 2
+alignment = 1
 
-       Character Artists
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer3/RoleBlock"]
+custom_minimum_size = Vector2(750, 220)
+layout_mode = 2
+text = "GAMEDES"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
 
-      Concept Art Artist"
-label_settings = SubResource("LabelSettings_d3md3")
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer3/RoleBlock"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
 
-[node name="Label7" type="Label" parent="."]
-z_index = 1
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 40.0
-offset_top = 1336.0
-offset_right = 275.0
-offset_bottom = 1992.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Bruno Brandão
-
-
-Duarte Cunha
-
-
-Duarte Cunha
-Bruno Brandão
-
-Duarte Cunha
-
-
-Duarte Cunha
-Bruno Brandão
-
-Duarte Cunha"
-label_settings = SubResource("LabelSettings_jd4fq")
-
-[node name="Label8" type="Label" parent="."]
-z_index = 1
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -112.0
-offset_top = 2090.0
-offset_right = 112.0
-offset_bottom = 2136.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Designers"
-label_settings = SubResource("LabelSettings_vythi")
-
-[node name="Label9" type="Label" parent="."]
-z_index = 1
-layout_mode = 0
-offset_left = 598.0
-offset_top = 3260.0
-offset_right = 956.0
-offset_bottom = 4859.0
-text = "   Gameplay Designers
-
-         Level Designers
-
-Characters Designers
-
-   Narrative Designers
-
-              Story Writer
-
-          Sound Designer
-
-         UI/UX Designers"
-label_settings = SubResource("LabelSettings_5iuqe")
-
-[node name="Label10" type="Label" parent="."]
-z_index = 1
-layout_mode = 0
-offset_left = 1000.0
-offset_top = 3260.0
-offset_right = 1235.0
-offset_bottom = 4859.0
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer3/RoleBlock"]
+custom_minimum_size = Vector2(700, 220)
+layout_mode = 2
 text = "Inês Santos
 Daniel Oliveira
 Duarte Cunha
-Bruno Brandão
+Bruno Brandão"
+label_settings = SubResource("LabelSettings_yohu8")
 
+[node name="RoleBlock2" type="HBoxContainer" parent="TextParent/List/VBoxContainer3"]
+layout_mode = 2
+alignment = 1
 
-Inês Santos
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer3/RoleBlock2"]
+custom_minimum_size = Vector2(750, 220)
+layout_mode = 2
+text = "LEVELDES"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
+
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer3/RoleBlock2"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer3/RoleBlock2"]
+custom_minimum_size = Vector2(700, 220)
+layout_mode = 2
+text = "Inês Santos
 Daniel Oliveira
 Duarte Cunha
-Bruno Brandão
+Bruno Brandão"
+label_settings = SubResource("LabelSettings_yohu8")
 
+[node name="RoleBlock3" type="HBoxContainer" parent="TextParent/List/VBoxContainer3"]
+layout_mode = 2
+alignment = 1
 
-Duarte Cunha
-Bruno Brandão
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer3/RoleBlock3"]
+custom_minimum_size = Vector2(750, 120)
+layout_mode = 2
+text = "CHARDES"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
 
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer3/RoleBlock3"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
 
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer3/RoleBlock3"]
+custom_minimum_size = Vector2(700, 120)
+layout_mode = 2
+text = "Duarte Cunha
+Bruno Brandão"
+label_settings = SubResource("LabelSettings_yohu8")
 
+[node name="RoleBlock4" type="HBoxContainer" parent="TextParent/List/VBoxContainer3"]
+layout_mode = 2
+alignment = 1
 
-Inês Santos
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer3/RoleBlock4"]
+custom_minimum_size = Vector2(750, 220)
+layout_mode = 2
+text = "NARRDES"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
+
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer3/RoleBlock4"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer3/RoleBlock4"]
+custom_minimum_size = Vector2(700, 220)
+layout_mode = 2
+text = "Inês Santos
 Daniel Oliveira
 Duarte Cunha
-Bruno Brandão
+Bruno Brandão"
+label_settings = SubResource("LabelSettings_yohu8")
 
+[node name="RoleBlock5" type="HBoxContainer" parent="TextParent/List/VBoxContainer3"]
+layout_mode = 2
+alignment = 1
 
-Duarte Cunha
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer3/RoleBlock5"]
+custom_minimum_size = Vector2(750, 100)
+layout_mode = 2
+text = "WRITER"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
 
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer3/RoleBlock5"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
 
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer3/RoleBlock5"]
+custom_minimum_size = Vector2(700, 100)
+layout_mode = 2
+text = "Duarte Cunha"
+label_settings = SubResource("LabelSettings_yohu8")
 
+[node name="RoleBlock6" type="HBoxContainer" parent="TextParent/List/VBoxContainer3"]
+layout_mode = 2
+alignment = 1
 
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer3/RoleBlock6"]
+custom_minimum_size = Vector2(750, 100)
+layout_mode = 2
+text = "SOUNDDES"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
 
-Inês Santos
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer3/RoleBlock6"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
 
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer3/RoleBlock6"]
+custom_minimum_size = Vector2(700, 100)
+layout_mode = 2
+text = "Inês Santos"
+label_settings = SubResource("LabelSettings_yohu8")
 
+[node name="RoleBlock7" type="HBoxContainer" parent="TextParent/List/VBoxContainer3"]
+layout_mode = 2
+alignment = 1
 
+[node name="Role" type="Label" parent="TextParent/List/VBoxContainer3/RoleBlock7"]
+custom_minimum_size = Vector2(750, 120)
+layout_mode = 2
+text = "UIDES"
+label_settings = SubResource("LabelSettings_yohu8")
+horizontal_alignment = 2
 
+[node name="Spacer" type="BoxContainer" parent="TextParent/List/VBoxContainer3/RoleBlock7"]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
 
-Duarte Cunha
-Daniel Oliveira
+[node name="People" type="Label" parent="TextParent/List/VBoxContainer3/RoleBlock7"]
+custom_minimum_size = Vector2(700, 120)
+layout_mode = 2
+text = "Duarte Cunha
+Bruno Brandão"
+label_settings = SubResource("LabelSettings_yohu8")
 
-"
-label_settings = SubResource("LabelSettings_ad7j2")
+[node name="Spacer-end3" type="BoxContainer" parent="TextParent/List"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
 
-[node name="Label11" type="Label" parent="."]
+[node name="Music" type="Label" parent="TextParent/List"]
 z_index = 1
+layout_mode = 2
+text = "MUSICBY"
+label_settings = SubResource("LabelSettings_q11py")
+horizontal_alignment = 1
+
+[node name="Spacer-end4" type="BoxContainer" parent="TextParent/List"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="Thanks" type="Label" parent="TextParent/List"]
+z_index = 1
+layout_mode = 2
+text = "THX"
+label_settings = SubResource("LabelSettings_mhwy4")
+horizontal_alignment = 1
+
+[node name="Skip" type="Label" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(1000, 0)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -306.0
-offset_top = -69.0
-offset_right = -48.0
-offset_bottom = -41.0
+offset_left = -1115.0
+offset_top = -67.0
+offset_right = -115.0
+offset_bottom = -39.0
 grow_horizontal = 0
 grow_vertical = 0
 label_settings = SubResource("LabelSettings_8sh2y")
-
-[node name="Label12" type="Label" parent="."]
-z_index = 1
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -517.0
-offset_top = 3982.0
-offset_right = 517.0
-offset_bottom = 4211.99
-grow_horizontal = 2
-grow_vertical = 0
-text = "Music by HoliznaCC0
-Album: ChipTunes
-Licensed under CC0 1.0 Universal
-
-Sound Effects provided by MixKit and Pixabay"
-label_settings = SubResource("LabelSettings_q11py")
-horizontal_alignment = 1
-
-[node name="Label13" type="Label" parent="."]
-z_index = 1
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -429.0
-offset_top = 4386.0
-offset_right = 429.0
-offset_bottom = 4475.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Thanks for playing!"
-label_settings = SubResource("LabelSettings_mhwy4")
-
-[node name="Label14" type="Label" parent="."]
-visible = false
-z_index = 1
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -517.0
-offset_top = 170.0
-offset_right = 517.0
-offset_bottom = 210.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Creators credits hidden in this version"
-label_settings = SubResource("LabelSettings_q11py")
-horizontal_alignment = 1
+horizontal_alignment = 2
+autowrap_mode = 3
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
@@ -591,7 +784,7 @@ one_shot = true
 [node name="loader_circle" type="AnimatedSprite2D" parent="."]
 z_index = 1
 texture_filter = 1
-position = Vector2(1577, 1025)
+position = Vector2(1832, 1025)
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_d4s5w")
 animation = &"load"

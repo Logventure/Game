@@ -183,12 +183,14 @@ func onPause():
 	if timer != null:
 		timer.paused = true
 		Events.emit_signal("pauseCrabCooldown")
+		pause()	
 
 func onResume():
 	current_state = previous_state
 	if timer != null:
 		timer.paused = false
 		Events.emit_signal("resumeCrabCooldown")
+		play()
 
 func _on_animation_finished():
 	pass
@@ -214,9 +216,10 @@ func _on_animation_looped():
 
 
 func onTreeDetected(area):
+	print("Crab collided with treeeee")
 	is_over_tree = true
 	detected_tree = area
-	if position.y - pos > -75:
+	if position.y - pos > -75  or current_state == States.IDLE:
 		Events.emit_signal("collision_with_tree",area)
 
 func onTreeExited(area):

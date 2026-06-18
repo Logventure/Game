@@ -46,7 +46,7 @@ func handle_going_down():
 
 	timer = Timer.new()
 	timer.set_one_shot(true)
-	timer.set_wait_time(0.03)
+	timer.set_wait_time(0.01)
 	timer.connect("timeout", onTimerTimeout)
 	add_child(timer)
 	timer.start()

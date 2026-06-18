@@ -12,6 +12,8 @@ config_version=5
 
 config/name="RiverRunners"
 run/main_scene="res://Game/GameManager.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="RiverRunners"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://Assets/UI/RR-Icon.png"
 config/windows_native_icon="res://Assets/UI/RR-Icon.ico"
@@ -21,6 +23,7 @@ config/windows_native_icon="res://Assets/UI/RR-Icon.ico"
 Events="*res://Scripts/Events.gd"
 Utils="*res://Scripts/Utils.gd"
 InputHandler="*res://Scripts/Game/InputHandler.gd"
+SteamController="*res://Scripts/Steam/steam_controller.gd"
 
 [display]
 
@@ -152,7 +155,7 @@ confirm={
 locale/translation_remaps={
 "res://Assets/UI/Confirm Pop-Up/ConfirmPop-up-Background.png": PackedStringArray("res://Assets/UI/Translated/PT/ConfirmPop-up-Background.png:pt")
 }
-locale/translations=PackedStringArray("res://TextFiles/Translations/ui_translation.en.translation", "res://TextFiles/Translations/ui_translation.es.translation", "res://TextFiles/Translations/ui_translation.pt.translation")
+locale/translations=PackedStringArray("res://TextFiles/Translations/ui_translation.en.translation", "res://TextFiles/Translations/ui_translation.es.translation", "res://TextFiles/Translations/ui_translation.pt.translation", "res://TextFiles/Translations/ui_translation.fr.translation", "res://TextFiles/Translations/ui_translation.ua.translation")
 locale/test="pt"
 locale/locale_filter_mode=0
 

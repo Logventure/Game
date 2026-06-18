@@ -13,6 +13,7 @@ func _ready():
 	value_changed.connect(on_value_changed)
 
 	value = db_to_linear(AudioServer.get_bus_volume_db(bus_index))
+	FILE_MANAGEMENT_SCRIPT.saveMusic(value)
 
 func on_value_changed(new_value: float):
 	AudioServer.set_bus_volume_db(bus_index, linear_to_db(new_value))

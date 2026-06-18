@@ -169,6 +169,8 @@ func switchToNextLevel():
 	replaceScreen(viewer, target_screen)
 
 func levelCompleted():
+	if last_level == 0:
+		SteamController.set_achievement("ACH_WIN_ONE_GAME")
 	if last_level + 1 < len(level_ids):
 		last_level += 1
 	var savedLevel = FILE_MANAGEMENT_SCRIPT.loadLevels()

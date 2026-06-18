@@ -1,14 +1,62 @@
-const SAVE_PATH = "user://settings.cfg"
-const SAVE_PATH_SCORE = "user://score.cfg"
-const SAVE_PATH_LEVELS = "user://levels.cfg"
-const SAVE_PATH_DIFFICULTY = "user://difficulty.cfg"
-const SAVE_PATH_SOUND = "user://sound.cfg"
-const SAVE_PATH_MASTER = "user://master.cfg"
-const SAVE_PATH_MUSIC = "user://music.cfg"
-const SAVE_PATH_AMBIENCE = "user://ambience.cfg"
+const SAVE_DIR = "user://SaveData/"
+const SAVE_PATH = SAVE_DIR + "settings.cfg"
+const SAVE_PATH_SCORE = SAVE_DIR + "score.cfg"
+const SAVE_PATH_LEVELS = SAVE_DIR + "levels.cfg"
+const SAVE_PATH_DIFFICULTY = SAVE_DIR + "difficulty.cfg"
+const SAVE_PATH_SOUND = SAVE_DIR + "sound.cfg"
+const SAVE_PATH_MASTER = SAVE_DIR + "master.cfg"
+const SAVE_PATH_MUSIC = SAVE_DIR + "music.cfg"
+const SAVE_PATH_AMBIENCE = SAVE_DIR + "ambience.cfg"
 
+static func verifySaveFiles():
+
+	DirAccess.make_dir_recursive_absolute(SAVE_DIR)
+
+	#checks files
+	if not FileAccess.file_exists(SAVE_PATH):
+		var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+		if file:
+			file.close()
+
+	if not FileAccess.file_exists(SAVE_PATH_SCORE):
+		var file = FileAccess.open(SAVE_PATH_SCORE, FileAccess.WRITE)
+		if file:
+			file.close()
+
+	if not FileAccess.file_exists(SAVE_PATH_LEVELS):
+		var file = FileAccess.open(SAVE_PATH_LEVELS, FileAccess.WRITE)
+		if file:
+			file.close()
+
+	if not FileAccess.file_exists(SAVE_PATH_DIFFICULTY):
+		var file = FileAccess.open(SAVE_PATH_DIFFICULTY, FileAccess.WRITE)
+		if file:
+			file.close()
+
+	if not FileAccess.file_exists(SAVE_PATH_SOUND):
+		var file = FileAccess.open(SAVE_PATH_SOUND, FileAccess.WRITE)
+		if file:
+			file.close()
+
+	if not FileAccess.file_exists(SAVE_PATH_MASTER):
+		var file = FileAccess.open(SAVE_PATH_MASTER, FileAccess.WRITE)
+		if file:
+			file.close()
+
+	if not FileAccess.file_exists(SAVE_PATH_AMBIENCE):
+		var file = FileAccess.open(SAVE_PATH_AMBIENCE, FileAccess.WRITE)
+		if file:
+			file.close()
+
+	if not FileAccess.file_exists(SAVE_PATH_MUSIC):
+		var file = FileAccess.open(SAVE_PATH_MUSIC, FileAccess.WRITE)
+		if file:
+			file.close()
 
 static func loadConfig():
+
+	verifySaveFiles()
+
 	var config = ConfigFile.new()
 
 	var valid = config.load(SAVE_PATH) == OK
@@ -50,6 +98,8 @@ static func loadHighestScore():
 	if valid:
 		return config.get_value("score", "highestScore")
 
+	return 0
+
 static func saveHighestScore(score: int):
 	var config = ConfigFile.new()
 
@@ -67,6 +117,8 @@ static func loadLevels():
 	
 	if valid:
 		return config.get_value("levels", "level")
+
+	return 0
 
 static func saveLevels(level: int):
 	var config = ConfigFile.new()
@@ -86,6 +138,8 @@ static func loadDifficulty():
 	if valid:
 		return config.get_value("difficulty", "mode")
 
+	return 1
+
 static func saveDifficulty(mode: int):
 	var config = ConfigFile.new()
 
@@ -104,7 +158,7 @@ static func loadSounds():
 
 static func loadMaster():
 	var config = ConfigFile.new()
-	var sound
+	var sound = 1
 	var valid = config.load(SAVE_PATH_MASTER) == OK
 
 	if valid:
@@ -124,7 +178,7 @@ static func saveMaster(value):
 
 static func loadSound():
 	var config = ConfigFile.new()
-	var sound
+	var sound = 1
 	var valid = config.load(SAVE_PATH_SOUND) == OK
 
 	if valid:
@@ -144,7 +198,7 @@ static func saveSound(value):
 
 static func loadMusic():
 	var config = ConfigFile.new()
-	var sound
+	var sound = 1
 	var valid = config.load(SAVE_PATH_MUSIC) == OK
 
 	if valid:
@@ -164,7 +218,7 @@ static func saveMusic(value):
 
 static func loadAmbience():
 	var config = ConfigFile.new()
-	var sound
+	var sound = 1
 	var valid = config.load(SAVE_PATH_AMBIENCE) == OK
 
 	if valid:

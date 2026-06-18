@@ -1,105 +1,128 @@
-keys,en,pt,es
-DIALOGUE_INSTRUCTIONS_KB,Press SPACEBAR to continue - Hold to skip,Prima ESPAÇO para continuar - Segure para saltar,Pulsa la BARRA ESPACIADORA para continuar - Mantenga para saltar
-DIALOGUE_INSTRUCTIONS_CTRL,Press A to continue - Hold to skip,Prima A para continuar - Segure para saltar,Pulsa A para continuar - Mantenga para saltar
-JUSTIN,Justin,Justin,Justin
-SIRFROG,Sir Frogginton III,Sir Frogginton III,Señor Frogginton III
-SAL,Sal,Sal,Sal
-VITO,Vito,Vito,Vito
-OT,O.T.,O.T.,O.T.
-SHORK,Friend,Friend,Friend
-YES,YES,SIM,SÍ
-NO,NO,NÃO,NO
-PLAY,PLAY,JOGAR,JUGAR
-OPTIONS,OPTIONS,OPÇÕES,OPCIONES
-EXIT GAME,EXIT GAME,SAIR,SALIR
-BACK,BACK,VOLTAR,VOLVER
-LEVEL 1,LEVEL 1,NÍVEL 1, NIVEL 1
-LEVEL 2,LEVEL 2,NÍVEL 2, NIVEL 2
-LEVEL 3,LEVEL 3,NÍVEL 3, NIVEL 3
-LEVEL 4,LEVEL 4,NÍVEL 4, NIVEL 4
-LEVEL 5,LEVEL 5,NÍVEL 5, NIVEL 5
-LEVEL 6,LEVEL 6,NÍVEL 6, NIVEL 6
-INFINITE,INFINITE,INFINITO,INFINITO
-HIGHEST SCORE,HIGHEST SCORE,PONTUAÇÃO MAIS ALTA,PUNTUACIÓN MÁS ALTA
-RESUME,RESUME,CONTINUAR,CONTINUAR
-GIVE UP,GIVE UP,DESISTIR,ABANDONAR
-RETRY,RETRY,DE NOVO,DE NUEVO
-NEXTLVL,NEXT LEVEL,CONTINUAR,CONTINUAR
-EXIT,EXIT,SAIR,SALIR
-GENERAL,GENERAL,GERAL,GENERAL
-AUDIO,AUDIO,ÁUDIO,AUDIO
-CONTROLS,CONTROLS,CONTROLOS,CONTROLES
-LANGUAGE,Language,Idioma,Idioma
-Difficulty,Difficulty,Dificuldade,Dificuldad
-EASY,EASY,FÁCIL,FÁCIL
-NORMAL,NORMAL,NORMAL,NORMAL
-HARD,HARD,DIFÍCIL,DIFÍCIL
-MASTERVOL,Master Volume:,Volume Principal:,Volumen Maestro:
-MUSICVOL,Music Volume:,Volume da Música:,Volumen de Música:
-SFXVOL,Sound Volume:,Volume dos Sons:,Volumen de Sonidos:
-AMBIVOL,Ambience Volume:,Volume do Ambiente:,Volumen del Ambiente:
-ACTION,Action,Ação,Acción
-KEYBOARD,Keyboard,Teclado,Teclado
-CONTROLLER,Controller,Controlador,Mando
-PRESSANY,Press any key,Prima qualquer tecla,Pulsa cualquier tecla
-INVALIDKEY,That key already exists\nChoose another key,Essa tecla já está em uso\nEscolha outra tecla,Esta tecla ya está en uso\nElija otra tecla
-SCORE,SCORE,PONTOS,PUNTOS
-TUTORIAL_BASE,Press {key} to {action},Prima {key} para {action},Pulsa {key} para {action}
-TUTORIAL_MOVE,Move {key} to {action},Move {key} para {action},Mueve {key} para {action}
-TUTORIAL_MOVELEFT,go LEFT,ir para a ESQUERDA,ir a la IZQUIERDA
-TUTORIAL_MOVERIGHT,go RIGHT,ir para a DIREITA,ir a la DERECHA
-TUTORIAL_JUMP,JUMP,SALTAR,SALTAR
-TUTORIAL_DIVE_CONDITION,{key} while on air,{key} enquanto no ar,{key} mientras en el aire
-TUTORIAL_DIVE,FALL,CAIR,CAER
-TUTORIAL_DASHLEFT,DASH LEFT,ESQUIVAR para a ESQUERDA,ESQUIVAR a la IZQUIERDA
-TUTORIAL_DASHRIGHT,DASH RIGHT,ESQUIVAR para a DIREITA,ESQUIVAR a la DERECHA
-TUTORIAL_DESTROY,DESTROY rocks,DESTRUIR pedras,DESTRUIR rocas
-TUTORIAL_THROW,THROW a stone,LANÇAR uma pedra,LANZAR una piedra
-DASHL,Dash Left,Esquivar Esq.,Esquivar Izq.
-DASHR,Dash Right,Esquivar Dir.,Esquivar Der.
-JUMP,Jump,Saltar,Saltar
-THROW,Throw,Lançar,Lanzar
-SHIELD,Shield,Escudo,Escudo
-KEY_CLICKR,Right Click,Clique Direito,Clic Derecho
-KEY_CLICKL,Left Click,Clique Esquerdo,Clic Izquierdo
-KEY_CLICKM,Middle Click,Clique do Meio,Clic del Medio
-KEY_L1,L1,L1,L1
-KEY_R1,R1,R1,R1
-KEY_L2,L2,L2,L2
-KEY_R2,R2,R2,R2
-KEY_L3,L3,L3,L3
-KEY_R3,R3,R3,R3
-KEY_CROSS,A,A,A
-KEY_CIRCLE,B,B,B
-KEY_SQUARE,X,X,X
-KEY_TRIANGLE,Y,Y,Y
-KEY_SPACE,SPACE,ESPAÇO,la barra ESPACIADORA
-Space,Space,Espaço,Espaciadora
-PROGRAMMERS,Programmers,Programadores,Programadores
-GAMEPROG,Gameplay Programmers,Programadores de Jogabilidade,Programadores de Jugabilidad
-UIPROG,UI/UX Programmers,Programadores de UI/UX,Programadores de UI/UX
-ANIMPROG,Animation Programmers,Programadores de Animação,Programadores de Animación
-AUDIOPROG,Audio Programmer,Programadora de Áudio,Programadora de Audio
-PHYSPROG,Physics Programmers,Programadores de Física,Programadores de Física
-ENVPROG,Environment Programmer,Programadora de Ambiente,Programadora de Ambiente
-BUILDPROG,Build Programmer,Programadora de Build,Programadora de Build
-ARTISTS,Artists,Artistas,Artistas
-ENVART,Environment Art Artist,Artista de Ambiente,Artista de Ambiente
-CUTART,Cutscenes Artist,Artista de Cutscene,Artista de Cutscene
-ANIMART,Animation Artists,Artistas de Animação,Artistas de Animación
-UIART,UI/UX Artist,Artista de UI/UX,Artista de UI/UX
-CHARART,Character Artists,Artistas de Personagem,Artistas de Personajes
-CONCART,Concept Artist,Artista Conceptual,Artista Conceptual
-DESIGNERS,Designers,Designers,Diseñadores
-GAMEDES,Gameplay Designers,Designers de Jogabilidade,Diseñadores de Jugabilidad
-LEVELDES,Level Designers,Designers de Nível,Diseñadores de Niveles
-CHARDES,Character Designers,Designers de Personagem,Diseñadores de Personaje
-NARRDES,Narrative Designers,Designers de Narrativa,Diseñadores de Narrativa
-WRITER,Story Writer,Escritor de História,Escritor de la Historia
-SOUNDDES,Sound Designer,Designer de Som,Diseñadora de Sonido
-UIDES,UI/UX Designers,Designers de UI/UX,Diseñadores de UI/UX
-MUSICBY,Music by HoliznaCC0\nAlbum: ChipTunes\nLicensed under CC0 1.0 Universal\n\nSound Effects provided by MixKit and Pixabay,Música de HoliznaCC0\nÁlbum: ChipTunes\nLicença: CC0 1.0 Universal\n\nSound Efeitos de som: MixKit e Pixabay,Música de HoliznaCC0\nÁlbum: ChipTunes\nLicencia: CC0 1.0 Universal\n\nEfectos sonoros de MixKit y Pixabay
-THX,Thanks for playing!,Obrigado por jogar!,Gracias por jugar!
-CREDITSSKIP,Hold {key} to SKIP,Mantenha {key} premido para SALTAR,Mantenga {key} para SALTAR
+﻿keys,en,pt,es,fr,ua
+DIALOGUE_INSTRUCTIONS_KB,Press SPACEBAR to continue - Hold to skip,Prima ESPAÇO para continuar - Segure para saltar,Pulsa la BARRA ESPACIADORA para continuar - Mantenga para saltar,Appuie sur ESPACE pour continuer - Maintiens pour passer,"Натисни ПРОБІЛ, щоб продовжити - Утримуй, щоб пропустити"
+DIALOGUE_INSTRUCTIONS_CTRL,Press A to continue - Hold to skip,Prima A para continuar - Segure para saltar,Pulsa A para continuar - Mantenga para saltar,Appuie sur A pour continuer - Maintiens pour passer,"Натисни A, щоб продовжити - Утримуй, щоб пропустити"
+JUSTIN,Justin,Justin,Justin,Justin,Джастін
+SIRFROG,Sir Frogginton III,Sir Frogginton III,Señor Frogginton III,Sir Frogginton III,Сер Фроґґінтон III
+SAL,Sal,Sal,Sal,Sal,Сал
+VITO,Vito,Vito,Vito,Vito,Віто
+OT,O.T.,O.T.,O.T.,O.T.,О.Т.
+SHORK,Friend,Friend,Friend,Ami,Друг
+YES,YES,SIM,SÍ,OUI,ТАК
+NO,NO,NÃO,NO,NON,НІ
+PLAY,PLAY,JOGAR,JUGAR,JOUER,ГРАТИ
+OPTIONS,OPTIONS,OPÇÕES,OPCIONES,OPTIONS,НАЛАШТУВАННЯ
+EXIT GAME,EXIT GAME,SAIR,SALIR,QUITTER,ВИЙТИ З ГРИ
+BACK,BACK,VOLTAR,VOLVER,RETOUR,НАЗАД
+LEVEL 1,LEVEL 1,NÍVEL 1,NIVEL 1,NIVEAU 1,РІВЕНЬ 1
+LEVEL 2,LEVEL 2,NÍVEL 2,NIVEL 2,NIVEAU 2,РІВЕНЬ 2
+LEVEL 3,LEVEL 3,NÍVEL 3,NIVEL 3,NIVEAU 3,РІВЕНЬ 3
+LEVEL 4,LEVEL 4,NÍVEL 4,NIVEL 4,NIVEAU 4,РІВЕНЬ 4
+LEVEL 5,LEVEL 5,NÍVEL 5,NIVEL 5,NIVEAU 5,РІВЕНЬ 5
+LEVEL 6,LEVEL 6,NÍVEL 6,NIVEL 6,NIVEAU 6,РІВЕНЬ 6
+INFINITE,INFINITE,INFINITO,INFINITO,INFINI,НЕСКІНЧЕННО
+HIGHEST SCORE,HIGHEST SCORE,PONTUAÇÃO MAIS ALTA,PUNTUACIÓN MÁS ALTA,MEILLEUR SCORE,НАЙВИЩИЙ РАХУНОК
+RESUME,RESUME,CONTINUAR,CONTINUAR,REPRENDRE,ПРОДОВЖИТИ
+GIVE UP,GIVE UP,DESISTIR,ABANDONAR,ABANDONNER,ЗДАТИСЯ
+RETRY,RETRY,DE NOVO,DE NUEVO,RÉESSAYER,СПРОБУВАТИ ЗНОВУ
+NEXTLVL,NEXT LEVEL,CONTINUAR,CONTINUAR,NIVEAU SUIVANT,НАСТУПНИЙ РІВЕНЬ
+EXIT,EXIT,SAIR,SALIR,QUITTER,ВИЙТИ
+GENERAL,GENERAL,GERAL,GENERAL,GÉNÉRAL,ЗАГАЛЬНЕ
+AUDIO,AUDIO,ÁUDIO,AUDIO,AUDIO,АУДІО
+CONTROLS,CONTROLS,CONTROLOS,CONTROLES,COMMANDES,КЕРУВАННЯ
+LANGUAGE,Language,Idioma,Idioma,Langue,Мова
+Difficulty,Difficulty,Dificuldade,Dificultad,Difficulté,Складність
+EASY,EASY,FÁCIL,FÁCIL,FACILE,ЛЕГКО
+NORMAL,NORMAL,NORMAL,NORMAL,NORMAL,НОРМАЛЬНО
+HARD,HARD,DIFÍCIL,DIFÍCIL,DIFFICILE,СКЛАДНО
+MASTERVOL,Master Volume:,Volume Principal:,Volumen Maestro:,Volume principal :,Головна гучність:
+MUSICVOL,Music Volume:,Volume da Música:,Volumen de Música:,Volume de la musique :,Гучність музики:
+SFXVOL,Sound Volume:,Volume dos Sons:,Volumen de Sonidos:,Volume des effets sonores :,Гучність звуків:
+AMBIVOL,Ambience Volume:,Volume do Ambiente:,Volumen del Ambiente:,Volume de l'ambiance :,Гучність атмосфери:
+ACTION,Action,Ação,Acción,Action,Дія
+KEYBOARD,Keyboard,Teclado,Teclado,Clavier,Клавіатура
+CONTROLLER,Controller,Controlador,Mando,Manette,Контролер
+PRESSANY,Press any key,Prima qualquer tecla,Pulsa cualquier tecla,Appuie sur n'importe quelle touche,Натисни будь-яку клавішу
+INVALIDKEY,"That key already exists
+Choose another key","Essa tecla já está em uso
+Escolha outra tecla","Esta tecla ya está en uso
+Elija otra tecla","Cette touche existe déjà
+Choisis une autre touche","Ця клавіша вже використовується
+Обери іншу клавішу"
+SCORE,SCORE,PONTOS,PUNTOS,SCORE,РАХУНОК
+TUTORIAL_BASE,Press {key} to {action},Prima {key} para {action},Pulsa {key} para {action},Appuie sur {key} pour {action},"Натисни {key}, щоб {action}"
+TUTORIAL_MOVE,Move {key} to {action},Move {key} para {action},Mueve {key} para {action},Déplace {key} pour {action},"Рухай {key}, щоб {action}"
+TUTORIAL_MOVELEFT,go LEFT,ir para a ESQUERDA,ir a la IZQUIERDA,aller à GAUCHE,іти ЛІВОРУЧ
+TUTORIAL_MOVERIGHT,go RIGHT,ir para a DIREITA,ir a la DERECHA,aller à DROITE,іти ПРАВОРУЧ
+TUTORIAL_JUMP,JUMP,SALTAR,SALTAR,SAUTER,СТРИБАТИ
+TUTORIAL_DIVE_CONDITION,{key} while on air,{key} enquanto no ar,{key} mientras en el aire,{key} en l'air,{key} у повітрі
+TUTORIAL_DIVE,FALL,CAIR,CAER,TOMBER,ПАДАТИ
+TUTORIAL_DASHLEFT,DASH LEFT,ESQUIVAR para a ESQUERDA,ESQUIVAR a la IZQUIERDA,ESQUIVER à GAUCHE,РИВОК ЛІВОРУЧ
+TUTORIAL_DASHRIGHT,DASH RIGHT,ESQUIVAR para a DIREITA,ESQUIVAR a la DERECHA,ESQUIVER à DROITE,РИВОК ПРАВОРУЧ
+TUTORIAL_DESTROY,DESTROY rocks,DESTRUIR pedras,DESTRUIR rocas,DÉTRUIRE des rochers,ЗНИЩУВАТИ камені
+TUTORIAL_THROW,THROW a stone,LANÇAR uma pedra,LANZAR una piedra,LANCER une pierre,КИДАТИ камінь
+DASHL,Dash Left,Esquivar Esq.,Esquivar Izq.,Esquiver Gauche,Ривок ліворуч
+DASHR,Dash Right,Esquivar Dir.,Esquivar Der.,Esquiver Droite,Ривок праворуч
+JUMP,Jump,Saltar,Saltar,Sauter,Стрибок
+THROW,Throw,Lançar,Lanzar,Lancer,Кидок
+SHIELD,Shield,Escudo,Escudo,Bouclier,Щит
+KEY_CLICKR,Right Click,Clique Direito,Clic Derecho,Clic droit,Правий клік
+KEY_CLICKL,Left Click,Clique Esquerdo,Clic Izquierdo,Clic gauche,Лівий клік
+KEY_CLICKM,Middle Click,Clique do Meio,Clic del Medio,Clic central,Середній клік
+KEY_L1,L1,L1,L1,L1,L1
+KEY_R1,R1,R1,R1,R1,R1
+KEY_L2,L2,L2,L2,L2,L2
+KEY_R2,R2,R2,R2,R2,R2
+KEY_L3,L3,L3,L3,L3,L3
+KEY_R3,R3,R3,R3,R3,R3
+KEY_CROSS,A,A,A,A,A
+KEY_CIRCLE,B,B,B,B,B
+KEY_SQUARE,X,X,X,X,X
+KEY_TRIANGLE,Y,Y,Y,Y,Y
+KEY_SPACE,SPACE,ESPAÇO,la barra ESPACIADORA,ESPACE,ПРОБІЛ
+Space,Space,Espaço,Espaciadora,Espace,Пробіл
+PROGRAMMERS,Programmers,Programadores,Programadores,Programmeurs,Програмісти
+GAMEPROG,Gameplay Programmers,Programadores de Jogabilidade,Programadores de Jugabilidad,Programmeurs Gameplay,Програмісти ігрового процесу
+UIPROG,UI/UX Programmers,Programadores de UI/UX,Programadores de UI/UX,Programmeurs UI/UX,Програмісти UI/UX
+ANIMPROG,Animation Programmers,Programadores de Animação,Programadores de Animación,Programmeurs Animation,Програмісти анімації
+AUDIOPROG,Audio Programmer,Programadora de Áudio,Programadora de Audio,Programmeuse Audio,Програміст аудіо
+PHYSPROG,Physics Programmers,Programadores de Física,Programadores de Física,Programmeurs Physique,Програмісти фізики
+ENVPROG,Environment Programmer,Programadora de Ambiente,Programadora de Ambiente,Programmeuse Environnement,Програміст оточення
+BUILDPROG,Build Programmer,Programadora de Build,Programadora de Build,Programmeuse Build,Програміст збірки
+ARTISTS,Artists,Artistas,Artistas,Artistes,Художники
+ENVART,Environment Art Artist,Artista de Ambiente,Artista de Ambiente,Artiste Environnement,Художник оточення
+CUTART,Cutscenes Artist,Artista de Cutscene,Artista de Cutscene,Artiste Cinématiques,Художник катсцен
+ANIMART,Animation Artists,Artistas de Animação,Artistas de Animación,Artistes Animation,Художники анімації
+UIART,UI/UX Artist,Artista de UI/UX,Artista de UI/UX,Artiste UI/UX,Художник UI/UX
+CHARART,Character Artists,Artistas de Personagem,Artistas de Personajes,Artistes Personnages,Художники персонажів
+CONCART,Concept Artist,Artista Conceptual,Artista Conceptual,Artiste Conceptuel,Концепт-художник
+DESIGNERS,Designers,Designers,Diseñadores,Designers,Дизайнери
+GAMEDES,Gameplay Designers,Designers de Jogabilidade,Diseñadores de Jugabilidad,Designers Gameplay,Дизайнери ігрового процесу
+LEVELDES,Level Designers,Designers de Nível,Diseñadores de Niveles,Designers de Niveaux,Дизайнери рівнів
+CHARDES,Character Designers,Designers de Personagem,Diseñadores de Personaje,Designers de Personnages,Дизайнери персонажів
+NARRDES,Narrative Designers,Designers de Narrativa,Diseñadores de Narrativa,Designers Narratifs,Дизайнери наративу
+WRITER,Story Writer,Escritor de História,Escritor de la Historia,Auteur de l'Histoire,Автор сюжету
+SOUNDDES,Sound Designer,Designer de Som,Diseñadora de Sonido,Designer Sonore,Звуковий дизайнер
+UIDES,UI/UX Designers,Designers de UI/UX,Diseñadores de UI/UX,Designers UI/UX,Дизайнери UI/UX
+MUSICBY,"Music by HoliznaCC0
+Album: ChipTunes
+Licensed under CC0 1.0 Universal
 
+Sound Effects provided by MixKit and Pixabay","Música de HoliznaCC0
+Álbum: ChipTunes
+Licença: CC0 1.0 Universal
 
+Sound Efeitos de som: MixKit e Pixabay","Música de HoliznaCC0
+Álbum: ChipTunes
+Licencia: CC0 1.0 Universal
+
+Efectos sonoros de MixKit y Pixabay","Musique de HoliznaCC0
+Album : ChipTunes
+Sous licence CC0 1.0 Universal
+
+Effets sonores de MixKit et Pixabay","Музика від HoliznaCC0
+Альбом: ChipTunes
+Ліцензія: CC0 1.0 Universal
+
+Звукові ефекти від MixKit та Pixabay"
+THX,Thanks for playing!,Obrigado por jogar!,Gracias por jugar!,Merci d'avoir joué !,Дякуємо за гру!
+CREDITSSKIP,Hold {key} to SKIP,Mantenha {key} premido para SALTAR,Mantenga {key} para SALTAR,Maintiens {key} pour PASSER,"Утримуй {key}, щоб ПРОПУСТИТИ"

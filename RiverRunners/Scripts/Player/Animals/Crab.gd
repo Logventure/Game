@@ -19,6 +19,9 @@ var canBlock = true
 var timer
 var base_z_index = 0
 
+var jump_queue_time = 1
+var max_jump_queue_time = 0.2
+
 @onready var collider = get_node("CrabCollider")
 var collider_pos
 
@@ -137,18 +140,32 @@ func _process(delta):
 			States.IDLE:
 				handle_position()
 				if len(commands) > 0:
-					if commands.find("jump") != -1 and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
-						jump()
+					if commands.find("jump") != -1 and get_node("../").isCharacterAvailable("frog"):# and not get_node("../").isMoving():
+						if get_node("../").isMoving():
+							jump_queue_time = 0
+						else:
+							jump()
+							jump_queue_time = max_jump_queue_time + 1
 					if commands.find("shield") != -1 and get_node("../").isCharacterAvailable("crab") and canBlock:
 						shield()
 				else:
 					var last_input = InputHandler.getLastInput()
 					if last_input == "jump" and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
-						jump()
+						if get_node("../").isMoving():
+							jump_queue_time = 0
+						else:
+							jump()
+							jump_queue_time = max_jump_queue_time + 1
 						#InputHandler.clearLastInput() #clearing would prevent others from jumping
 					if last_input == "shield" and get_node("../").isCharacterAvailable("crab") and canBlock:
 						shield()
 						InputHandler.clearLastInput()
+
+				#added so that jumps right before the movement stops no longer get discarded
+				if not get_node("../").isMoving() and jump_queue_time < max_jump_queue_time:
+					jump()
+					jump_queue_time = max_jump_queue_time + 1
+				jump_queue_time += delta
 
 			States.JUMPING:
 				if len(commands) > 0:

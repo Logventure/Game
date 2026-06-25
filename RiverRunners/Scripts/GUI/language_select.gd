@@ -1,5 +1,7 @@
 extends Node
 
+const FILE_MANAGEMENT_SCRIPT = preload("res://Scripts/FileManagement.gd")
+
 @export var language_button_template: TextureButton
 var languages = {"English" : "en", "Português" : "pt", "Español" : "es", "Українська" : "ua", "Français" : "fr"}
 
@@ -10,6 +12,7 @@ var disabled_color = "8f928e"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	load_language_from_save()
 	if language_button_template:
 		instantiate_buttons()
 
@@ -18,6 +21,8 @@ func _ready():
 func _process(delta):
 	pass
 
+func load_language_from_save():
+	TranslationServer.set_locale(FILE_MANAGEMENT_SCRIPT.loadLanguage())
 
 func instantiate_buttons():
 	var locale = TranslationServer.get_locale()
@@ -50,6 +55,8 @@ func instantiate_buttons():
 func on_button_click(text, button:TextureButton):
 	if languages[text]:
 		TranslationServer.set_locale(languages[text])
+		FILE_MANAGEMENT_SCRIPT.saveLanguage(languages[text])
+		Events.changed_locale.emit()
 	for b in $GridContainer.get_children():
 		if b is TextureButton:
 			b.texture_normal = empty_button_hover_image

@@ -15,6 +15,7 @@ func _ready():
 	baseposition = position
 
 	Events.connect("jump_dive",onDive)
+	Events.input_type_changed.connect(on_input_type_changed)
 
 
 func setText(ability: String):
@@ -23,7 +24,7 @@ func setText(ability: String):
 	actionToWaitFor = ability
 	match ability:
 		"move_left":
-			if InputHandler.hasController():
+			if InputHandler.lastInputType() == "controller":
 				var action_event = InputMap.action_get_events("controller_left")[0]
 				key = getKeyString(action_event, true)
 				key = "JOYSTICK"
@@ -34,7 +35,7 @@ func setText(ability: String):
 			action = tr("TUTORIAL_MOVELEFT")
 
 		"move_right":
-			if InputHandler.hasController():
+			if InputHandler.lastInputType() == "controller":
 				var action_event = InputMap.action_get_events("controller_right")[0]
 				key = getKeyString(action_event, true)
 				key = "JOYSTICK"
@@ -45,7 +46,7 @@ func setText(ability: String):
 			action = tr("TUTORIAL_MOVERIGHT")
 
 		"jump":
-			if InputHandler.hasController():
+			if InputHandler.lastInputType() == "controller":
 				var action_event = InputMap.action_get_events("controller_jump")[0]
 				key = getKeyString(action_event, true)
 			else:
@@ -55,7 +56,7 @@ func setText(ability: String):
 			action = tr("TUTORIAL_JUMP")
 
 		"dash_left":
-			if InputHandler.hasController():
+			if InputHandler.lastInputType() == "controller":
 				var action_event = InputMap.action_get_events("controller_dashLeft")[0]
 				key = getKeyString(action_event, true)
 			else:
@@ -65,7 +66,7 @@ func setText(ability: String):
 			action = tr("TUTORIAL_DASHLEFT")
 			
 		"dash_right":
-			if InputHandler.hasController():
+			if InputHandler.lastInputType() == "controller":
 				var action_event = InputMap.action_get_events("controller_dashRight")[0]
 				key = getKeyString(action_event, true)
 			else:
@@ -75,7 +76,7 @@ func setText(ability: String):
 			action = tr("TUTORIAL_DASHRIGHT")
 
 		"shield":
-			if InputHandler.hasController():
+			if InputHandler.lastInputType() == "controller":
 				var action_event = InputMap.action_get_events("controller_shield")[0]
 				key = getKeyString(action_event, true)
 			else:
@@ -87,7 +88,7 @@ func setText(ability: String):
 			action = tr("TUTORIAL_DESTROY")
 			
 		"throw":
-			if InputHandler.hasController():
+			if InputHandler.lastInputType() == "controller":
 				var action_event = InputMap.action_get_events("controller_throw")[0]
 				key = getKeyString(action_event, true)
 			else:
@@ -97,7 +98,7 @@ func setText(ability: String):
 			action = tr("TUTORIAL_THROW")
 
 		"dive":
-			if InputHandler.hasController():
+			if InputHandler.lastInputType() == "controller":
 				var action_event = InputMap.action_get_events("controller_jump")[0]
 				key = getKeyString(action_event, true)
 			else:
@@ -115,6 +116,100 @@ func setText(ability: String):
 	current_state = States.VISIBLE
 	wait_time = 0
 
+func update_text():
+	if current_state == States.VISIBLE:
+		var key = ""
+		var action = ""
+		match actionToWaitFor:
+			"move_left":
+				if InputHandler.lastInputType() == "controller":
+					var action_event = InputMap.action_get_events("controller_left")[0]
+					key = getKeyString(action_event, true)
+					key = "JOYSTICK"
+				else:
+					var action_event = InputMap.action_get_events("left")[0]
+					key = getKeyString(action_event, false)
+				
+				action = tr("TUTORIAL_MOVELEFT")
+
+			"move_right":
+				if InputHandler.lastInputType() == "controller":
+					var action_event = InputMap.action_get_events("controller_right")[0]
+					key = getKeyString(action_event, true)
+					key = "JOYSTICK"
+				else:
+					var action_event = InputMap.action_get_events("right")[0]
+					key = getKeyString(action_event, false)
+				
+				action = tr("TUTORIAL_MOVERIGHT")
+
+			"jump":
+				if InputHandler.lastInputType() == "controller":
+					var action_event = InputMap.action_get_events("controller_jump")[0]
+					key = getKeyString(action_event, true)
+				else:
+					var action_event = InputMap.action_get_events("jump")[0]
+					key = getKeyString(action_event, false)
+				
+				action = tr("TUTORIAL_JUMP")
+
+			"dash_left":
+				if InputHandler.lastInputType() == "controller":
+					var action_event = InputMap.action_get_events("controller_dashLeft")[0]
+					key = getKeyString(action_event, true)
+				else:
+					var action_event = InputMap.action_get_events("dashLeft")[0]
+					key = getKeyString(action_event, false)
+				
+				action = tr("TUTORIAL_DASHLEFT")
+				
+			"dash_right":
+				if InputHandler.lastInputType() == "controller":
+					var action_event = InputMap.action_get_events("controller_dashRight")[0]
+					key = getKeyString(action_event, true)
+				else:
+					var action_event = InputMap.action_get_events("dashRight")[0]
+					key = getKeyString(action_event, false)
+				
+				action = tr("TUTORIAL_DASHRIGHT")
+
+			"shield":
+				if InputHandler.lastInputType() == "controller":
+					var action_event = InputMap.action_get_events("controller_shield")[0]
+					key = getKeyString(action_event, true)
+				else:
+					var action_event = InputMap.action_get_events("shield")[0]
+					key = getKeyString(action_event, false)
+				
+
+				key = key
+				action = tr("TUTORIAL_DESTROY")
+				
+			"throw":
+				if InputHandler.lastInputType() == "controller":
+					var action_event = InputMap.action_get_events("controller_throw")[0]
+					key = getKeyString(action_event, true)
+				else:
+					var action_event = InputMap.action_get_events("throw")[0]
+					key = getKeyString(action_event, false)
+				
+				action = tr("TUTORIAL_THROW")
+
+			"dive":
+				if InputHandler.lastInputType() == "controller":
+					var action_event = InputMap.action_get_events("controller_jump")[0]
+					key = getKeyString(action_event, true)
+				else:
+					var action_event = InputMap.action_get_events("jump")[0]
+					key = getKeyString(action_event, false)
+
+				key = tr("TUTORIAL_DIVE_CONDITION").format({key = key})
+				action = tr("TUTORIAL_DIVE")
+			
+
+		$Label.text = tr("TUTORIAL_BASE").format({key = key, action = action})
+		if key == "JOYSTICK":
+			$Label.text = tr("TUTORIAL_MOVE").format({key = key, action = action})
 
 func getKeyString(action_event, iscontroller = false):
 	var keyString = ""
@@ -204,3 +299,6 @@ func onDive():
 		current_state = States.COMPLETED
 		time = 0
 		Utils.playSoundFile(self,"res://Assets/Audio/SFX/tutorial_success.wav","SFX",0,true)
+
+func on_input_type_changed():
+	update_text()

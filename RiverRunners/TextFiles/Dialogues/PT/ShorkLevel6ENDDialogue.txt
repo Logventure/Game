@@ -187,7 +187,7 @@
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: Entendo que estavas fora por um tempo. Mas eu ainda podia sentir aquele fedor em vocês.
+*Text*: Entendo que já estão fora há um tempo. Mas eu ainda podia sentir aquele fedor em vocês.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
 *Volume*: 0
@@ -290,14 +290,14 @@
 
 *Character*: frog_notamused
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/frog/Frog-exclamation2.wav
-*Text*: ELE acabou de invadir o laboratório, provavelmente está em ruínas.
+*Text*: AQUILO acabou de invadir o laboratório, provavelmente está em ruínas.
 >>>>>
 
 *Character*: shork
 *Name*: ???
 *Sound*: res://Assets/Audio/Cutscenes/shorkroar.wav
 *Volume*: -6
-*Text*: Não me chames “ele”!
+*Text*: Não me chames “aquilo”!
 >>>>>
 
 *Character*: frog
@@ -398,7 +398,7 @@
 *Character*: shork
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-purr.wav
 *Volume*: 0
-*Text*: Obrigado por entender a minha situação, amigos meus.
+*Text*: Obrigado por entenderem a minha situação, amigos meus.
 >>>>>
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/shork/shork-roar.wav
 *Volume*: 0

@@ -6,7 +6,7 @@ SIRFROG,Sir Frogginton III,Sir Frogginton III,Señor Frogginton III,Sir Froggint
 SAL,Sal,Sal,Sal,Sal,Сал
 VITO,Vito,Vito,Vito,Vito,Віто
 OT,O.T.,O.T.,O.T.,O.T.,О.Т.
-SHORK,Friend,Friend,Friend,Ami,Друг
+SHORK,Friend,Amigo,Amigo,Ami,Друг
 YES,YES,SIM,SÍ,OUI,ТАК
 NO,NO,NÃO,NO,NON,НІ
 PLAY,PLAY,JOGAR,JUGAR,JOUER,ГРАТИ
@@ -49,15 +49,15 @@ Elija otra tecla","Cette touche existe déjà
 Choisis une autre touche","Ця клавіша вже використовується
 Обери іншу клавішу"
 SCORE,SCORE,PONTOS,PUNTOS,SCORE,РАХУНОК
-TUTORIAL_BASE,Press {key} to {action},Prima {key} para {action},Pulsa {key} para {action},Appuie sur {key} pour {action},"Натисни {key}, щоб {action}"
+TUTORIAL_BASE,Press {key} to {action},Prima {key} para {action},Pulsa {key} para {action},Appuie sur {key} pour {action},"Натисни {key}, для {action}"
 TUTORIAL_MOVE,Move {key} to {action},Move {key} para {action},Mueve {key} para {action},Déplace {key} pour {action},"Рухай {key}, щоб {action}"
 TUTORIAL_MOVELEFT,go LEFT,ir para a ESQUERDA,ir a la IZQUIERDA,aller à GAUCHE,іти ЛІВОРУЧ
 TUTORIAL_MOVERIGHT,go RIGHT,ir para a DIREITA,ir a la DERECHA,aller à DROITE,іти ПРАВОРУЧ
 TUTORIAL_JUMP,JUMP,SALTAR,SALTAR,SAUTER,СТРИБАТИ
 TUTORIAL_DIVE_CONDITION,{key} while on air,{key} enquanto no ar,{key} mientras en el aire,{key} en l'air,{key} у повітрі
 TUTORIAL_DIVE,FALL,CAIR,CAER,TOMBER,ПАДАТИ
-TUTORIAL_DASHLEFT,DASH LEFT,ESQUIVAR para a ESQUERDA,ESQUIVAR a la IZQUIERDA,ESQUIVER à GAUCHE,РИВОК ЛІВОРУЧ
-TUTORIAL_DASHRIGHT,DASH RIGHT,ESQUIVAR para a DIREITA,ESQUIVAR a la DERECHA,ESQUIVER à DROITE,РИВОК ПРАВОРУЧ
+TUTORIAL_DASHLEFT,DASH LEFT,ESQUIVAR para a ESQUERDA,ESQUIVAR a la IZQUIERDA,ESQUIVER à GAUCHE,РИВКА ЛІВОРУЧ
+TUTORIAL_DASHRIGHT,DASH RIGHT,ESQUIVAR para a DIREITA,ESQUIVAR a la DERECHA,ESQUIVER à DROITE,РИВКА ПРАВОРУЧ
 TUTORIAL_DESTROY,DESTROY rocks,DESTRUIR pedras,DESTRUIR rocas,DÉTRUIRE des rochers,ЗНИЩУВАТИ камені
 TUTORIAL_THROW,THROW a stone,LANÇAR uma pedra,LANZAR una piedra,LANCER une pierre,КИДАТИ камінь
 DASHL,Dash Left,Esquivar Esq.,Esquivar Izq.,Esquiver Gauche,Ривок ліворуч
@@ -74,10 +74,10 @@ KEY_L2,L2,L2,L2,L2,L2
 KEY_R2,R2,R2,R2,R2,R2
 KEY_L3,L3,L3,L3,L3,L3
 KEY_R3,R3,R3,R3,R3,R3
-KEY_CROSS,A,A,A,A,A
-KEY_CIRCLE,B,B,B,B,B
-KEY_SQUARE,X,X,X,X,X
-KEY_TRIANGLE,Y,Y,Y,Y,Y
+KEY_CROSS,(A),(A),(A),(A),(A)
+KEY_CIRCLE,(B),(B),(B),(B),(B)
+KEY_SQUARE,(X),(X),(X),(X),(X)
+KEY_TRIANGLE,(Y),(Y),(Y),(Y),(Y)
 KEY_SPACE,SPACE,ESPAÇO,la barra ESPACIADORA,ESPACE,ПРОБІЛ
 Space,Space,Espaço,Espaciadora,Espace,Пробіл
 PROGRAMMERS,Programmers,Programadores,Programadores,Programmeurs,Програмісти
@@ -126,3 +126,8 @@ Effets sonores de MixKit et Pixabay","Музика від HoliznaCC0
 Звукові ефекти від MixKit та Pixabay"
 THX,Thanks for playing!,Obrigado por jogar!,Gracias por jugar!,Merci d'avoir joué !,Дякуємо за гру!
 CREDITSSKIP,Hold {key} to SKIP,Mantenha {key} premido para SALTAR,Mantenga {key} para SALTAR,Maintiens {key} pour PASSER,"Утримуй {key}, щоб ПРОПУСТИТИ"
+TUTORIAL_TIP_JUMP,JUMP here,SALTA aqui,SALTA aquí,SAUTER ici,СТРИБАЙ сюди
+TUTORIAL_TIP_DASH_R,DASH RIGHT here,ESQUIVA aqui,ESQUIVA aquí,ESQUIVER ici,ПРОСКОЧІТЬ тут
+TUTORIAL_TIP_DASH_L,DASH LEFT here,ESQUIVA aqui,ESQUIVA aquí,ESQUIVER ici,ПРОСКОЧІТЬ тут
+TUTORIAL_TIP_SHIELD,SHIELD here,BLOQUEIA aqui,BLOQUEA aquí,Bloquez ici,ЗАБЛОКУЙ тут
+TUTORIAL_TIP_THROW,THROW here,LANÇA aqui,LANZAR aquí,JETER ici,КИНЬ сюди

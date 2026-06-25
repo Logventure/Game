@@ -17,7 +17,7 @@ func _ready():
 	if is_independent:
 		label_settings = label_settings.duplicate()
 	resize_text()
-
+	Events.changed_locale.connect(on_change_locale)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -31,3 +31,7 @@ func resize_text():
 			new_font_size = min_font_size
 		if label_settings.font_size > new_font_size:
 			label_settings.font_size = new_font_size
+
+func on_change_locale():
+	label_settings.font_size = original_font_size
+	resize_text()

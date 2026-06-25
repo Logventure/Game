@@ -14,6 +14,7 @@ var original_position : Vector2 = Vector2()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Events.connect("go_from_main_menu_to_credits", credits)
+	Events.input_type_changed.connect(on_input_type_changed)
 	original_position = credits_text.position
 	
 
@@ -55,7 +56,7 @@ func on_timer_timeout():
 
 func skipKey():
 	skiplabel.visible = true
-	var input_controller = InputHandler.hasController()
+	var input_controller = InputHandler.lastInputType() == "controller"
 	var confirm_actions = InputMap.action_get_events("confirm")
 	var keyString
 	
@@ -66,3 +67,7 @@ func skipKey():
 		var keyCode = confirm_actions[0].physical_keycode
 		keyString = tr(OS.get_keycode_string(keyCode))
 		skiplabel.text = tr("CREDITSSKIP").format({key = keyString})
+
+func on_input_type_changed():
+	if skiplabel.visible:
+		skipKey()

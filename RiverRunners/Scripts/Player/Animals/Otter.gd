@@ -24,6 +24,9 @@ var canThrow = true
 var timer
 var base_z_index = 0
 
+var jump_queue_time = 1
+var max_jump_queue_time = 0.2
+
 enum States {IDLE, JUMPING, DROWNING, TAKE_DAMAGE, PAUSED}
 var current_state = States.IDLE
 var previous_state = States.IDLE
@@ -145,18 +148,32 @@ func _process(delta):
 			States.IDLE:
 				handle_position()
 				if len(commands) > 0:
-					if commands.find("jump") != -1 and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
-						jump()
+					if commands.find("jump") != -1 and get_node("../").isCharacterAvailable("frog"):# and not get_node("../").isMoving():
+						if get_node("../").isMoving():
+							jump_queue_time = 0
+						else:
+							jump()
+							jump_queue_time = max_jump_queue_time + 1
 					if commands.find("throw") != -1 and get_node("../").isCharacterAvailable("otter") and canThrow:
 						throw()
 				else:
 					var last_input = InputHandler.getLastInput()
-					if last_input == "jump" and get_node("../").isCharacterAvailable("frog") and not get_node("../").isMoving():
-						jump()
+					if last_input == "jump" and get_node("../").isCharacterAvailable("frog"):# and not get_node("../").isMoving():
+						if get_node("../").isMoving():
+							jump_queue_time = 0
+						else:
+							jump()
+							jump_queue_time = max_jump_queue_time + 1
 						#InputHandler.clearLastInput()  #clearing would prevent others from jumping
 					elif last_input == "throw" and get_node("../").isCharacterAvailable("otter") and canThrow:
 						throw()
 						InputHandler.clearLastInput()
+
+				#added so that jumps right before the movement stops no longer get discarded
+				if not get_node("../").isMoving() and jump_queue_time < max_jump_queue_time:
+					jump()
+					jump_queue_time = max_jump_queue_time + 1
+				jump_queue_time += delta
 
 			States.JUMPING:
 				if len(commands) > 0:

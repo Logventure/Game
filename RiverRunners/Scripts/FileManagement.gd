@@ -7,6 +7,7 @@ const SAVE_PATH_SOUND = SAVE_DIR + "sound.cfg"
 const SAVE_PATH_MASTER = SAVE_DIR + "master.cfg"
 const SAVE_PATH_MUSIC = SAVE_DIR + "music.cfg"
 const SAVE_PATH_AMBIENCE = SAVE_DIR + "ambience.cfg"
+const SAVE_PATH_LANGUAGE = SAVE_DIR + "language.cfg"
 
 static func verifySaveFiles():
 
@@ -53,6 +54,11 @@ static func verifySaveFiles():
 		if file:
 			file.close()
 
+	if not FileAccess.file_exists(SAVE_PATH_LANGUAGE):
+		var file = FileAccess.open(SAVE_PATH_LANGUAGE, FileAccess.WRITE)
+		if file:
+			file.close()
+
 static func loadConfig():
 
 	verifySaveFiles()
@@ -86,6 +92,27 @@ static func saveConfig():
 		config.set_value("input", action, InputMap.action_get_events(action))
 
 	config.save(SAVE_PATH)
+
+static func loadLanguage():
+	var config = ConfigFile.new()
+
+	var valid = config.load(SAVE_PATH_LANGUAGE) == OK
+
+	if valid:
+		valid = config.has_section("language")
+	
+	if valid:
+		return config.get_value("language", "language")
+
+	return "en"
+
+static func saveLanguage(language: String):
+	var config = ConfigFile.new()
+
+	config.set_value("language", "language", language)
+
+	config.save(SAVE_PATH_LANGUAGE)
+
 
 static func loadHighestScore():
 	var config = ConfigFile.new()

@@ -91,7 +91,7 @@ func onContinue():
 		char_count = len(current_text) - 1
 
 func handleSkip(delta):
-	if InputHandler.hasController():
+	if InputHandler.lastInputType() == "controller":
 		$InstructionsBox/Instructions.text = tr("DIALOGUE_INSTRUCTIONS_CTRL")
 	else:
 		$InstructionsBox/Instructions.text = tr("DIALOGUE_INSTRUCTIONS_KB")

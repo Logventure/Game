@@ -88,7 +88,7 @@
 *Character*: beaver_surprised
 *Sound*: res://Assets/Audio/Cutscenes/Voicelines/beaver/Beaver-exclamation.wav
 *Volume*: 10
-*Text*: Lá estão eles!
+*Text*: Lá está ele!
 >>>>>
 
 *Character*: frog

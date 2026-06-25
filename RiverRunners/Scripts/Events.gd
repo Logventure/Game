@@ -58,6 +58,10 @@ signal new_level_completed
 signal input_confirm
 signal input_return
 
+signal input_type_changed
+
+signal changed_locale
+
 #switching scenes
 signal go_to_main_menu
 signal go_to_mode_select

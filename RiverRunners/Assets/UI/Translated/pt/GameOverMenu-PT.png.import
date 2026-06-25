@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bco2bw3jnrv75"
-path="res://.godot/imported/ConfirmPop-up-Background.png-be7f62c1588932cdd813ebb91a8120f8.ctex"
+uid="uid://dac5alty5mcpj"
+path="res://.godot/imported/GameOverMenu-PT.png-728f809cb45380fc1157bce9c66ccb7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/Translated/PT/ConfirmPop-up-Background.png"
-dest_files=["res://.godot/imported/ConfirmPop-up-Background.png-be7f62c1588932cdd813ebb91a8120f8.ctex"]
+source_file="res://Assets/UI/Translated/pt/GameOverMenu-PT.png"
+dest_files=["res://.godot/imported/GameOverMenu-PT.png-728f809cb45380fc1157bce9c66ccb7e.ctex"]
 
 [params]
 

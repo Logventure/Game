@@ -27,8 +27,13 @@ func checkHighestScore():
 		saved_score = 0
 	highest_score = points
 	print("highest score: ", highest_score)
+	var steam_score = SteamController.get_statistic("infinitemode_highscore")
+	if steam_score > highest_score:
+		highest_score = steam_score
 	if highest_score > saved_score:
 		FILE_MANAGEMENT_SCRIPT.saveHighestScore(highest_score)
+		SteamController.set_statistic("infinitemode_highscore",highest_score)
+		SteamController.upload_infinite_highscore(highest_score)
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

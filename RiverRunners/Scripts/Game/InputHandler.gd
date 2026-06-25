@@ -1,7 +1,7 @@
 extends Node
 
 
-var max_age = 0.02
+var max_age = 0.015
 
 var resuming_delay = 0.0
 
@@ -23,6 +23,7 @@ func _ready():
 	Events.connect("resume_game", onGameResume)
 
 func _process(delta):
+	check_input_type()
 	match current_game_state:
 		GameState.RUNNING:
 			last_input_age += delta
@@ -59,10 +60,10 @@ func getCommands():
 		GameState.RUNNING:
 			var kbcommands = getKeyboardCommands()
 			if kbcommands != []:
-				input_type = InputType.KBM
+				set_input_type(InputType.KBM)
 			var ctrlcommands = getControllerCommands()
 			if ctrlcommands != []:
-				input_type = InputType.CONTROLLER
+				set_input_type(InputType.CONTROLLER)
 
 			kbcommands.append_array(ctrlcommands)
 
@@ -166,8 +167,21 @@ func getControllerCommands():
 	else:
 		return []
 
+
 func hasController():
 	return len(Input.get_connected_joypads()) > 0
+
+func is_controller_ps():
+	if hasController():
+		var joy_name = Input.get_joy_name(Input.get_connected_joypads()[0])
+		if joy_name.contains("PS5") or joy_name.contains("ps5") or joy_name.contains("PS4") or joy_name.contains("ps4") or joy_name.contains("PS3") or joy_name.contains("ps3") or joy_name.contains("DualSense") or joy_name.contains("DUALSENSE")  or joy_name.contains("DualShock") or joy_name.contains("DUALSHOCK"):
+			return true
+	return false
+
+func set_input_type(new_type : InputType):
+	if new_type != input_type:
+		input_type = new_type
+		Events.input_type_changed.emit()
 
 func lastInputType():
 	match input_type:
@@ -177,3 +191,13 @@ func lastInputType():
 			return "controller"
 		InputType.TOUCHSCREEN:
 			return "touchscreen"
+
+func check_input_type():
+	if Input.is_action_just_pressed("detect_kbm"):
+		set_input_type(InputType.KBM)
+
+	if Input.get_last_mouse_velocity().length() > 0:
+		set_input_type(InputType.KBM)
+
+	if Input.is_action_just_pressed("detect_controller"):
+		set_input_type(InputType.CONTROLLER)

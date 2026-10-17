@@ -23,41 +23,49 @@ static func verifySaveFiles():
 		var file = FileAccess.open(SAVE_PATH_SCORE, FileAccess.WRITE)
 		if file:
 			file.close()
+		saveHighestScore(0)
 
 	if not FileAccess.file_exists(SAVE_PATH_LEVELS):
 		var file = FileAccess.open(SAVE_PATH_LEVELS, FileAccess.WRITE)
 		if file:
 			file.close()
+		saveLevels(0)
 
 	if not FileAccess.file_exists(SAVE_PATH_DIFFICULTY):
 		var file = FileAccess.open(SAVE_PATH_DIFFICULTY, FileAccess.WRITE)
 		if file:
 			file.close()
+		saveDifficulty(1)
 
 	if not FileAccess.file_exists(SAVE_PATH_SOUND):
 		var file = FileAccess.open(SAVE_PATH_SOUND, FileAccess.WRITE)
 		if file:
 			file.close()
+		saveSound(1)
 
 	if not FileAccess.file_exists(SAVE_PATH_MASTER):
 		var file = FileAccess.open(SAVE_PATH_MASTER, FileAccess.WRITE)
 		if file:
 			file.close()
+		saveMaster(1)
 
 	if not FileAccess.file_exists(SAVE_PATH_AMBIENCE):
 		var file = FileAccess.open(SAVE_PATH_AMBIENCE, FileAccess.WRITE)
 		if file:
 			file.close()
+		saveAmbience(1)
 
 	if not FileAccess.file_exists(SAVE_PATH_MUSIC):
 		var file = FileAccess.open(SAVE_PATH_MUSIC, FileAccess.WRITE)
 		if file:
 			file.close()
+		saveMusic(1)
 
 	if not FileAccess.file_exists(SAVE_PATH_LANGUAGE):
 		var file = FileAccess.open(SAVE_PATH_LANGUAGE, FileAccess.WRITE)
 		if file:
 			file.close()
+		saveLanguage("en")
 
 static func loadConfig():
 
@@ -111,7 +119,7 @@ static func saveLanguage(language: String):
 
 	config.set_value("language", "language", language)
 
-	config.save(SAVE_PATH_LANGUAGE)
+	print("Save levels: ",config.save(SAVE_PATH_LANGUAGE))
 
 
 static func loadHighestScore():
@@ -132,7 +140,7 @@ static func saveHighestScore(score: int):
 
 	config.set_value("score", "highestScore", score)
 
-	config.save(SAVE_PATH_SCORE)
+	print("Save levels: ",config.save(SAVE_PATH_SCORE))
 
 static func loadLevels():
 	var config = ConfigFile.new()
@@ -152,7 +160,7 @@ static func saveLevels(level: int):
 
 	config.set_value("levels", "level", level)
 
-	config.save(SAVE_PATH_LEVELS)
+	print("Save levels: ",config.save(SAVE_PATH_LEVELS))
 
 static func loadDifficulty():
 	var config = ConfigFile.new()
@@ -172,7 +180,7 @@ static func saveDifficulty(mode: int):
 
 	config.set_value("difficulty", "mode", mode)
 
-	config.save(SAVE_PATH_DIFFICULTY)
+	print("Save levels: ",config.save(SAVE_PATH_DIFFICULTY))
 
 static func loadSounds():
 	var array = {}

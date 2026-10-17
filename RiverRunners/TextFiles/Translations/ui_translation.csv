@@ -124,10 +124,13 @@ Effets sonores de MixKit et Pixabay","Музика від HoliznaCC0
 Ліцензія: CC0 1.0 Universal
 
 Звукові ефекти від MixKit та Pixabay"
-THX,Thanks for playing!,Obrigado por jogar!,Gracias por jugar!,Merci d'avoir joué !,Дякуємо за гру!
+THX,Thanks for playing!,Obrigado por jogar!,¡Gracias por jugar!,Merci d'avoir joué !,Дякуємо за гру!
 CREDITSSKIP,Hold {key} to SKIP,Mantenha {key} premido para SALTAR,Mantenga {key} para SALTAR,Maintiens {key} pour PASSER,"Утримуй {key}, щоб ПРОПУСТИТИ"
 TUTORIAL_TIP_JUMP,JUMP here,SALTA aqui,SALTA aquí,SAUTER ici,СТРИБАЙ сюди
 TUTORIAL_TIP_DASH_R,DASH RIGHT here,ESQUIVA aqui,ESQUIVA aquí,ESQUIVER ici,ПРОСКОЧІТЬ тут
 TUTORIAL_TIP_DASH_L,DASH LEFT here,ESQUIVA aqui,ESQUIVA aquí,ESQUIVER ici,ПРОСКОЧІТЬ тут
 TUTORIAL_TIP_SHIELD,SHIELD here,BLOQUEIA aqui,BLOQUEA aquí,Bloquez ici,ЗАБЛОКУЙ тут
 TUTORIAL_TIP_THROW,THROW here,LANÇA aqui,LANZAR aquí,JETER ici,КИНЬ сюди
+
+OPENSTEAM,Open Steam page?,Abrir página Steam?,¿Abrir página de Steam?,Ouvrir la page Steam ?,Відкрити сторінку Steam?
+FULLVERSION,Full Version,Versão Completa,Versión completa,Version complète,Повна версія

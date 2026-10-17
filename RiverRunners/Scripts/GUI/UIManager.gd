@@ -89,7 +89,6 @@ func gameover():
 	pauseScene.visible = false
 	levelcompleteScene.visible = false
 
-	print("is infinite:", isInfinite)
 
 	if isInfinite:
 		gameoverScene.visible = false

@@ -78,3 +78,6 @@ signal show_loading_screen
 signal hide_loading_screen
 signal loading_screen_closed
 signal loading_screen_opened
+
+#demo only
+signal completed_last_demo_level

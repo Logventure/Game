@@ -21,6 +21,8 @@ var infinite_unblocked = false
 @onready var options_difficulty = $OptionsUI/Panel/Difficulty
 @onready var options_mode_buttons = $OptionsUI/Panel/ButtonContainer1
 
+@export var full_version_menu : FullVersionMenu
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	setLevels()
@@ -197,18 +199,21 @@ func _on_level_4_button_pressed():
 
 func _on_level_5_button_pressed():
 	Utils.playUISound(self, -6)
-	lastFocusedButton = get_viewport().gui_get_focus_owner()
-	Events.emit_signal("go_to_level", 4)
+	open_full_version_menu()
+	#lastFocusedButton = get_viewport().gui_get_focus_owner()
+	#Events.emit_signal("go_to_level", 4)
 
 func _on_level_6_button_pressed():
 	Utils.playUISound(self, -6)
-	lastFocusedButton = get_viewport().gui_get_focus_owner()
-	Events.emit_signal("go_to_level", 5)
+	open_full_version_menu()
+	#lastFocusedButton = get_viewport().gui_get_focus_owner()
+	#Events.emit_signal("go_to_level", 5)
 
 func _on_infinite_button_pressed():
 	Utils.playUISound(self, -6)
-	lastFocusedButton = get_viewport().gui_get_focus_owner()
-	Events.emit_signal("go_to_level", 6)
+	open_full_version_menu()
+	#lastFocusedButton = get_viewport().gui_get_focus_owner()
+	#Events.emit_signal("go_to_level", 6)
 
 func update_score():
 	if infinite_unblocked:
@@ -545,3 +550,8 @@ func setLevels():
 	if mode != null && mode > 2:
 		$Panel2/TextureRect.texture = score_hover_image
 		$Panel2/Label2.label_settings.font_color = Color.GRAY
+
+
+func open_full_version_menu():
+	if full_version_menu:
+		full_version_menu.set_visibility(true)

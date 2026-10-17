@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://xfkbxa5pluwk"]
+[gd_scene load_steps=11 format=3 uid="uid://xfkbxa5pluwk"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/levelcomplete_ui.gd" id="1_u8gdt"]
 [ext_resource type="Texture2D" uid="uid://clgig3oyqsskp" path="res://Assets/UI/LevelComplete/LevelCompleteMenu.png" id="2_8o1uv"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bqtov3bjn6o2a" path="res://Assets/UI/Empty Buttons/Button-Empty-Highlighted.png" id="5_v17es"]
 [ext_resource type="Texture2D" uid="uid://b8vw66qk33hpm" path="res://Assets/UI/Empty Buttons/Button-Empty-Disabled.png" id="6_mdvpg"]
 [ext_resource type="Script" path="res://Scripts/GUI/text_resize.gd" id="8_mw3ni"]
+[ext_resource type="PackedScene" uid="uid://c7hcqfoeorxgc" path="res://GameComponents/GUI/buy_fullversion_menu.tscn" id="9_e7pox"]
 [ext_resource type="FontFile" uid="uid://bg1oq07gebwu4" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="9_ib1li"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fbets"]
@@ -14,7 +15,7 @@ font = ExtResource("9_ib1li")
 font_size = 60
 font_color = Color(0.960784, 1, 0.909804, 1)
 
-[node name="levelcomplete_ui" type="Control"]
+[node name="levelcomplete_ui" type="Control" node_paths=PackedStringArray("nextlvl_label", "fullversion_menu")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,6 +23,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_u8gdt")
+nextlvl_label = NodePath("Panel/VBoxContainer/NextLevelButton/NextLevel")
+fullversion_menu = NodePath("Panel/Control/buyfullversionmenu")
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color(1, 1, 1, 0)
@@ -121,6 +124,15 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("8_mw3ni")
 max_characters = 10
+
+[node name="Control" type="Control" parent="Panel"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.115, 0.115)
+
+[node name="buyfullversionmenu" parent="Panel/Control" instance=ExtResource("9_e7pox")]
+layout_mode = 1
 
 [connection signal="pressed" from="Panel/VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

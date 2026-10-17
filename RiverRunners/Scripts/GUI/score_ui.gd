@@ -26,7 +26,6 @@ func checkHighestScore():
 	if saved_score == null:
 		saved_score = 0
 	highest_score = points
-	print("highest score: ", highest_score)
 	var steam_score = SteamController.get_statistic("infinitemode_highscore")
 	if steam_score > highest_score:
 		highest_score = steam_score

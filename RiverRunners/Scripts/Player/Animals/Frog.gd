@@ -81,7 +81,6 @@ func handle_jump(delta):
 		#z_index = int((speed + gravity * time * -1) * time / 30) * 2
 		collider.position.y = collider_pos.y - current_jump_position + pos
 
-		print("Frog - Collider position: ", collider.position, " - collider_pos: ", collider_pos, " - current_jump_position: ", current_jump_position, " - pos: ", pos)
 
 		if is_over_tree and position.y - pos > -50 + number_of_animals * 25 and detected_tree != null:
 			Events.emit_signal("collision_with_tree",detected_tree)
@@ -93,7 +92,6 @@ func handle_jump(delta):
 		Events.emit_signal("can_jump", true)
 		if not logNode.position.x + basePosition.x == position.x:
 			Events.emit_signal("player_drowned")
-			print("Rip crabby")
 			Events.emit_signal("lose_damage", false)
 			current_state = States.DROWNING
 			$WaterParticles.emitting = true
@@ -180,7 +178,6 @@ func onResume():
 	current_state = previous_state
 
 func onTreeDetected(area):
-	print("Frog collided with treeeee")
 	is_over_tree = true
 	detected_tree = area
 	number_of_animals = 0

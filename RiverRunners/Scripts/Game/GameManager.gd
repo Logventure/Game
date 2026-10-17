@@ -16,9 +16,9 @@ var previous_state = States.MAIN_MENU
 var previous_screen
 
 var last_level = 0
-var level_ids = ["level_justin", "level_frog", "level_salmon", "level_crab", "level_otter", "level_shork", "level_infinite"]
-var level_ids_easy = ["level_justin_easy", "level_frog_easy", "level_salmon_easy", "level_crab_easy", "level_otter_easy", "level_shork_easy", "level_infinite"]
-var level_ids_hard = ["level_justin_hard", "level_frog_hard", "level_salmon_hard", "level_crab_hard", "level_otter_hard", "level_shork_hard", "level_infinite"]
+var level_ids = ["level_justin", "level_frog", "level_salmon", "level_crab"]#, "level_otter", "level_shork", "level_infinite"]
+var level_ids_easy = ["level_justin_easy", "level_frog_easy", "level_salmon_easy", "level_crab_easy"]#, "level_otter_easy", "level_shork_easy", "level_infinite"]
+var level_ids_hard = ["level_justin_hard", "level_frog_hard", "level_salmon_hard", "level_crab_hard"]#, "level_otter_hard", "level_shork_hard", "level_infinite"]
 
 var level_list = level_ids
 
@@ -144,6 +144,7 @@ func switchToLevel(level_id: int):
 
 
 func switchToNextLevel():
+	print("SwitchToNextLevel - last_level: ",last_level)
 	target_state = States.LEVEL
 	target_screen = loadScene("res://Levels/LevelTemplate.tscn")
 	var last_level_id = level_list[last_level]
@@ -169,7 +170,8 @@ func switchToNextLevel():
 	replaceScreen(viewer, target_screen)
 
 func levelCompleted():
-
+	print("LevelCompleted1 - level_ids: ",level_ids)
+	print("LevelCompleted1 - last_level: ",last_level)
 	match last_level:
 		0:
 			SteamController.set_achievement("level1_complete")
@@ -184,6 +186,10 @@ func levelCompleted():
 		5:
 			SteamController.set_achievement("level6_complete")
 		
+	#demo only
+	if last_level >= 3:
+		Events.completed_last_demo_level.emit()
+	
 	if last_level + 1 < len(level_ids):
 		last_level += 1
 	var savedLevel = FILE_MANAGEMENT_SCRIPT.loadLevels()
@@ -191,6 +197,10 @@ func levelCompleted():
 		savedLevel = 0
 	if last_level > savedLevel and last_level < len(level_ids):
 		FILE_MANAGEMENT_SCRIPT.saveLevels(last_level)
+
+	print("LevelCompleted2 - last_level: ",last_level)
+
+	
 
 func switchToPreviousScreen():
 	if previous_screen != null:

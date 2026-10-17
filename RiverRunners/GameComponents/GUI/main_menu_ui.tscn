@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://fdgjnt3f4u6u"]
+[gd_scene load_steps=44 format=3 uid="uid://fdgjnt3f4u6u"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/main_menu_ui.gd" id="1_go47f"]
 [ext_resource type="Texture2D" uid="uid://c1lero7mqpehw" path="res://Assets/UI/Main Menu/MainMenu-Background2.png" id="2_op0qx"]
@@ -18,12 +18,14 @@
 [ext_resource type="Texture2D" uid="uid://bqtov3bjn6o2a" path="res://Assets/UI/Empty Buttons/Button-Empty-Highlighted.png" id="16_tyhqo"]
 [ext_resource type="Script" path="res://Scripts/GUI/text_resize.gd" id="18_m4033"]
 [ext_resource type="Texture2D" uid="uid://blulf1rcmd2mb" path="res://Assets/UI/Empty Buttons/Yes-Button-Frame.png" id="19_nrvs0"]
+[ext_resource type="Texture2D" uid="uid://ca5peec1gik5a" path="res://Assets/UI/Main Menu/lock.png" id="19_qvf3c"]
 [ext_resource type="Texture2D" uid="uid://c6jvr7p3la1hj" path="res://Assets/UI/Empty Buttons/Yes-Button-Frame.Pressed.png" id="20_kyl4u"]
 [ext_resource type="Texture2D" uid="uid://veuh0v2ue41u" path="res://Assets/UI/Empty Buttons/Yes-Button-Frame.Highlight.png" id="22_wt2pm"]
 [ext_resource type="Texture2D" uid="uid://ctc36cfyk41fo" path="res://Assets/UI/Empty Buttons/No-Button-Frame.png" id="23_ucl3i"]
 [ext_resource type="Texture2D" uid="uid://djixiof3qm31w" path="res://Assets/UI/Empty Buttons/No-Button-Frame.Pressed.png" id="24_hif7g"]
 [ext_resource type="Texture2D" uid="uid://cm0awbknpj4hp" path="res://Assets/UI/Empty Buttons/No-Button-Frame-Highlight.png" id="26_j1skl"]
 [ext_resource type="Texture2D" uid="uid://curjr7m07na01" path="res://Assets/UI/Confirm Pop-Up/ConfirmPop-up-Background.png" id="30_icipw"]
+[ext_resource type="PackedScene" uid="uid://c7hcqfoeorxgc" path="res://GameComponents/GUI/buy_fullversion_menu.tscn" id="31_cbnpw"]
 [ext_resource type="Texture2D" uid="uid://tpd4lr0132ti" path="res://Assets/UI/logventure-button.png" id="40_sk7ek"]
 [ext_resource type="PackedScene" uid="uid://chkd7lgphi0cv" path="res://GameComponents/GUI/options_ui.tscn" id="52_4k1wg"]
 [ext_resource type="Texture2D" uid="uid://dh8uxvwelnqim" path="res://Assets/UI/Score/HighestScore.png" id="56_y3vlv"]
@@ -133,12 +135,13 @@ font_color = Color(0.960784, 1, 0.909804, 1)
 font = ExtResource("57_lvlfe")
 font_size = 50
 
-[node name="MainMenuUI" type="Control"]
+[node name="MainMenuUI" type="Control" node_paths=PackedStringArray("full_version_menu")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 script = ExtResource("1_go47f")
+full_version_menu = NodePath("buyfullversionmenu")
 metadata/_edit_horizontal_guides_ = []
 
 [node name="BackgroundImage" type="AnimatedSprite2D" parent="."]
@@ -406,6 +409,7 @@ texture_hover = ExtResource("16_tyhqo")
 texture_focused = ExtResource("16_tyhqo")
 
 [node name="Play6" type="Label" parent="VBoxContainer2/HBoxContainer3/Level5Button"]
+visible = false
 layout_mode = 2
 offset_left = 2.0
 offset_top = 2.0
@@ -417,6 +421,22 @@ label_settings = SubResource("LabelSettings_86t7l")
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("18_m4033")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2/HBoxContainer3/Level5Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer2/HBoxContainer3/Level5Button/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("19_qvf3c")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Level6Button" type="TextureButton" parent="VBoxContainer2/HBoxContainer3"]
 layout_mode = 2
@@ -432,6 +452,7 @@ texture_hover = ExtResource("16_tyhqo")
 texture_focused = ExtResource("16_tyhqo")
 
 [node name="Play7" type="Label" parent="VBoxContainer2/HBoxContainer3/Level6Button"]
+visible = false
 layout_mode = 2
 offset_left = 2.0
 offset_top = 2.0
@@ -443,6 +464,22 @@ label_settings = SubResource("LabelSettings_aedfi")
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("18_m4033")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2/HBoxContainer3/Level6Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer2/HBoxContainer3/Level6Button/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("19_qvf3c")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer2"]
 layout_mode = 2
@@ -461,6 +498,7 @@ texture_hover = ExtResource("16_tyhqo")
 texture_focused = ExtResource("16_tyhqo")
 
 [node name="Play8" type="Label" parent="VBoxContainer2/HBoxContainer4/InfiniteButton"]
+visible = false
 layout_mode = 2
 offset_left = 2.0
 offset_top = 2.0
@@ -472,6 +510,22 @@ label_settings = SubResource("LabelSettings_qw8dv")
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("18_m4033")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2/HBoxContainer4/InfiniteButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer2/HBoxContainer4/InfiniteButton/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("19_qvf3c")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Panel" type="Panel" parent="."]
 visible = false
@@ -665,6 +719,15 @@ max_characters = 20
 [node name="Credits" parent="." instance=ExtResource("58_goy0w")]
 visible = false
 layout_mode = 1
+
+[node name="buyfullversionmenu" parent="." instance=ExtResource("31_cbnpw")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 
 [connection signal="animation_looped" from="BackgroundImage/Justin" to="BackgroundImage" method="_on_justin_animation_looped"]
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]

@@ -1,0 +1,135 @@
+[gd_scene load_steps=13 format=3 uid="uid://c7hcqfoeorxgc"]
+
+[ext_resource type="Texture2D" uid="uid://d0yeyiqtl5umi" path="res://Assets/UI/fullversion.png" id="1_n22aw"]
+[ext_resource type="Script" path="res://Scripts/GUI/buy_fullversion_menu.gd" id="1_t8yud"]
+[ext_resource type="Texture2D" uid="uid://blulf1rcmd2mb" path="res://Assets/UI/Empty Buttons/Yes-Button-Frame.png" id="2_42f1p"]
+[ext_resource type="Texture2D" uid="uid://c6jvr7p3la1hj" path="res://Assets/UI/Empty Buttons/Yes-Button-Frame.Pressed.png" id="3_gamk3"]
+[ext_resource type="Texture2D" uid="uid://veuh0v2ue41u" path="res://Assets/UI/Empty Buttons/Yes-Button-Frame.Highlight.png" id="4_jn16a"]
+[ext_resource type="FontFile" uid="uid://bg1oq07gebwu4" path="res://Assets/UI/Fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="5_tcmg1"]
+[ext_resource type="Script" path="res://Scripts/GUI/text_resize.gd" id="6_0mkgt"]
+[ext_resource type="Texture2D" uid="uid://ctc36cfyk41fo" path="res://Assets/UI/Empty Buttons/No-Button-Frame.png" id="7_6rgoc"]
+[ext_resource type="Texture2D" uid="uid://djixiof3qm31w" path="res://Assets/UI/Empty Buttons/No-Button-Frame.Pressed.png" id="8_887p8"]
+[ext_resource type="Texture2D" uid="uid://cm0awbknpj4hp" path="res://Assets/UI/Empty Buttons/No-Button-Frame-Highlight.png" id="9_7no4b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ce70p"]
+font = ExtResource("5_tcmg1")
+font_size = 36
+font_color = Color(0.960784, 1, 0.909804, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5tei1"]
+font = ExtResource("5_tcmg1")
+font_size = 60
+font_color = Color(0.960784, 1, 0.909804, 1)
+
+[node name="buyfullversionmenu" type="Control" node_paths=PackedStringArray("yes_button", "no_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t8yud")
+yes_button = NodePath("BoxContainer/Panel/HBoxContainer/YesButton")
+no_button = NodePath("BoxContainer/Panel/HBoxContainer/NoButton")
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+alignment = 1
+
+[node name="Panel" type="Panel" parent="BoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="BoxContainer/Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -724.0
+offset_top = -462.0
+offset_right = 236.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_n22aw")
+
+[node name="HighestScore" type="Label" parent="BoxContainer/Panel"]
+layout_mode = 2
+offset_left = -242.0
+offset_top = -8.0
+offset_right = 237.0
+offset_bottom = 57.0
+text = "OPENSTEAM"
+label_settings = SubResource("LabelSettings_ce70p")
+horizontal_alignment = 1
+script = ExtResource("6_0mkgt")
+original_font_size = 36
+min_font_size = 24
+resize_factor = 4
+max_characters = 18
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer/Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -174.0
+offset_top = 59.0
+offset_right = -131.0
+offset_bottom = 70.0
+scale = Vector2(8, 8)
+
+[node name="YesButton" type="TextureButton" parent="BoxContainer/Panel/HBoxContainer"]
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath("../NoButton")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath("../NoButton")
+focus_previous = NodePath("../NoButton")
+texture_normal = ExtResource("2_42f1p")
+texture_pressed = ExtResource("3_gamk3")
+texture_hover = ExtResource("4_jn16a")
+texture_focused = ExtResource("4_jn16a")
+
+[node name="Yes" type="Label" parent="BoxContainer/Panel/HBoxContainer/YesButton"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 212.0
+offset_bottom = 85.0
+scale = Vector2(0.09, 0.09)
+text = "YES"
+label_settings = SubResource("LabelSettings_5tei1")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("6_0mkgt")
+max_characters = 3
+
+[node name="NoButton" type="TextureButton" parent="BoxContainer/Panel/HBoxContainer"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../YesButton")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath("../YesButton")
+focus_previous = NodePath("../YesButton")
+texture_normal = ExtResource("7_6rgoc")
+texture_pressed = ExtResource("8_887p8")
+texture_hover = ExtResource("9_7no4b")
+texture_focused = ExtResource("9_7no4b")
+
+[node name="No" type="Label" parent="BoxContainer/Panel/HBoxContainer/NoButton"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 177.0
+offset_bottom = 85.0
+scale = Vector2(0.09, 0.09)
+text = "NO"
+label_settings = SubResource("LabelSettings_5tei1")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("6_0mkgt")
+max_characters = 3

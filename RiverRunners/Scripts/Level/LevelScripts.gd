@@ -326,7 +326,6 @@ func executeEvent(id : String, details: Dictionary):
 	if level_manager != null and level_events_status[id] == eventStatus.NOT_DONE:
 		match details["Type"]:
 			eventTypes.DIALOGUE:
-				print("Dialogue event: ", id, details)
 				if details.has("File"):
 					if details.has("WaitForObstacleEnd"):
 						level_manager.onStartDialogue(details["File"],details["WaitForObstacleEnd"])

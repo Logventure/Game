@@ -96,7 +96,6 @@ func handle_jump(delta):
 		current_state = States.IDLE
 		if not logNode.position.x + basePosition.x == position.x:
 			Events.emit_signal("player_drowned")
-			print("Rip crabby")
 			Events.emit_signal("lose_damage", false)
 			current_state = States.DROWNING
 			$WaterParticles.emitting = true
@@ -209,7 +208,6 @@ func _process(delta):
 
 func onPause():
 	previous_state = current_state
-	print("current state: ", current_state)
 	current_state = States.PAUSED
 	if timer != null:
 		timer.paused = true
@@ -224,7 +222,6 @@ func onResume():
 		play()
 
 func onTreeDetected(area):
-	print("Otter collided with treeeee")
 	is_over_tree = true
 	detected_tree = area
 	number_of_animals = 0

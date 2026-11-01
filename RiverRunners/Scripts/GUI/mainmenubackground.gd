@@ -43,7 +43,6 @@ func onJustinPressed():
 		last_sound_played = sound
 		poke_count += 1
 		SteamController.add_to_statistic("beaver_total_poke", 1)
-		print("poked!")
 
 	if poke_count > 20:
 		SteamController.set_achievement("poke_beaver_20")

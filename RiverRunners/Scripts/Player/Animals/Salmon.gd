@@ -165,7 +165,6 @@ func _process(delta):
 
 func onPause():
 	previous_state = current_state
-	print("current state: ", current_state)
 	current_state = States.PAUSED
 	if timer != null:
 		timer.paused = true

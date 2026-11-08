@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CharacterSkin" load_steps=7 format=3 uid="uid://d34d5vlh6xyyj"]
+
+[ext_resource type="SpriteFrames" uid="uid://carnej8bcp6jy" path="res://GameComponents/Player/SkinsSpriteFrames/Crab-sprite-default.tres" id="1_k8247"]
+[ext_resource type="Texture2D" uid="uid://cgxc8bfbdxpna" path="res://Assets/Characters/crab/Crab.png" id="2_m03xa"]
+[ext_resource type="Texture2D" uid="uid://bl5yx0eamu14q" path="res://Assets/Characters/crab/Crab-Gray.png" id="3_j21up"]
+[ext_resource type="Texture2D" uid="uid://bkyqq8hlobsi6" path="res://Assets/Characters/Emotions/Crab-Angry.png" id="4_fl3qs"]
+[ext_resource type="Texture2D" uid="uid://ct3qiay8nnlw7" path="res://Assets/Characters/Emotions/Crab-Dissapointed.png" id="5_6t7yt"]
+[ext_resource type="Script" path="res://Scripts/Player/CharacterSkins/CharacterSkin.gd" id="6_4vsq2"]
+
+[resource]
+script = ExtResource("6_4vsq2")
+skin_id = "crab_default"
+skin_name = "Default"
+skin_icon = ExtResource("2_m03xa")
+dialogue_emotes = {
+"crab": ExtResource("2_m03xa"),
+"crab_angry": ExtResource("4_fl3qs"),
+"crab_disappointed": ExtResource("5_6t7yt"),
+"crab_gray": ExtResource("3_j21up")
+}
+animations = ExtResource("1_k8247")

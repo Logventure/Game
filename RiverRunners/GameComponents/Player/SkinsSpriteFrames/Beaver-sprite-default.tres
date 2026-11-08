@@ -1,0 +1,53 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://n1il4p3b6qmu"]
+
+[ext_resource type="Texture2D" uid="uid://b0wtngg4wd86k" path="res://Assets/Characters/beaver/Justin-Beaver-idle1.png" id="1_nees8"]
+[ext_resource type="Texture2D" uid="uid://dye6pi5r1jp2j" path="res://Assets/Characters/beaver/Justin-Beaver-Jump-Duck1.png" id="2_1uvo3"]
+[ext_resource type="Texture2D" uid="uid://v3xb7mbtayyg" path="res://Assets/Characters/beaver/Justin-Beaver-Jump-Duck2.png" id="3_msws0"]
+[ext_resource type="Texture2D" uid="uid://bg4puv6f4tjds" path="res://Assets/Characters/beaver/Justin-Beaver-Jump-Duck3.png" id="4_bu8fx"]
+[ext_resource type="Texture2D" uid="uid://cw73wk68jht3" path="res://Assets/Characters/beaver/Justin-Beaver-Jump-Duck4.png" id="5_7ro62"]
+[ext_resource type="Texture2D" uid="uid://bkxgfu8oxro4j" path="res://Assets/Characters/beaver/Justin-Beaver-idle3.png" id="6_88ud8"]
+[ext_resource type="Texture2D" uid="uid://b5pm8g5plwt0g" path="res://Assets/Characters/beaver/Justin-Beaver-idle2.png" id="7_onho2"]
+[ext_resource type="Texture2D" uid="uid://cbonddx2xiqr0" path="res://Assets/Characters/beaver/Justin-Beaver-idle4.png" id="8_ns3jk"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nees8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1uvo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_msws0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bu8fx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7ro62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_88ud8")
+}],
+"loop": true,
+"name": &"dive",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nees8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_onho2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_88ud8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ns3jk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]

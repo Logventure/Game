@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CharacterSkin" load_steps=7 format=3 uid="uid://dmd7y7oyfuba"]
+
+[ext_resource type="SpriteFrames" uid="uid://c2hx5to8rjrnb" path="res://GameComponents/Player/SkinsSpriteFrames/Frog-sprite-inverted.tres" id="1_yvl3r"]
+[ext_resource type="Texture2D" uid="uid://dtna5ivu7cd6q" path="res://Assets/Characters/frog/Skins/Inverted/Frog-inverted.png" id="2_1oetn"]
+[ext_resource type="Texture2D" uid="uid://dp204y4xpql30" path="res://Assets/Characters/frog/Frog-Gray.png" id="3_waphy"]
+[ext_resource type="Texture2D" uid="uid://1rmqdb114ad8" path="res://Assets/Characters/frog/Skins/Inverted/Frog-NotAmused-inverted.png" id="4_dqfuy"]
+[ext_resource type="Texture2D" uid="uid://cs7aapokdr0v1" path="res://Assets/Characters/frog/Skins/Inverted/Frog-Scream-inverted.png" id="5_8e14b"]
+[ext_resource type="Script" path="res://Scripts/Player/CharacterSkins/CharacterSkin.gd" id="6_ph14j"]
+
+[resource]
+script = ExtResource("6_ph14j")
+skin_id = "frog_inverted"
+skin_name = "Inverted"
+skin_icon = ExtResource("2_1oetn")
+dialogue_emotes = {
+"frog": ExtResource("2_1oetn"),
+"frog_gray": ExtResource("3_waphy"),
+"frog_notamused": ExtResource("4_dqfuy"),
+"frog_scream": ExtResource("5_8e14b")
+}
+animations = ExtResource("1_yvl3r")

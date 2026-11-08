@@ -17,6 +17,13 @@ var previous_state = States.IDLE
 func _ready():
 	animal = Animal.new() 
 	logNode = get_node("../Log")
+
+	load_skin()
+
+func load_skin():
+	var new_anim = SkinManager.get_active_skin_resource("beaver").get_animations()
+	if new_anim != null:
+		sprite_frames = new_anim
 	
 func handle_position():
 	if not is_jumping:

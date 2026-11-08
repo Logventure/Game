@@ -1,0 +1,52 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://c0i1y6jyuar8o"]
+
+[ext_resource type="Texture2D" uid="uid://bd2t8vc7yq0sx" path="res://Assets/Characters/frog/Frog-idle1.png" id="1_3ypab"]
+[ext_resource type="Texture2D" uid="uid://d3n0k1indcyby" path="res://Assets/Characters/frog/Frog-idle2.png" id="2_gu5sf"]
+[ext_resource type="Texture2D" uid="uid://ds8qg4kadht00" path="res://Assets/Characters/frog/Frog-idle3.png" id="3_xhbme"]
+[ext_resource type="Texture2D" uid="uid://5j6chl5sqgb2" path="res://Assets/Characters/frog/Frog-idle4.png" id="4_25jge"]
+[ext_resource type="Texture2D" uid="uid://dn3tbesifvxuo" path="res://Assets/Characters/frog/frog-jump.png" id="5_yu28p"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3ypab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gu5sf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xhbme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_25jge")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_yu28p")
+}, {
+"duration": 4.0,
+"texture": ExtResource("4_25jge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xhbme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yu28p")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}]

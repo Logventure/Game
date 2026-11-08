@@ -51,6 +51,13 @@ func _ready():
 
 	base_z_index = z_index
 
+	load_skin()
+
+func load_skin():
+	var new_anim = SkinManager.get_active_skin_resource("crab").get_animations()
+	if new_anim != null:
+		sprite_frames = new_anim
+
 func jump():
 	if canJump:
 		current_state = States.JUMPING

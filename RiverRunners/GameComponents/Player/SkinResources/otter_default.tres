@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CharacterSkin" load_steps=7 format=3 uid="uid://bfh1j4eyeidhx"]
+
+[ext_resource type="SpriteFrames" uid="uid://cbt8xbi8q2um6" path="res://GameComponents/Player/SkinsSpriteFrames/Otter-sprite-default.tres" id="1_rfctp"]
+[ext_resource type="Texture2D" uid="uid://cgtus3ikdxtod" path="res://Assets/Characters/otter/Otter.png" id="2_fks62"]
+[ext_resource type="Texture2D" uid="uid://dy1by2gc6cdf1" path="res://Assets/Characters/otter/Otter-Gray.png" id="3_rr66p"]
+[ext_resource type="Texture2D" uid="uid://dyigv7rqan56v" path="res://Assets/Characters/otter/Otter-Happy.png" id="4_pro6h"]
+[ext_resource type="Texture2D" uid="uid://dclaq81bb1p0k" path="res://Assets/Characters/otter/Otter-Nervous.png" id="5_bw6i2"]
+[ext_resource type="Script" path="res://Scripts/Player/CharacterSkins/CharacterSkin.gd" id="6_4adl8"]
+
+[resource]
+script = ExtResource("6_4adl8")
+skin_id = "otter_default"
+skin_name = "Default"
+skin_icon = ExtResource("2_fks62")
+dialogue_emotes = {
+"otter": ExtResource("2_fks62"),
+"otter_gray": ExtResource("3_rr66p"),
+"otter_happy": ExtResource("4_pro6h"),
+"otter_nervous": ExtResource("5_bw6i2")
+}
+animations = ExtResource("1_rfctp")

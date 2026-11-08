@@ -26,6 +26,13 @@ func _ready():
 	Events.connect("pause_game", onPause)
 	Events.connect("resume_game", onResume)
 	
+	load_skin()
+
+func load_skin():
+	var new_anim = SkinManager.get_active_skin_resource("salmon").get_animations()
+	if new_anim != null:
+		sprite_frames = new_anim
+
 func handle_position(delta):
 	targetPosition = logNode.position + basePosition
 	position = position.lerp(targetPosition,delta*move_speed)

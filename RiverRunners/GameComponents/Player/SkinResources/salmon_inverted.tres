@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CharacterSkin" load_steps=9 format=3 uid="uid://behl404iprbcq"]
+
+[ext_resource type="SpriteFrames" uid="uid://cv2h3yosawl4e" path="res://GameComponents/Player/SkinsSpriteFrames/Salmon-sprite-inverted.tres" id="1_urb0k"]
+[ext_resource type="Texture2D" uid="uid://csgb3kv37dbwd" path="res://Assets/Characters/salmon/Skins/Inverted/Salmon-Baby-inverted.png" id="2_s6iuh"]
+[ext_resource type="Texture2D" uid="uid://dh31abd6ld4aq" path="res://Assets/Characters/salmon/Salmon-Gray.png" id="3_5mowa"]
+[ext_resource type="Texture2D" uid="uid://citgtbl4xna2u" path="res://Assets/Characters/salmon/Skins/Inverted/Salmon-Pog-inverted.png" id="4_gkdwi"]
+[ext_resource type="Texture2D" uid="uid://bahvfj4kdeqp6" path="res://Assets/Characters/salmon/Skins/Inverted/Salmon-Questioning-inverted.png" id="5_vrcuq"]
+[ext_resource type="Texture2D" uid="uid://tevt7k6js0iy" path="res://Assets/Characters/salmon/Skins/Inverted/Salmon-Sad-inverted.png" id="6_lwhnt"]
+[ext_resource type="Texture2D" uid="uid://c2d6q3w6qc6ft" path="res://Assets/Characters/salmon/Skins/Inverted/Salmon-Surprised-inverted.png" id="7_2u3m3"]
+[ext_resource type="Script" path="res://Scripts/Player/CharacterSkins/CharacterSkin.gd" id="8_ot05b"]
+
+[resource]
+script = ExtResource("8_ot05b")
+skin_id = "salmon_inverted"
+skin_name = "Inverted"
+skin_icon = ExtResource("2_s6iuh")
+dialogue_emotes = {
+"salmon": ExtResource("2_s6iuh"),
+"salmon_gray": ExtResource("3_5mowa"),
+"salmon_pog": ExtResource("4_gkdwi"),
+"salmon_questioning": ExtResource("5_vrcuq"),
+"salmon_sad": ExtResource("6_lwhnt"),
+"salmon_surprised": ExtResource("7_2u3m3")
+}
+animations = ExtResource("1_urb0k")

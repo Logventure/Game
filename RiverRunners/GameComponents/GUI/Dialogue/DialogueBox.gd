@@ -245,7 +245,8 @@ func newDialogue(character, text, name):
 			char_count = 0
 			deltatime = 0.0
 			if character in sprite_paths.keys():
-				character_sprite.texture = load(sprite_paths[character])
+				character_sprite.texture = getCharacterEmote(character)
+				#character_sprite.texture = load(sprite_paths[character]) #change loading for skins here!!!
 
 func updateDialogue(delta):
 	deltatime += delta
@@ -296,3 +297,21 @@ func onPause():
 
 func onResume():
 	paused = false
+
+func getCharacterEmote(id: String):
+	var emote = null
+	if id.begins_with("beaver"):
+		emote = SkinManager.get_active_skin_resource("beaver").get_emote(id)
+	if id.begins_with("frog"):
+		emote = SkinManager.get_active_skin_resource("frog").get_emote(id)
+	if id.begins_with("crab"):
+		emote = SkinManager.get_active_skin_resource("crab").get_emote(id)
+	if id.begins_with("salmon"):
+		emote = SkinManager.get_active_skin_resource("salmon").get_emote(id)
+	if id.begins_with("otter"):
+		emote = SkinManager.get_active_skin_resource("otter").get_emote(id)
+	if id.begins_with("shork"):
+		emote = SkinManager.get_active_skin_resource("shork").get_emote(id)
+	if emote != null:
+		return emote
+	return load(sprite_paths[id])

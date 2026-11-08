@@ -24,6 +24,7 @@ Events="*res://Scripts/Events.gd"
 Utils="*res://Scripts/Utils.gd"
 InputHandler="*res://Scripts/Game/InputHandler.gd"
 SteamController="*res://Scripts/Steam/steam_controller.gd"
+SkinManager="*res://Scripts/Player/CharacterSkins/SkinManager.gd"
 
 [display]
 

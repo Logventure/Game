@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CharacterSkin" load_steps=8 format=3 uid="uid://btfuxxb3xwtmi"]
+
+[ext_resource type="SpriteFrames" uid="uid://n1il4p3b6qmu" path="res://GameComponents/Player/SkinsSpriteFrames/Beaver-sprite-default.tres" id="1_qdx2n"]
+[ext_resource type="Script" path="res://Scripts/Player/CharacterSkins/CharacterSkin.gd" id="1_wq51v"]
+[ext_resource type="Texture2D" uid="uid://temdyd744uyw" path="res://Assets/Characters/beaver/Justin-Beaver.png" id="2_mmerx"]
+[ext_resource type="Texture2D" uid="uid://c3mvup32m3ewl" path="res://Assets/Characters/beaver/Justin-Beaver-Gray.png" id="3_k7wgi"]
+[ext_resource type="Texture2D" uid="uid://hi1w58g6ga8j" path="res://Assets/Characters/beaver/Skins/Default/Justin-Beaver-Happy.png" id="4_q7u7c"]
+[ext_resource type="Texture2D" uid="uid://e87uhi57hbof" path="res://Assets/Characters/beaver/Skins/Default/Justin-Beaver-Sad.png" id="5_7ahmi"]
+[ext_resource type="Texture2D" uid="uid://btwtnbnf7ilns" path="res://Assets/Characters/beaver/Skins/Default/Justin-Beaver-Surprised.png" id="6_tgt3d"]
+
+[resource]
+script = ExtResource("1_wq51v")
+skin_id = "beaver_default"
+skin_name = "Default"
+skin_icon = ExtResource("2_mmerx")
+dialogue_emotes = {
+"beaver": ExtResource("2_mmerx"),
+"beaver_gray": ExtResource("3_k7wgi"),
+"beaver_happy": ExtResource("4_q7u7c"),
+"beaver_sad": ExtResource("5_7ahmi"),
+"beaver_surprised": ExtResource("6_tgt3d")
+}
+animations = ExtResource("1_qdx2n")

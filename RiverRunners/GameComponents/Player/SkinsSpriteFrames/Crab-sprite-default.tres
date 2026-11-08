@@ -1,0 +1,81 @@
+[gd_resource type="SpriteFrames" load_steps=13 format=3 uid="uid://carnej8bcp6jy"]
+
+[ext_resource type="Texture2D" uid="uid://beeoqag4v0p23" path="res://Assets/Characters/crab/Crab-16.png" id="1_10knq"]
+[ext_resource type="Texture2D" uid="uid://481njn2w6q86" path="res://Assets/Characters/crab/Crab-16-Block.png" id="2_rpy7u"]
+[ext_resource type="Texture2D" uid="uid://dfkn7f2wsawhl" path="res://Assets/Characters/crab/Crab-16-Blocked.png" id="3_0mg2f"]
+[ext_resource type="Texture2D" uid="uid://bvo7jugmoprf7" path="res://Assets/Characters/crab/Crab-16-Recover.png" id="4_rhqim"]
+[ext_resource type="Texture2D" uid="uid://bc14lf4ihduww" path="res://Assets/Characters/crab/Crab-idle1.png" id="5_lr3gx"]
+[ext_resource type="Texture2D" uid="uid://bak08iibuvfc8" path="res://Assets/Characters/crab/Crab-idle2.png" id="6_ubd2m"]
+[ext_resource type="Texture2D" uid="uid://iwyy10u1j25m" path="res://Assets/Characters/crab/Crab-idle3.png" id="7_qamka"]
+[ext_resource type="Texture2D" uid="uid://xm48ir3sxbso" path="res://Assets/Characters/crab/Crab-idle4.png" id="8_1p4g0"]
+[ext_resource type="Texture2D" uid="uid://do3gmotrfoc15" path="res://Assets/Characters/crab/Crab-jump1.png" id="9_2cnl8"]
+[ext_resource type="Texture2D" uid="uid://d0eotuua3odi" path="res://Assets/Characters/crab/Crab-jump2.png" id="10_xs0l0"]
+[ext_resource type="Texture2D" uid="uid://y5pjy2g43ld" path="res://Assets/Characters/crab/Crab-jump3.png" id="11_rsfh1"]
+[ext_resource type="Texture2D" uid="uid://57ntmlku7g2v" path="res://Assets/Characters/crab/Crab-jump4.png" id="12_obg1c"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_10knq")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_rpy7u")
+}],
+"loop": true,
+"name": &"block",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0mg2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rhqim")
+}],
+"loop": true,
+"name": &"destroy",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("5_lr3gx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ubd2m")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_qamka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1p4g0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_2cnl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xs0l0")
+}, {
+"duration": 2.0,
+"texture": ExtResource("11_rsfh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_obg1c")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 4.0
+}]

@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="SkinManagerSettings" load_steps=14 format=3 uid="uid://hdq7gjvucueq"]
+
+[ext_resource type="Resource" uid="uid://btfuxxb3xwtmi" path="res://GameComponents/Player/SkinResources/beaver_default.tres" id="1_nfjs7"]
+[ext_resource type="Resource" uid="uid://cux6altjiluxq" path="res://GameComponents/Player/SkinResources/beaver_inverted.tres" id="2_6s3xh"]
+[ext_resource type="Script" path="res://Scripts/Player/CharacterSkins/SkinManagerSettings.gd" id="3_p03uq"]
+[ext_resource type="Resource" uid="uid://d34d5vlh6xyyj" path="res://GameComponents/Player/SkinResources/crab_default.tres" id="3_xno62"]
+[ext_resource type="Resource" uid="uid://7hk3hueilbm5" path="res://GameComponents/Player/SkinResources/crab_inverted.tres" id="4_k803s"]
+[ext_resource type="Resource" uid="uid://cdntdbdf2k20m" path="res://GameComponents/Player/SkinResources/frog_default.tres" id="5_trwli"]
+[ext_resource type="Resource" uid="uid://dmd7y7oyfuba" path="res://GameComponents/Player/SkinResources/frog_inverted.tres" id="6_2ineo"]
+[ext_resource type="Resource" uid="uid://bfh1j4eyeidhx" path="res://GameComponents/Player/SkinResources/otter_default.tres" id="7_7wvsi"]
+[ext_resource type="Resource" uid="uid://ch6ryjlpr27s2" path="res://GameComponents/Player/SkinResources/log_default.tres" id="7_dg1j7"]
+[ext_resource type="Resource" uid="uid://22ej5uaaqoru" path="res://GameComponents/Player/SkinResources/otter_inverted.tres" id="8_w2err"]
+[ext_resource type="Resource" uid="uid://dj5urj7187uwx" path="res://GameComponents/Player/SkinResources/salmon_default.tres" id="9_ulyrh"]
+[ext_resource type="Resource" uid="uid://behl404iprbcq" path="res://GameComponents/Player/SkinResources/salmon_inverted.tres" id="10_5l5w0"]
+[ext_resource type="Resource" uid="uid://qkosflpah61j" path="res://GameComponents/Player/SkinResources/shork_default.tres" id="11_bmcng"]
+
+[resource]
+script = ExtResource("3_p03uq")
+character_skins = {
+"beaver": {
+"beaver_default": ExtResource("1_nfjs7"),
+"beaver_inverted": ExtResource("2_6s3xh")
+},
+"crab": {
+"crab_default": ExtResource("3_xno62"),
+"crab_inverted": ExtResource("4_k803s")
+},
+"frog": {
+"frog_default": ExtResource("5_trwli"),
+"frog_inverted": ExtResource("6_2ineo")
+},
+"log": {
+"log_default": ExtResource("7_dg1j7")
+},
+"otter": {
+"otter_default": ExtResource("7_7wvsi"),
+"otter_inverted": ExtResource("8_w2err")
+},
+"salmon": {
+"salmon_default": ExtResource("9_ulyrh"),
+"salmon_inverted": ExtResource("10_5l5w0")
+},
+"shork": {
+"shork_default": ExtResource("11_bmcng")
+}
+}
+default_skins = {
+"beaver": "beaver_default",
+"crab": "crab_default",
+"frog": "frog_default",
+"log": "log_default",
+"otter": "otter_default",
+"salmon": "salmon_default",
+"shork": "shork_default"
+}
+active_skins = {
+"beaver": "beaver_inverted",
+"crab": "crab_inverted",
+"frog": "frog_inverted",
+"log": "log_default",
+"otter": "otter_inverted",
+"salmon": "salmon_inverted",
+"shork": "shork_default"
+}

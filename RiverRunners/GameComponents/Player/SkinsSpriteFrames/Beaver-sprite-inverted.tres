@@ -1,0 +1,50 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://bjontq4mjqq7c"]
+
+[ext_resource type="Texture2D" uid="uid://5cn7cwi6cyb1" path="res://Assets/Characters/beaver/Skins/Inverted/Justin-Beaver-idle1-inverted.png" id="1_7d31j"]
+[ext_resource type="Texture2D" uid="uid://5nirb41vmyf0" path="res://Assets/Characters/beaver/Skins/Inverted/Justin-Beaver-Jump-Duck1-inverted.png" id="2_r6kss"]
+[ext_resource type="Texture2D" uid="uid://duqjvlovyb6dj" path="res://Assets/Characters/beaver/Skins/Inverted/Justin-Beaver-Jump-Duck2-inverted.png" id="3_upycu"]
+[ext_resource type="Texture2D" uid="uid://5il3qdt2mlva" path="res://Assets/Characters/beaver/Skins/Inverted/Justin-Beaver-Jump-Duck3-inverted.png" id="4_iy8yg"]
+[ext_resource type="Texture2D" uid="uid://8tlwvd7yt30w" path="res://Assets/Characters/beaver/Skins/Inverted/Justin-Beaver-Jump-Duck4-inverted.png" id="5_73vxn"]
+[ext_resource type="Texture2D" uid="uid://b52q540osclst" path="res://Assets/Characters/beaver/Skins/Inverted/Justin-Beaver-idle2-inverted.png" id="6_bhfv7"]
+[ext_resource type="Texture2D" uid="uid://ualwrdp0yjf0" path="res://Assets/Characters/beaver/Skins/Inverted/Justin-Beaver-idle3-inverted.png" id="7_8n2k2"]
+[ext_resource type="Texture2D" uid="uid://8tiscavupdqs" path="res://Assets/Characters/beaver/Skins/Inverted/Justin-Beaver-idle4-inverted.png" id="8_635rr"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7d31j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_r6kss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_upycu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iy8yg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_73vxn")
+}],
+"loop": true,
+"name": &"dive",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7d31j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bhfv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8n2k2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_635rr")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]

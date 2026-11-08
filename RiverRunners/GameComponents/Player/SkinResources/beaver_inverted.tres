@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CharacterSkin" load_steps=7 format=3 uid="uid://cux6altjiluxq"]
+
+[ext_resource type="SpriteFrames" uid="uid://bjontq4mjqq7c" path="res://GameComponents/Player/SkinsSpriteFrames/Beaver-sprite-inverted.tres" id="1_nu31j"]
+[ext_resource type="Texture2D" uid="uid://d3xhho2rmjuij" path="res://Assets/Characters/beaver/Skins/Inverted/Justin-Beaver-inverted.png" id="2_40crd"]
+[ext_resource type="Texture2D" uid="uid://c3mvup32m3ewl" path="res://Assets/Characters/beaver/Justin-Beaver-Gray.png" id="3_rqor1"]
+[ext_resource type="Texture2D" uid="uid://dth0chdkh4ab" path="res://Assets/Characters/beaver/Skins/Inverted/Justin-Beaver-Sad-inverted.png" id="4_4a1cw"]
+[ext_resource type="Texture2D" uid="uid://omwl1vpgajvt" path="res://Assets/Characters/beaver/Skins/Inverted/Justin-Beaver-Surprised-inverted.png" id="5_eemp0"]
+[ext_resource type="Script" path="res://Scripts/Player/CharacterSkins/CharacterSkin.gd" id="7_c0r0m"]
+
+[resource]
+script = ExtResource("7_c0r0m")
+skin_id = "beaver_inverted"
+skin_name = "Inverted"
+skin_icon = ExtResource("2_40crd")
+dialogue_emotes = {
+"beaver": ExtResource("2_40crd"),
+"beaver_gray": ExtResource("3_rqor1"),
+"beaver_happy": ExtResource("2_40crd"),
+"beaver_sad": ExtResource("4_4a1cw"),
+"beaver_surprised": ExtResource("5_eemp0")
+}
+animations = ExtResource("1_nu31j")

@@ -1,0 +1,100 @@
+[gd_resource type="SpriteFrames" load_steps=17 format=3 uid="uid://cbt8xbi8q2um6"]
+
+[ext_resource type="Texture2D" uid="uid://bfpvyvatpw46y" path="res://Assets/Characters/otter/Otter-idle1.png" id="1_sbr7t"]
+[ext_resource type="Texture2D" uid="uid://bnxbqhwccnmyk" path="res://Assets/Characters/otter/Otter-idle2.png" id="2_im1mi"]
+[ext_resource type="Texture2D" uid="uid://chfplw8p2e1pv" path="res://Assets/Characters/otter/Otter-idle3.png" id="3_nf2nx"]
+[ext_resource type="Texture2D" uid="uid://bqfsc5akf6smu" path="res://Assets/Characters/otter/Otter-idle4.png" id="4_q4ygg"]
+[ext_resource type="Texture2D" uid="uid://c5v1sttkinggl" path="res://Assets/Characters/otter/Otter-idleWrock1.png" id="5_6ccuf"]
+[ext_resource type="Texture2D" uid="uid://bmsh7bohg53ux" path="res://Assets/Characters/otter/Otter-idleWrock2.png" id="6_yos6p"]
+[ext_resource type="Texture2D" uid="uid://d00hqgk4sny58" path="res://Assets/Characters/otter/Otter-idleWrock3.png" id="7_2e23f"]
+[ext_resource type="Texture2D" uid="uid://bcjf08gd4sibf" path="res://Assets/Characters/otter/Otter-idleWrock4.png" id="8_5tq4c"]
+[ext_resource type="Texture2D" uid="uid://bsrmgvin7wjmm" path="res://Assets/Characters/otter/Otter-jump1.png" id="9_undwi"]
+[ext_resource type="Texture2D" uid="uid://c7lmntjvtj2bd" path="res://Assets/Characters/otter/Otter-jump2.png" id="10_b0loo"]
+[ext_resource type="Texture2D" uid="uid://do7163ox5ybkp" path="res://Assets/Characters/otter/Otter-jump3.png" id="11_ylr65"]
+[ext_resource type="Texture2D" uid="uid://sdh5vgyxhc1i" path="res://Assets/Characters/otter/Otter-jump4.png" id="12_rgjwa"]
+[ext_resource type="Texture2D" uid="uid://co5i7cljhvh6w" path="res://Assets/Characters/otter/Otter-attack1.png" id="13_v7k3x"]
+[ext_resource type="Texture2D" uid="uid://b4ck4j4g7aiyu" path="res://Assets/Characters/otter/Otter-attack2.png" id="14_85nwk"]
+[ext_resource type="Texture2D" uid="uid://i8b3pvj33gsg" path="res://Assets/Characters/otter/Otter-attack3.png" id="15_h4oo7"]
+[ext_resource type="Texture2D" uid="uid://daj84ytt68em3" path="res://Assets/Characters/otter/Otter-attack4.png" id="16_gjbxi"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sbr7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_im1mi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nf2nx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q4ygg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_6ccuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yos6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2e23f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5tq4c")
+}],
+"loop": true,
+"name": &"idle_rocks",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_undwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_b0loo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ylr65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rgjwa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_undwi")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_v7k3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_85nwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_h4oo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_gjbxi")
+}],
+"loop": true,
+"name": &"throw",
+"speed": 14.0
+}]

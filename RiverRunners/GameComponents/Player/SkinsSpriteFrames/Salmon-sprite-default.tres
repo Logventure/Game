@@ -1,0 +1,154 @@
+[gd_resource type="SpriteFrames" load_steps=32 format=3 uid="uid://0cx40ru7n2lt"]
+
+[ext_resource type="Texture2D" uid="uid://c041f6oxnqu5j" path="res://Assets/Characters/salmon/Dive/Salmon-Dive1.png" id="1_his0y"]
+[ext_resource type="Texture2D" uid="uid://beima55vfu6g1" path="res://Assets/Characters/salmon/Dive/Salmon-Dive2.png" id="2_qleh2"]
+[ext_resource type="Texture2D" uid="uid://65nys6kvvugp" path="res://Assets/Characters/salmon/Dive/Salmon-Dive3.png" id="3_sj56k"]
+[ext_resource type="Texture2D" uid="uid://de7c4sdmwifyv" path="res://Assets/Characters/salmon/Dive/Salmon-Dive4.png" id="4_1dhtu"]
+[ext_resource type="Texture2D" uid="uid://cv4d24ki1rmqu" path="res://Assets/Characters/salmon/Dive/Salmon-Dive5.png" id="5_26kw2"]
+[ext_resource type="Texture2D" uid="uid://ruxac78hamll" path="res://Assets/Characters/salmon/Dive/Salmon-Dive6.png" id="6_lwvkt"]
+[ext_resource type="Texture2D" uid="uid://5qixmyu8yog2" path="res://Assets/Characters/salmon/Dive/Salmon-Dive7.png" id="7_45bjf"]
+[ext_resource type="Texture2D" uid="uid://jpoqjxkxmn7c" path="res://Assets/Characters/salmon/Push-Left/Salmon-Push-Left1.png" id="8_4ly4r"]
+[ext_resource type="Texture2D" uid="uid://c0b3jk0ik0fx3" path="res://Assets/Characters/salmon/Push-Left/Salmon-Push-Left2.png" id="9_mx3kc"]
+[ext_resource type="Texture2D" uid="uid://c4orkvhpsm2c3" path="res://Assets/Characters/salmon/Push-Left/Salmon-Push-Left3.png" id="10_ahmnv"]
+[ext_resource type="Texture2D" uid="uid://bxtf36ljyoyin" path="res://Assets/Characters/salmon/Push-Left/Salmon-Push-Left4.png" id="11_g8udi"]
+[ext_resource type="Texture2D" uid="uid://clgdbul7bf4vt" path="res://Assets/Characters/salmon/Push-Left/Salmon-Push-Left5.png" id="12_aaks4"]
+[ext_resource type="Texture2D" uid="uid://bs28847blqyxg" path="res://Assets/Characters/salmon/Push-Left/Salmon-Push-Left6.png" id="13_w6kmg"]
+[ext_resource type="Texture2D" uid="uid://8clo1x62edsw" path="res://Assets/Characters/salmon/Push-Left/Salmon-Push-Left7.png" id="14_tn51h"]
+[ext_resource type="Texture2D" uid="uid://daivxbebpsy" path="res://Assets/Characters/salmon/Push-Right/Salmon-Push-Right1.png" id="15_x5wop"]
+[ext_resource type="Texture2D" uid="uid://l25jylobyfct" path="res://Assets/Characters/salmon/Push-Right/Salmon-Push-Right2.png" id="16_e4sni"]
+[ext_resource type="Texture2D" uid="uid://ccobffxs1ml1x" path="res://Assets/Characters/salmon/Push-Right/Salmon-Push-Right3.png" id="17_52cbv"]
+[ext_resource type="Texture2D" uid="uid://l42jgycf1eqc" path="res://Assets/Characters/salmon/Push-Right/Salmon-Push-Right4.png" id="18_u2osy"]
+[ext_resource type="Texture2D" uid="uid://vbrp6k7rj5y3" path="res://Assets/Characters/salmon/Push-Right/Salmon-Push-Right5.png" id="19_ibi0e"]
+[ext_resource type="Texture2D" uid="uid://dbixsu1ohh3cc" path="res://Assets/Characters/salmon/Push-Right/Salmon-Push-Right6.png" id="20_bsqbi"]
+[ext_resource type="Texture2D" uid="uid://cjhywq7nvs6wr" path="res://Assets/Characters/salmon/Push-Right/Salmon-Push-Right7.png" id="21_4j6c8"]
+[ext_resource type="Texture2D" uid="uid://33twwvafmv21" path="res://Assets/Characters/salmon/Surface/Salmon-Surface1.png" id="22_ggxlx"]
+[ext_resource type="Texture2D" uid="uid://e2ag0ft7r22s" path="res://Assets/Characters/salmon/Surface/Salmon-Surface2.png" id="23_iuewg"]
+[ext_resource type="Texture2D" uid="uid://chqthkup6lm04" path="res://Assets/Characters/salmon/Surface/Salmon-Surface3.png" id="24_76hni"]
+[ext_resource type="Texture2D" uid="uid://cg6rluk2q41qq" path="res://Assets/Characters/salmon/Surface/Salmon-Surface4.png" id="25_54opb"]
+[ext_resource type="Texture2D" uid="uid://cc07423n4n7bl" path="res://Assets/Characters/salmon/Surface/Salmon-Surface5.png" id="26_4i1xy"]
+[ext_resource type="Texture2D" uid="uid://ckguheakryj7y" path="res://Assets/Characters/salmon/Surface/Salmon-Surface6.png" id="27_l7ui5"]
+[ext_resource type="Texture2D" uid="uid://ctmkvtwka68qb" path="res://Assets/Characters/salmon/Swim/Salmon-Swim1.png" id="28_lsder"]
+[ext_resource type="Texture2D" uid="uid://byjwqf1rloskk" path="res://Assets/Characters/salmon/Swim/Salmon-Swim2.png" id="29_3spa2"]
+[ext_resource type="Texture2D" uid="uid://ib5v8eg2hoch" path="res://Assets/Characters/salmon/Swim/Salmon-Swim3.png" id="30_85e5s"]
+[ext_resource type="Texture2D" uid="uid://bkgln7347ulgl" path="res://Assets/Characters/salmon/Swim/Salmon-Swim4.png" id="31_0k14j"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_his0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qleh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sj56k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1dhtu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_26kw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lwvkt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_45bjf")
+}],
+"loop": false,
+"name": &"dive",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("8_4ly4r")
+}, {
+"duration": 0.5,
+"texture": ExtResource("9_mx3kc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ahmnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_g8udi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_aaks4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_w6kmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tn51h")
+}],
+"loop": false,
+"name": &"push-left",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("15_x5wop")
+}, {
+"duration": 0.5,
+"texture": ExtResource("16_e4sni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_52cbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_u2osy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ibi0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_bsqbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_4j6c8")
+}],
+"loop": false,
+"name": &"push-right",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_ggxlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_iuewg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_76hni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_54opb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_4i1xy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_l7ui5")
+}],
+"loop": false,
+"name": &"surface",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_lsder")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_3spa2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_85e5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_0k14j")
+}],
+"loop": true,
+"name": &"swim_idle",
+"speed": 7.0
+}]

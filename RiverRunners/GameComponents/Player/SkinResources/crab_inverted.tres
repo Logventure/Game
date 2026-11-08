@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CharacterSkin" load_steps=7 format=3 uid="uid://7hk3hueilbm5"]
+
+[ext_resource type="SpriteFrames" uid="uid://dm74qutgnrupe" path="res://GameComponents/Player/SkinsSpriteFrames/Crab-sprite-inverted.tres" id="1_c82mx"]
+[ext_resource type="Texture2D" uid="uid://pijdseox5r6j" path="res://Assets/Characters/crab/Skins/Inverted/Crab-inverted.png" id="2_k3lwf"]
+[ext_resource type="Texture2D" uid="uid://dhvlwhk4hvj1f" path="res://Assets/Characters/crab/Skins/Inverted/Crab-Angry-inverted.png" id="3_ej6ob"]
+[ext_resource type="Texture2D" uid="uid://bl5yx0eamu14q" path="res://Assets/Characters/crab/Crab-Gray.png" id="3_v4g12"]
+[ext_resource type="Texture2D" uid="uid://b3sajrxeapvgw" path="res://Assets/Characters/crab/Skins/Inverted/Crab-Dissapointed-inverted.png" id="4_jk6ax"]
+[ext_resource type="Script" path="res://Scripts/Player/CharacterSkins/CharacterSkin.gd" id="6_s48hk"]
+
+[resource]
+script = ExtResource("6_s48hk")
+skin_id = "crab_inverted"
+skin_name = "Inverted"
+skin_icon = ExtResource("2_k3lwf")
+dialogue_emotes = {
+"crab": ExtResource("2_k3lwf"),
+"crab_angry": ExtResource("3_ej6ob"),
+"crab_disappointed": ExtResource("4_jk6ax"),
+"crab_gray": ExtResource("3_v4g12")
+}
+animations = ExtResource("1_c82mx")

@@ -1,0 +1,81 @@
+[gd_resource type="SpriteFrames" load_steps=13 format=3 uid="uid://dm74qutgnrupe"]
+
+[ext_resource type="Texture2D" uid="uid://dhqsux8okhv77" path="res://Assets/Characters/crab/Skins/Inverted/Crab-16-inverted.png" id="1_jj7kk"]
+[ext_resource type="Texture2D" uid="uid://drs1q7vgqija0" path="res://Assets/Characters/crab/Skins/Inverted/Crab-16-Block-inverted.png" id="2_d54ku"]
+[ext_resource type="Texture2D" uid="uid://dqpy5txbd0bv7" path="res://Assets/Characters/crab/Skins/Inverted/Crab-16-Blocked-inverted.png" id="3_oxhii"]
+[ext_resource type="Texture2D" uid="uid://b3v6d7d1vfc0c" path="res://Assets/Characters/crab/Skins/Inverted/Crab-16-Recover-inverted.png" id="4_ji8a6"]
+[ext_resource type="Texture2D" uid="uid://dd27juju0pohr" path="res://Assets/Characters/crab/Skins/Inverted/Crab-idle1-inverted.png" id="5_0rm8j"]
+[ext_resource type="Texture2D" uid="uid://bx7ycuh4vk3cl" path="res://Assets/Characters/crab/Skins/Inverted/Crab-idle2-inverted.png" id="6_r0agn"]
+[ext_resource type="Texture2D" uid="uid://cxllv32v2jtjm" path="res://Assets/Characters/crab/Skins/Inverted/Crab-idle3-inverted.png" id="7_08fag"]
+[ext_resource type="Texture2D" uid="uid://bdaltn5i8mfsf" path="res://Assets/Characters/crab/Skins/Inverted/Crab-idle4-inverted.png" id="8_ie207"]
+[ext_resource type="Texture2D" uid="uid://bas6ofjhgpdpm" path="res://Assets/Characters/crab/Skins/Inverted/Crab-jump1-inverted.png" id="9_fkxni"]
+[ext_resource type="Texture2D" uid="uid://cqe1q8rxeag6g" path="res://Assets/Characters/crab/Skins/Inverted/Crab-jump2-inverted.png" id="10_hbeas"]
+[ext_resource type="Texture2D" uid="uid://nigr8l3qffyt" path="res://Assets/Characters/crab/Skins/Inverted/Crab-jump3-inverted.png" id="11_8ykx1"]
+[ext_resource type="Texture2D" uid="uid://h0cmnro2a1c2" path="res://Assets/Characters/crab/Skins/Inverted/Crab-jump4-inverted.png" id="12_qej3w"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jj7kk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_d54ku")
+}],
+"loop": true,
+"name": &"block",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_oxhii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ji8a6")
+}],
+"loop": true,
+"name": &"destroy",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_0rm8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_r0agn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_08fag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ie207")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_fkxni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hbeas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8ykx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qej3w")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 4.0
+}]

@@ -1,0 +1,22 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://ctorqkxc6b7yl"]
+
+[ext_resource type="Texture2D" uid="uid://bv4lhaqlmsrjn" path="res://Assets/Characters/log/Log1.png" id="1_8rtbs"]
+[ext_resource type="Texture2D" uid="uid://cqlcm3vy8pidw" path="res://Assets/Characters/log/Log2.png" id="2_uw01o"]
+[ext_resource type="Texture2D" uid="uid://kg5yjat0xbh7" path="res://Assets/Characters/log/Log3.png" id="3_egsg7"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8rtbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_uw01o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_egsg7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
